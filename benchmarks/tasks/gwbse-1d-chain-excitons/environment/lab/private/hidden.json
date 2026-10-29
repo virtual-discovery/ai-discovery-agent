@@ -1,0 +1,50 @@
+{
+ "targets": {
+  "scgw_direct_gap_eV": {
+   "Te3": {
+    "with_soc": 4.310493,
+    "without_soc": 4.594892999999999
+   },
+   "Bi2Te3": {
+    "with_soc": 1.649461,
+    "without_soc": 1.7374609999999997
+   }
+  },
+  "scgw_optical_gap_eV": {
+   "S3": 4.067033,
+   "Te3": 2.171086,
+   "As2S3": 2.706353
+  },
+  "screening_update_shift_eV": {
+   "S3": -0.3467849999999988,
+   "Te3": -0.5452720000000002,
+   "As2S3": -0.12006000000000006
+  },
+  "bi2te3_binding_energy_eV": 0.854063
+ },
+ "thresholds": {
+  "gap_abs_eV": 0.05,
+  "optical_gap_abs_eV": 0.05,
+  "screening_shift_abs_eV": 0.1,
+  "bi2te3_binding_window_eV": [
+   0.68,
+   1.15
+  ]
+ },
+ "reference_notes": {
+  "bi2te3_scgw_gap_k_index": 2,
+  "bi2te3_scgw_optical_gap_eV": 0.795398,
+  "soc_gap_change_eV": {
+   "S3": -0.029799999999999383,
+   "Te3": -0.2843999999999993,
+   "As2S3": -0.012099999999999778,
+   "Bi2Te3": -0.08799999999999963
+  },
+  "self_consistency_gap_shift_eV": {
+   "S3": 0.7920079999999992,
+   "Te3": 0.8060309999999999,
+   "As2S3": 0.7477209999999999,
+   "Bi2Te3": 0.11051100000000003
+  }
+ }
+}

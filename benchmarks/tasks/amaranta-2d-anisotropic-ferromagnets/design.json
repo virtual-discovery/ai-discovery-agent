@@ -1,0 +1,357 @@
+{
+ "task_id": "amaranta-2d-anisotropic-ferromagnets",
+ "catalog_id": "amaranta-2d-anisotropic-ferromagnets",
+ "start": "released",
+ "source_group": "putatunda_2026_amaranta",
+ "title": "Cr-based 2D magnets: exchange versus single-ion anisotropy",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "evidence discovered in the data (cascade into the easy axis and the anisotropy)",
+   "fork": "Is every compound a ferromagnet?",
+   "wrong_choice": "Treat CrSiSe3 like the other Cr compounds (and as often described) as a ferromagnet and evaluate its ferromagnetic anisotropy",
+   "consequence": "J1 (+5.1 meV) and J3 (+1.9 meV) are antiferromagnetic: the ground state is Neel. In the Neel pattern the nearest-neighbour exchange anisotropy changes sign, so the moments lie in plane (E(x) - E(z) = -0.109 meV/Cr). Assuming a ferromagnet gives an out-of-plane axis and +0.032 meV/Cr",
+   "ablation": "CrSiSe3_assumed_ferromagnetic"
+  },
+  {
+   "id": "dp2",
+   "kind": "discriminating experiment (competing explanations: single-ion vs exchange anisotropy)",
+   "fork": "How to separate single-ion from exchange anisotropy",
+   "wrong_choice": "Measure the ferromagnet along x, y, z only and attribute the whole anisotropy to the single-ion term (both are quadratic forms of the moment direction, so ferromagnetic energies cannot separate them)",
+   "consequence": "Single-ion part wrong for every compound with exchange anisotropy: CrGeTe3 +0.517 instead of -0.188 meV (sign reversed), CrI3 0.420 instead of 0.210, CrBr3 0.159 instead of 0.084; CrSBr predictions off by 0.10 meV/site. Configurations that reverse the nearest-neighbour products (Neel vs ferromagnet; chains antiferromagnetic along a in CrSBr) separate the two",
+   "ablation": "ordered_state_anisotropy_attributed_to_single_ion"
+  },
+  {
+   "id": "dp3",
+   "kind": "competing explanation (single-ion-dominated anisotropy of d3 Cr3+)",
+   "fork": "Does the single-ion term decide the easy axis?",
+   "wrong_choice": "Neglect the exchange anisotropy and take the axis and the anisotropy energy from the single-ion term",
+   "consequence": "CrGeTe3 predicted easy-plane (single-ion -0.188 meV) while the Te-mediated exchange anisotropy (+0.705 meV) makes it out-of-plane; anisotropy energies wrong for CrBr3, CrI3, CrGeTe3, CrSiSe3; predictions off by 0.09-0.46 meV/site",
+   "ablation": "exchange_anisotropy_neglected"
+  },
+  {
+   "id": "dp4",
+   "kind": "symmetry of the bond tensors (bond dependence)",
+   "fork": "How the nearest-neighbour tensor of CrI3 varies between the three bonds",
+   "wrong_choice": "Copy the tensor measured on one bond to all three bonds",
+   "consequence": "The large K and Gamma parts no longer average to a uniaxial form: easy axis in plane (along y) with E(x) - E(z) = 1.24 meV/Cr instead of an out-of-plane axis with 0.42; predictions off by 0.22 meV/site",
+   "ablation": "CrI3_bond_tensor_copied_to_all_bonds"
+  },
+  {
+   "id": "dp5",
+   "kind": "frame transformation from the ligand geometry",
+   "fork": "Which side of the bond the Kitaev axis lies on",
+   "wrong_choice": "Mirror-image octahedral frame (axes rotated by 180 degrees about z, as obtained from the lower I atoms or the other set of bond-perpendicular azimuths)",
+   "consequence": "K = -0.14 instead of +1.23 meV, Gamma = 0.54 instead of 0.09 meV",
+   "ablation": "CrI3_mirror_image_octahedral_frame"
+  },
+  {
+   "id": "dp6",
+   "kind": "configuration design (four-state mapping with spin-orbit coupling)",
+   "fork": "Collinear-only mapping along the Cartesian axes",
+   "wrong_choice": "Measure Jxx, Jyy, Jzz with collinear configurations and leave the off-diagonal elements at zero",
+   "consequence": "Jxz = 0.48 meV is missed: K = 0.54 instead of 1.23 meV, Gamma = 0.32 instead of 0.09 meV",
+   "ablation": "CrI3_collinear_only_mapping"
+  },
+  {
+   "id": "dp7",
+   "kind": "symmetric vs antisymmetric off-diagonal exchange",
+   "fork": "Is the xz off-diagonal element of the CrSBr chain bond symmetric?",
+   "wrong_choice": "Measure only J_xz (one ordering of the two noncollinear spins) and use it as symmetric exchange on every chain bond",
+   "consequence": "The DM vector (0, -0.264, 0) meV is reported as zero, and a spurious symmetric J_xz tilts the easy axis by 41.6 degrees; the gap becomes 0.58 instead of 0.115 meV; predictions off by 0.11 meV/site",
+   "ablation": "CrSBr_offdiagonal_read_as_symmetric"
+  },
+  {
+   "id": "dp8",
+   "kind": "aliasing and sublattice dependence exposed only by cross-checks",
+   "fork": "How the antisymmetric exchange is measured and transferred between the two Cr chains of CrSBr",
+   "wrong_choice": "(a) Copy the DM vector of one chain to the other (uniform instead of staggered); (b) map the bond in a cheap cell two lattice constants along a, where the pair is joined by +a and -a and J + J^T is measured",
+   "consequence": "(a) co- and counter-rotating cycloid energies off by 0.18 meV/site RMSE; (b) DM vector zero and predictions off by 0.10 meV/site",
+   "ablation": "CrSBr_dm_copied_to_second_chain"
+  },
+  {
+   "id": "dp9",
+   "kind": "model class (triaxial vs uniaxial anisotropy)",
+   "fork": "Which anisotropy enters the CrSBr spin-wave gap",
+   "wrong_choice": "Uniaxial formula with one in-plane axis (2/S) * [E(x) - E(z)]",
+   "consequence": "Gap 0.084 meV (-27 %) or 0.157 meV (+37 %) instead of (2/S) sqrt(D1 D2) = 0.115 meV (easy c, intermediate a, hard b)",
+   "ablation": "CrSBr_uniaxial_gap"
+  },
+  {
+   "id": "dp10",
+   "kind": "finite-temperature estimator and exchange range (Mermin-Wagner regime)",
+   "fork": "How to obtain the ordering temperature of the 2D anisotropic model",
+   "wrong_choice": "Mean-field theory, or Monte Carlo of the nearest-neighbour model only",
+   "consequence": "Mean field gives 61.9 K and the nearest-neighbour model 22.0 K, against the full-model Monte Carlo 34.7 K",
+   "ablation": "Tc_mean_field"
+  },
+  {
+   "id": "dp11",
+   "kind": "noise-limited small effects (discovered from the stated noise and repeated probes)",
+   "fork": "How to measure single-ion anisotropies of 0.03-0.2 meV with 0.02 meV noise per supercell energy",
+   "wrong_choice": "Single-site four-state rotations (one site along +-z, +-x in a ferromagnetic background) in an 18-site cell",
+   "consequence": "Each estimate carries the noise of four supercell energies (sigma ~ 0.02 meV): single-ion parts off by 0.017 (CrBr3), 0.013 (CrSiSe3) and 0.046 meV (CrSBr, 140 %). Collective rotations of the whole ordered pattern average the noise over all sites",
+   "ablation": "single_site_four_state_at_noise_level"
+  }
+ ],
+ "graded_fields": [
+  "ground_states.<compound> for the 6 compounds (exact category)",
+  "easy_axis_polar_deg.<compound> within 10 deg (0 = out of plane, 90 = in plane)",
+  "anisotropy_meV_per_Cr.<compound>.total and .single_ion within max(0.005 meV, 10 %)",
+  "CrI3_bond_exchange_meV: J within 0.10 meV, K within 20 %, Gamma within 0.06 meV (Gamma_prime reported, not graded)",
+  "CrI3_Tc_K within 15 % of the classical Monte Carlo ordering temperature",
+  "CrSBr_dm_vector_meV within 0.05 meV (vector norm of the difference)",
+  "CrSBr_spin_wave_gap_meV within 15 %",
+  "energy_predictions_meV_per_site: per-compound RMSE <= 0.03 meV/site (CrI3, CrGeTe3: 3 configurations in 6x6 cells; CrSBr: 4 in a 7x5 cell)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 22,
+  "oracle_charge": 220,
+  "budget": 245,
+  "catalog_value": "unbounded (arbitrary configurations); four-state mapping of the full nearest-neighbour tensors of CrI3, CrGeTe3 and both CrSBr chains alone costs about 290 units in alias-free 18-site cells",
+  "oracle_container_seconds": 929,
+  "tool_calls": "55-85",
+  "gpt6astra_cost_usd": "3.5-5",
+  "why": "Six compounds with structure inspection (unwrapping, symmetry), supercell and configuration design under noise, tensor regression with symmetry mapping, ground-state search, anisotropy decomposition, an octahedral-frame decomposition, a DM analysis with a sublattice cross-check, a spin-wave gap, a Monte Carlo finite-size study and predictions in large cells.",
+  "pilot": "pending (coordinator)",
+  "harbor_oracle_runtime_s": 860
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image); the lab evaluates the teacher spin model, no extra dependencies"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/wygeh-jrc57",
+  "doi": "10.24435/materialscloud:he-3k",
+  "paper": "arXiv:2509.20226",
+  "files_used": [
+   "data_readable.zip",
+   "group1.aiida (member db.sqlite3 only, range read)",
+   "group4.aiida (member db.sqlite3 only, range read)",
+   "group5.aiida (member db.sqlite3 only, range read)",
+   "group7.aiida (member db.sqlite3 only, range read)",
+   "group10.aiida (member db.sqlite3 only, range read)"
+  ],
+  "md5": {
+   "data_readable.zip": "2020bf7c7813bb99f8af19c2030ef0e1",
+   "group1.aiida": "12d6c201e55cf12df2279b7d4874870d",
+   "group4.aiida": "63429af96ec9978edb12a769fa52c5d5",
+   "group5.aiida": "d977634a0b59b0b5b08ed47cadeb5829",
+   "group7.aiida": "6d7a6de21ba04f0263af09fea094c685",
+   "group10.aiida": "f33b7f9621f32aa4e199d15078794d9b"
+  },
+  "sha256_of_extracted_db": {
+   "group1": "1bf3450a671b696c889a79dcef80c1260f155b9e4fa42724659e30f70867d1a5",
+   "group4": "aa4540abf9304336b0343220e2f8bf5e0f3fc81a1ff054b7625487bd1d23b94f",
+   "group5": "07898d7f148a70d252600e4c8d7b9e4160b5a69a18926808c5387e5545d8ea94",
+   "group7": "a88112265cc4228f3450a303101c84e116d25952149e0b93170866713a4aabf5",
+   "group10": "80e067e68f2127bd08529222122781a3b4f3f660ccac238793fbae39a4d1e9ef"
+  },
+  "license": "CC BY 4.0",
+  "compounds_used": "CrCl3 (PK 29719), CrBr3 (24863), CrI3 (44376), CrGeTe3 (36128), CrSiSe3 (36985), CrSBr (40899); CrSiTe3, CrPS4, CrClO, CrBrO only in the validation table; no compound of amaranta-2d-triangular-helimagnets"
+ },
+ "exceptions": {},
+ "notes": "Teacher-model lab (the design's choice) built from the authors' archived AMaRaNTA parameters and validated against their archived spin-orbit four-state DFT energies (within-set rms 0.002-0.13 meV; K = 2A fits better than K = A). Deviations from the design: (1) six compounds instead of ten (CrSiTe3 duplicates CrGeTe3; CrPS4, CrClO and CrBrO add no fork: nearly isotropic, single-ion dominated, and CrPS4's 9-degree tilt rests on 0.016 meV noise-level components); (2) easy axis graded as a polar angle per compound, plus the anisotropy energy and its single-ion part for every compound (the question of the design); (3) Kitaev/Gamma graded for CrI3 only (J, K, Gamma; Gamma' is reported but ungraded because the defensible actual-plane-normal frame moves it by 0.047 meV); (4) the Monte Carlo Curie temperature is graded for CrI3 only, whose anisotropy (0.42 meV/Cr) is well above the source precision (0.1 meV), so Tc is recoverable within 15 %; for CrCl3/CrBr3 it is a rubric item; (5) the Gamma-point magnon gap is graded for CrSBr, the triaxial case, with the spin-length convention fixed in the prompt; (6) energy predictions in large cells were added to grade the full model (bond dependence, staggered DMI). The design's \"dipolar shape anisotropy decides marginal cases\" explanation is a rubric item: the energies (like the DFT) contain no dipolar term and the CrCl3 verdict depends on the assumed moment.",
+ "calibration": {
+  "type": {
+   "reference": {
+    "CrCl3": "ferromagnet",
+    "CrBr3": "ferromagnet",
+    "CrI3": "ferromagnet",
+    "CrGeTe3": "ferromagnet",
+    "CrSiSe3": "Neel antiferromagnet",
+    "CrSBr": "ferromagnet"
+   },
+   "ablations": {
+    "CrSiSe3_assumed_ferromagnetic": "ferromagnet for CrSiSe3"
+   },
+   "tolerance": "exact"
+  },
+  "easy_axis_polar_deg": {
+   "reference": {
+    "CrCl3": 0.0,
+    "CrBr3": 0.0,
+    "CrI3": 0.0,
+    "CrGeTe3": 0.0,
+    "CrSiSe3": 90.0,
+    "CrSBr": 0.0
+   },
+   "nearest_ablation": {
+    "CrGeTe3_single_ion_only": 90.0,
+    "CrI3_tensor_copied": 90.0,
+    "CrSiSe3_assumed_ferromagnet": 0.0,
+    "CrSBr_symmetric_offdiagonal": 41.6
+   },
+   "tolerance": "<= 10 deg"
+  },
+  "anisotropy_meV_per_Cr": {
+   "reference": {
+    "CrCl3": {
+     "total": 0.0335,
+     "single_ion": 0.0279
+    },
+    "CrBr3": {
+     "total": 0.1595,
+     "single_ion": 0.0842
+    },
+    "CrI3": {
+     "total": 0.4197,
+     "single_ion": 0.2097
+    },
+    "CrGeTe3": {
+     "total": 0.5169,
+     "single_ion": -0.1883
+    },
+    "CrSiSe3": {
+     "total": -0.1091,
+     "single_ion": -0.0387
+    },
+    "CrSBr": {
+     "total": 0.0628,
+     "single_ion": 0.0324
+    }
+   },
+   "oracle_max_abs_error": 0.003,
+   "robustness": {
+    "noisy_collective_states_max_abs_error": 0.0016
+   },
+   "nearest_ablation": {
+    "single_site_four_state_error": {
+     "CrCl3": 0.0025,
+     "CrBr3": 0.0172,
+     "CrI3": -0.0049,
+     "CrGeTe3": 0.0111,
+     "CrSiSe3": 0.0128,
+     "CrSBr": 0.0464
+    },
+    "mae_as_single_ion": {
+     "CrCl3": 0.0335,
+     "CrBr3": 0.1595,
+     "CrI3": 0.4197,
+     "CrGeTe3": 0.5169,
+     "CrSiSe3": -0.1091,
+     "CrSBr": 0.0628
+    },
+    "CrSiSe3_ferromagnet_total": 0.0317,
+    "CrI3_tensor_copied_total": 1.2361
+   },
+   "tolerance": "max(0.005 meV, 10 %)"
+  },
+  "CrI3_bond_exchange_meV": {
+   "reference": {
+    "J": -4.1487,
+    "K": 1.2281,
+    "Gamma": 0.0882,
+    "Gamma_prime": -0.1141
+   },
+   "oracle_errors": {
+    "J": 1e-05,
+    "K": -0.0005,
+    "Gamma": -0.0013,
+    "Gamma_prime": 0.0012
+   },
+   "robustness": {
+    "actual_plane_normal_frame": {
+     "J": -4.156,
+     "K": 1.2501,
+     "Gamma": 0.0809,
+     "Gamma_prime": -0.0674
+    }
+   },
+   "nearest_ablation": {
+    "mirror_frame": {
+     "J": -3.6928,
+     "K": -0.1396,
+     "Gamma": 0.5441,
+     "Gamma_prime": -0.342
+    },
+    "diagonal_only": {
+     "J": -3.9207,
+     "K": 0.5442,
+     "Gamma": 0.3162,
+     "Gamma_prime": -0.2281
+    }
+   },
+   "tolerance": "J <= 0.10 meV; K <= 20 %; Gamma <= 0.06 meV"
+  },
+  "CrI3_Tc_K": {
+   "reference": 34.72,
+   "oracle": 35.2,
+   "robustness": {
+    "chi_peak_largest_L": 35.85,
+    "binder_crossing_12_18": 35.83
+   },
+   "nearest_ablation": {
+    "nearest_neighbour_model": 22.02,
+    "mean_field": 61.93
+   },
+   "tolerance": "15 %"
+  },
+  "CrSBr_dm_vector_meV": {
+   "reference": [
+    0.0,
+    -0.2642,
+    0.0
+   ],
+   "oracle_error": 0.009,
+   "nearest_ablation": {
+    "symmetric_reading_or_2a_aliasing": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "tolerance": "<= 0.05 meV (norm)"
+  },
+  "CrSBr_spin_wave_gap_meV": {
+   "reference": 0.1146,
+   "oracle_rel_error": -0.012,
+   "nearest_ablation": {
+    "uniaxial_a": 0.0837,
+    "uniaxial_b": 0.1568,
+    "symmetric_offdiagonal": 0.5774
+   },
+   "note": "a uniaxial formula with the average in-plane anisotropy gives 0.120 (+5 %) and would pass",
+   "tolerance": "15 %"
+  },
+  "prediction_rmse_meV_per_site": {
+   "oracle": {
+    "CrI3": 0.002,
+    "CrGeTe3": 0.0022,
+    "CrSBr": 0.0009
+   },
+   "robustness": {
+    "unsymmetrized_archived_tensor": {
+     "CrI3": 0.0003,
+     "CrGeTe3": 0.0035,
+     "CrSBr": 0.0003
+    }
+   },
+   "nearest_ablation": {
+    "mae_as_single_ion": {
+     "CrI3": 0.0487,
+     "CrGeTe3": 0.0362,
+     "CrSBr": 0.0991
+    },
+    "CrI3_tensor_copied": 0.218,
+    "CrSBr_uniform_dm": 0.1796,
+    "CrSBr_aliased_2a": 0.1036,
+    "CrSBr_symmetric_offdiagonal": 0.1054
+   },
+   "tolerance": "<= 0.03"
+  }
+ },
+ "tightest_margins": {
+  "predictions": "tolerance 0.03 meV/site vs nearest wrong path 0.036 (CrGeTe3, anisotropy attributed to the single-ion term; that path also fails the single-ion check by 0.70 meV); oracle <= 0.0022",
+  "anisotropy_single_ion": "CrCl3 tolerance 0.005 meV vs 0.0056 (anisotropy-as-single-ion, fails elsewhere) and 0.0025 (single-site path, which fails for CrBr3 0.017, CrSiSe3 0.013, CrSBr 0.046); oracle <= 0.0022, noisy collective states <= 0.0016",
+  "Tc": "tolerance 15 % (29.5-39.9 K) vs nearest-neighbour model 22.0 K (-37 %) and mean field 61.9 K (+78 %); defensible estimators +3.2 % (12/18 crossing, chi peak), oracle +1.3 %",
+  "gap": "tolerance 15 % vs uniaxial along a -27 %; averaged-in-plane uniaxial +5 % passes; oracle -1.2 %",
+  "CrI3_Gamma": "tolerance 0.06 meV vs diagonal-only +0.228 and mirror frame +0.456; actual-plane-normal frame -0.007"
+ },
+ "risks": [
+  "dev-easy: an agent that inspects the structures, fits tensors with symmetry, uses collective states for the anisotropy, cross-checks the second CrSBr chain and writes a correct Monte Carlo solves it; discovered-evidence forks are CrSiSe3 antiferromagnetism, the noise floor of single-site probes, the 2a aliasing and staggering of the CrSBr DMI, and the sign of the CrGeTe3 single-ion term",
+  "teacher-model truth: the staggering of the CrSBr DM vector follows from the layer symmetry, not from the archived energies (which fit staggered and uniform equally, 0.040 meV); CrCl3 uses pseudo-D3d operations; anisotropies of CrCl3 and CrSBr (0.03-0.12 meV) are near the source precision; CrGeTe3 is reproduced worst (0.13 meV rms within sets)",
+  "Monte Carlo: reference Tc from Metropolis + over-relaxation chains (30000 sweeps, 24x24 and 30x30); crossings drift from 35.8 K (12/18) to 34.7 K (24/30); agents with short or unequilibrated runs, or a factor-2 error in the local field, may land outside 15 %",
+  "oracle runtime is dominated by its own Monte Carlo (15 min in check_task on 4 contended CPUs)",
+  "the polar angle is folded to 0-90 deg and the ground-state names must match the list in the prompt"
+ ]
+}

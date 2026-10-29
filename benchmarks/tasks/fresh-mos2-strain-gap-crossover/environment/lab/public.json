@@ -1,0 +1,115 @@
+{
+ "task_id": "fresh-mos2-strain-gap-crossover",
+ "solver_budget": 48,
+ "reserved_validation_charge": 0,
+ "system": "monolayer 1H-MoS2 (2H polytype layer, D3h), three-atom hexagonal cell repeated along z with vacuum; PBE; PSlibrary 1.0.0 ultrasoft pseudopotentials; Quantum ESPRESSO 6.7 pw.x and pp.x on 2 MPI ranks",
+ "request": {
+  "fields": {
+   "kind": "\"scf\" (self-consistent run at the given geometry) or \"relax\" (BFGS relaxation of all atomic positions at fixed cell, starting from the given geometry; scalar-relativistic only)",
+   "relativistic": "\"scalar\" (scalar-relativistic pseudopotentials, collinear, no spin-orbit coupling) or \"full\" (fully relativistic pseudopotentials, noncollinear spinors with spin-orbit coupling)",
+   "lattice_A": "hexagonal lattice parameter a of the unstrained cell (Angstrom): a1 = a(1, 0, 0), a2 = a(-1/2, sqrt(3)/2, 0); x is a zigzag direction, y the armchair direction",
+   "strain": "2x2 symmetric in-plane strain tensor [[exx, exy], [exy, eyy]] (Cartesian x, y): cell vectors and ideal atomic sites are mapped r -> (1 + eps) r in the plane",
+   "sulfur_height_A": "height h of each S plane above/below the Mo plane (Angstrom); the starting value for a relaxation",
+   "sulfur_shift_A": "[dx, dy]: in-plane Cartesian displacement (Angstrom) of both S atoms from their strained ideal site (crystal (2/3, 1/3)); Mo sits at crystal (1/3, 2/3); the starting value for a relaxation",
+   "cell_height_A": "cell period c normal to the layer (Angstrom); the vacuum between periodic images is about c - 3.1 A",
+   "ecutwfc_Ry": "wavefunction cutoff; the charge-density cutoff is 8 x ecutwfc",
+   "kmesh": "n of the n x n x 1 Gamma-centred Monkhorst-Pack mesh used for the self-consistent density",
+   "band_kpoints": "list of at most 60 points [k1, k2]: crystal coordinates (units of the strained reciprocal vectors b1, b2, kz = 0) at which band energies are computed non-self-consistently after the scf/relaxation; may be empty"
+  },
+  "allowed": {
+   "kind": [
+    "scf",
+    "relax"
+   ],
+   "relativistic": [
+    "scalar",
+    "full"
+   ],
+   "cell_height_A": [
+    15,
+    20,
+    25,
+    30
+   ],
+   "ecutwfc_Ry": [
+    35,
+    45,
+    55,
+    70
+   ],
+   "kmesh": [
+    6,
+    8,
+    9,
+    10,
+    12,
+    15,
+    18
+   ]
+  },
+  "lattice_A_range": [
+   3.0,
+   3.4
+  ],
+  "max_abs_strain_component": 0.05,
+  "min_nonzero_strain_component": 0.0005,
+  "sulfur_height_A_range": [
+   1.4,
+   1.75
+  ],
+  "max_abs_sulfur_shift_A": 0.1,
+  "max_band_kpoints": 60,
+  "pseudopotentials": {
+   "scalar": {
+    "Mo": "Mo.pbe-spn-rrkjus_psl.1.0.0.UPF",
+    "S": "S.pbe-n-rrkjus_psl.1.0.0.UPF"
+   },
+   "full": {
+    "Mo": "Mo.rel-pbe-spn-rrkjus_psl.1.0.0.UPF",
+    "S": "S.rel-pbe-n-rrkjus_psl.1.0.0.UPF"
+   }
+  },
+  "fixed": {
+   "functional": "PBE (from the pseudopotentials)",
+   "mass_amu": {
+    "Mo": 95.95,
+    "S": 32.06
+   },
+   "dual": 8,
+   "empty_bands": 4,
+   "conv_thr_Ry": 1e-10,
+   "mixing_beta": 0.4,
+   "electron_maxstep": 200,
+   "relax_forc_conv_thr_Ry_per_bohr": 0.0001,
+   "relax_etot_conv_thr_Ry": 1e-06,
+   "relax_max_steps": 50,
+   "timeout_s": 1500
+  },
+  "charge": {
+   "k_points_per_unit": 25,
+   "relax_multiplier": 3,
+   "band_kpoint_weight": 0.25,
+   "relativistic_factor": {
+    "scalar": 1.0,
+    "full": 4.0
+   },
+   "cutoff_factor": {
+    "35": 0.7,
+    "45": 1.0,
+    "55": 1.4,
+    "70": 2.0
+   },
+   "max_units_per_request": 7,
+   "rule": "units = max(1, ceil((N_k * (relax_multiplier if kind is relax else 1) + band_kpoint_weight * len(band_kpoints)) * relativistic_factor * cutoff_factor / k_points_per_unit)), where N_k is the number of symmetry-distinct k points pw.x uses for this cell and scf mesh (returned as charged_k_points; it rises as strain lowers the symmetry). Requests above max_units_per_request are refused without charge."
+  }
+ },
+ "result_units": {
+  "total_energy_Ry": "Ry per cell",
+  "stress_GPa": "pw.x sign convention (the negative of the Cauchy stress; positive when compressed), averaged over the whole cell including the vacuum; multiply by the cell height for a 2D stress",
+  "forces_Ry_per_bohr": "Cartesian forces on Mo, S_top, S_bottom",
+  "scf_mesh": "number of symmetry-distinct k points and symmetry operations of the scf run, and pw.x's highest occupied and lowest unoccupied levels over the scf mesh (eV, raw eigenvalue scale)",
+  "electrostatic_potential_planar_average": "pp.x plot_num=11 (bare ionic + Hartree potential) averaged over the cell area, on the FFT grid along z (eV, same reference as the eigenvalues; the layer is centred at z = c/2)",
+  "band_kpoints_results": "for each band k point: crystal and Cartesian (1/A, including 2 pi) coordinates and all band energies (eV, raw pw.x eigenvalues); occupied_bands gives the number of occupied bands (13 scalar-relativistic, 26 with spin-orbit spinors)",
+  "final_positions": "after a relaxation, or the input geometry for scf: Cartesian (Angstrom) and crystal coordinates, S height and in-plane S shift"
+ }
+}

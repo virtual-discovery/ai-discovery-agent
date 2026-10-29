@@ -1,0 +1,38 @@
+{
+ "targets": {
+  "x3_minus_x1_eV": {
+   "Mg2Si": {
+    "LDA": 0.159895,
+    "G0W0": 0.438653,
+    "QSGW": 0.456408
+   },
+   "Mg2Ge": {
+    "LDA": 0.32978,
+    "G0W0": 0.579252,
+    "QSGW": 0.576304
+   },
+   "Mg2Sn": {
+    "LDA": -0.359868,
+    "G0W0": -0.164941,
+    "QSGW": -0.131043
+   }
+  },
+  "vertex_correction_Mg2Si_meV": -1.996384,
+  "ir_raman_ratio_300K_over_77K": {
+   "Mg2Si_1e16": 4.469189,
+   "Mg2Si_3e18": 3.435105,
+   "Mg2Sn_1e16": 6.501985
+  },
+  "predicted_splitting_eV": {
+   "Mg2Si_T0": 0.491295,
+   "Mg2Si_300K": 0.483134,
+   "Mg2Ge_300K": 0.596353
+  }
+ },
+ "tolerances": {
+  "x3_minus_x1_eV": 0.01,
+  "vertex_meV": 8.0,
+  "ratio_rel": 0.04,
+  "predicted_eV": 0.008
+ }
+}

@@ -1,0 +1,205 @@
+{
+ "z2": {
+  "Bi2_P-3m1": 1,
+  "Hf2Br2_P-3m1": 1,
+  "CuLi2As_P-6m2": 1,
+  "Ti2I2N2_Pmm2": 1,
+  "Li2Tl2_P3m1": 1,
+  "Bi2In2_P4_nmm": 0,
+  "Hg4O2_P1": 1,
+  "KSnAs_P3m1": 0
+ },
+ "plateau": {
+  "Bi2_P-3m1": 0.5685154498631076,
+  "Hf2Br2_P-3m1": -0.9768300885266519,
+  "CuLi2As_P-6m2": 1.0000316353864585,
+  "Ti2I2N2_Pmm2": -0.8519960203514431,
+  "Li2Tl2_P3m1": 2.785692787997078,
+  "Bi2In2_P4_nmm": 0.823335900010211,
+  "Hg4O2_P1": -0.7579497981512255,
+  "KSnAs_P3m1": -0.0012833874118362552
+ },
+ "spin_direction": {
+  "Bi2_P-3m1": {
+   "theta_deg": 31.77581146619596,
+   "phi_deg": 89.75548939762457
+  },
+  "Hg4O2_P1": {
+   "theta_deg": 150.2447733308322,
+   "phi_deg": -5.787013416514816
+  }
+ },
+ "facts": {
+  "Bi2_P-3m1": {
+   "nocc": 10,
+   "wannier_vbm": -3.8509643235231126,
+   "wannier_cbm": -3.275065631030609,
+   "wannier_gap": 0.5758986924925034,
+   "scf_fermi": -3.4963,
+   "win_vbm": -3.851779717032966,
+   "win_cbm": -3.2740015906676274,
+   "scf_fermi_in_valence_band": false,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  },
+  "Hf2Br2_P-3m1": {
+   "nocc": 22,
+   "wannier_vbm": -3.086093930139127,
+   "wannier_cbm": -3.0365315966809834,
+   "wannier_gap": 0.04956233345814365,
+   "scf_fermi": -3.0995,
+   "win_vbm": -3.0860950110245082,
+   "win_cbm": -3.0365236672406186,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  },
+  "CuLi2As_P-6m2": {
+   "nocc": 18,
+   "wannier_vbm": -1.718383076530877,
+   "wannier_cbm": -1.6728442430596087,
+   "wannier_gap": 0.0455388334712683,
+   "scf_fermi": -1.7368,
+   "win_vbm": -1.7183913026527395,
+   "win_cbm": -1.6685837432048374,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  },
+  "Ti2I2N2_Pmm2": {
+   "nocc": 32,
+   "wannier_vbm": -5.296621157687534,
+   "wannier_cbm": -5.274518995983172,
+   "wannier_gap": 0.02210216170436219,
+   "scf_fermi": -5.3596,
+   "win_vbm": -5.298856398550803,
+   "win_cbm": -5.272755566678481,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  },
+  "Li2Tl2_P3m1": {
+   "nocc": 8,
+   "wannier_vbm": -2.3980831799842433,
+   "wannier_cbm": -2.3667103172074047,
+   "wannier_gap": 0.031372862776838595,
+   "scf_fermi": -2.4602,
+   "win_vbm": -2.4001304931286636,
+   "win_cbm": -2.365876705350646,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  },
+  "Bi2In2_P4_nmm": {
+   "nocc": 16,
+   "wannier_vbm": -3.8721110144497315,
+   "wannier_cbm": -3.8349912595040254,
+   "wannier_gap": 0.037119754945706074,
+   "scf_fermi": -3.9092,
+   "win_vbm": -3.9592383338983286,
+   "win_cbm": -3.8336449576725635,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": true,
+   "win_fermi_energy_is_vbm": true
+  },
+  "Hg4O2_P1": {
+   "nocc": 60,
+   "wannier_vbm": -3.5130751987584903,
+   "wannier_cbm": -3.4537456370350736,
+   "wannier_gap": 0.059329561723416635,
+   "scf_fermi": -3.5676,
+   "win_vbm": -3.5248446432143337,
+   "win_cbm": -3.4356131347837615,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": false
+  },
+  "KSnAs_P3m1": {
+   "nocc": 10,
+   "wannier_vbm": -3.9526596465287405,
+   "wannier_cbm": -3.3372411806874904,
+   "wannier_gap": 0.61541846584125,
+   "scf_fermi": -3.5286,
+   "win_vbm": -3.9542654073614587,
+   "win_cbm": -3.3351449965321525,
+   "scf_fermi_in_valence_band": false,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  }
+ },
+ "ablations_failing_checks": {
+  "plateau_at_scf_fermi": [
+   "plateau:CuLi2As_P-6m2 0.3797 vs 1.0000",
+   "plateau:Ti2I2N2_Pmm2 -0.1065 vs -0.8520",
+   "plateau:Li2Tl2_P3m1 0.5197 vs 2.7857",
+   "plateau:Bi2In2_P4_nmm 0.0959 vs 0.8233",
+   "plateau:Hg4O2_P1 -0.5228 vs -0.7579",
+   "dir:Hg4O2_P1 dth=26.3 dph=-135.9"
+  ],
+  "plateau_at_win_fermi_energy": [
+   "plateau:Ti2I2N2_Pmm2 -0.6508 vs -0.8520",
+   "plateau:Li2Tl2_P3m1 2.3997 vs 2.7857",
+   "plateau:Bi2In2_P4_nmm -0.4035 vs 0.8233"
+  ],
+  "plateau_at_dft_mid_gap": [
+   "plateau:Bi2In2_P4_nmm 0.1684 vs 0.8233"
+  ],
+  "mesh_120_unrefined": [
+   "plateau:Ti2I2N2_Pmm2 -1.3267 vs -0.8520"
+  ],
+  "mesh_60_unrefined": [
+   "plateau:Ti2I2N2_Pmm2 -3.8430 vs -0.8520",
+   "plateau:Li2Tl2_P3m1 3.8444 vs 2.7857"
+  ],
+  "lattice_position_convention": [
+   "plateau:Bi2In2_P4_nmm 0.6303 vs 0.8233",
+   "plateau:Hg4O2_P1 -0.8633 vs -0.7579",
+   "dir:Bi2_P-3m1 dth=7.0 dph=-47.3",
+   "dir:Hg4O2_P1 dth=3.8 dph=16.9"
+  ],
+  "relaxed_archive_values": [
+   "plateau:Bi2_P-3m1 0.5253 vs 0.5685",
+   "plateau:Hf2Br2_P-3m1 -0.9145 vs -0.9768",
+   "plateau:Ti2I2N2_Pmm2 -0.9467 vs -0.8520"
+  ],
+  "paper_table_values": [
+   "plateau:Bi2_P-3m1 0.5000 vs 0.5685",
+   "plateau:Hf2Br2_P-3m1 -0.9000 vs -0.9768",
+   "plateau:Ti2I2N2_Pmm2 -1.0000 vs -0.8520"
+  ],
+  "z2_from_plateau_magnitude": [
+   "z2:Bi2In2_P4_nmm"
+  ],
+  "z2_from_coarse_wcc": [
+   "z2:Ti2I2N2_Pmm2",
+   "z2:Li2Tl2_P3m1"
+  ],
+  "atomic_thickness_normalisation": [
+   "plateau:Bi2_P-3m1 0.0458 vs 0.5685",
+   "plateau:Hf2Br2_P-3m1 -0.2465 vs -0.9768",
+   "plateau:CuLi2As_P-6m2 0.1120 vs 1.0000",
+   "plateau:Ti2I2N2_Pmm2 -0.1915 vs -0.8520",
+   "plateau:Li2Tl2_P3m1 0.5813 vs 2.7857",
+   "plateau:Bi2In2_P4_nmm 0.1368 vs 0.8233",
+   "plateau:Hg4O2_P1 -0.0417 vs -0.7579"
+  ],
+  "e_over_4pi_units": [
+   "plateau:Bi2_P-3m1 1.1370 vs 0.5685",
+   "plateau:Hf2Br2_P-3m1 -1.9537 vs -0.9768",
+   "plateau:CuLi2As_P-6m2 2.0001 vs 1.0000",
+   "plateau:Ti2I2N2_Pmm2 -1.7040 vs -0.8520",
+   "plateau:Li2Tl2_P3m1 5.5714 vs 2.7857",
+   "plateau:Bi2In2_P4_nmm 1.6467 vs 0.8233",
+   "plateau:Hg4O2_P1 -1.5159 vs -0.7579"
+  ],
+  "sigma_z_only_spin_direction": [
+   "dir:Bi2_P-3m1 dth=-31.8 dph=-89.8",
+   "dir:Hg4O2_P1 dth=29.8 dph=5.8"
+  ]
+ },
+ "robustness_failing_checks": {
+  "authors_broadening_5meV": [],
+  "mesh_240_unrefined_eta_1meV": [],
+  "z2_wcc_201x200_axis0": []
+ }
+}

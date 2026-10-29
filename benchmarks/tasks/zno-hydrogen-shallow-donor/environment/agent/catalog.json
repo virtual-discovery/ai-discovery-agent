@@ -1,0 +1,347 @@
+{
+ "material": "wurtzite ZnO; VASP calculations released by Aicher, Berger, Aschauer and Diwald (2025), Materials Cloud Archive record c91vp-p9h03 (CC BY 4.0)",
+ "archive_description": "Authors' description (paper): spin-polarized DFT with VASP; structures relaxed with PBE, followed by HSE06 single-point energy calculations on the PBE structures; 3x3x2 supercell of the hexagonal unit cell (72 atoms) with a 2x2x2 Gamma-centred k-mesh; reference phases Zn, ZnO, Zn(OH)2 and the molecules O2, H2, H2O in their own cells.",
+ "folder_layout": "Each folder holds a relaxation; its HSE06 subfolder holds the hybrid single point on the relaxed structure. Defect folders are named <defect>/q_<charge>, where the charge is the authors' label. Defect names are the authors'; the structures show what each one is.",
+ "experiment": "EPR of ZnO particles from gas-phase synthesis (particle formation at about 1000 K), annealed in vacuum at 873 K, shows a resonance at g = 1.96 attributed to a paramagnetic shallow donor.",
+ "purchases": {
+  "run": "settings (INCAR, KPOINTS, POTCAR titles, electron count), final energies, total magnetization and site moments, Fermi energy, initial and final structures, k-points with weights, and the per-atom average electrostatic potential at the cores, as printed by VASP (1 unit)",
+  "eigenvalues": "final Kohn-Sham eigenvalues and occupations of both spin channels at every k-point, within -5 to +4 eV of the run's Fermi energy, with the k-point weights (1 unit)"
+ },
+ "budget": 35,
+ "runs": [
+  {
+   "id": "chem_pot/H2",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "H2"
+  },
+  {
+   "id": "chem_pot/H2/HSE06",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "H2"
+  },
+  {
+   "id": "chem_pot/H2O",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "H2O"
+  },
+  {
+   "id": "chem_pot/H2O/HSE06",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "H2O"
+  },
+  {
+   "id": "chem_pot/O2",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "O2"
+  },
+  {
+   "id": "chem_pot/O2/HSE06",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "O2"
+  },
+  {
+   "id": "chem_pot/Zn",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "Zn"
+  },
+  {
+   "id": "chem_pot/Zn/HSE06",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "Zn"
+  },
+  {
+   "id": "chem_pot/ZnO",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "ZnO"
+  },
+  {
+   "id": "chem_pot/ZnO/HSE06",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "ZnO"
+  },
+  {
+   "id": "chem_pot/ZnOH2",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "ZnOH2"
+  },
+  {
+   "id": "chem_pot/ZnOH2/HSE06",
+   "eigenvalues_available": true,
+   "group": "reference phase",
+   "phase": "ZnOH2"
+  },
+  {
+   "id": "supercell_3_3_2",
+   "eigenvalues_available": true,
+   "group": "host supercell"
+  },
+  {
+   "id": "supercell_3_3_2/HSE06",
+   "eigenvalues_available": true,
+   "group": "host supercell"
+  },
+  {
+   "id": "supercell_3_3_2/H_O/q_+1",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_O",
+   "charge_folder": "q_+1"
+  },
+  {
+   "id": "supercell_3_3_2/H_O/q_+1/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_O",
+   "charge_folder": "q_+1"
+  },
+  {
+   "id": "supercell_3_3_2/H_O/q_+2",
+   "eigenvalues_available": false,
+   "group": "defect supercell",
+   "defect": "H_O",
+   "charge_folder": "q_+2"
+  },
+  {
+   "id": "supercell_3_3_2/H_O/q_+2/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_O",
+   "charge_folder": "q_+2"
+  },
+  {
+   "id": "supercell_3_3_2/H_O/q_0",
+   "eigenvalues_available": false,
+   "group": "defect supercell",
+   "defect": "H_O",
+   "charge_folder": "q_0"
+  },
+  {
+   "id": "supercell_3_3_2/H_O/q_0/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_O",
+   "charge_folder": "q_0"
+  },
+  {
+   "id": "supercell_3_3_2/H_Zn-OH_O/q_-1",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_Zn-OH_O",
+   "charge_folder": "q_-1"
+  },
+  {
+   "id": "supercell_3_3_2/H_Zn-OH_O/q_-1/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_Zn-OH_O",
+   "charge_folder": "q_-1"
+  },
+  {
+   "id": "supercell_3_3_2/H_Zn-OH_O/q_0",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_Zn-OH_O",
+   "charge_folder": "q_0"
+  },
+  {
+   "id": "supercell_3_3_2/H_Zn-OH_O/q_0/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_Zn-OH_O",
+   "charge_folder": "q_0"
+  },
+  {
+   "id": "supercell_3_3_2/H_Zn/q_-1",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_Zn",
+   "charge_folder": "q_-1"
+  },
+  {
+   "id": "supercell_3_3_2/H_Zn/q_-1/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_Zn",
+   "charge_folder": "q_-1"
+  },
+  {
+   "id": "supercell_3_3_2/H_Zn/q_-2",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_Zn",
+   "charge_folder": "q_-2"
+  },
+  {
+   "id": "supercell_3_3_2/H_Zn/q_-2/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "H_Zn",
+   "charge_folder": "q_-2"
+  },
+  {
+   "id": "supercell_3_3_2/OH_O/q_+1",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "OH_O",
+   "charge_folder": "q_+1"
+  },
+  {
+   "id": "supercell_3_3_2/OH_O/q_+1/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "OH_O",
+   "charge_folder": "q_+1"
+  },
+  {
+   "id": "supercell_3_3_2/OH_O/q_0",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "OH_O",
+   "charge_folder": "q_0"
+  },
+  {
+   "id": "supercell_3_3_2/OH_O/q_0/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "OH_O",
+   "charge_folder": "q_0"
+  },
+  {
+   "id": "supercell_3_3_2/V_O/q_+1",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "V_O",
+   "charge_folder": "q_+1"
+  },
+  {
+   "id": "supercell_3_3_2/V_O/q_+1/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "V_O",
+   "charge_folder": "q_+1"
+  },
+  {
+   "id": "supercell_3_3_2/V_O/q_+2",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "V_O",
+   "charge_folder": "q_+2"
+  },
+  {
+   "id": "supercell_3_3_2/V_O/q_+2/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "V_O",
+   "charge_folder": "q_+2"
+  },
+  {
+   "id": "supercell_3_3_2/V_O/q_0",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "V_O",
+   "charge_folder": "q_0"
+  },
+  {
+   "id": "supercell_3_3_2/V_O/q_0/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "V_O",
+   "charge_folder": "q_0"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i-H_O/q_+1",
+   "eigenvalues_available": false,
+   "group": "defect supercell",
+   "defect": "Zn_i-H_O",
+   "charge_folder": "q_+1"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i-H_O/q_+1/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "Zn_i-H_O",
+   "charge_folder": "q_+1"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i-H_O/q_+2",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "Zn_i-H_O",
+   "charge_folder": "q_+2"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i-H_O/q_+2/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "Zn_i-H_O",
+   "charge_folder": "q_+2"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i-H_O/q_0",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "Zn_i-H_O",
+   "charge_folder": "q_0"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i-H_O/q_0/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "Zn_i-H_O",
+   "charge_folder": "q_0"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i/q_+1",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "Zn_i",
+   "charge_folder": "q_+1"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i/q_+1/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "Zn_i",
+   "charge_folder": "q_+1"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i/q_+2",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "Zn_i",
+   "charge_folder": "q_+2"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i/q_+2/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "Zn_i",
+   "charge_folder": "q_+2"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i/q_0",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "Zn_i",
+   "charge_folder": "q_0"
+  },
+  {
+   "id": "supercell_3_3_2/Zn_i/q_0/HSE06",
+   "eigenvalues_available": true,
+   "group": "defect supercell",
+   "defect": "Zn_i",
+   "charge_folder": "q_0"
+  }
+ ]
+}

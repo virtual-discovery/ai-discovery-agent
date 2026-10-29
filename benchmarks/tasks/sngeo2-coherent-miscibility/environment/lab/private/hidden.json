@@ -1,0 +1,42 @@
+{
+ "reference": {
+  "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+  "coherency_strain_energy_x050_meV_per_cation": {
+   "001": 77.96174646692319,
+   "100": 149.72618725513735,
+   "101": 232.53555979741003
+  },
+  "habit_plane": "001",
+  "incoherent_Tc_K": 2745.605134218931,
+  "coherent_spinodal_Tc_K": {
+   "PBE": 866.4880095870009,
+   "r2SCAN": 664.688252555832
+  },
+  "coherent_boundaries_700K_PBE": {
+   "binodal": [
+    0.12797433467064764,
+    0.8175714906929691
+   ],
+   "spinodal": [
+    0.24618800762499998,
+    0.67664464671
+   ]
+  }
+ },
+ "thresholds": {
+  "mixing_enthalpy_window": [
+   100.0,
+   124.0
+  ],
+  "strain_rel_tol": 0.05,
+  "incoherent_Tc_window_K": [
+   2000.0,
+   3000.0
+  ],
+  "coherent_Tc_rel_tol": {
+   "PBE": 0.12,
+   "r2SCAN": 0.2
+  },
+  "boundary_abs_tol": 0.1
+ }
+}

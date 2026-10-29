@@ -1,0 +1,39 @@
+{
+ "task_id": "wires-1d-anharmonic-thermal-contraction",
+ "solver_budget": 36,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "sscha_log": {
+   "kind": "sscha_log",
+   "wire": "<CuC2|TaSe3|AuSe2>",
+   "temperature_K": 300,
+   "configurations": 10000,
+   "cost": 1
+  },
+  "sscha_matrices": {
+   "kind": "sscha_matrices",
+   "wire": "<wire>",
+   "temperature_K": 300,
+   "configurations": 10000,
+   "matrix": "<auxiliary|hessian>",
+   "cost": 1
+  },
+  "dfpt": {
+   "kind": "dfpt",
+   "wire": "<wire>",
+   "asr": "<none|1d>",
+   "cost": 1
+  },
+  "dft_file": {
+   "kind": "dft_file",
+   "wire": "<wire>",
+   "file": "<name from dft_files>",
+   "cost": 1
+  },
+  "strained_calculation": {
+   "kind": "strained_calculation",
+   "cost": 1
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

@@ -1,0 +1,150 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 8,
+  "task_mb": 4.71,
+  "hidden_values": 12,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 27,
+   "budget": 30,
+   "evaluations": 27,
+   "failed_evaluations": 0,
+   "container_seconds": 8
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "three_d_boundary_condition_dispersion",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "analytic_gamma_frequency_as_3d_limit",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "linear_2d_collapse",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "standard_fourier_interpolation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "atomic_shell_radius",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "cell_dielectric_as_cylinder_dielectric",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "asymptotic_kernel_in_interpolation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "gamma_only_long_range_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "q_fraction_of_2pi_over_L",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "e2_hartree_in_long_range",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "cylinder_dielectric_for_3d_artefact",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "cylinder_dielectric_and_volume_for_3d_artefact",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "perpendicular_dielectric_for_3d_artefact",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "unscreened_3d_artefact",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "family_transfer_from_44",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "authors_radius_d_over_4",
+    "passes_grading": true
+   },
+   {
+    "name": "no_ewald_damping",
+    "passes_grading": true
+   },
+   {
+    "name": "ewald_alpha_2",
+    "passes_grading": true
+   },
+   {
+    "name": "radius_1p5_atomic",
+    "passes_grading": true
+   },
+   {
+    "name": "3d_limit_from_1d_code_gamma_run",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T02:05:03Z"
+}

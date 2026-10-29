@@ -1,0 +1,123 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 8,
+  "task_mb": 9.62,
+  "hidden_values": 8,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 61,
+   "budget": 70,
+   "evaluations": 22,
+   "failed_evaluations": 0,
+   "container_seconds": 4647
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "clamped_reported_as_well_depth",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "cubic_at_r3m_volume",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "x_relaxed_in_experimental_cell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "k12_mesh_both_phases",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "one_sided_quadratic_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "per_atom_energies",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "fixed_occupations_soft_mode_k16",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "soft_mode_k12_mv0.01",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "soft_mode_from_dx0.02",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "soc_compared_with_sssp",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "oracle_route",
+    "passes_grading": true
+   },
+   {
+    "name": "k16_grid_model_minimum_structure",
+    "passes_grading": true
+   },
+   {
+    "name": "k20_both_phases",
+    "passes_grading": true
+   },
+   {
+    "name": "eos_k16_six_points",
+    "passes_grading": true
+   },
+   {
+    "name": "clamped_k16_four_points",
+    "passes_grading": true
+   },
+   {
+    "name": "soft_mode_k20_mv0.002",
+    "passes_grading": true
+   },
+   {
+    "name": "soft_mode_k20_mv0.005_all_points",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T19:05:52Z"
+}

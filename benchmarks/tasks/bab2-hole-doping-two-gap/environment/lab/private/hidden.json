@@ -1,0 +1,23 @@
+{
+ "targets": {
+  "critical_hole_doping": 0.06419219307950422,
+  "iso_tc_K": {
+   "0.065": 36.71254159471303,
+   "0.10": 33.48221724467718
+  },
+  "aniso_tc_K": 62.62202295888321,
+  "gap_ratio_25K": 4.9657089590469,
+  "soft_mode_cm1": {
+   "homogeneous_one_ninth": 25.59714696122069,
+   "cs_substituted": -39.53938
+  }
+ },
+ "thresholds": {
+  "critical_doping_abs": 0.0025,
+  "iso_tc_rel": 0.03,
+  "aniso_tc_rel": 0.04,
+  "gap_ratio_rel": 0.1,
+  "homogeneous_soft_mode_abs_cm1": 3.5,
+  "cs_soft_mode_abs_cm1": 1.5
+ }
+}

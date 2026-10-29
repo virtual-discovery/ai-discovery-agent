@@ -1,0 +1,376 @@
+{
+ "task_id": "mnte-altermagnet-ahc-doping",
+ "catalog_id": "mnte-altermagnet-ahc-doping",
+ "start": "released",
+ "source_group": "kluczyk_2024_mnte_ahe",
+ "title": "MnTe altermagnet: anomalous Hall conductivity under hole doping",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "k-mesh convergence of sigma_xy: Berry-curvature hot spots where the SOC-split top valence bands nearly touch make coarse meshes noisy (spikes, spurious sign changes); which mesh and smearing are converged",
+   "wrong_choice": "Stop at a 100, 150 or 200 mesh (1-3 units) with 1 meV smearing",
+   "consequence": "sign changes 8 (100) or 3 (150) instead of 1; sigma_xy(2e21) -171.5 (100) or -68.4 (200) instead of -48.3 S/cm",
+   "ablation": "mesh_200"
+  },
+  {
+   "id": "dp2",
+   "fork": "Where the valence-band maximum is: off the high-symmetry lines (k_frac ~ (0.02, 0, 0.42)), above the band-path maximum and the maximum on the DFT scf grid",
+   "wrong_choice": "VBM from the band path (as in bands_ori.dat) or from the DFT 6x6x8 eigenvalues",
+   "consequence": "hole density 0.30 eV below the VBM 1.42e+21 or 1.49e+21 instead of 1.31e+21 cm^-3",
+   "ablation": "vbm_from_band_path"
+  },
+  {
+   "id": "dp3",
+   "fork": "Energy reference: the VASP E-fermi (6.2098 eV, OUTCAR) lies in the gap 78 meV above the VBM; wt.in E_FERMI (6.1301 eV) is the authors' zero, close to the VBM",
+   "wrong_choice": "Take the OUTCAR Fermi energy as the band edge",
+   "consequence": "hole density 0.30 eV below the 'edge' 7.36e+20 instead of 1.31e+21 cm^-3",
+   "ablation": "vbm_from_outcar_efermi"
+  },
+  {
+   "id": "dp4",
+   "fork": "Counting holes in spinor bands: each of the 32 Wannier bands holds one electron per k-point",
+   "wrong_choice": "Multiply by a spin degeneracy of 2",
+   "consequence": "densities doubled; sigma_xy read at half the requested density (2.0e21: -70.1, 6.0e21: -77.0 S/cm instead of 2.0e21: -48.3, 6.0e21: 108.5)",
+   "ablation": "spin_degeneracy_twice"
+  },
+  {
+   "id": "dp5",
+   "fork": "Whether the nonzero sigma_yz and sigma_zx of the archived (unsymmetrized) Hamiltonian are physical: the authors symmetrized it with WannSymm before WannierTools; C2z forbids both",
+   "wrong_choice": "Report the service values",
+   "consequence": "max |sigma_yz|, |sigma_zx| 3589.03 and 17346.92 S/cm instead of 0",
+   "ablation": "raw_forbidden_components"
+  },
+  {
+   "id": "dp6",
+   "fork": "Magnetic symmetry from the structure and moments versus the archived symmetries.dat, whose matrices (sixfold, threefold, C2z without c/2) are not symmetries of the structure and contradict the labels in wannsymm.out; and the Neel-along-x case (unitary C2x and C2y t(c/2))",
+   "wrong_choice": "Use symmetries.dat as written (C3 T kills sigma_xy), or treat in-plane Neel directions as equivalent",
+   "consequence": "allowed components [] for Neel along y, or [\"xy\"] for Neel along x",
+   "ablation": "symmetries_dat_literal"
+  },
+  {
+   "id": "dp7",
+   "fork": "Whether the Wannier model describes the conduction bands: the frozen window ends at 6.7 eV, below the DFT CBM; on the fitting grid the Wannier conduction bands are off by up to 1.6 eV",
+   "wrong_choice": "Compute electron-doped sigma_xy from the model",
+   "consequence": "sigma_xy -12.6 S/cm reported instead of null",
+   "ablation": "electron_doped_from_model"
+  },
+  {
+   "id": "dp8",
+   "fork": "Occupation smearing: the zero-temperature limit (the archived run used 1 meV, Eta_Arc in wt.in) versus a large smearing that hides the mesh noise",
+   "wrong_choice": "Smooth the noisy curves with a room-temperature smearing (kT = 25 meV)",
+   "consequence": "sigma_xy(2e21) -63.7 instead of -48.3 S/cm",
+   "ablation": "room_temperature_smearing"
+  }
+ ],
+ "graded_fields": [
+  "sigma_xy_S_per_cm at 2.0e21 and 6.0e21 cm^-3 within 15% of the archived WannierTools output",
+  "sigma_xy_sign_changes == 1 (5 meV grid, mu from VBM-1.00 to VBM-0.25 eV)",
+  "sign_change_hole_density_cm3 within 8%",
+  "hole_density_0p30_below_vbm_cm3 within 5%",
+  "forbidden_components_max_abs_S_per_cm: |yz|, |zx| <= 0.5",
+  "allowed_hall_components == {neel_y: [xy], neel_x: []}",
+  "electron_doped_sigma_xy_S_per_cm is null"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 15,
+  "oracle_charge": 28,
+  "budget": 32,
+  "catalog_units": "meshes 48-400 cost 1+1+1+2+3+5+8 = 21 units per Neel direction (42 for both), plus any number of bands / berry_curvature / electron_count requests (1 unit each)",
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "why": "Locating the off-path VBM, checking the Wannier model against the DFT eigenvalues, a mesh-convergence study of a noisy Berry-curvature integral under a budget that covers two dense meshes, the p -> mu -> sigma cascade, a magnetic-symmetry analysis that must not trust the archived symmetries.dat, and judging which model outputs (forbidden components, conduction bands) are artefacts.",
+  "oracle_errors": {
+   "sigma_xy_rel:2.0e21": 0.035674,
+   "sigma_xy_rel:6.0e21": 0.05202,
+   "sign_change_density_rel": -0.00781,
+   "hole_density_rel": 9e-06,
+   "forbidden_yz_S_cm": 0.0,
+   "forbidden_zx_S_cm": 0.0
+  }
+ },
+ "runtime_dependencies": [
+  "numpy and scipy (runtime image); no extra layer"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/18863304",
+  "doi": "10.5281/zenodo.18863304",
+  "paper_doi": "10.1103/PhysRevB.110.155201",
+  "files_used": [
+   "dft_data.zip",
+   "fig6_script.zip"
+  ],
+  "md5": {
+   "dft_data.zip": "cef0196e73cec5deefad7e707137b940",
+   "fig6_script.zip": "15e2f717c3d2c28f11c19025122769ce"
+  },
+  "members": "benchmarks/construction/mnte-altermagnet-ahc-doping/members.md5",
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the candidate design (see the construction README). Graded sigma_xy values are the archived WannierTools output (801 x 801 x 401 mesh, WannSymm-symmetrized Hamiltonian that is not archived) read at the chemical potentials of the requested hole densities; the lab evaluates the archived unsymmetrized Hamiltonian with the same protocol, and its converged 300/400-mesh values lie 3-7% from the archive at the graded points. Targets near the band edge (realistic dopings < 1e21 cm^-3; the design's E-E_F = -0.2 eV) are not graded: they are not converged on any affordable mesh and the archived curve itself has 1-3 meV spikes there. Lucky passes exist: the 150 mesh gives one sign change for some VBM offsets, and the 200 mesh with step occupation passes sigma_xy(2e21); the 100 mesh and the 200 mesh with 0.5-2 meV smearing fail.",
+ "calibration": {
+  "sigma_xy_S_per_cm": {
+   "reference_archive": {
+    "2.0e21": -48.25108941220343,
+    "6.0e21": 108.45977458843323
+   },
+   "mu_below_vbm_eV": {
+    "2.0e21": 0.3889,
+    "6.0e21": 0.7605
+   },
+   "robustness": {
+    "mesh_400_model": {
+     "2.0e21": -49.97241443945742,
+     "6.0e21": 114.1027535425126
+    },
+    "mesh_300_model": {
+     "2.0e21": -51.60102883425541,
+     "6.0e21": 114.36438333930525
+    },
+    "mesh_200_model": {
+     "2.0e21": -68.41540715572319,
+     "6.0e21": 114.26123175235385
+    },
+    "step_occupation_400": {
+     "2.0e21": -48.370047551645634,
+     "6.0e21": 114.1131484160751
+    }
+   },
+   "nearest_ablation": {
+    "spin_degeneracy_twice": {
+     "2.0e21": -70.06417902915048,
+     "6.0e21": -77.03715090026473
+    },
+    "mesh_by_mesh": {
+     "48": {
+      "2.0e21": -87.72933480689532,
+      "6.0e21": 130.40203867165658
+     },
+     "72": {
+      "2.0e21": 14.086468362097724,
+      "6.0e21": 116.87884221855431
+     },
+     "100": {
+      "2.0e21": -171.47149531821378,
+      "6.0e21": 111.01425697019349
+     },
+     "150": {
+      "2.0e21": -50.50304047396819,
+      "6.0e21": 113.8199441342312
+     },
+     "200": {
+      "2.0e21": -68.41540715572319,
+      "6.0e21": 114.26123175235385
+     },
+     "300": {
+      "2.0e21": -51.60102883425541,
+      "6.0e21": 114.36438333930525
+     },
+     "400": {
+      "2.0e21": -49.97241443945742,
+      "6.0e21": 114.1027535425126
+     }
+    },
+    "room_temperature_smearing_400": {
+     "2.0e21": -63.74908429637151,
+     "6.0e21": 110.96008181840868
+    },
+    "not_ablation_wt_out_100K_smearing_400": {
+     "2.0e21": -53.67840576183006,
+     "6.0e21": 113.74719992127682
+    }
+   },
+   "tolerance": "+-15%"
+  },
+  "sigma_xy_sign_changes": {
+   "reference_archive": 1,
+   "by_mesh": {
+    "48": 10,
+    "72": 11,
+    "100": 8,
+    "150": 3,
+    "200": 1,
+    "300": 1,
+    "400": 1
+   },
+   "crossings_below_vbm_by_mesh_eV": {
+    "48": [
+     0.6689,
+     0.6611,
+     0.6313,
+     0.3574,
+     0.3447,
+     0.3288,
+     0.3228,
+     0.3102,
+     0.281,
+     0.2532
+    ],
+    "72": [
+     0.6132,
+     0.3968,
+     0.3897,
+     0.3357,
+     0.3324,
+     0.3277,
+     0.3199,
+     0.3048,
+     0.2975,
+     0.2798,
+     0.27
+    ],
+    "100": [
+     0.6211,
+     0.6198,
+     0.597,
+     0.3138,
+     0.3064,
+     0.2777,
+     0.2702,
+     0.2523
+    ],
+    "150": [
+     0.6175,
+     0.305,
+     0.305
+    ],
+    "200": [
+     0.6134
+    ],
+    "300": [
+     0.6151
+    ],
+    "400": [
+     0.6156
+    ]
+   },
+   "by_smearing_400": {
+    "0.0": 1,
+    "0.0005": 1,
+    "0.0086": 1,
+    "0.025": 1
+   },
+   "tolerance": "exact"
+  },
+  "sign_change_hole_density_cm3": {
+   "reference": 4.170806987916431e+21,
+   "robustness": {
+    "200": 4.1135474096727135e+21,
+    "300": 4.132344150092902e+21,
+    "400": 4.138219316000628e+21
+   },
+   "nearest_ablation": {
+    "spin_degeneracy_twice": 8.341613975832862e+21
+   },
+   "tolerance": "+-8%"
+  },
+  "hole_density_0p30_below_vbm_cm3": {
+   "reference": 1.3129782735907127e+21,
+   "robustness": {
+    "mesh_300": 1.3129491810093719e+21,
+    "mesh_200": 1.3130039561936542e+21,
+    "mesh_100": 1.3116621608184012e+21,
+    "wt_in_efermi_as_vbm": 1.3248130763285211e+21
+   },
+   "nearest_ablation": {
+    "vbm_from_band_path": 1.4181141682362733e+21,
+    "vbm_from_dft_grid": 1.49202357560914e+21,
+    "vbm_from_outcar_efermi": 7.359874885865215e+20,
+    "spin_degeneracy_twice": 2.6259565471814255e+21
+   },
+   "tolerance": "+-5%"
+  },
+  "forbidden_components_max_abs_S_per_cm": {
+   "reference": {
+    "yz": 0,
+    "zx": 0
+   },
+   "archive_max_abs": "< 1e-7",
+   "nearest_ablation": {
+    "raw_400": {
+     "yz": 3589.033503152226,
+     "zx": 17346.92443228638
+    },
+    "raw_by_mesh": {
+     "48": [
+      27022.27,
+      15491.73
+     ],
+     "72": [
+      8006.59,
+      4590.17
+     ],
+     "100": [
+      2007.91,
+      1421.05
+     ],
+     "150": [
+      719.72,
+      1423.24
+     ],
+     "200": [
+      298.54,
+      296.22
+     ],
+     "300": [
+      718.4,
+      514.92
+     ],
+     "400": [
+      3572.72,
+      17268.1
+     ]
+    }
+   },
+   "tolerance": "<= 0.5 S/cm"
+  },
+  "allowed_hall_components": {
+   "reference": {
+    "neel_y": [
+     "xy"
+    ],
+    "neel_x": []
+   },
+   "nearest_ablation": {
+    "symmetries_dat_literal": {
+     "neel_y": [],
+     "neel_x": []
+    },
+    "inplane_isotropic": {
+     "neel_y": [
+      "xy"
+     ],
+     "neel_x": [
+      "xy"
+     ]
+    }
+   },
+   "tolerance": "exact"
+  },
+  "electron_doped_sigma_xy_S_per_cm": {
+   "reference": null,
+   "nearest_ablation": {
+    "from_model": -12.59822141403336
+   },
+   "evidence": {
+    "valence_max_abs": 3.1209716617741634e-05,
+    "conduction_23_24_max_abs": 1.5608148389568806,
+    "dft_cbm": 7.441240367096,
+    "wannier_cbm_on_grid": 7.854386224485833
+   },
+   "tolerance": "must be null"
+  },
+  "energy_references_eV": {
+   "vbm": 6.1317746175433125,
+   "vbm_k_frac": [
+    -0.019076873597786648,
+    -0.0012501116077801048,
+    -0.41969150993846704
+   ],
+   "band_path_max": 6.117157973308267,
+   "dft_grid_max": 6.107004459576,
+   "wt_in_E_FERMI": 6.13012952,
+   "outcar_E_fermi": 6.2098
+  }
+ }
+}

@@ -1,0 +1,175 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 7,
+  "task_mb": 0.35,
+  "hidden_values": 8,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 29,
+   "budget": 36,
+   "evaluations": 9,
+   "failed_evaluations": 0,
+   "container_seconds": 1442
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "first_level_above_gamma8_as_s",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "band_count_identification",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "spin_orbit_off_s_level",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "spin_orbit_off_splitting",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "strain_from_experimental_lattice_parameter",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "experimental_lattice_parameter",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "c_fixed_at_a0",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "cubic_compression",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "linear_bir_pikus_at_minus1pct",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "linear_formula_at_minus0.5pct",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "shifted_mesh_nearest_point",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "koster_label_for_heavy_hole",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "crossing_linear_extrapolation_from_0_and_-1pct",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "pressures_at_40_Ry",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "a0_spin_orbit_60Ry_k8",
+    "passes_grading": true
+   },
+   {
+    "name": "a0_scalar_relativistic_80Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "levels_k8_60Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "levels_k6_50Ry_mv001",
+    "passes_grading": true
+   },
+   {
+    "name": "levels_fixed_occupations_by_degeneracy",
+    "passes_grading": true
+   },
+   {
+    "name": "relaxation_and_levels_60Ry_k8",
+    "passes_grading": true
+   },
+   {
+    "name": "relaxation_and_levels_80Ry_k8",
+    "passes_grading": true
+   },
+   {
+    "name": "scalar_relativistic_relaxation_60Ry_k8",
+    "passes_grading": true
+   },
+   {
+    "name": "b_6x6_bir_pikus_from_minus1pct",
+    "passes_grading": true
+   },
+   {
+    "name": "b_6x6_bir_pikus_from_pm0.5pct",
+    "passes_grading": true
+   },
+   {
+    "name": "b_quadratic_fit_three_strains",
+    "passes_grading": true
+   },
+   {
+    "name": "crossing_linear_between_bracketing_strains",
+    "passes_grading": true
+   },
+   {
+    "name": "crossing_quadratic_0_to_-2pct",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T13:42:15Z"
+}

@@ -1,0 +1,212 @@
+{
+ "evaluations": 20,
+ "charge_used": 24,
+ "budget": 27,
+ "requests": [
+  {
+   "kind": "c3",
+   "material": "tWSe2",
+   "angle": "3.15",
+   "point": "gamma",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tWSe2",
+   "angle": "3.15",
+   "point": "kappa",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tWSe2",
+   "angle": "1.70",
+   "point": "gamma",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tWSe2",
+   "angle": "1.70",
+   "point": "kappa",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tWSe2",
+   "angle": "1.54",
+   "point": "gamma",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tWSe2",
+   "angle": "1.54",
+   "point": "kappa",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tWSe2",
+   "angle": "1.25",
+   "point": "gamma",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tWSe2",
+   "angle": "1.25",
+   "point": "kappa",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tMoTe2",
+   "angle": "3.89",
+   "point": "gamma",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tMoTe2",
+   "angle": "3.89",
+   "point": "kappa",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tMoTe2",
+   "angle": "3.15",
+   "point": "gamma",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tMoTe2",
+   "angle": "3.15",
+   "point": "kappa",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tMoTe2",
+   "angle": "2.14",
+   "point": "gamma",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tMoTe2",
+   "angle": "2.14",
+   "point": "kappa",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tMoTe2",
+   "angle": "1.25",
+   "point": "gamma",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tMoTe2",
+   "angle": "1.25",
+   "point": "kappa",
+   "charge": 1
+  },
+  {
+   "kind": "c3",
+   "material": "tMoTe2",
+   "angle": "3.89",
+   "point": "kappa_prime",
+   "charge": 1
+  },
+  {
+   "kind": "hartree_map",
+   "angle": "1.70",
+   "charge": 3
+  },
+  {
+   "kind": "hartree_map",
+   "angle": "1.25",
+   "charge": 3
+  },
+  {
+   "kind": "hartree_linecut",
+   "angle": "1.54",
+   "charge": 1
+  }
+ ],
+ "total_job_seconds": 2.3,
+ "submission": {
+  "dft_chern_K_up": {
+   "tWSe2_3.15": [
+    1,
+    1
+   ],
+   "tWSe2_1.70": [
+    1,
+    1
+   ],
+   "tWSe2_1.54": [
+    0,
+    0
+   ],
+   "tWSe2_1.25": [
+    -1,
+    -1
+   ],
+   "tMoTe2_3.89": [
+    1,
+    -1
+   ],
+   "tMoTe2_3.15": [
+    1,
+    -1
+   ],
+   "tMoTe2_2.14": [
+    1,
+    1
+   ],
+   "tMoTe2_1.25": [
+    0,
+    0
+   ]
+  },
+  "continuum_chern_3p89": {
+   "P": [
+    1,
+    -1
+   ],
+   "Q": [
+    -1,
+    -1
+   ]
+  },
+  "continuum_set_matching_dft": "P",
+  "continuum_P_chern_2p14": [
+   1,
+   -1
+  ],
+  "hartree_xm_meV": {
+   "3.15": -18.5768,
+   "1.70": 8.9161,
+   "1.54": 11.7321,
+   "1.25": 16.0827
+  },
+  "hartree_first_star_xm_meV": {
+   "1.70": 0.3374,
+   "1.25": 12.2496
+  }
+ },
+ "accepted": true,
+ "errors_meV": {
+  "hartree_xm:3.15": 0.0,
+  "hartree_xm:1.70": 0.0,
+  "hartree_xm:1.54": -0.0025999999999992696,
+  "hartree_xm:1.25": -9.999999999976694e-05,
+  "first_star_xm:1.70": 0.0,
+  "first_star_xm:1.25": 0.0
+ }
+}

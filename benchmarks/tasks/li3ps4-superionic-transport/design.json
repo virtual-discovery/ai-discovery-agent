@@ -1,0 +1,258 @@
+{
+ "task_id": "li3ps4-superionic-transport",
+ "catalog_id": "li3ps4-superionic-transport",
+ "start": "released",
+ "source_group": "gigli_2024_li3ps4_transport",
+ "title": "Li3PS4: superionic transition, ionic conductivity and the paddle-wheel question",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which conductivity answers the question: Nernst-Einstein (tracer) or Green-Kubo (charge current)",
+   "wrong_choice": "Use the cheaper, smoother Nernst-Einstein series as sigma (H_R = 1)",
+   "consequence": "Predictions low by the Haven ratio (-0.26 to -0.29 dex); superionic E_a 0.28 eV instead of ~0.18 eV (H_R rises with T); H_R = 1",
+   "ablation": "nernst_einstein_as_conductivity",
+   "difficulty_type": "convention, with a cascade into E_a"
+  },
+  {
+   "id": "dp2",
+   "fork": "Which Green-Kubo points below the transition are resolved",
+   "wrong_choice": "Fit every positive Green-Kubo value below the transition",
+   "consequence": "Below ~600 K the gamma-started Green-Kubo values sit at a ~0.03 S/m noise floor (apparent H_R > 1); including them gives E_a ~0.16 eV instead of ~1.6 eV",
+   "ablation": "green_kubo_noise_floor_in_low_T_fit",
+   "difficulty_type": "regime judgement discovered in the data"
+  },
+  {
+   "id": "dp3",
+   "fork": "Which heat-capacity anomaly is the superionic transition",
+   "wrong_choice": "Take the largest Cp peak",
+   "consequence": "For every reference the largest Cp peak is melting of the PS4 sublattice (coincides with P diffusion and free rotation): Tc 875/925 K instead of 737.5/787.5 K, and the withheld runs are then predicted from the low-temperature branch",
+   "ablation": "largest_heat_capacity_peak_as_transition",
+   "difficulty_type": "confounder that mimics the target; discriminating purchase (D_P, angle step)"
+  },
+  {
+   "id": "dp4",
+   "fork": "Whether the transition depends on the DFT reference",
+   "wrong_choice": "Transfer one reference's transition (PBEsol) or the experimental alpha transition (746 K) to all",
+   "consequence": "Tc off by 125-175 K (PBEsol transfer) or 41.5 K for r2SCAN (experimental value); budget must be split over references",
+   "ablation": "pbesol_transition_for_all_references",
+   "difficulty_type": "discovered in the data under a binding budget"
+  },
+  {
+   "id": "dp5",
+   "fork": "On which side of the jump each withheld run lies",
+   "wrong_choice": "Interpolate log sigma in 1/T between the neighbouring served temperatures",
+   "consequence": "Each withheld run is the first temperature above its transition; interpolation across the jump is low by 0.27-0.52 dex. Resolving it requires buying a discriminating observable at that temperature (angle fluctuation, Cp of the interval, order parameters or the 750 K MSD)",
+   "ablation": "interpolate_across_the_jump",
+   "difficulty_type": "discriminating experiment; cascade from the transition location"
+  },
+  {
+   "id": "dp6",
+   "fork": "Whether runs from different starting phases reach the same superionic state",
+   "wrong_choice": "Use alpha-started runs as the superionic reference for the gamma-started cells",
+   "consequence": "Alpha-started runs stay in a different, more conductive state: predictions high by 0.25-0.31 dex and H_R 0.37 instead of 0.53",
+   "ablation": "alpha_started_runs_as_superionic_reference",
+   "difficulty_type": "hysteresis discovered in the data"
+  },
+  {
+   "id": "dp7",
+   "fork": "Frame for attributing conduction to Li-anion coupling",
+   "wrong_choice": "Read the Li-S term in the barycentric frame as dynamical coupling",
+   "consequence": "Li-S fraction 0.27 (equal to the kinematic recoil of the matrix, fixed by the masses) instead of ~0.05; a spurious argument for the paddle-wheel picture",
+   "ablation": "barycentric_li_s_term_as_coupling",
+   "difficulty_type": "confounder that mimics the target effect"
+  },
+  {
+   "id": "dp8",
+   "fork": "Which PS4 motion to compare with Li hops",
+   "wrong_choice": "Compare with the PS4 libration rate implied by the angle fluctuation",
+   "consequence": "Rate ratio ~10^-0.3 (hops no faster than PS4 motion) instead of ~10^2.7; paddle-wheel wrongly supported",
+   "ablation": "librations_taken_for_reorientations",
+   "difficulty_type": "discriminating observable between competing explanations"
+  },
+  {
+   "id": "dp9",
+   "fork": "One Arrhenius law or separate phases",
+   "wrong_choice": "Fit one Arrhenius law through the transition for the gamma-started runs",
+   "consequence": "Single E_a ~0.65 eV for both regimes (true ~1.6 and ~0.18 eV); transition and superionic barrier missed",
+   "ablation": "single_arrhenius_through_the_transition",
+   "difficulty_type": "model class"
+  }
+ ],
+ "graded_fields": [
+  "transition_temperature_K (PBE0, r2SCAN) within +/-30 K",
+  "sigma_predictions_S_per_m: each of 3 withheld runs within +/-0.15 dex",
+  "haven_ratio_PBE0_gamma_750K within +/-0.12",
+  "activation_energy_eV_PBE0_gamma: below_transition +/-0.35 eV, superionic_to_1000K +/-0.06 eV",
+  "li_s_cross_fraction within +/-0.1",
+  "log10_hop_to_flip_rate_ratio_PBE0_800K within +/-1 dex",
+  "paddle_wheel_supported must be false"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 40,
+  "oracle_charge": 50,
+  "budget": 60,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image); the lab is a lookup of archived values"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/pkn2d-h8190",
+  "doi": "10.24435/materialscloud:qy-gv",
+  "paper_doi": "10.1021/acs.chemmater.3c02726",
+  "files_used": [
+   "MaterialsCloudArchive-ChemMat2024.zip (47 members, see SOURCE.md)"
+  ],
+  "md5": {
+   "MaterialsCloudArchive-ChemMat2024.zip": "e838e8716fb42200c34f06119337e909"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the design: the archive holds no trajectories, only figure-level analyses, so the lab serves them per run and the withheld runs are the first temperature above each transition. PBE0 is graded with Green-Kubo activation energies (the paper tabulates Nernst-Einstein ones, 1.43/0.269 eV). The hop/flip ratio is graded at 800 K in the superionic phase (600 K, as in the design, lies below the PBE0 transition, where D_omega is librational). Beta-started runs above 625 K are not served because the archived r2SCAN and PBE0 beta series coincide there.",
+ "calibration": {
+  "transition_temperature_K": {
+   "reference": {
+    "PBE0": 737.5,
+    "r2SCAN": 787.5
+   },
+   "robustness": {
+    "upper_bracket": {
+     "PBE0": 750.0,
+     "r2SCAN": 800.0
+    },
+    "lower_bracket": {
+     "PBE0": 725.0,
+     "r2SCAN": 775.0
+    }
+   },
+   "oracle": {
+    "PBE0": 0.0,
+    "r2SCAN": 0.0
+   },
+   "nearest_ablation": {
+    "experimental_746K (r2SCAN)": 746.0,
+    "melting_peak": {
+     "PBE0": 875.0,
+     "r2SCAN": 925.0
+    },
+    "pbesol_transfer": {
+     "PBE0": 612.5,
+     "r2SCAN": 612.5
+    }
+   },
+   "tolerance": "+/-30 K"
+  },
+  "sigma_predictions_log10_error": {
+   "reference_S_per_m": {
+    "PBEsol/gamma/625": 145.4,
+    "PBE0/gamma/750": 232.3,
+    "r2SCAN/gamma/800": 242.2
+   },
+   "robustness": {
+    "tracer_branch_over_HR": {
+     "PBEsol/gamma/625": 0.0583,
+     "PBE0/gamma/750": -0.0169,
+     "r2SCAN/gamma/800": -0.0161
+    },
+    "gk_superionic_fit_to_1000K": {
+     "PBEsol/gamma/625": 0.11,
+     "PBE0/gamma/750": 0.0306,
+     "r2SCAN/gamma/800": 0.0593
+    },
+    "msd_route_PBE0_750": 0.0411
+   },
+   "oracle": {
+    "PBEsol/gamma/625": 0.0359,
+    "PBE0/gamma/750": 0.0476,
+    "r2SCAN/gamma/800": 0.027
+   },
+   "nearest_ablation": {
+    "alpha_branch": {
+     "PBEsol/gamma/625": 0.278,
+     "PBE0/gamma/750": 0.247,
+     "r2SCAN/gamma/800": 0.307
+    },
+    "tracer_as_sigma": {
+     "PBEsol/gamma/625": -0.289,
+     "PBE0/gamma/750": -0.275,
+     "r2SCAN/gamma/800": -0.262
+    },
+    "interpolate_across_jump": {
+     "PBEsol/gamma/625": -0.503,
+     "PBE0/gamma/750": -0.273,
+     "r2SCAN/gamma/800": -0.515
+    },
+    "low_branch": {
+     "PBEsol/gamma/625": -0.778,
+     "PBE0/gamma/750": -0.286,
+     "r2SCAN/gamma/800": -0.48
+    }
+   },
+   "tolerance": "+/-0.15 dex each"
+  },
+  "haven_ratio_PBE0_gamma_750K": {
+   "reference": 0.5305,
+   "robustness": {
+    "first_three_superionic": 0.5411,
+    "all_superionic_to_1100K": 0.6367
+   },
+   "oracle_error": -0.000762,
+   "nearest_ablation": {
+    "alpha_branch": 0.3671,
+    "tracer_equals_sigma": 1.0
+   },
+   "tolerance": "+/-0.12"
+  },
+  "activation_energy_below_transition_eV": {
+   "reference": 1.61,
+   "robustness": {
+    "unweighted": 1.757,
+    "tracer": 1.422
+   },
+   "oracle_error": -0.138,
+   "nearest_ablation": {
+    "single_arrhenius": 0.6456,
+    "noise_floor": 0.1603
+   },
+   "tolerance": "+/-0.35 eV"
+  },
+  "activation_energy_superionic_eV": {
+   "reference": 0.1839,
+   "robustness": {
+    "window_to_875K": 0.2298,
+    "without_750K": 0.1732
+   },
+   "oracle_error": -0.0179,
+   "nearest_ablation": {
+    "tracer": 0.2771,
+    "single_arrhenius": 0.6456
+   },
+   "tolerance": "+/-0.06 eV"
+  },
+  "li_s_cross_fraction": {
+   "reference": 0.05015,
+   "robustness": {
+    "zero_by_construction": 0.0
+   },
+   "nearest_ablation": {
+    "barycentric": 0.275,
+    "recoil_prediction": 0.2727
+   },
+   "tolerance": "+/-0.1"
+  },
+  "log10_hop_to_flip_rate_ratio_PBE0_800K": {
+   "reference": 2.681,
+   "robustness": {
+    "domega_as_rate": 3.102,
+    "msd_750K_hop_3A": 2.57
+   },
+   "nearest_ablation": {
+    "libration": -0.2928
+   },
+   "tolerance": "+/-1 dex"
+  }
+ }
+}

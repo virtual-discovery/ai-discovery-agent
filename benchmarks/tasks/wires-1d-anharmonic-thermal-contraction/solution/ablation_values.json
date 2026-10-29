@@ -1,0 +1,48 @@
+{
+ "ablations": {
+  "k_plain_asr": 142.22712193408574,
+  "k_finite_strain": 84.32265270900578,
+  "alpha_sign": 5.06796008298221,
+  "alpha_average_stress": -7.953004394257773,
+  "alpha_plain_asr": -3.7916219957464343,
+  "alpha_finite_strain": -6.3953334791066725,
+  "alpha_half_k": -10.13592016596442,
+  "alpha_supercell_volume": -30.407760497893257,
+  "cv_cuc2_paper_sign": 0.7815956517050441,
+  "cv_cuc2_harmonic_sscha_freq": 0.7307141701677645,
+  "cv_cuc2_per_atom_3N": 0.6420642059287908,
+  "cv_cuc2_hessian_freq": 0.7575933886403994,
+  "cv_cuc2_with_unconverged_400K": 0.7101162870477543,
+  "cv_cuc2_dfpt_harmonic": 0.736424144805879,
+  "cv_tase3_paper_sign": 0.9323864034239969,
+  "cv_tase3_harmonic_sscha_freq": 0.9558824086498402,
+  "cv_tase3_per_atom_3N": 0.9249685019937028,
+  "cv_tase3_hessian_freq": 1.0641573284129422,
+  "cv_tase3_dfpt_harmonic": 0.9542264897521048,
+  "T_inst_rotation_mode": 0.0,
+  "T_inst_first_released_unstable": 800.0
+ },
+ "robustness": {
+  "k_q005": 104.69846382510809,
+  "k_T0_hessian": 100.12400972196616,
+  "alpha_wide_quadratic": -5.0274729738304185,
+  "alpha_global_cubic_T0_hessian_k": -5.031338806807285,
+  "alpha_k_q005": -5.150710566468361,
+  "cv_cuc2_cubic": 0.6957759382850387,
+  "cv_cuc2_linear_200_500": 0.6899371649293514,
+  "cv_cuc2_all_converged_cubic": 0.6764953276219959,
+  "cv_tase3_cubic": 0.9787361611481759,
+  "cv_tase3_linear_200_500": 0.9793958206849688,
+  "cv_tase3_all_converged_cubic": 0.977854707232562,
+  "T_inst_released_600_800_10k": 698.9039241881761,
+  "T_inst_released_600_800_100k": 695.7090463471454,
+  "T_inst_quadratic_fit": 713.4904760998697
+ },
+ "reference": {
+  "k": 106.40799751517748,
+  "alpha": -5.06796008298221,
+  "cv_cuc2": 0.6798326886304844,
+  "cv_tase3": 0.9793784138756854,
+  "T_inst": 665.8157569478251
+ }
+}

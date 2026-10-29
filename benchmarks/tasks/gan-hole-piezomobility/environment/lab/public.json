@@ -1,0 +1,22 @@
+{
+ "task_id": "gan-hole-piezomobility",
+ "solver_budget": 50,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "bands": {
+   "kind": "bands",
+   "state": "<state>",
+   "cost": 1
+  },
+  "mobility": {
+   "kind": "mobility",
+   "state": "<state>",
+   "solver": "serta | ibte",
+   "cost": {
+    "serta": 1,
+    "ibte": 3
+   }
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

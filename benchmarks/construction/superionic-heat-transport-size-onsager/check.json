@@ -1,0 +1,83 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 6,
+  "rubric_items": 6,
+  "task_mb": 28.85,
+  "hidden_values": 14,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 43,
+   "budget": 48,
+   "evaluations": 13,
+   "failed_evaluations": 0,
+   "container_seconds": 3
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "raw_heat_flux_single_component_gk",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "smallest_96_atom_cells",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "spectrum_normalisation_factor_two",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "phonon_gas_one_over_T_extrapolation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "uo2_324_atom_cell_assumed_converged",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "thermostat_bias_assumed_nvt_discarded",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "cepstral_lowpass_3THz",
+    "passes_grading": true
+   },
+   {
+    "name": "nve_runs_only",
+    "passes_grading": true
+   },
+   {
+    "name": "single_neighbour_temperature",
+    "passes_grading": true
+   },
+   {
+    "name": "linear_extrapolation_both_ensembles",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T07:52:16Z"
+}

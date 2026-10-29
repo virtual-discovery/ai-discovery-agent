@@ -1,0 +1,11 @@
+# Physical-reasoning rubric
+
+Each item is a checkable statement that the report must make explicitly.
+
+1. Shows that a nearest-neighbour model fits the 12-meV zone-boundary data (bandwidth about 2.6–3.0 meV) but fails the high-resolution data near R: for J1 alone η is fixed at 1/√3 ≈ 0.58, while the low-energy magnons near R disperse several times faster than a nearest-neighbour model with the measured bandwidth allows.
+2. Models the momentum binning: the high-resolution spectra and cuts are integrated over a perpendicular window (±0.08 r.l.u. or 0.08 r.l.u. total), and the 12-meV spectra over ±0.09 or ±0.17 r.l.u. Explains that the broad constant-q profiles near R arise largely from integrating a steep magnon cone over that window, not from an incoherent continuum, and that peak positions read off such profiles bias the dispersion.
+3. Argues that exchange up to third neighbours cannot produce the observed combination of a steep cone near R and a low bandwidth (η cannot exceed about 1 for short-range models), nor the comparatively flat Q-dependence of the integrated intensity. A long-range, staggered contribution is required, equivalent to a sharp minimum of J(q) at R.
+4. Connects that long-range exchange to RKKY coupling through the conduction (heavy-fermion) Fermi surface in a Kondo lattice, rather than to a local-moment superexchange picture, and discusses Kondo screening (a reduced moment and damping) versus well-defined spin waves.
+5. Treats resolution, binning and intrinsic damping separately. Notes that a Lorentzian broadening beyond the 0.106-meV resolution and the binning is needed, and that the 12-meV resolution is not archived, so the high-energy damping cannot be quantified absolutely.
+6. Avoids overfitting: justifies the number of free exchange parameters (for example, a compact long-range term rather than many free shells), and states that the signs of individual distant shells are not determined by these data.
+7. States what the data do not support: a spin gap below about 0.2 meV (the lowest bins are dominated by the subtracted elastic line), a precise velocity (it depends on the reading of the integration window and on the model), and absolute moment sizes from the separately normalised data sets.

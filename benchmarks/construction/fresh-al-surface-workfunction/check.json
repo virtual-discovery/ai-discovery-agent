@@ -1,0 +1,133 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 7,
+  "task_mb": 1.76,
+  "hidden_values": 9,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 52,
+   "budget": 58,
+   "evaluations": 16,
+   "failed_evaluations": 0,
+   "container_seconds": 3187
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "default_bands_ladder",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "default_bands_slope_fit",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "primitive_bulk_reference",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "slope_fit_window_N7_12",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "slope_fit_window_N8_12",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "total_local_potential_vacuum_level",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "thin_slab_ladder_N3_6",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "single_7_layer_slab",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "relaxation_from_7_layers",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "k12_ladder_for_sigma_phi",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "area_counted_once",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "ordering_called_unresolved",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "oracle_plan_N7_12",
+    "passes_grading": true
+   },
+   {
+    "name": "window_N8_12",
+    "passes_grading": true
+   },
+   {
+    "name": "window_N9_12_kz9_or_12",
+    "passes_grading": true
+   },
+   {
+    "name": "k24_ladders_for_sigma_phi",
+    "passes_grading": true
+   },
+   {
+    "name": "wide_vacuum_window_2A",
+    "passes_grading": true
+   },
+   {
+    "name": "d12_from_N10_only",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T12:07:04Z"
+}

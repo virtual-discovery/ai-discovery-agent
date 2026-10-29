@@ -1,0 +1,159 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 10,
+  "rubric_items": 8,
+  "task_mb": 4.22,
+  "hidden_values": 8,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 21,
+   "budget": 26,
+   "evaluations": 18,
+   "failed_evaluations": 0,
+   "container_seconds": 35
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "no_dfpt_subtraction",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "same_temperature_reference",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "smearing_read_as_eV",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "adiabatic_for_nonadiabatic",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "nonadiabatic_for_adiabatic",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "header_column_order",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "both_processes_summed",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "sorted_intraband_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "coarse_mesh_1e5",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "native_archived_grid",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "fd_scan_reference_frequency",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "dfpt_scan_as_temperature_proxy",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "inverted_mass_parameter",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "interpolate_released_tables",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "authors_iteration",
+    "passes_grading": true
+   },
+   {
+    "name": "no_linewidth_term",
+    "passes_grading": true
+   },
+   {
+    "name": "onshell_linewidth",
+    "passes_grading": true
+   },
+   {
+    "name": "dynamic_reference_at_sigma",
+    "passes_grading": true
+   },
+   {
+    "name": "released_tables_log_fit",
+    "passes_grading": true
+   },
+   {
+    "name": "eq9_threshold",
+    "passes_grading": true
+   },
+   {
+    "name": "fig1_output_interpolation",
+    "passes_grading": true
+   },
+   {
+    "name": "lab_evaluator_1e6",
+    "passes_grading": true
+   },
+   {
+    "name": "lab_evaluator_eta_2p5meV",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T01:49:34Z"
+}

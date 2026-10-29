@@ -1,0 +1,5 @@
+{
+ "task_id": "wires-1d-anharmonic-thermal-contraction",
+ "solver_budget": 36,
+ "min_report_chars": 400
+}

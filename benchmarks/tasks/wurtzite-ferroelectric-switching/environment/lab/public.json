@@ -1,0 +1,11 @@
+{
+ "task_id": "wurtzite-ferroelectric-switching",
+ "solver_budget": 28,
+ "reserved_validation_charge": 0,
+ "requests": {"neb_run": {"kind": "neb_run", "system": "AlN|AlBN", "run": "<run from neb_runs>", "cost": 2},
+              "neb_image": {"kind": "neb_image", "system": "AlN|AlBN", "run": "<run>", "image": "<1..N>", "cost": 1},
+              "berry_phase": {"kind": "berry_phase", "system": "AlN|AlBN", "folder": "<from berry_phase_folders>", "cost": 1},
+              "born_charges": {"kind": "born_charges", "system": "AlBN", "cost": 1},
+              "vc_relax": {"kind": "vc_relax", "key": "<from vc_relax_keys>", "cost": 1}},
+ "catalog": "/app/catalog.json"
+}

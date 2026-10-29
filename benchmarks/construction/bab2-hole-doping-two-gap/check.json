@@ -1,0 +1,139 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 8,
+  "task_mb": 1.78,
+  "hidden_values": 7,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 30,
+   "budget": 34,
+   "evaluations": 21,
+   "failed_evaluations": 0,
+   "container_seconds": 4
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "readme_order_mapping",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "omega_linear_crossing",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "supercell_331_as_homogeneous",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "supercell_gamma_point",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "archived_mu013_logs",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "allen_dynes_tc",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "unconverged_gap_scan",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "isotropic_tc_as_anisotropic",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "linear_gap_extrapolation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "real_axis_gap_ratio",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "xc_omega2_piecewise_released",
+    "passes_grading": true
+   },
+   {
+    "name": "xc_omega2_quadratic_released",
+    "passes_grading": true
+   },
+   {
+    "name": "xc_omega2_linear_regression_released",
+    "passes_grading": true
+   },
+   {
+    "name": "iso_linearized_reference_column_10",
+    "passes_grading": true
+   },
+   {
+    "name": "iso_converged_extrapolation_grid",
+    "passes_grading": true
+   },
+   {
+    "name": "aniso_large_cluster_squared",
+    "passes_grading": true
+   },
+   {
+    "name": "aniso_sqrt_free_energy",
+    "passes_grading": true
+   },
+   {
+    "name": "aniso_three_point_fit",
+    "passes_grading": true
+   },
+   {
+    "name": "aniso_real_axis_max",
+    "passes_grading": true
+   },
+   {
+    "name": "gap_ratio_median",
+    "passes_grading": true
+   },
+   {
+    "name": "gap_ratio_unweighted_bins",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T20:24:00Z"
+}

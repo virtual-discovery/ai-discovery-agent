@@ -1,0 +1,17 @@
+{
+ "reference": {
+  "tc_full_W_K": {
+   "Mg2IrH6_15GPa": 88.45,
+   "Mg2IrH6_25GPa": 91.65,
+   "H3S_180GPa": 256.5,
+   "H3S_190GPa": 244.5
+  },
+  "mu_star_cdos_1eV_Mg2IrH6_20GPa": 0.5875012857243657,
+  "N_EF_H3S_180GPa_per_fu_per_spin": 0.2704499999999974
+ },
+ "tolerance": {
+  "tc_rel": 0.035,
+  "mu_star_abs": 0.025,
+  "nef_rel": 0.03
+ }
+}

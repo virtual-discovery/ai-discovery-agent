@@ -1,0 +1,346 @@
+{
+ "ablations": {
+  "total_energy_converged_mesh": {
+   "a0_A": 3.435,
+   "bulk_modulus_GPa": 13.93143692729696,
+   "Cprime_GPa": 1.5309125449940009,
+   "C44_GPa": 10.81955,
+   "zener_anisotropy": 7.067386073345161,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.048291,
+   "compressed_Bprime_GPa": 1.3433875483268873,
+   "compressed_B44_GPa": 11.577200000000001
+  },
+  "small_smearing_coarse_mesh": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": -2.0592004399413413,
+   "C44_GPa": 6.156349999999999,
+   "zener_anisotropy": -2.989679819695148,
+   "mechanically_stable_at_a0": false,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": -0.2610735235301946,
+   "compressed_B44_GPa": 13.53365
+  },
+  "small_smearing_k24": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.7758715504599387,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 14.960992352989607,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": -0.2610735235301946,
+   "compressed_B44_GPa": 12.784658333333333
+  },
+  "largest_smearing_k_converged": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.8506449140114651,
+   "C44_GPa": 11.33445,
+   "zener_anisotropy": 13.324537434249835,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.67413511531796,
+   "compressed_B44_GPa": 12.45245
+  },
+  "one_sided_plus_strain": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 1.2677943505830032,
+   "C44_GPa": 11.106399999999999,
+   "zener_anisotropy": 8.760411335555053,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 1.1118049956318894,
+   "compressed_B44_GPa": 12.1362
+  },
+  "one_sided_minus_strain": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.6286288466393105,
+   "C44_GPa": 11.7243,
+   "zener_anisotropy": 18.65059178031496,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.5121262669511141,
+   "compressed_B44_GPa": 12.812899999999999
+  },
+  "experimental_lattice": {
+   "a0_A": 3.477,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9450239968004264,
+   "C44_GPa": 11.010800000000001,
+   "zener_anisotropy": 11.651344343931303,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.8175493267564324,
+   "compressed_B44_GPa": 12.784658333333333
+  },
+  "energy_curvature_under_pressure": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9468654179442741,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 12.2591955660762,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 1.8965785103871724,
+   "compressed_B44_GPa": 13.486331198398538
+  },
+  "lagrangian_coefficients_under_pressure": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9468654179442741,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 12.2591955660762,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 2.859809326756433,
+   "compressed_B44_GPa": 14.826918333333333
+  },
+  "tensor_shear_convention": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9468654179442741,
+   "C44_GPa": 2.901952083333333,
+   "zener_anisotropy": 3.06479889151905,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.8175493267564324,
+   "compressed_B44_GPa": 3.196164583333333
+  },
+  "trigonal_single_component": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9468654179442741,
+   "C44_GPa": 34.823425,
+   "zener_anisotropy": 36.777586698228596,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.8175493267564324,
+   "compressed_B44_GPa": 38.353975
+  },
+  "compressed_reuses_a0_moduli": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9468654179442741,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 12.2591955660762,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.9468654179442741,
+   "compressed_B44_GPa": 11.607808333333333
+  },
+  "compressed_scaled_with_bulk_modulus": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9468654179442741,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 12.2591955660762,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 1.3801619930749194,
+   "compressed_B44_GPa": 16.919675785970938
+  }
+ },
+ "robustness": {
+  "oracle_like_k48_both_smearings": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.91561056627635,
+   "Cprime_GPa": 0.937666644447407,
+   "C44_GPa": 11.415349999999998,
+   "zener_anisotropy": 12.174209317989957,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.04226,
+   "compressed_Bprime_GPa": 0.8089671377149675,
+   "compressed_B44_GPa": 12.47455
+  },
+  "k56_smearing_0.01": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9376749766697774,
+   "C44_GPa": 11.525699999999999,
+   "zener_anisotropy": 12.291785839198122,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.042554,
+   "compressed_Bprime_GPa": 0.7844537395013996,
+   "compressed_B44_GPa": 12.673100000000002
+  },
+  "k56_smearing_0.005": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.974453406212505,
+   "C44_GPa": 11.95225,
+   "zener_anisotropy": 12.265594151346729,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.04226,
+   "compressed_Bprime_GPa": 0.8371633782162419,
+   "compressed_B44_GPa": 13.26155
+  },
+  "k64_smearing_0.01": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9468654179442741,
+   "C44_GPa": 11.49625,
+   "zener_anisotropy": 12.141376992053784,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.7869117451006525,
+   "compressed_B44_GPa": 12.643700000000003
+  },
+  "smearing_0.005_k48": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9303176243167578,
+   "C44_GPa": 11.731650000000002,
+   "zener_anisotropy": 12.610370580279977,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.041966,
+   "compressed_Bprime_GPa": 0.8702506332489001,
+   "compressed_B44_GPa": 12.85695
+  },
+  "energy_route_volume_conserving": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9517891084980734,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 12.195777646216708,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.8681043268744341,
+   "compressed_B44_GPa": 12.465201198398539
+  },
+  "half_percent_strains": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9586013799540015,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 12.109108724515224,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.8175493267564324,
+   "compressed_B44_GPa": 12.784658333333333
+  },
+  "two_percent_strains": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9452580472887635,
+   "C44_GPa": 11.444775,
+   "zener_anisotropy": 12.107566852063812,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.8175493267564324,
+   "compressed_B44_GPa": 12.784658333333333
+  },
+  "three_percent_tetragonal_strains": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.979930837550812,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 11.845538367121177,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.8175493267564324,
+   "compressed_B44_GPa": 12.784658333333333
+  },
+  "a0_from_zero_pressure": {
+   "a0_A": 3.4346950753490058,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9468654179442741,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 12.2591955660762,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.8175493267564324,
+   "compressed_B44_GPa": 12.784658333333333
+  },
+  "cutoff_60Ry_correction": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9468737501666444,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 12.259087688607298,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.8175493267564324,
+   "compressed_B44_GPa": 12.784658333333333
+  },
+  "uniaxial_strain_stress_route": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9709000000000009,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 11.955719778899292,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.8175493267564324,
+   "compressed_B44_GPa": 12.784658333333333
+  },
+  "cprime_from_c11_energy_minus_b": {
+   "a0_A": 3.4348,
+   "bulk_modulus_GPa": 13.918486911607088,
+   "Cprime_GPa": 0.9464477379176732,
+   "C44_GPa": 11.607808333333333,
+   "zener_anisotropy": 12.264605712801691,
+   "mechanically_stable_at_a0": true,
+   "compressed_pressure_GPa": 2.0423188,
+   "compressed_Bprime_GPa": 0.8175493267564324,
+   "compressed_B44_GPa": 12.784658333333333
+  }
+ },
+ "ablation_decision_points": [
+  [
+   "dp1",
+   "total_energy_converged_mesh"
+  ],
+  [
+   "dp2",
+   "small_smearing_coarse_mesh"
+  ],
+  [
+   "dp2",
+   "small_smearing_k24"
+  ],
+  [
+   "dp3",
+   "largest_smearing_k_converged"
+  ],
+  [
+   "dp4",
+   "one_sided_plus_strain"
+  ],
+  [
+   "dp4",
+   "one_sided_minus_strain"
+  ],
+  [
+   "dp5",
+   "experimental_lattice"
+  ],
+  [
+   "dp6",
+   "energy_curvature_under_pressure"
+  ],
+  [
+   "dp6",
+   "lagrangian_coefficients_under_pressure"
+  ],
+  [
+   "dp7",
+   "tensor_shear_convention"
+  ],
+  [
+   "dp7",
+   "trigonal_single_component"
+  ],
+  [
+   "dp8",
+   "compressed_reuses_a0_moduli"
+  ],
+  [
+   "dp8",
+   "compressed_scaled_with_bulk_modulus"
+  ]
+ ]
+}

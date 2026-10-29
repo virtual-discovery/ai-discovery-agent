@@ -1,0 +1,551 @@
+{
+ "material": "Co3Sn2S2 single crystal (kagome Weyl ferromagnet), diffuse neutron scattering on DMC (PSI), released by D. W. Tam et al., Materials Cloud Archive 2026 (CC BY 4.0)",
+ "structure": {
+  "space_group": "R-3m (hexagonal setting)",
+  "a_A": 5.357,
+  "c_A": 13.127,
+  "Co_site": "Wyckoff 9d, (1/2, 0, 1/2) and R-3m images (9 Co per hexagonal cell)",
+  "curie_temperature_K_literature": 177
+ },
+ "scattering_plane": "(H 0 L). Qx is along a* and Qy along c*, both in 1/A; the nominal position of (h 0 l) is (h*4*pi/(sqrt(3)*a), l*2*pi/c) with the a and c above.",
+ "pixels": "Square bins of 0.015 1/A. qx_edges and qy_edges are the bin edges; arrays are indexed [ix][iy].",
+ "channels": {
+  "counts": "detector counts",
+  "monitor": "monitor counts",
+  "normalization": "vanadium normalisation (null where undefined)",
+  "normcount": "number of contributing detector frames"
+ },
+ "normalized_intensity": "counts * normcount / (monitor * normalization), as in the archived readcombined.py",
+ "archive_files": [
+  "archive/README.md",
+  "archive/readcombined.py",
+  "archive/SpinW_Co3Sn2S2_DMI.m"
+ ],
+ "purchase_costs": {
+  "narrow_scan": 2,
+  "wide_region": 1
+ },
+ "budget": 16,
+ "narrow_scans_available": [
+  {
+   "temperature_K": 140,
+   "run": 3896
+  },
+  {
+   "temperature_K": 178,
+   "run": 3882
+  },
+  {
+   "temperature_K": 185,
+   "run": 3883
+  },
+  {
+   "temperature_K": 192,
+   "run": 3887
+  },
+  {
+   "temperature_K": 220,
+   "run": 3903
+  },
+  {
+   "temperature_K": 250,
+   "run": 3905
+  }
+ ],
+ "wide_regions_available": [
+  {
+   "temperature_K": 1.5,
+   "run": 3869,
+   "hkl": [
+    0,
+    0,
+    3
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    1.4359
+   ]
+  },
+  {
+   "temperature_K": 1.5,
+   "run": 3869,
+   "hkl": [
+    1,
+    0,
+    1
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    0.4786
+   ]
+  },
+  {
+   "temperature_K": 1.5,
+   "run": 3869,
+   "hkl": [
+    -1,
+    0,
+    2
+   ],
+   "nominal_center_A-1": [
+    -1.3543,
+    0.9573
+   ]
+  },
+  {
+   "temperature_K": 1.5,
+   "run": 3869,
+   "hkl": [
+    1,
+    0,
+    -2
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    -0.9573
+   ]
+  },
+  {
+   "temperature_K": 1.5,
+   "run": 3869,
+   "hkl": [
+    1,
+    0,
+    4
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    1.9146
+   ]
+  },
+  {
+   "temperature_K": 1.5,
+   "run": 3869,
+   "hkl": [
+    0,
+    0,
+    1.5
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    0.718
+   ]
+  },
+  {
+   "temperature_K": 1.5,
+   "run": 3869,
+   "hkl": [
+    1,
+    0,
+    3.5
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    1.6753
+   ]
+  },
+  {
+   "temperature_K": 1.5,
+   "run": 3869,
+   "hkl": [
+    -1,
+    0,
+    3.5
+   ],
+   "nominal_center_A-1": [
+    -1.3543,
+    1.6753
+   ]
+  },
+  {
+   "temperature_K": 1.5,
+   "run": 3869,
+   "hkl": [
+    0,
+    0,
+    2
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    0.9573
+   ]
+  },
+  {
+   "temperature_K": 165,
+   "run": 3871,
+   "hkl": [
+    0,
+    0,
+    3
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    1.4359
+   ]
+  },
+  {
+   "temperature_K": 165,
+   "run": 3871,
+   "hkl": [
+    1,
+    0,
+    1
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    0.4786
+   ]
+  },
+  {
+   "temperature_K": 165,
+   "run": 3871,
+   "hkl": [
+    -1,
+    0,
+    2
+   ],
+   "nominal_center_A-1": [
+    -1.3543,
+    0.9573
+   ]
+  },
+  {
+   "temperature_K": 165,
+   "run": 3871,
+   "hkl": [
+    1,
+    0,
+    -2
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    -0.9573
+   ]
+  },
+  {
+   "temperature_K": 165,
+   "run": 3871,
+   "hkl": [
+    1,
+    0,
+    4
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    1.9146
+   ]
+  },
+  {
+   "temperature_K": 165,
+   "run": 3871,
+   "hkl": [
+    0,
+    0,
+    1.5
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    0.718
+   ]
+  },
+  {
+   "temperature_K": 165,
+   "run": 3871,
+   "hkl": [
+    1,
+    0,
+    3.5
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    1.6753
+   ]
+  },
+  {
+   "temperature_K": 165,
+   "run": 3871,
+   "hkl": [
+    -1,
+    0,
+    3.5
+   ],
+   "nominal_center_A-1": [
+    -1.3543,
+    1.6753
+   ]
+  },
+  {
+   "temperature_K": 165,
+   "run": 3871,
+   "hkl": [
+    0,
+    0,
+    2
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    0.9573
+   ]
+  },
+  {
+   "temperature_K": 180,
+   "run": 3874,
+   "hkl": [
+    0,
+    0,
+    3
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    1.4359
+   ]
+  },
+  {
+   "temperature_K": 180,
+   "run": 3874,
+   "hkl": [
+    -1,
+    0,
+    2
+   ],
+   "nominal_center_A-1": [
+    -1.3543,
+    0.9573
+   ]
+  },
+  {
+   "temperature_K": 180,
+   "run": 3874,
+   "hkl": [
+    1,
+    0,
+    -2
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    -0.9573
+   ]
+  },
+  {
+   "temperature_K": 180,
+   "run": 3874,
+   "hkl": [
+    1,
+    0,
+    4
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    1.9146
+   ]
+  },
+  {
+   "temperature_K": 180,
+   "run": 3874,
+   "hkl": [
+    0,
+    0,
+    1.5
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    0.718
+   ]
+  },
+  {
+   "temperature_K": 180,
+   "run": 3874,
+   "hkl": [
+    1,
+    0,
+    3.5
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    1.6753
+   ]
+  },
+  {
+   "temperature_K": 180,
+   "run": 3874,
+   "hkl": [
+    -1,
+    0,
+    3.5
+   ],
+   "nominal_center_A-1": [
+    -1.3543,
+    1.6753
+   ]
+  },
+  {
+   "temperature_K": 180,
+   "run": 3874,
+   "hkl": [
+    0,
+    0,
+    2
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    0.9573
+   ]
+  },
+  {
+   "temperature_K": 300,
+   "run": 3875,
+   "hkl": [
+    0,
+    0,
+    3
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    1.4359
+   ]
+  },
+  {
+   "temperature_K": 300,
+   "run": 3875,
+   "hkl": [
+    1,
+    0,
+    1
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    0.4786
+   ]
+  },
+  {
+   "temperature_K": 300,
+   "run": 3875,
+   "hkl": [
+    -1,
+    0,
+    2
+   ],
+   "nominal_center_A-1": [
+    -1.3543,
+    0.9573
+   ]
+  },
+  {
+   "temperature_K": 300,
+   "run": 3875,
+   "hkl": [
+    1,
+    0,
+    -2
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    -0.9573
+   ]
+  },
+  {
+   "temperature_K": 300,
+   "run": 3875,
+   "hkl": [
+    1,
+    0,
+    4
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    1.9146
+   ]
+  },
+  {
+   "temperature_K": 300,
+   "run": 3875,
+   "hkl": [
+    0,
+    0,
+    1.5
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    0.718
+   ]
+  },
+  {
+   "temperature_K": 300,
+   "run": 3875,
+   "hkl": [
+    1,
+    0,
+    3.5
+   ],
+   "nominal_center_A-1": [
+    1.3543,
+    1.6753
+   ]
+  },
+  {
+   "temperature_K": 300,
+   "run": 3875,
+   "hkl": [
+    -1,
+    0,
+    3.5
+   ],
+   "nominal_center_A-1": [
+    -1.3543,
+    1.6753
+   ]
+  },
+  {
+   "temperature_K": 300,
+   "run": 3875,
+   "hkl": [
+    0,
+    0,
+    2
+   ],
+   "nominal_center_A-1": [
+    0.0,
+    0.9573
+   ]
+  }
+ ],
+ "wide_region_note": "Regions are centred on the nominal position of the listed (h 0 l); positions with half-integer l or with -h + l not a multiple of 3 are not nuclear Bragg reflections of R-3m.",
+ "wide_region_half_width_A-1": 0.48,
+ "narrow_scans_coverage": "the narrow scans cover an arc around (0 0 3); they are served whole",
+ "withheld": {
+  "narrow_scans": [
+   {
+    "temperature_K": 170,
+    "run": 3885
+   },
+   {
+    "temperature_K": 175,
+    "run": 3879
+   },
+   {
+    "temperature_K": 200,
+    "run": 3884
+   }
+  ],
+  "wide_region": {
+   "temperature_K": 180,
+   "run": 3874,
+   "hkl": [
+    1,
+    0,
+    1
+   ]
+  }
+ },
+ "profile_annuli_pixels": [
+  4,
+  6,
+  8,
+  10,
+  12,
+  15,
+  17,
+  20,
+  27
+ ]
+}

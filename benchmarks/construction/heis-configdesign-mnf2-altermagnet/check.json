@@ -1,0 +1,146 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 7,
+  "task_mb": 0.19,
+  "hidden_values": 45,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 21,
+   "budget": 24,
+   "evaluations": 21,
+   "failed_evaluations": 0,
+   "container_seconds": 184
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "per_atom_label",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "per_mn_label",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "include_truncated_214",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "dense_214_with_truncated",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "no_214_ten_shells",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "001_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "coarse_commensurate_grid",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "six_shells",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "three_shells",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "neel_reference",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "lattice_phase_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "TN_mean_field",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "alt_zero_difference",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "alt_orthorhombic_fit",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "alt_wrong_shell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "twelve_shell_model",
+    "passes_grading": true
+   },
+   {
+    "name": "eight_shell_model",
+    "passes_grading": true
+   },
+   {
+    "name": "all_clean_available_spirals",
+    "passes_grading": true
+   },
+   {
+    "name": "TN_coarse_scan_L8_L12",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T18:02:43Z"
+}

@@ -1,0 +1,2262 @@
+{
+ "description": "Released classical MD runs (LAMMPS, rigid-ion/EAM force fields, fixed volume) of three fluorite-structure ionic conductors, recorded for heat-transport analysis. Each run is 0.8 ns of production after equilibration at the target temperature; NVE runs are microcanonical, NVT runs keep a stochastic velocity-rescaling (CSVR) thermostat on during production. The input deck of every run is returned with its data.",
+ "materials": {
+  "UO2": {
+   "mobile_anion": "O",
+   "atoms_per_conventional_cell": 12,
+   "series_columns": [
+    "c_myHeatFlux[1]",
+    "c_myHeatFlux[2]",
+    "c_myHeatFlux[3]",
+    "c_VOx",
+    "c_VOy",
+    "c_VOz"
+   ]
+  },
+  "CaF2": {
+   "mobile_anion": "F",
+   "atoms_per_conventional_cell": 12,
+   "series_columns": [
+    "c_myHeatFlux[1]",
+    "c_myHeatFlux[2]",
+    "c_myHeatFlux[3]",
+    "c_VFx",
+    "c_VFy",
+    "c_VFz"
+   ]
+  },
+  "PbF2": {
+   "mobile_anion": "F",
+   "atoms_per_conventional_cell": 12,
+   "series_columns": [
+    "c_myHeatFlux[1]",
+    "c_myHeatFlux[2]",
+    "c_myHeatFlux[3]",
+    "c_VFx",
+    "c_VFy",
+    "c_VFz"
+   ]
+  }
+ },
+ "request": {
+  "kind": "md_run",
+  "run": "<run id from runs_available>"
+ },
+ "example": {
+  "kind": "md_run",
+  "run": "PbF2-NVE-3x3x3-700K"
+ },
+ "costs": {
+  "2x2x2 cell (96 atoms)": 1,
+  "3x3x3 cell (324 atoms)": 2,
+  "4x4x4 cell (768 atoms)": 4
+ },
+ "budget": 48,
+ "returned_data": {
+  "series": "Six time series sampled every frame_interval_ps = 0.08 ps (10000 frames, 800 ps), in the order of series_columns: the three Cartesian components of the deck's compute myHeatFlux and of the summed anion velocities, in LAMMPS metal units, exactly as written to the thermo log except that the 8 fs thermo output has been band-limited to 6.25 THz (ideal low-pass) and resampled to 0.08 ps.",
+  "encoding": "series[column] is base64 of little-endian int16 values; physical value = int16 * scale[column]. In Python: np.frombuffer(base64.b64decode(s), \"<i2\") * scale.",
+  "metadata": "cell edge Lx_A, time-averaged temperature, its standard deviation, mean pressure, total-energy drift over the production run and the LAMMPS input deck"
+ },
+ "runs_available": [
+  {
+   "run": "CaF2-NVE-2x2x2-900K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 900,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVE-2x2x2-1000K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1000,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVE-2x2x2-1100K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1100,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVE-2x2x2-1200K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1200,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVE-2x2x2-1300K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1300,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVE-2x2x2-1400K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1400,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVE-2x2x2-1500K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1500,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVE-2x2x2-1600K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1600,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVE-2x2x2-1700K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1700,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVE-2x2x2-1800K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1800,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVE-3x3x3-900K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 900,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVE-3x3x3-1000K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1000,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVE-3x3x3-1100K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1100,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVE-3x3x3-1200K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1200,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVE-3x3x3-1300K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1300,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVE-3x3x3-1400K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1400,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVE-3x3x3-1500K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1500,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVE-3x3x3-1600K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1600,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVE-3x3x3-1700K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1700,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVE-3x3x3-1800K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1800,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVE-4x4x4-900K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 900,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVE-4x4x4-1000K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 1000,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVE-4x4x4-1100K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 1100,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVE-4x4x4-1200K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 1200,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVE-4x4x4-1300K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 1300,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVE-4x4x4-1400K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 1400,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVE-4x4x4-1500K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 1500,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVE-4x4x4-1700K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 1700,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVE-4x4x4-1800K",
+   "material": "CaF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 1800,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-500K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 500,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-600K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 600,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-700K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 700,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-800K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 800,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-900K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 900,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-1000K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1000,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-1100K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1100,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-1200K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1200,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-1300K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1300,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-1400K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1400,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-1500K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1500,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-1600K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1600,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-1700K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1700,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-2x2x2-1800K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1800,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-500K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 500,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-600K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 600,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-700K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 700,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-800K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 800,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-900K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 900,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-1000K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1000,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-1100K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1100,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-1200K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1200,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-1300K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1300,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-1400K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1400,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-1500K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1500,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-1600K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1600,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-1700K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1700,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-3x3x3-1800K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1800,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-500K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 500,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-600K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 600,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-700K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 700,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-800K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 800,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-900K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 900,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-1000K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1000,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-1100K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1100,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-1200K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1200,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-1300K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1300,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-1400K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1400,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-1500K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1500,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-1700K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1700,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "CaF2-NVT-4x4x4-1800K",
+   "material": "CaF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1800,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVE-2x2x2-300K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 300,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVE-2x2x2-400K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 400,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVE-2x2x2-500K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 500,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVE-2x2x2-600K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 600,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVE-2x2x2-700K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 700,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVE-2x2x2-800K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 800,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVE-2x2x2-900K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 900,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVE-2x2x2-1000K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1000,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVE-2x2x2-1100K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1100,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVE-2x2x2-1200K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1200,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVE-2x2x2-1300K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1300,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVE-3x3x3-300K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 300,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVE-3x3x3-400K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 400,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVE-3x3x3-500K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 500,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVE-3x3x3-600K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 600,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVE-3x3x3-700K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 700,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVE-3x3x3-800K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 800,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVE-3x3x3-900K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 900,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVE-3x3x3-1000K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1000,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVE-3x3x3-1100K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1100,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVE-3x3x3-1200K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1200,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVE-3x3x3-1300K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1300,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVE-4x4x4-300K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 300,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVE-4x4x4-400K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 400,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVE-4x4x4-500K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 500,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVE-4x4x4-600K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 600,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVE-4x4x4-700K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 700,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVE-4x4x4-800K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 800,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVE-4x4x4-900K",
+   "material": "PbF2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 900,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVT-2x2x2-300K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 300,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVT-2x2x2-400K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 400,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVT-2x2x2-500K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 500,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVT-2x2x2-600K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 600,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVT-2x2x2-700K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 700,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVT-2x2x2-800K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 800,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVT-2x2x2-900K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 900,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVT-2x2x2-1000K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1000,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVT-2x2x2-1100K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1100,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVT-2x2x2-1200K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1200,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVT-2x2x2-1300K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1300,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "PbF2-NVT-3x3x3-300K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 300,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVT-3x3x3-400K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 400,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVT-3x3x3-500K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 500,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVT-3x3x3-600K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 600,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVT-3x3x3-700K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 700,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVT-3x3x3-800K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 800,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVT-3x3x3-900K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 900,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVT-3x3x3-1000K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1000,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVT-3x3x3-1100K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1100,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVT-3x3x3-1200K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1200,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVT-3x3x3-1300K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1300,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "PbF2-NVT-4x4x4-300K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 300,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVT-4x4x4-400K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 400,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVT-4x4x4-500K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 500,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVT-4x4x4-600K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 600,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVT-4x4x4-700K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 700,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVT-4x4x4-800K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 800,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVT-4x4x4-900K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 900,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVT-4x4x4-1000K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1000,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVT-4x4x4-1100K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1100,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "PbF2-NVT-4x4x4-1300K",
+   "material": "PbF2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1300,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-2x2x2-1700K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1700,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-1800K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1800,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-1900K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 1900,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-2000K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 2000,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-2100K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 2100,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-2200K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 2200,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-2300K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 2300,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-2400K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 2400,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-2500K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 2500,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-2600K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 2600,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-2700K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 2700,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-2800K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 2800,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-2900K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 2900,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-3000K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 3000,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-3100K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 3100,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-3200K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 3200,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-3300K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 3300,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-3400K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 3400,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-2x2x2-3500K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 2,
+   "temperature_K": 3500,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVE-3x3x3-1700K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1700,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-1800K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1800,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-1900K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 1900,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-2000K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 2000,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-2100K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 2100,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-2200K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 2200,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-2300K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 2300,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-2400K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 2400,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-2500K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 2500,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-2600K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 2600,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-2700K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 2700,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-2800K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 2800,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-2900K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 2900,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-3000K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 3000,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-3100K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 3100,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-3200K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 3200,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-3300K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 3300,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-3400K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 3400,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-3x3x3-3500K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 3,
+   "temperature_K": 3500,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVE-4x4x4-1800K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 1800,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-1900K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 1900,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-2000K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 2000,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-2100K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 2100,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-2200K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 2200,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-2300K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 2300,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-2400K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 2400,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-2500K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 2500,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-2600K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 2600,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-2700K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 2700,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-2800K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 2800,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-2900K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 2900,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-3000K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 3000,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-3100K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 3100,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-3200K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 3200,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-3300K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 3300,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVE-4x4x4-3500K",
+   "material": "UO2",
+   "ensemble": "NVE",
+   "supercell": 4,
+   "temperature_K": 3500,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-2x2x2-1700K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1700,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-1800K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1800,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-1900K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 1900,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-2000K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 2000,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-2100K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 2100,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-2200K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 2200,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-2300K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 2300,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-2400K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 2400,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-2500K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 2500,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-2600K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 2600,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-2700K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 2700,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-2800K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 2800,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-2900K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 2900,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-3000K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 3000,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-3100K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 3100,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-3200K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 3200,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-3300K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 3300,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-3400K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 3400,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-2x2x2-3500K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 2,
+   "temperature_K": 3500,
+   "atoms": 96,
+   "cost": 1
+  },
+  {
+   "run": "UO2-NVT-3x3x3-1700K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1700,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-1800K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1800,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-1900K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 1900,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-2000K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 2000,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-2100K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 2100,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-2200K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 2200,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-2300K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 2300,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-2400K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 2400,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-2500K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 2500,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-2600K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 2600,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-2700K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 2700,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-2800K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 2800,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-2900K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 2900,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-3000K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 3000,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-3100K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 3100,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-3200K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 3200,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-3300K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 3300,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-3400K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 3400,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-3x3x3-3500K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 3,
+   "temperature_K": 3500,
+   "atoms": 324,
+   "cost": 2
+  },
+  {
+   "run": "UO2-NVT-4x4x4-1800K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1800,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-1900K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 1900,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-2000K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 2000,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-2100K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 2100,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-2200K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 2200,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-2300K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 2300,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-2400K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 2400,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-2500K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 2500,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-2600K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 2600,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-2700K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 2700,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-2800K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 2800,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-2900K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 2900,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-3000K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 3000,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-3100K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 3100,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-3200K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 3200,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-3300K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 3300,
+   "atoms": 768,
+   "cost": 4
+  },
+  {
+   "run": "UO2-NVT-4x4x4-3500K",
+   "material": "UO2",
+   "ensemble": "NVT",
+   "supercell": 4,
+   "temperature_K": 3500,
+   "atoms": 768,
+   "cost": 4
+  }
+ ],
+ "predict": [
+  {
+   "id": "UO2-4x4x4-1700K",
+   "material": "UO2",
+   "supercell": 4,
+   "temperature_K": 1700
+  },
+  {
+   "id": "UO2-4x4x4-3400K",
+   "material": "UO2",
+   "supercell": 4,
+   "temperature_K": 3400
+  },
+  {
+   "id": "CaF2-4x4x4-1600K",
+   "material": "CaF2",
+   "supercell": 4,
+   "temperature_K": 1600
+  },
+  {
+   "id": "PbF2-4x4x4-1200K",
+   "material": "PbF2",
+   "supercell": 4,
+   "temperature_K": 1200
+  }
+ ],
+ "report_runs": [
+  "UO2-NVE-4x4x4-3500K",
+  "CaF2-NVE-4x4x4-1700K",
+  "PbF2-NVT-4x4x4-1300K"
+ ]
+}

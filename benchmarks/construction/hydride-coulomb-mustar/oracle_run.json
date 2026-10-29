@@ -1,0 +1,213 @@
+{
+ "evaluations": 18,
+ "charge_used": 30,
+ "budget": 38,
+ "oracle_seconds": 64,
+ "requests": [
+  {
+   "id": 1,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 7.3,
+   "system": "Mg2IrH6",
+   "pressure_GPa": 10,
+   "solver": "vdos_W"
+  },
+  {
+   "id": 2,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 7.5,
+   "system": "Mg2IrH6",
+   "pressure_GPa": 20,
+   "solver": "vdos_W"
+  },
+  {
+   "id": 3,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 7.6,
+   "system": "Mg2IrH6",
+   "pressure_GPa": 30,
+   "solver": "vdos_W"
+  },
+  {
+   "id": 4,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 6.3,
+   "system": "H3S",
+   "pressure_GPa": 200,
+   "solver": "vdos_W"
+  },
+  {
+   "id": 5,
+   "kind": "w_kernel",
+   "charge": 1,
+   "seconds": 0.0,
+   "system": "H3S",
+   "pressure_GPa": 170
+  },
+  {
+   "id": 6,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 11.2,
+   "system": "Mg2IrH6",
+   "pressure_GPa": 20,
+   "solver": "vdos"
+  },
+  {
+   "id": 7,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 6.7,
+   "system": "H3S",
+   "pressure_GPa": 200,
+   "solver": "vdos"
+  },
+  {
+   "id": 8,
+   "kind": "inputs",
+   "charge": 1,
+   "seconds": 0.0,
+   "system": "Mg2IrH6",
+   "pressure_GPa": 15
+  },
+  {
+   "id": 9,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 3.8,
+   "system": "Mg2IrH6",
+   "pressure_GPa": 15,
+   "solver": "vdos"
+  },
+  {
+   "id": 10,
+   "kind": "inputs",
+   "charge": 1,
+   "seconds": 0.1,
+   "system": "Mg2IrH6",
+   "pressure_GPa": 25
+  },
+  {
+   "id": 11,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 3.8,
+   "system": "Mg2IrH6",
+   "pressure_GPa": 25,
+   "solver": "vdos"
+  },
+  {
+   "id": 12,
+   "kind": "inputs",
+   "charge": 1,
+   "seconds": 0.1,
+   "system": "H3S",
+   "pressure_GPa": 180
+  },
+  {
+   "id": 13,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 1.7,
+   "system": "H3S",
+   "pressure_GPa": 180,
+   "solver": "vdos"
+  },
+  {
+   "id": 14,
+   "kind": "inputs",
+   "charge": 1,
+   "seconds": 0.1,
+   "system": "H3S",
+   "pressure_GPa": 190
+  },
+  {
+   "id": 15,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 1.7,
+   "system": "H3S",
+   "pressure_GPa": 190,
+   "solver": "vdos"
+  },
+  {
+   "id": 16,
+   "kind": "archived_run",
+   "charge": 1,
+   "seconds": 0.2,
+   "system": "Mg2IrH6",
+   "pressure_GPa": 20
+  },
+  {
+   "id": 17,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 0.2,
+   "system": "Mg2IrH6",
+   "pressure_GPa": 20,
+   "solver": "cdos"
+  },
+  {
+   "id": 18,
+   "kind": "eliashberg",
+   "charge": 2,
+   "seconds": 0.2,
+   "system": "Mg2IrH6",
+   "pressure_GPa": 20,
+   "solver": "cdos"
+  }
+ ],
+ "payload": {
+  "tc_full_W_K": {
+   "Mg2IrH6_15GPa": 88.9,
+   "Mg2IrH6_25GPa": 91.23,
+   "H3S_180GPa": 256.76,
+   "H3S_190GPa": 245.03
+  },
+  "mu_star_cdos_1eV_Mg2IrH6_20GPa": 0.5865012919104956,
+  "N_EF_H3S_180GPa_per_fu_per_spin": 0.2704499999999974,
+  "evidence_ids": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18
+  ]
+ },
+ "report": {
+  "checks": {
+   "evidence_executed": true,
+   "tc_Mg2IrH6_15GPa": true,
+   "tc_Mg2IrH6_25GPa": true,
+   "tc_H3S_180GPa": true,
+   "tc_H3S_190GPa": true,
+   "mu_star_equivalent": true,
+   "N_EF": true
+  },
+  "tc_relative_errors": {
+   "Mg2IrH6_15GPa": 0.005087620124364145,
+   "Mg2IrH6_25GPa": -0.004582651391162096,
+   "H3S_180GPa": 0.0010136452241715777,
+   "H3S_190GPa": 0.002167689161554298
+  },
+  "mu_star_error": -0.0009999938138700593,
+  "N_EF_relative_error": 0.0
+ }
+}

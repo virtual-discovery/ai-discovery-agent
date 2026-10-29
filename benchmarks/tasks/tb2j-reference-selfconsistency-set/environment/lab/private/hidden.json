@@ -1,0 +1,106 @@
+{
+ "targets": {
+  "fm_reference_kmin_FeP_rlu": [
+   4.589074414826892e-05,
+   0.030572949919458983,
+   0.21793334026827776
+  ],
+  "converged_exchange_kmin_FeP_rlu": [
+   0.0021277347761583286,
+   -0.02684415327411349,
+   -0.1885041816342483
+  ],
+  "stabilization_energy_meV_per_ion": {
+   "NiO": {
+    "fm_reference": 139.16840000000008,
+    "converged_reference": 137.4226
+   },
+   "FeCl2": {
+    "fm_reference": 0.49320000000000164,
+    "converged_reference": 0.47853333333333836
+   },
+   "FePS3_DFT": {
+    "fm_reference": 48.477999999999994,
+    "converged_reference": 53.96059999999993
+   },
+   "FePS3_DFT+U": {
+    "fm_reference": null,
+    "converged_reference": 27.03604583511492
+   },
+   "FeP": {
+    "fm_reference": 13.390164953296965,
+    "converged_reference": 101.90797064105627
+   }
+  }
+ },
+ "thresholds": {
+  "kmin_fm_FeP_rlu": 0.005,
+  "kmin_converged_FeP_rlu": 0.012,
+  "energy_rel": 0.04
+ },
+ "reference_details": {
+  "validation": {
+   "FePS3_FM_Z_minus_Gamma_meV": -2.0040000000000617,
+   "FePS3_FM_archived_dev_at_Gamma_Z_meV": 0.0018297415695940344,
+   "FeCl2/FM_archived_dev_at_nodes_meV": 0.002912785901571624,
+   "FeCl2/AFM_archived_dev_at_nodes_meV": 0.009879042203706945,
+   "FeP_AFM_archived_dev_meV": 0.09814871795575186,
+   "FeP_AFM_archived_GammaZ_flatness_meV": 1.3589016134574194e-08,
+   "FeP_AFM_archived_min_meV": -1.0963926597901628,
+   "paper_checks": {
+    "FeP_AFM_NN": -4.6424,
+    "NiO_FM_J2": -11.5815,
+    "NiO_AFM_J2": -11.5161,
+    "FeCl2_AFM_J1": 7.329972222222221,
+    "FePS3_U_AFM_J3": -3.3498875
+   },
+   "FePS3_DFT+U_FM_duplicates_DFT_FM": true,
+   "R_long_axis_values": {
+    "FeCl2/AFM": [
+     0
+    ],
+    "FeP/AFM": [
+     0
+    ],
+    "FePS3/DFT/AFM": [
+     -1,
+     0,
+     1
+    ],
+    "NiO/AFM": [
+     -3,
+     -2,
+     -1,
+     0,
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  "lowest_h_FM_kmin_meV": {
+   "FeP_FM": -58.15866501308239,
+   "FeP_converged_folded": -207.22853051725255
+  },
+  "min_h_eigenvalue_6grid_meV": {
+   "NiO/AFM": 3.474023445884777e-14,
+   "NiO/FM": -278.53199999999987,
+   "FeCl2/AFM": 7.0497675281108925e-15,
+   "FeCl2/FM": -0.9864780820593149,
+   "FePS3/DFT/AFM": -1.0912242853038452e-14,
+   "FePS3/DFT/FM": -96.95600000000005,
+   "FePS3/DFT+U/AFM": -0.0003083297701637159,
+   "FePS3/DFT+U/FM": -96.95600000000005,
+   "FeP/AFM": -0.9882458262247917,
+   "FeP/FM": -54.39960840748095,
+   "FeP/AFM relaxed, as listed": -9.880315881647225e-13,
+   "FeP/AFM relaxed, minimum image": -0.07703027207746344
+  },
+  "FeP_AFM_torque_meV": [
+   0.29146811511950976,
+   4.26625848800758
+  ],
+  "FeP_AFM_relaxed_energy_meV_per_ion": -53.63319366719681,
+  "FeP_AFM_archived_energy_meV_per_ion": -53.40573064105629
+ }
+}

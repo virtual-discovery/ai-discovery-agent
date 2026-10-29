@@ -1,0 +1,172 @@
+{
+ "materials": {
+  "Bi2_P-3m1": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Bi2_P-3m1",
+   "cell_A": [
+    [
+     4.2974468664,
+     0.0,
+     0.0
+    ],
+    [
+     -2.1487234332,
+     3.7216981577,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     21.6662769578
+    ]
+   ],
+   "num_wann": 16
+  },
+  "Hf2Br2_P-3m1": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Hf2Br2_P-3m1",
+   "cell_A": [
+    [
+     1.7401794709,
+     -3.0140792579,
+     0.0
+    ],
+    [
+     1.7401794709,
+     3.0140792579,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     24.0847397074
+    ]
+   ],
+   "num_wann": 40
+  },
+  "CuLi2As_P-6m2": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/CuLi2As_P-6m2",
+   "cell_A": [
+    [
+     4.1330794677,
+     0.0,
+     0.0
+    ],
+    [
+     -2.0665397338,
+     3.579351815,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     22.6198342513
+    ]
+   ],
+   "num_wann": 30
+  },
+  "Ti2I2N2_Pmm2": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Ti2I2N2_Pmm2",
+   "cell_A": [
+    [
+     3.5302590857,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     3.9701793762,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     25.8532673162
+    ]
+   ],
+   "num_wann": 56
+  },
+  "Li2Tl2_P3m1": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Li2Tl2_P3m1",
+   "cell_A": [
+    [
+     5.0511834848,
+     0.0,
+     0.0
+    ],
+    [
+     -2.5255917424,
+     4.3744532172,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     25.7646950404
+    ]
+   ],
+   "num_wann": 20
+  },
+  "Bi2In2_P4_nmm": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Bi2In2_P4|nmm",
+   "cell_A": [
+    [
+     4.6345341077,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     4.6345341077,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     23.9073538933
+    ]
+   ],
+   "num_wann": 32
+  },
+  "Hg4O2_P1": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Hg4O2_P1",
+   "cell_A": [
+    [
+     9.6002979681,
+     0.0010158129,
+     0.0
+    ],
+    [
+     7.0633367221,
+     6.5019225431,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     21.1709693509
+    ]
+   ],
+   "num_wann": 64
+  },
+  "KSnAs_P3m1": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/KSnAs_P3m1",
+   "cell_A": [
+    [
+     4.1979194084,
+     0.0,
+     0.0
+    ],
+    [
+     -2.0989597042,
+     3.6355048507,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     24.0949802876
+    ]
+   ],
+   "num_wann": 18
+  }
+ }
+}

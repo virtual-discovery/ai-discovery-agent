@@ -1,0 +1,228 @@
+{
+ "task_id": "amaranta-2d-triangular-helimagnets",
+ "catalog_id": "amaranta-2d-triangular-helimagnets",
+ "start": "released",
+ "source_group": "putatunda_2026_amaranta",
+ "title": "Triangular dihalide monolayers: ground states from budgeted energy mapping",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "evidence discovered in the structures plus a cross-check measurement",
+   "fork": "Are the six nearest neighbours equivalent in the rectangular cells of VBr2, VI2 and MnCl2?",
+   "wrong_choice": "Treat the 1.3-1.6 % split (4 + 2 bonds) as negligible and map one nearest-neighbour bond per ideal triangular shell",
+   "consequence": "The true exchanges differ by 40-70 % (12.3 vs 7.8, 4.0 vs 1.1, 1.2 vs 1.8 meV); the 120-degree state is predicted instead of the incommensurate spirals (VBr2, MnCl2) and the collinear stripe (VI2); prediction RMSE 0.43-5.6 meV/site",
+   "ablation": "six_equivalent_nearest_neighbours"
+  },
+  {
+   "id": "dp2",
+   "kind": "aliasing exposed only by a cross-check (budget pressure toward small cells)",
+   "fork": "Which supercell makes a four-state pair free of periodic images within the coupling range",
+   "wrong_choice": "A cell four lattice constants long for the 2a (third-neighbour) pair, so its image at -2a is the same coupling",
+   "consequence": "J3 doubled: Ni spirals off by 0.07-0.15 1/A; predictions off by 0.9-10.6 meV/site for Ni, VCl2, MnBr2, MnI2",
+   "ablation": "third_neighbour_aliased_in_4_periodic_cell"
+  },
+  {
+   "id": "dp3",
+   "kind": "regime judgement (exchange range) with a textbook confounder",
+   "fork": "Is a J1-J2 model enough?",
+   "wrong_choice": "Stop after J2 (MnBr2/MnI2 then sit in the J1-J2 stripe phase, J2/J1 > 1/8)",
+   "consequence": "Ni compounds become ferromagnets and MnBr2/MnI2 collinear stripes; the antiferromagnetic J3 actually stabilizes the 120-degree state in MnBr2/MnI2",
+   "ablation": "exchange_truncated_after_J2"
+  },
+  {
+   "id": "dp4",
+   "kind": "model class for the ground-state search",
+   "fork": "Compare candidate commensurate states, or minimise over all wave vectors",
+   "wrong_choice": "Compare only FM, 120-degree and stripe energies (what a 6x6 lab cell can host)",
+   "consequence": "NiCl2/NiBr2 reported ferromagnetic, VBr2 a stripe, MnCl2 120-degree",
+   "ablation": "only_FM_120_stripe_compared"
+  },
+  {
+   "id": "dp5",
+   "kind": "discriminating experiment for a noise-level effect (anisotropy source)",
+   "fork": "How to find the VI2 moment direction",
+   "wrong_choice": "Compare stripe energies along x, y and z only, or take the single-ion easy axis",
+   "consequence": "Moment along c, 30.7 degrees from the true axis in the ac plane (tolerance 7 degrees); off-axis probes (x+z vs x-z) expose the tilt",
+   "ablation": "VI2_axis_from_cartesian_axes_or_SIA"
+  },
+  {
+   "id": "dp6",
+   "kind": "symmetry of the bond tensors",
+   "fork": "How the nearest-neighbour tensor varies between the four bonds of the distorted cell",
+   "wrong_choice": "Copy the tensor measured on one bond to all four bonds",
+   "consequence": "Easy axis 39.9 degrees off (the staggered J_xy, J_yz parts do not cancel)",
+   "ablation": "VI2_tensor_copied_to_all_bonds"
+  },
+  {
+   "id": "dp7",
+   "kind": "convention cascade from mapping to prediction",
+   "fork": "Pair counting when the mapped J are used to predict energies",
+   "wrong_choice": "Evaluate energies with every ordered pair counted while J came from a pair-once four-state formula",
+   "consequence": "Predictions doubled (RMSE 3.6-32 meV/site)",
+   "ablation": "ordered_pairs_double_counted"
+  }
+ ],
+ "graded_fields": [
+  "ground_states.<compound>.type for the 8 compounds (exact category)",
+  "ground_states.<compound>.q_rlu within 0.02 1/A of any symmetry/translation equivalent of the reference",
+  "energy_predictions_meV_per_site: per-compound RMSE over its 3 configurations <= 0.3 meV/site",
+  "VI2_moment_direction within 7 degrees of the reference axis (sign-free)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 21,
+  "oracle_charge": 215,
+  "budget": 240,
+  "catalog_value": "unbounded (arbitrary configurations); mapping every bond class of all eight compounds in 36-site cells costs about 250-290 units",
+  "oracle_container_seconds": 169,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "why": "Eight compounds with structure inspection, supercell/aliasing design, collinear four-state mapping, Luttinger-Tisza on two lattice types with equivalence bookkeeping, an anisotropy experiment for VI2 and predictions in large cells.",
+  "pilot": "pending (coordinator)",
+  "harbor_oracle_runtime_s": 164
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image); the lab evaluates the teacher spin model, no extra dependencies"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/wygeh-jrc57",
+  "doi": "10.24435/materialscloud:he-3k",
+  "paper": "arXiv:2509.20226",
+  "files_used": [
+   "data_readable.zip",
+   "group2.aiida (member db.sqlite3 only, range read)",
+   "group3.aiida (member db.sqlite3 only, range read)",
+   "group10.aiida (member db.sqlite3 only, range read)"
+  ],
+  "md5": {
+   "data_readable.zip": "2020bf7c7813bb99f8af19c2030ef0e1",
+   "group2.aiida": "2d3b5a776d16741b433ed22e710bd953",
+   "group3.aiida": "06656233b366976650f3fc420c4ca324",
+   "group10.aiida": "f33b7f9621f32aa4e199d15078794d9b"
+  },
+  "sha256_of_extracted_db": {
+   "group2": "880eb0f8f54f0aaca77fe02e2d2bda90df9d20f844eb8af9dc322eb07a588455",
+   "group3": "c09d1cbd039409fd3c77cc05f3a5eb7ab89cb5097f0ab7eefd1a2b16f27c8eb2",
+   "group10": "80e067e68f2127bd08529222122781a3b4f3f660ccac238793fbae39a4d1e9ef"
+  },
+  "license": "CC BY 4.0",
+  "compounds_used": "NiCl2 (PK 11815), NiBr2 (12821), VCl2 (16233), VBr2 (17997), VI2 (14160), MnCl2 (4157), MnBr2 (3579), MnI2 (2705); no Cr compound and no NiI2"
+ },
+ "exceptions": {},
+ "notes": "Teacher-model lab (the design's choice) built from the authors' archived AMaRaNTA parameters and validated against their archived four-state DFT energies (within-set residuals 0.003-0.03 meV, VI2 0.26 meV). Deviations from the design: (1) all eight compounds are graded (type + q) instead of three held-out ones; (2) the classical Monte Carlo ordering temperature and the Gamma-point magnon gap are not graded: with isotropic exchange there is no finite-T order in 2D, and the anisotropy that would set Tc or the gap (0.01-0.1 meV) is below the source's precision and logarithmically amplified, so Tc is not uniquely recoverable; finite-T physics is a rubric item; (3) the anisotropy fork is graded through the VI2 easy axis, which the off-diagonal exchange tilts 30.7 degrees from the single-ion axis; (4) energy predictions of unpurchasable configurations were added so that the exchange magnitudes (aliasing, pair counting) are graded where the ground state is insensitive. The 'sign convention' fork was dropped (the agent maps energies, so no sign is graded) and the 'spin normalization' fork is not graded (classical unit vectors throughout).",
+ "calibration": {
+  "q_error_inv_A": {
+   "reference": {
+    "NiCl2": [
+     -0.081079,
+     0.162157
+    ],
+    "NiBr2": [
+     -0.119175,
+     0.23835
+    ],
+    "VCl2": [
+     -0.333333,
+     0.666667
+    ],
+    "VBr2": [
+     1.0,
+     0.210999
+    ],
+    "VI2": [
+     1.0,
+     0.0
+    ],
+    "MnCl2": [
+     0.0,
+     0.607822
+    ],
+    "MnBr2": [
+     0.0,
+     0.666667
+    ],
+    "MnI2": [
+     0.0,
+     0.666667
+    ]
+   },
+   "oracle_max": 0.0026,
+   "robustness_max": {
+    "anisotropic_LT": 0.0062,
+    "collinear_zz_mapping": 0.0004
+   },
+   "nearest_ablation": {
+    "J3_doubled_NiBr2": 0.074,
+    "commensurate_only_MnCl2": 0.099,
+    "ideal_triangular_MnCl2": 0.099
+   },
+   "tolerance": "<= 0.02"
+  },
+  "type": {
+   "reference": {
+    "NiCl2": "incommensurate spiral",
+    "NiBr2": "incommensurate spiral",
+    "VCl2": "120-degree",
+    "VBr2": "incommensurate spiral",
+    "VI2": "collinear stripe",
+    "MnCl2": "incommensurate spiral",
+    "MnBr2": "120-degree",
+    "MnI2": "120-degree"
+   },
+   "ablations": {
+    "ideal_triangular": "120-degree for VBr2, VI2, MnCl2",
+    "no_J3": "ferromagnet for Ni, collinear stripe for MnBr2/MnI2",
+    "commensurate_only": "ferromagnet for Ni, stripe for VBr2, 120-degree for MnCl2"
+   },
+   "tolerance": "exact"
+  },
+  "prediction_rmse_meV_per_site": {
+   "oracle": {
+    "NiCl2": 0.018,
+    "NiBr2": 0.036,
+    "VCl2": 0.044,
+    "VBr2": 0.144,
+    "VI2": 0.063,
+    "MnCl2": 0.085,
+    "MnBr2": 0.013,
+    "MnI2": 0.054
+   },
+   "robustness": {
+    "isotropic_model_exact_J_max": 0.061
+   },
+   "nearest_ablation": {
+    "ideal_triangular_MnCl2": 0.434,
+    "J3_doubled_VCl2": 0.886,
+    "no_J3_VCl2": 0.828,
+    "pairs_double_counted_min": 3.58
+   },
+   "note": "shared-reference four-state designs give a coherent error of ~0.08 meV/site (1 sigma) on the six-class distorted compounds, which sets the tolerance; the small J3 of the distorted compounds (0.07-0.17 meV) is deliberately not resolvable by this check",
+   "tolerance": "<= 0.3"
+  },
+  "VI2_axis_deg": {
+   "reference_axis": [
+    0.5101,
+    0.0,
+    0.8601
+   ],
+   "oracle": 2.78,
+   "robustness": {
+    "six_noisy_probes_3x3_cell": 1.24
+   },
+   "nearest_ablation": {
+    "cartesian_axes_or_SIA_only": 30.67,
+    "tensor_copied": 39.91
+   },
+   "tolerance": "<= 7"
+  }
+ },
+ "tightest_margins": {
+  "predictions": "VBr2 oracle RMSE 0.144 vs tolerance 0.3; nearest wrong path 0.43 meV/site (MnCl2, six equivalent NN)",
+  "q": "tolerance 0.02 1/A vs nearest wrong path 0.074 (NiBr2, J3 doubled); defensible spread <= 0.006",
+  "VI2_axis": "tolerance 7 deg vs 30.7 deg (Cartesian axes / SIA only); defensible spread <= 2.8 deg"
+ },
+ "risks": [
+  "dev-easy: a careful agent grouping bonds by exact length, using alias-free cells and probing off-axis directions solves it with standard tools",
+  "teacher-model truth: VI2 tilt and anisotropies are below the source precision (0.1 meV); VI2 is reproduced worst by the model (0.26 meV rms within four-state sets)",
+  "NiBr2/NiCl2 assumed single-q spirals (anisotropic exchange <= 0.1 meV); not checked by Monte Carlo"
+ ]
+}

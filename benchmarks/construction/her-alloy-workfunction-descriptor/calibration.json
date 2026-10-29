@@ -1,0 +1,67 @@
+{
+ "lib3_rmse_log10": {
+  "oracle_A": 0.09715461713078989,
+  "combined_C": 0.09735966488030187,
+  "centre_fixed_-0.461": 0.10121361343575314,
+  "alt_calibration": 0.09449577935876148,
+  "mean_energy": 0.1438804113206298,
+  "no_cap": 0.15252299542559045,
+  "T0": 0.24652751332852188,
+  "T1_prefactor_only": 0.14531491703683372,
+  "literature_centre": 0.21055376913990476,
+  "linear_combination": 0.12489778910916455,
+  "wf_only": 0.1596891084759158,
+  "total_slope_centre": 0.12124995287344151,
+  "tolerance": 0.135
+ },
+ "volcano_centre_eV": {
+  "reference_all_rows": -0.44249998484132314,
+  "oracle_subset": -0.44423509529338284,
+  "combined": -0.44542620535528515,
+  "mean_energy": -0.8111884141721454,
+  "linear_combination": -0.27336568077718454,
+  "literature": -0.24,
+  "total_slope": -0.9417770752267064,
+  "tolerance": [
+   -0.52,
+   -0.36
+  ]
+ },
+ "coverage_shift_eV": {
+  "reference_all9": 0.22069594920745308,
+  "window_0.1_0.9": 0.18596544181737695,
+  "through_dilute_point": 0.27352225864164115,
+  "total_slope_alpha": 0.7017770752267064,
+  "first_last_differential": 0.7694327000000001,
+  "tolerance": [
+   0.07,
+   0.45
+  ]
+ },
+ "alpha_wf": {
+  "reference_all_rows": 0.06519333525528088,
+  "oracle_subset": 0.06203292757254994,
+  "centre_fixed": 0.06850368614502189,
+  "wf_only": 0.1779715219645489,
+  "dilute_binding": 0.1571120750046862,
+  "pooled_no_offsets": 0.2791575645397976,
+  "tolerance": [
+   -0.06,
+   0.13
+  ]
+ },
+ "oracle_calibration_spots": [
+  7,
+  116,
+  192,
+  325,
+  340
+ ],
+ "alternative_calibration_spots": [
+  7,
+  116,
+  125,
+  295,
+  327
+ ]
+}

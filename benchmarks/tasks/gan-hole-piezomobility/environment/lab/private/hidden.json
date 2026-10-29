@@ -1,0 +1,140 @@
+{
+ "targets": {
+  "compress_3%_e3": {
+   "xx": 66.9803,
+   "yy": 66.9803,
+   "zz": 213.563,
+   "yz": 0.0,
+   "xz": 6.90017e-17,
+   "xy": 6.48704e-09
+  },
+  "expand_3%_e3": {
+   "xx": 62.5797,
+   "yy": 62.5797,
+   "zz": 47.4652,
+   "yz": 0.0,
+   "xz": 2.823595e-17,
+   "xy": 6.06085e-09
+  },
+  "expand_3%_e2": {
+   "xx": 155.473,
+   "yy": 47.4077,
+   "zz": 56.3039,
+   "yz": 0.0,
+   "xz": 0.0,
+   "xy": 1.46195e-08
+  },
+  "expand_3%_e4": {
+   "xx": 58.2583,
+   "yy": 134.134,
+   "zz": 185.813,
+   "yz": -49.0589,
+   "xz": -1.69423e-10,
+   "xy": 5.64745e-09
+  },
+  "compress_3%_e6": {
+   "xx": 117.449,
+   "yy": 166.278,
+   "zz": 52.2258,
+   "yz": 0.0,
+   "xz": 0.0,
+   "xy": 81.48085
+  }
+ },
+ "graded": {
+  "compress_3%_e3": [
+   "zz"
+  ],
+  "expand_3%_e3": [
+   "xx",
+   "yy",
+   "zz"
+  ],
+  "expand_3%_e2": [
+   "xx",
+   "yy"
+  ],
+  "expand_3%_e4": [
+   "xx",
+   "yy",
+   "zz",
+   "yz"
+  ],
+  "compress_3%_e6": [
+   "xx",
+   "yy",
+   "zz",
+   "xy"
+  ]
+ },
+ "thresholds": {
+  "diag_rel": 0.1,
+  "offdiag_rel": 0.15,
+  "window": {
+   "compress_3%_e3": {
+    "zz": [
+     150.0,
+     280.0
+    ]
+   }
+  },
+  "strain_abs": 0.002,
+  "best_mu_zz_rel": 0.05,
+  "best_inplane_rel": 0.08
+ },
+ "best_mu_zz_2pct": {
+  "state": "compress_2%_e3",
+  "strain_voigt": [
+   0.0,
+   0.0,
+   -0.02,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "mu_zz": 163.884
+ },
+ "best_inplane_2pct": {
+  "states": [
+   "compress_2%_e6",
+   "expand_2%_e6"
+  ],
+  "component_index": 5,
+  "abs_value": 0.04,
+  "mu_ref": 205.082005326334,
+  "mu_values": {
+   "compress_2%_e6": 203.51104812567368,
+   "expand_2%_e6": 206.65296252699432
+  }
+ },
+ "two_pct_ranking": {
+  "mu_zz": {
+   "compress_2%_e1": 52.6123,
+   "compress_2%_e2": 52.0405,
+   "compress_2%_e3": 163.884,
+   "compress_2%_e4": 148.031,
+   "compress_2%_e5": 143.145,
+   "compress_2%_e6": 52.8861,
+   "expand_2%_e1": 58.2217,
+   "expand_2%_e2": 57.1234,
+   "expand_2%_e3": 48.2186,
+   "expand_2%_e4": 144.132,
+   "expand_2%_e5": 141.226,
+   "expand_2%_e6": 53.602
+  },
+  "inplane_max": {
+   "compress_2%_e1": 158.338,
+   "compress_2%_e2": 150.962,
+   "compress_2%_e3": 58.71300000568636,
+   "compress_2%_e4": 119.296,
+   "compress_2%_e5": 111.668,
+   "compress_2%_e6": 203.51104812567368,
+   "expand_2%_e1": 122.617,
+   "expand_2%_e2": 135.521,
+   "expand_2%_e3": 62.280300006031844,
+   "expand_2%_e4": 119.05599999999998,
+   "expand_2%_e5": 112.12,
+   "expand_2%_e6": 206.65296252699432
+  }
+ }
+}

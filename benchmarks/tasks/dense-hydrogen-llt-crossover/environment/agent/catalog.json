@@ -1,0 +1,1956 @@
+{
+ "system": "Dense fluid hydrogen; MACE machine-learning potential trained on PBE (Tenti, Jaeckl, Nakano, Rupp, Casula 2025).",
+ "classical_md": "LAMMPS NVT, classical nuclei, cubic cells of N atoms, timestep 0.2 fs, CSVR thermostat (tau 0.1 ps), metal units. rs is the Wigner-Seitz radius in bohr: (4 pi / 3) (rs a0)^3 = V / N.",
+ "pimd": "Path-integral (PIOUD) runs with the same potential, N = 512, 12 beads, timestep 0.15 fs; several independent replicas per density started from decorrelated classical configurations. Archived under a temperature label (folder name); the archived columns are listed in the response.",
+ "requests": {
+  "thermo": {
+   "request": {
+    "kind": "thermo",
+    "N": 2048,
+    "T_K": 1000,
+    "rs": "1.43"
+   },
+   "cost": "thermo_cost of the isotherm",
+   "returns": "thermodynamic time series (every 500 steps) of the run, its LAMMPS input deck and job history"
+  },
+  "structure": {
+   "request": {
+    "kind": "structure",
+    "N": 2048,
+    "T_K": 900,
+    "rs": "1.425"
+   },
+   "cost": {
+    "128": 2,
+    "256": 2,
+    "512": 3,
+    "2048": 4
+   },
+   "returns": "observables from about 60 frames sampled from the released trajectory in six bursts of consecutive 20-fs dumps: per frame time, max_k S(k)/N (|k| <= 5.5 1/A, k = 2 pi n/L) and its |k|, fraction of atoms with a neighbour within 1.05 A; stable molecular fraction per 80-fs window (pairs within 1.05 A in five consecutive dumps); g(r) per burst; MSD vs lag"
+  },
+  "pimd": {
+   "request": {
+    "kind": "pimd",
+    "T_label": "1000K",
+    "rs": "1.48"
+   },
+   "cost": 1,
+   "returns": "thermodynamic series (every 20 moves) of every replica at this density"
+  }
+ },
+ "budget": 135,
+ "isotherms": [
+  {
+   "N": 128,
+   "T_K": 900,
+   "thermo_cost": 1,
+   "runs": [
+    {
+     "rs": "1.395",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.3975",
+     "length_ps": 200.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.40",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4025",
+     "length_ps": 200.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.405",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4075",
+     "length_ps": 200.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.41",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4125",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.415",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4175",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.42",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4225",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4275",
+     "length_ps": 200.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 200.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 128,
+   "T_K": 950,
+   "thermo_cost": 1,
+   "runs": [
+    {
+     "rs": "1.405",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.41",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.415",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4175",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.42",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4225",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4275",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.435",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 600.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 128,
+   "T_K": 1000,
+   "thermo_cost": 1,
+   "runs": [
+    {
+     "rs": "1.42",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4225",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4275",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4325",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.435",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4375",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4425",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.445",
+     "length_ps": 400.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 128,
+   "T_K": 1100,
+   "thermo_cost": 1,
+   "runs": [
+    {
+     "rs": "1.435",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4375",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4425",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.445",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4475",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.45",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4525",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.455",
+     "length_ps": 600.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4575",
+     "length_ps": 400.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.46",
+     "length_ps": 400.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 128,
+   "T_K": 1200,
+   "thermo_cost": 1,
+   "runs": [
+    {
+     "rs": "1.45",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.455",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.46",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.4625",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.465",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.4675",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.47",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.4725",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.475",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.48",
+     "length_ps": 200.0,
+     "structure_available": false
+    }
+   ]
+  },
+  {
+   "N": 128,
+   "T_K": 1300,
+   "thermo_cost": 1,
+   "runs": [
+    {
+     "rs": "1.46",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.47",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.475",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.48",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.485",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.49",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.495",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.50",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.51",
+     "length_ps": 200.0,
+     "structure_available": false
+    }
+   ]
+  },
+  {
+   "N": 128,
+   "T_K": 1400,
+   "thermo_cost": 1,
+   "runs": [
+    {
+     "rs": "1.48",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.49",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.495",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.50",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.505",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.51",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.515",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.52",
+     "length_ps": 200.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.53",
+     "length_ps": 200.0,
+     "structure_available": false
+    }
+   ]
+  },
+  {
+   "N": 256,
+   "T_K": 900,
+   "thermo_cost": 1,
+   "runs": [
+    {
+     "rs": "1.37",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.38",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.39",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.395",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.3975",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.40",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4025",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.405",
+     "length_ps": 420.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4075",
+     "length_ps": 420.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.41",
+     "length_ps": 420.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4125",
+     "length_ps": 420.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.415",
+     "length_ps": 420.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4175",
+     "length_ps": 420.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.42",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4225",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 300.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 256,
+   "T_K": 950,
+   "thermo_cost": 1,
+   "runs": [
+    {
+     "rs": "1.37",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.38",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.39",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.40",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.405",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.41",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.415",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4175",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.42",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4225",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4275",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.435",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.445",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.45",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.46",
+     "length_ps": 60.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 256,
+   "T_K": 1000,
+   "thermo_cost": 1,
+   "runs": [
+    {
+     "rs": "1.38",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.39",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.40",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.41",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.415",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.42",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4225",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4275",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4325",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.435",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4375",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4425",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.445",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.45",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.46",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.47",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.48",
+     "length_ps": 60.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 256,
+   "T_K": 1100,
+   "thermo_cost": 1,
+   "runs": [
+    {
+     "rs": "1.42",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4325",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.435",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4375",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4425",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.445",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4475",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.45",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4525",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.455",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4575",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.46",
+     "length_ps": 300.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 512,
+   "T_K": 900,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.395",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.3975",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.40",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4025",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.405",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4075",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.41",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4125",
+     "length_ps": 180.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.415",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4175",
+     "length_ps": 180.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.42",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4225",
+     "length_ps": 180.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 240.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 512,
+   "T_K": 950,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.405",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.41",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.415",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4175",
+     "length_ps": 180.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.42",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4225",
+     "length_ps": 180.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 300.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4275",
+     "length_ps": 180.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.435",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 240.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 512,
+   "T_K": 1000,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.4225",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4275",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4325",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.435",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4375",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4425",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.445",
+     "length_ps": 240.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 512,
+   "T_K": 1100,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.4375",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4425",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.445",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4475",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.45",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4525",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.455",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4575",
+     "length_ps": 240.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.46",
+     "length_ps": 240.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 2048,
+   "T_K": 900,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.395",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.3975",
+     "length_ps": 20.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.40",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4025",
+     "length_ps": 20.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.405",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4075",
+     "length_ps": 20.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.41",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4125",
+     "length_ps": 80.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.415",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4175",
+     "length_ps": 80.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.42",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4225",
+     "length_ps": 80.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 20.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 2048,
+   "T_K": 950,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.40",
+     "length_ps": 20.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.405",
+     "length_ps": 80.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.41",
+     "length_ps": 80.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.415",
+     "length_ps": 80.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4175",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.42",
+     "length_ps": 120.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4225",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 120.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4275",
+     "length_ps": 99.42,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.435",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.45",
+     "length_ps": 20.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 2048,
+   "T_K": 1000,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.41",
+     "length_ps": 40.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.415",
+     "length_ps": 20.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.42",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4225",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4275",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4325",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.435",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4375",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 100.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4425",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.445",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.45",
+     "length_ps": 40.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.455",
+     "length_ps": 20.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 2048,
+   "T_K": 1100,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.42",
+     "length_ps": 20.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.425",
+     "length_ps": 20.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 20.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.435",
+     "length_ps": 20.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4375",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4425",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.445",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4475",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.45",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4525",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.455",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.4575",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.46",
+     "length_ps": 60.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.465",
+     "length_ps": 20.0,
+     "structure_available": true
+    },
+    {
+     "rs": "1.47",
+     "length_ps": 20.0,
+     "structure_available": true
+    }
+   ]
+  },
+  {
+   "N": 2048,
+   "T_K": 1200,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.40",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.42",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.43",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.44",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.45",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.455",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.4575",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.46",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.4625",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.465",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.4675",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.47",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.475",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.48",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.49",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.50",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.52",
+     "length_ps": 20.0,
+     "structure_available": false
+    }
+   ]
+  },
+  {
+   "N": 2048,
+   "T_K": 1400,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.45",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.46",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.47",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.48",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.49",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.495",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.50",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.505",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.51",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.515",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.52",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.53",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.54",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.55",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.56",
+     "length_ps": 20.0,
+     "structure_available": false
+    }
+   ]
+  },
+  {
+   "N": 2048,
+   "T_K": 1600,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.46",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.48",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.49",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.50",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.51",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.52",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.525",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.53",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.535",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.54",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.545",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.55",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.555",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.56",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.57",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.58",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.60",
+     "length_ps": 20.0,
+     "structure_available": false
+    }
+   ]
+  },
+  {
+   "N": 2048,
+   "T_K": 1800,
+   "thermo_cost": 2,
+   "runs": [
+    {
+     "rs": "1.44",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.46",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.48",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.49",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.50",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.51",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.52",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.53",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.54",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.55",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.56",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.57",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.58",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.59",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.595",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.60",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.605",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.61",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.62",
+     "length_ps": 40.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.64",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.66",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.68",
+     "length_ps": 20.0,
+     "structure_available": false
+    },
+    {
+     "rs": "1.70",
+     "length_ps": 20.0,
+     "structure_available": false
+    }
+   ]
+  }
+ ],
+ "pimd_available": {
+  "1000K": [
+   {
+    "rs": "1.4225",
+    "replicas": 5
+   },
+   {
+    "rs": "1.425",
+    "replicas": 5
+   },
+   {
+    "rs": "1.4275",
+    "replicas": 5
+   },
+   {
+    "rs": "1.43",
+    "replicas": 5
+   },
+   {
+    "rs": "1.4325",
+    "replicas": 5
+   },
+   {
+    "rs": "1.435",
+    "replicas": 5
+   },
+   {
+    "rs": "1.4375",
+    "replicas": 5
+   },
+   {
+    "rs": "1.44",
+    "replicas": 5
+   },
+   {
+    "rs": "1.4425",
+    "replicas": 5
+   },
+   {
+    "rs": "1.445",
+    "replicas": 5
+   },
+   {
+    "rs": "1.45",
+    "replicas": 5
+   },
+   {
+    "rs": "1.455",
+    "replicas": 5
+   },
+   {
+    "rs": "1.46",
+    "replicas": 5
+   },
+   {
+    "rs": "1.465",
+    "replicas": 5
+   },
+   {
+    "rs": "1.47",
+    "replicas": 5
+   },
+   {
+    "rs": "1.475",
+    "replicas": 5
+   },
+   {
+    "rs": "1.48",
+    "replicas": 5
+   },
+   {
+    "rs": "1.485",
+    "replicas": 5
+   },
+   {
+    "rs": "1.49",
+    "replicas": 5
+   },
+   {
+    "rs": "1.495",
+    "replicas": 5
+   },
+   {
+    "rs": "1.5",
+    "replicas": 5
+   },
+   {
+    "rs": "1.505",
+    "replicas": 5
+   },
+   {
+    "rs": "1.51",
+    "replicas": 5
+   },
+   {
+    "rs": "1.52",
+    "replicas": 5
+   }
+  ],
+  "900K": [
+   {
+    "rs": "1.44",
+    "replicas": 5
+   },
+   {
+    "rs": "1.45",
+    "replicas": 5
+   },
+   {
+    "rs": "1.455",
+    "replicas": 5
+   },
+   {
+    "rs": "1.46",
+    "replicas": 5
+   },
+   {
+    "rs": "1.465",
+    "replicas": 5
+   },
+   {
+    "rs": "1.47",
+    "replicas": 5
+   },
+   {
+    "rs": "1.475",
+    "replicas": 5
+   },
+   {
+    "rs": "1.48",
+    "replicas": 5
+   },
+   {
+    "rs": "1.485",
+    "replicas": 5
+   },
+   {
+    "rs": "1.49",
+    "replicas": 5
+   },
+   {
+    "rs": "1.5",
+    "replicas": 5
+   }
+  ]
+ }
+}

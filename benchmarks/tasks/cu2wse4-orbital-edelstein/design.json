@@ -1,0 +1,234 @@
+{
+ "task_id": "cu2wse4-orbital-edelstein",
+ "catalog_id": "cu2wse4-orbital-edelstein",
+ "start": "released",
+ "source_group": "nakazawa_2026_cu2wse4_gyrotropic",
+ "title": "Cu2WSe4: orbital versus spin Edelstein response of a gyrotropic achiral crystal",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Point group and axes: the staged CIF is written in P1; the D2d operations must be found from the coordinates, with the twofold axes along a and b (I-42m setting), not on the diagonals",
+   "wrong_choice": "Assume the -4m2 setting (mirrors along a, b) or a chiral class",
+   "consequence": "allowed Edelstein components ['xy', 'yx'] and nonlinear components ['xxz', 'xzx', 'yyz', 'yzy', 'zxx', 'zyy'] instead of ['xx', 'yy'] and ['xyz', 'xzy', 'yxz', 'yzx', 'zxy', 'zyx']",
+   "ablation": "rotated_axes_setting"
+  },
+  {
+   "id": "dp2",
+   "fork": "Orbital-moment operator: the wave-packet moment with the Wannier-centre position operator is the Berry-phase moment; the service also offers the intra-atomic -mu_B<L>",
+   "wrong_choice": "Use the intra-atomic (atomic L) moment, or add it to the Berry-phase moment (both dev pilots did the latter: CB ratio -2.75)",
+   "consequence": "orbital/spin 0.266 (VB) and -2.41 (CB) instead of -11.2 and -0.339: both conclusions reversed",
+   "ablation": "intra_atomic_orbital_moment"
+  },
+  {
+   "id": "dp3",
+   "fork": "The no-SOC model has 54 spinless Wannier functions (header: collinear, spinsize 1): every state counts twice for the crystal in alpha",
+   "wrong_choice": "Use the model sum as the crystal response",
+   "consequence": "SOC/no-SOC ratio 1.57 instead of 0.786",
+   "ablation": "no_spin_factor_in_nosoc_alpha"
+  },
+  {
+   "id": "dp4",
+   "fork": "Rigid-band hole counting in the spinless model (cascade: mu(p) then alpha); the two errors partly cancel",
+   "wrong_choice": "Count one hole per band and k-point of the spinless model",
+   "consequence": "ratio 0.464 (or 0.928 with both spin factors omitted)",
+   "ablation": "no_spin_factor_in_nosoc_holes"
+  },
+  {
+   "id": "dp5",
+   "fork": "Energy reference: the header Fermi levels of the two models lie mid-gap at different distances from the band edges (VBM -0.599 vs -0.644 eV); the paper compares the models on that common axis",
+   "wrong_choice": "Compare the models at the same mu on the header scale instead of at equal hole density",
+   "consequence": "ratio 1.07 ('agree well') instead of 0.786",
+   "ablation": "common_header_energy_axis"
+  },
+  {
+   "id": "dp6",
+   "fork": "Mesh convergence: the orbital terms converge by N = 24-32, but the small valence-edge spin term keeps drifting to the densest meshes; a mesh that looks converged for the orbital part is not converged for the ratio",
+   "wrong_choice": "Stop at the 32 mesh (1 unit) because M_orb is stable",
+   "consequence": "VB orbital/spin -7.6 instead of -11.2",
+   "ablation": "coarse_mesh_32"
+  },
+  {
+   "id": "dp7",
+   "fork": "Units and relaxation time: gamma = hbar/(2 tau), q = -|e|, sums per cell of the model divided by the conventional-cell volume",
+   "wrong_choice": "tau = hbar/gamma, or a positive carrier charge",
+   "consequence": "M_x -0.188 or 0.0941 instead of -0.0941 A/m",
+   "ablation": "tau_hbar_over_gamma"
+  },
+  {
+   "id": "dp8",
+   "fork": "Valence versus conduction band: W-d spin-orbit coupling makes spin dominate at the conduction-band edge",
+   "wrong_choice": "Transfer the valence-band conclusion (orbital dominance) to the conduction band",
+   "consequence": "CB ratio -11.2 instead of -0.339",
+   "ablation": "conduction_ratio_from_valence"
+  },
+  {
+   "id": "dp9",
+   "fork": "Nonlinear Hall relation: for the Berry-curvature dipole D_xx = -D_yy, D_zz = 0 give sigma_zxy = -2 sigma_xyz",
+   "wrong_choice": "Assume full index-permutation symmetry of sigma_ijl (sigma_zxy = sigma_xyz)",
+   "consequence": "ratio +1 instead of -2",
+   "ablation": "nlh_full_permutation_symmetry"
+  },
+  {
+   "id": "dp10",
+   "fork": "Chirality indicator: tr G vanishes for the achiral, strongly gyrotropic class D2d",
+   "wrong_choice": "Treat the gyrotropic crystal as chiral (alpha_yy = alpha_xx)",
+   "consequence": "chirality indicator 2 and alpha_yy/alpha_xx = +1 instead of 0 and -1",
+   "ablation": "chirality_from_chiral_class"
+  }
+ ],
+ "graded_fields": [
+  "orbital_to_spin_ratio at VBM-0.10 and CBM+0.10 eV (SOC model), each within 25%",
+  "orbital_magnetization_A_per_m (M_x, VBM-0.10 eV, E_x = 1e4 V/m, gamma = 30 meV) within 15%",
+  "soc_to_nosoc_orbital_ratio at p = 5e20 cm^-3 within 10%",
+  "edelstein_allowed_components == [xx, yy]; alpha_yy/alpha_xx = -1 and chirality indicator = 0 (+-0.05)",
+  "nonlinear_hall_allowed_components == [xyz, xzy, yxz, yzx, zxy, zyx]; sigma_zxy/sigma_xyz = -2 (+-0.15)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 6,
+  "oracle_charge": 26,
+  "budget": 30,
+  "catalog_units": "fermi_surface meshes 16-128 cost 24 units (soc) + 14 units (nosoc) = 38, plus any number of bands / band_properties requests (1 unit each)",
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "why": "Symmetry analysis from a P1 CIF, band-edge location in two models, choice of orbital operator, a mesh study of a slowly converging spin term under a binding budget, rigid-band counting in a spinless model and a cascade into the SOC comparison, unit conversion of the Boltzmann response, and the BCD relation.",
+  "oracle_errors": {
+   "orbital_to_spin_ratio_rel:VBM-0.10": 0.00021,
+   "orbital_to_spin_ratio_rel:CBM+0.10": -1e-06,
+   "orbital_magnetization_rel": 0.000214,
+   "soc_to_nosoc_rel": -0.000106,
+   "alpha_yy_over_alpha_xx": -1.0,
+   "chirality_indicator": 0.0,
+   "sigma_zxy_over_sigma_xyz": -2.0
+  }
+ },
+ "runtime_dependencies": [
+  "numpy and scipy (runtime image); no extra layer"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/20131063",
+  "doi": "10.5281/zenodo.20131063",
+  "paper": "Phys. Rev. Materials 10, 064603 (2026); arXiv:2512.16387",
+  "files_used": [
+   "CWS_PRM.zip"
+  ],
+  "md5": {
+   "CWS_PRM.zip": "9a50ca688ae85f597776e7d6e5931765"
+  },
+  "members": "benchmarks/construction/cu2wse4-orbital-edelstein/members.md5",
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Graded values come from the validated evaluator, not directly from the archive: the archived orbital Edelstein curves equal -2 x the paper-convention (wave-packet) orbital response, while the archived spin curve matches the evaluator in absolute units (scale 1.002). Nonlinear Hall magnitudes are not graded (BCD at kT = 10 meV is dominated by near-degeneracy hot spots and the archive differs by a convention factor ~2); only exact symmetry relations are. The valence-edge orbital/spin ratio carries a mesh uncertainty (128 mesh -11.2, 1/N extrapolation -13.4), covered by the 25% window.",
+ "calibration": {
+  "orbital_to_spin_ratio": {
+   "reference_mesh128": {
+    "VBM-0.10": -11.19498688012404,
+    "CBM+0.10": -0.33894697024456005
+   },
+   "robustness": {
+    "mesh_96": {
+     "VBM-0.10": -10.601307048170499,
+     "CBM+0.10": -0.33728323294515394
+    },
+    "extrapolated_VB": -13.39942368379047
+   },
+   "per_mesh": {
+    "16": {
+     "VBM-0.10": -5.9438626797641625,
+     "CBM+0.10": -0.3185122927721276
+    },
+    "24": {
+     "VBM-0.10": -7.150885930341012,
+     "CBM+0.10": -0.32215867039761603
+    },
+    "32": {
+     "VBM-0.10": -7.595573507441633,
+     "CBM+0.10": -0.3661727523357774
+    },
+    "48": {
+     "VBM-0.10": -9.003848689345547,
+     "CBM+0.10": -0.34150871685014617
+    },
+    "64": {
+     "VBM-0.10": -9.687307644013478,
+     "CBM+0.10": -0.34415348346572555
+    },
+    "96": {
+     "VBM-0.10": -10.601307048170499,
+     "CBM+0.10": -0.33728323294515394
+    },
+    "128": {
+     "VBM-0.10": -11.19498688012404,
+     "CBM+0.10": -0.33894697024456005
+    }
+   },
+   "nearest_ablation": {
+    "coarse_mesh_32": {
+     "VBM-0.10": -7.595573507441633,
+     "CBM+0.10": -0.3661727523357774
+    },
+    "intra_atomic": {
+     "VBM-0.10": 0.26556595703088337,
+     "CBM+0.10": -2.4117303368425214
+    },
+    "berry_plus_intra_atomic": {
+     "VBM-0.10": -10.929420923093158,
+     "CBM+0.10": -2.7506773070870816
+    },
+    "cb_from_vb": -11.19498688012404
+   },
+   "tolerance": "+-25% each"
+  },
+  "orbital_magnetization_A_per_m": {
+   "reference_mesh128": -0.094120234203003,
+   "robustness": {
+    "mesh_96": -0.0940167081466107,
+    "per_mesh": {
+     "16": -0.09045971003798911,
+     "24": -0.093639611122169,
+     "32": -0.09351398509522385,
+     "48": -0.09378814961200926,
+     "64": -0.09392454327784078,
+     "96": -0.0940167081466107,
+     "128": -0.094120234203003
+    }
+   },
+   "nearest_ablation": {
+    "tau_hbar_over_gamma": -0.188240468406006,
+    "positive_charge": 0.094120234203003,
+    "intra_atomic": 0.0022327074019594054
+   },
+   "tolerance": "+-15%"
+  },
+  "soc_to_nosoc_orbital_ratio": {
+   "reference_mesh128": 0.785990626442058,
+   "robustness": {
+    "mesh_96": 0.7851475873808306,
+    "per_mesh": {
+     "16": 0.7914122944166692,
+     "24": 0.7874711479305095,
+     "32": 0.7867346677058147,
+     "48": 0.784778879781861,
+     "64": 0.7853524351424922,
+     "96": 0.7851475873808306,
+     "128": 0.785990626442058
+    }
+   },
+   "nearest_ablation": {
+    "no_spin_factor_anywhere_nosoc": 0.9281915497562551,
+    "common_header_energy_axis": 1.0663392194674797,
+    "intra_atomic_orbital_moment": 0.5615980450454912,
+    "no_spin_factor_in_nosoc_holes": 0.46409577487812753,
+    "no_spin_factor_in_nosoc_alpha": 1.571981252884116
+   },
+   "tolerance": "+-10%"
+  },
+  "symmetry_fields": {
+   "alpha_yy_over_alpha_xx": -1.0,
+   "chirality_indicator": 0.0,
+   "sigma_zxy_over_sigma_xyz": -2.0,
+   "raw_bcd_ratio_mesh128": -2.00000538939352,
+   "tolerance": "+-0.05 (alpha), +-0.15 (sigma ratio); allowed components exact"
+  }
+ }
+}

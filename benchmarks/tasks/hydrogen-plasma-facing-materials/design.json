@@ -1,0 +1,148 @@
+{
+ "task_id": "hydrogen-plasma-facing-materials",
+ "catalog_id": "hydrogen-plasma-facing-materials",
+ "start": "released",
+ "source_group": "fedrigucci_2024_pfm_hydrogen",
+ "title": "Plasma-facing candidates: hydrogen sites, references and surface binding",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "convention (reservoir); the paper's headline column uses the other one",
+   "fork": "Hydrogen reservoir for the formation energy: 1/2 E(H2) of the relaxed molecule or the isolated spin-polarized H atom",
+   "wrong_choice": "Use the isolated H atom (the paper's main Table VI column, Delta E_a)",
+   "consequence": "Every E_f and site energy shifted by -2.312 eV; Re, TaC, TiN, HfB2 all turn 'exothermic'",
+   "ablation": "atom_reference"
+  },
+  {
+   "id": "dp2",
+   "kind": "site competition; discriminating purchases (every run of a host must be bought)",
+   "fork": "Preferred site = lowest of all archived relaxations, or the textbook site of the lattice type",
+   "wrong_choice": "Tetrahedral site in hcp Re; metal-coordinated (Ta4) void in rocksalt TaC",
+   "consequence": "Re E_f +0.56 eV and nearest-host distance -0.22 A; TaC E_f +0.34 eV and the nearest host becomes Ta instead of C",
+   "ablation": "textbook_site"
+  },
+  {
+   "id": "dp3",
+   "kind": "documented claim contradicted by raw outputs (site identity); unconverged run",
+   "fork": "Whether the archive's 'inequivalent sites' are distinct relaxed configurations",
+   "wrong_choice": "Trust the README and list every archived run as a site (or merge by energy alone with a coarse 0.1 eV window)",
+   "consequence": "Site counts wrong for WC (7 vs 2), TaC (4 vs 2), TiN (3 vs 2), Mo (2 vs 1) and graphite (3 vs 2: run 39 stopped at the BFGS step limit inside the basin of run 17); energy-only binning merges the genuinely distinct pairs of graphite, HfB2 and TiN (48-55 meV apart)",
+   "ablation": "archived_runs_as_sites",
+   "other_ablations": ["energy_binning_0p1eV"]
+  },
+  {
+   "id": "dp4",
+   "kind": "inconsistency visible only in run metadata; budget-driven cascade (reuse of a purchase)",
+   "fork": "Which isolated-atom run serves as the reference for a given material",
+   "wrong_choice": "Reuse one W atom for every W-containing material (the W-set atom is 30/240 Ry, the WC/W2C/TaW-set atoms 45/360 Ry)",
+   "consequence": "WC W SBE +0.13 eV and WC cohesive energy +0.065 eV/atom (the paper's own Table V does this); or W SBE and cohesive energy -0.13 eV in the reverse direction",
+   "ablation": "w_atom_from_w_set",
+   "other_ablations": ["w_atom_from_wc_set"]
+  },
+  {
+   "id": "dp5",
+   "kind": "discriminating purchase (termination energies); protocol choice",
+   "fork": "Which termination and which surface atom define the element's SBE",
+   "wrong_choice": "The other termination of the selected facet, or the paper's average over all sites and terminations, or the site mean on the right termination",
+   "consequence": "WC: W -0.65 / C -2.61 eV (other termination), W +1.85 eV (paper average with the 30 Ry W atom); TiB2: B -2.89 eV (other termination), -0.35 eV (paper average), +1.20 eV (site mean)",
+   "ablation": "other_termination",
+   "other_ablations": ["paper_protocol_mean", "site_mean_lowest_termination"]
+  },
+  {
+   "id": "dp6",
+   "kind": "cascade from the hydrogen purchases; cutoff mismatch visible in metadata",
+   "fork": "Bulk reference for the cohesive energy: the relaxed SBE unit cell at the atom's cutoff, or the 60/480 Ry hydrogen supercell already bought",
+   "wrong_choice": "Combine the H-IFE pristine supercell (60/480 Ry) with the lower-cutoff isolated atoms",
+   "consequence": "Re cohesive energy +0.065 eV/atom (W would be +0.21 eV; Mo and WC only +0.01 eV, so the error is invisible unless checked)",
+   "ablation": "cohesive_bulk_from_hife_supercell"
+  },
+  {
+   "id": "dp7",
+   "kind": "raw-output reading (starting vs relaxed coordinates)",
+   "fork": "Which coordinates describe the preferred site",
+   "wrong_choice": "Use the starting (input) coordinates of the run, which are randomly displaced",
+   "consequence": "HfB2 nearest B distance -0.061 A and Mo nearest Mo distance +0.047 A (tolerance 0.04)",
+   "ablation": "starting_geometry"
+  },
+  {
+   "id": "dp8",
+   "kind": "competing explanation (SBE tracks cohesion)",
+   "fork": "Surface binding from the slab-vacancy runs or from the bulk cohesive energy (sublimation proxy)",
+   "wrong_choice": "Use the cohesive energy per atom as every element's SBE",
+   "consequence": "W -2.09 eV, WC W -2.08 / C +1.16 eV, TiB2 B -0.89 eV",
+   "ablation": "cohesive_energy_as_sbe"
+  }
+ ],
+ "graded_fields": [
+  "h_formation_energy_eV: 7 hosts (graphite, HfB2, Mo, Re, TaC, TiN, WC), each within +/-0.03 eV",
+  "distinct_site_energies_eV: same hosts, exact count and each sorted value within +/-0.03 eV",
+  "preferred_site: nearest host chemical symbol exact and distance within +/-0.04 A",
+  "surface_binding_energy_eV: W(W), WC(W, C), TiB2(B, Ti) within +/-0.06 eV; TiB2 Ti also accepts null",
+  "cohesive_energy_eV_per_atom: Re, W, WC within +/-0.03 eV"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 55,
+  "oracle_charge": 55,
+  "budget": 61,
+  "catalog_size_units": 490,
+  "oracle_container_seconds": 23,
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image); no extra lab dependencies"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/gpxwh-dx645",
+  "doi": "10.24435/materialscloud:9k-09 (data); PRX Energy 3, 043002 (2024), arXiv:2407.00858 (paper)",
+  "files_used": ["PFMs_screening_QE_data.tar.xz", "README.md"],
+  "md5": {
+   "PFMs_screening_QE_data.tar.xz": "56aadb3e22b5a0d52ff75d5757798aaa",
+   "README.md": "61db996d231cb32b2fbf19328de17307",
+   "files_description.md": "21acb466968792b84ff2903d878da8c5"
+  },
+  "sha256": {
+   "PFMs_screening_QE_data.tar.xz": "ec5ff80c8c6b43ebd817e7c6386bb71946bf8dde7359d746e6aee34f932274ef",
+   "README.md": "ac01105ab9f2124ee57889a729238e35a4feb29e0e87de4ca48ee31a41400ef4"
+  },
+  "license": "CC BY 4.0",
+  "staged": "all 490 runs as parsed records (settings, cell, positions, energies, convergence messages, run header); README quoted verbatim in the catalog; no pseudopotentials or raw output text"
+ },
+ "exceptions": {},
+ "notes": "Released start, pure lookup lab. The design's fresh-QE checks (H zero-point energy by finite differences, supercell-size tests) are infeasible: the archived relaxations took 3-12 h on 32-48 cores each, and no pseudopotentials are in the runtime image. Hence the ZPE-corrected formation energies, the Sieverts-law solubility ranking at 1000 K and the 'withheld materials' were dropped; ZPE, vibrational entropy and size convergence are rubric items ('what the data cannot support'). Nothing is withheld from purchase; the graded values are derived quantities never served by the lab. W is excluded from the hydrogen set (well known); its SBE and cohesive energy are graded because the cutoff trap (dp4) lives there. TiB2 Ti SBE accepts null as well as the number: the archived Ti atom is a copy of the TiN atom at 60/480 Ry while the TiB2 slabs use 35/280 Ry, a construction-time QE check puts the Ti-atom cutoff error at the meV level, and the archive alone cannot quantify it.",
+ "calibration": {
+  "h_formation_energy_eV": {
+   "reference": {"C-h-194": 1.3677, "HfB2-h-191": 1.6427, "Mo-c-229": 0.5091, "Re-h-194": -0.0764, "TaC-c-225": 1.7735, "TiN-c-225": 2.1826, "WC-h-187": 0.5432},
+   "reference_oracle": "identical (0.0000 error on all hosts)",
+   "robustness": {"duplicate_cluster_mean": "max |dev| 0.0001", "rydberg_13p6057": "max |dev| < 0.0001"},
+   "nearest_wrong": {"second_distinct_site_TiN": 0.0514, "second_distinct_site_HfB2": 0.0548, "textbook_site_TaC": 0.3446, "textbook_site_Re": 0.5591, "atom_reference": -2.3122},
+   "tolerance": "+/-0.03"
+  },
+  "distinct_site_energies_eV": {
+   "reference_counts": {"C-h-194": 2, "HfB2-h-191": 4, "Mo-c-229": 1, "Re-h-194": 2, "TaC-c-225": 2, "TiN-c-225": 2, "WC-h-187": 2},
+   "robustness": {"duplicate_cluster_mean": "counts equal, max |dev| 0.0002"},
+   "nearest_wrong": {"archived_runs_as_sites": "counts C 3, Mo 2, TaC 4, TiN 3, WC 7", "energy_binning_0p1eV": "counts C 1, HfB2 3, TiN 1"},
+   "tolerance": "exact count; each value +/-0.03"
+  },
+  "preferred_site_distance_A": {
+   "reference": {"C-h-194": ["C", 1.1321], "HfB2-h-191": ["B", 1.4068], "Mo-c-229": ["Mo", 1.8238], "Re-h-194": ["Re", 1.9792], "TaC-c-225": ["C", 1.1496], "TiN-c-225": ["Ti", 1.7947], "WC-h-187": ["W", 1.7459]},
+   "robustness": {"distance_from_another_duplicate": "max |dev| 0.0004"},
+   "nearest_wrong": {"starting_geometry_Mo": 0.0471, "starting_geometry_HfB2": -0.0608, "textbook_site_Re": -0.2234, "textbook_site_TaC": "element Ta instead of C"},
+   "tolerance": "symbol exact; +/-0.04 A"
+  },
+  "surface_binding_energy_eV": {
+   "reference": {"W-c-229": {"W": 11.1646}, "WC-h-187": {"W": 11.0179, "C": 7.7844}, "TiB2-h-191": {"B": 8.5101, "Ti": "11.4894 or null"}},
+   "lowest_termination": {"WC-h-187": "100_t2 (0.251 vs 0.472 eV/A^2)", "TiB2-h-191": "101_t2 (0.219 vs 0.370 eV/A^2)"},
+   "robustness": {"carbon_atom_at_60Ry": -0.0031, "tib2_ti_reported_as_undetermined": "passes"},
+   "nearest_wrong": {"w_atom_from_w_set (WC W)": 0.1295, "w_atom_from_wc_set (W)": -0.1294, "paper_protocol_mean (TiB2 B)": -0.3549, "other_termination (WC W)": -0.6504, "site_mean (TiB2 B)": 1.2048, "cohesive_energy_as_sbe (TiB2 B)": -0.8942},
+   "tolerance": "+/-0.06"
+  },
+  "cohesive_energy_eV_per_atom": {
+   "reference": {"Re-h-194": 8.8007, "W-c-229": 9.0757, "WC-h-187": 8.9428},
+   "robustness": {"rydberg_13p6057": "< 0.0001"},
+   "nearest_wrong": {"hife_supercell_bulk (Re)": 0.0648, "w_atom_from_w_set (WC)": 0.0647, "w_atom_from_wc_set (W)": -0.1294, "hife_supercell_bulk (W, not an ablation: W supercell not normally bought)": 0.2089, "hife_supercell_bulk (WC, passes)": 0.0138},
+   "tolerance": "+/-0.03"
+  }
+ }
+}

@@ -1,0 +1,162 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 10,
+  "rubric_items": 8,
+  "task_mb": 5.64,
+  "hidden_values": 34,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 14,
+   "budget": 16,
+   "evaluations": 9,
+   "failed_evaluations": 0,
+   "container_seconds": 23
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "narrow_scans_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "narrow_scans_only_bin_interpolation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "narrow_scans_only_independent_fits",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "critical_scattering_mirrored_about_tc",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "wide_101_background_from_1p5K",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "wide_101_background_from_300K",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "wide_101_equal_to_003",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "wide_101_c_axis_polarisation_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "wide_101_in_plane_afm_correlations",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "dm_matrix_copied_to_all_bonds",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "out_of_plane_dm_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "in_plane_dm_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "dm_matrix_on_reversed_bond",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "spin_length_from_ordered_moment",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "bonds_counted_twice",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "narrow_fit_with_250K_and_300K_data",
+    "passes_grading": true
+   },
+   {
+    "name": "narrow_per_annulus_interpolation",
+    "passes_grading": true
+   },
+   {
+    "name": "narrow_independent_fits",
+    "passes_grading": true
+   },
+   {
+    "name": "wide_101_background_only",
+    "passes_grading": true
+   },
+   {
+    "name": "wide_101_xy_polarisation_ratio",
+    "passes_grading": true
+   },
+   {
+    "name": "wide_101_unsmoothed_background",
+    "passes_grading": true
+   },
+   {
+    "name": "wide_101_background_165K_only",
+    "passes_grading": true
+   },
+   {
+    "name": "tilt_rounded_and_conventional_cell_gap",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T06:32:02Z"
+}

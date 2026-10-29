@@ -1,0 +1,29 @@
+{
+ "reference": {
+  "E_neutral_psi_wall_mJ_m2": 133.57273544446298,
+  "E_neutral_phi_wall_mJ_m2": 195.1355643801096,
+  "E_layer_psi_wall_mJ_m2": 13.65962099738893,
+  "charged_psi_wall_slope_mJ_m2_per_nm": 12.161815609465071,
+  "psi_wall_profile": "ising",
+  "phi_wall_profile": "rotational"
+ },
+ "tolerance": {
+  "E_neutral_psi_wall_mJ_m2": [
+   126.89,
+   140.25
+  ],
+  "E_neutral_phi_wall_mJ_m2": [
+   185.38,
+   204.89
+  ],
+  "charged_psi_wall_slope_mJ_m2_per_nm": [
+   10.34,
+   13.99
+  ],
+  "E_layer_psi_wall_mJ_m2": [
+   9.66,
+   17.66
+  ]
+ },
+ "notes": "qNEP-w-BECs relaxations with the lab code path (runs/*.json); in-plane lattice of the bulk Cmc2_1 cell"
+}

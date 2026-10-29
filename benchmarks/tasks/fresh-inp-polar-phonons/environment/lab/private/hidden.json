@@ -1,0 +1,44 @@
+{
+ "reference": {
+  "a0_A": 5.9624,
+  "omega_TO_cm-1": 284.53307278361683,
+  "omega_LO_cm-1": 321.0592660060083,
+  "born_charge_In": 2.6115675,
+  "eps_inf": 11.737220418,
+  "eps_0": 14.944113915138884,
+  "dlnZ_dlnV": 0.5958080252905001,
+  "dln_eps_inf_dlnV": 1.777939191462183,
+  "gruneisen_TO": 1.3246846996322592,
+  "LOTO_splitting_under_compression": "grows",
+  "strained_omega_LO_q_z_cm-1": 326.292918227253,
+  "strained_omega_LO_q_x_cm-1": 330.1927325400668,
+  "strained_LO_anisotropy_cm-1": 3.8998143128138167
+ },
+ "tolerances": {
+  "absolute": {
+   "a0_A": 0.01,
+   "omega_TO_cm-1": 2.0,
+   "omega_LO_cm-1": 2.0,
+   "born_charge_In": 0.02,
+   "eps_inf": 0.2,
+   "eps_0": 0.35,
+   "strained_omega_LO_q_z_cm-1": 2.0,
+   "strained_omega_LO_q_x_cm-1": 2.0,
+   "strained_LO_anisotropy": 0.8
+  },
+  "relative": {
+   "dlnZ_dlnV": 0.15,
+   "dln_eps_inf_dlnV": 0.2,
+   "gruneisen_TO": 0.1
+  }
+ },
+ "provenance": {
+  "a0_birch_murnaghan_A": 5.962405275841824,
+  "B0_GPa": 59.32278451001247,
+  "a0_zero_pressure_A": 5.961571476922626,
+  "a0_65Ry_A": 5.9619153296592655,
+  "dln_oscillator_dlnV": -1.586323140881213,
+  "dln_splitting_dlnV": -0.32188712791599844,
+  "runs": "benchmarks/construction/fresh-inp-polar-phonons/reference_results.json"
+ }
+}

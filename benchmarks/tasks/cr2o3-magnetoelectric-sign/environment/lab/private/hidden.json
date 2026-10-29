@@ -1,0 +1,33 @@
+{
+ "reference": {
+  "alpha_out_pointing_ps_m": -0.9312629080395552,
+  "mode_fractions": {
+   "Eu_1_x": -0.00019438299123033804,
+   "Eu_2_x": -0.016656253986683786,
+   "Eu_3_x": 0.4849882852595996,
+   "Eu_4_x": 0.5318623517183145
+  },
+  "dmdu_out_pointing_muB_per_A": {
+   "Eu_3_x": -0.2996470068666666,
+   "Eu_4_x": -0.19219424400047616
+  },
+  "born_Cr1": {
+   "xx": 3.00524999999995,
+   "xy": 0.20904999999998655,
+   "zz": 3.146099999999798
+  },
+  "dataset_domain": {
+   "VASP": "in_pointing",
+   "Elk": "out_pointing"
+  },
+  "dominant_mode": "Eu_4_x",
+  "annealed_domain_parallel_EH": "out_pointing"
+ },
+ "thresholds": {
+  "alpha_rel_tol": 0.05,
+  "fraction_abs_tol": 0.025,
+  "dmdu_rel_tol": 0.05,
+  "born_diag_abs_tol": 0.08,
+  "born_offdiag_abs_tol": 0.05
+ }
+}

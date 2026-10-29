@@ -1,0 +1,15 @@
+{
+ "costs": {
+  "spectrum": 1,
+  "map": 4,
+  "reduced_model_map": 4,
+  "zone_slice": 1
+ },
+ "spectra_dE": 0.0099654642,
+ "map_grid": "q = (-l/2, k, l) r.l.u.; k_i = i * 0.0125268817 (i = 0 .. 186, the k >= 0 half; S(-q) = S(q)); l_j = -1.776 + j * 0.0111 (j = 0 .. 320)",
+ "ko_grid": "q = (-l/2, k, l) r.l.u.; k_i = -2 + 0.025 i (i = 0 .. 160); l_j = j / 90 (j = 0 .. 160)",
+ "zone_grids": {
+  "36x24x36": "h_i = (i - 17)/36 (i = 0 .. 35), l_m = (m - 17)/36 (m = 0 .. 35), k = (k_index - 11)/24",
+  "48x24x24": "h_i = (i - 23)/48 (i = 0 .. 47), l_m = (m - 11)/24 (m = 0 .. 23), k = (k_index - 11)/24"
+ }
+}

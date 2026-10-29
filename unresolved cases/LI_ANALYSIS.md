@@ -1,0 +1,35 @@
+# "Where is the Li?" — closest published model, the additions needed, and the difficulty of each (2026-10-28)
+
+Premise (from round 8): the RuCl3 campaign converged because the starting point was not our own chain but Li & Yang's DFT+U recipe, which
+already had α and α′ in the right order. Every rung then added ONE physical hypothesis with its own gate: SOC (→ L), evGW screening (→ β
+spacing), U on the Li recipe (→ trade line). The same recipe for a new material: (1) find the published first-principles model that already
+captures part of the observation ("the Li"); (2) reproduce it to a declared tolerance (LITCHECK) before anything else; (3) add one
+hypothesis per rung, each with a gate that can fail. Difficulty = how far the Li is from the observation, and whether the additions are
+readouts we already own, new physics inside GW-BSE, or physics outside single-pair GW-BSE.
+
+| entry | the Li (closest published model) | what the Li already gives | additions to reach the observation | kind of addition | difficulty |
+|---|---|---|---|---|---|
+| 06 ZrSe3 strain redshift | Li et al., Adv. Mater. 2022: bulk G0W0+BSE (Yambo, PPA, 6×6×6), unstrained direct gap 1.29 / indirect 0.66 eV, uniaxial +1 %: ΔE_QP +90 (b), +45 (a) meV | the strain response of the QP gap on two axes; A/B exciton reflectance | biaxial strain with a declared relaxation rule; E_b(ε) from the BSE at each point; the decomposition itself; one SOC covariate | same level of theory, new axis only | **LOW**. Caveat: the Li's absolute gap is 0.46 eV below the measured exciton, so LITCHECK must be on the derivatives (+90/+45), not the gap |
+| 03 TiS3 1.28 eV ⊥-chain peak | Molina-Mendoza et al., Adv. Electron. Mater. 2015 (Rubio group): bulk G0W0+BSE (Yambo, PPA, 10×10×10, 30v×70c, Haydock): E_el 1.15, E_opt 1.05, E_b 0.10 eV; their own photocurrent shows transitions at 1.07 and 1.29 eV and the BSE has "peaks at ~1.2 eV ... transition to a higher conduction level" | the edge exciton and a second feature at ~1.2–1.3 eV, unresolved in polarization and character | polarization-resolved channels (b1/b2/b3), state identity (overlap, k/band composition), real-space maps with the hole on a chain (interchain weight), a monolayer run only as the dimensionality control | readouts we own (round-8 S9 + plotxct pipeline); no new physics | **LOW–MODERATE**. Risk: weakly bound (0.1 eV) bulk exciton needs a large BvK box; the temperature onset is not predicted |
+| 08 ReS2 stacking-dependent Stark shift | Zhou et al., ACS Photonics 2021: G0W0-BSE absorption of AA- and AB-stacked few-layer ReS2 along/⊥ the Re chain (Exc. I/II/III at 1.46–1.57 eV); van der Laan 2023 (bulk AA/AB exciton experiments) | the exciton ladder per stacking, polarization | HYPOTHESIS: AB stacking removes the layer-exchange symmetry → excitons acquire a permanent out-of-plane dipole p_z = e⟨z_e − z_h⟩; AA is symmetric → p_z = 0 (built-in null). Compute ⟨z_e − z_h⟩ per exciton from the BSE eigenvectors (our real-space pipeline), convert to a linear Stark shift with the device field (paper, paywalled here); quadratic part from a two-field sawtooth GW-BSE (optional rung) | one new hypothesis inside GW-BSE + readouts we own; 6–8 layers → bilayer and 4-layer slabs as proxies | **MODERATE**. Cost: 24–48-atom triclinic slabs with truncation (≈ 3–6× a RuCl3 chain per stacking); payoff: directly the paper's open point (dipole orientation) with a symmetry-protected negative control |
+| 05 ZrSe3 A_2s / B fine structure | same Li as 06 (Li 2022 bulk GW-BSE A/B); experiment: A_1s 1.82, A_2s 1.89 (65 meV), B components ~150 meV above with polarization axes 10–20° off the A axis | A and B excitons, b-polarized A | dense fine k-grid for the Rydberg 2s (E_b accuracy ≤ 20 meV); HYPOTHESIS for the 10–20° rotation: in P2_1/m the mirror forces every in-plane exciton dipole to be ∥b or ⊥b, so a single bulk state cannot give a rotated axis → the B region must be a superposition of close ∥b and ⊥b states, or a symmetry breaking (few-layer/substrate) outside the bulk model; substrate optics via transfer matrix (cheap) | one symmetry-based hypothesis + fine-grid readouts; few-layer slabs if the bulk superposition fails | **MODERATE–HIGH** alone; **LOW–MODERATE as the successor of 06** (same ground state, same chain) |
+| 07 β-InSe 3 meV doublet | no bulk β-InSe GW-BSE found; nearest Li = bulk/multilayer γ-InSe GW-BSE with SOC (e.g. arXiv 2601.13961 family) | the A exciton (p_z-like, SOC-mixed in-plane dipole) | β polytype (4 layers/cell): (a) one-body Davydov splitting of the VB maximum (cheap, from GW bands); (b) singlet–triplet exchange splitting (BSE with/without exchange kernel) made bright by SOC; (c) bound-exciton alternative is defect physics (outside). The exciton is Wannier-like (E_b ≈ 16 meV from n = 1/2 at 1.338/1.350 eV, radius several nm) → fine grids far beyond our round-8 boxes | two hypotheses inside GW-BSE, but the target (3 meV) is below our demonstrated position floor (10–20 meV) | **HIGH** — only (a) is cheap and could rule the one-body route in or out |
+| 01 ReS2 excitonic Raman, 02 SnS2 Raman anomalies, 04 hBN extra Raman peak | DFPT phonon literature (ReS2: Feng 2015 / McCreary 2017; SnS2, hBN: many) | mode assignments | 01: BSE-level resonant Raman (finite-difference BSE per mode, 36 modes) + non-Bloch intermediate states — hard; 02: two-phonon + anharmonic linewidth (phono3py) — different pipeline; 04: strain/stacking phonon shifts cheap, but the spatial strain field is continuum mechanics | different pipeline (DFPT), partly outside | 02/04 LOW per calculation but off-pipeline; 01 HIGH |
+
+## Decision: three campaigns, in this order
+
+1. **ZRSE3-STRAIN-1** (entry 06) — lowest distance from its Li; the additions are one strain axis and the E_QP/E_b split; derivative gates.
+2. **TIS3-INTERCHAIN-1** (entry 03) — the Li already contains the ~1.2–1.3 eV second feature; the gap to the observation is entirely readouts
+   we already own (polarization, identity, real-space). LITCHECK target changed to the Molina-Mendoza bulk chain (E_QP 1.15, E_opt 1.05,
+   E_b 0.10 eV, tolerance 0.10 eV); the monolayer stays as the dimensionality control only.
+3. **RES2-DIPOLE-1** (entry 08) — the one with a genuine hypothesis-based addition (layer-asymmetry exciton dipole) and a symmetry-protected
+   null (AA), computed with the real-space machinery from round 8. Moderate cost, highest payoff per the paper's own open question.
+
+Successor, not a pick: **ZRSE3-FINE-1** (entry 05) reuses the ZrSe3 ground state and chain from 06; run it after 06 if the fine-grid cost
+fits. Excluded: 07 (3 meV target below our floor), 01/02/04 (DFPT Raman pipeline, not built).
+
+## What "difficulty" means here (the round-8 yardstick)
+
+- RuCl3 round 8: Li → observation needed THREE physics additions (SOC, evGW W, U retune) plus two-hole physics it never got (β, criterion 6).
+- 06 needs zero physics additions; 03 zero (readouts only); 08 one (a dipole from a symmetry argument); 05 one (superposition/symmetry
+  breaking) plus a fine-grid ladder; 07 two plus a convergence floor we have not demonstrated.

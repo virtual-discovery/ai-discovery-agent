@@ -1,0 +1,101 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 9,
+  "task_mb": 0.76,
+  "hidden_values": 3,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 54,
+   "budget": 60,
+   "evaluations": 34,
+   "failed_evaluations": 0,
+   "container_seconds": 4
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "mean_field_two_sublattice",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "authors_averaged_mean_field",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "single_placement_per_size",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "codopant_by_mean_field",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "linear_in_concentration",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "zero_filled_coco",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "near_shells_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "dimer_moment_collapse",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "scaled_m2_crossing_L3_L4",
+    "passes_grading": true
+   },
+   {
+    "name": "scaled_m2_crossing_L5_L6",
+    "passes_grading": true
+   },
+   {
+    "name": "binder_crossing_L3_L4",
+    "passes_grading": true
+   },
+   {
+    "name": "binder_crossing_L5_L6",
+    "passes_grading": true
+   },
+   {
+    "name": "V2Cr2_binder_noise_crossing",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-21T17:24:01Z"
+}

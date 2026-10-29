@@ -1,0 +1,247 @@
+{
+ "targets": {
+  "orbital_to_spin_ratio": {
+   "VBM-0.10": -11.19498688012404,
+   "CBM+0.10": -0.33894697024456005
+  },
+  "orbital_magnetization_A_per_m": -0.094120234203003,
+  "soc_to_nosoc_orbital_ratio": 0.785990626442058,
+  "edelstein_allowed_components": [
+   "xx",
+   "yy"
+  ],
+  "alpha_yy_over_alpha_xx": -1.0,
+  "chirality_indicator": 0.0,
+  "nonlinear_hall_allowed_components": [
+   "xyz",
+   "xzy",
+   "yxz",
+   "yzx",
+   "zxy",
+   "zyx"
+  ],
+  "sigma_zxy_over_sigma_xyz": -2.0
+ },
+ "robustness": {
+  "mesh_96": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": -10.601307048170499,
+    "CBM+0.10": -0.33728323294515394
+   },
+   "orbital_magnetization_A_per_m": -0.0940167081466107,
+   "soc_to_nosoc_orbital_ratio": 0.7851475873808306
+  },
+  "valence_spin_extrapolated_1_over_N": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": -13.39942368379047,
+    "CBM+0.10": -0.33894697024456005
+   }
+  },
+  "raw_bcd_ratio_mesh128": {
+   "sigma_zxy_over_sigma_xyz": -2.00000538939352
+  }
+ },
+ "ablations": {
+  "rotated_axes_setting": {
+   "edelstein_allowed_components": [
+    "xy",
+    "yx"
+   ],
+   "nonlinear_hall_allowed_components": [
+    "xxz",
+    "xzx",
+    "yyz",
+    "yzy",
+    "zxx",
+    "zyy"
+   ]
+  },
+  "chiral_d2_assumption": {
+   "edelstein_allowed_components": [
+    "xx",
+    "yy",
+    "zz"
+   ]
+  },
+  "intra_atomic_orbital_moment": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": 0.26556595703088337,
+    "CBM+0.10": -2.4117303368425214
+   },
+   "orbital_magnetization_A_per_m": 0.0022327074019594054,
+   "soc_to_nosoc_orbital_ratio": 0.5615980450454912
+  },
+  "no_spin_factor_in_nosoc_alpha": {
+   "soc_to_nosoc_orbital_ratio": 1.571981252884116
+  },
+  "no_spin_factor_in_nosoc_holes": {
+   "soc_to_nosoc_orbital_ratio": 0.46409577487812753
+  },
+  "no_spin_factor_anywhere_nosoc": {
+   "soc_to_nosoc_orbital_ratio": 0.9281915497562551
+  },
+  "common_header_energy_axis": {
+   "soc_to_nosoc_orbital_ratio": 1.0663392194674797
+  },
+  "coarse_mesh_32": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": -7.595573507441633,
+    "CBM+0.10": -0.3661727523357774
+   },
+   "orbital_magnetization_A_per_m": -0.09351398509522385,
+   "soc_to_nosoc_orbital_ratio": 0.7867346677058147
+  },
+  "tau_hbar_over_gamma": {
+   "orbital_magnetization_A_per_m": -0.188240468406006
+  },
+  "positive_charge_sign": {
+   "orbital_magnetization_A_per_m": 0.094120234203003
+  },
+  "conduction_ratio_from_valence": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": -11.19498688012404,
+    "CBM+0.10": -11.19498688012404
+   }
+  },
+  "nlh_full_permutation_symmetry": {
+   "sigma_zxy_over_sigma_xyz": 1.0
+  },
+  "chirality_from_chiral_class": {
+   "chirality_indicator": 1.9999999673384885,
+   "alpha_yy_over_alpha_xx": 1.0
+  },
+  "berry_plus_intra_atomic_moment": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": -10.929420923093158,
+    "CBM+0.10": -2.7506773070870816
+   },
+   "orbital_magnetization_A_per_m": -0.0918875268010436,
+   "soc_to_nosoc_orbital_ratio": 0.7938166186431715
+  }
+ },
+ "per_mesh": {
+  "16": {
+   "ratio": {
+    "VBM-0.10": -5.9438626797641625,
+    "CBM+0.10": -0.3185122927721276
+   },
+   "mag": -0.09045971003798911,
+   "soc_nosoc": 0.7914122944166692
+  },
+  "24": {
+   "ratio": {
+    "VBM-0.10": -7.150885930341012,
+    "CBM+0.10": -0.32215867039761603
+   },
+   "mag": -0.093639611122169,
+   "soc_nosoc": 0.7874711479305095
+  },
+  "32": {
+   "ratio": {
+    "VBM-0.10": -7.595573507441633,
+    "CBM+0.10": -0.3661727523357774
+   },
+   "mag": -0.09351398509522385,
+   "soc_nosoc": 0.7867346677058147
+  },
+  "48": {
+   "ratio": {
+    "VBM-0.10": -9.003848689345547,
+    "CBM+0.10": -0.34150871685014617
+   },
+   "mag": -0.09378814961200926,
+   "soc_nosoc": 0.784778879781861
+  },
+  "64": {
+   "ratio": {
+    "VBM-0.10": -9.687307644013478,
+    "CBM+0.10": -0.34415348346572555
+   },
+   "mag": -0.09392454327784078,
+   "soc_nosoc": 0.7853524351424922
+  },
+  "96": {
+   "ratio": {
+    "VBM-0.10": -10.601307048170499,
+    "CBM+0.10": -0.33728323294515394
+   },
+   "mag": -0.0940167081466107,
+   "soc_nosoc": 0.7851475873808306
+  },
+  "128": {
+   "ratio": {
+    "VBM-0.10": -11.19498688012404,
+    "CBM+0.10": -0.33894697024456005
+   },
+   "mag": -0.094120234203003,
+   "soc_nosoc": 0.785990626442058
+  }
+ },
+ "edges": {
+  "soc": [
+   [
+    -0.5988087302896101,
+    [
+     -0.50631,
+     0.50631,
+     -0.0
+    ]
+   ],
+   [
+    0.6436670354409202,
+    [
+     -0.06214,
+     0.00024,
+     -0.00015
+    ]
+   ]
+  ],
+  "nosoc": [
+   [
+    -0.6444525728058776,
+    [
+     -0.5,
+     -0.5,
+     0.0
+    ]
+   ],
+   [
+    0.6775841216419156,
+    [
+     0.0,
+     0.0,
+     0.0
+    ]
+   ]
+  ]
+ },
+ "bcd_mesh128": {
+  "VBM-0.10": {
+   "diag": [
+    0.012481476151505399,
+    -0.01248231465330427,
+    1.4733866225828429e-08
+   ],
+   "raw_zxy_over_xyz": -1.999930464138191
+  },
+  "CBM+0.10": {
+   "diag": [
+    -0.003570397250052491,
+    0.0035703719188673053,
+    -3.044514747476028e-09
+   ],
+   "raw_zxy_over_xyz": -2.00000538939352
+  }
+ },
+ "thresholds": {
+  "ratio_rel": 0.25,
+  "magnetization_rel": 0.15,
+  "soc_ratio_rel": 0.1,
+  "symmetry_abs": 0.05,
+  "nlh_ratio_abs": 0.15
+ },
+ "mu_at_p": {
+  "soc": -0.696334863902105,
+  "nosoc": -0.7166010189678823
+ }
+}

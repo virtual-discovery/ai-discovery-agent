@@ -1,0 +1,5 @@
+{
+ "task_id": "halfheusler-strain-hinge",
+ "solver_budget": 30,
+ "min_report_chars": 400
+}

@@ -1,0 +1,63 @@
+{
+ "ablations": {
+  "nominal_counts": {
+   "TiSb": 27,
+   "VSb": 30,
+   "CrSb": 33,
+   "TiBi": 27,
+   "CrBi": 33,
+   "CrBi_9.2": 33
+  },
+  "CrSb_nominal": {
+   "Z_mean": 0.33730224300533806,
+   "Z_min": 0.13460393292705633
+  },
+  "share_nominal": 0.46283385627890555,
+  "hund_nominal": 2.4987178724551797,
+  "CrBi_nominal": {
+   "Sb_lattice_Z_mean": 0.7275601012181154,
+   "TiBi_lattice_Z_mean": 0.5384678436160086
+  },
+  "CrBi_swapped": {
+   "Sb_lattice_Z_mean": 0.3951318670568714,
+   "TiBi_lattice_Z_mean": 0.6776799666196324
+  },
+  "sigma_swapped_CrBi": {
+   "CsCr3Bi5_Sb_lattice": 1.1802702030004968,
+   "CsTi3Sb5": 1.714877593599356
+  },
+  "orbital_w90_default_order": "dx2-y2",
+  "orbital_paper_frame": "dyz",
+  "share_one_sided_Ti": 0.0543857227416461,
+  "share_one_sided_Cr": 0.8737112497407619,
+  "share_regression": 0.8463413738692089,
+  "sigma_windowed": {
+   "CsCr3Bi5_Sb_lattice": 1.1156156744729402,
+   "CsTi3Sb5": 1.6006546818220182
+  },
+  "sigma_d_only": {
+   "CsCr3Bi5_Sb_lattice": 0.5507052576452967,
+   "CsTi3Sb5": 0.8444961538201949
+  },
+  "sigma_mean_orbital": {
+   "CsCr3Bi5_Sb_lattice": 1.697769367903583,
+   "CsTi3Sb5": 2.280959605865834
+  }
+ },
+ "robustness": {
+  "CrSb_mesh12": {
+   "Z_mean": 0.26783972917387466,
+   "Z_min": 0.07037272775267608
+  },
+  "hund_mesh12": 3.1385504169433522,
+  "CrBi_mesh12": {
+   "Sb_lattice_Z_mean": 0.6775907017304352,
+   "TiBi_lattice_Z_mean": 0.39525268863952195
+  },
+  "share_mesh12": 0.4646074833453014,
+  "sigma_mesh_histogram": {
+   "CsCr3Bi5_Sb_lattice": 1.330877668226341,
+   "CsTi3Sb5": 1.7148287507769255
+  }
+ }
+}

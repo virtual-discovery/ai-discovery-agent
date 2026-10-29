@@ -1,0 +1,311 @@
+{
+ "task_id": "fresh-nio-exchange-dftu",
+ "catalog_id": "fresh-nio-exchange-dftu",
+ "start": "fresh",
+ "source_group": "dossantos_2025_nio_mno_exchange",
+ "title": "NiO: Heisenberg exchange from PBE+U total energies and its U dependence",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "underdetermined mapping",
+   "fork": "Which collinear configurations to compute",
+   "wrong_choice": "FM and AFM-II only (the classic pair), attributing E_FM - E_AFM-II to J2 (J1 set to zero)",
+   "consequence": "FM - AFM-II = 6(J1 + J2) only; J1 is undetermined and J2 comes out 5-7% low (J1 is ferromagnetic); J1 = 0 fails outright",
+   "ablation": "fm_afm2_only_J1_zero"
+  },
+  {
+   "id": "dp2",
+   "kind": "discovered evidence (cross-cell artefact exposed only by a cross-check)",
+   "fork": "Which FM reference to pair with AFM-I",
+   "wrong_choice": "Reuse the FM energy of the rhombohedral (AFM-II) cell, converged for FM - AFM-II on a 4^3 mesh, as the reference for the tetragonal AFM-I energy",
+   "consequence": "The FM energy per f.u. at the rhombohedral 4^3 mesh is 5-6 meV above its converged value although the same-cell difference FM - AFM-II is converged to ~1%; J1 = (E_FM - E_AFM-I)/8 is off by 28% (U = 4 eV) and 98% (U = 8 eV, J1 ~ 0), J2 by 3-4%. Visible only if FM is computed in both cells (or absolute energies are k-converged)",
+   "ablation": "cross_cell_fm_reference"
+  },
+  {
+   "id": "dp3",
+   "kind": "convergence (k sampling of the rhombohedral difference)",
+   "fork": "k mesh for FM - AFM-II in the rhombohedral cell under a binding budget",
+   "wrong_choice": "Coarse 3^3 mesh (6 irreducible k; cheap) because both states are insulating",
+   "consequence": "FM - AFM-II 10-12% too large; J2 and T_N fail",
+   "ablation": "coarse_rhombohedral_mesh_k3"
+  },
+  {
+   "id": "dp4",
+   "kind": "convergence that matters only for the small quantity",
+   "fork": "k mesh of the tetragonal AFM-I - FM difference (8 J1, ~6-17 meV)",
+   "wrong_choice": "6x6x4 or 4x4x4 tetragonal meshes, whose total energies and moments look settled",
+   "consequence": "J1 5% (6x6x4) or 10% (4x4x4) too small at U = 4 eV; convergence is slower at U = 4 (FM gap 0.77 eV, AFM-I gap 0.84 eV) than at 8 eV",
+   "ablation": "tetragonal_mesh_664"
+  },
+  {
+   "id": "dp5",
+   "kind": "convention",
+   "fork": "Normalization of lab energies (Ry per cell; cells hold 1, 2 or 4 formula units)",
+   "wrong_choice": "Energy differences per 2-f.u. cell",
+   "consequence": "J1, J2 and T_N a factor 2 too large",
+   "ablation": "energies_per_cell"
+  },
+  {
+   "id": "dp6",
+   "kind": "convention / model",
+   "fork": "Molecular-field T_N of AFM-II for the spin-1 Hamiltonian",
+   "wrong_choice": "Classical S^2 instead of S(S+1), or the Curie-Weiss |theta| (12 J1 + 6 J2) instead of the AFM-II ordering field (6 J2; J1 cancels)",
+   "consequence": "T_N 50% low (S^2) or 11-14% low (Curie-Weiss)",
+   "ablation": "classical_S2_neel"
+  },
+  {
+   "id": "dp7",
+   "kind": "discovered evidence (smearing changes the state)",
+   "fork": "Smearing for the narrow-gap FM and AFM-I states at U = 4 eV",
+   "wrong_choice": "Metal-style smearing (Fermi-Dirac 0.02 Ry, Gaussian 0.05 Ry) applied to the whole scan",
+   "consequence": "The FM (and AFM-I) gap closes, FM moments drop by 0.03 muB, and J1 is 8-10% and J2 5-6% too large at U = 4 eV even with the zero-smearing estimate (the trap is specific to the smaller graded U)",
+   "ablation": "fermi_dirac_0p02_at_U4"
+  },
+  {
+   "id": "dp8",
+   "kind": "regime change (metal at U = 0)",
+   "fork": "Energy of the metallic plain-PBE FM state",
+   "wrong_choice": "Use the printed free energy F with 0.02 Ry Gaussian smearing (or Fermi-Dirac 0.02 Ry) as for the insulators",
+   "consequence": "E_FM - E_AFM-II off by -11% (F instead of the zero-smearing estimate) or +9% (Fermi-Dirac); the -TS term is several meV per f.u. only for the metallic FM",
+   "ablation": "pbe_gaussian_0p02_free_energy"
+  },
+  {
+   "id": "dp9",
+   "kind": "convergence in a different regime",
+   "fork": "k meshes for the U = 0 states",
+   "wrong_choice": "Reuse meshes adequate for the gapped U > 0 states (8^3 primitive FM, 4^3 rhombohedral AFM-II)",
+   "consequence": "The metallic FM and the small-gap (0.8 eV) PBE AFM-II need denser meshes: E_FM - E_AFM-II off by 4%; the FM SCF in the rhombohedral 4^3 cell does not even converge in 200 iterations",
+   "ablation": "pbe_coarse_meshes"
+  },
+  {
+   "id": "dp10",
+   "kind": "discovered evidence (metastable solution)",
+   "fork": "Starting moment of the plain-PBE FM state",
+   "wrong_choice": "A small starting magnetization (0.1)",
+   "consequence": "Converges to a low-moment FM solution (0.69 muB instead of 1.24-1.30 muB) 46 meV per Ni higher (or fails to converge in the primitive cell); E_FM - E_AFM-II +16%. At U >= 4 eV every start gives the same high-spin state, so the trap appears only in the regime that is not rehearsed",
+   "ablation": "pbe_small_starting_moment"
+  },
+  {
+   "id": "dp11",
+   "kind": "regime judgement (where the Heisenberg-friendly insulating FM reference exists)",
+   "fork": "Locating the U below which the FM state is metallic",
+   "wrong_choice": "Extrapolate the FM gap linearly from the graded U values (4 and 8 eV), or bracket it on a coarse U grid",
+   "consequence": "The FM gap is not linear in U (0.40 eV/eV near closing vs 0.35 between 4 and 8 eV): extrapolation gives 1.81 eV instead of 2.09; a 2/4 eV bracket gives 3.0. Requires a few cheap primitive-cell runs near 2 eV",
+   "ablation": "gap_closing_linear_from_U4_U8"
+  },
+  {
+   "id": "dp12",
+   "kind": "discovered evidence (sampling artefact exposed by a mesh check)",
+   "fork": "k mesh for the band gap near its closing",
+   "wrong_choice": "Shifted (kshift = 1) Monkhorst-Pack meshes, natural for total energies of insulators",
+   "consequence": "The FM band extrema lie on high-symmetry points that shifted meshes miss: the gap on a shifted 12^3 mesh is 0.077 eV at U = 2.0 (metal on Gamma-centred meshes), 0.158 at 2.2 (0.047 Gamma-centred; 0.110 on shifted 16^3) and 0.276 at 2.5 (0.170), so U_c comes out 1.81 instead of 2.09 eV",
+   "ablation": "gap_closing_shifted_mesh"
+  }
+ ],
+ "graded_fields": [
+  "J1_meV at U = 4 and 8 eV (within 3%)",
+  "J2_meV at U = 4 and 8 eV (within 2%)",
+  "neel_temperature_mean_field_K at U = 4 and 8 eV (within 2%)",
+  "pbe_fm_minus_afm2_meV_per_Ni at U = 0 (within 2%)",
+  "fm_gap_closing_U_eV (+-0.1 eV)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 19,
+  "oracle_charge": 32,
+  "budget": 36,
+  "oracle_wall_minutes": {
+   "check_task (cpuset 8,9,24,25)": 25,
+   "harbor (pinned cores 2,18,3,19)": 44
+  },
+  "oracle_scf_compute_minutes": 24,
+  "tool_calls": "45-75 (20-30 evaluations, each followed by 1-4 polls of a 0.2-7 minute job, plus analysis)",
+  "agent_wall_time_h": "1-2",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (sonnet, terra)"
+ },
+ "runtime_dependencies": [
+  "Quantum ESPRESSO 6.7 pw.x and OpenMPI from the runtime image (lab only)",
+  "lab and oracle use the Python standard library only"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/rcyfm-68h65",
+  "doi": "10.24435/materialscloud:f3-ym",
+  "files_used": [
+   "SSSP_1.3.0_PBE_precision.tar.gz -> ni_pbe_v1.4.uspp.F.UPF, O.pbe-n-kjpaw_psl.0.1.UPF",
+   "LICENSE.txt -> SSSP_LICENSE.txt"
+  ],
+  "md5": {
+   "SSSP_1.3.0_PBE_precision.tar.gz": "fde94756886f32ada7bf597547557eb5",
+   "SSSP_1.3.0_PBE_precision.json": "1692c5c9ce89e1c7c783f8f0eee0cbfa",
+   "LICENSE.txt": "c0f9df05fb4cd4921f4caa25606815ef",
+   "ni_pbe_v1.4.uspp.F.UPF": "1ee80287db30b12d2bc1f57a5b5d6409",
+   "O.pbe-n-kjpaw_psl.0.1.UPF": "0234752ac141de4415c5fc33072bef88"
+  },
+  "sha256": {
+   "ni_pbe_v1.4.uspp.F.UPF": "f76b86ce60cde3d83dfcc8df79ba05478db573d158289f1b226919442d977d25",
+   "O.pbe-n-kjpaw_psl.0.1.UPF": "7c4b6ed541f83d0afdf5c1d3a8c611340f073f3e2b11e95b7963bb2ee26929aa"
+  },
+  "license": "SSSP record CC BY 4.0; vendored GBRV Ni UPF GNU GPL v3; vendored PSlibrary 0.3.1 O UPF GNU GPL v2+",
+  "reference_calculations": "benchmarks/construction/fresh-nio-exchange-dftu/reference_runs.jsonl (129 task_lab.run results, QE 6.7, 2 MPI ranks, cpuset 8,9,24,25)",
+  "paired_study_context_only": "dos Santos et al., Phys. Rev. B (2025), doi:10.1103/gtxm-6vtg; Materials Cloud kg706-sbx37 (not used as data)"
+ },
+ "exceptions": {},
+ "notes": "Deviations from the candidate design: (1) Graded U values are 4 and 8 eV, not 6 eV: at U = 6 eV this protocol gives J1 = -1.37 meV, within 10% of the famous experimental J1 (-1.4 meV), so it would be recallable; at 4 and 8 eV neither J matches experiment. (2) No hidden SCF at a withheld U (4.3 eV): the lab offers any U in 0.1 eV steps, and interpolation between purchasable U values is accurate to <1%, so a withheld-U target would not test the J(U) law; the U dependence is graded through J at two U values and the FM gap-closing U (a regime boundary). (3) The lattice parameter is fixed at 4.17 A (not requested): exchange depends steeply on volume, and an agent-chosen lattice parameter would make the targets ambiguous. (4) AFM-III and other cells: the lab offers the 1-, 2- (rhombohedral and tetragonal) and 4-f.u. (cubic) cells; AFM-III is not offered (not needed for J1, J2; the cubic 3:1 ferrimagnet gives an alternative J1 equation: E = E0 + 3 J2 per Ni). (5) The metastable DFT+U occupation state of the design was not found at U >= 4 eV (every start gives the same high-spin t2g6 eg2 state, verified in construction); the metastability fork lives at U = 0 (low-moment FM) instead, and the 'Heisenberg valid at U0' flag is replaced by two quantitative U = 0 targets (converged E_FM - E_AFM-II and the FM gap-closing U). (6) Cutoff convergence is not a decision point: 40-75 Ry change the differences by <0.5% (J2) and <2% (J1 at U = 8, 0.015 meV); it remains a budget trade-off. (7) Mean-field T_N uses the correct AFM-II ordering field k T_N = S(S+1)/3 x 6 J2 (the design's (2/3)S(S+1) x 6 J2 double-counts pairs). Energies are returned per cell in Ry, as pw.x prints them.",
+ "calibration": {
+  "J1_meV[4.0]": {
+   "reference": -2.1858141251141205,
+   "tolerance": "+-3%",
+   "robustness": {
+    "oracle_meshes_rh666_te886": -0.0048,
+    "rh444_te888": -0.00075,
+    "converged_primitive_fm_reference": 0.00172,
+    "cutoff_75_Ry": -0.00607,
+    "cutoff_40_Ry": 0.00261
+   },
+   "ablations": {
+    "fm_afm2_only_J1_zero": -1.0,
+    "cross_cell_fm_reference": -0.28329,
+    "coarse_rhombohedral_mesh_k3": 0.0,
+    "tetragonal_mesh_664": -0.05304,
+    "tetragonal_mesh_444": -0.10345,
+    "energies_per_cell": 1.0,
+    "fermi_dirac_0p02_at_U4": 0.08445,
+    "gaussian_0p05_at_U4": 0.09569
+   }
+  },
+  "J1_meV[8.0]": {
+   "reference": -0.7919023610884324,
+   "tolerance": "+-3%",
+   "robustness": {
+    "oracle_meshes_rh666_te886": -0.00207,
+    "rh444_te888": -0.00052,
+    "converged_primitive_fm_reference": 0.00407,
+    "cutoff_75_Ry": -0.0018,
+    "cutoff_40_Ry": 0.01947
+   },
+   "ablations": {
+    "fm_afm2_only_J1_zero": -1.0,
+    "cross_cell_fm_reference": -0.9845,
+    "coarse_rhombohedral_mesh_k3": 0.0,
+    "tetragonal_mesh_664": -0.03522,
+    "tetragonal_mesh_444": -0.07119,
+    "energies_per_cell": 1.0
+   }
+  },
+  "J2_meV[4.0]": {
+   "reference": 30.516143911634572,
+   "tolerance": "+-2%",
+   "robustness": {
+    "oracle_meshes_rh666_te886": -0.00121,
+    "rh444_te888": -0.0116,
+    "converged_primitive_fm_reference": -0.00021,
+    "cutoff_75_Ry": -0.01359,
+    "cutoff_40_Ry": -0.01254
+   },
+   "ablations": {
+    "fm_afm2_only_J1_zero": -0.07163,
+    "cross_cell_fm_reference": -0.03184,
+    "coarse_rhombohedral_mesh_k3": 0.09033,
+    "tetragonal_mesh_664": -0.0038,
+    "tetragonal_mesh_444": -0.00741,
+    "energies_per_cell": 1.0,
+    "fermi_dirac_0p02_at_U4": 0.05205,
+    "gaussian_0p05_at_U4": 0.06245
+   }
+  },
+  "J2_meV[8.0]": {
+   "reference": 14.749914907656299,
+   "tolerance": "+-2%",
+   "robustness": {
+    "oracle_meshes_rh666_te886": -0.00022,
+    "rh444_te888": 0.00836,
+    "converged_primitive_fm_reference": -0.00064,
+    "cutoff_75_Ry": 0.00647,
+    "cutoff_40_Ry": 0.00885
+   },
+   "ablations": {
+    "fm_afm2_only_J1_zero": -0.05369,
+    "cross_cell_fm_reference": -0.04447,
+    "coarse_rhombohedral_mesh_k3": 0.11506,
+    "tetragonal_mesh_664": -0.00189,
+    "tetragonal_mesh_444": -0.00382,
+    "energies_per_cell": 1.0
+   }
+  },
+  "neel_temperature_mean_field_K[4.0]": {
+   "reference": 1416.5005801134384,
+   "tolerance": "+-2%",
+   "robustness": {
+    "oracle_meshes_rh666_te886": -0.00121,
+    "rh444_te888": -0.0116,
+    "converged_primitive_fm_reference": -0.00021,
+    "cutoff_75_Ry": -0.01359,
+    "cutoff_40_Ry": -0.01254
+   },
+   "ablations": {
+    "fm_afm2_only_J1_zero": -0.07163,
+    "cross_cell_fm_reference": -0.03184,
+    "coarse_rhombohedral_mesh_k3": 0.09033,
+    "tetragonal_mesh_664": -0.0038,
+    "tetragonal_mesh_444": -0.00741,
+    "energies_per_cell": 1.0,
+    "classical_S2_neel": -0.5,
+    "curie_weiss_as_neel": -0.14326,
+    "fermi_dirac_0p02_at_U4": 0.05205,
+    "gaussian_0p05_at_U4": 0.06245
+   }
+  },
+  "neel_temperature_mean_field_K[8.0]": {
+   "reference": 684.6626193604116,
+   "tolerance": "+-2%",
+   "robustness": {
+    "oracle_meshes_rh666_te886": -0.00022,
+    "rh444_te888": 0.00836,
+    "converged_primitive_fm_reference": -0.00064,
+    "cutoff_75_Ry": 0.00647,
+    "cutoff_40_Ry": 0.00885
+   },
+   "ablations": {
+    "fm_afm2_only_J1_zero": -0.05369,
+    "cross_cell_fm_reference": -0.04447,
+    "coarse_rhombohedral_mesh_k3": 0.11506,
+    "tetragonal_mesh_664": -0.00189,
+    "tetragonal_mesh_444": -0.00382,
+    "energies_per_cell": 1.0,
+    "classical_S2_neel": -0.5,
+    "curie_weiss_as_neel": -0.10738
+   }
+  },
+  "pbe_fm_minus_afm2_meV_per_Ni": {
+   "reference": 264.0493599753827,
+   "tolerance": "+-2%",
+   "robustness": {
+    "pbe_k12_gauss0p002": -0.00468,
+    "pbe_k16_gauss0p002": 0.00098,
+    "pbe_k12_mv0p005": -0.00483,
+    "pbe_afm2_k6": 0.00154
+   },
+   "ablations": {
+    "pbe_fermi_dirac_0p02": 0.09249,
+    "pbe_gaussian_0p02_free_energy": -0.10973,
+    "pbe_coarse_meshes": -0.03991,
+    "pbe_primitive_fm_k8": 0.03944,
+    "pbe_small_starting_moment": 0.16416
+   }
+  },
+  "fm_gap_closing_U_eV": {
+   "reference": 2.0872901678657074,
+   "tolerance": "+-0.1",
+   "robustness": {
+    "gap_closing_k16_points": -0.00355,
+    "gap_closing_line_from_3_and_4": -0.01115,
+    "gap_closing_oracle_points": -0.00239
+   },
+   "ablations": {
+    "gap_closing_linear_from_U4_U8": -0.2808,
+    "gap_closing_coarse_bracket": 0.91271,
+    "gap_closing_shifted_mesh": -0.27764
+   }
+  }
+ }
+}

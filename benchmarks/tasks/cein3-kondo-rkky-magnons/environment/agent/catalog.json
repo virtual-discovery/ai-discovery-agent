@@ -1,0 +1,445 @@
+{
+ "material": "CeIn3, simple cubic (Pm-3m), a = 4.689 A; antiferromagnetic below T_N = 10 K with propagation vector R = (1/2,1/2,1/2); Ce3+ crystal-field ground state Gamma7 doublet (Gamma8 quartet about 12 meV higher)",
+ "experiment": {
+  "instrument": "CNCS time-of-flight spectrometer (SNS), co-aligned single crystals, [1,-1,0] vertical, T = 1.8 K",
+  "chi2_definition": "Archived chi''(Q,E): intensities corrected for absorption, put on an absolute scale with incoherent scattering, background-subtracted, divided by the Bose factor and by the Ce3+ magnetic form factor, and corrected for kf/ki. Background subtraction leaves negative values in places.",
+  "settings": {
+   "high_energy": {
+    "incident_energy_meV": 12.0,
+    "energy_resolution": "not archived",
+    "binning": "paths R-Gamma, Gamma-X, X-M, M-Gamma; bins of +-0.0125 r.l.u. along the path; intensity integrated within +-0.17 r.l.u. along the two directions perpendicular to Gamma-X and X-M and within +-0.09 r.l.u. perpendicular to R-Gamma and M-Gamma (authors' Methods)"
+   },
+   "high_resolution": {
+    "incident_energy_meV": 3.315,
+    "elastic_energy_resolution_fwhm_ueV": 106,
+    "binning": "lines through R along R-Gamma, R-X and R-M; bins of +-0.01 r.l.u. along the line; authors' Methods: \"intensity was integrated within a distance of 0.08 r.l.u. along the two reciprocal space directions perpendicular to the reduced momentum transfer q. For the cuts in the lower panels, intensity was integrated over energies +-0.1 meV\""
+   }
+  }
+ },
+ "coordinates": {
+  "rlu": "momenta in reciprocal-lattice units, 1 r.l.u. = 2 pi / a; reduced wave vectors q = (h,k,l)",
+  "path_coordinate_s": "distance along R-Gamma-X-M-Gamma in r.l.u.: R = (1/2,1/2,1/2) at s = 0, Gamma at sqrt(3)/2, X = (1/2,0,0) at sqrt(3)/2 + 1/2, M = (1/2,1/2,0) at sqrt(3)/2 + 1, Gamma at sqrt(3)/2 + 1 + sqrt(1/2). On the R-Gamma file, s < 0 lies beyond R on the same (1,1,1) line. Each he_spectrum result gives s and the bin centre q.",
+  "high_resolution_q": "signed distance from R in r.l.u. along the line: RG towards (0,0,0) for q > 0 (direction (-1,-1,-1)/sqrt3), RX towards (1/2,0,0) (direction (0,-1,-1)/sqrt2), RM towards (1/2,1/2,0) (direction (0,0,-1))"
+ },
+ "requests": {
+  "he_spectrum": {
+   "request": {
+    "kind": "he_spectrum",
+    "path": "<RG|GX|XM|MG>",
+    "index": "<integer>"
+   },
+   "cost": 1,
+   "returns": "one constant-Q energy spectrum of the 12-meV data: its path coordinate s, bin centre q, energies and chi'' (null where not measured)",
+   "available": {
+    "RG": {
+     "s_of_index": "s = sqrt(3)/2 + index * (-0.025)",
+     "indices": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58
+     ]
+    },
+    "GX": {
+     "s_of_index": "s = sqrt(3)/2 + index * (0.025)",
+     "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+     ]
+    },
+    "XM": {
+     "s_of_index": "s = sqrt(3)/2 + 1/2 + index * (0.025)",
+     "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+     ]
+    },
+    "MG": {
+     "s_of_index": "s = sqrt(3)/2 + 1 + index * (0.025)",
+     "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+     ]
+    }
+   }
+  },
+  "hr_spectrum": {
+   "request": {
+    "kind": "hr_spectrum",
+    "path": "<RG|RX>",
+    "index": "<integer>"
+   },
+   "cost": 1,
+   "returns": "one constant-q energy spectrum of the high-resolution data along R-Gamma or R-X",
+   "available": {
+    "RG": {
+     "q_of_index": "q = -0.33 + 0.02 * index",
+     "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+     ]
+    },
+    "RX": {
+     "q_of_index": "q = -0.33 + 0.02 * index",
+     "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+     ]
+    }
+   }
+  },
+  "hr_cut": {
+   "request": {
+    "kind": "hr_cut",
+    "path": "<RG|RX>",
+    "energy_meV": "<0.6|1.4>"
+   },
+   "cost": 2,
+   "returns": "a high-resolution constant-energy cut (E +- 0.1 meV) along the line, with error bars"
+  },
+  "band_structure": {
+   "request": {
+    "kind": "band_structure"
+   },
+   "cost": 1,
+   "returns": "the archived band structure of the authors' periodic Anderson model along R-Gamma-X-M-Gamma"
+  }
+ },
+ "budget": 60,
+ "not_served": "The high-resolution R-M map, the R-M constant-energy cuts and the Q-integrated chi'' are withheld for grading. The authors' theory files are not served.",
+ "to_predict": {
+  "rm_map": {
+   "description": "high-resolution chi''(q,E) along R-M: rows = q_rlu (bins of +-0.01 r.l.u.), columns = energies_meV (bins of +-0.025 meV); binning and resolution as for the other high-resolution data. Pixels at E <= 0.25 meV and pixels outside the measured range are not graded.",
+   "q_rlu_of_row": "q = -0.33 + 0.02 * row, row = 0..34",
+   "energy_meV_of_column": "E = 0.03 + 0.05 * column, column = 0..50"
+  },
+  "rm_cut_1p4meV": {
+   "description": "high-resolution constant-energy cut along R-M at E = 1.4 +- 0.1 meV (bins of +-0.005 r.l.u. along the line)",
+   "q_rlu_of_point": "q = -0.344108 + 0.0099 * point, point = 0..69"
+  },
+  "integrated_chi": {
+   "description": "chi''(Q,E) integrated over the magnon energies, binned like the 12-meV data at these path coordinates",
+   "points": [
+    {
+     "segment": "RG",
+     "q_center_rlu": [
+      0.2,
+      0.2,
+      0.2
+     ],
+     "perpendicular_halfwidth_rlu": 0.09
+    },
+    {
+     "segment": "RG",
+     "q_center_rlu": [
+      0.3,
+      0.3,
+      0.3
+     ],
+     "perpendicular_halfwidth_rlu": 0.09
+    },
+    {
+     "segment": "RG",
+     "q_center_rlu": [
+      0.4,
+      0.4,
+      0.4
+     ],
+     "perpendicular_halfwidth_rlu": 0.09
+    },
+    {
+     "segment": "GX",
+     "q_center_rlu": [
+      0.1,
+      0.0,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.17
+    },
+    {
+     "segment": "GX",
+     "q_center_rlu": [
+      0.2,
+      0.0,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.17
+    },
+    {
+     "segment": "GX",
+     "q_center_rlu": [
+      0.3,
+      0.0,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.17
+    },
+    {
+     "segment": "GX",
+     "q_center_rlu": [
+      0.4,
+      0.0,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.17
+    },
+    {
+     "segment": "XM",
+     "q_center_rlu": [
+      0.5,
+      0.1,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.17
+    },
+    {
+     "segment": "XM",
+     "q_center_rlu": [
+      0.5,
+      0.2,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.17
+    },
+    {
+     "segment": "XM",
+     "q_center_rlu": [
+      0.5,
+      0.3,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.17
+    },
+    {
+     "segment": "XM",
+     "q_center_rlu": [
+      0.5,
+      0.4,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.17
+    },
+    {
+     "segment": "XM",
+     "q_center_rlu": [
+      0.5,
+      0.5,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.17
+    },
+    {
+     "segment": "MG",
+     "q_center_rlu": [
+      0.4,
+      0.4,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.09
+    },
+    {
+     "segment": "MG",
+     "q_center_rlu": [
+      0.3,
+      0.3,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.09
+    },
+    {
+     "segment": "MG",
+     "q_center_rlu": [
+      0.2,
+      0.2,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.09
+    },
+    {
+     "segment": "MG",
+     "q_center_rlu": [
+      0.1,
+      0.1,
+      0.0
+     ],
+     "perpendicular_halfwidth_rlu": 0.09
+    }
+   ]
+  }
+ }
+}

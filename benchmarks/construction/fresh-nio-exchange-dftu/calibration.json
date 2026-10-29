@@ -1,0 +1,157 @@
+{
+ "J1_meV[4.0]": {
+  "reference": -2.1858141251141205,
+  "tolerance": "+-3%",
+  "robustness": {
+   "oracle_meshes_rh666_te886": -0.0048,
+   "rh444_te888": -0.00075,
+   "converged_primitive_fm_reference": 0.00172,
+   "cutoff_75_Ry": -0.00607,
+   "cutoff_40_Ry": 0.00261
+  },
+  "ablations": {
+   "fm_afm2_only_J1_zero": -1.0,
+   "cross_cell_fm_reference": -0.28329,
+   "coarse_rhombohedral_mesh_k3": 0.0,
+   "tetragonal_mesh_664": -0.05304,
+   "tetragonal_mesh_444": -0.10345,
+   "energies_per_cell": 1.0,
+   "fermi_dirac_0p02_at_U4": 0.08445,
+   "gaussian_0p05_at_U4": 0.09569
+  }
+ },
+ "J1_meV[8.0]": {
+  "reference": -0.7919023610884324,
+  "tolerance": "+-3%",
+  "robustness": {
+   "oracle_meshes_rh666_te886": -0.00207,
+   "rh444_te888": -0.00052,
+   "converged_primitive_fm_reference": 0.00407,
+   "cutoff_75_Ry": -0.0018,
+   "cutoff_40_Ry": 0.01947
+  },
+  "ablations": {
+   "fm_afm2_only_J1_zero": -1.0,
+   "cross_cell_fm_reference": -0.9845,
+   "coarse_rhombohedral_mesh_k3": 0.0,
+   "tetragonal_mesh_664": -0.03522,
+   "tetragonal_mesh_444": -0.07119,
+   "energies_per_cell": 1.0
+  }
+ },
+ "J2_meV[4.0]": {
+  "reference": 30.516143911634572,
+  "tolerance": "+-2%",
+  "robustness": {
+   "oracle_meshes_rh666_te886": -0.00121,
+   "rh444_te888": -0.0116,
+   "converged_primitive_fm_reference": -0.00021,
+   "cutoff_75_Ry": -0.01359,
+   "cutoff_40_Ry": -0.01254
+  },
+  "ablations": {
+   "fm_afm2_only_J1_zero": -0.07163,
+   "cross_cell_fm_reference": -0.03184,
+   "coarse_rhombohedral_mesh_k3": 0.09033,
+   "tetragonal_mesh_664": -0.0038,
+   "tetragonal_mesh_444": -0.00741,
+   "energies_per_cell": 1.0,
+   "fermi_dirac_0p02_at_U4": 0.05205,
+   "gaussian_0p05_at_U4": 0.06245
+  }
+ },
+ "J2_meV[8.0]": {
+  "reference": 14.749914907656299,
+  "tolerance": "+-2%",
+  "robustness": {
+   "oracle_meshes_rh666_te886": -0.00022,
+   "rh444_te888": 0.00836,
+   "converged_primitive_fm_reference": -0.00064,
+   "cutoff_75_Ry": 0.00647,
+   "cutoff_40_Ry": 0.00885
+  },
+  "ablations": {
+   "fm_afm2_only_J1_zero": -0.05369,
+   "cross_cell_fm_reference": -0.04447,
+   "coarse_rhombohedral_mesh_k3": 0.11506,
+   "tetragonal_mesh_664": -0.00189,
+   "tetragonal_mesh_444": -0.00382,
+   "energies_per_cell": 1.0
+  }
+ },
+ "neel_temperature_mean_field_K[4.0]": {
+  "reference": 1416.5005801134384,
+  "tolerance": "+-2%",
+  "robustness": {
+   "oracle_meshes_rh666_te886": -0.00121,
+   "rh444_te888": -0.0116,
+   "converged_primitive_fm_reference": -0.00021,
+   "cutoff_75_Ry": -0.01359,
+   "cutoff_40_Ry": -0.01254
+  },
+  "ablations": {
+   "fm_afm2_only_J1_zero": -0.07163,
+   "cross_cell_fm_reference": -0.03184,
+   "coarse_rhombohedral_mesh_k3": 0.09033,
+   "tetragonal_mesh_664": -0.0038,
+   "tetragonal_mesh_444": -0.00741,
+   "energies_per_cell": 1.0,
+   "classical_S2_neel": -0.5,
+   "curie_weiss_as_neel": -0.14326,
+   "fermi_dirac_0p02_at_U4": 0.05205,
+   "gaussian_0p05_at_U4": 0.06245
+  }
+ },
+ "neel_temperature_mean_field_K[8.0]": {
+  "reference": 684.6626193604116,
+  "tolerance": "+-2%",
+  "robustness": {
+   "oracle_meshes_rh666_te886": -0.00022,
+   "rh444_te888": 0.00836,
+   "converged_primitive_fm_reference": -0.00064,
+   "cutoff_75_Ry": 0.00647,
+   "cutoff_40_Ry": 0.00885
+  },
+  "ablations": {
+   "fm_afm2_only_J1_zero": -0.05369,
+   "cross_cell_fm_reference": -0.04447,
+   "coarse_rhombohedral_mesh_k3": 0.11506,
+   "tetragonal_mesh_664": -0.00189,
+   "tetragonal_mesh_444": -0.00382,
+   "energies_per_cell": 1.0,
+   "classical_S2_neel": -0.5,
+   "curie_weiss_as_neel": -0.10738
+  }
+ },
+ "pbe_fm_minus_afm2_meV_per_Ni": {
+  "reference": 264.0493599753827,
+  "tolerance": "+-2%",
+  "robustness": {
+   "pbe_k12_gauss0p002": -0.00468,
+   "pbe_k16_gauss0p002": 0.00098,
+   "pbe_k12_mv0p005": -0.00483,
+   "pbe_afm2_k6": 0.00154
+  },
+  "ablations": {
+   "pbe_fermi_dirac_0p02": 0.09249,
+   "pbe_gaussian_0p02_free_energy": -0.10973,
+   "pbe_coarse_meshes": -0.03991,
+   "pbe_primitive_fm_k8": 0.03944,
+   "pbe_small_starting_moment": 0.16416
+  }
+ },
+ "fm_gap_closing_U_eV": {
+  "reference": 2.0872901678657074,
+  "tolerance": "+-0.1",
+  "robustness": {
+   "gap_closing_k16_points": -0.00355,
+   "gap_closing_line_from_3_and_4": -0.01115,
+   "gap_closing_oracle_points": -0.00239
+  },
+  "ablations": {
+   "gap_closing_linear_from_U4_U8": -0.2808,
+   "gap_closing_coarse_bracket": 0.91271,
+   "gap_closing_shifted_mesh": -0.27764
+  }
+ }
+}

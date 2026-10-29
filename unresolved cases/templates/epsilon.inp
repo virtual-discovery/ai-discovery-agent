@@ -1,0 +1,10 @@
+epsilon_cutoff <10.0 ; ladder 10 -> 14 Ry in S3, round 8 converged at 10 (<=0.01 eV)>
+number_bands <nbands_gw>
+degeneracy_check_override
+use_wfn_hdf5
+# slabs only (monolayer TiS3, ReS2): add  cell_slab_truncation
+# ZrSe3/TiS3 bulk: no truncation.
+begin qpoints
+  0.001000 0.001000 0.000000 1.0 1
+  <every other k of the coarse grid as a q-point, weight 1.0, flag 0>
+end

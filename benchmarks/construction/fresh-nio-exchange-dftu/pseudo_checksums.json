@@ -1,0 +1,2 @@
+{"ni_pbe_v1.4.uspp.F.UPF": {"md5": "1ee80287db30b12d2bc1f57a5b5d6409", "sha256": "f76b86ce60cde3d83dfcc8df79ba05478db573d158289f1b226919442d977d25", "bytes": 612014, "family": "GBRV-1.4", "license": "GNU GPL v3"},
+ "O.pbe-n-kjpaw_psl.0.1.UPF": {"md5": "0234752ac141de4415c5fc33072bef88", "sha256": "7c4b6ed541f83d0afdf5c1d3a8c611340f073f3e2b11e95b7963bb2ee26929aa", "bytes": 930566, "family": "Pslibrary 0.3.1 (SSSP label 031PAW)", "license": "GNU GPL v2 or later"}}

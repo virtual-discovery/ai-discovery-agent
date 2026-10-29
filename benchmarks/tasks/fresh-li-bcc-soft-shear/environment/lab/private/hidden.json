@@ -1,0 +1,71 @@
+{
+ "reference": {
+  "a0_A": 3.4348,
+  "bulk_modulus_GPa": 13.918486911607088,
+  "Cprime_GPa": 0.9468654179442741,
+  "C44_GPa": 11.607808333333333,
+  "zener_anisotropy": 12.2591955660762,
+  "mechanically_stable_at_a0": true,
+  "compressed_pressure_GPa": 2.0423188,
+  "compressed_Bprime_GPa": 0.8175493267564324,
+  "compressed_B44_GPa": 12.784658333333333
+ },
+ "tolerances": {
+  "absolute": {
+   "a0_A": 0.005,
+   "Cprime_GPa": 0.065,
+   "C44_GPa": 0.42,
+   "compressed_pressure_GPa": 0.05,
+   "compressed_Bprime_GPa": 0.09,
+   "compressed_B44_GPa": 0.56
+  },
+  "relative": {
+   "bulk_modulus_GPa": 0.03,
+   "zener_anisotropy": 0.06
+  }
+ },
+ "booleans": {
+  "mechanically_stable_at_a0": true
+ },
+ "provenance": {
+  "a0_birch_murnaghan_A": 3.434807793690342,
+  "a0_zero_pressure_A": 3.4346950753490058,
+  "Cprime_set_GPa": {
+   "k48/0.01": 0.9450156645780562,
+   "k56/0.01": 0.9376749766697774,
+   "k48/0.005": 0.9303176243167578,
+   "k56/0.005": 0.974453406212505
+  },
+  "C44_set_GPa": {
+   "k48/0.01": 11.415349999999998,
+   "k48/0.005": 11.731650000000002,
+   "k56/0.01": 11.525699999999999,
+   "k56/0.005": 11.95225,
+   "k64/0.01": 11.49625,
+   "k64/0.005": 11.525649999999999
+  },
+  "compressed_pressure_set_GPa": {
+   "k48/0.01": 2.04226,
+   "k56/0.01": 2.042554,
+   "k64/0.01": 2.042554,
+   "k48/0.005": 2.041966,
+   "k56/0.005": 2.04226
+  },
+  "compressed_Bprime_set_GPa": {
+   "k48/0.01": 0.8089671377149675,
+   "k56/0.01": 0.7844537395013996,
+   "k64/0.01": 0.7869117451006525,
+   "k48/0.005": 0.8702506332489001,
+   "k56/0.005": 0.8371633782162419
+  },
+  "compressed_B44_set_GPa": {
+   "k48/0.01": 12.47455,
+   "k48/0.005": 12.85695,
+   "k56/0.01": 12.673100000000002,
+   "k56/0.005": 13.26155,
+   "k64/0.01": 12.643700000000003,
+   "k64/0.005": 12.798099999999998
+  },
+  "runs": "benchmarks/construction/fresh-li-bcc-soft-shear/reference_results.json"
+ }
+}

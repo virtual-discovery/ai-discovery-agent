@@ -1,0 +1,168 @@
+{
+ "task_id": "mn5si3-noncollinear-spinwaves",
+ "catalog_id": "mn5si3-noncollinear-spinwaves",
+ "start": "released",
+ "source_group": "biniskos_2022_mn5si3",
+ "title": "Mn5Si3: noncollinear AFM1 spin waves against neutron data",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which Mn sublattices carry moments (Mn2a only, as in AFM2, or Mn2a + Mn1)",
+   "wrong_choice": "Drop Mn1 because a Mn2-only model fits the (Qh,1,0) table better and the Mn1 couplings are not first-principles",
+   "consequence": "Collinear ground state (canting 0), no magnon between 5 and 20 meV at (2,1,0) (lowest above 5 meV: 32.1 meV), Mn1 answer wrong",
+   "ablation": "mn2_only_sites",
+   "difficulty_type": "competing explanation; evidence spread over the KKR moments and the field-temperature phase diagram"
+  },
+  {
+   "id": "dp2",
+   "fork": "Normalisation of the exchange table (each bond listed from both ends)",
+   "wrong_choice": "Treat each listed entry as a bond and add its reverse (Hamiltonian doubled)",
+   "consequence": "l branch rms 0.067 r.l.u. (limit 0.065) and zone-centre mode 6.9 meV (window 8-15.5); the h,k tables disfavour it (rms 0.119 vs 0.092)",
+   "ablation": "bonds_double_counted",
+   "difficulty_type": "convention that must be calibrated on purchased data"
+  },
+  {
+   "id": "dp3",
+   "fork": "Spin length in the dynamics",
+   "wrong_choice": "Free-ion Mn spin 5/2 instead of S = m/(g muB) = 1.22 from the KKR moment",
+   "consequence": "All magnon energies x0.49: l rms 0.128, zone-centre mode 6.2 meV",
+   "ablation": "free_ion_spin_5_2",
+   "difficulty_type": "convention / units"
+  },
+  {
+   "id": "dp4",
+   "fork": "Which branch carries the neutron intensity at high energy (noncollinear LSWT eigenvectors, local frames, perpendicular projection)",
+   "wrong_choice": "Follow the lowest (acoustic) branch or weight all branches equally",
+   "consequence": "l rms 0.091 (lowest branch) and 0.148 (equal weights); at 11-20 meV the intensity sits on the steep upper branch",
+   "ablation": "lowest_branch_only",
+   "difficulty_type": "model class: noncollinear LSWT with intensities"
+  },
+  {
+   "id": "dp5",
+   "fork": "Ground state from energy minimisation versus an assumed collinear structure",
+   "wrong_choice": "Assume the collinear AFM2-like arrangement (Mn2a along +-c, Mn1 along +-b) without relaxing",
+   "consequence": "Canting reported as 0 deg (reference 13.9 deg; window 9-19); the assumed state is not stationary",
+   "ablation": "collinear_ground_state_not_relaxed",
+   "difficulty_type": "cascade"
+  },
+  {
+   "id": "dp6",
+   "fork": "Which angle quantifies the noncollinearity",
+   "wrong_choice": "Report the angle between Mn2a and Mn1 moments instead of the tilt out of the plane perpendicular to Mn1",
+   "consequence": "76 deg instead of 14 deg",
+   "ablation": "angle_to_mn1_axis",
+   "difficulty_type": "convention"
+  }
+ ],
+ "graded_fields": [
+  "l_branch_positions_rlu: rms over 26 archived (0,3,Ql) branch positions at 13 energies <= 0.065 r.l.u.",
+  "zone_centre_excitation_meV in [8.0, 15.5] (archived 9.84 +- 0.97 meV from the withheld (2,1,0) energy scan)",
+  "mn1_carries_moment == true",
+  "mn2_canting_deg in [9, 19] (authors' archived zero-field ground state: 13.93 deg)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 16,
+  "oracle_charge": 22,
+  "budget": 25,
+  "catalog_worth_units": 81,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3.5-5",
+  "oracle_container_seconds": 78,
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image); no extra lab dependencies (lookup lab)"
+ ],
+ "data_provenance": {
+  "archive_url": [
+   "https://archive.materialscloud.org/records/paxx3-a1k09",
+   "https://archive.materialscloud.org/records/4tgt6-1p378"
+  ],
+  "doi": [
+   "10.24435/materialscloud:85-ys",
+   "10.24435/materialscloud:p1-pr"
+  ],
+  "files_used": [
+   "paxx3-a1k09/Mn5Si3.zip",
+   "4tgt6-1p378/Mn5Si3.zip"
+  ],
+  "md5": {
+   "paxx3-a1k09/Mn5Si3.zip": "bd4cfd1a5a489c22560ff0bf50f5432b",
+   "4tgt6-1p378/Mn5Si3.zip": "1c5a20826c98f71ab10322b50b9f2315"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Deviation from the design: the archived DFT spin model is only semi-quantitative (h and k prefer different energy scales, a k plateau near 2.75 r.l.u. is not reproduced; a free fit of the couplings to cut line shapes overfits). Grading of the withheld (0,3,Ql) direction therefore uses a tolerance that accepts every calibrated route and a phenomenological cone (rms 0.024) and rejects the normalisation, spin-length and branch-selection errors; the decisive model-based targets are the (2,1,0) Mn1-Mn2 optical mode, the Mn1 answer and the canting. AFM2 spectra, field dependence and the H-T phase diagram are context and rubric items, not graded.",
+ "calibration": {
+  "l_branch_rms_rlu": {
+   "reference": 0.0319,
+   "robustness": {
+    "robust_collinear_reference_table": 0.0407,
+    "robust_long_range_r17_table": 0.0277,
+    "robust_sigQ_0.04": 0.0272,
+    "robust_sigQ_0.08": 0.0319,
+    "robust_scale_0.9": 0.0302,
+    "robust_scale_1.1": 0.0387,
+    "robust_all_cuts_for_resolution": 0.0319,
+    "robust_mn1_spin_0.6": 0.0309,
+    "info_isotropic_cone_from_h_k": 0.024,
+    "info_no_anisotropy": 0.0484
+   },
+   "nearest_ablation": {
+    "dp2_bonds_double_counted": 0.0666,
+    "dp3_free_ion_spin_5_2": 0.1281,
+    "dp4_lowest_branch_only": 0.0913,
+    "dp4_branch_weights_ignored": 0.1476
+   },
+   "tolerance": "<= 0.065"
+  },
+  "zone_centre_excitation_meV": {
+   "archived_truth": 9.8408,
+   "reference": 12.765,
+   "robustness": {
+    "robust_collinear_reference_table": 14.5375,
+    "robust_long_range_r17_table": 9.3035,
+    "robust_sigQ_0.04": 12.765,
+    "robust_sigQ_0.08": 12.765,
+    "robust_scale_0.9": 11.4885,
+    "robust_scale_1.1": 14.0415,
+    "robust_all_cuts_for_resolution": 12.765,
+    "robust_mn1_spin_0.6": 9.9864
+   },
+   "nearest_ablation": {
+    "dp1_mn2_only_sites": 32.1045,
+    "dp2_bonds_double_counted": 6.9011,
+    "dp3_free_ion_spin_5_2": 6.2293,
+    "dp4_branch_weights_ignored": 6.3825
+   },
+   "tolerance": "[8.0, 15.5]"
+  },
+  "mn2_canting_deg": {
+   "archived_truth": 13.93,
+   "reference": 13.9017,
+   "robustness": {
+    "robust_collinear_reference_table": 15.5676,
+    "robust_long_range_r17_table": 12.0521,
+    "robust_sigQ_0.04": 13.9017,
+    "robust_sigQ_0.08": 13.9017,
+    "robust_scale_0.9": 13.9017,
+    "robust_scale_1.1": 13.9017,
+    "robust_all_cuts_for_resolution": 13.9017,
+    "robust_mn1_spin_0.6": 13.9017
+   },
+   "nearest_ablation": {
+    "dp1_mn2_only_sites": 0.0,
+    "dp5_collinear_ground_state_not_relaxed": 0.0,
+    "dp6_angle_to_mn1_axis": 76.0983
+   },
+   "tolerance": "[9, 19]"
+  },
+  "mn1_carries_moment": {
+   "reference": true,
+   "ablation": {
+    "dp1_mn2_only_sites": false
+   }
+  }
+ }
+}

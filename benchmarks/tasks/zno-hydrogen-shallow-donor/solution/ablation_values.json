@@ -1,0 +1,375 @@
+{
+ "robustness": {
+  "band_filling_unaligned_cbm": {
+   "band_gap_eV": 3.2485,
+   "delta_mu_eV": {
+    "O": -3.2671095,
+    "H": -0.0775644574999994
+   },
+   "transition_levels": {
+    "OH_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.0695498165613566
+     }
+    ],
+    "H_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.1808924282258224
+     }
+    ],
+    "V_O": [
+     {
+      "from": 2,
+      "to": 0,
+      "level_eV": 2.5961793655425867
+     }
+    ]
+   },
+   "V_O_plus_ever_stable": false,
+   "fermi_level_eV": 3.1818188531050016,
+   "log10_concentration_cm3": {
+    "V_O": 15.951275120463672,
+    "OH_O^+": 18.84326885450379,
+    "OH_O^0": 19.409079895774617
+   }
+  },
+  "shallow_donors_at_cbm": {
+   "band_gap_eV": 3.2485,
+   "delta_mu_eV": {
+    "O": -3.2671095,
+    "H": -0.0775644574999994
+   },
+   "transition_levels": {
+    "OH_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.2485
+     }
+    ],
+    "H_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.2485
+     }
+    ],
+    "V_O": [
+     {
+      "from": 2,
+      "to": 0,
+      "level_eV": 2.5961793655425867
+     }
+    ]
+   },
+   "V_O_plus_ever_stable": false,
+   "fermi_level_eV": 3.181818853098327,
+   "log10_concentration_cm3": {
+    "V_O": 15.951275120463684,
+    "OH_O^+": 18.843268854537428,
+    "OH_O^0": 18.507210665003566
+   }
+  },
+  "toten_energies": {
+   "band_gap_eV": 3.2485,
+   "delta_mu_eV": {
+    "O": -3.2670925749999995,
+    "H": -0.07757291999999971
+   },
+   "transition_levels": {
+    "OH_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.130859954811382
+     }
+    ],
+    "H_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.2129641613175357
+     }
+    ],
+    "V_O": [
+     {
+      "from": 2,
+      "to": 0,
+      "level_eV": 2.5961793655425867
+     }
+    ]
+   },
+   "V_O_plus_ever_stable": false,
+   "fermi_level_eV": 3.18181406546668,
+   "log10_concentration_cm3": {
+    "V_O": 15.951189831221743,
+    "OH_O^+": 18.843250334016066,
+    "OH_O^0": 19.100047749354133
+   }
+  },
+  "bulk_zno_gap": {
+   "band_gap_eV": 3.2466,
+   "delta_mu_eV": {
+    "O": -3.2671095,
+    "H": -0.0775644574999994
+   },
+   "transition_levels": {
+    "OH_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.1313420248113575
+     }
+    ],
+    "H_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.212964821317491
+     }
+    ],
+    "V_O": [
+     {
+      "from": 2,
+      "to": 0,
+      "level_eV": 2.5961793655425867
+     }
+    ]
+   },
+   "V_O_plus_ever_stable": false,
+   "fermi_level_eV": 3.180931330048482,
+   "log10_concentration_cm3": {
+    "V_O": 15.951276798215263,
+    "OH_O^+": 18.847741773843094,
+    "OH_O^0": 19.097660872607307
+   }
+  },
+  "boltzmann_carriers": {
+   "band_gap_eV": 3.2485,
+   "delta_mu_eV": {
+    "O": -3.2671095,
+    "H": -0.0775644574999994
+   },
+   "transition_levels": {
+    "OH_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.1313420248113575
+     }
+    ],
+    "H_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.212964821317491
+     }
+    ],
+    "V_O": [
+     {
+      "from": 2,
+      "to": 0,
+      "level_eV": 2.5961793655425867
+     }
+    ]
+   },
+   "V_O_plus_ever_stable": false,
+   "fermi_level_eV": 3.17574660040405,
+   "log10_concentration_cm3": {
+    "V_O": 15.951286954605594,
+    "OH_O^+": 18.873871661202404,
+    "OH_O^0": 19.097660872607307
+   }
+  },
+  "alignment_radius_4A": {
+   "band_gap_eV": 3.2485,
+   "delta_mu_eV": {
+    "O": -3.2671095,
+    "H": -0.0775644574999994
+   },
+   "transition_levels": {
+    "OH_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.1393425325243016
+     }
+    ],
+    "H_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.211839221553603
+     }
+    ],
+    "V_O": [
+     {
+      "from": 2,
+      "to": 0,
+      "level_eV": 2.6030929008961228
+     }
+    ]
+   },
+   "V_O_plus_ever_stable": false,
+   "fermi_level_eV": 3.195229182138645,
+   "log10_concentration_cm3": {
+    "V_O": 15.951255964192965,
+    "OH_O^+": 18.904737008083984,
+    "OH_O^0": 19.186393325666586
+   }
+  }
+ },
+ "ablations": {
+  "pbe_pipeline": {
+   "band_gap_eV": 0.7156,
+   "delta_mu_eV": {
+    "O": -2.8734620049999995,
+    "H": -0.15733365125000187
+   },
+   "transition_levels": {
+    "OH_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 0.5693601542719349
+     }
+    ],
+    "H_O": [],
+    "V_O": [
+     {
+      "from": 2,
+      "to": 1,
+      "level_eV": 0.5848528532305517
+     },
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 0.6872940190667525
+     }
+    ]
+   },
+   "V_O_plus_ever_stable": true,
+   "fermi_level_eV": 1.0159921543613328,
+   "log10_concentration_cm3": {
+    "V_O": 18.501387381149677,
+    "OH_O^+": 19.956333385233414,
+    "OH_O^0": 22.207259596194643
+   }
+  },
+  "hydrogen_reservoir_H2": {
+   "band_gap_eV": 3.2485,
+   "delta_mu_eV": {
+    "O": -3.2671095,
+    "H": 0.0
+   },
+   "transition_levels": {
+    "OH_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.1313420248113575
+     }
+    ],
+    "H_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.212964821317491
+     }
+    ],
+    "V_O": [
+     {
+      "from": 2,
+      "to": 0,
+      "level_eV": 2.5961793655425867
+     }
+    ]
+   },
+   "V_O_plus_ever_stable": false,
+   "fermi_level_eV": 3.223689585811475,
+   "log10_concentration_cm3": {
+    "V_O": 15.951212828626604,
+    "OH_O^+": 19.023157310074602,
+    "OH_O^0": 19.48856853347977
+   }
+  },
+  "no_band_filling": {
+   "band_gap_eV": 3.2485,
+   "delta_mu_eV": {
+    "O": -3.2671095,
+    "H": -0.0775644574999994
+   },
+   "transition_levels": {
+    "OH_O": [],
+    "H_O": [],
+    "V_O": [
+     {
+      "from": 2,
+      "to": 0,
+      "level_eV": 2.5961793655425867
+     }
+    ]
+   },
+   "V_O_plus_ever_stable": false,
+   "fermi_level_eV": 3.1818188530970426,
+   "log10_concentration_cm3": {
+    "V_O": 15.951275120463686,
+    "OH_O^+": 18.8432688545439,
+    "OH_O^0": 15.818734616992398
+   }
+  },
+  "band_filling_equal_k_weights": {
+   "band_gap_eV": 3.2485,
+   "delta_mu_eV": {
+    "O": -3.2671095,
+    "H": -0.0775644574999994
+   },
+   "transition_levels": {
+    "OH_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 2.8395047539758322
+     }
+    ],
+    "H_O": [
+     {
+      "from": 1,
+      "to": 0,
+      "level_eV": 3.212964821317491
+     }
+    ],
+    "V_O": [
+     {
+      "from": 2,
+      "to": 0,
+      "level_eV": 2.5961793655425867
+     }
+    ]
+   },
+   "V_O_plus_ever_stable": false,
+   "fermi_level_eV": 3.1818188530983234,
+   "log10_concentration_cm3": {
+    "V_O": 15.951275120463684,
+    "OH_O^+": 18.843268854537445,
+    "OH_O^0": 20.568455983856815
+   }
+  }
+ },
+ "V_O_adjacent_levels": [
+  {
+   "from": 2,
+   "to": 1,
+   "level_eV": 2.6912987097532923
+  },
+  {
+   "from": 1,
+   "to": 0,
+   "level_eV": 2.501060021331881
+  }
+ ]
+}

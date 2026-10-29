@@ -1,0 +1,131 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 6,
+  "rubric_items": 7,
+  "task_mb": 1.5,
+  "hidden_values": 13,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 39,
+   "budget": 45,
+   "evaluations": 19,
+   "failed_evaluations": 0,
+   "container_seconds": 9
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "run_labels_trusted",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "run_labels_trusted_bi2te3_binding",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "s3_runs_assumed_same_energies",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "soc_added_again",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "self_consistency_increment_transferred",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "g0w0_gap_reported_for_bi2te3",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "first_spectral_feature",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "wire_model_transfer",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "wire_model_calibrated_on_S3_Te3",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "mean_released_binding_energy",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "bi2te3_gap_from_ip_onset",
+    "passes_grading": true
+   },
+   {
+    "name": "bi2te3_gap_from_first_ip_peak",
+    "passes_grading": true
+   },
+   {
+    "name": "s3_shift_from_ip_peak_shift",
+    "passes_grading": true
+   },
+   {
+    "name": "te3_soc_free_gap_k_resolved",
+    "passes_grading": true
+   },
+   {
+    "name": "soc_change_taken_at_the_qp_minimum_k",
+    "passes_grading": true
+   },
+   {
+    "name": "bi2te3_binding_no_w_correction",
+    "passes_grading": true
+   },
+   {
+    "name": "bi2te3_binding_additive_mean_shift",
+    "passes_grading": true
+   },
+   {
+    "name": "bi2te3_binding_mean_ratio",
+    "passes_grading": true
+   },
+   {
+    "name": "bi2te3_binding_scaled_ratio",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T18:31:59Z"
+}

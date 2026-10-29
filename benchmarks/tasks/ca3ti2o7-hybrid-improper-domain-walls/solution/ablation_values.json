@@ -1,0 +1,65 @@
+{
+ "ablations": {
+  "swap_psi_phi_construction": {
+   "E_neutral_psi_wall_mJ_m2": 195.0552565396442,
+   "E_neutral_phi_wall_mJ_m2": 134.92634654383886,
+   "E_layer_psi_wall_mJ_m2": 152.99528790585285,
+   "charged_psi_wall_slope_mJ_m2_per_nm": 11.543025304484848
+  },
+  "antiphase_boundary_as_psi_wall": {
+   "E_neutral_psi_wall_mJ_m2": 237.1210807980244
+  },
+  "polar_axis_swapped": {
+   "E_neutral_psi_wall_mJ_m2": 176.4766937078441,
+   "E_neutral_phi_wall_mJ_m2": 206.4704782603361,
+   "charged_psi_wall_slope_mJ_m2_per_nm": -0.23994268152355946
+  },
+  "layer_wall_in_bilayer": {
+   "E_layer_psi_wall_mJ_m2": 49.48673111955089
+  },
+  "charged_slope_from_short_cells": {
+   "charged_psi_wall_slope_mJ_m2_per_nm": 17.301282633248743
+  },
+  "charged_wall_treated_as_converged": {
+   "charged_psi_wall_slope_mJ_m2_per_nm": 0.0
+  },
+  "slope_per_supercell_length": {
+   "charged_psi_wall_slope_mJ_m2_per_nm": 6.080907804732536
+  },
+  "short_range_NEP": {
+   "E_neutral_psi_wall_mJ_m2": 121.07934388001877,
+   "E_neutral_phi_wall_mJ_m2": 182.94967305620463,
+   "E_layer_psi_wall_mJ_m2": -8.746400873656377,
+   "charged_psi_wall_slope_mJ_m2_per_nm": -2.2512647948203495
+  },
+  "one_wall_per_cell_normalization": {
+   "E_neutral_psi_wall_mJ_m2": 269.8526930876777,
+   "E_neutral_phi_wall_mJ_m2": 390.1105130792884,
+   "E_layer_psi_wall_mJ_m2": 26.751333826073918,
+   "charged_psi_wall_slope_mJ_m2_per_nm": 24.323631218930142
+  },
+  "profile_from_polarization": {
+   "phi_wall_profile": "ising"
+  }
+ },
+ "robustness": {
+  "normal_relaxed_cells": {
+   "E_neutral_psi_wall_mJ_m2": 131.0575579138021,
+   "E_neutral_phi_wall_mJ_m2": 194.7502685727523,
+   "E_layer_psi_wall_mJ_m2": 13.067911380633124,
+   "charged_psi_wall_slope_mJ_m2_per_nm": 12.146593652891958
+  },
+  "small_converged_cells_and_long_domain_fit": {
+   "E_neutral_psi_wall_mJ_m2": 134.92634654383886,
+   "E_neutral_phi_wall_mJ_m2": 195.0552565396442,
+   "E_layer_psi_wall_mJ_m2": 13.987426324813168,
+   "charged_psi_wall_slope_mJ_m2_per_nm": 11.99425375318691
+  },
+  "moderate_cells_fit_8_to_16": {
+   "E_neutral_psi_wall_mJ_m2": 134.07639780472667,
+   "E_neutral_phi_wall_mJ_m2": 195.14008945587048,
+   "E_layer_psi_wall_mJ_m2": 13.227060075475844,
+   "charged_psi_wall_slope_mJ_m2_per_nm": 12.221204919053157
+  }
+ }
+}

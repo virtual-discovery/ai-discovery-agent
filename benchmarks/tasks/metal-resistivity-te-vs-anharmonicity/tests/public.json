@@ -1,0 +1,5 @@
+{
+ "task_id": "metal-resistivity-te-vs-anharmonicity",
+ "solver_budget": 46,
+ "min_report_chars": 400
+}

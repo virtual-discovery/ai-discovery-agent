@@ -1,0 +1,19 @@
+{
+ "task_id": "co3sn2s2-dmi-diffuse",
+ "solver_budget": 16,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "narrow_scan": {
+   "kind": "narrow_scan",
+   "temperature_K": "<from narrow_scans_available>",
+   "cost": 2
+  },
+  "wide_region": {
+   "kind": "wide_region",
+   "temperature_K": "<1.5|165|180|300>",
+   "hkl": "[h, 0, l] from wide_regions_available",
+   "cost": 1
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

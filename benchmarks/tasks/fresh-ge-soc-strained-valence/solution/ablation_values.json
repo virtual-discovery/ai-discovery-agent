@@ -1,0 +1,166 @@
+{
+ "ablation_order": [
+  [
+   "dp1",
+   "first_level_above_gamma8_as_s"
+  ],
+  [
+   "dp1",
+   "band_count_identification"
+  ],
+  [
+   "dp2",
+   "spin_orbit_off_s_level"
+  ],
+  [
+   "dp2",
+   "spin_orbit_off_splitting"
+  ],
+  [
+   "dp3",
+   "strain_from_experimental_lattice_parameter"
+  ],
+  [
+   "dp3",
+   "experimental_lattice_parameter"
+  ],
+  [
+   "dp4",
+   "c_fixed_at_a0"
+  ],
+  [
+   "dp4",
+   "cubic_compression"
+  ],
+  [
+   "dp5",
+   "linear_bir_pikus_at_minus1pct"
+  ],
+  [
+   "dp5",
+   "linear_formula_at_minus0.5pct"
+  ],
+  [
+   "dp6",
+   "shifted_mesh_nearest_point"
+  ],
+  [
+   "dp7",
+   "koster_label_for_heavy_hole"
+  ],
+  [
+   "dp8",
+   "crossing_linear_extrapolation_from_0_and_-1pct"
+  ],
+  [
+   "dp9",
+   "pressures_at_40_Ry"
+  ]
+ ],
+ "ablations": {
+  "pressures_at_40_Ry": {
+   "a0_A": 5.737881773399014
+  },
+  "experimental_lattice_parameter": {
+   "a0_A": 5.658
+  },
+  "first_level_above_gamma8_as_s": {
+   "s_level_at_a0_eV": 2.2986900000000006
+  },
+  "band_count_identification": {
+   "delta0_at_a0_eV": 0.5655699999999992
+  },
+  "shifted_mesh_nearest_point": {
+   "delta0_at_a0_eV": 0.1947499999999991,
+   "s_level_at_a0_eV": -1.8980499999999996
+  },
+  "spin_orbit_off_s_level": {
+   "s_level_at_a0_eV": -0.47614999999999874
+  },
+  "c_fixed_at_a0": {
+   "c_over_a_at_minus1pct": 1.0101010101010102,
+   "hh_minus_lh_at_minus1pct_eV": 0.046149999999999025,
+   "so_minus_hh_at_minus1pct_eV": -0.3182899999999993,
+   "b_shear_deformation_potential_eV": -2.3074999999999513
+  },
+  "cubic_compression": {
+   "c_over_a_at_minus1pct": 1.0,
+   "hh_minus_lh_at_minus1pct_eV": 0.0,
+   "so_minus_hh_at_minus1pct_eV": -0.2894099999999984
+  },
+  "spin_orbit_off_splitting": {
+   "hh_minus_lh_at_minus1pct_eV": 0.12720937499999962
+  },
+  "koster_label_for_heavy_hole": {
+   "hh_minus_lh_at_minus1pct_eV": -0.07221419847328292,
+   "so_minus_hh_at_minus1pct_eV": -0.2727615267175576,
+   "b_shear_deformation_potential_eV": 2.4756314296562403
+  },
+  "linear_bir_pikus_at_minus1pct": {
+   "b_shear_deformation_potential_eV": -2.119961852823255
+  },
+  "linear_formula_at_minus0.5pct": {
+   "b_shear_deformation_potential_eV": -2.3206821766562733
+  },
+  "crossing_linear_extrapolation_from_0_and_-1pct": {
+   "s_so_crossing_strain_percent": -2.138417293154308
+  },
+  "strain_from_experimental_lattice_parameter": {
+   "c_over_a_at_minus1pct": 1.0505555654801184,
+   "hh_minus_lh_at_minus1pct_eV": 0.13987198620203678,
+   "so_minus_hh_at_minus1pct_eV": -0.5488557606305235,
+   "s_so_crossing_strain_percent": -0.03099334867806558
+  }
+ },
+ "robustness": {
+  "a0_spin_orbit_60Ry_k8": {
+   "a0_A": 5.767712895377129
+  },
+  "a0_scalar_relativistic_80Ry": {
+   "a0_A": 5.7676049697917335
+  },
+  "levels_k8_60Ry": {
+   "delta0_at_a0_eV": 0.2847400000000011,
+   "s_level_at_a0_eV": -0.5651899999999994
+  },
+  "levels_k6_50Ry_mv001": {
+   "delta0_at_a0_eV": 0.28470000000000084,
+   "s_level_at_a0_eV": -0.5642300000000002
+  },
+  "levels_fixed_occupations_by_degeneracy": {
+   "delta0_at_a0_eV": 0.2847399999999993,
+   "s_level_at_a0_eV": -0.5651099999999989
+  },
+  "relaxation_and_levels_60Ry_k8": {
+   "c_over_a_at_minus1pct": 1.016931143496029,
+   "hh_minus_lh_at_minus1pct_eV": 0.0712859541984745,
+   "so_minus_hh_at_minus1pct_eV": -0.3438117557251914
+  },
+  "relaxation_and_levels_80Ry_k8": {
+   "c_over_a_at_minus1pct": 1.017611121707719,
+   "hh_minus_lh_at_minus1pct_eV": 0.07349412213740436,
+   "so_minus_hh_at_minus1pct_eV": -0.3466319847328254
+  },
+  "scalar_relativistic_relaxation_60Ry_k8": {
+   "c_over_a_at_minus1pct": 1.0167645202020203,
+   "hh_minus_lh_at_minus1pct_eV": 0.07074984375000071,
+   "so_minus_hh_at_minus1pct_eV": -0.34311343749999956
+  },
+  "b_6x6_bir_pikus_from_minus1pct": {
+   "b_shear_deformation_potential_eV": -2.5537990552303262
+  },
+  "b_6x6_bir_pikus_from_pm0.5pct": {
+   "b_shear_deformation_potential_eV": -2.47929368913732
+  },
+  "b_quadratic_fit_three_strains": {
+   "b_shear_deformation_potential_eV": -2.4595567489117043
+  },
+  "crossing_linear_between_bracketing_strains": {
+   "s_so_crossing_strain_percent": -1.9419188222710173
+  },
+  "crossing_quadratic_0_to_-2pct": {
+   "s_so_crossing_strain_percent": -1.9463041228714677
+  }
+ },
+ "source": "benchmarks/construction/fresh-ge-soc-strained-valence/make_task.py from reference_runs.jsonl"
+}

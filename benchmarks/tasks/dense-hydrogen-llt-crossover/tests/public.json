@@ -1,0 +1,5 @@
+{
+ "task_id": "dense-hydrogen-llt-crossover",
+ "solver_budget": 135,
+ "min_report_chars": 400
+}

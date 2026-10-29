@@ -1,0 +1,16 @@
+{
+ "task_id": "raman-polymorph-orientation",
+ "solver_budget": 20,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "raman": {
+   "kind": "raman",
+   "polarizer_deg": "<deg>",
+   "analyzer_deg": "<deg or null>",
+   "center_cm1": "<cm-1>",
+   "accumulations": "<1-4>",
+   "cost": "accumulations"
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

@@ -1,0 +1,131 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 8,
+  "task_mb": 30.42,
+  "hidden_values": 8,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 13,
+   "budget": 20,
+   "evaluations": 13,
+   "failed_evaluations": 0,
+   "container_seconds": 1132
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "nominal_electron_counts",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "nominal_count_CsCr3Sb5_Z",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "nominal_count_CsCr3Bi5",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "swapped_CsCr3Bi5_models",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "swapped_CsCr3Bi5_sigma",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "w90_default_orbital_order",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "recalled_paper_frame_label",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "one_sided_path_Ti_hamiltonian",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "one_sided_path_Cr_hamiltonian",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "cross_compound_regression",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "sigma_windowed_pdos",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "sigma_d_block_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "sigma_orbital_average",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "hund_ratio_nominal_count",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "denser_mesh_12x12x8",
+    "passes_grading": true
+   },
+   {
+    "name": "sigma_from_pdos_histogram",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T23:40:06Z"
+}

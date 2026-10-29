@@ -1,0 +1,40 @@
+{
+ "purpose": "construction-time check of isolated-atom cutoff dependence; not staged, not used for any graded value",
+ "runs": {
+  "W_30": {
+   "last_total_energy_Ry": -158.35849127,
+   "last_scf_accuracy_Ry": 1.7e-10,
+   "converged_to_conv_thr": true
+  },
+  "W_45": {
+   "last_total_energy_Ry": -158.36796691,
+   "last_scf_accuracy_Ry": 1.6e-10,
+   "converged_to_conv_thr": true
+  },
+  "Ti_35": {
+   "last_total_energy_Ry": -118.70173763,
+   "last_scf_accuracy_Ry": 5e-09,
+   "converged_to_conv_thr": false
+  },
+  "Ti_60": {
+   "last_total_energy_Ry": -118.70177649,
+   "last_scf_accuracy_Ry": 7e-08,
+   "converged_to_conv_thr": false
+  }
+ },
+ "archive_values_Ry": {
+  "W_30": -158.36444451,
+  "W_45": -158.3739579,
+  "Ti_60": -118.70177653
+ },
+ "W_30_minus_W_45": {
+  "this_check_eV": 0.1289,
+  "archive_eV": 0.1294
+ },
+ "Ti_35_minus_Ti_60_eV": 0.00053,
+ "notes": [
+  "W atoms here are offset by +0.006 Ry from the archive at both cutoffs (pseudopotential file revision or QE 6.7 vs 7.0); the cutoff difference is reproduced to 0.5 meV.",
+  "Ti 60 Ry reproduces the archived atom to 1e-7 Ry. Ti 35 Ry stopped at electron_maxstep=80 with scf accuracy 5e-9 Ry; Ti 60 Ry was stopped after 27 SCF iterations with scf accuracy 7e-8 Ry. Both energies are converged far below the 0.5 meV difference.",
+  "Conclusion: the TiB2 Ti reference (60/480 Ry atom with 35/280 Ry slabs) is numerically sound to < 1 meV; the W atom reused across cutoffs (30 vs 45 Ry) is off by 0.13 eV."
+ ]
+}

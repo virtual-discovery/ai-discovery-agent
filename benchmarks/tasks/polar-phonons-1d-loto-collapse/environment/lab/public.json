@@ -1,0 +1,17 @@
+{
+ "task_id": "polar-phonons-1d-loto-collapse",
+ "solver_budget": 30,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "dfpt": {
+   "cost": 1
+  },
+  "interpolated": {
+   "cost": 2
+  },
+  "archived_file": {
+   "cost": 1
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

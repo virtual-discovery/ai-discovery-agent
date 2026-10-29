@@ -1,0 +1,16 @@
+screened_coulomb_cutoff <same as epsilon_cutoff>
+bare_coulomb_cutoff <= ecutwfc in Ry>
+number_bands <nbands_gw>
+band_index_min <VBM-3>
+band_index_max <CBM+3>
+exact_static_ch 1
+degeneracy_check_override
+screening_semiconductor
+use_wfn_hdf5
+# slabs: cell_slab_truncation
+begin kpoints
+  <all coarse k, weight 1.0>
+end
+# Output eqp1.dat -> fit linear corrections per band manifold with env/fit_scissors.py
+# (valence: E + evs + evdel*(E - ev0); conduction: E + ecs + ecdel*(E - ec0)); the fit lines go into absorption.inp.
+# NEVER interpolate eqp_co from a coarser grid (round-8 lesson); use the scissors fit or an eqp.dat listing ALL bands 1..number_bands.

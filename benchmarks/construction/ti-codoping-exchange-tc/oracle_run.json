@@ -1,0 +1,15 @@
+{
+ "source": "check_task oracle run (runs/check/ti-codoping-exchange-tc), lab 1000+3000 sweeps, L = 3/4 with 32 placements",
+ "curie_temperature_K": {
+  "V5Cr5": 12.164804414747666,
+  "Cr5Mo5": 21.682397975931405,
+  "Cr5Mn5": 11.545510950345463,
+  "V2Cr2": 0.0,
+  "Cr5Co5": null
+ },
+ "best_codopant_for_Cr": "Mo",
+ "evaluations": 34,
+ "charge_used": 54,
+ "budget": 60,
+ "container_seconds": 1133
+}

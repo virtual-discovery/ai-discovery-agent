@@ -1,0 +1,8 @@
+{
+ "task_id": "heis-configdesign-fe",
+ "solver_budget": 60,
+ "reserved_validation_charge": 0,
+ "requests": {"spiral": {"kind": "spiral", "key": "<key from spirals_available>", "cost": 1},
+              "random_state": {"kind": "random_state", "label": "<label from random_states_available>", "cost": 1}},
+ "catalog": "/app/catalog.json"
+}

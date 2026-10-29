@@ -1,0 +1,119 @@
+&TB_FILE
+Hrfile = 'wannier90_hr.dat'
+!Hrfile = 'wannier90_hr.dat_nsymm16'
+/
+
+LATTICE
+Angstrom
+3.697400 0.000000 0.000000
+-0.000000 3.697400 0.000000
+0.000000 0.000000 9.508000
+
+ATOM_POSITIONS
+6                                ! number of atoms for projectors
+Cart                          ! Direct or Cartisen coordinate
+Zr       2.7730500     2.7730500     2.6261096
+Zr       0.9243500     0.9243500     6.8818904
+Si       2.7730500     0.9243500     4.7540000
+Si       0.9243500     2.7730500     4.7540000
+Te       2.7730500     2.7730500     8.1778308
+Te       0.9243500     0.9243500     1.3301692
+
+PROJECTORS
+5 5 4 4 3 3            ! number of projectors
+Zr    dx dy dz dxy dyz
+Zr    dx dy dz dxy dyz
+Si    s px py pz
+Si    s px py pz
+Te    px py pz
+Te    px py pz
+
+&CONTROL
+Boltz_OHE_calc        = F
+BulkBand_calc         = F
+BulkFS_calc           = T
+BulkGap_cube_calc     = F
+BulkGap_plane_calc    = F
+FindNodes_calc        = F
+SlabBand_calc         = F
+WireBand_calc         = F
+SlabSS_calc           = F
+SlabArc_calc          = F
+SlabQPI_calc          = F
+Z2_3D_calc            = F
+Chern_3D_calc         = F
+SlabSpintexture_calc  = F
+Wanniercenter_calc    = F
+BerryPhase_calc       = F
+BerryCurvature_calc   = F
+EffectiveMass_calc    = F
+/
+
+&SYSTEM
+NSLAB = 30              ! for thin film system
+NSLAB1= 4               ! nanowire system 
+NSLAB2= 4               ! nanowire system 
+NumOccupied = 13        ! NumOccupied
+SOC = 0                 ! soc
+E_FERMI = 8.8965        ! e-fermi
+Bx= 0, By= 0, Bz= 0     ! Bx By Bz
+surf_onsite= 0.0        ! surf_onsite
+/
+
+&PARAMETERS
+Eta_Arc = 0.001     ! infinite small value, like brodening 
+E_arc = 0.0         ! energy for calculate Fermi Arc
+OmegaNum = 1      ! omega number       
+OmegaMin = 0    ! energy interval
+OmegaMax =  0     ! energy interval
+Nk1 = 101              ! number k points  odd number would be better
+Nk2 = 101          ! number k points  odd number would be better
+Nk3 = 101          ! number k points  odd number would be better
+NP = 1              ! number of principle layers
+Gap_threshold = 0.001 ! threshold for GapCube output
+NBtau= 100
+BTauMax = 20.0
+/
+
+SURFACE            ! See doc for details
+ 1  0  0
+ 0  1  0
+ 0  0  1
+
+KPATH_BULK            ! k point path
+7
+ G 0.0000  0.00000 0.000  X 0.50000 0.0000 0.0000
+ X 0.50000 0.00000 0.000  M 0.50000 0.50000 0.0000
+ M 0.50000 0.50000 0.0000 G 0.00000 0.00000 0.0000
+ G 0.00000 0.00000 0.0000 Z 0.00000 0.00000 0.5000
+ Z 0.0000  0.00000 0.5000 R 0.00000 0.50000 0.5000
+ R 0.0000  0.50000 0.5000 A 0.5000  0.50000 0.5000
+ A 0.5000  0.50000 0.5000 Z 0.0000  0.00000 0.5000
+
+KPATH_SLAB
+2        ! numker of k line for 2D case
+K 0.33 0.33 G 0.0 0.0  ! k path for 2D case
+G 0.00 0.00 M 0.5 0.0
+
+KPLANE_SLAB
+-0.1 -0.1      ! Original point for 2D k plane
+ 0.2  0.0      ! The first vector to define 2D k plane 
+ 0.0  0.2      ! The second vector to define 2D k plane  for arc plots
+
+KPLANE_BULK
+ 0.6666667 -0.3333333 -0.50   ! Original point for 3D k plane  kz=0.5, bar{x}, along ky
+-1.3333333  0.6666667  0.00   ! The first vector to define 3d k space plane
+ 0.00  0.00  1.00   ! The second vector to define 3d k space plane
+
+
+KCUBE_BULK
+-0.00 -0.00 -0.00   ! Original point for 3D k plane !-0.50 -0.50 - 0.50   ! Original point for 3D k plane
+ 1.00  0.00  0.00   ! The first vector to define 3d k space plane
+ 0.00  1.00  0.00   ! The second vector to define 3d k space plane
+ 0.00  0.00  1.00   ! The third vector to define 3d k cube
+
+EFFECTIVE_MASS      ! optional
+2                   ! The i'th band to be calculated
+0.01                ! k step in unit of (1/Angstrom)
+0.0 0.0 0.0         ! k point where the effective mass calculated.
+

@@ -1,0 +1,202 @@
+{
+ "task_id": "wires-1d-anharmonic-thermal-contraction",
+ "catalog_id": "wires-1d-anharmonic-thermal-contraction",
+ "start": "released",
+ "source_group": "cignarella_2025_1d_wires",
+ "title": "1D wires: thermal contraction, anharmonic heat capacity and instability from SSCHA data",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Rigid-body modes of a 1D wire: four zero modes at Gamma (3 translations + axial rotation); the archived Hessians carry a small imaginary rotational value at Gamma at every T",
+   "wrong_choice": "Treat the imaginary Gamma value as a dynamical instability",
+   "consequence": "TaSe3 called unstable from 0 K",
+   "ablation": "gamma_rotation_mode_counted_as_instability"
+  },
+  {
+   "id": "dp2",
+   "fork": "Auxiliary SSCHA matrices vs free-energy Hessian",
+   "wrong_choice": "Judge stability from auxiliary frequencies (always positive) or compute C_V from Hessian frequencies",
+   "consequence": "No instability found up to 1000 K; C_V +11.4% (CuC2), +8.7% (TaSe3)",
+   "ablation": "stability_from_auxiliary_frequencies"
+  },
+  {
+   "id": "dp3",
+   "fork": "Sign convention of the archived SSCHA stress (pressure-like, as pw.x); established from the kinetic SSCHA-minus-average difference or the pw.x P line",
+   "wrong_choice": "Read the printed stress as tension-positive",
+   "consequence": "alpha_L positive: expansion predicted instead of contraction",
+   "ablation": "stress_read_as_tension_positive"
+  },
+  {
+   "id": "dp4",
+   "fork": "SSCHA free-energy stress vs ab initio ensemble-average stress (both printed in each log)",
+   "wrong_choice": "Differentiate the ab initio average stress",
+   "consequence": "alpha_L +56.9%",
+   "ablation": "ab_initio_average_stress"
+  },
+  {
+   "id": "dp5",
+   "fork": "Acoustic sum rule in the long-wavelength stiffness: plain ph.x matrices vs the 1D-ASR set",
+   "wrong_choice": "Fourier-interpolate the plain DFPT matrices to small q",
+   "consequence": "k +33.7% at q = 0.01 (2 pi/c) and divergent as q -> 0; alpha_L -25.2%",
+   "ablation": "plain_asr_long_wavelength_stiffness"
+  },
+  {
+   "id": "dp6",
+   "fork": "Harmonic (infinitesimal) stiffness vs the single archived strained calculation (+4.7 %)",
+   "wrong_choice": "Use the finite-strain energy secant 2 dE / eps^2",
+   "consequence": "k -20.8%; alpha_L +26.2%",
+   "ablation": "finite_strain_secant_stiffness"
+  },
+  {
+   "id": "dp7",
+   "fork": "Normalization of a 1D stress: cell volume incl. vacuum consistent with the per-cell stiffness; k = d2E/deps2 (not E = k eps^2)",
+   "wrong_choice": "Use E = k eps^2 (stiffness halved, as the paper appears to) or the supercell volume",
+   "consequence": "alpha_L x2 or x6",
+   "ablation": "stiffness_from_E_equals_k_eps2"
+  },
+  {
+   "id": "dp8",
+   "fork": "Sign of the frequency-derivative term in C_V = sum c (1 - T/w dw/dT) (the archived notebook and the paper write +)",
+   "wrong_choice": "Use the + sign",
+   "consequence": "C_V +15.0% (CuC2), -4.8% (TaSe3): the deviation from harmonic has the wrong sign",
+   "ablation": "derivative_term_with_plus_sign"
+  },
+  {
+   "id": "dp9",
+   "fork": "C_V route: entropy derivative vs harmonic C_V with temperature-dependent (or DFPT) frequencies",
+   "wrong_choice": "Harmonic formula with SSCHA or DFPT frequencies",
+   "consequence": "C_V +7.5% (CuC2), -2.4% (TaSe3)",
+   "ablation": "harmonic_cv_with_sscha_frequencies"
+  },
+  {
+   "id": "dp10",
+   "fork": "Withheld 650/700 K Hessians: the onset must be interpolated between released temperatures",
+   "wrong_choice": "Report the first released unstable temperature (800 K)",
+   "consequence": "+134 K",
+   "ablation": "first_released_unstable_temperature"
+  }
+ ],
+ "graded_fields": [
+  "TaSe3.axial_stiffness_eV within 10% of 106.4",
+  "TaSe3.alpha_L_300K_1e-6_per_K within 15% of -5.068",
+  "CuC2.cv_ratio_300K within 3.5% of 0.6798",
+  "TaSe3.cv_ratio_300K within 1.5% of 0.9794",
+  "TaSe3.instability_temperature_K within 75 K of 665.8"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 28,
+  "budget": 36,
+  "catalog_units": 137,
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "why": "Three wires, two kinds of SSCHA matrices plus logs per temperature, DFPT with two sum-rule variants and one strained calculation; the agent parses QE dynamical matrices, Fourier-interpolates force constants, differentiates noisy stresses and mode frequencies, and must pick converged runs within a budget of about a quarter of the catalog."
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image); lab serves archived text only"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/k45dq-ebf35",
+  "doi": "10.24435/materialscloud:fj-20",
+  "files_used": [
+   "Extreme-anharmonicity-thermal-contration-1D-wires.zip",
+   "README.txt"
+  ],
+  "md5": {
+   "Extreme-anharmonicity-thermal-contration-1D-wires.zip": "1de3fb44caf32b1ed403cbe0e7b687ce",
+   "README.txt": "c866d88afdf77c93202d26d1c30e0b38"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Graded values are computed from archived ingredients with a validated numpy pipeline (calib.py), as in the skutterudite task; the archive holds no alpha or C_V outputs. The TaSe3 instability is bracketed by withheld Hessians (650/700 K). QHA alpha (design target) dropped: the QHA AiiDA archive holds one strained TaSe3 calculation only. AuSe2 is served but not graded (no Hessians; runs at T >= 150 K end at the Kong-Liu limit).",
+ "calibration": {
+  "TaSe3.axial_stiffness_eV": {
+   "reference": 106.4,
+   "robustness": {
+    "q_0.05": 104.7,
+    "T0_sscha_hessian": 100.1
+   },
+   "nearest_ablation": {
+    "finite_strain": 84.32,
+    "plain_asr_q0.01": 142.2
+   },
+   "other": {
+    "T300_sscha_hessian (isothermal, excluded by the stated definition)": 90.21
+   },
+   "tolerance": "+-10%"
+  },
+  "TaSe3.alpha_L_300K_1e-6_per_K": {
+   "reference": -5.068,
+   "robustness": {
+    "alpha_wide_quadratic": -5.027,
+    "alpha_global_cubic_T0_hessian_k": -5.031,
+    "alpha_k_q005": -5.151
+   },
+   "nearest_ablation": {
+    "alpha_finite_strain": -6.395,
+    "alpha_plain_asr": -3.792,
+    "alpha_average_stress": -7.953,
+    "alpha_half_k": -10.14,
+    "alpha_sign": 5.068
+   },
+   "other": {
+    "stiffness from T300 Hessian": -5.978
+   },
+   "tolerance": "+-15%"
+  },
+  "CuC2.cv_ratio_300K": {
+   "reference": 0.6798,
+   "robustness": {
+    "cv_cuc2_cubic": 0.6958,
+    "cv_cuc2_linear_200_500": 0.6899,
+    "cv_cuc2_all_converged_cubic": 0.6765
+   },
+   "nearest_ablation": {
+    "cv_cuc2_harmonic_sscha_freq": 0.7307,
+    "cv_cuc2_dfpt_harmonic": 0.7364,
+    "cv_cuc2_per_atom_3N": 0.6421,
+    "cv_cuc2_paper_sign": 0.7816,
+    "cv_cuc2_hessian_freq": 0.7576,
+    "cv_cuc2_with_unconverged_400K": 0.7101
+   },
+   "other": {
+    "unconverged 400 K included, quadratic (passes)": 0.6867
+   },
+   "tolerance": "+-3.5%"
+  },
+  "TaSe3.cv_ratio_300K": {
+   "reference": 0.9794,
+   "robustness": {
+    "cv_tase3_cubic": 0.9787,
+    "cv_tase3_linear_200_500": 0.9794,
+    "cv_tase3_all_converged_cubic": 0.9779
+   },
+   "nearest_ablation": {
+    "cv_tase3_harmonic_sscha_freq": 0.9559,
+    "cv_tase3_dfpt_harmonic": 0.9542,
+    "cv_tase3_paper_sign": 0.9324,
+    "cv_tase3_per_atom_3N": 0.925,
+    "cv_tase3_hessian_freq": 1.064
+   },
+   "tolerance": "+-1.5%"
+  },
+  "TaSe3.instability_temperature_K": {
+   "reference": 665.8,
+   "reference_basis": {
+    "100k_650_700_crossing": 681.6,
+    "10k_650_700_crossing": 650.0
+   },
+   "robustness": {
+    "T_inst_released_600_800_10k": 698.9,
+    "T_inst_released_600_800_100k": 695.7,
+    "T_inst_quadratic_fit": 713.5
+   },
+   "nearest_ablation": {
+    "first_released_unstable": 800,
+    "gamma_rotation": 0,
+    "auxiliary": "none"
+   },
+   "tolerance": "+-75 K"
+  }
+ }
+}

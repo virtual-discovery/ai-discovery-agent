@@ -1,0 +1,125 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 7,
+  "task_mb": 9.61,
+  "hidden_values": 4,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 28,
+   "budget": 32,
+   "evaluations": 15,
+   "failed_evaluations": 0,
+   "container_seconds": 18
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "mesh_100",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "mesh_150",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "mesh_200",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "vbm_from_band_path",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "vbm_from_dft_grid",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "vbm_from_outcar_efermi",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "spin_degeneracy_twice",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "raw_forbidden_components",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "symmetries_dat_literal",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "inplane_isotropic",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "electron_doped_from_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "room_temperature_smearing",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "mesh_300",
+    "passes_grading": true
+   },
+   {
+    "name": "model_values_400",
+    "passes_grading": true
+   },
+   {
+    "name": "wt_in_efermi_as_vbm",
+    "passes_grading": true
+   },
+   {
+    "name": "step_occupation_400",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-25T17:02:39Z"
+}

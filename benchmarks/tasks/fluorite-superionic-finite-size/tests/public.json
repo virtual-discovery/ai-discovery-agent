@@ -1,0 +1,5 @@
+{
+ "task_id": "fluorite-superionic-finite-size",
+ "solver_budget": 140,
+ "min_report_chars": 400
+}

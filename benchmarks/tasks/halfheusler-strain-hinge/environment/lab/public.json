@@ -1,0 +1,13 @@
+{
+ "task_id": "halfheusler-strain-hinge",
+ "solver_budget": 30,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "bulk_bands": 1,
+  "band_edges": "1 (mesh <= 24) or 2 (mesh 25-48)",
+  "fermi_level": "1 (mesh <= 32) or 2 (mesh 33-64)",
+  "slab": 1,
+  "prism": "1 (size <= 12), 2 (13-20), 3 (21-28)"
+ },
+ "catalog": "/app/catalog.json"
+}

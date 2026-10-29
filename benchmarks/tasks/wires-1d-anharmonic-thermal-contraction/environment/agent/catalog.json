@@ -1,0 +1,447 @@
+{
+ "source": "Author-archived SSCHA and DFT data for exfoliable 1D wires (Cignarella, Bastonero, Monacelli and Marzari, Materials Cloud Archive 2025, DOI 10.24435/materialscloud:fj-20). Purchases return archived files or verbatim excerpts; nothing is recomputed.",
+ "protocol": {
+  "sscha": "Stochastic self-consistent harmonic approximation (python-sscha) with NequIP machine-learned forces, at fixed cell (the exfoliated DFT geometry, same cell at every temperature). Each run is labelled by temperature and by the number of configurations per population (10000 or 100000).",
+  "auxiliary_matrices": "final SSCHA auxiliary dynamical matrices (archive names final_sscha_*), one file per q-star of the supercell grid",
+  "hessian_matrices": "Hessian of the SSCHA positional free energy (archive names hessian_*), one file per q-star",
+  "dfpt": "zero-temperature harmonic DFPT (PBE, Quantum ESPRESSO 7.2) on the same q grid: \"none\" = ph.x output files as written (incl. the dyn0 q-list), \"1d\" = the archived matrices with the authors' 1D acoustic sum rule applied",
+  "strained_calculation": "the only strained calculation in the archive: TaSe3 pw.x + ph.x (1 x 1 x 10 q grid) at one elongated cell, from the authors' QHA AiiDA archive"
+ },
+ "file_formats": {
+  "dynamical_matrices": "Quantum ESPRESSO / CellConstructor text: header (ntyp, nat, ibrav, celldm(1) = alat in bohr), cell in units of alat, species masses in Rydberg atomic units (amu x 911.444), positions in units of alat; then for each q (2 pi / alat, Cartesian) the 3 x 3 blocks of the force-constant matrix Phi(q) in Ry/bohr^2 (real, imaginary pairs), Phi(q) = sum_R Phi(0, R) exp(-i q.R).",
+  "sscha_log": "verbatim excerpt of the minimization log: the last minimization step and the final RESULTS block (free energy per supercell in meV with stochastic error, gradients, Kong-Liu effective sample size, centroid forces, stress tensor and ab initio average stress in GPa) of the requested run. Configuration-progress and debug lines are removed."
+ },
+ "wires": {
+  "CuC2": {
+   "atoms_per_unit_cell": 3,
+   "supercell": [
+    1,
+    1,
+    6
+   ],
+   "q_star_files": 4,
+   "description": "straight Cu-C-C chain, metallic; DFT cell a = b = 27.0 A (vacuum), c = 4.887 A"
+  },
+  "TaSe3": {
+   "atoms_per_unit_cell": 4,
+   "supercell": [
+    1,
+    1,
+    6
+   ],
+   "q_star_files": 4,
+   "description": "TaSe3 single chain (Ta + 3 Se), metallic; DFT cell 28.22 x 27.66 A (vacuum), c = 3.208 A"
+  },
+  "AuSe2": {
+   "atoms_per_unit_cell": 6,
+   "supercell": [
+    1,
+    1,
+    10
+   ],
+   "q_star_files": 6,
+   "description": "AuSe2 in its insulating double-cell phase (6 atoms); DFT cell 25.37 x 25.37 A (vacuum), c = 7.301 A"
+  }
+ },
+ "sscha_runs": {
+  "CuC2": [
+   {
+    "temperature_K": 0,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 50,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 100,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 200,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 300,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 400,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 500,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 600,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 800,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 1000,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 1200,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 1400,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 1400,
+    "configurations": 100000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 1600,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 1600,
+    "configurations": 100000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 1800,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 1800,
+    "configurations": 100000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 2000,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 2000,
+    "configurations": 100000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   }
+  ],
+  "TaSe3": [
+   {
+    "temperature_K": 0,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 50,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 100,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 200,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 300,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 400,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": false,
+    "hessian": false
+   },
+   {
+    "temperature_K": 500,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 600,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 650,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": "withheld by this task"
+   },
+   {
+    "temperature_K": 650,
+    "configurations": 100000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": "withheld by this task"
+   },
+   {
+    "temperature_K": 700,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": "withheld by this task"
+   },
+   {
+    "temperature_K": 700,
+    "configurations": 100000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": "withheld by this task"
+   },
+   {
+    "temperature_K": 800,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 800,
+    "configurations": 100000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 1000,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": true
+   },
+   {
+    "temperature_K": 1000,
+    "configurations": 100000,
+    "sscha_log": false,
+    "auxiliary": true,
+    "hessian": true
+   }
+  ],
+  "AuSe2": [
+   {
+    "temperature_K": 0,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   },
+   {
+    "temperature_K": 10,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   },
+   {
+    "temperature_K": 50,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   },
+   {
+    "temperature_K": 100,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   },
+   {
+    "temperature_K": 150,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   },
+   {
+    "temperature_K": 200,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   },
+   {
+    "temperature_K": 250,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   },
+   {
+    "temperature_K": 300,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   },
+   {
+    "temperature_K": 400,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   },
+   {
+    "temperature_K": 500,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   },
+   {
+    "temperature_K": 600,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   },
+   {
+    "temperature_K": 800,
+    "configurations": 10000,
+    "sscha_log": true,
+    "auxiliary": true,
+    "hessian": false
+   }
+  ]
+ },
+ "dfpt_sets": {
+  "CuC2": [
+   "none",
+   "1d"
+  ],
+  "TaSe3": [
+   "none",
+   "1d"
+  ],
+  "AuSe2": [
+   "none",
+   "1d"
+  ]
+ },
+ "dft_files": {
+  "CuC2": [
+   "ph.in",
+   "ph.out",
+   "scf.in",
+   "scf.out"
+  ],
+  "TaSe3": [
+   "scf.in",
+   "scf.out"
+  ],
+  "AuSe2": [
+   "ph.in",
+   "scf.in"
+  ]
+ },
+ "requests": {
+  "sscha_log": {
+   "kind": "sscha_log",
+   "wire": "<CuC2|TaSe3|AuSe2>",
+   "temperature_K": 300,
+   "configurations": 10000,
+   "cost": 1
+  },
+  "sscha_matrices": {
+   "kind": "sscha_matrices",
+   "wire": "<wire>",
+   "temperature_K": 300,
+   "configurations": 10000,
+   "matrix": "<auxiliary|hessian>",
+   "cost": 1
+  },
+  "dfpt": {
+   "kind": "dfpt",
+   "wire": "<wire>",
+   "asr": "<none|1d>",
+   "cost": 1
+  },
+  "dft_file": {
+   "kind": "dft_file",
+   "wire": "<wire>",
+   "file": "<name from dft_files>",
+   "cost": 1
+  },
+  "strained_calculation": {
+   "kind": "strained_calculation",
+   "cost": 1
+  }
+ },
+ "budget": 36
+}

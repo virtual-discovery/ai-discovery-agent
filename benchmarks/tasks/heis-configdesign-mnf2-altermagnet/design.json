@@ -1,0 +1,238 @@
+{
+ "task_id": "heis-configdesign-mnf2-altermagnet",
+ "catalog_id": "heis-configdesign-mnf2-altermagnet",
+ "start": "released",
+ "source_group": "li_2026_configdesign",
+ "title": "MnF2: two-sublattice exchange from spin spirals and what they cannot see",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "discovered in raw outputs (metadata inconsistency); cascade",
+   "fork": "What normalization the released energies carry",
+   "wrong_choice": "Trust the archive's documented 'meV / atom' (6 atoms per cell) or read it as per Mn, instead of checking against the VASP total energies of the 6-atom cell",
+   "consequence": "J1-J3, the split-shell mean and T_N scale by 6 (or 2); per-cell predictions by 6 (or 2)",
+   "ablation": "per_atom_label"
+  },
+  {
+   "id": "dp2",
+   "kind": "discovered in raw outputs (unconverged runs); confounder; cascade into the ground-state energy",
+   "fork": "Whether every released spiral is trustworthy",
+   "wrong_choice": "Keep the [214] t >= 0.90 spirals, whose OUTCARs say 'choose ENMAX > 1.12-1.17e3 eV' with ENCUT = 1100 eV (basis-truncated); the same warning text with a harmless X appears in every run",
+   "consequence": "Symmetry-equivalent Neel energies disagree by 1.5 meV; the fit compromises and the hidden Neel-state energies are mispredicted by ~0.7-0.8 meV/cell (tolerance 0.35)",
+   "ablation": "include_truncated_214"
+  },
+  {
+   "id": "dp3",
+   "kind": "discriminating purchases under a binding budget",
+   "fork": "Which propagation directions separate the shells",
+   "wrong_choice": "High-symmetry directions only, or discarding the whole [214] line after spotting its bad end-points ([001] + [121], 10 shells)",
+   "consequence": "Rank-deficient design; J3 = -0.37 meV, held-out RMSE ~2.2 meV/cell ([001] alone: J2 aliased with the 8.0 A shell, J2 = -0.60)",
+   "ablation": "no_214_ten_shells"
+  },
+  {
+   "id": "dp4",
+   "kind": "aliasing exposed only by an off-grid cross-check",
+   "fork": "How to sample q along each direction",
+   "wrong_choice": "Commensurate grid t = 0.2, 0.4, ... with a long-range (10-shell) model selected by in-sample error",
+   "consequence": "Shell harmonics alias on the grid: perfect in-sample fit, held-out RMSE ~2.1 meV/cell, J1 = -0.61",
+   "ablation": "coarse_commensurate_grid"
+  },
+  {
+   "id": "dp5",
+   "kind": "regime judgement (model order)",
+   "fork": "How many exchange shells",
+   "wrong_choice": "J1-J3 (or 6 shells) because the in-sample error barely improves from 3 to 6 shells",
+   "consequence": "Held-out RMSE 0.76-0.89 meV/cell; the 7.0 A (split) shell is missing, so its sublattice mean is 0",
+   "ablation": "six_shells"
+  },
+  {
+   "id": "dp6",
+   "kind": "spiral geometry from the released inputs",
+   "fork": "Reference state and inter-sublattice phase of the two-sublattice spiral",
+   "wrong_choice": "Take q = 0 as the Neel state (gauge-equivalent fit), or ignore the in-cell angle and give both Mn of a cell the phase 2 pi q.R",
+   "consequence": "J2 sign flipped (+2.98 meV, ground state read as ferromagnetic), or no Heisenberg fit at all (RMSE ~28 meV)",
+   "ablation": "neel_reference"
+  },
+  {
+   "id": "dp7",
+   "kind": "finite-temperature estimator",
+   "fork": "How to obtain T_N from the model",
+   "wrong_choice": "Mean-field T_N",
+   "consequence": "T_N ~165 K, +34% over the Monte Carlo value",
+   "ablation": "TN_mean_field"
+  },
+  {
+   "id": "dp8",
+   "kind": "regime judgement (what the data cannot support); symmetry",
+   "fork": "Whether the altermagnetic (sublattice-inequivalent) exchange is identifiable from uniform spirals",
+   "wrong_choice": "Report the minimum-norm value 0 (absence of evidence), or fit separate [110]/[1-10] constants with the wrong (orthorhombic) symmetry, or name the wrong shell",
+   "consequence": "A fabricated or falsely-zero splitting; the identifiable sublattice mean and the first split shell (a<110>, 7.007 A) are what the data support",
+   "ablation": "alt_zero_difference"
+  }
+ ],
+ "graded_fields": [
+  "spiral_predictions_meV_per_cell (40 hidden [111]/[113] spirals: RMSE <= 0.40 meV/cell)",
+  "ground-state energy from the predictions (mean error at the two hidden Neel-state spirals within 0.35 meV/cell)",
+  "J1_meV in [-1.25, -1.00]",
+  "J2_meV in [-3.10, -2.86]",
+  "J3_meV in [-0.09, 0.03]",
+  "neel_temperature_K within 12% of the reference classical Monte Carlo T_N",
+  "altermagnetic_shell.distance_A within 0.05 A of 7.007 A",
+  "altermagnetic_shell.sublattice_mean_J_meV in [-0.11, -0.025]",
+  "altermagnetic_shell.sublattice_difference_J_meV must be null"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 21,
+  "budget": 24,
+  "catalog_size": 61,
+  "oracle_container_seconds": 177,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (sonnet, terra)"
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image); no extra lab dependencies"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/3p6fv-8hd59",
+  "doi": "10.24435/materialscloud:zg-1w",
+  "files_used": [
+   "MnF2.tar.gz"
+  ],
+  "md5": {
+   "MnF2.tar.gz": "4311cefc120956738f6d26440354f3fd"
+  },
+  "license": "CC BY 4.0",
+  "staged": "released energies, moments, INCAR tags, k-mesh and OUTCAR warnings of 61 spirals; no POTCAR"
+ },
+ "exceptions": {},
+ "notes": "Hidden: all [111] and [113] spirals. The basis-truncated [214] t >= 0.90 spirals are purchasable on purpose (dp2); they are excluded from the reference fit by VASP's own ENMAX criterion. The prediction RMSE alone cannot separate contaminated from clean fits (plan-to-plan variance dominates), so the ground-state (Neel) energy of the hidden directions is checked separately. The altermagnetic framing is a strict symmetry consequence (uniform spirals contain only J(Mn1,d)+J(Mn2,d)), not a claim of the source.",
+ "calibration": {
+  "spiral_rmse_meV_per_cell (40 hidden [111]/[113])": {
+   "reference_oracle": 0.165,
+   "robustness": {
+    "8_shells": 0.165,
+    "12_shells": 0.176,
+    "all_clean_available": 0.176
+   },
+   "randomized_reasonable_plans_LOO_shells_pct50_90": [
+    0.226,
+    0.464
+   ],
+   "nearest_ablation": {
+    "include_truncated_214 (passes RMSE, fails ground state)": 0.253,
+    "six_shells": 0.758,
+    "three_shells": 0.889,
+    "coarse_commensurate_grid": 2.097,
+    "no_214_ten_shells": 2.177
+   },
+   "tolerance": "<= 0.40"
+  },
+  "ground_state_error_meV_per_cell (mean at P111-20, P113-20)": {
+   "reference_oracle": 0.108,
+   "robustness": {
+    "8_shells": 0.108,
+    "12_shells": 0.063,
+    "all_clean_available": 0.133
+   },
+   "randomized_clean_plans_pct95": 0.135,
+   "nearest_ablation": {
+    "include_truncated_214": 0.689,
+    "dense_214_with_truncated": 0.829,
+    "randomized_contaminated_plans_pct5": 0.68
+   },
+   "tolerance": "|err| <= 0.35"
+  },
+  "J1_meV": {
+   "reference": -1.126,
+   "reference_oracle": -1.134,
+   "robustness": {
+    "8_shells": -1.134,
+    "12_shells": -1.138,
+    "all_clean_available": -1.126
+   },
+   "randomized_plans_pct1_99": [
+    -1.138,
+    -1.1
+   ],
+   "nearest_ablation": {
+    "coarse_commensurate_grid": -0.606,
+    "per_mn_label": -2.269,
+    "001_only": -0.035
+   },
+   "tolerance": "[-1.25, -1.00]"
+  },
+  "J2_meV": {
+   "reference": -2.983,
+   "reference_oracle": -2.983,
+   "robustness": {
+    "8_shells": -2.983,
+    "12_shells": -2.977,
+    "all_clean_available": -2.982
+   },
+   "randomized_plans_pct1_99": [
+    -2.991,
+    -2.975
+   ],
+   "nearest_ablation": {
+    "neel_reference": 2.983,
+    "per_mn_label": -5.967,
+    "001_only": -0.597
+   },
+   "tolerance": "[-3.10, -2.86]"
+  },
+  "J3_meV": {
+   "reference": -0.027,
+   "reference_oracle": -0.013,
+   "robustness": {
+    "8_shells": -0.013,
+    "12_shells": -0.017,
+    "all_clean_available": -0.016
+   },
+   "randomized_plans_pct1_99": [
+    -0.026,
+    0.005
+   ],
+   "nearest_ablation": {
+    "coarse_commensurate_grid": -0.106,
+    "no_214_ten_shells": -0.372
+   },
+   "tolerance": "[-0.09, 0.03]"
+  },
+  "neel_temperature_K": {
+   "reference_MC_L12_16_20": 122.9,
+   "reference_oracle_numpy_MC_L8_12": 123.2,
+   "robustness": {
+    "coarse_scan_L8_L12": 123.0
+   },
+   "nearest_ablation": {
+    "mean_field": 164.6,
+    "per_mn_label": 245.8,
+    "experimental_value_not_used": 67.3
+   },
+   "tolerance": "within 12% (108.2-137.7 K)"
+  },
+  "altermagnetic_shell": {
+   "distance_reference_A": 7.0074,
+   "nearest_wrong_shell_A": 4.9549,
+   "distance_tolerance_A": 0.05,
+   "mean_reference_meV": -0.06,
+   "mean_oracle_meV": -0.071,
+   "mean_robustness": {
+    "8_shells": -0.071,
+    "12_shells": -0.067,
+    "all_clean_available": -0.07
+   },
+   "mean_randomized_plans_pct1_99": [
+    -0.095,
+    -0.064
+   ],
+   "mean_nearest_ablation": {
+    "six_or_three_shells": 0.0,
+    "per_mn_label": -0.142
+   },
+   "mean_window_meV": "[-0.11, -0.025]",
+   "difference": "must be null; ablations report 0.0 (minimum norm) and 0.0315 (orthorhombic fit)"
+  }
+ }
+}

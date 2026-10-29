@@ -1,0 +1,44 @@
+{
+ "targets": {
+  "sigma_xy_S_per_cm": {
+   "2.0e21": -48.25108941220343,
+   "6.0e21": 108.45977458843323
+  },
+  "sigma_xy_sign_changes": 1,
+  "sign_change_hole_density_cm3": 4.170806987916431e+21,
+  "hole_density_0p30_below_vbm_cm3": 1.3129782735907127e+21,
+  "forbidden_components_max_abs_S_per_cm": {
+   "yz": 0.0,
+   "zx": 0.0
+  },
+  "allowed_hall_components": {
+   "neel_y": [
+    "xy"
+   ],
+   "neel_x": []
+  },
+  "electron_doped_sigma_xy_S_per_cm": null
+ },
+ "thresholds": {
+  "sigma_xy_rel": 0.15,
+  "sign_change_density_rel": 0.08,
+  "hole_density_rel": 0.05,
+  "forbidden_abs_S_cm": 0.5
+ },
+ "reference": {
+  "vbm_eV": 6.1317746175433125,
+  "vbm_k_frac": [
+   -0.01908,
+   -0.00125,
+   -0.41969
+  ],
+  "mu_of_p_eV": {
+   "2.0e21": 5.742864015596978,
+   "6.0e21": 5.3713238383141135
+  },
+  "archive_crossings_eV": [
+   5.5132347289281185
+  ],
+  "archive_energy_zero_eV": 6.13012952
+ }
+}

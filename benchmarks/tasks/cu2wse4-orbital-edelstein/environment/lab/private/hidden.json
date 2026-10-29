@@ -1,0 +1,78 @@
+{
+ "targets": {
+  "orbital_to_spin_ratio": {
+   "VBM-0.10": -11.19498688012404,
+   "CBM+0.10": -0.33894697024456005
+  },
+  "orbital_magnetization_A_per_m": -0.094120234203003,
+  "soc_to_nosoc_orbital_ratio": 0.785990626442058,
+  "edelstein_allowed_components": [
+   "xx",
+   "yy"
+  ],
+  "alpha_yy_over_alpha_xx": -1.0,
+  "chirality_indicator": 0.0,
+  "nonlinear_hall_allowed_components": [
+   "xyz",
+   "xzy",
+   "yxz",
+   "yzx",
+   "zxy",
+   "zyx"
+  ],
+  "sigma_zxy_over_sigma_xyz": -2.0
+ },
+ "thresholds": {
+  "ratio_rel": 0.25,
+  "magnetization_rel": 0.15,
+  "soc_ratio_rel": 0.1,
+  "symmetry_abs": 0.05,
+  "nlh_ratio_abs": 0.15
+ },
+ "reference": {
+  "edges_eV": {
+   "soc": [
+    [
+     -0.5988087302896101,
+     [
+      -0.50631,
+      0.50631,
+      -0.0
+     ]
+    ],
+    [
+     0.6436670354409202,
+     [
+      -0.06214,
+      0.00024,
+      -0.00015
+     ]
+    ]
+   ],
+   "nosoc": [
+    [
+     -0.6444525728058776,
+     [
+      -0.5,
+      -0.5,
+      0.0
+     ]
+    ],
+    [
+     0.6775841216419156,
+     [
+      0.0,
+      0.0,
+      0.0
+     ]
+    ]
+   ]
+  },
+  "mu_soc_at_p": -0.696334863902105,
+  "mu_nosoc_at_p": -0.7166010189678823,
+  "mesh": 128,
+  "kT_eV": 0.03,
+  "gamma_eV": 0.03,
+  "p_cm3": 5e+20
+ }
+}

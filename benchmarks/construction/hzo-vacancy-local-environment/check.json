@@ -1,0 +1,137 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 8,
+  "task_mb": 0.26,
+  "hidden_values": 40,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 32,
+   "budget": 36,
+   "evaluations": 32,
+   "failed_evaluations": 0,
+   "container_seconds": 3
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "pooled_nZr_regression",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "geometry_descriptor_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "composition_blind_pooled_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "x050_model_transferred",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "supercell_decoration_statistics",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "fixed_composition_cell_statistics",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "no_configurational_degeneracy",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "lowest_energy_class_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "unpurchased_classes_dropped",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "castep_sites_given_vasp_cell_environments",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "pbe_description_reported_for_lda",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "castep_pbe_reported_for_lda",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "per_composition_offsets_shared_slopes",
+    "passes_grading": true
+   },
+   {
+    "name": "x050_slopes_plus_composition_offset",
+    "passes_grading": true
+   },
+   {
+    "name": "no_within_class_scatter_correction",
+    "passes_grading": true
+   },
+   {
+    "name": "independent_per_composition_fits",
+    "passes_grading": true
+   },
+   {
+    "name": "common_Zr_slope_both_sublattices",
+    "passes_grading": true
+   },
+   {
+    "name": "lda_other_twelve_sites",
+    "passes_grading": true
+   },
+   {
+    "name": "purchased_site_boltzmann_averages",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T04:12:52Z"
+}

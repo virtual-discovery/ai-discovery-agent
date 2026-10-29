@@ -1,0 +1,156 @@
+{
+ "a0_A": {
+  "reference": 5.768513213357251,
+  "tolerance": "+-0.005",
+  "robustness": {
+   "a0_spin_orbit_60Ry_k8": 5.767712895377129,
+   "a0_scalar_relativistic_80Ry": 5.7676049697917335
+  },
+  "ablations": {
+   "pressures_at_40_Ry": 5.737881773399014,
+   "experimental_lattice_parameter": 5.658
+  },
+  "max_robust_error": 0.0009082435655178855,
+  "nearest_ablation_error": 0.030631439958237472
+ },
+ "delta0_at_a0_eV": {
+  "reference": 0.28476000000000035,
+  "tolerance": "+-0.005",
+  "robustness": {
+   "levels_k8_60Ry": 0.2847400000000011,
+   "levels_k6_50Ry_mv001": 0.28470000000000084,
+   "levels_fixed_occupations_by_degeneracy": 0.2847399999999993
+  },
+  "ablations": {
+   "band_count_identification": 0.5655699999999992,
+   "shifted_mesh_nearest_point": 0.1947499999999991
+  },
+  "max_robust_error": 5.9999999999504894e-05,
+  "nearest_ablation_error": 0.09001000000000126
+ },
+ "s_level_at_a0_eV": {
+  "reference": -0.5655699999999992,
+  "tolerance": "+-0.035",
+  "robustness": {
+   "levels_k8_60Ry": -0.5651899999999994,
+   "levels_k6_50Ry_mv001": -0.5642300000000002,
+   "levels_fixed_occupations_by_degeneracy": -0.5651099999999989
+  },
+  "ablations": {
+   "first_level_above_gamma8_as_s": 2.2986900000000006,
+   "shifted_mesh_nearest_point": -1.8980499999999996,
+   "spin_orbit_off_s_level": -0.47614999999999874
+  },
+  "max_robust_error": 0.0013399999999990087,
+  "nearest_ablation_error": 0.0894200000000005
+ },
+ "c_over_a_at_minus1pct": {
+  "reference": 1.017203997025785,
+  "tolerance": "+-0.0008",
+  "robustness": {
+   "relaxation_and_levels_60Ry_k8": 1.016931143496029,
+   "relaxation_and_levels_80Ry_k8": 1.017611121707719,
+   "scalar_relativistic_relaxation_60Ry_k8": 1.0167645202020203
+  },
+  "ablations": {
+   "c_fixed_at_a0": 1.0101010101010102,
+   "cubic_compression": 1.0,
+   "strain_from_experimental_lattice_parameter": 1.0505555654801184
+  },
+  "max_robust_error": 0.00043947682376455077,
+  "nearest_ablation_error": 0.007102986924774735
+ },
+ "hh_minus_lh_at_minus1pct_eV": {
+  "reference": 0.07221419847328292,
+  "tolerance": "+-0.005",
+  "robustness": {
+   "relaxation_and_levels_60Ry_k8": 0.0712859541984745,
+   "relaxation_and_levels_80Ry_k8": 0.07349412213740436,
+   "scalar_relativistic_relaxation_60Ry_k8": 0.07074984375000071
+  },
+  "ablations": {
+   "c_fixed_at_a0": 0.046149999999999025,
+   "cubic_compression": 0.0,
+   "spin_orbit_off_splitting": 0.12720937499999962,
+   "koster_label_for_heavy_hole": -0.07221419847328292,
+   "strain_from_experimental_lattice_parameter": 0.13987198620203678
+  },
+  "max_robust_error": 0.001464354723282213,
+  "nearest_ablation_error": 0.026064198473283895
+ },
+ "so_minus_hh_at_minus1pct_eV": {
+  "reference": -0.3449757251908405,
+  "tolerance": "+-0.008",
+  "robustness": {
+   "relaxation_and_levels_60Ry_k8": -0.3438117557251914,
+   "relaxation_and_levels_80Ry_k8": -0.3466319847328254,
+   "scalar_relativistic_relaxation_60Ry_k8": -0.34311343749999956
+  },
+  "ablations": {
+   "c_fixed_at_a0": -0.3182899999999993,
+   "cubic_compression": -0.2894099999999984,
+   "koster_label_for_heavy_hole": -0.2727615267175576,
+   "strain_from_experimental_lattice_parameter": -0.5488557606305235
+  },
+  "max_robust_error": 0.001862287690840958,
+  "nearest_ablation_error": 0.026685725190841225
+ },
+ "b_shear_deformation_potential_eV": {
+  "reference": -2.4756314296562403,
+  "tolerance": "+-0.12",
+  "robustness": {
+   "b_6x6_bir_pikus_from_minus1pct": -2.5537990552303262,
+   "b_6x6_bir_pikus_from_pm0.5pct": -2.47929368913732,
+   "b_quadratic_fit_three_strains": -2.4595567489117043
+  },
+  "ablations": {
+   "c_fixed_at_a0": -2.3074999999999513,
+   "koster_label_for_heavy_hole": 2.4756314296562403,
+   "linear_bir_pikus_at_minus1pct": -2.119961852823255,
+   "linear_formula_at_minus0.5pct": -2.3206821766562733
+  },
+  "max_robust_error": 0.07816762557408596,
+  "nearest_ablation_error": 0.15494925299996698
+ },
+ "s_so_crossing_strain_percent": {
+  "reference": -1.9459756204941423,
+  "tolerance": "+-0.1",
+  "robustness": {
+   "crossing_linear_between_bracketing_strains": -1.9419188222710173,
+   "crossing_quadratic_0_to_-2pct": -1.9463041228714677
+  },
+  "ablations": {
+   "crossing_linear_extrapolation_from_0_and_-1pct": -2.138417293154308,
+   "strain_from_experimental_lattice_parameter": -0.03099334867806558
+  },
+  "max_robust_error": 0.004056798223124991,
+  "nearest_ablation_error": 0.19244167266016565
+ },
+ "informational": {
+  "D_minus_eperp_over_epar": {
+   "-0.01": 0.6761832061068702,
+   "-0.005": 0.6361290322580645,
+   "0.005": 0.7904918032786886,
+   "-0.02": 0.6917090909090909,
+   "-0.025": 0.6930835734870318,
+   "-0.03": 0.6952886836027714
+  },
+  "s_minus_so_track_eV": {
+   "0.0": -0.2804499999999983,
+   "-0.01": -0.1493016030534342,
+   "-0.02": 0.009206327272726966,
+   "-0.025": 0.0978971181556183,
+   "-0.03": 0.19051639722863634
+  },
+  "b_one_sided_split": {
+   "0.005": [
+    -0.04686114754098547,
+    0.017904918032786887
+   ],
+   "-0.005": [
+    0.037969354838711666,
+    -0.016361290322580643
+   ]
+  }
+ }
+}

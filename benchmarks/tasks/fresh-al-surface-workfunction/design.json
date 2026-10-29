@@ -1,0 +1,272 @@
+{
+ "task_id": "fresh-al-surface-workfunction",
+ "catalog_id": "fresh-al-surface-workfunction",
+ "start": "fresh",
+ "source_group": "fresh_al_surfaces",
+ "title": "Al(111) and Al(100) slabs: surface energies, work functions and quantum-size effects (PBE)",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Number of Kohn-Sham bands for thick metallic slabs",
+   "wrong_choice": "Leave nbnd at the pw.x default",
+   "consequence": "From 9-10 layers the highest band falls below E_F, SCF iterations jump from ~15 to 30-45 and E_N is too high; sigma_N(111) rises to 0.86-0.93 J/m2 and mimics a Boettger divergence. The ladder average is +0.03 J/m2; 'curing' the apparent divergence with a slope fit gives sigma(111) ~0.68 J/m2",
+   "ablation": "default_bands_ladder",
+   "difficulty_type": "evidence discovered in raw outputs (band count vs E_F, SCF iterations); confounder that mimics the target effect"
+  },
+  {
+   "id": "dp2",
+   "fork": "Bulk reference energy for sigma",
+   "wrong_choice": "Separately converged primitive-cell bulk (40x40x40) instead of a reference sampled like the slab",
+   "consequence": "e_bulk is 1.1 meV/atom lower than the slab-consistent value: sigma(111) +0.012 J/m2 and the 18-layer energies -9 to -11 meV (Boettger divergence grows with N)",
+   "ablation": "primitive_bulk_reference",
+   "difficulty_type": "cascade: a reference choice that is invisible in thin slabs and decisive in the thick-slab extrapolation"
+  },
+  {
+   "id": "dp3",
+   "fork": "How to obtain e_bulk and sigma from the slab energies",
+   "wrong_choice": "Straight-line fit of E_N over the purchasable window (Fiorentini-Methfessel on N = 7-12 or 8-12)",
+   "consequence": "Quantum-size oscillations of E_N bias the fitted slope by 1-2 meV/atom; sigma off by 0.015-0.02 J/m2 and 18-layer energies off by 8-16 meV, with the sign depending on the window",
+   "ablation": "slope_fit_window_N7_12",
+   "difficulty_type": "underdetermined fit; standard practice that fails in this regime; window dependence visible in the agent's own data"
+  },
+  {
+   "id": "dp4",
+   "fork": "Which planar-averaged potential defines the vacuum level",
+   "wrong_choice": "Total local potential (includes exchange-correlation)",
+   "consequence": "phi low by 0.24-0.26 eV; the total potential 'converges' with vacuum (3.79 eV at 15 A, 3.80 at 20 A) to the wrong value",
+   "ablation": "total_local_potential_vacuum_level",
+   "difficulty_type": "convention with a misleading convergence check"
+  },
+  {
+   "id": "dp5",
+   "fork": "Thickness convergence under quantum-size effects",
+   "wrong_choice": "Use cheap thin slabs (N = 3-6), or declare convergence from neighbouring thin slabs and use N = 7",
+   "consequence": "phi(111) -0.05 eV and phi(100) +0.07 eV from N = 3-6; N = 7 alone gives sigma(111) +0.015 J/m2 and 18-layer energies off by ~12 meV. Treating the ordering as unresolved within the oscillations is also wrong (difference 0.21 eV)",
+   "ablation": "thin_slab_ladder_N3_6",
+   "difficulty_type": "finite-size convergence under a binding budget; oscillations rather than monotonic convergence"
+  },
+  {
+   "id": "dp6",
+   "fork": "Slab thickness for the relaxation",
+   "wrong_choice": "Relax a thin (7-layer) slab to save budget (relaxations cost 3x)",
+   "consequence": "Delta d12(111) = +0.53 % instead of ~+1.06 %",
+   "ablation": "relaxation_from_7_layers",
+   "difficulty_type": "budget allocation; finite-size effect on a structural quantity"
+  },
+  {
+   "id": "dp7",
+   "fork": "In-plane k-mesh",
+   "wrong_choice": "Take the cheaper 12x12 mesh as converged for sigma and phi (with a matching 12x12 oriented bulk)",
+   "consequence": "sigma(111) +0.026 J/m2 (k-sampling error of the metallic slab survives the matched reference); the 18-layer energies inherit it",
+   "ablation": "k12_ladder_for_sigma_phi",
+   "difficulty_type": "convergence check that must be bought; consequence visible only by comparing meshes"
+  },
+  {
+   "id": "dp8",
+   "fork": "Surface-energy normalisation",
+   "wrong_choice": "Divide by A instead of 2A (one surface per slab)",
+   "consequence": "sigma doubled",
+   "ablation": "area_counted_once",
+   "difficulty_type": "convention"
+  }
+ ],
+ "graded_fields": [
+  "surface_energy_J_per_m2 111 and 100 (+-0.008 J/m2)",
+  "work_function_eV 111 and 100 (+-0.03 eV)",
+  "work_function_ordering (exact; reference phi100>phi111)",
+  "relaxation_d12_percent_111 (+-0.3 percentage points)",
+  "thick_slab_predictions 111_N18 and 100_N18: free_energy_offset_eV = F18 + 18*537.46 eV (+-6 meV) and work_function_eV (+-0.04 eV)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 16,
+  "oracle_charge": 52,
+  "budget": 58,
+  "oracle_compute_minutes": "48 (gate, dedicated cores) to 60 (Harbor, shared host)",
+  "tool_calls": "45-80 (each calculation of 1-9 min needs several polls)",
+  "wall_time_h": "1-2.5",
+  "gpt6astra_cost_usd": "3-5",
+  "catalog_note": "the request space is open-ended (faces x layers x meshes x vacuum x smearing x bands x relaxations); both ladders at k18 plus relaxations already cost 50 units, so convergence checks compete with thickness coverage",
+  "oracle_runs": {
+   "gate": "check_task passed 2026-10-20 (cpuset 8,9,24,25). First full run: oracle container 2870 s. Final full run on the finished package (check.json, 12:07 UTC): 16 evaluations, 52/58 units, 0 failed, container 3187 s; all 12 ablations fail, 6 robustness variants and 4-significant-digit rounding pass",
+   "harbor": "oracle-r1-fresh-al-surface-workfunction (campaign build-fresh-al-surface-workfunction), reward 1.0, 16 evaluations, 52 units, trial wall time 62 min (06:12-07:14 UTC 2026-10-20); job times 26-269 s for SCFs, 628 and 666 s for the 9- and 10-layer relaxations under host contention"
+  }
+ },
+ "runtime_dependencies": [
+  "Quantum ESPRESSO 6.7 pw.x and pp.x, OpenMPI and numpy from the runtime image; no extra packages"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/rcyfm-68h65",
+  "doi": "10.24435/materialscloud:f3-ym",
+  "files_used": [
+   "SSSP_1.3.0_PBE_precision.tar.gz -> Al.pbe-n-kjpaw_psl.1.0.0.UPF",
+   "SSSP_1.3.0_PBE_precision.json",
+   "LICENSE.txt"
+  ],
+  "md5": {
+   "SSSP_1.3.0_PBE_precision.tar.gz": "fde94756886f32ada7bf597547557eb5",
+   "SSSP_1.3.0_PBE_precision.json": "1692c5c9ce89e1c7c783f8f0eee0cbfa",
+   "LICENSE.txt": "c0f9df05fb4cd4921f4caa25606815ef",
+   "Al.pbe-n-kjpaw_psl.1.0.0.UPF": "cfc449ca30b5f3223ec38ddd88ac046d"
+  },
+  "sha256": {
+   "Al.pbe-n-kjpaw_psl.1.0.0.UPF": "fd7b78921e6d0939095b681c328732668eaefd1dee6882fdbc03be463550cc97"
+  },
+  "license": "Archive CC BY 4.0; the PSLibrary 1.0.0 Al file is GPL v2 or later (per the record's LICENSE.txt), vendored unmodified into the lab image only"
+ },
+ "exceptions": {},
+ "notes": "Fresh start: all reference values come from construction runs through slab_qe.calculate (the task_lab.run code path) on the builder's two cores. The 13-, 14- and 18-layer slabs at 18x18 are reference-only (lab limit 12 layers). Graded thick-slab energies are offsets from an arbitrary anchor (-537.46 eV/atom) so that 4-significant-digit rounding resolves 0.1 meV. Al(110), dipole corrections and one-sided relaxations from the candidate design were dropped (see the construction README).",
+ "calibration": {
+  "surface_energy_J_per_m2.111": {
+   "reference": 0.8228,
+   "robustness_errors": {
+    "oracle_plan_N7_12": -0.0002,
+    "window_N8_12": -0.0032,
+    "window_N9_12_kz9_or_12": -0.0038,
+    "k24_ladders_for_sigma_phi": 0.0005,
+    "wide_vacuum_window_2A": -0.0002,
+    "d12_from_N10_only": -0.0002
+   },
+   "nearest_failing_ablations_errors": {
+    "primitive_bulk_reference": 0.0122,
+    "slope_fit_window_N7_12": 0.0146,
+    "single_7_layer_slab": 0.0146
+   },
+   "tolerance": "+-0.008"
+  },
+  "surface_energy_J_per_m2.100": {
+   "reference": 0.9504,
+   "robustness_errors": {
+    "oracle_plan_N7_12": 0.0019,
+    "window_N8_12": 0.0038,
+    "window_N9_12_kz9_or_12": -0.0007,
+    "k24_ladders_for_sigma_phi": 0.0017,
+    "wide_vacuum_window_2A": 0.0019,
+    "d12_from_N10_only": 0.0019
+   },
+   "nearest_failing_ablations_errors": {
+    "primitive_bulk_reference": 0.0096,
+    "k12_ladder_for_sigma_phi": 0.0115,
+    "slope_fit_window_N7_12": -0.0183
+   },
+   "tolerance": "+-0.008"
+  },
+  "work_function_eV.111": {
+   "reference": 4.0608,
+   "robustness_errors": {
+    "oracle_plan_N7_12": 0.0024,
+    "window_N8_12": 0.0087,
+    "window_N9_12_kz9_or_12": 0.0024,
+    "k24_ladders_for_sigma_phi": -0.0008,
+    "wide_vacuum_window_2A": 0.0024,
+    "d12_from_N10_only": 0.0024
+   },
+   "nearest_failing_ablations_errors": {
+    "thin_slab_ladder_N3_6": -0.0496,
+    "total_local_potential_vacuum_level": -0.2429
+   },
+   "tolerance": "+-0.03"
+  },
+  "work_function_eV.100": {
+   "reference": 4.2687,
+   "robustness_errors": {
+    "oracle_plan_N7_12": -0.0058,
+    "window_N8_12": -0.0017,
+    "window_N9_12_kz9_or_12": 0.0063,
+    "k24_ladders_for_sigma_phi": -0.0115,
+    "wide_vacuum_window_2A": -0.0058,
+    "d12_from_N10_only": -0.0058
+   },
+   "nearest_failing_ablations_errors": {
+    "thin_slab_ladder_N3_6": 0.0737,
+    "total_local_potential_vacuum_level": -0.2559
+   },
+   "tolerance": "+-0.03"
+  },
+  "relaxation_d12_percent_111": {
+   "reference": 1.0608,
+   "robustness_errors": {
+    "oracle_plan_N7_12": -0.0882,
+    "window_N8_12": -0.0882,
+    "window_N9_12_kz9_or_12": -0.0882,
+    "k24_ladders_for_sigma_phi": -0.0882,
+    "wide_vacuum_window_2A": -0.0882,
+    "d12_from_N10_only": -0.1045
+   },
+   "nearest_failing_ablations_errors": {
+    "relaxation_from_7_layers": -0.5328
+   },
+   "tolerance": "+-0.3"
+  },
+  "thick 111_N18 free_energy_offset_eV": {
+   "reference": 0.7047,
+   "robustness_errors": {
+    "oracle_plan_N7_12": -1.4171,
+    "window_N8_12": -4.0364,
+    "window_N9_12_kz9_or_12": -4.1984,
+    "k24_ladders_for_sigma_phi": -1.4171,
+    "wide_vacuum_window_2A": -1.4171,
+    "d12_from_N10_only": -1.4171
+   },
+   "nearest_failing_ablations_errors": {
+    "slope_fit_window_N8_12": 8.1638,
+    "primitive_bulk_reference": -11.1898,
+    "single_7_layer_slab": 11.6796
+   },
+   "tolerance": "+-6.0"
+  },
+  "thick 100_N18 free_energy_offset_eV": {
+   "reference": 0.9442,
+   "robustness_errors": {
+    "oracle_plan_N7_12": -2.3392,
+    "window_N8_12": -0.4133,
+    "window_N9_12_kz9_or_12": 1.5477,
+    "k24_ladders_for_sigma_phi": -2.3392,
+    "wide_vacuum_window_2A": -2.3392,
+    "d12_from_N10_only": -2.3392
+   },
+   "nearest_failing_ablations_errors": {
+    "slope_fit_window_N8_12": 6.8028,
+    "k12_ladder_for_sigma_phi": 7.4366,
+    "primitive_bulk_reference": -9.3568
+   },
+   "tolerance": "+-6.0"
+  },
+  "thick 111_N18 work_function_eV": {
+   "reference": 4.0642,
+   "robustness_errors": {
+    "oracle_plan_N7_12": -0.0009,
+    "window_N8_12": 0.0054,
+    "window_N9_12_kz9_or_12": -0.001,
+    "k24_ladders_for_sigma_phi": -0.0009,
+    "wide_vacuum_window_2A": -0.001,
+    "d12_from_N10_only": -0.0009
+   },
+   "nearest_failing_ablations_errors": {
+    "thin_slab_ladder_N3_6": -0.053,
+    "total_local_potential_vacuum_level": -0.2463
+   },
+   "tolerance": "+-0.04"
+  },
+  "thick 100_N18 work_function_eV": {
+   "reference": 4.2688,
+   "robustness_errors": {
+    "oracle_plan_N7_12": -0.0059,
+    "window_N8_12": -0.0018,
+    "window_N9_12_kz9_or_12": 0.0062,
+    "k24_ladders_for_sigma_phi": -0.0059,
+    "wide_vacuum_window_2A": -0.0059,
+    "d12_from_N10_only": -0.0059
+   },
+   "nearest_failing_ablations_errors": {
+    "thin_slab_ladder_N3_6": 0.0736,
+    "total_local_potential_vacuum_level": -0.256
+   },
+   "tolerance": "+-0.04"
+  },
+  "work_function_ordering": {
+   "reference": "phi100>phi111",
+   "nearest_ablation": "unresolved (fails)",
+   "margin": "phi(100) - phi(111) = 0.208 eV"
+  }
+ }
+}

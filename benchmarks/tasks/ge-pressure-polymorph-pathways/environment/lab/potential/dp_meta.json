@@ -1,0 +1,26 @@
+{
+ "d0": {
+  "rcut": 3.3,
+  "rcut_smth": 2.0,
+  "sel": 16,
+  "neuron": [
+   8,
+   16,
+   32
+  ]
+ },
+ "d1": {
+  "rcut": 6.6,
+  "rcut_smth": 3.3,
+  "sel": 96,
+  "neuron": [
+   16,
+   32,
+   64
+  ],
+  "axis": 32
+ },
+ "bias_atom_e": -4.52,
+ "source": "allfiles/Fantasy-frz.pb of Materials Cloud archive 238ad-1bg44 (CC BY 4.0)",
+ "model_version": "1.1"
+}

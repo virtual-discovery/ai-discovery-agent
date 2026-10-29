@@ -1,0 +1,11 @@
+# Physical-reasoning rubric
+
+Each item is a checkable statement that the report must make explicitly.
+
+1. States the polar-phonon relation ω_LO² − ω_TO² = 4π e² Z*² / (Ω ε∞ μ) (or its tensor form) in consistent units, screens the macroscopic field with the clamped-ion ε∞ rather than ε0, identifies the analytic ph.x frequency as the TO, and obtains ε0 from the Lyddane–Sachs–Teller relation.
+2. Recognises that Γ-centred meshes sample the Γ point, where the PBE gap of InP at a0 is only about 0.4 eV, so that ε∞ and Z* come out far too large (with a large violation of charge neutrality ΣZ* ≠ 0), while total energies, pressures and the TO frequency look converged on the same meshes; and therefore tests k convergence on ε∞ and Z* themselves.
+3. Notes that a coarse shifted mesh gives plausible but wrong ε∞ and Z* whose errors largely cancel in Z*²/ε∞, so a converged-looking LO frequency does not validate ε∞, Z* or ε0; and uses the same k mesh at every volume so that the volume derivatives are not polluted by k-point error.
+4. Decomposes the hydrostatic trend: Z* decreases under compression (more covalent bonding), ε∞ decreases (the gap opens), the 1/Ω factor increases and the TO stiffens; gives the net sign and size of the change of ω_LO − ω_TO and says which factors compete, rather than attributing it to "ionicity" from a single pair of numbers.
+5. Explains the direction dependence in the [001]-strained crystal: the TO triplet splits into a z-polarized singlet and an xy doublet (identified from the eigenvectors), Z* and ε∞ become tetragonal tensors, and the macroscopic field dresses only the TO component along q, so q ∥ z uses Z*_zz²/ε_zz with the singlet and q ∥ x uses Z*_xx²/ε_xx with a doublet component.
+6. Compares with experiment (TO/LO ≈ 304/345 cm⁻¹, ε∞ ≈ 9.6) and attributes the too-small splitting mainly to the PBE overestimate of ε∞ (gap underestimate), quantified by substituting the experimental ε∞, and the soft TO mainly to the expanded PBE lattice parameter.
+7. States what the calculations do not support: they are static-lattice, harmonic PBE values for one pseudopotential set; ε∞ of this small-gap system still drifts slowly with denser meshes; the PBE gap at Γ shrinks towards zero on expansion (a regime where the shifted-mesh results become unreliable); and the derivatives are local to a0.

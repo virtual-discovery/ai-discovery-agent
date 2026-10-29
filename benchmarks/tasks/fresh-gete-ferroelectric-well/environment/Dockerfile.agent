@@ -1,0 +1,6 @@
+FROM ai-theorist-benchmark-runtime:20261007
+# Calculations go through the budgeted lab service: remove Quantum ESPRESSO from the agent image.
+RUN rm -f $(dpkg -L quantum-espresso | grep '^/usr/bin/.*\.x$')
+COPY agent/ /app/
+RUN chown -R agent:agent /app
+WORKDIR /app

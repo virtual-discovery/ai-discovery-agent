@@ -1,0 +1,446 @@
+{
+ "title": "n-type Mg2Si, Mg2Ge, Mg2Sn: archived calculations of the conduction states at X (Sugawara 2026, Zenodo 23319151)",
+ "codes": "ecalj (all-electron LDA, one-shot G0W0, QSGW; PMT basis), Questaal 7.14.1 (QSGW and QSGW with ladder diagrams in W, Mg2Si), BerkeleyGW 4.0 + Quantum ESPRESSO 7.3.1 (pseudopotential PBE and G0W0; PBE momentum matrix elements), Quantum ESPRESSO 7.3.1/7.5 (electron-phonon, LDA). No spin-orbit coupling.",
+ "structure": "antifluorite (Fm-3m); X = (1, 0, 0) in units of 2 pi / a (three equivalent X valleys); W = (1, 1/2, 0).",
+ "lattice_constants_A": {
+  "Mg2Si": 6.338,
+  "Mg2Ge": 6.3933,
+  "Mg2Sn": 6.7601,
+  "note": "room-temperature values, used by the production calculations"
+ },
+ "valence_bands_ecalj": {
+  "Mg2Si": 4,
+  "Mg2Ge": 9,
+  "Mg2Sn": 9
+ },
+ "requests": {
+  "bands": {
+   "cost": 1,
+   "format": {
+    "kind": "bands",
+    "compound": "Mg2Si|Mg2Ge|Mg2Sn",
+    "level": "LDA|QSGW"
+   },
+   "returns": "ecalj band energies along L-Gamma-X-W-Gamma (bands N_v-2 ... N_v+4), production calculations; QSGW at the final self-energy."
+  },
+  "x_scan": {
+   "cost": 1,
+   "format": {
+    "kind": "x_scan",
+    "compound": "...",
+    "level": "LDA|QSGW",
+    "direction": "X-Gamma|X-W"
+   },
+   "returns": "ecalj fine scan from X, 21 points with step 0.004 (2 pi / a), bands N_v ... N_v+3."
+  },
+  "qsgw_box": {
+   "cost": 5,
+   "format": {
+    "kind": "qsgw_box",
+    "compound": "...",
+    "box": "coarse|fine_0.01|fine_0.005"
+   },
+   "returns": "QSGW (final self-energy) energies of bands N_v+1 and N_v+2 on a box of wave vectors on one side of X: q = k - X with 0 <= q_par <= q_max, 0 <= q_y, q_z <= q_max (one octant of the neighbourhood of the valley along x), on a uniform grid. coarse: step 0.02, q_par <= 0.24, q_y, q_z <= 0.16 (all three compounds); fine_0.01: step 0.01, 0.20 / 0.14; fine_0.005: step 0.005, 0.10 / 0.07 (Mg2Si only)."
+  },
+  "momentum_matrix": {
+   "cost": 1,
+   "format": {
+    "kind": "momentum_matrix",
+    "points": [
+     [
+      0.0,
+      0.0,
+      0.02
+     ]
+    ]
+   },
+   "returns": "Mg2Si only, pseudopotential PBE (Quantum ESPRESSO): energies of bands 13 and 14 (the two lowest conduction states at X; bands 1-12 occupied) and |<13|p|14>|^2 summed over the three Cartesian components (atomic units), at up to 40 points (q_par, q_y, q_z) of the coarse-box grid per request."
+  },
+  "tote": {
+   "cost": 1,
+   "format": {
+    "kind": "tote",
+    "run": "<run>"
+   },
+   "returns": "Rows of an ecalj TOTE file at Gamma and X (bands N_v-1 ... N_v+3), as written by the code, with its first line."
+  },
+  "questaal": {
+   "cost": 1,
+   "format": {
+    "kind": "questaal",
+    "run": "<run>"
+   },
+   "returns": "Questaal eigenvalues (Ry) of bands 1-12 at Gamma and X for Mg2Si (band 4 is the valence-band maximum)."
+  },
+  "pseudopotential_g0w0": {
+   "cost": 1,
+   "format": {
+    "kind": "pseudopotential_g0w0",
+    "run": "<run>"
+   },
+   "returns": "BerkeleyGW eqp1.dat rows at Gamma and X: band, E_DFT (PBE) and E_qp (eV)."
+  },
+  "electron_phonon": {
+   "cost": 1,
+   "format": [
+    {
+     "kind": "electron_phonon",
+     "compound": "Mg2Si|Mg2Ge",
+     "method": "AHC",
+     "q_grid": 24,
+     "temperature_K": 0,
+     "ge_3d": "core|valence (Mg2Ge only)"
+    },
+    {
+     "kind": "electron_phonon",
+     "compound": "Mg2Si|Mg2Ge",
+     "method": "ZG",
+     "supercell": 4,
+     "temperature_K": 300
+    }
+   ],
+   "returns": "Electron-phonon renormalization of the band edges (meV), LDA with pseudopotentials: AHC per state (all broadenings), ZG as changes of X3 - X1 and of the gap."
+  }
+ },
+ "items": {
+  "bands": [
+   {
+    "compound": "Mg2Si",
+    "level": "LDA"
+   },
+   {
+    "compound": "Mg2Si",
+    "level": "QSGW"
+   },
+   {
+    "compound": "Mg2Ge",
+    "level": "LDA"
+   },
+   {
+    "compound": "Mg2Ge",
+    "level": "QSGW"
+   },
+   {
+    "compound": "Mg2Sn",
+    "level": "LDA"
+   },
+   {
+    "compound": "Mg2Sn",
+    "level": "QSGW"
+   }
+  ],
+  "x_scan": [
+   {
+    "compound": "Mg2Si",
+    "level": "LDA",
+    "direction": "X-Gamma"
+   },
+   {
+    "compound": "Mg2Si",
+    "level": "LDA",
+    "direction": "X-W"
+   },
+   {
+    "compound": "Mg2Si",
+    "level": "QSGW",
+    "direction": "X-Gamma"
+   },
+   {
+    "compound": "Mg2Si",
+    "level": "QSGW",
+    "direction": "X-W"
+   },
+   {
+    "compound": "Mg2Ge",
+    "level": "LDA",
+    "direction": "X-Gamma"
+   },
+   {
+    "compound": "Mg2Ge",
+    "level": "LDA",
+    "direction": "X-W"
+   },
+   {
+    "compound": "Mg2Ge",
+    "level": "QSGW",
+    "direction": "X-Gamma"
+   },
+   {
+    "compound": "Mg2Ge",
+    "level": "QSGW",
+    "direction": "X-W"
+   },
+   {
+    "compound": "Mg2Sn",
+    "level": "LDA",
+    "direction": "X-Gamma"
+   },
+   {
+    "compound": "Mg2Sn",
+    "level": "LDA",
+    "direction": "X-W"
+   },
+   {
+    "compound": "Mg2Sn",
+    "level": "QSGW",
+    "direction": "X-Gamma"
+   },
+   {
+    "compound": "Mg2Sn",
+    "level": "QSGW",
+    "direction": "X-W"
+   }
+  ],
+  "qsgw_box": [
+   {
+    "compound": "Mg2Si",
+    "box": "coarse"
+   },
+   {
+    "compound": "Mg2Si",
+    "box": "fine_0.01"
+   },
+   {
+    "compound": "Mg2Si",
+    "box": "fine_0.005"
+   },
+   {
+    "compound": "Mg2Ge",
+    "box": "coarse"
+   },
+   {
+    "compound": "Mg2Sn",
+    "box": "coarse"
+   }
+  ],
+  "tote": [
+   {
+    "run": "g0w0_lda/Mg2Si",
+    "description": "All-electron one-shot G0W0 from the LDA (ecalj), production settings: SCF 8^3, GW k mesh 6^3, room-temperature lattice."
+   },
+   {
+    "run": "g0w0_lda/Mg2Ge",
+    "description": "As g0w0_lda/Mg2Si, for Mg2Ge."
+   },
+   {
+    "run": "g0w0_lda/Mg2Sn",
+    "description": "As g0w0_lda/Mg2Si, for Mg2Sn."
+   },
+   {
+    "run": "g0w0_pbe/Mg2Si",
+    "description": "All-electron one-shot G0W0 from the PBE (ecalj), otherwise as g0w0_lda."
+   },
+   {
+    "run": "g0w0_pbe/Mg2Ge",
+    "description": "As g0w0_pbe/Mg2Si, for Mg2Ge."
+   },
+   {
+    "run": "qsgw_final_iteration/Mg2Si",
+    "description": "Production all-electron QSGW run (ecalj, SCF 8^3, GW k mesh 6^3, room-temperature lattice a = 6.3380 A): TOTE file of iteration 10, the last."
+   },
+   {
+    "run": "qsgw_final_iteration/Mg2Ge",
+    "description": "As qsgw_final_iteration/Mg2Si, for Mg2Ge (a = 6.3933 A)."
+   },
+   {
+    "run": "qsgw80/Mg2Si",
+    "description": "QSGW80: QSGW with the self-energy scaled by 0.8, continued from the production run; TOTE file of the last iteration."
+   },
+   {
+    "run": "qsgw80/Mg2Ge",
+    "description": "As qsgw80/Mg2Si, for Mg2Ge."
+   },
+   {
+    "run": "qsgw80/Mg2Sn",
+    "description": "As qsgw80/Mg2Si, for Mg2Sn."
+   },
+   {
+    "run": "qsgw_low_temperature_lattice/Mg2Si",
+    "description": "QSGW of Mg2Si as the production run but at a = 6.3218 A, the lattice constant at 100 K (the lowest temperature at which it was measured; Kasai et al. 2017 thermal expansion applied to the room-temperature 6.3380 A); TOTE file of the last iteration."
+   }
+  ],
+  "questaal": [
+   {
+    "run": "prod/qsgw",
+    "description": "Questaal QSGW of Mg2Si, production basis (LMTO with an empty sphere at the 4b site, no APW), GW k mesh 4^3, final self-energy."
+   },
+   {
+    "run": "prod/qsgw_ladder",
+    "description": "As prod/qsgw, with ladder diagrams in the screened interaction W (lmgw --bsw, window of 4 valence and 4 conduction bands), final self-energy."
+   },
+   {
+    "run": "prod/qsgw_ladder_nc8",
+    "description": "As prod/qsgw_ladder with 8 conduction bands in the ladder window."
+   },
+   {
+    "run": "prod/qsgw_ladder_nc12",
+    "description": "As prod/qsgw_ladder with 12 conduction bands in the ladder window."
+   },
+   {
+    "run": "prod/lda_only",
+    "description": "LDA of Mg2Si in the production Questaal basis."
+   },
+   {
+    "run": "basis2/lda",
+    "description": "LDA of Mg2Si in a larger Questaal LMTO basis (with the empty sphere)."
+   },
+   {
+    "run": "basis2/qsgw",
+    "description": "QSGW of Mg2Si in the larger basis, final self-energy."
+   },
+   {
+    "run": "basis2/qsgw_ladder",
+    "description": "QSGW with ladder diagrams in W in the larger basis (window 4/4), final self-energy."
+   }
+  ],
+  "pseudopotential_g0w0": [
+   {
+    "run": "Mg2Si/gpp_all_electron_density",
+    "description": "plasmon-pole model (Hybertsen-Louie GPP) with the charge density of all electrons"
+   },
+   {
+    "run": "Mg2Si/gpp_valence_density",
+    "description": "GPP with the charge density of the valence bands only"
+   },
+   {
+    "run": "Mg2Si/full_frequency",
+    "description": "full frequency dependence (contour deformation), no plasmon-pole model"
+   },
+   {
+    "run": "Mg2Ge/gpp_all_electron_density",
+    "description": "GPP with the charge density of all electrons"
+   },
+   {
+    "run": "Mg2Ge/gpp_valence_density",
+    "description": "GPP with the charge density of the valence bands only"
+   },
+   {
+    "run": "Mg2Ge/gpp_semicore_d_valence_density",
+    "description": "GPP with the charge density of the Ge 3d and valence bands"
+   },
+   {
+    "run": "Mg2Ge/full_frequency",
+    "description": "full frequency dependence (contour deformation), no plasmon-pole model"
+   }
+  ],
+  "electron_phonon": [
+   {
+    "compound": "Mg2Ge",
+    "method": "AHC",
+    "q_grid": 20,
+    "temperature_K": 0,
+    "ge_3d": "core"
+   },
+   {
+    "compound": "Mg2Ge",
+    "method": "AHC",
+    "q_grid": 20,
+    "temperature_K": 300,
+    "ge_3d": "core"
+   },
+   {
+    "compound": "Mg2Ge",
+    "method": "AHC",
+    "q_grid": 24,
+    "temperature_K": 0,
+    "ge_3d": "core"
+   },
+   {
+    "compound": "Mg2Ge",
+    "method": "AHC",
+    "q_grid": 24,
+    "temperature_K": 0,
+    "ge_3d": "valence"
+   },
+   {
+    "compound": "Mg2Ge",
+    "method": "AHC",
+    "q_grid": 24,
+    "temperature_K": 300,
+    "ge_3d": "core"
+   },
+   {
+    "compound": "Mg2Ge",
+    "method": "AHC",
+    "q_grid": 24,
+    "temperature_K": 300,
+    "ge_3d": "valence"
+   },
+   {
+    "compound": "Mg2Ge",
+    "method": "ZG",
+    "supercell": 4,
+    "temperature_K": 0
+   },
+   {
+    "compound": "Mg2Ge",
+    "method": "ZG",
+    "supercell": 4,
+    "temperature_K": 300
+   },
+   {
+    "compound": "Mg2Si",
+    "method": "AHC",
+    "q_grid": 16,
+    "temperature_K": 0
+   },
+   {
+    "compound": "Mg2Si",
+    "method": "AHC",
+    "q_grid": 16,
+    "temperature_K": 300
+   },
+   {
+    "compound": "Mg2Si",
+    "method": "AHC",
+    "q_grid": 20,
+    "temperature_K": 0
+   },
+   {
+    "compound": "Mg2Si",
+    "method": "AHC",
+    "q_grid": 20,
+    "temperature_K": 300
+   },
+   {
+    "compound": "Mg2Si",
+    "method": "AHC",
+    "q_grid": 24,
+    "temperature_K": 0
+   },
+   {
+    "compound": "Mg2Si",
+    "method": "AHC",
+    "q_grid": 24,
+    "temperature_K": 300
+   },
+   {
+    "compound": "Mg2Si",
+    "method": "ZG",
+    "supercell": 3,
+    "temperature_K": 0
+   },
+   {
+    "compound": "Mg2Si",
+    "method": "ZG",
+    "supercell": 3,
+    "temperature_K": 300
+   },
+   {
+    "compound": "Mg2Si",
+    "method": "ZG",
+    "supercell": 4,
+    "temperature_K": 0
+   },
+   {
+    "compound": "Mg2Si",
+    "method": "ZG",
+    "supercell": 4,
+    "temperature_K": 300
+   }
+  ]
+ },
+ "tote_note_from_archive_README": "Columns: q (three, units of 2 pi / a), band, q index, the eigenvalue of the Hamiltonian that entered the calculation, the quasiparticle energy eQP (Z = 1), eQP without Z, and Z; energies in eV. The one-shot G0W0 values of the paper are eQP; in a QSGW run the file of iteration N holds, in the first energy column, the eigenvalues of the static QSGW Hamiltonian built from the self-energy of iteration N - 1.",
+ "budget": 32,
+ "experiment": "/app/experiment.json"
+}

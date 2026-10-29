@@ -1,0 +1,178 @@
+{
+ "task_id": "heis-configdesign-fe",
+ "catalog_id": "heis-configdesign-fe",
+ "start": "released",
+ "source_group": "li_2026_configdesign",
+ "title": "bcc Fe: transferable Heisenberg exchange and its breakdown",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which spiral directions to buy and fit",
+   "wrong_choice": "[001] spirals only",
+   "consequence": "Shells alias (J1 = J2); J1 ~3 meV and [214] predictions off by ~24 meV/atom",
+   "ablation": "spiral_001_only"
+  },
+  {
+   "id": "dp2",
+   "fork": "Conical vs flat spiral convention",
+   "wrong_choice": "Fit the 30-degree cone energies as flat spirals",
+   "consequence": "J1 and D low by sin^2(30 deg) = 1/4",
+   "ablation": "flat_spiral_convention"
+  },
+  {
+   "id": "dp3",
+   "fork": "Number of exchange shells",
+   "wrong_choice": "Short-range model (4 shells) chosen by in-sample error",
+   "consequence": "Held-out [214] RMSE ~2.9 meV/atom, above the 2.5 tolerance",
+   "ablation": "four_shells"
+  },
+  {
+   "id": "dp4",
+   "fork": "Whether the small-angle model describes large-angle disorder",
+   "wrong_choice": "Apply the spiral-fitted J to the random states",
+   "consequence": "Random-state energies ~47 meV/atom too low",
+   "ablation": "spiral_model_for_random_states"
+  },
+  {
+   "id": "dp5",
+   "fork": "Which supercells to buy random states from",
+   "wrong_choice": "Small 3x4x1 or 2x2x1 cells whose images alias shells",
+   "consequence": "Random-state mean energy off by 20-25 meV/atom",
+   "ablation": "random_341_only"
+  },
+  {
+   "id": "dp6",
+   "fork": "Lattice constant of the random-state cells",
+   "wrong_choice": "Use the spiral cell (2.87 A) shell radii for the 2.83 A supercells",
+   "consequence": "No neighbours found; model degenerates to a constant, mean energy off by ~23 meV/atom",
+   "ablation": "random_wrong_lattice_constant"
+  },
+  {
+   "id": "dp7",
+   "fork": "Units of q for the stiffness",
+   "wrong_choice": "Reciprocal-lattice q without the 2 pi factor",
+   "consequence": "D off by (2 pi)^2",
+   "ablation": "stiffness_without_2pi"
+  },
+  {
+   "id": "dp8",
+   "fork": "Source of the stiffness",
+   "wrong_choice": "Pair sum of a truncated exchange model",
+   "consequence": "D off by ~26% because long-range tails are unconstrained",
+   "ablation": "stiffness_from_truncated_model"
+  },
+  {
+   "id": "dp9",
+   "fork": "Which J1 answers the question",
+   "wrong_choice": "Report J1 from the large-angle (random-state) model",
+   "consequence": "J1 ~28 meV instead of ~21 meV",
+   "ablation": "J1_from_random_states"
+  }
+ ],
+ "graded_fields": [
+  "spiral_predictions_meV_per_atom (RMSE <= 2.5 meV/atom)",
+  "random_predictions_meV_per_atom (mean within 10, RMSE <= 12 meV/atom)",
+  "J1_meV in [18.0, 24.5]",
+  "spin_wave_stiffness_meV_A2 within 15% of the small-q reference"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 58,
+  "budget": 60,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": {
+   "campaign": "dev-fe-pilot1 (2026-10-19, harness 0.5.0)",
+   "claude-sonnet-5": {
+    "reward": 1.0,
+    "api_calls": 55,
+    "lab_evaluations": 59,
+    "minutes": 13.4,
+    "cost_usd": 1.77,
+    "astra_equiv_usd": 8.53
+   },
+   "gpt-5.6-terra": {
+    "reward": 1.0,
+    "api_calls": 24,
+    "lab_evaluations": 60,
+    "minutes": 6.2,
+    "cost_usd": 0.52,
+    "astra_equiv_usd": 2.49
+   },
+   "flag": "dev-easy: both development models pass; conventions and fitting hygiene did not discriminate"
+  }
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/3p6fv-8hd59",
+  "files_used": [
+   "Fe.tar.gz"
+  ],
+  "md5": {
+   "Fe.tar.gz": "3e76b9b6eaeba27b7873be4327806477"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Curie temperature deliberately not graded: across equally valid fits the classical RPA Tc ranges 205-915 K (sometimes negative), so it is not uniquely recoverable; it is a rubric point instead.",
+ "calibration": {
+  "spiral_rmse_meV (held-out [214])": {
+   "reference_oracle": 1.26,
+   "robustness": {
+    "ten_shells_all_data": 0.92
+   },
+   "nearest_ablation": {
+    "four_shells": 2.93,
+    "001_only": 24.5
+   },
+   "tolerance": "<= 2.5"
+  },
+  "J1_meV": {
+   "reference_all_data": 20.93,
+   "reference_oracle": 20.58,
+   "budgeted_designs_5_95pct": [
+    19.0,
+    23.5
+   ],
+   "nearest_ablation": {
+    "from_random_states": 28.0,
+    "flat_spiral": 5.2,
+    "001_only": 3.3
+   },
+   "tolerance": "[18.0, 24.5]"
+  },
+  "spin_wave_stiffness_meV_A2": {
+   "reference": 106.5,
+   "robustness": {
+    "three_smallest_q": 103.6
+   },
+   "nearest_ablation": {
+    "truncated_model_sum": 79.3,
+    "flat_spiral": 26.6,
+    "no_2pi": 4206
+   },
+   "tolerance": "within 15%"
+  },
+  "random_mean_error_meV (hidden 3x3x4)": {
+   "reference_oracle": 3.8,
+   "robustness": {
+    "eight_shells_all_cells": 5.0
+   },
+   "nearest_ablation": {
+    "221_three_shells": -20.5,
+    "wrong_lattice": -23.1,
+    "341_only": -24.8,
+    "spiral_model": -47.1
+   },
+   "tolerance": "|err| <= 10"
+  },
+  "random_rmse_meV": {
+   "reference_oracle": 4.04,
+   "robustness": {
+    "eight_shells_all_cells": 5.13
+   },
+   "tolerance": "<= 12"
+  }
+ }
+}

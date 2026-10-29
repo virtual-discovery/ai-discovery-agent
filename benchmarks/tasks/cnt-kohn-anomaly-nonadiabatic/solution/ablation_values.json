@@ -1,0 +1,213 @@
+{
+ "ablations": {
+  "no_dfpt_subtraction": {
+   "omega_nonadiabatic_meV": {
+    "100": 99.95151122054952,
+    "300": 97.82790426944744
+   },
+   "linewidth_meV": {
+    "100": 16.03502274636288,
+    "300": 12.150008639898928
+   },
+   "omega_adiabatic_100K_meV": 77.69887382682568,
+   "rbm_instability_temperature_K": 1578.87
+  },
+  "same_temperature_reference": {
+   "omega_nonadiabatic_meV": {
+    "100": 147.02126686227453,
+    "300": 137.42256279323954
+   },
+   "linewidth_meV": {
+    "100": 10.96747233758766,
+    "300": 10.18938119915941
+   },
+   "omega_adiabatic_100K_meV": 130.11,
+   "rbm_instability_temperature_K": null
+  },
+  "smearing_read_as_eV": {
+   "omega_nonadiabatic_meV": {
+    "100": 145.96362366739277,
+    "300": 144.6407429138283
+   },
+   "linewidth_meV": {
+    "100": 11.04661358608571,
+    "300": 9.86095099430147
+   },
+   "omega_adiabatic_100K_meV": 128.96775549561133,
+   "rbm_instability_temperature_K": null
+  },
+  "adiabatic_for_nonadiabatic": {
+   "omega_nonadiabatic_meV": {
+    "100": 106.27224201207322,
+    "300": 116.25336602322862
+   }
+  },
+  "nonadiabatic_for_adiabatic": {
+   "omega_adiabatic_100K_meV": 125.18194123861939
+  },
+  "header_column_order": {
+   "omega_nonadiabatic_meV": {
+    "100": 99.94135841202414,
+    "300": 97.81761013778838
+   },
+   "linewidth_meV": {
+    "100": 16.03659171418997,
+    "300": 12.150534761590468
+   },
+   "omega_adiabatic_100K_meV": 77.68701613423912,
+   "rbm_instability_temperature_K": 1578.87
+  },
+  "both_processes_summed": {
+   "omega_nonadiabatic_meV": {
+    "100": 120.98148428863666,
+    "300": 116.60813637507944
+   },
+   "linewidth_meV": {
+    "100": 26.61512601118197,
+    "300": 22.386123349074033
+   },
+   "omega_adiabatic_100K_meV": 75.22610414307867,
+   "rbm_instability_temperature_K": 910.156231921613
+  },
+  "sorted_intraband_only": {
+   "omega_nonadiabatic_meV": {
+    "100": 130.15841255106616,
+    "300": 130.15801982281567
+   },
+   "linewidth_meV": {
+    "100": 7.909373486761528e-07,
+    "300": 8.112846779632295e-07
+   },
+   "omega_adiabatic_100K_meV": 129.0516728015092,
+   "rbm_instability_temperature_K": null
+  },
+  "coarse_mesh_1e5": {
+   "linewidth_meV": {
+    "100": 11.611050749913804,
+    "300": 10.844569434252865
+   },
+   "omega_nonadiabatic_meV": {
+    "100": 125.52208588135122,
+    "300": 123.44975942125419
+   }
+  },
+  "native_archived_grid": {
+   "omega_nonadiabatic_meV": {
+    "100": 130.98332680485288,
+    "300": 130.55918410777713
+   },
+   "linewidth_meV": {
+    "100": 0.4197432541619905,
+    "300": 1.2993400670429676
+   }
+  },
+  "fd_scan_reference_frequency": {
+   "omega_nonadiabatic_meV": {
+    "100": 133.42590821481292,
+    "300": 131.77837133790445
+   },
+   "linewidth_meV": {
+    "100": 12.794900856360645,
+    "300": 11.07368080290585
+   },
+   "omega_adiabatic_100K_meV": 114.1376920102959,
+   "rbm_instability_temperature_K": 328.89696090595197
+  },
+  "dfpt_scan_as_temperature_proxy": {
+   "rbm_instability_temperature_K": 203.6763233673588
+  },
+  "inverted_mass_parameter": {
+   "threshold_coupling_meV": {
+    "1": 121.242547,
+    "20": 305.185947
+   }
+  },
+  "interpolate_released_tables": {
+   "omega_nonadiabatic_meV": {
+    "100": 125.43417996872913,
+    "300": 125.41545312829408
+   },
+   "linewidth_meV": {
+    "100": 12.342365856798972,
+    "300": 10.2744272266591
+   },
+   "rbm_instability_temperature_K": 366.9568167713057
+  }
+ },
+ "robustness": {
+  "authors_iteration": {
+   "omega_nonadiabatic_meV": {
+    "100": 125.21038663698045,
+    "300": 123.5246630073575
+   },
+   "linewidth_meV": {
+    "100": 12.863958942786486,
+    "300": 10.86966025287136
+   },
+   "rbm_instability_temperature_K": 527.9821891765067
+  },
+  "no_linewidth_term": {
+   "omega_nonadiabatic_meV": {
+    "100": 124.46786227215179,
+    "300": 122.97639084083316
+   },
+   "rbm_instability_temperature_K": 538.85982376041
+  },
+  "onshell_linewidth": {
+   "linewidth_meV": {
+    "100": 12.38375106318337,
+    "300": 10.532957661339111
+   }
+  },
+  "dynamic_reference_at_sigma": {
+   "omega_nonadiabatic_meV": {
+    "100": 124.75596315476888,
+    "300": 123.0560687957195
+   },
+   "linewidth_meV": {
+    "100": 12.909831133854315,
+    "300": 10.87400210543326
+   },
+   "omega_adiabatic_100K_meV": 105.80063388147666,
+   "rbm_instability_temperature_K": 529.4117706512861
+  },
+  "released_tables_log_fit": {
+   "omega_adiabatic_100K_meV": 106.60937794756798,
+   "rbm_instability_temperature_K": 531.3549381193841
+  },
+  "eq9_threshold": {
+   "threshold_coupling_meV": {
+    "1": 62.18949635382045,
+    "20": 155.91195056609212
+   }
+  },
+  "fig1_output_interpolation": {
+   "threshold_coupling_meV": {
+    "1": 58.10261064,
+    "20": 151.25971916400002
+   }
+  },
+  "lab_evaluator_1e6": {
+   "omega_nonadiabatic_meV": {
+    "100": 125.11332401252912,
+    "300": 123.452154157713
+   },
+   "linewidth_meV": {
+    "100": 12.88670682881159,
+    "300": 10.843790818707124
+   },
+   "omega_adiabatic_100K_meV": 106.2474734244418,
+   "rbm_instability_temperature_K": 527.726394795826
+  },
+  "lab_evaluator_eta_2p5meV": {
+   "omega_nonadiabatic_meV": {
+    "100": 125.10577773340393,
+    "300": 123.50992095155586
+   },
+   "linewidth_meV": {
+    "100": 12.712791962267229,
+    "300": 10.687935316464051
+   }
+  }
+ }
+}

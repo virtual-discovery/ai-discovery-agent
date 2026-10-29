@@ -1,0 +1,126 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 8,
+  "task_mb": 1.27,
+  "hidden_values": 10,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 31,
+   "budget": 35,
+   "evaluations": 31,
+   "failed_evaluations": 0,
+   "container_seconds": 6
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "pbe_pipeline",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "pbe_pipeline_keep_oh_assignment",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "hydrogen_reservoir_H2",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "no_band_filling",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "no_band_filling_so_OH_O0_unstable_assign_V_O",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "band_filling_equal_k_weights",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "V_O_adjacent_levels",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "epr_V_O_plus",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "epr_ionized_OH_O_plus",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "epr_H_O_neutral",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "site_antibonding_parallel",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "band_filling_unaligned_cbm",
+    "passes_grading": true
+   },
+   {
+    "name": "shallow_donors_at_cbm",
+    "passes_grading": true
+   },
+   {
+    "name": "toten_energies",
+    "passes_grading": true
+   },
+   {
+    "name": "bulk_zno_gap",
+    "passes_grading": true
+   },
+   {
+    "name": "boltzmann_carriers",
+    "passes_grading": true
+   },
+   {
+    "name": "alignment_radius_4A",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T07:51:24Z"
+}

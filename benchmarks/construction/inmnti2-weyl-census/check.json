@@ -1,0 +1,172 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 8,
+  "task_mb": 36.27,
+  "hidden_values": 10,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 23,
+   "budget": 28,
+   "evaluations": 18,
+   "failed_evaluations": 0,
+   "container_seconds": 45
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "standard_model_as_magnetic",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "band_index_from_exclude_bands",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "same_band_index_both_models",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "wannier_nodes_trusted",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "grid_validated_nearest_pair",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "cubic_single_orbit",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "unitary_operations_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "planar_families",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "magnetization_axis_split",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "chirality_of_upper_band",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "cubic_symmetric_node",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "kubo_folder_as_broadening",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "kubo_mesh_58",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "raw_hall_components",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "nscf_path_fermi_level",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "pbe_count_with_avoided_crossings",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "pbe_count_coarse_grid",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "node_energy_y_line",
+    "passes_grading": true
+   },
+   {
+    "name": "node_energy_x_line",
+    "passes_grading": true
+   },
+   {
+    "name": "node_energy_window_extremes",
+    "passes_grading": true
+   },
+   {
+    "name": "separation_from_x_and_z_crossings",
+    "passes_grading": true
+   },
+   {
+    "name": "kz_from_x_line_passage",
+    "passes_grading": true
+   },
+   {
+    "name": "ahc_mesh_210",
+    "passes_grading": true
+   },
+   {
+    "name": "pbe_single_node_extremes",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T16:21:35Z"
+}

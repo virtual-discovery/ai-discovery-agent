@@ -1,0 +1,304 @@
+{
+ "task_id": "mg2x-midir-forbidden-transition",
+ "catalog_id": "mg2x-midir-forbidden-transition",
+ "start": "released",
+ "source_group": "sugawara_2026_mg2x_qsgw",
+ "title": "Mg2X mid-IR band: forbidden X-point transition, QSGW levels and temperature",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Identity of the two X states: dispersion (longitudinal mass ~0.54 for X1, ~1.03 for X3; transverse masses) versus energy order, given only that X1 is lower in Mg2Si",
+   "wrong_choice": "Label by energy order (the lower state is X1 everywhere)",
+   "consequence": "Mg2Sn splittings come out positive (+0.360, +0.165, +0.131 eV) instead of negative at all three levels",
+   "ablation": "energy_order_labels"
+  },
+  {
+   "id": "dp2",
+   "fork": "Which TOTE column is the defined quantity: the README labels column 7 \"eQP (Z = 1)\" but it equals e_in + Z (column 8 - e_in), the linearized Z-renormalized G0W0 energy; in QSGW iteration files column 6 is the QSGW level and the QP columns are not",
+   "wrong_choice": "Take the column described as eQP without Z (Z = 1), or the input eigenvalue column; read the QP column of the QSGW TOTE at the 100 K lattice",
+   "consequence": "G0W0 X3 - X1 0.5308 / 0.6597 / -0.1013 eV instead of 0.4387 / 0.5793 / -0.1649; QP column of the QSGW file gives 0.8707 eV at T0",
+   "ablation": "g0w0_z_equal_1_column"
+  },
+  {
+   "id": "dp3",
+   "fork": "Ladder (vertex) correction: QSGW+ladder minus QSGW within the same code and basis, versus across codes or the QSGW80 scaling that mimics the vertex for the gap",
+   "wrong_choice": "Subtract the ecalj QSGW splitting from the Questaal ladder run, or take QSGW80 - QSGW",
+   "consequence": "+26.4 or -62.7 meV instead of -2.0 meV; QSGW80 taken as QSGW also fails the QSGW splittings",
+   "ablation": "vertex_cross_code"
+  },
+  {
+   "id": "dp4",
+   "fork": "Lowest non-vanishing order of the X_lo -> X_hi matrix element: forbidden at X, |p|^2 = beta^2 q_perp^2 (from the PBE matrix elements: zero at X and along q_par, quadratic in q_perp)",
+   "wrong_choice": "Treat the transition as allowed (constant |p|^2), or take |p|^2 ~ |q|^2 including q_par, or average the full PBE |p|^2",
+   "consequence": "Q = 1 (constant), Mg2Si 4.1658 / 3.2069 and Mg2Sn 4.408 (|q|^2), Mg2Si 3.3846 (full PBE |p|^2) instead of 4.4692 / 3.4351 / 6.502",
+   "ablation": "constant_matrix_element"
+  },
+  {
+   "id": "dp5",
+   "fork": "Thermal average over the calculated dispersion of the whole transverse plane (box) versus a parabolic valley or the X-W line taken as isotropic; the lower state flattens along the [011] diagonal",
+   "wrong_choice": "Use the parabolic masses fitted to the scans, or the X-W scan as an isotropic transverse dispersion",
+   "consequence": "Mg2Si Q 3.8918 / 2.9899, Mg2Sn 3.892 (parabolic); X-W line 3.9639 / 3.9797",
+   "ablation": "parabolic_valley"
+  },
+  {
+   "id": "dp6",
+   "fork": "Degeneracy at 3e18 cm^-3 (77 K) and the counting of the box: Fermi-Dirac with 2 spins x 3 valleys x 8 octants, half weights on the symmetry planes",
+   "wrong_choice": "Boltzmann statistics at every density; forgetting the spin, the octants, or the half weights of the symmetry-plane points",
+   "consequence": "Mg2Si 3e18: 4.4741 (Boltzmann), 2.8732 (no spin), 1.7853 (one octant); no plane weights 5.4679 at 1e16; reference 3.4351",
+   "ablation": "boltzmann_statistics"
+  },
+  {
+   "id": "dp7",
+   "fork": "Whether the Mg2Si result transfers to Mg2Sn, whose lower state is X3 and whose small splitting makes the valley strongly non-parabolic (a second box purchase)",
+   "wrong_choice": "Reuse the Mg2Si Q for Mg2Sn, or occupy the X1 state of Mg2Sn",
+   "consequence": "Mg2Sn Q 4.4692 or 3.6076 instead of 6.502",
+   "ablation": "mg2si_ratio_for_mg2sn"
+  },
+  {
+   "id": "dp8",
+   "fork": "Lattice constant matched to the temperature: the production QSGW uses the room-temperature lattice; the T -> 0 prediction needs the 100 K lattice run (+23 meV)",
+   "wrong_choice": "Add the zero-point renormalization to the production (room-temperature lattice) splitting; or use the 100 K lattice at 300 K",
+   "consequence": "Mg2Si T0 0.4683 eV instead of 0.4913; 300 K 0.5062 instead of 0.4831",
+   "ablation": "room_temperature_lattice_at_T0"
+  },
+  {
+   "id": "dp9",
+   "fork": "Electron-phonon renormalization of X3 - X1 (positive: X1 drops more than X3), zero point at T -> 0 and the full 300 K value at 300 K",
+   "wrong_choice": "Ignore it, take the zero-point value at 300 K, or apply it with the sign of X1 - X3",
+   "consequence": "Mg2Si T0 0.4794, 300 K 0.4564 / 0.4683, Mg2Ge 300 K 0.5763 / 0.586 eV instead of 0.4913, 0.4831, 0.5964",
+   "ablation": "no_electron_phonon"
+  }
+ ],
+ "graded_fields": [
+  "x3_minus_x1_eV: signed E(X3) - E(X1) at LDA, G0W0 and QSGW for Mg2Si, Mg2Ge, Mg2Sn (9 values), +-0.01 eV",
+  "vertex_correction_Mg2Si_meV, +-8.0 meV",
+  "ir_raman_ratio_300K_over_77K: Mg2Si at 1e16 and 3e18 cm^-3, Mg2Sn at 1e16, within 4% (relative)",
+  "predicted_splitting_eV: Mg2Si T0 and 300 K, Mg2Ge 300 K, +-0.008 eV"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 19,
+  "oracle_charge": 27,
+  "budget": 32,
+  "catalog_units": "about 114 (bands 6, x_scan 12, qsgw_box 5 x 5, momentum_matrix 27 for the full grid, tote 11, questaal 8, pseudopotential_g0w0 7, electron_phonon 18)",
+  "minimum_charge_for_all_targets": 24,
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "why": "Identifying X1/X3 from dispersions in three compounds and two levels, decoding the TOTE columns against the README, a same-code ladder comparison, deriving the selection rule from the PBE matrix elements, Fermi-Dirac averages over octant boxes for two compounds (two 5-unit purchases), and assembling temperature-consistent predictions from lattice and electron-phonon runs under a budget of about 28% of the catalog."
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image); no extra layer"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/23319151",
+  "doi": "10.5281/zenodo.23319151",
+  "files_used": [
+   "20261012aa-paper1-zenodo-archive.zip",
+   "README.md",
+   "LICENSES.md",
+   "MD5SUMS.txt"
+  ],
+  "md5": {
+   "20261012aa-paper1-zenodo-archive.zip": "865ba37d739a8118a8a556cb95c643bb",
+   "README.md": "246ab9331d014b4665cb1629ca218586",
+   "LICENSES.md": "aed582f0574ab7043a3627ea9ac59b82",
+   "MD5SUMS.txt": "91946a35a975e8bfcda1d31e4a6db173"
+  },
+  "members": "benchmarks/construction/mg2x-midir-forbidden-transition/members.md5 (776 members)",
+  "license": "Mixed per file: computed outputs and docs CC BY 4.0 (served), digitized points CC0 1.0 (staged), programs MIT (ported), ecalj/Questaal inputs AGPL-3.0 (not used in the package)"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the candidate design (see the construction README). The design staged the QSGW path bands, which shows the QSGW splitting directly, and graded it; here every level is purchasable and the splittings are graded with their sign (the Mg2Sn inversion), while the difficulty comes from evidence in the files: the garbled TOTE column label, the same-code ladder comparison, the selection rule from the PBE matrix elements, the box versus parabolic valley, degeneracy, the Mg2Sn non-parabolicity, and the temperature consistency of the lattice. The design's experimental peak reading and absorption-peak targets were dropped (they reduce to the splitting within a few meV, and the reading is estimator dependent); they remain in the rubric.",
+ "calibration": {
+  "x3_minus_x1_eV": {
+   "reference": {
+    "Mg2Si": {
+     "LDA": 0.159895,
+     "G0W0": 0.438653,
+     "QSGW": 0.456408
+    },
+    "Mg2Ge": {
+     "LDA": 0.32978,
+     "G0W0": 0.579252,
+     "QSGW": 0.576304
+    },
+    "Mg2Sn": {
+     "LDA": -0.359868,
+     "G0W0": -0.164941,
+     "QSGW": -0.131043
+    }
+   },
+   "robustness": "scan, path and box agree at X to < 1e-5 eV; TOTE column 6 of the production QSGW and LDA within 0.5 meV",
+   "nearest_ablation": {
+    "G0W0 from the PBE start (Mg2Si, Mg2Ge)": [
+     0.4587,
+     0.5975
+    ],
+    "QSGW80 as QSGW": {
+     "Mg2Si": 0.3937,
+     "Mg2Ge": 0.5231,
+     "Mg2Sn": -0.1768
+    },
+    "energy-order labels (Mg2Sn)": {
+     "LDA": 0.3599,
+     "G0W0": 0.1649,
+     "QSGW": 0.131
+    },
+    "G0W0 Z = 1 column": {
+     "Mg2Si": 0.5308,
+     "Mg2Ge": 0.6597,
+     "Mg2Sn": -0.1013
+    }
+   },
+   "tolerance": "+-0.01 eV"
+  },
+  "vertex_correction_Mg2Si_meV": {
+   "reference": -1.996,
+   "robustness": {
+    "ladder window Nc 8": -2.77,
+    "ladder window Nc 12": -4.55,
+    "larger basis": -0.28
+   },
+   "nearest_ablation": {
+    "cross code": 26.4,
+    "QSGW80 - QSGW": -62.7,
+    "gap change with ladder": -90.5
+   },
+   "tolerance": "+-8.0 meV"
+  },
+  "ir_raman_ratio_300K_over_77K": {
+   "reference": {
+    "Mg2Si_1e16": 4.4692,
+    "Mg2Si_3e18": 3.4351,
+    "Mg2Sn_1e16": 6.502
+   },
+   "robustness": {
+    "unfolded_plain_sum": {
+     "Mg2Si_1e16": 4.4967,
+     "Mg2Si_3e18": 3.4301,
+     "Mg2Sn_1e16": 6.5214
+    },
+    "coarse_box_both_T": {
+     "Mg2Si_1e16": 4.4962,
+     "Mg2Si_3e18": 3.4296,
+     "Mg2Sn_1e16": 6.502
+    },
+    "nested_boxes_both_T": {
+     "Mg2Si_1e16": 4.4791,
+     "Mg2Si_3e18": 3.4424,
+     "Mg2Sn_1e16": 6.5124
+    }
+   },
+   "nearest_ablation": {
+    "parabolic": {
+     "Mg2Si_1e16": 3.8918,
+     "Mg2Si_3e18": 2.9899,
+     "Mg2Sn_1e16": 3.892
+    },
+    "xw_line_isotropic": {
+     "Mg2Si_1e16": 3.9639,
+     "Mg2Si_3e18": 3.0453,
+     "Mg2Sn_1e16": 3.9797
+    },
+    "constant_matrix_element": {
+     "Mg2Si_1e16": 1.0,
+     "Mg2Si_3e18": 1.0,
+     "Mg2Sn_1e16": 1.0
+    },
+    "isotropic_q2": {
+     "Mg2Si_1e16": 4.1658,
+     "Mg2Si_3e18": 3.2069,
+     "Mg2Sn_1e16": 4.408
+    },
+    "boltzmann": {
+     "Mg2Si_1e16": 4.4741,
+     "Mg2Si_3e18": 4.4741,
+     "Mg2Sn_1e16": 6.5124
+    },
+    "spin_not_counted": {
+     "Mg2Si_1e16": 4.4643,
+     "Mg2Si_3e18": 2.8732,
+     "Mg2Sn_1e16": 6.4916
+    },
+    "one_octant_only": {
+     "Mg2Si_1e16": 4.4351,
+     "Mg2Si_3e18": 1.7853,
+     "Mg2Sn_1e16": 6.4306
+    },
+    "no_symmetry_plane_weights": {
+     "Mg2Si_1e16": 5.4679,
+     "Mg2Si_3e18": 4.6357,
+     "Mg2Sn_1e16": 7.8556
+    },
+    "mg2si_value_for_mg2sn": {
+     "Mg2Sn_1e16": 4.4692
+    },
+    "x1_occupied_in_mg2sn": {
+     "Mg2Sn_1e16": 3.6076
+    },
+    "full_pbe_matrix_element": {
+     "Mg2Si_1e16": 3.3846
+    }
+   },
+   "tolerance": "+-4% relative"
+  },
+  "predicted_splitting_eV": {
+   "reference": {
+    "Mg2Si_T0": 0.4913,
+    "Mg2Si_300K": 0.4831,
+    "Mg2Ge_300K": 0.5964
+   },
+   "components_meV": {
+    "lattice 300 K -> 100 K (Mg2Si QSGW)": 23.0,
+    "AHC dE (24^3, eta 10 meV)": {
+     "Mg2Si_T0": 11.86,
+     "Mg2Si_300K": 26.73,
+     "Mg2Ge_300K": 20.05,
+     "Mg2Ge_T0": 9.71
+    }
+   },
+   "robustness": {
+    "zg_4x4x4": {
+     "Mg2Si_T0": 0.4932,
+     "Mg2Si_300K": 0.4891,
+     "Mg2Ge_300K": 0.5964
+    },
+    "ahc_adiabatic": {
+     "Mg2Si_T0": 0.4929,
+     "Mg2Si_300K": 0.4841,
+     "Mg2Ge_300K": 0.596
+    },
+    "ahc_q16_or_ge3d": {
+     "Mg2Si_T0": 0.4933,
+     "Mg2Si_300K": 0.4845,
+     "Mg2Ge_300K": 0.5934
+    }
+   },
+   "nearest_ablation": {
+    "no_electron_phonon": {
+     "Mg2Si_T0": 0.4794,
+     "Mg2Si_300K": 0.4564,
+     "Mg2Ge_300K": 0.5763
+    },
+    "room_temperature_lattice_at_T0": {
+     "Mg2Si_T0": 0.4683
+    },
+    "zero_point_only_at_300K": {
+     "Mg2Si_300K": 0.4683,
+     "Mg2Ge_300K": 0.586
+    },
+    "electron_phonon_sign_reversed": {
+     "Mg2Si_T0": 0.4676,
+     "Mg2Si_300K": 0.4297,
+     "Mg2Ge_300K": 0.5563
+    },
+    "low_temperature_lattice_at_300K": {
+     "Mg2Si_300K": 0.5062
+    },
+    "qsgw_column7_low_temperature": {
+     "Mg2Si_T0": 0.8707
+    }
+   },
+   "tolerance": "+-0.008 eV"
+  }
+ }
+}

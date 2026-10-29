@@ -1,0 +1,39 @@
+{
+ "archive_md5": {
+  "SSSP_1.3.0_PBE_precision.tar.gz": "fde94756886f32ada7bf597547557eb5",
+  "SSSP_1.3.0_PBE_precision.json": "1692c5c9ce89e1c7c783f8f0eee0cbfa",
+  "LICENSE.txt": "c0f9df05fb4cd4921f4caa25606815ef"
+ },
+ "upf": {
+  "ge_pbe_v1.4.uspp.F.UPF": {
+   "md5": "9c9eaa91e581c3f09632fb3098b2c6b2",
+   "sha256": "1b95046ab0f3228e0404719ca66d0309af5a62313be0b22171b963566c90430b",
+   "bytes": 579995
+  },
+  "Te.us.z_6.ld1.psl.v1.0.0-low.upf": {
+   "md5": "44eeed7063cd65092dfe4811eda022ea",
+   "sha256": "66e19d27182ab8f64e558f3d998fa3da3ca161ff830dcfeeac2cbe9cbd6b2f7c",
+   "bytes": 1825206
+  },
+  "Ge.pbe-n-rrkjus_psl.1.0.0.UPF": {
+   "md5": "a23a7f3f7456476e534e54484b27d8e8",
+   "sha256": "b756d20fe98992cb3afef5fcde78515720a89336d412c13b0ceddf794d54cfcd",
+   "bytes": 1035521
+  },
+  "Ge.rel-pbe-n-rrkjus_psl.1.0.0.UPF": {
+   "md5": "e5dcc699b05aed9f3c83ff0819d69beb",
+   "sha256": "5bcfc408bbf02c1a614b2805239f9bbcd99c42e27f85feaa7c072c87a8136b38",
+   "bytes": 1259812
+  },
+  "Te.pbe-n-rrkjus_psl.1.0.0.UPF": {
+   "md5": "203a1e86ef55f0cd9de2762a27c58f54",
+   "sha256": "1a21c8b1d595a3f0165eb1a6ad3711d78fa512d8f583215e898cd5a1716791ba",
+   "bytes": 1827701
+  },
+  "Te.rel-pbe-n-rrkjus_psl.1.0.0.UPF": {
+   "md5": "7fd30b6833abd190471e4dcc2367351b",
+   "sha256": "937b711a653d4b8faffe7e46326a98c1e4ad6ccb17fb4e37e1288b39f6cd4a37",
+   "bytes": 3473881
+  }
+ }
+}

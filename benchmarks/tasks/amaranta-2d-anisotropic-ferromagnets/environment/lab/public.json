@@ -1,0 +1,18 @@
+{
+ "task_id": "amaranta-2d-anisotropic-ferromagnets",
+ "solver_budget": 245,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "energies": {
+   "kind": "energies",
+   "compound": "<name>",
+   "supercell": [
+    3,
+    3
+   ],
+   "spins": "<1-6 configurations>",
+   "cost": "ceil(n_sites/12) per configuration"
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

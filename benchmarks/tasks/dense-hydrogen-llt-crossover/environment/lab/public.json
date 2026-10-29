@@ -1,0 +1,28 @@
+{
+ "task_id": "dense-hydrogen-llt-crossover",
+ "solver_budget": 135,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "thermo": {
+   "kind": "thermo",
+   "N": "<int>",
+   "T_K": "<int>",
+   "rs": "<str>",
+   "cost": "1 (N<=256) or 2"
+  },
+  "structure": {
+   "kind": "structure",
+   "N": "<int>",
+   "T_K": "<int>",
+   "rs": "<str>",
+   "cost": "2-4"
+  },
+  "pimd": {
+   "kind": "pimd",
+   "T_label": "<str>",
+   "rs": "<str>",
+   "cost": 1
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

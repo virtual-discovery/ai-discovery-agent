@@ -1,0 +1,90 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 8,
+  "task_mb": 0.36,
+  "hidden_values": 36,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 215,
+   "budget": 240,
+   "evaluations": 21,
+   "failed_evaluations": 0,
+   "container_seconds": 234
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "six_equivalent_nearest_neighbours",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "third_neighbour_aliased_in_4_periodic_cell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "exchange_truncated_after_J2",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "only_FM_120_stripe_compared",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "VI2_axis_from_cartesian_axes_or_SIA",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "VI2_tensor_copied_to_all_bonds",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "ordered_pairs_double_counted",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "isotropic_model_predictions",
+    "passes_grading": true
+   },
+   {
+    "name": "anisotropic_luttinger_tisza_q",
+    "passes_grading": true
+   },
+   {
+    "name": "collinear_zz_mapping_q",
+    "passes_grading": true
+   },
+   {
+    "name": "VI2_axis_from_six_noisy_probes",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T07:13:25Z"
+}

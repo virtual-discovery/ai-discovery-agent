@@ -1,0 +1,128 @@
+{
+ "targets": {
+  "strain_percent": {
+   "LiSbZn_orig": 0.0,
+   "LiSbZn_strained_setup": 0.0,
+   "LiBiZn_orig": 0.0,
+   "LiBiZn_strained_setup": 0.0
+  },
+  "band_inverted": {
+   "LiSbZn": false,
+   "LiBiZn": true
+  },
+  "fundamental_gap_meV": {
+   "LiSbZn_orig": 343.7646063557905,
+   "LiSbZn_strained_setup": 251.7095868254321,
+   "LiBiZn_orig": -870.5877799164057
+  },
+  "libizn_fermi_level_meV": -401.91118901969327,
+  "hinge_termination": "Zn/Zn",
+  "hinge_energy_k0_meV": {
+   "LiSbZn_orig": 227.81902831417784,
+   "LiSbZn_strained_setup": 175.1814609102782
+  },
+  "hinge_band_window_meV": [
+   218.3020277380354,
+   773.4238107890785
+  ],
+  "hinge_zn_s_weight_k0": 0.6809,
+  "hinge_removal_potential_eV": -0.37997608268444005
+ },
+ "thresholds": {
+  "strain_percent_abs": 0.25,
+  "gap_abs_meV": {
+   "LiSbZn_orig": 3.5,
+   "LiSbZn_strained_setup": 3.5,
+   "LiBiZn_orig": 15.0
+  },
+  "fermi_level_abs_meV": 12.0,
+  "hinge_energy_abs_meV": 6.0,
+  "band_bottom_abs_meV": 6.0,
+  "band_top_abs_meV": 15.0,
+  "zn_weight_abs": 0.08,
+  "removal_potential_abs_eV": 0.035
+ },
+ "ablations": {
+  "strain_from_file_names": {
+   "LiSbZn_orig": 0.0,
+   "LiSbZn_strained_setup": 2.0,
+   "LiBiZn_orig": 0.0,
+   "LiBiZn_strained_setup": 2.0
+  },
+  "strain_compressive_from_file_names": {
+   "LiSbZn_orig": 0.0,
+   "LiSbZn_strained_setup": -2.0,
+   "LiBiZn_orig": 0.0,
+   "LiBiZn_strained_setup": -2.0
+  },
+  "gap_at_gamma": {
+   "LiSbZn_orig": 352.01700000000005,
+   "LiSbZn_strained_setup": 313.002,
+   "LiBiZn_orig": 0.0
+  },
+  "fermi_at_gamma8": 0.0,
+  "fermi_coarse_mesh_8": -545.5533199073336,
+  "fermi_mesh_12": -386.47311540443786,
+  "hinge_energy_model_zero": {
+   "LiSbZn_orig": 181.13914874141878,
+   "LiSbZn_strained_setup": -113.42021551724135
+  },
+  "hinge_energy_small_prism_N10": {
+   "LiSbZn_orig": 240.81087957275903,
+   "LiSbZn_strained_setup": 188.96467642751955
+  },
+  "hinge_energy_N12": {
+   "LiSbZn_orig": 235.722879572759,
+   "LiSbZn_strained_setup": 183.59767642751956
+  },
+  "paper_termination": "X/X",
+  "paper_zn_s_weight": 0.05,
+  "window_grid5": [
+   218.9342307113614,
+   734.2930808451196
+  ],
+  "window_clipped_to_bulk_gap": [
+   218.3020277380354,
+   343.7646063557905
+  ],
+  "window_bottom_at_k0": [
+   227.81902831417784,
+   773.4238107890785
+  ],
+  "window_lower_branch_only": [
+   218.3020277380354,
+   684.4439331069078
+  ],
+  "str_hinge_identity_basis": 205.53467642751954,
+  "removal_potential_wrong_corner": null,
+  "removal_to_model_zero": -0.3129656258583997
+ },
+ "robustness": {
+  "hinge_energy_N28_direct": {
+   "LiSbZn_orig": 228.02087957275901,
+   "LiSbZn_strained_setup": 175.42767642751954
+  },
+  "hinge_energy_N20_direct": {
+   "LiSbZn_orig": 229.05187957275902,
+   "LiSbZn_strained_setup": 176.56767642751956
+  },
+  "gap_grid_L_point": {
+   "LiSbZn_orig": 344.99096775625804,
+   "LiSbZn_strained_setup": 253.3833798835987,
+   "LiBiZn_orig": -866.8938060962972
+  },
+  "fermi_mesh_48": -405.5075270052368,
+  "fermi_mesh_64_lab_max": -401.90254632195877,
+  "window_N12_refined": [
+   218.9342307113614,
+   773.4368538919188
+  ],
+  "window_N12_grid25": [
+   218.9342307113614,
+   771.6208880166971
+  ],
+  "zn_weight_N16": 0.6651,
+  "removal_N16_linear": -0.37919213446403816,
+  "removal_N16_brentq": -0.3791159223631531
+ }
+}

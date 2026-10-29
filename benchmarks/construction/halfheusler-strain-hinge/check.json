@@ -1,0 +1,191 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 9,
+  "task_mb": 1.02,
+  "hidden_values": 10,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 25,
+   "budget": 30,
+   "evaluations": 19,
+   "failed_evaluations": 0,
+   "container_seconds": 143
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "strain_from_file_names",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "strain_compressive_from_file_names",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "gap_at_gamma",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "fermi_at_gamma8",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "fermi_coarse_mesh_8",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "fermi_mesh_12",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "hinge_energy_model_zero",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "removal_to_model_zero",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "paper_termination",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "paper_zn_s_weight",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "hinge_energy_small_prism_N10",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "hinge_energy_N12",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "window_grid5",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "window_clipped_to_bulk_gap",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "window_bottom_at_k0",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "window_lower_branch_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "str_hinge_identity_basis",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "removal_potential_wrong_corner",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "hinge_energy_N28_direct",
+    "passes_grading": true
+   },
+   {
+    "name": "hinge_energy_N20_direct",
+    "passes_grading": true
+   },
+   {
+    "name": "gap_from_grid_L_point",
+    "passes_grading": true
+   },
+   {
+    "name": "fermi_mesh_48",
+    "passes_grading": true
+   },
+   {
+    "name": "fermi_mesh_64_lab_max",
+    "passes_grading": true
+   },
+   {
+    "name": "window_N12_refined",
+    "passes_grading": true
+   },
+   {
+    "name": "window_N12_grid25",
+    "passes_grading": true
+   },
+   {
+    "name": "zn_weight_N16",
+    "passes_grading": true
+   },
+   {
+    "name": "removal_N16_linear",
+    "passes_grading": true
+   },
+   {
+    "name": "removal_N16_brentq",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-25T22:31:09Z"
+}

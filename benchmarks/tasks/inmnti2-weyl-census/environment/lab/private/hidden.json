@@ -1,0 +1,32 @@
+{
+ "targets": {
+  "node_count": {
+   "dftu": 24,
+   "pbe": 24
+  },
+  "orbit_sizes": [
+   4,
+   4,
+   4,
+   4,
+   8
+  ],
+  "node_energy_meV": -97.57,
+  "pair_separation_invA": 0.36891,
+  "kz_offset_plus_invA": -0.00979,
+  "pbe_node_energy_meV": 38.88,
+  "ahc_S_per_cm": {
+   "xy": 114.052,
+   "yz": 0.0,
+   "zx": 0.0
+  }
+ },
+ "thresholds": {
+  "node_energy_abs_meV": 3.0,
+  "pair_separation_rel": 0.02,
+  "kz_offset_abs_invA": 0.002,
+  "pbe_node_energy_abs_meV": 4.0,
+  "ahc_xy_rel": 0.035,
+  "ahc_forbidden_abs_S_cm": 1.5
+ }
+}

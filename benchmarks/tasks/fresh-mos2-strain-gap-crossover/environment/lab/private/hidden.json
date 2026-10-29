@@ -1,0 +1,166 @@
+{
+ "reference": {
+  "a0_A": 3.1864333499319195,
+  "direct_gap_strain_range_percent": [
+   -1.4363636822806718,
+   0.43203859488487223
+  ],
+  "edge_leaving_K_at_lower_end": {
+   "band": "conduction",
+   "k_crystal": [
+    0.171503,
+    0.171503
+   ]
+  },
+  "edge_leaving_K_at_upper_end": {
+   "band": "valence",
+   "k_crystal": [
+    0.0,
+    0.0
+   ]
+  },
+  "deformation_potentials_eV": {
+   "valence_K": -5.127664256229301,
+   "conduction_K": -16.34557756075805,
+   "gap_K": -11.217913304528746
+  },
+  "uniaxial_zigzag_compression": {
+   "transverse_strain_percent": 0.9273,
+   "gap_eV": 1.7315025616482833,
+   "vbm_k_crystal": [
+    0.323333,
+    0.333333
+   ],
+   "cbm_k_crystal": [
+    -0.344302,
+    0.172151
+   ]
+  }
+ },
+ "tolerances": {
+  "a0_A": 0.003,
+  "crossover_lattice_A": 0.0035,
+  "k_inverse_A": 0.1,
+  "deformation_potential_relative": {
+   "valence_K": 0.08,
+   "conduction_K": 0.08,
+   "gap_K": 0.06
+  },
+  "transverse_strain_percent": 0.1,
+  "gap_eV": 0.015
+ },
+ "frames": {
+  "biaxial": {
+   "b_inverse_A": [
+    [
+     1.97175212,
+     1.13839162
+    ],
+    [
+     0.0,
+     2.27678324
+    ]
+   ],
+   "k_ops": [
+    [
+     [
+      0,
+      1
+     ],
+     [
+      -1,
+      -1
+     ]
+    ],
+    [
+     [
+      -1,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    [
+     [
+      0,
+      -1
+     ],
+     [
+      -1,
+      0
+     ]
+    ],
+    [
+     [
+      -1,
+      -1
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    [
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      -1
+     ]
+    ]
+   ]
+  },
+  "uniaxial": {
+   "b_inverse_A": [
+    [
+     2.05390846,
+     1.1279323
+    ],
+    [
+     0.0,
+     2.2558646
+    ]
+   ],
+   "k_ops": [
+    [
+     [
+      -1,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ]
+   ]
+  }
+ },
+ "provenance": {
+  "runs": "benchmarks/construction/fresh-mos2-strain-gap-crossover/reference_runs.jsonl (task_lab.run, QE 6.7, 2 MPI ranks)",
+  "A0r_of_stage_b": 3.1866
+ }
+}

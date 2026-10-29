@@ -1,0 +1,11 @@
+# Physical-reasoning rubric
+
+Each item is a checkable statement that the report must make explicitly.
+
+1. Distinguishes the bare Coulomb parameter μ = N(E_F) W(E_F,E_F) from the pseudopotential μ\* referenced to a frequency cutoff, explains the logarithmic (Morel–Anderson/Tolmachev) renormalization between the electronic and phonon scales, and shows with numbers that the μ\* needed in a constant-DOS calculation with a 1 eV cutoff (about 0.59 for Mg₂IrH₆ at 20 GPa) is far above 0.10–0.16 and is not given by naive Morel–Anderson rescaling of μ.
+2. Identifies N(E_F) as the driver of large μ: W(E_F,E_F) is nearly constant with pressure (≈0.36–0.38 eV for Mg₂IrH₆, ≈0.49–0.51 eV for H₃S per conventional cell) while μ follows N(E_F). Shows this across both compounds and several pressures, and uses it to transfer μ to the withheld pressures instead of holding μ (or the 0 GPa value) constant.
+3. Uses the dense-grid N(E_F), not the σ-smeared value, when forming μ (the "mu" and "mu rescaled" columns differ by up to a factor of ~1.7 for Mg₂IrH₆), and notes that small σ makes W(0,0) unreliable.
+4. Quantifies the effect of the energy-dependent DOS (vDOS against cDOS at the same μ\*, tens of kelvin for Mg₂IrH₆ and H₃S) and does not mix Allen–Dynes μ\* with Migdal–Eliashberg μ\*.
+5. Validates the route to the withheld full-W Tc against full-W runs at released pressures (for example, a fixed μ\* = κμ in the vDOS solver with κ calibrated per compound), and recognizes that H₃S Tc(P) peaks near 180 GPa, so interpolating Tc between released pressures fails there.
+6. Notes the archive's inconsistencies: run folders whose names contradict their Info.txt (Mg₂IrH₆ `vdos_muStar0.1_1` used μ\* = 0.2, H₃S `vdos_muStar0.2_1` used 0.1, CaH₆ `vdos_W_1`–`_4` are constant-DOS fixed-μ\* runs), and that the H₃S cell contains two formula units.
+7. States the approximations (static RPA screening, isotropic Eliashberg, harmonic α²F, a single α²F smearing) and the anharmonic caveat for H₃S: below ~170 GPa harmonic phonons are unstable (λ becomes very large), so those Tc and any trend that relies on them are unreliable. Explains that the factor-of-two spread of earlier Mg₂IrH₆ predictions comes mainly from the choice of μ\*.

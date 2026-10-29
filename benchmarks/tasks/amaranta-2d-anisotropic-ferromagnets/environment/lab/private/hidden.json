@@ -1,0 +1,114 @@
+{
+ "ground_states": {
+  "CrCl3": "ferromagnet",
+  "CrBr3": "ferromagnet",
+  "CrI3": "ferromagnet",
+  "CrGeTe3": "ferromagnet",
+  "CrSiSe3": "Neel antiferromagnet",
+  "CrSBr": "ferromagnet"
+ },
+ "easy_axis_polar_deg": {
+  "CrCl3": 0.0001352604893910871,
+  "CrBr3": 8.537736462515939e-07,
+  "CrI3": 0.0,
+  "CrGeTe3": 0.0,
+  "CrSiSe3": 89.99999999999957,
+  "CrSBr": 0.0
+ },
+ "anisotropy_meV_per_Cr": {
+  "CrCl3": {
+   "total": 0.03349183234495623,
+   "single_ion": 0.027864999992744
+  },
+  "CrBr3": {
+   "total": 0.15949875002965008,
+   "single_ion": 0.084210000011354
+  },
+  "CrI3": {
+   "total": 0.41970937500757177,
+   "single_ion": 0.20972999999458
+  },
+  "CrGeTe3": {
+   "total": 0.5169212499994487,
+   "single_ion": -0.188270000009538
+  },
+  "CrSiSe3": {
+   "total": -0.10914250001369652,
+   "single_ion": -0.03874000000792
+  },
+  "CrSBr": {
+   "total": 0.06279750000714301,
+   "single_ion": 0.032400000009148
+  }
+ },
+ "CrI3_bond_exchange_meV": {
+  "J": -4.148684941667834,
+  "K": 1.2280848250063978,
+  "Gamma": 0.08820755929323577,
+  "Gamma_prime": -0.11409690465094285
+ },
+ "CrI3_Tc_K": 34.71875285533885,
+ "CrSBr_dm_vector_meV": [
+  0.0,
+  -0.264244999996775,
+  0.0
+ ],
+ "CrSBr_spin_wave_gap_meV": 0.11459830453605202,
+ "predictions": {
+  "CrI3-P1": 8.106118717383364,
+  "CrI3-P2": 7.661866870614464,
+  "CrI3-P3": 1.5867420624599577,
+  "CrGeTe3-P1": 19.795147610932915,
+  "CrGeTe3-P2": 20.15175920093462,
+  "CrGeTe3-P3": 2.9538485139753825,
+  "CrSBr-P1": 34.90937510471701,
+  "CrSBr-P2": 4.426419394371026,
+  "CrSBr-P3": 4.426419394371013,
+  "CrSBr-P4": 21.776591704701364
+ },
+ "thresholds": {
+  "polar_tol_deg": 10.0,
+  "anisotropy_abs_meV": 0.005,
+  "anisotropy_rel": 0.1,
+  "bond_J_abs_meV": 0.1,
+  "bond_K_rel": 0.2,
+  "bond_Gamma_abs_meV": 0.06,
+  "Tc_rel": 0.15,
+  "dm_abs_meV": 0.05,
+  "gap_rel": 0.15,
+  "prediction_rmse_meV_per_site": 0.03
+ },
+ "reference_notes": {
+  "Tc_analysis": {
+   "sizes": [
+    12,
+    18,
+    24,
+    30
+   ],
+   "crossings": {
+    "12-18": 35.83471371381202,
+    "12-24": 35.431357536078664,
+    "12-30": 35.204703632637305,
+    "18-24": 34.83225821518098,
+    "18-30": 34.77401087411001,
+    "24-30": 34.71875285533885
+   },
+   "Tc_binder_largest_pair": 34.71875285533885,
+   "Tc_binder_smallest_pair": 35.83471371381202,
+   "Tc_chi_peak_largest_L": 35.84579111587248,
+   "chi_peaks": {
+    "12": 36.66031440706326,
+    "18": 36.4580353972707,
+    "24": 36.216424289276944,
+    "30": 35.84579111587248
+   }
+  },
+  "CrI3_frame_e3": [
+   0.816496580927726,
+   0.0,
+   0.5773502691896257
+  ],
+  "jkgg_residual": 2.009941850184677e-07
+ }
+}

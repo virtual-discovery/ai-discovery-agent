@@ -1,0 +1,623 @@
+
+     Program PWSCF v.7.0 starts on 18Jul2022 at 16: 3:43 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    64 processors
+
+     MPI processes distributed on     2 nodes
+     168879 MiB available memory on the printing compute node when the environment starts
+ 
+     Waiting for input...
+     Reading input from standard input
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+
+     Fixed quantization axis for GGA:     0.000000    0.000000    1.000000
+     Message from routine setup:
+     using ibrav=0 with symmetry is DISCOURAGED, use correct ibrav instead
+ 
+     K-points division:     npool     =       4
+     R & G space division:  proc/nbgrp/npool/nimage =      16
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         181     181     50                 6450     6450     942
+     Max         182     182     51                 6454     6454     945
+     Sum        2905    2905    805               103235   103235   15089
+ 
+     Using Slab Decomposition
+ 
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =       8.3745  a.u.
+     unit-cell volume          =     415.2924 (a.u.)^3
+     number of atoms/cell      =            4
+     number of atomic types    =            3
+     number of electrons       =        52.00
+     number of Kohn-Sham states=           62
+     kinetic-energy cutoff     =     150.0000  Ry
+     charge density cutoff     =     600.0000  Ry
+     scf convergence threshold =      4.0E-10
+     mixing beta               =       0.7000
+     number of iterations used =            8  plain     mixing
+     energy convergence thresh.=      1.0E-04
+     force convergence thresh. =      1.0E-03
+     press convergence thresh. =      5.0E-01
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     nstep                     =           50
+
+     Noncollinear calculation with spin-orbit
+
+
+     celldm(1)=   8.374451  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   0.000000   0.707107   0.707107 )  
+               a(2) = (   0.707107   0.000000   0.707107 )  
+               a(3) = (   0.707107   0.707107   0.000000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = ( -0.707107  0.707107  0.707107 )  
+               b(2) = (  0.707107 -0.707107  0.707107 )  
+               b(3) = (  0.707107  0.707107 -0.707107 )  
+
+
+     PseudoPot. # 1 for In read from file:
+     ./pseudo/In-d_upf_r.oncvpsp.upf
+     MD5 check sum: 125196d8cfdb3584ef15d5392520bf68
+     Pseudo is Norm-conserving + core correction, Zval = 13.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1986 points, 10 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   1
+                l(6) =   1
+                l(7) =   2
+                l(8) =   2
+                l(9) =   2
+               l(10) =   2
+
+     PseudoPot. # 2 for Mn read from file:
+     ./pseudo/Mn-sp-high_upf_r.oncvpsp.upf
+     MD5 check sum: dc7d3905b22bdcb90759730d81d7fb1c
+     Pseudo is Norm-conserving + core correction, Zval = 15.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1464 points, 10 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   1
+                l(6) =   1
+                l(7) =   2
+                l(8) =   2
+                l(9) =   2
+               l(10) =   2
+
+     PseudoPot. # 3 for Ti read from file:
+     ./pseudo/Ti-sp_upf_r.oncvpsp.upf
+     MD5 check sum: 35f8632af8eacf22a7ffdbbe4b18c5f4
+     Pseudo is Norm-conserving + core correction, Zval = 12.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1586 points, 10 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   1
+                l(6) =   1
+                l(7) =   2
+                l(8) =   2
+                l(9) =   2
+               l(10) =   2
+
+     atomic species   valence    mass     pseudopotential
+        In            13.00   114.82000     In( 1.00)
+        Mn            15.00    54.93800     Mn( 1.00)
+        Ti            12.00    47.88000     Ti( 1.00)
+
+
+     Simplified LDA+U calculation (l_max = 2) with parameters (eV):
+     atomic species    L          U    alpha       J0     beta
+        Mn             2     2.4517   0.0000   0.0000   0.0000
+        Ti             2     2.2744   0.0000   0.0000   0.0000
+     LDA+U on averaged j=l+1/2,l-1/2 radial WFs
+
+
+
+      8 Sym. Ops. (no inversion) found
+
+
+                                    s                        frac. trans.
+
+      isym =  1     identity                                     
+
+ Time Reversal            0
+ cryst.   s( 1) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 1) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  2     180 deg rotation - cart. axis [0,0,1]        
+
+ Time Reversal            0
+ cryst.   s( 2) = (     0          1         -1      )
+                  (     1          0         -1      )
+                  (     0          0         -1      )
+
+ cart.    s( 2) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  3     180 deg rotation - cart. axis [0,1,0]        
+
+ Time Reversal            1
+ cryst.   s( 3) = (     0         -1          1      )
+                  (     0         -1          0      )
+                  (     1         -1          0      )
+
+ cart.    s( 3) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  4     180 deg rotation - cart. axis [1,0,0]        
+
+ Time Reversal            1
+ cryst.   s( 4) = (    -1          0          0      )
+                  (    -1          0          1      )
+                  (    -1          1          0      )
+
+ cart.    s( 4) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  5     inv. 180 deg rotation - cart. axis [1,1,0]   
+
+ Time Reversal            1
+ cryst.   s( 5) = (     1          0         -1      )
+                  (     0          1         -1      )
+                  (     0          0         -1      )
+
+ cart.    s( 5) = (  0.0000000 -1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  6     inv. 180 deg rotation - cart. axis [1,-1,0]  
+
+ Time Reversal            1
+ cryst.   s( 6) = (     0          1          0      )
+                  (     1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s( 6) = (  0.0000000  1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  7     inv.  90 deg rotation - cart. axis [0,0,-1]  
+
+ Time Reversal            0
+ cryst.   s( 7) = (     0         -1          0      )
+                  (     0         -1          1      )
+                  (     1         -1          0      )
+
+ cart.    s( 7) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  8     inv.  90 deg rotation - cart. axis [0,0,1]   
+
+ Time Reversal            0
+ cryst.   s( 8) = (    -1          0          1      )
+                  (    -1          0          0      )
+                  (    -1          1          0      )
+
+ cart.    s( 8) = (  0.0000000  1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Ti  tau(   1) = (   0.0000000   0.0000000   0.0000000  )
+         2           Ti  tau(   2) = (   0.3535534   0.3535534   1.0606602  )
+         3           Mn  tau(   3) = (   0.7071068   0.0000000   0.0000000  )
+         4           In  tau(   4) = (   0.3535534   0.3535534   0.3535534  )
+
+   Crystallographic axes
+
+     site n.     atom                  positions (cryst. coord.)
+         1           Ti  tau(   1) = (  0.0000000  0.0000000  0.0000000  )
+         2           Ti  tau(   2) = (  0.7500000  0.7500000 -0.2500000  )
+         3           Mn  tau(   3) = ( -0.5000000  0.5000000  0.5000000  )
+         4           In  tau(   4) = (  0.2500000  0.2500000  0.2500000  )
+
+     number of k points=   115  Gaussian smearing, width (Ry)=  0.0200
+
+[... selected lines of the vc-relax trajectory ...]
+[line 793]      total magnetization       =     0.00    -0.00    -1.30 Bohr mag/cell
+[line 794]      absolute magnetization    =     8.51 Bohr mag/cell
+[line 903]      total magnetization       =     0.00    -0.00    -0.84 Bohr mag/cell
+[line 904]      absolute magnetization    =     8.39 Bohr mag/cell
+[line 1013]      total magnetization       =     0.00    -0.00    -0.08 Bohr mag/cell
+[line 1014]      absolute magnetization    =     8.73 Bohr mag/cell
+[line 1123]      total magnetization       =     0.00    -0.00    -0.07 Bohr mag/cell
+[line 1124]      absolute magnetization    =     7.43 Bohr mag/cell
+[line 1233]      total magnetization       =     0.00    -0.00     0.01 Bohr mag/cell
+[line 1234]      absolute magnetization    =     7.69 Bohr mag/cell
+[line 1343]      total magnetization       =    -0.00    -0.00     0.07 Bohr mag/cell
+[line 1344]      absolute magnetization    =     7.80 Bohr mag/cell
+[line 1463]      total magnetization       =    -0.00    -0.00     0.12 Bohr mag/cell
+[line 1464]      absolute magnetization    =     7.99 Bohr mag/cell
+[line 1574]      total magnetization       =     0.00     0.00     0.11 Bohr mag/cell
+[line 1575]      absolute magnetization    =     7.78 Bohr mag/cell
+[line 1685]      total magnetization       =    -0.00     0.00     0.11 Bohr mag/cell
+[line 1686]      absolute magnetization    =     7.69 Bohr mag/cell
+[line 1800]      total magnetization       =    -0.00     0.00     0.11 Bohr mag/cell
+[line 1801]      absolute magnetization    =     7.70 Bohr mag/cell
+[line 1911]      total magnetization       =     0.00    -0.00     0.11 Bohr mag/cell
+[line 1912]      absolute magnetization    =     7.69 Bohr mag/cell
+[line 2022]      total magnetization       =    -0.00    -0.00     0.11 Bohr mag/cell
+[line 2023]      absolute magnetization    =     7.68 Bohr mag/cell
+[line 2132]      total magnetization       =     0.00    -0.00     0.11 Bohr mag/cell
+[line 2133]      absolute magnetization    =     7.68 Bohr mag/cell
+[line 2242]      total magnetization       =    -0.00    -0.00     0.11 Bohr mag/cell
+[line 2243]      absolute magnetization    =     7.68 Bohr mag/cell
+[line 2352]      total magnetization       =    -0.00     0.00     0.11 Bohr mag/cell
+[line 2353]      absolute magnetization    =     7.68 Bohr mag/cell
+[line 2462]      total magnetization       =     0.00    -0.00     0.11 Bohr mag/cell
+[line 2463]      absolute magnetization    =     7.68 Bohr mag/cell
+[line 2572]      total magnetization       =     0.00     0.00     0.11 Bohr mag/cell
+[line 2573]      absolute magnetization    =     7.68 Bohr mag/cell
+[line 2682]      total magnetization       =     0.00    -0.00     0.11 Bohr mag/cell
+[line 2683]      absolute magnetization    =     7.68 Bohr mag/cell
+[line 2792]      total magnetization       =     0.00     0.00     0.11 Bohr mag/cell
+[line 2793]      absolute magnetization    =     7.68 Bohr mag/cell
+[line 2902]      total magnetization       =    -0.00     0.00     0.11 Bohr mag/cell
+[line 2903]      absolute magnetization    =     7.68 Bohr mag/cell
+[line 5462]      the Fermi energy is    16.3261 ev
+[line 5464] !    total energy              =    -589.02845813 Ry
+[line 5476]      total magnetization       =     0.00     0.00     0.11 Bohr mag/cell
+[line 5477]      absolute magnetization    =     7.68 Bohr mag/cell
+[line 5479]      convergence has been achieved in  21 iterations
+[line 5523]           total   stress  (Ry/bohr**3)                   (kbar)     P=      237.60
+[line 5585]      Energy error            =      0.0E+00 Ry
+[line 5587]      Cell gradient error     =      2.4E+02 kbar
+[line 5589]      number of scf cycles    =   1
+[line 5590]      number of bfgs steps    =   0
+[line 5597]      new unit-cell volume =    467.65898 a.u.^3 (    69.29991 Ang^3 )
+[line 5600] CELL_PARAMETERS (angstrom)
+[line 5601]   -0.000000000   3.260122245   3.260129981
+[line 5602]    3.260122245   0.000000000   3.260129981
+[line 5603]    3.260122245   3.260122245  -0.000000000
+[line 5756]      total magnetization       =    -0.00    -0.00     1.09 Bohr mag/cell
+[line 5757]      absolute magnetization    =     3.01 Bohr mag/cell
+[line 5866]      total magnetization       =     0.00     0.00    -0.00 Bohr mag/cell
+[line 5867]      absolute magnetization    =     0.42 Bohr mag/cell
+[line 5976]      total magnetization       =    -0.00    -0.00     2.86 Bohr mag/cell
+[line 5977]      absolute magnetization    =     2.94 Bohr mag/cell
+[line 6086]      total magnetization       =    -0.00    -0.00     2.54 Bohr mag/cell
+[line 6087]      absolute magnetization    =     2.76 Bohr mag/cell
+[line 6196]      total magnetization       =     0.00     0.00     0.95 Bohr mag/cell
+[line 6197]      absolute magnetization    =     5.03 Bohr mag/cell
+[line 6306]      total magnetization       =     0.00    -0.00     2.12 Bohr mag/cell
+[line 6307]      absolute magnetization    =     3.35 Bohr mag/cell
+[line 6416]      total magnetization       =    -0.00    -0.00     1.33 Bohr mag/cell
+[line 6417]      absolute magnetization    =     3.27 Bohr mag/cell
+[line 6526]      total magnetization       =     0.00    -0.00     0.23 Bohr mag/cell
+[line 6527]      absolute magnetization    =     7.00 Bohr mag/cell
+[line 6636]      total magnetization       =     0.00    -0.00     0.21 Bohr mag/cell
+[line 6637]      absolute magnetization    =     7.18 Bohr mag/cell
+[line 6746]      total magnetization       =     0.00     0.00     0.15 Bohr mag/cell
+[line 6747]      absolute magnetization    =     7.20 Bohr mag/cell
+[line 6856]      total magnetization       =    -0.00    -0.00     0.12 Bohr mag/cell
+[line 6857]      absolute magnetization    =     7.51 Bohr mag/cell
+[line 6966]      total magnetization       =     0.00    -0.00     0.14 Bohr mag/cell
+[line 6967]      absolute magnetization    =     8.02 Bohr mag/cell
+[line 7092]      total magnetization       =     0.00    -0.00     0.15 Bohr mag/cell
+[line 7093]      absolute magnetization    =     8.20 Bohr mag/cell
+[line 7209]      total magnetization       =    -0.00    -0.00     0.14 Bohr mag/cell
+[line 7210]      absolute magnetization    =     8.25 Bohr mag/cell
+[line 7323]      total magnetization       =     0.00     0.00     0.14 Bohr mag/cell
+[line 7324]      absolute magnetization    =     8.26 Bohr mag/cell
+[line 7434]      total magnetization       =    -0.00    -0.00     0.14 Bohr mag/cell
+[line 7435]      absolute magnetization    =     8.29 Bohr mag/cell
+[line 7546]      total magnetization       =    -0.00    -0.00     0.14 Bohr mag/cell
+[line 7547]      absolute magnetization    =     8.32 Bohr mag/cell
+[line 7656]      total magnetization       =     0.00    -0.00     0.14 Bohr mag/cell
+[line 7657]      absolute magnetization    =     8.33 Bohr mag/cell
+[line 7767]      total magnetization       =     0.00    -0.00     0.14 Bohr mag/cell
+[line 7768]      absolute magnetization    =     8.34 Bohr mag/cell
+[line 7878]      total magnetization       =     0.00    -0.00     0.14 Bohr mag/cell
+[line 7879]      absolute magnetization    =     8.34 Bohr mag/cell
+[line 7988]      total magnetization       =    -0.00    -0.00     0.14 Bohr mag/cell
+[line 7989]      absolute magnetization    =     8.34 Bohr mag/cell
+[line 8098]      total magnetization       =     0.00    -0.00     0.14 Bohr mag/cell
+[line 8099]      absolute magnetization    =     8.34 Bohr mag/cell
+[line 8208]      total magnetization       =    -0.00     0.00     0.14 Bohr mag/cell
+[line 8209]      absolute magnetization    =     8.34 Bohr mag/cell
+[line 10768]      the Fermi energy is    14.2901 ev
+[line 10770] !    total energy              =    -589.08263379 Ry
+[line 10782]      total magnetization       =     0.00     0.00     0.14 Bohr mag/cell
+[line 10783]      absolute magnetization    =     8.34 Bohr mag/cell
+[line 10785]      convergence has been achieved in  24 iterations
+[line 10829]           total   stress  (Ry/bohr**3)                   (kbar)     P=       81.35
+[line 10889]      Energy error            =      5.4E-02 Ry
+[line 10891]      Cell gradient error     =      8.1E+01 kbar
+[line 10893]      number of scf cycles    =   2
+[line 10894]      number of bfgs steps    =   1
+[line 10904]      new unit-cell volume =    500.45653 a.u.^3 (    74.16001 Ang^3 )
+[line 10907] CELL_PARAMETERS (angstrom)
+[line 10908]   -0.000000000   3.334628500   3.334608433
+[line 10909]    3.334628500   0.000000000   3.334608433
+[line 10910]    3.334628500   3.334628500  -0.000000000
+[line 11065]      total magnetization       =    -0.00     0.00     0.52 Bohr mag/cell
+[line 11066]      absolute magnetization    =     5.23 Bohr mag/cell
+[line 11175]      total magnetization       =     0.00    -0.00    -0.00 Bohr mag/cell
+[line 11176]      absolute magnetization    =     0.83 Bohr mag/cell
+[line 11285]      total magnetization       =     0.00    -0.00     3.54 Bohr mag/cell
+[line 11286]      absolute magnetization    =     3.68 Bohr mag/cell
+[line 11395]      total magnetization       =     0.00     0.00     2.01 Bohr mag/cell
+[line 11396]      absolute magnetization    =     5.35 Bohr mag/cell
+[line 11505]      total magnetization       =    -0.00     0.00     0.19 Bohr mag/cell
+[line 11506]      absolute magnetization    =     7.78 Bohr mag/cell
+[line 11615]      total magnetization       =    -0.00     0.00     1.36 Bohr mag/cell
+[line 11616]      absolute magnetization    =     5.84 Bohr mag/cell
+[line 11725]      total magnetization       =     0.00    -0.00     0.42 Bohr mag/cell
+[line 11726]      absolute magnetization    =     7.55 Bohr mag/cell
+[line 11835]      total magnetization       =    -0.00     0.00     0.41 Bohr mag/cell
+[line 11836]      absolute magnetization    =     7.49 Bohr mag/cell
+[line 11945]      total magnetization       =     0.00     0.00     0.20 Bohr mag/cell
+[line 11946]      absolute magnetization    =     7.71 Bohr mag/cell
+[line 12055]      total magnetization       =     0.00     0.00     0.13 Bohr mag/cell
+[line 12056]      absolute magnetization    =     8.32 Bohr mag/cell
+[line 12167]      total magnetization       =     0.00     0.00     0.13 Bohr mag/cell
+[line 12168]      absolute magnetization    =     8.51 Bohr mag/cell
+[line 12286]      total magnetization       =     0.00     0.00     0.13 Bohr mag/cell
+[line 12287]      absolute magnetization    =     8.45 Bohr mag/cell
+[line 12400]      total magnetization       =     0.00     0.00     0.13 Bohr mag/cell
+[line 12401]      absolute magnetization    =     8.48 Bohr mag/cell
+[line 12511]      total magnetization       =    -0.00     0.00     0.14 Bohr mag/cell
+[line 12512]      absolute magnetization    =     8.58 Bohr mag/cell
+[line 12622]      total magnetization       =     0.00     0.00     0.18 Bohr mag/cell
+[line 12623]      absolute magnetization    =     8.70 Bohr mag/cell
+[line 12732]      total magnetization       =     0.00    -0.00     0.16 Bohr mag/cell
+[line 12733]      absolute magnetization    =     8.63 Bohr mag/cell
+[line 12842]      total magnetization       =    -0.00     0.00     0.16 Bohr mag/cell
+[line 12843]      absolute magnetization    =     8.64 Bohr mag/cell
+[line 12953]      total magnetization       =     0.00    -0.00     0.17 Bohr mag/cell
+[line 12954]      absolute magnetization    =     8.65 Bohr mag/cell
+[line 13063]      total magnetization       =    -0.00     0.00     0.17 Bohr mag/cell
+[line 13064]      absolute magnetization    =     8.66 Bohr mag/cell
+[line 13173]      total magnetization       =    -0.00     0.00     0.17 Bohr mag/cell
+[line 13174]      absolute magnetization    =     8.67 Bohr mag/cell
+[line 13283]      total magnetization       =     0.00     0.00     0.17 Bohr mag/cell
+[line 13284]      absolute magnetization    =     8.67 Bohr mag/cell
+[line 13393]      total magnetization       =    -0.00     0.00     0.17 Bohr mag/cell
+[line 13394]      absolute magnetization    =     8.67 Bohr mag/cell
+[line 13503]      total magnetization       =     0.00     0.00     0.17 Bohr mag/cell
+[line 13504]      absolute magnetization    =     8.66 Bohr mag/cell
+[line 13613]      total magnetization       =    -0.00     0.00     0.17 Bohr mag/cell
+[line 13614]      absolute magnetization    =     8.66 Bohr mag/cell
+[line 13723]      total magnetization       =     0.00     0.00     0.17 Bohr mag/cell
+[line 13724]      absolute magnetization    =     8.67 Bohr mag/cell
+[line 13833]      total magnetization       =    -0.00     0.00     0.17 Bohr mag/cell
+[line 13834]      absolute magnetization    =     8.67 Bohr mag/cell
+[line 13943]      total magnetization       =    -0.00     0.00     0.17 Bohr mag/cell
+[line 13944]      absolute magnetization    =     8.67 Bohr mag/cell
+[line 14053]      total magnetization       =     0.00    -0.00     0.17 Bohr mag/cell
+[line 14054]      absolute magnetization    =     8.67 Bohr mag/cell
+[line 14163]      total magnetization       =     0.00     0.00     0.17 Bohr mag/cell
+[line 14164]      absolute magnetization    =     8.67 Bohr mag/cell
+[line 14273]      total magnetization       =     0.00     0.00     0.17 Bohr mag/cell
+[line 14274]      absolute magnetization    =     8.67 Bohr mag/cell
+[line 14383]      total magnetization       =     0.00    -0.00     0.17 Bohr mag/cell
+[line 14384]      absolute magnetization    =     8.67 Bohr mag/cell
+[line 16943]      the Fermi energy is    13.2148 ev
+[line 16945] !    total energy              =    -589.09350103 Ry
+[line 16957]      total magnetization       =     0.00     0.00     0.17 Bohr mag/cell
+[line 16958]      absolute magnetization    =     8.67 Bohr mag/cell
+[line 16960]      convergence has been achieved in  32 iterations
+[line 17004]           total   stress  (Ry/bohr**3)                   (kbar)     P=       19.68
+[line 17064]      Energy error            =      1.1E-02 Ry
+[line 17066]      Cell gradient error     =      2.0E+01 kbar
+[line 17068]      number of scf cycles    =   3
+[line 17069]      number of bfgs steps    =   2
+[line 17079]      new unit-cell volume =    511.90630 a.u.^3 (    75.85669 Ang^3 )
+[line 17082] CELL_PARAMETERS (angstrom)
+[line 17083]   -0.000000000   3.359881721   3.359819119
+[line 17084]    3.359881721   0.000000000   3.359819119
+[line 17085]    3.359881721   3.359881721  -0.000000000
+[line 17241]      total magnetization       =     0.00     0.00     0.08 Bohr mag/cell
+[line 17242]      absolute magnetization    =     8.28 Bohr mag/cell
+[line 17351]      total magnetization       =    -0.00     0.00     2.17 Bohr mag/cell
+[line 17352]      absolute magnetization    =     2.55 Bohr mag/cell
+[line 17461]      total magnetization       =     0.00     0.00     0.71 Bohr mag/cell
+[line 17462]      absolute magnetization    =     9.14 Bohr mag/cell
+[line 17571]      total magnetization       =    -0.00     0.00     0.30 Bohr mag/cell
+[line 17572]      absolute magnetization    =     8.03 Bohr mag/cell
+[line 17681]      total magnetization       =    -0.00     0.00     0.33 Bohr mag/cell
+[line 17682]      absolute magnetization    =     8.28 Bohr mag/cell
+[line 17791]      total magnetization       =     0.00     0.00     0.26 Bohr mag/cell
+[line 17792]      absolute magnetization    =     8.45 Bohr mag/cell
+[line 17901]      total magnetization       =     0.00     0.00     0.19 Bohr mag/cell
+[line 17902]      absolute magnetization    =     8.59 Bohr mag/cell
+[line 18011]      total magnetization       =    -0.00     0.00     0.17 Bohr mag/cell
+[line 18012]      absolute magnetization    =     8.68 Bohr mag/cell
+[line 18134]      total magnetization       =     0.00     0.00     0.17 Bohr mag/cell
+[line 18135]      absolute magnetization    =     8.69 Bohr mag/cell
+[line 18247]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 18248]      absolute magnetization    =     8.73 Bohr mag/cell
+[line 18358]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 18359]      absolute magnetization    =     8.75 Bohr mag/cell
+[line 18469]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 18470]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 18579]      total magnetization       =     0.00    -0.00     0.18 Bohr mag/cell
+[line 18580]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 18689]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 18690]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 18799]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 18800]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 18909]      total magnetization       =     0.00     0.00     0.18 Bohr mag/cell
+[line 18910]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 19019]      total magnetization       =     0.00     0.00     0.18 Bohr mag/cell
+[line 19020]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 19129]      total magnetization       =     0.00     0.00     0.18 Bohr mag/cell
+[line 19130]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 19239]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 19240]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 19350]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 19351]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 19460]      total magnetization       =     0.00     0.00     0.18 Bohr mag/cell
+[line 19461]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 19570]      total magnetization       =     0.00    -0.00     0.18 Bohr mag/cell
+[line 19571]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 22131]      the Fermi energy is    12.8695 ev
+[line 22133] !    total energy              =    -589.09435822 Ry
+[line 22145]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 22146]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 22148]      convergence has been achieved in  23 iterations
+[line 22192]           total   stress  (Ry/bohr**3)                   (kbar)     P=        2.69
+[line 22252]      Energy error            =      8.6E-04 Ry
+[line 22254]      Cell gradient error     =      2.7E+00 kbar
+[line 22256]      number of scf cycles    =   4
+[line 22257]      number of bfgs steps    =   3
+[line 22267]      new unit-cell volume =    513.76682 a.u.^3 (    76.13239 Ang^3 )
+[line 22270] CELL_PARAMETERS (angstrom)
+[line 22271]   -0.000000000   3.363960157   3.363858894
+[line 22272]    3.363960157   0.000000000   3.363858894
+[line 22273]    3.363960157   3.363960157  -0.000000000
+[line 22408]      total magnetization       =     0.00     0.00     0.15 Bohr mag/cell
+[line 22409]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 22525]      total magnetization       =     0.00     0.00     0.32 Bohr mag/cell
+[line 22526]      absolute magnetization    =     8.10 Bohr mag/cell
+[line 22638]      total magnetization       =    -0.00     0.00     0.24 Bohr mag/cell
+[line 22639]      absolute magnetization    =     8.89 Bohr mag/cell
+[line 22748]      total magnetization       =     0.00     0.00     0.19 Bohr mag/cell
+[line 22749]      absolute magnetization    =     8.75 Bohr mag/cell
+[line 22858]      total magnetization       =     0.00     0.00     0.19 Bohr mag/cell
+[line 22859]      absolute magnetization    =     8.76 Bohr mag/cell
+[line 22968]      total magnetization       =     0.00     0.00     0.19 Bohr mag/cell
+[line 22969]      absolute magnetization    =     8.76 Bohr mag/cell
+[line 23085]      total magnetization       =     0.00     0.00     0.17 Bohr mag/cell
+[line 23086]      absolute magnetization    =     8.76 Bohr mag/cell
+[line 23199]      total magnetization       =     0.00     0.00     0.18 Bohr mag/cell
+[line 23200]      absolute magnetization    =     8.77 Bohr mag/cell
+[line 23310]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 23311]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 23421]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 23422]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 23531]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 23532]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 23641]      total magnetization       =     0.00     0.00     0.18 Bohr mag/cell
+[line 23642]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 23751]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 23752]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 23861]      total magnetization       =     0.00     0.00     0.18 Bohr mag/cell
+[line 23862]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 23971]      total magnetization       =     0.00     0.00     0.18 Bohr mag/cell
+[line 23972]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 24081]      total magnetization       =     0.00     0.00     0.18 Bohr mag/cell
+[line 24082]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 24191]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 24192]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 24301]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 24302]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 24411]      total magnetization       =     0.00     0.00     0.18 Bohr mag/cell
+[line 24412]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 24521]      total magnetization       =     0.00    -0.00     0.18 Bohr mag/cell
+[line 24522]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 27081]      the Fermi energy is    12.8147 ev
+[line 27083] !    total energy              =    -589.09437591 Ry
+[line 27095]      total magnetization       =    -0.00     0.00     0.18 Bohr mag/cell
+[line 27096]      absolute magnetization    =     8.78 Bohr mag/cell
+[line 27098]      convergence has been achieved in  21 iterations
+[line 27142]           total   stress  (Ry/bohr**3)                   (kbar)     P=        0.12
+[line 27202]      Energy error            =      1.8E-05 Ry
+[line 27204]      Cell gradient error     =      1.3E-01 kbar
+[line 27206]      bfgs converged in   5 scf cycles and   4 bfgs steps
+[line 27209]      End of BFGS Geometry Optimization
+[line 27211]      Final enthalpy           =    -589.0943759055 Ry
+[line 27215]      new unit-cell volume =    513.76682 a.u.^3 (    76.13239 Ang^3 )
+[line 27218] CELL_PARAMETERS (angstrom)
+[line 27219]   -0.000000000   3.363960157   3.363858894
+[line 27220]    3.363960157   0.000000000   3.363858894
+[line 27221]    3.363960157   3.363960157  -0.000000000
+
+Begin final coordinates
+     new unit-cell volume =    513.76682 a.u.^3 (    76.13239 Ang^3 )
+     density =      5.79127 g/cm^3
+
+CELL_PARAMETERS (angstrom)
+  -0.000000000   3.363960157   3.363858894
+   3.363960157   0.000000000   3.363858894
+   3.363960157   3.363960157  -0.000000000
+
+ATOMIC_POSITIONS (angstrom)
+Ti            0.0000000000       -0.0000000000       -0.0000000000
+Ti            1.6819800785        1.6819800785        5.0457883410
+Mn            3.3639601569       -0.0000000000       -0.0000000000
+In            1.6819800785        1.6819800785        1.6819294470
+End final coordinates
+
+[... last 30 lines of the file ...]
+ ==============================================================================
+
+ ==============================================================================
+     atom number    2 relative position :    0.3795   0.3795   1.1386
+     charge :    10.209639  (integrated on a sphere of radius 0.253)
+     magnetization :          0.000000   -0.000000    1.581583
+     magnetization/charge:    0.000000   -0.000000    0.154911
+     polar coord.: r, theta, phi [deg] :     1.581583    0.000000  360.000000
+
+ ==============================================================================
+
+ ==============================================================================
+     atom number    3 relative position :    0.7591  -0.0000  -0.0000
+     charge :    13.514228  (integrated on a sphere of radius 0.253)
+     magnetization :          0.000000   -0.000000   -3.901480
+     magnetization/charge:    0.000000   -0.000000   -0.288694
+     polar coord.: r, theta, phi [deg] :     3.901480  180.000000  360.000000
+
+ ==============================================================================
+
+ ==============================================================================
+     atom number    4 relative position :    0.3795   0.3795   0.3795
+     charge :    11.040907  (integrated on a sphere of radius 0.253)
+     magnetization :          0.000000   -0.000000   -0.010657
+     magnetization/charge:    0.000000   -0.000000   -0.000965
+     polar coord.: r, theta, phi [deg] :     0.010657  180.000000  360.000000
+
+ ==============================================================================
+ Atomic wfc used for LDA+U Projector are NOT orthogonalized
+     Starting wfcs are   78 randomized atomic wfcs

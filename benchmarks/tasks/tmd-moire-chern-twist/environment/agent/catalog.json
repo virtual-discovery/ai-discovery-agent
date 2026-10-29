@@ -1,0 +1,93 @@
+{
+ "study": "X.-W. Zhang, C. Wang, X. Liu, Y. Fan, T. Cao, D. Xiao, Polarization-driven band topology evolution in twisted MoTe2 and WSe2, Nat. Commun. 15, 4223 (2024); data: Zenodo 10888769 (CC BY 4.0)",
+ "systems": {
+  "tWSe2": {
+   "angles_deg": [
+    "3.15",
+    "1.70",
+    "1.54",
+    "1.25"
+   ]
+  },
+  "tMoTe2": {
+   "angles_deg": [
+    "3.89",
+    "3.15",
+    "2.14",
+    "1.25"
+   ]
+  }
+ },
+ "staged_files": {
+  "archive/fig1/set_P, archive/fig1/set_Q": "the two continuum-model parameter maps of the paper's Fig. 1 (one from the local-stacking approximation, one fitted to a 3.89 deg tMoTe2 DFT calculation; the labels P and Q are arbitrary): Delta-bot.dat, Delta-top.dat (columns Re, Im, |.| in meV, 100 x 100 grid) and Delta-T.dat (Re, Im, |.|, 10 x 10 grid), with the authors' plotting script",
+  "archive/fig2/tWSe2_3.15, archive/fig2/tMoTe2_3.89": "archived SIESTA moire valence bands (Es-band.dat: blocks of (k distance in 1/A, energy in eV) per state along gamma-m-kappa-gamma, 61 points) and the SIESTA input",
+  "archive/fig2/tWSe2_relaxation_*": "relaxed tWSe2 structures (CONTCAR) and interpolated interlayer distance / in-plane displacement maps",
+  "archive/fig3/tWSe2_3.15": "surface Hartree potentials of 3.15 deg tWSe2 (top: pot_2d_top_sm.dat; bottom: pos_2d_bot_sm.dat, archived name), the line cut and the authors' scripts (the Fourier-amplitude files are sold by hartree_fourier)"
+ },
+ "continuum_parameter_sets": {
+  "P": {
+   "effective_mass_me": 0.6,
+   "monolayer_lattice_constant_A": 3.52,
+   "files": "archive/fig1/set_P"
+  },
+  "Q": {
+   "effective_mass_me": 0.62,
+   "monolayer_lattice_constant_A": 3.472,
+   "files": "archive/fig1/set_Q"
+  }
+ },
+ "requests": {
+  "dft_bands": {
+   "format": {
+    "kind": "dft_bands",
+    "material": "tWSe2 | tMoTe2",
+    "angle": "<angle string>"
+   },
+   "cost": 1,
+   "returns": "archived SIESTA moire valence bands along gamma-m-kappa-gamma"
+  },
+  "c3": {
+   "format": {
+    "kind": "c3",
+    "material": "tWSe2 | tMoTe2",
+    "angle": "<angle string>",
+    "point": "gamma | kappa | kappa_prime"
+   },
+   "cost": 1,
+   "returns": "spin and C3z eigenvalue (complex, [Re, Im]) of the six highest moire valence states at the point, as determined by the authors"
+  },
+  "hartree_map": {
+   "format": {
+    "kind": "hartree_map",
+    "angle": "3.15 | 1.70 | 1.54 | 1.25"
+   },
+   "cost": 3,
+   "returns": "tWSe2 top- and bottom-surface Hartree potential maps (n x n; a few MB of JSON)"
+  },
+  "hartree_linecut": {
+   "format": {
+    "kind": "hartree_linecut",
+    "angle": "..."
+   },
+   "cost": 1,
+   "returns": "the archived line cut pot_diag-top.dat of that angle"
+  },
+  "hartree_fourier": {
+   "format": {
+    "kind": "hartree_fourier",
+    "angle": "..."
+   },
+   "cost": 1,
+   "returns": "the archived Fourier-amplitude file pot_top_bot_G.dat of that angle (|g|/g1 <= 7)"
+  },
+  "structure": {
+   "format": {
+    "kind": "structure",
+    "angle": "..."
+   },
+   "cost": 1,
+   "returns": "relaxed tWSe2 structure (POSCAR) of that angle"
+  }
+ },
+ "budget": 27
+}

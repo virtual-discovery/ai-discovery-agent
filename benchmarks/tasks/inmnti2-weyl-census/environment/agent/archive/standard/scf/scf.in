@@ -1,0 +1,42 @@
+&CONTROL
+  calculation = 'scf'
+  max_seconds = 3600
+  outdir = './out/'
+  prefix = 'InMnTi2'
+  pseudo_dir = './pseudo/'
+  restart_mode = 'from_scratch'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   2.0000000000d-02
+  ecutrho = 600
+  ecutwfc = 150
+  ibrav = 0
+  lspinorb = .true.
+  nat = 4
+  noncolin = .true.
+  ntyp = 3
+  occupations = 'smearing'
+  smearing = 'marzari-vanderbilt'
+/
+&ELECTRONS
+  conv_thr =   4.0000000000d-10
+/
+ATOMIC_SPECIES
+In     114.82 In-d_upf_r.oncvpsp.upf
+Mn     54.938 Mn-sp-high_upf_r.oncvpsp.upf
+Ti     47.88 Ti-sp_upf_r.oncvpsp.upf
+ATOMIC_POSITIONS angstrom
+Ti           0.0000000000       0.0000000000       0.0000000000 
+Ti           1.5667960355       1.5667960355       4.7003881065 
+Mn           3.1335920710       0.0000000000       0.0000000000 
+In           1.5667960355       1.5667960355       1.5667960355 
+K_POINTS automatic
+9 9 9 0 0 0
+CELL_PARAMETERS angstrom
+      0.0000000000       3.1335920710       3.1335920710
+      3.1335920710       0.0000000000       3.1335920710
+      3.1335920710       3.1335920710       0.0000000000
+

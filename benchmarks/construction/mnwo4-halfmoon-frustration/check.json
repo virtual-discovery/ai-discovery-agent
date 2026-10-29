@@ -1,0 +1,101 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 8,
+  "task_mb": 3.54,
+  "hidden_values": 2847,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 29,
+   "budget": 33,
+   "evaluations": 23,
+   "failed_evaluations": 0,
+   "container_seconds": 26
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "dispersion_only_min_norm_split",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "spin_length_one_in_dynamics",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "mean_field_rpa_nominal_T",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "mean_field_rpa_lowest_valid_T",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "isotropic_model_no_anisotropy",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "magnetic_form_factor_applied",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "temperature_insensitive_spin_liquid",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "quasi_1d_chain_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "archived_hamiltonian_scga",
+    "passes_grading": true
+   },
+   {
+    "name": "34_spectra_null_from_20K_map_only",
+    "passes_grading": true
+   },
+   {
+    "name": "null_from_20_30_60K_maps",
+    "passes_grading": true
+   },
+   {
+    "name": "null_from_11K_zone_peak",
+    "passes_grading": true
+   },
+   {
+    "name": "no_literature_joint_de_best_of_4_seeds",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T11:17:53Z"
+}

@@ -1,0 +1,168 @@
+{
+ "task_id": "ca3ti2o7-hybrid-improper-domain-walls",
+ "catalog_id": "ca3ti2o7-hybrid-improper-domain-walls",
+ "start": "released",
+ "source_group": "skogvoll_2026_ca3ti2o7_domain_walls",
+ "title": "Ca3Ti2O7: hybrid improper ferroelectric domain walls",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which parent-symmetry image of the bulk reverses psi_z and which reverses phi (P ~ psi*phi)",
+   "wrong_choice": "Use plain inversion for the psi wall (inversion keeps the X2+ rotation and reverses the X3- tilt)",
+   "consequence": "psi and phi wall energies swapped (195 vs 135 mJ/m^2); layer psi wall 153 instead of 14",
+   "ablation": "swap_psi_phi_construction"
+  },
+  {
+   "id": "dp2",
+   "fork": "Reverse one order parameter or both",
+   "wrong_choice": "Reverse both octahedral modes (pure parent translation / invert all antiferrodistortive displacements)",
+   "consequence": "Antiphase boundary with P unchanged, 237 mJ/m^2 reported as the psi wall",
+   "ablation": "antiphase_boundary_as_psi_wall"
+  },
+  {
+   "id": "dp3",
+   "fork": "Which in-plane axis of the bulk cell is polar (sets neutral vs charged orientation)",
+   "wrong_choice": "Take the wrong orthorhombic axis as polar",
+   "consequence": "'Neutral' walls are head-to-head/tail-to-tail: 176/206 mJ/m^2 at 8 cells and growing; the 'charged' series is flat",
+   "ablation": "polar_axis_swapped"
+  },
+  {
+   "id": "dp4",
+   "fork": "Placement of the wall parallel to the layers",
+   "wrong_choice": "Single placement inside the perovskite bilayer",
+   "consequence": "Metastable 49.5 mJ/m^2 instead of 13.7 (rock-salt placement)",
+   "ablation": "layer_wall_in_bilayer"
+  },
+  {
+   "id": "dp5",
+   "fork": "Supercell-length behaviour of charged walls (no converged energy; linear field-energy regime)",
+   "wrong_choice": "Slope from very short cells, report a converged value, or slope per supercell length",
+   "consequence": "Slope 17.3 (short cells), 0, or 6.1 instead of 12.2 mJ m^-2 nm^-1",
+   "ablation": "charged_slope_from_short_cells"
+  },
+  {
+   "id": "dp6",
+   "fork": "Potential: electrostatic qNEP-w-BECs vs cheaper short-range NEP",
+   "wrong_choice": "Relax with NEP (half price)",
+   "consequence": "Neutral psi wall 121 (-9%), layer psi wall -8.7 mJ/m^2, charged slope negative (no depolarizing field)",
+   "ablation": "short_range_NEP"
+  },
+  {
+   "id": "dp7",
+   "fork": "Normalization of the excess energy of a periodic two-wall cell",
+   "wrong_choice": "Divide by the cross-section once (one wall per cell)",
+   "consequence": "All energies and the slope doubled",
+   "ablation": "one_wall_per_cell_normalization"
+  },
+  {
+   "id": "dp8",
+   "fork": "Which quantity classifies the wall profile",
+   "wrong_choice": "Classify from the polarization profile, which passes through zero for both wall types",
+   "consequence": "phi wall called Ising; the tilt actually rotates (|phi| >= 0.7 of bulk at the wall)",
+   "ablation": "profile_from_polarization"
+  }
+ ],
+ "graded_fields": [
+  "E_neutral_psi_wall_mJ_m2 within 5% of 133.6 (ref, n=16 orth cells)",
+  "E_neutral_phi_wall_mJ_m2 within 5%",
+  "E_layer_psi_wall_mJ_m2 within +-4 mJ/m^2",
+  "charged_psi_wall_slope_mJ_m2_per_nm within 15%",
+  "psi_wall_profile exact (ising)",
+  "phi_wall_profile exact (rotational)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 12,
+  "oracle_charge": 17,
+  "budget": 24,
+  "oracle_container_seconds": 70,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "why": "The agent must map the bulk onto the I4/mmm parent, generate the right domain variants, build three wall orientations in numpy, run a charged-wall size series, and analyse octahedral profiles from returned structures."
+ },
+ "runtime_dependencies": [
+  "numpy and scipy of the runtime image (scipy.optimize L-BFGS-B); NEP evaluated by environment/lab/nep_numpy.py (pure numpy, written for this task); no extra packages or image layers"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/22801877",
+  "files_used": [
+   "Data.zip"
+  ],
+  "md5": {
+   "Data.zip": "4007d33af8f3b2b26055b4fbc711abeb"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Released start with a released evaluator: the lab runs the authors' qNEP/NEP potentials (numpy re-implementation validated against NEP_CPU reference outputs and the training set). Targets are builder relaxations with the lab code path, reproducing the authors' archived 100-type walls to <1 mJ/m^2. The (100) walls of the parent are partially charged (P at 45 degrees), so their energy grows with cell length (156->181 mJ/m^2 for 8->32 cells); they are a rubric point, not graded. Mechanical boundary condition (normal relaxation) changes energies by <3%, so it is a robustness variant, not a decision point. Wall-position choice for in-plane walls is irrelevant (body-centring makes the planes equivalent).",
+ "calibration": {
+  "E_neutral_psi_wall_mJ_m2": {
+   "reference": 133.57,
+   "robustness": {
+    "normal_relaxed_n8": 131.06,
+    "fixed_n8": 134.93,
+    "fixed_n12": 134.08,
+    "oracle": 134.08
+   },
+   "nearest_ablation": {
+    "short_range_NEP": 121.08,
+    "charged_orientation_n8": 176.48,
+    "phi_value": 195.06,
+    "APB": 237.12
+   },
+   "tolerance": "[126.89, 140.25] (+-5%)"
+  },
+  "E_neutral_phi_wall_mJ_m2": {
+   "reference": 195.14,
+   "robustness": {
+    "normal_relaxed_n8": 194.75,
+    "fixed_n4": 196.7,
+    "fixed_n8": 195.06
+   },
+   "nearest_ablation": {
+    "short_range_NEP": 182.95,
+    "charged_orientation_n8": 206.47,
+    "psi_value": 134.93
+   },
+   "tolerance": "[185.38, 204.89] (+-5%)"
+  },
+  "E_layer_psi_wall_mJ_m2": {
+   "reference": 13.66,
+   "robustness": {
+    "normal_relaxed": 13.07,
+    "nz6": 13.99,
+    "nz4": 13.38,
+    "other_start_relaxing_into_rocksalt": 13.23
+   },
+   "nearest_ablation": {
+    "bilayer_placement": 49.49,
+    "short_range_NEP": -8.75,
+    "one_wall_normalization": 26.75
+   },
+   "tolerance": "[9.66, 17.66] (+-4)"
+  },
+  "charged_psi_wall_slope_mJ_m2_per_nm": {
+   "reference": 12.16,
+   "robustness": {
+    "normal_relaxed_n12_n24": 12.15,
+    "fit_n16_24": 11.99,
+    "fit_n8_16": 12.22,
+    "oracle_n8_12_16_24": 12.14
+   },
+   "nearest_ablation": {
+    "short_cells_n4_n8": 17.3,
+    "per_supercell_length": 6.08,
+    "converged": 0.0,
+    "short_range_NEP": -2.25
+   },
+   "tolerance": "[10.34, 13.99] (+-15%)"
+  },
+  "profiles": {
+   "reference": {
+    "psi": "ising (min |psi|/psi0 = 0.09)",
+    "phi": "rotational (min |tilt|/tilt0 = 0.71)"
+   },
+   "nearest_ablation": "phi classified from P (Ising in both)",
+   "tolerance": "exact"
+  }
+ }
+}

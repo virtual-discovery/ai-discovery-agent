@@ -1,0 +1,33 @@
+! Scalar-relativistic PBE SCF template (no U, no SOC). Replace <...>. Used for ZrSe3, TiS3 (bulk and monolayer) and ReS2 slabs.
+&CONTROL
+  calculation = 'scf'
+  prefix = '<prefix>'
+  outdir = './out'
+  pseudo_dir = '<pseudo_dir_sr>'
+  verbosity = 'high'
+  tprnfor = .true.
+  tstress = .true.
+/
+&SYSTEM
+  ibrav = 0
+  nat = <nat>
+  ntyp = <ntyp>
+  ecutwfc = <ecut_from_S0_ladder>      ! PseudoDojo "normal" hints: Zr 36, Se 42, Ti 38, S 26, Re 33 Ha -> start at the max x2 Ry and ladder to 5 meV on the KS gap
+  ecutrho = <4*ecutwfc>
+  occupations = 'fixed'                ! band insulators; use smearing only if the system is metallic in DFT (then stop and report)
+  nbnd = <nocc + 20>
+  assume_isolated = '2D'               ! slabs only (monolayer TiS3, ReS2): also set the vacuum >= 15 A and remove this line for bulk
+/
+&ELECTRONS
+  conv_thr = 1.0d-10
+  diagonalization = 'david'
+  diago_full_acc = .true.
+/
+ATOMIC_SPECIES
+<species mass file.upf>
+CELL_PARAMETERS angstrom
+<three lattice vectors; strain is applied here (ZrSe3) and the cell is NOT re-relaxed in-plane>
+ATOMIC_POSITIONS crystal
+<positions after the S0/S1 relaxation (vc-relax with cell_dofree = 'z' or 'ibrav' as the card prescribes)>
+K_POINTS automatic
+<k1 k2 k3> 0 0 0

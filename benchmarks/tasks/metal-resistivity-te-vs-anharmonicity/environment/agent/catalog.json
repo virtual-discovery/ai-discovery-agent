@@ -1,0 +1,953 @@
+{
+ "title": "Phonon-limited resistivity of Pb, Nb and Al with thermal expansion and TDEP anharmonicity",
+ "source": "A. Wang, J. Yin, F. A. Goudreault, M. Cote, O. Hellman, S. Ponce (2026), Materials Cloud Archive record zxf0b-rs406 (DOI 10.24435/materialscloud:4h-r1), CC BY 4.0. Retrieved author calculations; no new EPW calculation is run.",
+ "archive_readme": "#################################################################################################################################################\n# Antagonistic impact of thermal expansion and phonon anharmonicity on the phonon-limited resistivity of elemental metals from first principles\n#################################################################################################################################################\n# A. Wang, J. Yin, F. Goudreault, M C\u00f4t\u00e9, O. Hellman, and S. Ponc\u00e9\n\n## (1) Calculation software:\nWe use two versions of QE (QE v7.3 with EPW v5.8, and QE v7.4 with EPW v5.9), and each has two branches (one is the unchanged code, named qe-7.3 and qe-7.4, one is modified by us to make the TDEP output force readable, named qe-7.3-tdep and qe-7.4-tdep).\n\nThe unchanged QE code can be downloaded from [github.com/QEF/q-e/qe-7.3](https://github.com/QEF/q-e/tree/qe-7.3) and [github.com/QEF/q-e/qe-7.4](https://github.com/QEF/q-e/tree/qe-7.4).\n\nThe method to modify the code is given in the file `./data_for_paper/software`\n\n## (2) Band structure and phonon property calculations with and without thermal expansion:\nIn files `./data_for_paper/Al(Nb, Pb)/1-pw/band-structure/` and `./data_for_paper/Al(Nb, Pb)/2-ph/`,\nwe give the input and output files for the electron band and phonon calculations with lattice parameters in different temperatures.\nThis part we use the qe-7.3 code.\n\nAfter the phonon calculation, use `python pp.py` to get the \"save\" file.\nCopy the espresso.xml into this file, and rename it to be ifc.q2r.xml.\nCopy the matdyn*.xml into the save file and rename to Al.dyn_q*.xml/Nb.dyn_q*.xml/Pb.dyn_q*.xml.\n\n## (3) Phonon calculations include anharmonicity with TDEP:\nIn files `./data_for_paper/Al(Nb, Pb)/3-ph-anharm-TDEP/`, we do the TDEP iterations at different temperatures to\ncalculate the interatomic force constants (IFCs) that include the phonon anharmonicity.\n\nThe calculation procedure is given in the file `./data_for_paper/Al(Nb, Pb)/3-ph-anharm-TDEP/README.md`.\nAfter the calculations, we get the \"updated_qe.fc.xml\" file in `./data_for_paper/Al(Nb, Pb)/3-ph-anharm-TDEP/*K/sampling.*k/iter.00*/matdyn/` of different temperatures.\n\nCopy the \"save\" files in `./data_for_paper/Al(Nb, Pb)/2-ph/ph-*K/`, and rename it to be \"save-*K\".\nThen, copy the \"updated_qe.fc.xml\" file into the \"save-*K\" and rename it to be ifc.q2r.xml.\nNow, we have the \"save-*K\" file including the TDEP IFCs for the EPW calculation.\n\nNote that in `./data_for_paper/Pb/3-ph-anharm-TDEP/0K-alat/`, we also need to calculate the TDEP at 210, 410, and 610 K with lattice parameter without thermal expansion.\nCopy the three \"updated_qe.fc.xml\" files into `./data_for_paper/Pb/2-ph/ph-0K/save-210K(save-410K, save-610K)` and rename it to be ifc.q2r.xml.\n\n## (4) EPW calculation with/wo TE, with/wo phonon anharmonicity:\nIn files `data_for_paper/Pb(Al, Nb)/4-epw`, we do the EPW calculations to obtain the electrical resistivity.\nAll the inputs and outputs are given.\nIn subdirectory `1-DFPT` and `2-with_TE`, we use the qe-7.3. Moreover, the original \"save\" file is the input.\n\nIn files `3-anharm` and `4-TE_and_anharm` for Pb and `3-TE_and_anharm` for Al and Nb, we use the qe-7.3-tdep.\nNote that in these files, apart from the code, we also need to read the \"save-*K\" file.\n\n## (5) Spectral decomposition of the electron scattering rates calculation:\nIn files `./data_for_paper/Pb/4-epw/1-DFPT/epw/spec/`, use the \"run\" file provided and qe-7.4, we can calculate the spectral decomposition\nof the electron scattering rates of Pb in 610 K without TE or anharmonicity.\n\nIn files `./data_for_paper/Pb/4-epw/2-with_TE/610K/spec/`, with the \"run\" file provided and qe-7.4, we can calculate the spectral decomposition\nof the electron scattering rates of Pb in 610 K with TE.\n\nIn files `./data_for_paper/Pb/4-epw/4-TE_and_anharm/610K/spec/`, with the \"run\" file provided and qe-7.4-tdep,\nwe can calculate the spectral decomposition of the electron scattering rates of Pb in 610 K with TE and anharmonicity.\n\n## (6) The data origination of the file data_for_paper\nThe Data folders are arranged as follow:\ndata_for_paper/\n\u251c\u2500\u2500 Al/\n\u2502   \u251c\u2500\u2500 1-pw/\n\u2502   \u2502    \u251c\u2500\u2500 band-structure/\n\u2502   \u2502    \u2502           \u251c\u2500\u25000K/             # Band structure calculations of Al with lattice parameter at 0K\n\u2502   \u2502    \u2502           \u251c\u2500\u2500481K/           # Band structure calculations of Al with lattice parameter at 481K\n\u2502   \u2502    \u2502           \u251c\u2500\u2500682K/           # Band structure calculations of Al with lattice parameter at 682K\n\u2502   \u2502    \u2502           \u2514\u2500\u2500900K/           # Band structure calculations of Al with lattice parameter at 900K\n\u2502   \u251c\u2500\u2500 2-ph/\n\u2502   \u2502    \u251c\u2500\u2500 ph-0K/                     # Phonon calculations of Al with lattice parameter at 0K\n\u2502   \u2502    \u251c\u2500\u2500 ph-481K/                   # Phonon calculations of Al with lattice parameter at 481K\n\u2502   \u2502    \u251c\u2500\u2500 ph-682K/                   # Phonon calculations of Al with lattice parameter at 682K\n\u2502   \u2502    \u2514\u2500\u2500 ph-900K/                   # Phonon calculations of Al with lattice parameter at 900K\n\u2502   \u251c\u2500\u2500 3-ph-anharm-TDEP/\n\u2502   \u2502    \u251c\u2500\u2500 481K/                      # TDEP calculations of Al at 481K\n\u2502   \u2502    \u251c\u2500\u2500 682K/                      # TDEP calculations of Al at 682K\n\u2502   \u2502    \u2514\u2500\u2500 900K/                      # TDEP calculations of Al at 900K\n\u2502   \u251c\u2500\u2500 4-epw/\n\u2502   \u2502    \u251c\u2500\u2500 1-DFPT/                    # EPW calculation of Al without TE or TDEP\n\u2502   \u2502    \u2502        \u2514\u2500\u2500 comp_EPW_interpolation/             # Comparison of the EPW interpolated band and phonon dispersion with DFT/DFPT one of Al without TE or anharmonicity\n\u2502   \u2502    \u251c\u2500\u2500 2-with_TE/\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 481K/             # EPW calculation of Al with lattice parameter at 481K\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 682K/             # EPW calculation of Al with lattice parameter at 682K\n\u2502   \u2502    \u2502        \u2514\u2500\u2500 900K/             # EPW calculation of Al with lattice parameter at 900K\n\u2502   \u2502    \u251c\u2500\u2500 3-TE_and_anharm\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 481K/             # EPW calculation of Al with lattice parameter at 481K and with TDEP IFCs\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 682K/             # EPW calculation of Al with lattice parameter at 682K and with TDEP IFCs\n\u2502   \u2502    \u2502        \u2514\u2500\u2500 900K/             # EPW calculation of Al with lattice parameter at 900K and with TDEP IFCs\n\u2502   \u2514\u2500\u2500 pp/                             # pseudopotential of Al\n\u251c\u2500\u2500 Nb/\n\u2502   \u251c\u2500\u2500 1-pw/\n\u2502   \u2502    \u251c\u2500\u2500 band-structure/\n\u2502   \u2502    \u2502           \u251c\u2500\u25000K/             # Band structure calculations of Nb with lattice parameter at 0K\n\u2502   \u2502    \u2502           \u251c\u2500\u25001000K/          # Band structure calculations of Nb with lattice parameter at 1000K\n\u2502   \u2502    \u2502           \u251c\u2500\u25001500K/          # Band structure calculations of Nb with lattice parameter at 1500K\n\u2502   \u2502    \u2502           \u2514\u2500\u25002000K/          # Band structure calculations of Nb with lattice parameter at 2000K\n\u2502   \u251c\u2500\u2500 2-ph/\n\u2502   \u2502    \u251c\u2500\u2500 ph-0K/                     # Phonon calculations of Nb with lattice parameter at 0K\n\u2502   \u2502    \u251c\u2500\u2500 ph-1000K/                  # Phonon calculations of Nb with lattice parameter at 1000K\n\u2502   \u2502    \u251c\u2500\u2500 ph-1500K/                  # Phonon calculations of Nb with lattice parameter at 1500K\n\u2502   \u2502    \u2514\u2500\u2500 ph-2000K/                  # Phonon calculations of Nb with lattice parameter at 2000K\n\u2502   \u251c\u2500\u2500 3-ph-anharm-TDEP/\n\u2502   \u2502    \u251c\u2500\u2500 1000K/                     # TDEP calculations of Nb at 1000K\n\u2502   \u2502    \u251c\u2500\u2500 1500K/                     # TDEP calculations of Nb at 1500K\n\u2502   \u2502    \u2514\u2500\u2500 2000K/                     # TDEP calculations of Nb at 2000K\n\u2502   \u251c\u2500\u2500 4-epw/\n\u2502   \u2502    \u251c\u2500\u2500 1-DFPT/                    # EPW calculation of Nb without TE or TDEP\n\u2502   \u2502    \u2502        \u2514\u2500\u2500 comp_EPW_interpolation/             # Comparison of the EPW interpolated band and phonon dispersion with DFT/DFPT one of Nb without TE or anharmonicity\n\u2502   \u2502    \u251c\u2500\u2500 2-with_TE/\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 1000K/            # EPW calculation of Nb with lattice parameter at 1000K\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 1500K/            # EPW calculation of Nb with lattice parameter at 1500K\n\u2502   \u2502    \u2502        \u2514\u2500\u2500 2000K/            # EPW calculation of Nb with lattice parameter at 2000K\n\u2502   \u2502    \u251c\u2500\u2500 3-TE_and_anharm/\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 1000K/            # EPW calculation of Nb with lattice parameter at 1000K and with TDEP IFCs\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 1500K/            # EPW calculation of Nb with lattice parameter at 1500K and with TDEP IFCs\n\u2502   \u2502    \u2502        \u2514\u2500\u2500 2000K/            # EPW calculation of Nb with lattice parameter at 2000K and with TDEP IFCs\n\u2502   \u2514\u2500\u2500 pp/                             # pseudopotential of Nb\n\u251c\u2500\u2500 Pb/\n\u2502   \u251c\u2500\u2500 1-pw/\n\u2502   \u2502    \u251c\u2500\u2500 band-structure/\n\u2502   \u2502    \u2502      \u251c\u2500\u2500 0K/\n\u2502   \u2502    \u2502      \u2502    \u251c\u2500\u2500 1-relax/       # vc relax of the lattice of Pb\n\u2502   \u2502    \u2502      \u2502    \u2514\u2500\u2500 2-band/        # Band structure calculations of Pb with lattice parameter at 0K\n\u2502   \u2502    \u2502      \u251c\u2500\u2500 10K/                # Band structure calculations of Pb with lattice parameter at 10K\n\u2502   \u2502    \u2502      \u251c\u2500\u2500 110K/               # Band structure calculations of Pb with lattice parameter at 110K\n\u2502   \u2502    \u2502      \u251c\u2500\u2500 210K/               # Band structure calculations of Pb with lattice parameter at 210K\n\u2502   \u2502    \u2502      \u251c\u2500\u2500 310K/               # Band structure calculations of Pb with lattice parameter at 310K\n\u2502   \u2502    \u2502      \u251c\u2500\u2500 410K/               # Band structure calculations of Pb with lattice parameter at 410K\n\u2502   \u2502    \u2502      \u251c\u2500\u2500 510K/               # Band structure calculations of Pb with lattice parameter at 510K\n\u2502   \u2502    \u2502      \u2514\u2500\u2500 610K/               # Band structure calculations of Pb with lattice parameter at 610K\n\u2502   \u2502    \u2514\u2500\u2500 Fermi-surface/             # Fermi surface calculation of Pb with lattice parameter at 0K\n\u2502   \u251c\u2500\u2500 2-ph/\n\u2502   \u2502    \u251c\u2500\u2500 ph-0K/                     # Phonon calculations of Pb with lattice parameter at 0K\n\u2502   \u2502    \u251c\u2500\u2500 ph-10K/                    # Phonon calculations of Pb with lattice parameter at 10K\n\u2502   \u2502    \u251c\u2500\u2500 ph-110K/                   # Phonon calculations of Pb with lattice parameter at 110K\n\u2502   \u2502    \u251c\u2500\u2500 ph-210K/                   # Phonon calculations of Pb with lattice parameter at 210K\n\u2502   \u2502    \u251c\u2500\u2500 ph-310K/                   # Phonon calculations of Pb with lattice parameter at 310K\n\u2502   \u2502    \u251c\u2500\u2500 ph-410K/                   # Phonon calculations of Pb with lattice parameter at 410K\n\u2502   \u2502    \u251c\u2500\u2500 ph-510K/                   # Phonon calculations of Pb with lattice parameter at 510K\n\u2502   \u2502    \u2514\u2500\u2500 ph-610K/                   # Phonon calculations of Pb with lattice parameter at 610K\n\u2502   \u251c\u2500\u2500 3-ph-anharm-TDEP/\n\u2502   \u2502    \u251c\u2500\u2500 0K-alat/\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 sampling.210k/    # TDEP calculations of Pb at 210K with using lattice parameter at 0K\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 sampling.410k/    # TDEP calculations of Pb at 410K with using lattice parameter at 0K\n\u2502   \u2502    \u2502        \u2514\u2500\u2500 sampling.610k/    # TDEP calculations of Pb at 610K with using lattice parameter at 0K\n\u2502   \u2502    \u251c\u2500\u2500 10K/                       # TDEP calculations of Pb at 10K\n\u2502   \u2502    \u251c\u2500\u2500 110K/                      # TDEP calculations of Pb at 110K\n\u2502   \u2502    \u251c\u2500\u2500 210K/                      # TDEP calculations of Pb at 210K\n\u2502   \u2502    \u251c\u2500\u2500 310K/                      # TDEP calculations of Pb at 310K\n\u2502   \u2502    \u251c\u2500\u2500 410K/                      # TDEP calculations of Pb at 410K\n\u2502   \u2502    \u251c\u2500\u2500 510K/                      # TDEP calculations of Pb at 510K\n\u2502   \u2502    \u2514\u2500\u2500 610K/                      # TDEP calculations of Pb at 610K\n\u2502   \u251c\u2500\u2500 4-epw/\n\u2502   \u2502    \u251c\u2500\u2500 1-DFPT/                    # EPW calculation of Pb without TE or TDEP\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 comp_EPW_interpolation/             # Comparison of the EPW interpolated band and phonon dispersion with DFT/DFPT one of Pb without TE or anharmonicity\n\u2502   \u2502    \u2502        \u2514\u2500\u2500 spec/             # Spectral decomposition of the electron scattering rates of Pb in 610 K without TE or anharmonicity\n\u2502   \u2502    \u251c\u2500\u2500 2-with_TE/\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 10K/              # EPW calculation of Pb with lattice parameter at 10K\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 110K/             # EPW calculation of Pb with lattice parameter at 110K\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 210K/             # EPW calculation of Pb with lattice parameter at 210K\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 310K/             # EPW calculation of Pb with lattice parameter at 310K\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 410K/             # EPW calculation of Pb with lattice parameter at 410K\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 510K/             # EPW calculation of Pb with lattice parameter at 510K\n\u2502   \u2502    \u2502        \u2514\u2500\u2500 610K/             # EPW calculation of Pb with lattice parameter at 610K\n\u2502   \u2502    \u2502              \u2514\u2500\u2500 spec/       # Spectral decomposition of the electron scattering rates of Pb in 610 K with TE\n\u2502   \u2502    \u251c\u2500\u2500 3-anharm/\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 210K/             # EPW calculation of Pb with lattice parameter at 0K and TDEP at 210K\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 410K/             # EPW calculation of Pb with lattice parameter at 0K and TDEP at 410K\n\u2502   \u2502    \u2502        \u2514\u2500\u2500 610K/             # EPW calculation of Pb with lattice parameter at 0K and TDEP at 610K\n\u2502   \u2502    \u251c\u2500\u2500 4-TE_and_anharm/\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 10K/              # EPW calculation of Pb with lattice parameter at 10K and with TDEP IFCs\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 110K/             # EPW calculation of Pb with lattice parameter at 110K and with TDEP IFCs\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 210K/             # EPW calculation of Pb with lattice parameter at 210K and with TDEP IFCs\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 310K/             # EPW calculation of Pb with lattice parameter at 310K and with TDEP IFCs\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 410K/             # EPW calculation of Pb with lattice parameter at 410K and with TDEP IFCs\n\u2502   \u2502    \u2502        \u251c\u2500\u2500 510K/             # EPW calculation of Pb with lattice parameter at 510K and with TDEP IFCs\n\u2502   \u2502    \u2502        \u2514\u2500\u2500 610K/             # EPW calculation of Pb with lattice parameter at 610K and with TDEP IFCs\n\u2502   \u2502    \u2502              \u2514\u2500\u2500 spec/       # Spectral decomposition of the electron scattering rates of Pb in 610 K with TE and anharmonicity\n\u2502   \u2514\u2500\u2500 pp/                             # pseudopotential of Pb\n\u2514\u2500\u2500 software/                           # Modified EPW code to make the TDEP IFCs readable\n",
+ "methods": {
+  "electrons": "Quantum ESPRESSO 7.3 (Pb: fully relativistic LDA with spin-orbit coupling; Al, Nb: see the archived inputs). One atom per primitive cell: Pb and Al fcc, Nb bcc.",
+  "phonons": "DFPT on an 8x8x8 (Pb) or 6x6x6 (Al, Nb) q-grid, force constants from q2r; TDEP (stochastic self-consistent sampling with quantum statistics at the stated temperature, see the archive README) converted to the same q2r format. The electron-phonon deformation potentials always come from DFPT at the run's lattice parameter; the force constants (DFPT or TDEP) set the phonon frequencies and eigenvectors.",
+  "transport": "EPW (v5.8) linearised Boltzmann equation for the phonon-limited conductivity on fine k and q meshes, with adaptive smearing; each output prints the self-energy relaxation-time (SERTA) solution followed by the iterations of the full iterative solution (IBTE).",
+  "lattice_parameters_bohr": {
+   "Al": {
+    "0K": 7.618431,
+    "481K": 7.687406,
+    "682K": 7.730681,
+    "900K": 7.785105
+   },
+   "Nb": {
+    "0K": 6.226648,
+    "1000K": 6.272001,
+    "1500K": 6.300347,
+    "2000K": 6.330583
+   },
+   "Pb": {
+    "0K": 9.225223,
+    "10K": 9.234481,
+    "110K": 9.258737,
+    "210K": 9.290687,
+    "310K": 9.326024,
+    "410K": 9.364376,
+    "510K": 9.4053,
+    "610K": 9.448085
+   }
+  },
+  "lattice_parameter_note": "Temperature-dependent lattice parameters from the authors (thermal expansion); the 0 K value is the static relaxed lattice."
+ },
+ "requests": {
+  "transport": {
+   "format": {
+    "kind": "transport",
+    "run": "<run with served = true>"
+   },
+   "cost": 2,
+   "returns": "the run's input parameters, lattice parameter, fine meshes and, for each temperature, the Fermi level, printed DOS, SERTA conductivity tensor, IBTE iteration history and final IBTE conductivity tensor, in (Ohm cm)^-1"
+  },
+  "phonons": {
+   "format": {
+    "kind": "phonons",
+    "ifc": "<ifc id>",
+    "grid": "<n, 4 to 20>",
+    "eigenvectors": "<optional, default false>"
+   },
+   "cost": 1,
+   "returns": "harmonic frequencies (meV) of that force-constant set on a Gamma-centred n^3 grid (q folded into the first Brillouin zone, Cartesian, units of 2 pi / alat), optionally the polarisation vectors, a DOS histogram, standard DOS moments and the dispersion along high-symmetry lines; computed by the lab (numpy Fourier interpolation with the simple acoustic sum rule, identical to matdyn.x)"
+  }
+ },
+ "budget": 46,
+ "transport_runs": [
+  {
+   "run": "Al/4-epw/1-DFPT/ibte.out-mesh50",
+   "metal": "Al",
+   "condition": "harmonic: DFPT force constants at the 0 K lattice parameter (archive: \"EPW calculation of Al without TE or TDEP\")",
+   "temperatures_K": [
+    100.0,
+    200.0,
+    300.0,
+    400.0,
+    500.0,
+    600.0,
+    700.0,
+    800.0,
+    900.0
+   ],
+   "archive_files": [
+    "data_for_paper/Al/4-epw/1-DFPT/ibte.out-mesh50",
+    "data_for_paper/Al/4-epw/1-DFPT/ibte.in",
+    "data_for_paper/Al/4-epw/1-DFPT/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Al/4-epw/1-DFPT/ibte.out-mesh60",
+   "metal": "Al",
+   "condition": "harmonic: DFPT force constants at the 0 K lattice parameter (archive: \"EPW calculation of Al without TE or TDEP\")",
+   "temperatures_K": [
+    100.0,
+    200.0,
+    300.0,
+    400.0,
+    500.0,
+    600.0,
+    700.0,
+    800.0,
+    900.0
+   ],
+   "archive_files": [
+    "data_for_paper/Al/4-epw/1-DFPT/ibte.out-mesh60",
+    "data_for_paper/Al/4-epw/1-DFPT/ibte.in",
+    "data_for_paper/Al/4-epw/1-DFPT/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Al/4-epw/1-DFPT/ibte.out-mesh70",
+   "metal": "Al",
+   "condition": "harmonic: DFPT force constants at the 0 K lattice parameter (archive: \"EPW calculation of Al without TE or TDEP\")",
+   "temperatures_K": [
+    100.0,
+    200.0,
+    300.0,
+    400.0,
+    500.0,
+    600.0,
+    700.0,
+    800.0,
+    900.0
+   ],
+   "archive_files": [
+    "data_for_paper/Al/4-epw/1-DFPT/ibte.out-mesh70",
+    "data_for_paper/Al/4-epw/1-DFPT/ibte.in",
+    "data_for_paper/Al/4-epw/1-DFPT/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Al/4-epw/2-with_TE/481K",
+   "metal": "Al",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 481K (\"with lattice parameter at 481K\")",
+   "temperatures_K": [
+    481.0
+   ],
+   "archive_files": [
+    "data_for_paper/Al/4-epw/2-with_TE/481K/ibte.out",
+    "data_for_paper/Al/4-epw/2-with_TE/481K/ibte.in",
+    "data_for_paper/Al/4-epw/2-with_TE/481K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Al/4-epw/2-with_TE/682K",
+   "metal": "Al",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 682K (\"with lattice parameter at 682K\")",
+   "temperatures_K": [
+    682.0
+   ],
+   "archive_files": [
+    "data_for_paper/Al/4-epw/2-with_TE/682K/ibte.out",
+    "data_for_paper/Al/4-epw/2-with_TE/682K/ibte.in",
+    "data_for_paper/Al/4-epw/2-with_TE/682K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Al/4-epw/2-with_TE/900K",
+   "metal": "Al",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 900K (\"with lattice parameter at 900K\")",
+   "temperatures_K": [
+    900.0
+   ],
+   "archive_files": [
+    "data_for_paper/Al/4-epw/2-with_TE/900K/ibte.out",
+    "data_for_paper/Al/4-epw/2-with_TE/900K/ibte.in",
+    "data_for_paper/Al/4-epw/2-with_TE/900K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Al/4-epw/3-TE_and_anharm/481K",
+   "metal": "Al",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 481K, lattice parameter of 481K",
+   "temperatures_K": [
+    481.0
+   ],
+   "archive_files": [
+    "data_for_paper/Al/4-epw/3-TE_and_anharm/481K/ibte.out",
+    "data_for_paper/Al/4-epw/3-TE_and_anharm/481K/ibte.in",
+    "data_for_paper/Al/4-epw/3-TE_and_anharm/481K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Al/4-epw/3-TE_and_anharm/682K",
+   "metal": "Al",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 682K, lattice parameter of 682K",
+   "temperatures_K": [
+    682.0
+   ],
+   "archive_files": [
+    "data_for_paper/Al/4-epw/3-TE_and_anharm/682K/ibte.out",
+    "data_for_paper/Al/4-epw/3-TE_and_anharm/682K/ibte.in",
+    "data_for_paper/Al/4-epw/3-TE_and_anharm/682K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Al/4-epw/3-TE_and_anharm/900K",
+   "metal": "Al",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 900K, lattice parameter of 900K",
+   "temperatures_K": [
+    900.0
+   ],
+   "archive_files": [
+    "data_for_paper/Al/4-epw/3-TE_and_anharm/900K/ibte.out",
+    "data_for_paper/Al/4-epw/3-TE_and_anharm/900K/ibte.in",
+    "data_for_paper/Al/4-epw/3-TE_and_anharm/900K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Nb/4-epw/1-DFPT/ibte.out-mesh40",
+   "metal": "Nb",
+   "condition": "harmonic: DFPT force constants at the 0 K lattice parameter (archive: \"EPW calculation of Nb without TE or TDEP\")",
+   "temperatures_K": [
+    100.0,
+    200.0,
+    300.0,
+    400.0,
+    500.0,
+    600.0,
+    700.0,
+    800.0,
+    900.0,
+    1000.0,
+    1100.0,
+    1200.0,
+    1300.0,
+    1400.0,
+    1500.0,
+    1600.0,
+    1700.0,
+    1800.0,
+    1900.0,
+    2000.0,
+    2100.0,
+    2200.0,
+    2300.0,
+    2400.0,
+    2500.0,
+    2600.0,
+    2700.0
+   ],
+   "archive_files": [
+    "data_for_paper/Nb/4-epw/1-DFPT/ibte.out-mesh40",
+    "data_for_paper/Nb/4-epw/1-DFPT/ibte.in",
+    "data_for_paper/Nb/4-epw/1-DFPT/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Nb/4-epw/1-DFPT/ibte.out-mesh50",
+   "metal": "Nb",
+   "condition": "harmonic: DFPT force constants at the 0 K lattice parameter (archive: \"EPW calculation of Nb without TE or TDEP\")",
+   "temperatures_K": [
+    100.0,
+    200.0,
+    300.0,
+    400.0,
+    500.0,
+    600.0,
+    700.0,
+    800.0,
+    900.0,
+    1000.0,
+    1100.0,
+    1200.0,
+    1300.0,
+    1400.0,
+    1500.0,
+    1600.0,
+    1700.0,
+    1800.0,
+    1900.0,
+    2000.0,
+    2100.0,
+    2200.0,
+    2300.0,
+    2400.0,
+    2500.0,
+    2600.0,
+    2700.0
+   ],
+   "archive_files": [
+    "data_for_paper/Nb/4-epw/1-DFPT/ibte.out-mesh50",
+    "data_for_paper/Nb/4-epw/1-DFPT/ibte.in",
+    "data_for_paper/Nb/4-epw/1-DFPT/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Nb/4-epw/1-DFPT/ibte.out-mesh60",
+   "metal": "Nb",
+   "condition": "harmonic: DFPT force constants at the 0 K lattice parameter (archive: \"EPW calculation of Nb without TE or TDEP\")",
+   "temperatures_K": [
+    100.0,
+    200.0,
+    300.0,
+    400.0,
+    500.0,
+    600.0,
+    700.0,
+    800.0,
+    900.0,
+    1000.0,
+    1100.0,
+    1200.0,
+    1300.0,
+    1400.0,
+    1500.0,
+    1600.0,
+    1700.0,
+    1800.0,
+    1900.0,
+    2000.0,
+    2100.0,
+    2200.0,
+    2300.0,
+    2400.0,
+    2500.0,
+    2600.0,
+    2700.0
+   ],
+   "archive_files": [
+    "data_for_paper/Nb/4-epw/1-DFPT/ibte.out-mesh60",
+    "data_for_paper/Nb/4-epw/1-DFPT/ibte.in",
+    "data_for_paper/Nb/4-epw/1-DFPT/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Nb/4-epw/2-with_TE/1000K",
+   "metal": "Nb",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 1000K (\"with lattice parameter at 1000K\")",
+   "temperatures_K": [
+    1000.0
+   ],
+   "archive_files": [
+    "data_for_paper/Nb/4-epw/2-with_TE/1000K/ibte.out",
+    "data_for_paper/Nb/4-epw/2-with_TE/1000K/ibte.in",
+    "data_for_paper/Nb/4-epw/2-with_TE/1000K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Nb/4-epw/2-with_TE/1500K",
+   "metal": "Nb",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 1500K (\"with lattice parameter at 1500K\")",
+   "temperatures_K": [
+    1500.0
+   ],
+   "archive_files": [
+    "data_for_paper/Nb/4-epw/2-with_TE/1500K/ibte.out",
+    "data_for_paper/Nb/4-epw/2-with_TE/1500K/ibte.in",
+    "data_for_paper/Nb/4-epw/2-with_TE/1500K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Nb/4-epw/2-with_TE/2000K",
+   "metal": "Nb",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 2000K (\"with lattice parameter at 2000K\")",
+   "temperatures_K": [
+    2000.0
+   ],
+   "archive_files": [
+    "data_for_paper/Nb/4-epw/2-with_TE/2000K/ibte.out",
+    "data_for_paper/Nb/4-epw/2-with_TE/2000K/ibte.in",
+    "data_for_paper/Nb/4-epw/2-with_TE/2000K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Nb/4-epw/3-TE_and_anharm/1000K",
+   "metal": "Nb",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 1000K, lattice parameter of 1000K",
+   "temperatures_K": [
+    1000.0
+   ],
+   "archive_files": [
+    "data_for_paper/Nb/4-epw/3-TE_and_anharm/1000K/ibte.out",
+    "data_for_paper/Nb/4-epw/3-TE_and_anharm/1000K/ibte.in",
+    "data_for_paper/Nb/4-epw/3-TE_and_anharm/1000K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Nb/4-epw/3-TE_and_anharm/1500K",
+   "metal": "Nb",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 1500K, lattice parameter of 1500K",
+   "temperatures_K": [
+    1500.0
+   ],
+   "archive_files": [
+    "data_for_paper/Nb/4-epw/3-TE_and_anharm/1500K/ibte.out",
+    "data_for_paper/Nb/4-epw/3-TE_and_anharm/1500K/ibte.in",
+    "data_for_paper/Nb/4-epw/3-TE_and_anharm/1500K/scf.in"
+   ],
+   "served": false,
+   "note": "not purchasable: the archived ibte.out of this run repeats the input and contains no results"
+  },
+  {
+   "run": "Nb/4-epw/3-TE_and_anharm/2000K",
+   "metal": "Nb",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 2000K, lattice parameter of 2000K",
+   "temperatures_K": [
+    2000.0
+   ],
+   "archive_files": [
+    "data_for_paper/Nb/4-epw/3-TE_and_anharm/2000K/ibte.out",
+    "data_for_paper/Nb/4-epw/3-TE_and_anharm/2000K/ibte.in",
+    "data_for_paper/Nb/4-epw/3-TE_and_anharm/2000K/scf.in"
+   ],
+   "served": false,
+   "note": "withheld by this task (its result is to be estimated)"
+  },
+  {
+   "run": "Pb/4-epw/1-DFPT/epw",
+   "metal": "Pb",
+   "condition": "harmonic: DFPT force constants at the 0 K lattice parameter (archive: \"EPW calculation of Pb without TE or TDEP\")",
+   "temperatures_K": [
+    10.0,
+    110.0,
+    210.0,
+    310.0,
+    410.0,
+    510.0,
+    610.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/1-DFPT/epw/ibte.out",
+    "data_for_paper/Pb/4-epw/1-DFPT/epw/ibte.in",
+    "data_for_paper/Pb/4-epw/1-DFPT/epw/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Pb/4-epw/2-with_TE/10K",
+   "metal": "Pb",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 10K (\"with lattice parameter at 10K\")",
+   "temperatures_K": [
+    10.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/2-with_TE/10K/ibte.out",
+    "data_for_paper/Pb/4-epw/2-with_TE/10K/ibte.in",
+    "data_for_paper/Pb/4-epw/2-with_TE/10K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Pb/4-epw/2-with_TE/110K",
+   "metal": "Pb",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 110K (\"with lattice parameter at 110K\")",
+   "temperatures_K": [
+    110.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/2-with_TE/110K/ibte.out",
+    "data_for_paper/Pb/4-epw/2-with_TE/110K/ibte.in",
+    "data_for_paper/Pb/4-epw/2-with_TE/110K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Pb/4-epw/2-with_TE/210K",
+   "metal": "Pb",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 210K (\"with lattice parameter at 210K\")",
+   "temperatures_K": [
+    210.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/2-with_TE/210K/ibte.out",
+    "data_for_paper/Pb/4-epw/2-with_TE/210K/ibte.in",
+    "data_for_paper/Pb/4-epw/2-with_TE/210K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Pb/4-epw/2-with_TE/310K",
+   "metal": "Pb",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 310K (\"with lattice parameter at 310K\")",
+   "temperatures_K": [
+    310.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/2-with_TE/310K/ibte.out",
+    "data_for_paper/Pb/4-epw/2-with_TE/310K/ibte.in",
+    "data_for_paper/Pb/4-epw/2-with_TE/310K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Pb/4-epw/2-with_TE/410K",
+   "metal": "Pb",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 410K (\"with lattice parameter at 410K\")",
+   "temperatures_K": [
+    410.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/2-with_TE/410K/ibte.out",
+    "data_for_paper/Pb/4-epw/2-with_TE/410K/ibte.in",
+    "data_for_paper/Pb/4-epw/2-with_TE/410K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Pb/4-epw/2-with_TE/510K",
+   "metal": "Pb",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 510K (\"with lattice parameter at 510K\")",
+   "temperatures_K": [
+    510.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/2-with_TE/510K/ibte.out",
+    "data_for_paper/Pb/4-epw/2-with_TE/510K/ibte.in",
+    "data_for_paper/Pb/4-epw/2-with_TE/510K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Pb/4-epw/2-with_TE/610K",
+   "metal": "Pb",
+   "condition": "thermal expansion: DFPT force constants at the lattice parameter of 610K (\"with lattice parameter at 610K\")",
+   "temperatures_K": [
+    610.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/2-with_TE/610K/ibte.out",
+    "data_for_paper/Pb/4-epw/2-with_TE/610K/ibte.in",
+    "data_for_paper/Pb/4-epw/2-with_TE/610K/scf.in"
+   ],
+   "served": false,
+   "note": "withheld by this task (its result is to be estimated)"
+  },
+  {
+   "run": "Pb/4-epw/3-anharm/210K",
+   "metal": "Pb",
+   "condition": "anharmonic at the 0 K lattice: TDEP force constants sampled at 210K, 0 K lattice parameter",
+   "temperatures_K": [
+    210.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/3-anharm/210K/ibte.out",
+    "data_for_paper/Pb/4-epw/3-anharm/210K/ibte.in",
+    "data_for_paper/Pb/4-epw/3-anharm/210K/scf.in"
+   ],
+   "served": false,
+   "note": "withheld by this task (its result is to be estimated)"
+  },
+  {
+   "run": "Pb/4-epw/3-anharm/410K",
+   "metal": "Pb",
+   "condition": "anharmonic at the 0 K lattice: TDEP force constants sampled at 410K, 0 K lattice parameter",
+   "temperatures_K": [
+    410.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/3-anharm/410K/ibte.out",
+    "data_for_paper/Pb/4-epw/3-anharm/410K/ibte.in",
+    "data_for_paper/Pb/4-epw/3-anharm/410K/scf.in"
+   ],
+   "served": false,
+   "note": "withheld by this task (its result is to be estimated)"
+  },
+  {
+   "run": "Pb/4-epw/3-anharm/610K",
+   "metal": "Pb",
+   "condition": "anharmonic at the 0 K lattice: TDEP force constants sampled at 610K, 0 K lattice parameter",
+   "temperatures_K": [
+    610.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/3-anharm/610K/ibte.out",
+    "data_for_paper/Pb/4-epw/3-anharm/610K/ibte.in",
+    "data_for_paper/Pb/4-epw/3-anharm/610K/scf.in"
+   ],
+   "served": false,
+   "note": "withheld by this task (its result is to be estimated)"
+  },
+  {
+   "run": "Pb/4-epw/4-TE_and_anharm/10K",
+   "metal": "Pb",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 10K, lattice parameter of 10K",
+   "temperatures_K": [
+    10.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/10K/ibte.out",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/10K/ibte.in",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/10K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Pb/4-epw/4-TE_and_anharm/110K",
+   "metal": "Pb",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 110K, lattice parameter of 110K",
+   "temperatures_K": [
+    110.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/110K/ibte.out",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/110K/ibte.in",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/110K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Pb/4-epw/4-TE_and_anharm/210K",
+   "metal": "Pb",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 210K, lattice parameter of 210K",
+   "temperatures_K": [
+    210.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/210K/ibte.out",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/210K/ibte.in",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/210K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Pb/4-epw/4-TE_and_anharm/310K",
+   "metal": "Pb",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 310K, lattice parameter of 310K",
+   "temperatures_K": [
+    310.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/310K/ibte.out",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/310K/ibte.in",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/310K/scf.in"
+   ],
+   "served": true
+  },
+  {
+   "run": "Pb/4-epw/4-TE_and_anharm/410K",
+   "metal": "Pb",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 410K, lattice parameter of 410K",
+   "temperatures_K": [
+    410.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/410K/ibte.out",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/410K/ibte.in",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/410K/scf.in"
+   ],
+   "served": false,
+   "note": "withheld by this task (its result is to be estimated)"
+  },
+  {
+   "run": "Pb/4-epw/4-TE_and_anharm/510K",
+   "metal": "Pb",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 510K, lattice parameter of 510K",
+   "temperatures_K": [
+    510.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/510K/ibte.out",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/510K/ibte.in",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/510K/scf.in"
+   ],
+   "served": false,
+   "note": "withheld by this task (its result is to be estimated)"
+  },
+  {
+   "run": "Pb/4-epw/4-TE_and_anharm/610K",
+   "metal": "Pb",
+   "condition": "thermal expansion + anharmonicity: TDEP force constants sampled at 610K, lattice parameter of 610K",
+   "temperatures_K": [
+    610.0
+   ],
+   "archive_files": [
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/610K/ibte.out",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/610K/ibte.in",
+    "data_for_paper/Pb/4-epw/4-TE_and_anharm/610K/scf.in"
+   ],
+   "served": false,
+   "note": "withheld by this task (its result is to be estimated)"
+  }
+ ],
+ "force_constant_sets": [
+  {
+   "ifc": "Pb:DFPT:a(0K)",
+   "metal": "Pb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Pb/2-ph/ph-0K/espresso.xml",
+   "lattice_temperature_K": 0,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Pb:DFPT:a(10K)",
+   "metal": "Pb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Pb/2-ph/ph-10K/espresso.xml",
+   "lattice_temperature_K": 10,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Pb:TDEP10K:a(10K)",
+   "metal": "Pb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Pb/3-ph-anharm-TDEP/10K/sampling.10k/iter.004/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 10,
+   "sampling_temperature_K": 10,
+   "tdep_iteration": "iter.004"
+  },
+  {
+   "ifc": "Pb:DFPT:a(110K)",
+   "metal": "Pb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Pb/2-ph/ph-110K/espresso.xml",
+   "lattice_temperature_K": 110,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Pb:TDEP110K:a(110K)",
+   "metal": "Pb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Pb/3-ph-anharm-TDEP/110K/sampling.110k/iter.005/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 110,
+   "sampling_temperature_K": 110,
+   "tdep_iteration": "iter.005"
+  },
+  {
+   "ifc": "Pb:DFPT:a(210K)",
+   "metal": "Pb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Pb/2-ph/ph-210K/espresso.xml",
+   "lattice_temperature_K": 210,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Pb:TDEP210K:a(210K)",
+   "metal": "Pb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Pb/3-ph-anharm-TDEP/210K/sampling.210k/iter.005/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 210,
+   "sampling_temperature_K": 210,
+   "tdep_iteration": "iter.005"
+  },
+  {
+   "ifc": "Pb:DFPT:a(310K)",
+   "metal": "Pb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Pb/2-ph/ph-310K/espresso.xml",
+   "lattice_temperature_K": 310,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Pb:TDEP310K:a(310K)",
+   "metal": "Pb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Pb/3-ph-anharm-TDEP/310K/sampling.310k/iter.005/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 310,
+   "sampling_temperature_K": 310,
+   "tdep_iteration": "iter.005"
+  },
+  {
+   "ifc": "Pb:DFPT:a(410K)",
+   "metal": "Pb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Pb/2-ph/ph-410K/espresso.xml",
+   "lattice_temperature_K": 410,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Pb:TDEP410K:a(410K)",
+   "metal": "Pb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Pb/3-ph-anharm-TDEP/410K/sampling.410k/iter.005/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 410,
+   "sampling_temperature_K": 410,
+   "tdep_iteration": "iter.005"
+  },
+  {
+   "ifc": "Pb:DFPT:a(510K)",
+   "metal": "Pb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Pb/2-ph/ph-510K/espresso.xml",
+   "lattice_temperature_K": 510,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Pb:TDEP510K:a(510K)",
+   "metal": "Pb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Pb/3-ph-anharm-TDEP/510K/sampling.510k/iter.005/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 510,
+   "sampling_temperature_K": 510,
+   "tdep_iteration": "iter.005"
+  },
+  {
+   "ifc": "Pb:DFPT:a(610K)",
+   "metal": "Pb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Pb/2-ph/ph-610K/espresso.xml",
+   "lattice_temperature_K": 610,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Pb:TDEP610K:a(610K)",
+   "metal": "Pb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Pb/3-ph-anharm-TDEP/610K/sampling.610k/iter.005/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 610,
+   "sampling_temperature_K": 610,
+   "tdep_iteration": "iter.005"
+  },
+  {
+   "ifc": "Al:DFPT:a(0K)",
+   "metal": "Al",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Al/2-ph/ph-0K/espresso.xml",
+   "lattice_temperature_K": 0,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Al:DFPT:a(481K)",
+   "metal": "Al",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Al/2-ph/ph-481K/espresso.xml",
+   "lattice_temperature_K": 481,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Al:TDEP481K:a(481K)",
+   "metal": "Al",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Al/3-ph-anharm-TDEP/481K/sampling.481k/iter.004/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 481,
+   "sampling_temperature_K": 481,
+   "tdep_iteration": "iter.004"
+  },
+  {
+   "ifc": "Al:DFPT:a(682K)",
+   "metal": "Al",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Al/2-ph/ph-682K/espresso.xml",
+   "lattice_temperature_K": 682,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Al:TDEP682K:a(682K)",
+   "metal": "Al",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Al/3-ph-anharm-TDEP/682K/sampling.682k/iter.004/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 682,
+   "sampling_temperature_K": 682,
+   "tdep_iteration": "iter.004"
+  },
+  {
+   "ifc": "Al:DFPT:a(900K)",
+   "metal": "Al",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Al/2-ph/ph-900K/espresso.xml",
+   "lattice_temperature_K": 900,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Al:TDEP900K:a(900K)",
+   "metal": "Al",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Al/3-ph-anharm-TDEP/900K/sampling.900k/iter.004/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 900,
+   "sampling_temperature_K": 900,
+   "tdep_iteration": "iter.004"
+  },
+  {
+   "ifc": "Nb:DFPT:a(0K)",
+   "metal": "Nb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Nb/2-ph/ph-0K/espresso.xml",
+   "lattice_temperature_K": 0,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Nb:DFPT:a(1000K)",
+   "metal": "Nb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Nb/2-ph/ph-1000K/espresso.xml",
+   "lattice_temperature_K": 1000,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Nb:TDEP1000K:a(1000K)",
+   "metal": "Nb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Nb/3-ph-anharm-TDEP/1000K/sampling.1000k/iter.003/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 1000,
+   "sampling_temperature_K": 1000,
+   "tdep_iteration": "iter.003"
+  },
+  {
+   "ifc": "Nb:DFPT:a(1500K)",
+   "metal": "Nb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Nb/2-ph/ph-1500K/espresso.xml",
+   "lattice_temperature_K": 1500,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Nb:TDEP1500K:a(1500K)",
+   "metal": "Nb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Nb/3-ph-anharm-TDEP/1500K/sampling.1500k/iter.003/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 1500,
+   "sampling_temperature_K": 1500,
+   "tdep_iteration": "iter.003"
+  },
+  {
+   "ifc": "Nb:DFPT:a(2000K)",
+   "metal": "Nb",
+   "kind": "DFPT",
+   "archive_file": "data_for_paper/Nb/2-ph/ph-2000K/espresso.xml",
+   "lattice_temperature_K": 2000,
+   "sampling_temperature_K": null
+  },
+  {
+   "ifc": "Nb:TDEP2000K:a(2000K)",
+   "metal": "Nb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Nb/3-ph-anharm-TDEP/2000K/sampling.2000k/iter.003/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 2000,
+   "sampling_temperature_K": 2000,
+   "tdep_iteration": "iter.003"
+  },
+  {
+   "ifc": "Pb:TDEP210K:a(0K)",
+   "metal": "Pb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Pb/3-ph-anharm-TDEP/0K-alat/sampling.210k/iter.005/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 0,
+   "sampling_temperature_K": 210,
+   "tdep_iteration": "iter.005"
+  },
+  {
+   "ifc": "Pb:TDEP410K:a(0K)",
+   "metal": "Pb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Pb/3-ph-anharm-TDEP/0K-alat/sampling.410k/iter.005/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 0,
+   "sampling_temperature_K": 410,
+   "tdep_iteration": "iter.005"
+  },
+  {
+   "ifc": "Pb:TDEP610K:a(0K)",
+   "metal": "Pb",
+   "kind": "TDEP",
+   "archive_file": "data_for_paper/Pb/3-ph-anharm-TDEP/0K-alat/sampling.610k/iter.005/matdyn/updated_qe.fc.xml",
+   "lattice_temperature_K": 0,
+   "sampling_temperature_K": 610,
+   "tdep_iteration": "iter.005"
+  }
+ ]
+}

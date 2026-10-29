@@ -1,0 +1,5 @@
+FROM ai-theorist-benchmark-runtime:20261007
+ENV PYTHONDONTWRITEBYTECODE=1 OMPI_MCA_btl_vader_single_copy_mechanism=none OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+COPY lab/ /lab/
+RUN mkdir -p /lab-results
+CMD ["python3", "/lab/labkit.py"]

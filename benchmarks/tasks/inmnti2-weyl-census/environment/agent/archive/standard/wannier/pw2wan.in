@@ -1,0 +1,12 @@
+&inputpp
+   outdir = './out'
+   prefix = 'InMnTi2'
+   seedname = 'InMnTi2'
+   spin_component = 'none'
+   !write_unk = .true.
+   write_amn = .true.
+   write_mmn = .true.
+   write_eig = .true.
+/
+
+

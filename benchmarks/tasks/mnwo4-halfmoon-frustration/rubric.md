@@ -1,0 +1,12 @@
+# Physical-reasoning rubric
+
+Each item is a checkable statement that the report must make explicitly.
+
+1. Attributes the half-moons to short-range correlations of competing three-dimensional antiferromagnetic exchange (both in-plane couplings such as J3, J7, J10, J11 and the inter-plane J9 are needed), not to a classical spin-liquid local constraint, a quasi-one-dimensional zigzag-chain effect or the single-ion anisotropy. Supports this with the temperature evolution (the features sharpen from 30 K towards 14 K and fade by 60 K) and with the reduced-model maps.
+2. Shows that the archived spectra do not determine all exchange constants: along the archived [102] and [010] paths the AF1 spin-wave energies depend on J3 and J11 only through J3 + J11 (or an equivalent rank/conditioning argument), and the split is fixed by diffuse-scattering data (maps or the 11 K zone data), not by the dispersion.
+3. Converts the classical spin dynamics correctly: 5 µB moments with g = 2 precess like spins S = 5/2, so spin-wave energies scale as J/S for the unit-vector J; and explains that the paramagnetic maps fix the exchange-to-temperature ratio while the spectra fix the absolute scale.
+4. Computes the paramagnetic structure factor with a method that enforces the spin length (SCGA or Monte Carlo) rather than mean-field RPA, which diverges below its mean-field temperature (about 16 K for this model) and over-sharpens strongly coupled reduced models; compares the archived |S| without a magnetic form factor or polarisation factor.
+5. Explains persistence above T_N: correlations of the frustrated network extend over several cells well above the ordering temperature, so diffuse intensity survives to about 2–3 T_N, and the model's T_N is not the mean-field value.
+6. States that without the anisotropy the incommensurate (Luttinger–Tisza) spiral has the lower exchange energy, that the easy-axis D selects the collinear AF1 state by only a few hundredths of a meV per Mn, and links this near-degeneracy to the multiferroic AF2 spiral phase found between the AF1 and paramagnetic phases.
+7. Recognises the archived 11 K maxima at (−0.222, 1/2, 0.444) and (−0.229, 1/2, 0.458) as commensurate approximants fixed by the 36×24×36 and 48×24×24 boxes, distinct from the thermodynamic-limit propagation vector.
+8. States what the data do not support: the individual weak couplings (J2, J5, J8, J12), a precise T_N of the model from these outputs, and any quantum-fluctuation conclusion (the model is classical).

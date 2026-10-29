@@ -1,0 +1,9 @@
+Real-space Hamiltonian in Wannier Gauge on Wigner-Seitz supercell.
+Number of Wannier Function 108
+Number of Wigner-Seitz supercell 147
+Lattice vector (in Bohr)
+  10.50708    0.00000    0.00000 
+   0.00000   10.50708    0.00000 
+   0.00000    0.00000   21.19050 
+non-collinear calculation spinsize 1
+Fermi level -0.180817

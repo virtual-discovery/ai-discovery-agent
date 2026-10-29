@@ -1,0 +1,136 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 11,
+  "rubric_items": 8,
+  "task_mb": 0.15,
+  "hidden_values": 29,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 220,
+   "budget": 245,
+   "evaluations": 22,
+   "failed_evaluations": 0,
+   "container_seconds": 927
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "CrSiSe3_assumed_ferromagnetic",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "ordered_state_anisotropy_attributed_to_single_ion",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "exchange_anisotropy_neglected",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "CrI3_bond_tensor_copied_to_all_bonds",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "CrI3_mirror_image_octahedral_frame",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "CrI3_collinear_only_mapping",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "CrSBr_offdiagonal_read_as_symmetric",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "CrSBr_dm_copied_to_second_chain",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "CrSBr_mapped_in_2a_periodic_cell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "CrSBr_uniaxial_gap",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "Tc_mean_field",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "Tc_nearest_neighbour_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp11",
+    "name": "single_site_four_state_at_noise_level",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "CrI3_bond_from_actual_plane_normal",
+    "passes_grading": true
+   },
+   {
+    "name": "Tc_susceptibility_peak_largest_L",
+    "passes_grading": true
+   },
+   {
+    "name": "Tc_binder_crossing_smallest_sizes",
+    "passes_grading": true
+   },
+   {
+    "name": "anisotropy_from_noisy_collective_states",
+    "passes_grading": true
+   },
+   {
+    "name": "predictions_from_unsymmetrized_archived_tensor",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T17:14:41Z"
+}

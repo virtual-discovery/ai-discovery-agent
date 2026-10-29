@@ -1,0 +1,22 @@
+psi110chg_n16	{"frame": "orth_a", "n": 16, "op": "IT", "offset": 0.00390625, "tag": "psi110chg_n16"}
+psi110chg_n20	{"frame": "orth_a", "n": 20, "op": "IT", "offset": 0.003125, "tag": "psi110chg_n20"}
+psi110chg_n24	{"frame": "orth_a", "n": 24, "op": "IT", "offset": 0.0026041666666666665, "tag": "psi110chg_n24"}
+psi110chg_n4	{"frame": "orth_a", "n": 4, "op": "IT", "offset": 0.015625, "tag": "psi110chg_n4"}
+psi110neu_n16	{"frame": "orth_b", "n": 16, "op": "IT", "offset": 0.00390625, "tag": "psi110neu_n16"}
+psi110neu_n4	{"frame": "orth_b", "n": 4, "op": "IT", "offset": 0.015625, "tag": "psi110neu_n4"}
+phi110neu_n4	{"frame": "orth_b", "n": 4, "op": "I", "offset": 0.015625, "tag": "phi110neu_n4"}
+phi110neu_n16	{"frame": "orth_b", "n": 16, "op": "I", "offset": 0.00390625, "tag": "phi110neu_n16"}
+psi110chg_n12_norm	{"frame": "orth_a", "n": 12, "op": "IT", "offset": 0.005208333333333333, "relax_axis": 0, "tag": "psi110chg_n12_norm"}
+psi110neu_n8_norm	{"frame": "orth_b", "n": 8, "op": "IT", "offset": 0.0078125, "relax_axis": 0, "tag": "psi110neu_n8_norm"}
+psi100_n32	{"frame": "tet", "n": 32, "op": "IT", "offset": 0.00390625, "tag": "psi100_n32"}
+psi100_n4	{"frame": "tet", "n": 4, "op": "IT", "offset": 0.03125, "tag": "psi100_n4"}
+phi100_n4	{"frame": "tet", "n": 4, "op": "I", "offset": 0.03125, "tag": "phi100_n4"}
+psi001_rs_nz2	{"frame": "orth_c", "n": 2, "op": "IT", "offset": 0.125, "axis": 2, "tag": "psi001_rs_nz2"}
+psi001_rs_nz6	{"frame": "orth_c", "n": 6, "op": "IT", "offset": 0.041666666666666664, "axis": 2, "tag": "psi001_rs_nz6"}
+psi001_rs_nz8	{"frame": "orth_c", "n": 8, "op": "IT", "offset": 0.03125, "axis": 2, "tag": "psi001_rs_nz8"}
+phi001_rs_nz6	{"frame": "orth_c", "n": 6, "op": "I", "offset": 0.041666666666666664, "axis": 2, "tag": "phi001_rs_nz6"}
+psi001_rs_norm	{"frame": "orth_c", "n": 4, "op": "IT", "offset": 0.0625, "axis": 2, "relax_axis": 2, "tag": "psi001_rs_norm"}
+psi001_bl_norm	{"frame": "orth_c", "n": 4, "op": "IT", "offset": 0.0025, "axis": 2, "relax_axis": 2, "tag": "psi001_bl_norm"}
+psi110neu_n8_NEP	{"frame": "orth_b", "n": 8, "op": "IT", "offset": 0.0078125, "pot": "NEP", "tag": "psi110neu_n8_NEP"}
+psi110chg_n8_NEP	{"frame": "orth_a", "n": 8, "op": "IT", "offset": 0.0078125, "pot": "NEP", "tag": "psi110chg_n8_NEP"}
+psi110neu_n8_qNEP	{"frame": "orth_b", "n": 8, "op": "IT", "offset": 0.0078125, "pot": "qNEP", "tag": "psi110neu_n8_qNEP"}

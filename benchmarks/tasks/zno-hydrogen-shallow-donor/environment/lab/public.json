@@ -1,0 +1,8 @@
+{
+ "task_id": "zno-hydrogen-shallow-donor",
+ "solver_budget": 35,
+ "reserved_validation_charge": 0,
+ "requests": {"run": {"kind": "run", "id": "<run id from catalog runs>", "cost": 1},
+              "eigenvalues": {"kind": "eigenvalues", "id": "<run id with eigenvalues_available>", "cost": 1}},
+ "catalog": "/app/catalog.json"
+}

@@ -1,0 +1,38 @@
+{
+ "task_id": "mn5si3-noncollinear-spinwaves",
+ "solver_budget": 25,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "exchange_set": {
+   "kind": "exchange_set",
+   "name": "<name from exchange_sets>",
+   "cost": 1
+  },
+  "dispersion_table": {
+   "kind": "dispersion_table",
+   "direction": "h | k",
+   "cost": 1
+  },
+  "constant_energy_cut": {
+   "kind": "constant_energy_cut",
+   "direction": "h | k",
+   "energy_meV": "<from constant_energy_cuts>",
+   "cost": 2
+  },
+  "energy_scan": {
+   "kind": "energy_scan",
+   "name": "<name from energy_scans>",
+   "cost": 1
+  },
+  "gap_table": {
+   "kind": "gap_table",
+   "cost": 1
+  },
+  "q_scan": {
+   "kind": "q_scan",
+   "name": "<name from q_scans>",
+   "cost": 1
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

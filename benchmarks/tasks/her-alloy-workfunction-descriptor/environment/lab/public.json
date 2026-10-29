@@ -1,0 +1,11 @@
+{
+ "task_id": "her-alloy-workfunction-descriptor",
+ "solver_budget": 60,
+ "reserved_validation_charge": 0,
+ "requests": {"seccm_row": {"kind": "seccm_row", "library": "Lib-1|Lib-2", "row": "<row index from rows_available>", "potential_mV": "-100|-200|-300|-400", "cost": 1},
+              "lib3_spot": {"kind": "lib3_spot", "mdi": "<MDI from Lib-3 calibration_spots_available; at most 5 distinct spots>", "cost": 2},
+              "coverage_path": {"kind": "coverage_path", "id": "<id from coverage_paths>", "cost": 1},
+              "dft_composition": {"kind": "dft_composition", "id": "<id from dft_compositions>", "cost": 1}},
+ "catalog": "/app/catalog.json",
+ "descriptors": "/app/descriptors.json"
+}

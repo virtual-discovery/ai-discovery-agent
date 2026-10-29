@@ -1,0 +1,225 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 8,
+  "task_mb": 0.8,
+  "hidden_values": 16,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 27,
+   "budget": 32,
+   "evaluations": 19,
+   "failed_evaluations": 0,
+   "container_seconds": 3
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "energy_order_labels",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "g0w0_z_equal_1_column",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "g0w0_input_eigenvalue_column",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "qsgw_tote_qp_column_at_100K_lattice",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "vertex_cross_code",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "vertex_from_qsgw80",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "qsgw80_as_qsgw",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "constant_matrix_element",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "isotropic_q2_matrix_element",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "full_pbe_matrix_element",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "parabolic_valley",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "xw_line_isotropic",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "boltzmann_statistics",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "spin_not_counted",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "one_octant_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "no_symmetry_plane_weights",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "mg2si_ratio_for_mg2sn",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "x1_occupied_in_mg2sn",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "room_temperature_lattice_at_T0",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "low_temperature_lattice_at_300K",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "no_electron_phonon",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "zero_point_only_at_300K",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "electron_phonon_sign_reversed",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "g0w0_from_pbe_start",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "ratio_nested_boxes_at_both_temperatures",
+    "passes_grading": true
+   },
+   {
+    "name": "ratio_octant_unfolded_plain_sum",
+    "passes_grading": true
+   },
+   {
+    "name": "ratio_coarse_box_at_both_temperatures",
+    "passes_grading": true
+   },
+   {
+    "name": "eph_special_displacement_4x4x4",
+    "passes_grading": true
+   },
+   {
+    "name": "eph_ahc_adiabatic",
+    "passes_grading": true
+   },
+   {
+    "name": "eph_ahc_q16_or_ge3d_valence",
+    "passes_grading": true
+   },
+   {
+    "name": "vertex_ladder_window_nc12",
+    "passes_grading": true
+   },
+   {
+    "name": "vertex_larger_basis",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-25T17:41:47Z"
+}

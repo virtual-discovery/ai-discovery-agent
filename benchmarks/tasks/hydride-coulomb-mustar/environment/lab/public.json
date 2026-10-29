@@ -1,0 +1,23 @@
+{
+ "task_id": "hydride-coulomb-mustar",
+ "solver_budget": 38,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "inputs": {
+   "cost": 1
+  },
+  "coulomb_table": {
+   "cost": 1
+  },
+  "w_kernel": {
+   "cost": 1
+  },
+  "archived_run": {
+   "cost": 1
+  },
+  "eliashberg": {
+   "cost": 2
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

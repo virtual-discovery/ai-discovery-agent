@@ -1,0 +1,129 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 8,
+  "task_mb": 2.61,
+  "hidden_values": 30,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 55,
+   "budget": 61,
+   "evaluations": 55,
+   "failed_evaluations": 0,
+   "container_seconds": 11
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "atom_reference",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "textbook_site",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "archived_runs_as_sites",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "energy_binning_0p1eV",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "w_atom_from_w_set",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "w_atom_from_wc_set",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "other_termination",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "paper_protocol_mean",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "site_mean_lowest_termination",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "cohesive_bulk_from_hife_supercell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "starting_geometry",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "cohesive_energy_as_sbe",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "duplicate_cluster_mean",
+    "passes_grading": true
+   },
+   {
+    "name": "carbon_atom_at_60Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "distance_from_another_duplicate",
+    "passes_grading": true
+   },
+   {
+    "name": "rydberg_13p6057",
+    "passes_grading": true
+   },
+   {
+    "name": "tib2_ti_reported_as_undetermined",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T18:51:51Z"
+}

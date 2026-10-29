@@ -1,0 +1,412 @@
+{
+ "study": "Archived first-principles calculations of Bozier and Pickard (2026): static RPA-screened Coulomb interaction W(e,e') from Mantel (Quantum ESPRESSO + Yambo), the Coulomb parameter mu, and isotropic Migdal-Eliashberg Tc from the IsoME solver, for Mg2IrH6 and H3S versus pressure and for other hydrides.",
+ "systems": {
+  "Mg2IrH6": {
+   "0": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "cdos_muEl_0.16",
+     "vdos_W",
+     "vdos_W_1",
+     "vdos_muEl_0.16"
+    ]
+   },
+   "5": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "cdos_mustar_0.16",
+     "vdos_W",
+     "vdos_W_1",
+     "vdos_muStar0.1",
+     "vdos_muStar0.1_1",
+     "vdos_mustar_0.16"
+    ]
+   },
+   "10": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "cdos_mustar_0.16",
+     "vdos_W",
+     "vdos_W_1",
+     "vdos_muStar0.1",
+     "vdos_muStar0.1_1",
+     "vdos_mustar_0.16"
+    ]
+   },
+   "15": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": false,
+    "w_kernel": false,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos"
+    ],
+    "archived_runs": [],
+    "note": "graded pressure: Coulomb data, W and archived runs withheld"
+   },
+   "20": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "cdos_mustar_0.16",
+     "vdos_W",
+     "vdos_W_1",
+     "vdos_muStar0.1",
+     "vdos_muStar0.1_1",
+     "vdos_mustar_0.16"
+    ]
+   },
+   "25": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": false,
+    "w_kernel": false,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos"
+    ],
+    "archived_runs": [],
+    "note": "graded pressure: Coulomb data, W and archived runs withheld"
+   },
+   "30": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "cdos_mustar_0.16",
+     "vdos_W",
+     "vdos_W_1",
+     "vdos_muStar0.1",
+     "vdos_muStar0.1_1",
+     "vdos_mustar_0.16"
+    ]
+   }
+  },
+  "H3S": {
+   "140": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "AD_0.1",
+     "vdos_W_1",
+     "vdos_muStar0.2",
+     "vdos_muStar0.2_1"
+    ]
+   },
+   "160": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "AD_0.1",
+     "vdos_W_1",
+     "vdos_muStar0.2",
+     "vdos_muStar0.2_1"
+    ]
+   },
+   "170": {
+    "inputs": true,
+    "alpha2F": false,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [],
+    "archived_runs": []
+   },
+   "180": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": false,
+    "w_kernel": false,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos"
+    ],
+    "archived_runs": [],
+    "note": "graded pressure: Coulomb data, W and archived runs withheld"
+   },
+   "190": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": false,
+    "w_kernel": false,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos"
+    ],
+    "archived_runs": [],
+    "note": "graded pressure: Coulomb data, W and archived runs withheld"
+   },
+   "200": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "vdos_W",
+     "vdos_W_1",
+     "vdos_muStar0.1"
+    ]
+   },
+   "210": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "vdos_W",
+     "vdos_muStar_0.1"
+    ]
+   },
+   "220": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "AD_0.1",
+     "vdos_W",
+     "vdos_muStar0.2",
+     "vdos_muStar0.2_1"
+    ]
+   },
+   "230": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "vdos_W",
+     "vdos_muStar_0.1"
+    ]
+   },
+   "240": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos",
+     "vdos_W"
+    ],
+    "archived_runs": [
+     "AD_0.1",
+     "vdos_W",
+     "vdos_muStar0.2",
+     "vdos_muStar0.2_1"
+    ]
+   }
+  },
+  "CaH6": {
+   "160": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos"
+    ],
+    "archived_runs": [
+     "vdos_W",
+     "vdos_W_1",
+     "vdos_W_2",
+     "vdos_W_3",
+     "vdos_W_4"
+    ]
+   }
+  },
+  "LaH10": {
+   "250": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos"
+    ],
+    "archived_runs": [
+     "cdos_muAd_1",
+     "cdos_muEl",
+     "cdos_muEl_1",
+     "cdos_muEl_2",
+     "vdos_W",
+     "vdos_W_1",
+     "vdos_mu_1"
+    ]
+   }
+  },
+  "YSbH6": {
+   "50": {
+    "inputs": true,
+    "alpha2F": true,
+    "coulomb_table": true,
+    "w_kernel": true,
+    "eliashberg_solvers": [
+     "cdos",
+     "vdos"
+    ],
+    "archived_runs": [
+     "vdos_W",
+     "vdos_W_1",
+     "vdos_W_2",
+     "vdos_W_3"
+    ]
+   }
+  }
+ },
+ "requests": {
+  "inputs": {
+   "cost": 1,
+   "example": {
+    "kind": "inputs",
+    "system": "Mg2IrH6",
+    "pressure_GPa": 20
+   },
+   "returns": "alpha2F(omega) (omega in THz; selected phonon-smearing columns), the dense-k QE DOS file used by IsoME, the scf input (cell and atoms) and the relaxation target pressure"
+  },
+  "coulomb_table": {
+   "cost": 1,
+   "example": {
+    "kind": "coulomb_table",
+    "system": "H3S",
+    "pressure_GPa": 200
+   },
+   "returns": "Mantel mu_results.dat (mu versus electronic smearing sigma) and the Mantel log header"
+  },
+  "w_kernel": {
+   "cost": 1,
+   "example": {
+    "kind": "w_kernel",
+    "system": "H3S",
+    "pressure_GPa": 200
+   },
+   "returns": "Mantel W(e,e') in eV: diagonal on the full grid and the matrix for |e|,|e'| <= 5.6 eV, with the Mantel DOS"
+  },
+  "archived_run": {
+   "cost": 1,
+   "example": {
+    "kind": "archived_run",
+    "system": "Mg2IrH6",
+    "pressure_GPa": 20,
+    "run": "vdos_W"
+   },
+   "returns": "Summary.dat and Info.txt of one archived IsoME run folder (folder names as archived)"
+  },
+  "eliashberg": {
+   "cost": 2,
+   "examples": [
+    {
+     "kind": "eliashberg",
+     "system": "Mg2IrH6",
+     "pressure_GPa": 20,
+     "solver": "cdos",
+     "mu_star": [
+      0.1,
+      0.16
+     ],
+     "omega_c_meV": 7000
+    },
+    {
+     "kind": "eliashberg",
+     "system": "Mg2IrH6",
+     "pressure_GPa": 20,
+     "solver": "vdos",
+     "mu_star": 0.16
+    },
+    {
+     "kind": "eliashberg",
+     "system": "H3S",
+     "pressure_GPa": 200,
+     "solver": "vdos_W"
+    }
+   ],
+   "returns": "Tc (K) of the linearized isotropic Migdal-Eliashberg equations for each mu*, with lambda, omega_log, N(E_F), Z and the chemical-potential shift at Tc"
+  }
+ },
+ "solver": {
+  "description": "numpy re-implementation of the IsoME imaginary-axis equations (linearized at Tc): cdos = constant DOS with a fixed Morel-Anderson mu* applied up to the Matsubara cutoff omega_c; vdos = full-bandwidth equations with the energy-dependent DOS N(e), the energy shift chi and a self-consistent chemical potential, fixed mu*; vdos_W = the same with the archived static W(e,e') in place of mu* (phi = phi_ph(i w_n) + phi_c(e)).",
+  "conventions": "alpha2F from the solver_column listed in each inputs result (the column used by the archived IsoME runs); DOS from the inputs DOS file divided by 2 for spin; energy grid 1/5/50 meV inside +-100/+-500/+-5000 meV of E_F; default omega_c = 7000 meV (allowed 300-7000); Tc to 0.01 K, search range 10-500 K.",
+  "validation": "Where archived IsoME runs exist, the lab reproduces their Tc (fixed mu* and full W) to within 2 %."
+ },
+ "purchase_costs": {
+  "inputs": 1,
+  "coulomb_table": 1,
+  "w_kernel": 1,
+  "archived_run": 1,
+  "eliashberg": 2
+ },
+ "budget": 38
+}

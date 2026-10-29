@@ -1,0 +1,283 @@
+{
+ "task_id": "fresh-nio-exchange-dftu",
+ "solver_budget": 36,
+ "reserved_validation_charge": 0,
+ "system": "rocksalt NiO at a fixed cubic lattice parameter a = 4.17 A; spin-polarized collinear PBE+U (Dudarev simplified rotationally invariant form, U on Ni 3d with non-orthogonalized atomic projectors); SSSP 1.3 PBE precision pseudopotentials; Quantum ESPRESSO 6.7 pw.x on 2 MPI ranks",
+ "scf_request": {
+  "kind": "scf",
+  "fields": {
+   "cell": "one of the cells below",
+   "starting_magnetization": "null for a non-spin-polarized calculation, or one value in [-1, 1] per Ni in the order of the cell's Ni_crystal list (pw.x starting_magnetization: fraction of the Ni valence charge, sign = spin direction); O atoms start unpolarized",
+   "hubbard_U_eV": "U on Ni 3d in eV, 0 to 9 in steps of 0.1 (0 = plain PBE)",
+   "kpoints": "[n1, n2, n3] Monkhorst-Pack mesh along the three cell vectors",
+   "kshift": "0 = Gamma-centred mesh, 1 = offset by half a step in every direction",
+   "ecutwfc_Ry": "wavefunction cutoff; the density cutoff is 8 x ecutwfc",
+   "smearing": "gaussian, mv (Marzari-Vanderbilt) or fd (Fermi-Dirac)",
+   "degauss_Ry": "smearing width"
+  },
+  "cells": {
+   "primitive_1fu": {
+    "formula_units": 1,
+    "vectors_in_units_of_a": [
+     [
+      0,
+      0.5,
+      0.5
+     ],
+     [
+      0.5,
+      0,
+      0.5
+     ],
+     [
+      0.5,
+      0.5,
+      0
+     ]
+    ],
+    "Ni_crystal": [
+     [
+      0,
+      0,
+      0
+     ]
+    ],
+    "O_crystal": [
+     [
+      0.5,
+      0.5,
+      0.5
+     ]
+    ]
+   },
+   "rhombohedral_2fu": {
+    "formula_units": 2,
+    "vectors_in_units_of_a": [
+     [
+      1,
+      0.5,
+      0.5
+     ],
+     [
+      0.5,
+      1,
+      0.5
+     ],
+     [
+      0.5,
+      0.5,
+      1
+     ]
+    ],
+    "Ni_crystal": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      0.5,
+      0.5,
+      0.5
+     ]
+    ],
+    "O_crystal": [
+     [
+      0.25,
+      0.25,
+      0.25
+     ],
+     [
+      0.75,
+      0.75,
+      0.75
+     ]
+    ]
+   },
+   "tetragonal_2fu": {
+    "formula_units": 2,
+    "vectors_in_units_of_a": [
+     [
+      0.5,
+      -0.5,
+      0
+     ],
+     [
+      0.5,
+      0.5,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "Ni_crystal": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      0.5,
+      0.5,
+      0.5
+     ]
+    ],
+    "O_crystal": [
+     [
+      0.5,
+      0.5,
+      0
+     ],
+     [
+      0,
+      0,
+      0.5
+     ]
+    ]
+   },
+   "cubic_4fu": {
+    "formula_units": 4,
+    "vectors_in_units_of_a": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      0,
+      1,
+      0
+     ],
+     [
+      0,
+      0,
+      1
+     ]
+    ],
+    "Ni_crystal": [
+     [
+      0,
+      0,
+      0
+     ],
+     [
+      0.5,
+      0.5,
+      0
+     ],
+     [
+      0.5,
+      0,
+      0.5
+     ],
+     [
+      0,
+      0.5,
+      0.5
+     ]
+    ],
+    "O_crystal": [
+     [
+      0.5,
+      0,
+      0
+     ],
+     [
+      0,
+      0.5,
+      0
+     ],
+     [
+      0,
+      0,
+      0.5
+     ],
+     [
+      0.5,
+      0.5,
+      0.5
+     ]
+    ]
+   }
+  },
+  "hubbard_U_eV_range": [
+   0,
+   9
+  ],
+  "max_kpoints_per_direction": {
+   "primitive_1fu": 16,
+   "rhombohedral_2fu": 7,
+   "tetragonal_2fu": 10,
+   "cubic_4fu": 5
+  },
+  "allowed": {
+   "kshift": [
+    0,
+    1
+   ],
+   "ecutwfc_Ry": [
+    40,
+    50,
+    60,
+    75
+   ],
+   "smearing": [
+    "gaussian",
+    "mv",
+    "fd"
+   ],
+   "degauss_Ry": [
+    0.002,
+    0.005,
+    0.01,
+    0.02,
+    0.05
+   ]
+  },
+  "charge": {
+   "rule": "units = ceil(cell_weight x n1 x n2 x n3 / 1000 x ecut_factor), at least 1 (about one unit per minute of compute)",
+   "cell_weight": {
+    "primitive_1fu": 0.4,
+    "rhombohedral_2fu": 10,
+    "tetragonal_2fu": 2.5,
+    "cubic_4fu": 20
+   },
+   "ecut_factor": {
+    "40": 0.72,
+    "50": 1.0,
+    "60": 1.31,
+    "75": 1.84
+   },
+   "examples": {
+    "rhombohedral_2fu [4,4,4] 50 Ry": 1,
+    "rhombohedral_2fu [6,6,6] 50 Ry": 3,
+    "rhombohedral_2fu [7,7,7] 50 Ry": 4,
+    "tetragonal_2fu [8,8,6] 50 Ry": 1,
+    "tetragonal_2fu [8,8,8] 50 Ry": 2,
+    "primitive_1fu [12,12,12] 50 Ry": 1,
+    "primitive_1fu [16,16,16] 50 Ry": 2,
+    "cubic_4fu [4,4,4] 50 Ry": 2,
+    "rhombohedral_2fu [6,6,6] 75 Ry": 4
+   }
+  },
+  "fixed": {
+   "lattice_parameter_A": 4.17,
+   "functional": "PBE",
+   "pseudopotentials": {
+    "Ni": "ni_pbe_v1.4.uspp.F.UPF",
+    "O": "O.pbe-n-kjpaw_psl.0.1.UPF"
+   },
+   "hubbard": "lda_plus_u_kind = 0 (Dudarev U_eff on Ni 3d), U_projection_type = 'atomic'",
+   "ecutrho_over_ecutwfc": 8,
+   "bands_per_formula_unit": 14,
+   "conv_thr_Ry_per_formula_unit": 1e-09,
+   "mixing_beta": 0.3,
+   "electron_maxstep": 200,
+   "timeout_s": 1500
+  },
+  "returns": "free energy F = E - TS as printed by pw.x (Ry per cell), the smearing term -TS and the internal energy E = F + TS (Ry per cell), Fermi energy and band gap on the mesh (eV; 0 when a spin channel has a fractional filling), Ni and O site moments (muB, integrated in pw.x atomic spheres), total and absolute magnetization per cell, Ni 3d occupation-matrix traces and eigenvalues per spin (U > 0), SCF iterations, irreducible k-points, wall time; pw.in and pw.out are kept by the lab"
+ }
+}

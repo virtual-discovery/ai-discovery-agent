@@ -1,0 +1,327 @@
+{
+ "task_id": "fresh-ge-internal-strain",
+ "catalog_id": "fresh-ge-internal-strain",
+ "start": "fresh",
+ "source_group": "haxhijaj_2026_groupIV_r2scan",
+ "title": "Ge: internal strain, clamped versus relaxed shear and the Raman mode (PBE, 6 GPa)",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "discovered evidence (regime)",
+   "fork": "Electronic state of PBE Ge at its own zero-pressure lattice parameter",
+   "wrong_choice": "Read the 'gap' from the band edges of the mesh: a shifted mesh never contains Gamma and reports a small positive gap; a Gamma-containing mesh with fixed occupations reports HOMO = LUMO",
+   "consequence": "Misses that the s-like Gamma2' level lies below the p-like Gamma25' triplet (band-inverted semimetal), which is why the internal-strain response is not converged at zero pressure and why fixed occupations on Gamma meshes fill a degenerate level",
+   "ablation": "gap_from_shifted_mesh_band_edges"
+  },
+  {
+   "id": "dp2",
+   "kind": "convergence that matters only for some quantities",
+   "fork": "Cutoff for pressures (Pulay stress) and the reference lattice parameters",
+   "wrong_choice": "Use a cutoff at which total energies look converged (35 Ry) for the pressure route, or strain about the experimental lattice parameter",
+   "consequence": "The stress of the 3d-in-valence ultrasoft file carries a Pulay error of about -1.4 GPa at 35 Ry (-0.15 GPa at 45 Ry; energies look converged at 35 Ry): a0 and a(6 GPa) come out 0.041 and 0.031 A too small, and every 6 GPa quantity is then computed at the wrong volume (omega +5 cm^-1)",
+   "ablation": "pressures_at_35_Ry"
+  },
+  {
+   "id": "dp3",
+   "kind": "approximation choice (core-valence partition)",
+   "fork": "Which Ge pseudopotential",
+   "wrong_choice": "The cheaper frozen-3d-core file",
+   "consequence": "Pressure at fixed a +0.3 to +0.5 GPa: a0 +0.009 A and a(6 GPa) +0.010 A; optical force constant +3.7 % (omega +5.7 cm^-1), Lambda +3 %",
+   "ablation": "frozen_3d_core_pseudopotential"
+  },
+  {
+   "id": "dp4",
+   "kind": "discovered evidence (k sampling of a response concentrated at Gamma)",
+   "fork": "Brillouin-zone mesh for the internal-strain force",
+   "wrong_choice": "The usual offset (shifted) Monkhorst-Pack mesh for a diamond-structure semiconductor, converged on the energy, pressure or even the clamped shear stress",
+   "consequence": "The internal-strain force Lambda comes out ~9 % too small at 8x8x8 (still ~2 % at 12x12x12): zeta ~9 % low and the relaxed C44 ~12 % high; visible only by converging the force itself or by the Maxwell relation Omega dsigma_yz/du_x = Lambda",
+   "ablation": "shifted_k8_mesh"
+  },
+  {
+   "id": "dp5",
+   "kind": "discovered evidence (artefact of numerical choice)",
+   "fork": "Occupations for a small-gap semiconductor that is a semimetal at zero pressure",
+   "wrong_choice": "Keep Marzari-Vanderbilt smearing of 0.01-0.02 Ry (natural after finding the zero-pressure semimetal)",
+   "consequence": "Partial occupation across the 0.3 eV direct gap softens the optical force constant by ~3-4 %: Raman frequency ~5 cm^-1 low",
+   "ablation": "wide_smearing_mv002"
+  },
+  {
+   "id": "dp6",
+   "kind": "competing explanations (clamped vs relaxed)",
+   "fork": "What the relaxed-ion shear constant is and whether a relaxation actually relaxed",
+   "wrong_choice": "Report the clamped stress, or relax at a 0.2 % shear with the default 1e-3 Ry/bohr threshold (the initial force is already below it, so the 'converged' relaxation never moves)",
+   "consequence": "C44 relaxed 48 % too high (95.5 instead of 64.6 GPa) and zeta = 0, i.e. 'internal relaxation is negligible'; the 0.2 % relaxation reports convergence after one ionic step because the initial force (8e-4 Ry/bohr) is already below the threshold",
+   "ablation": "clamped_reported_as_relaxed"
+  },
+  {
+   "id": "dp7",
+   "kind": "fit window / anharmonicity",
+   "fork": "Frozen-phonon displacement for the Raman force constant",
+   "wrong_choice": "A single displacement along [111] (the cubic xyz term of the Td site makes the force quadratic in u)",
+   "consequence": "The force is quadratic in a one-sided [111] displacement: omega -7.6 cm^-1 for u = 0.02(1,1,1) A and -20 cm^-1 for 0.05(1,1,1) A (+19 cm^-1 with the opposite sign); +- pairs or a cube-axis displacement are exact to 0.1 cm^-1",
+   "ablation": "one_sided_111_displacement_0.02"
+  },
+  {
+   "id": "dp8",
+   "kind": "convention under pressure",
+   "fork": "Elastic constants of the pressurized crystal from energies or stresses",
+   "wrong_choice": "Fit the energy of the sheared cell without removing the work of the 6 GPa pre-stress on the second-order volume change (or one-sided normal strains)",
+   "consequence": "Clamped C44 ~3 % high; one-sided 2 % normal strain biases C11/C12 through the third-order constants",
+   "ablation": "energy_route_ignoring_prestress"
+  },
+  {
+   "id": "dp9",
+   "kind": "convention",
+   "fork": "Reduced mass and engineering shear strain",
+   "wrong_choice": "Atomic mass instead of M/2 for the relative coordinate; tensor eps_yz used as the Voigt shear",
+   "consequence": "omega / sqrt(2); C44 and zeta x2",
+   "ablation": "atomic_mass_in_frequency"
+  },
+  {
+   "id": "dp10",
+   "kind": "regime judgement (where a finite difference stops being local)",
+   "fork": "Volume step for the Raman Grueneisen parameter at 6 GPa",
+   "wrong_choice": "The customary +-1 % in the lattice parameter",
+   "consequence": "On the expanded side the direct gap at Gamma nearly closes (0.31 eV at a(6 GPa), 0.03 eV at +1 % in a) and the optical force constant softens anomalously; +-1 % gives gamma = 1.43 (2.43 on a Gamma-centred 8x8x8 mesh) instead of the local 1.03, visible only by comparing compression- and expansion-side steps",
+   "ablation": "gruneisen_from_1pct_steps"
+  }
+ ],
+ "graded_fields": [
+  "a0_A (+-0.006 A)",
+  "gamma_gap_at_a0_eV (+-0.05 eV)",
+  "a_6GPa_A (+-0.006 A)",
+  "C11_GPa (2 %)",
+  "C12_GPa (3 %)",
+  "C44_clamped_ion_GPa (1.5 %)",
+  "C44_relaxed_ion_GPa (2 %)",
+  "kleinman_zeta (+-0.012)",
+  "raman_frequency_cm-1 (+-1.5)",
+  "raman_gruneisen (+-0.05)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 11,
+  "oracle_charge": 27,
+  "budget": 32,
+  "oracle_compute_minutes": 11.2,
+  "tool_calls": "40-70 (15-30 evaluations: pressures at 2-3 cutoffs, Gamma band ordering, k/occupation ladders of the internal-strain force and optical force constant, clamped/relaxed shear, normal strains, two volumes; each 0.2-3 minute job followed by 1-3 polls)",
+  "agent_wall_time_h": "1-2",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (sonnet, terra)",
+  "oracle_wall_minutes": {
+   "check_task (cpuset 10,11,26,27)": 14.2,
+   "harbor (pinned cores, host load 14-20)": 23.6
+  }
+ },
+ "runtime_dependencies": [
+  "Quantum ESPRESSO 6.7 pw.x and OpenMPI from the runtime image (lab only)",
+  "numpy 1.21.5 from the runtime image (lab charge counter, oracle)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/rcyfm-68h65",
+  "doi": "10.24435/materialscloud:f3-ym",
+  "files_used": [
+   "SSSP_1.3.0_PBE_precision.tar.gz -> ge_pbe_v1.4.uspp.F.UPF",
+   "https://pseudopotentials.quantum-espresso.org/upf_files/Ge.pbe-n-rrkjus_psl.1.0.0.UPF"
+  ],
+  "md5": {
+   "SSSP_1.3.0_PBE_precision.tar.gz": "fde94756886f32ada7bf597547557eb5",
+   "SSSP_1.3.0_PBE_precision.json": "1692c5c9ce89e1c7c783f8f0eee0cbfa",
+   "LICENSE.txt": "c0f9df05fb4cd4921f4caa25606815ef",
+   "ge_pbe_v1.4.uspp.F.UPF": "9c9eaa91e581c3f09632fb3098b2c6b2",
+   "Ge.pbe-n-rrkjus_psl.1.0.0.UPF": "a23a7f3f7456476e534e54484b27d8e8"
+  },
+  "sha256": {
+   "ge_pbe_v1.4.uspp.F.UPF": "1b95046ab0f3228e0404719ca66d0309af5a62313be0b22171b963566c90430b",
+   "Ge.pbe-n-rrkjus_psl.1.0.0.UPF": "b756d20fe98992cb3afef5fcde78515720a89336d412c13b0ceddf794d54cfcd"
+  },
+  "license": "SSSP record CC BY 4.0; GBRV UPF GPL v3; PSlibrary UPF GPL v2 or later",
+  "paired_study": "Haxhijaj, Riemelmoser, Pasquarello, PRB (2026) doi:10.1103/znkf-3g37, Materials Cloud z7tes-s0y64 (question-level pairing only; no file used)",
+  "reference_calculations": "benchmarks/construction/fresh-ge-internal-strain/reference_runs.jsonl (task_lab.run, QE 6.7, 2 MPI ranks)"
+ },
+ "exceptions": {},
+ "calibration": {
+  "a0_A": {
+   "reference": 5.758492706645057,
+   "tolerance": "+-0.006",
+   "robustness": {
+    "pressures_at_45_Ry": 5.753896730395586,
+    "five_point_pressure_fits": 5.758382223727793,
+    "shifted_mesh_pressures": 5.758383411321961
+   },
+   "ablations": {
+    "pressures_at_35_Ry": 5.717393208380625,
+    "frozen_3d_core_pseudopotential": 5.767628919615625,
+    "experimental_lattice_parameter": 5.658
+   },
+   "max_robust_error": 0.0045959762494707235,
+   "nearest_ablation_error": 0.009136212970568103
+  },
+  "gamma_gap_at_a0_eV": {
+   "reference": -0.44252674230145883,
+   "tolerance": "+-0.05",
+   "robustness": {
+    "gap_direct_at_a0_k8": -0.44230000000000036,
+    "gap_smeared_k12": -0.4427000000000003
+   },
+   "ablations": {
+    "gap_from_shifted_mesh_band_edges": 0.14993999999999996,
+    "gap_from_gamma_mesh_band_edges": 0.0
+   },
+   "max_robust_error": 0.0002267423014584713,
+   "nearest_ablation_error": 0.44252674230145883
+  },
+  "a_6GPa_A": {
+   "reference": 5.601208556149733,
+   "tolerance": "+-0.006",
+   "robustness": {
+    "pressures_at_45_Ry": 5.597801945977342,
+    "five_point_pressure_fits": 5.6010711138720986
+   },
+   "ablations": {
+    "pressures_at_35_Ry": 5.570667498181544,
+    "frozen_3d_core_pseudopotential": 5.611238619851578
+   },
+   "max_robust_error": 0.003406610172390856,
+   "nearest_ablation_error": 0.010030063701845116
+  },
+  "C11_GPa": {
+   "reference": 135.60000000000002,
+   "tolerance": "within 2.0%",
+   "robustness": {
+    "normal_strain_0.005": 135.50000000000003,
+    "normal_strain_shifted_k8": 135.2
+   },
+   "ablations": {
+    "one_sided_normal_strain_0.02": 131.95
+   },
+   "max_robust_error": 0.002949852507374895,
+   "nearest_ablation_error": 0.02691740412979371
+  },
+  "C12_GPa": {
+   "reference": 62.650000000000006,
+   "tolerance": "within 3.0%",
+   "robustness": {
+    "normal_strain_0.005": 62.599999999999945,
+    "normal_strain_shifted_k8": 62.55000000000002
+   },
+   "ablations": {
+    "one_sided_normal_strain_0.02": 57.79999999999998
+   },
+   "max_robust_error": 0.0015961691939343492,
+   "nearest_ablation_error": 0.07741420590582637
+  },
+  "C44_clamped_ion_GPa": {
+   "reference": 95.5,
+   "tolerance": "within 1.5%",
+   "robustness": {
+    "gamma_k16": 95.5,
+    "cutoff_60_Ry": 95.5,
+    "small_smearing_mv002": 95.39999999999999,
+    "energy_route_with_pressure_work": 95.10625312805796
+   },
+   "ablations": {
+    "frozen_3d_core_pseudopotential": 96.6,
+    "shifted_k8_mesh": 97.89999999999999,
+    "wide_smearing_mv002": 97.6,
+    "energy_route_ignoring_prestress": 98.02725312805798,
+    "tensor_shear_strain_as_engineering": 191.0
+   },
+   "max_robust_error": 0.004123003894681121,
+   "nearest_ablation_error": 0.011518324607329822
+  },
+  "C44_relaxed_ion_GPa": {
+   "reference": 64.64046626783033,
+   "tolerance": "within 2.0%",
+   "robustness": {
+    "gamma_k16": 64.53419232016341,
+    "cutoff_60_Ry": 64.64122236805278,
+    "small_smearing_mv002": 63.82951778036747,
+    "displacement_scan": 64.61083271467459,
+    "relaxation_1e-5": 64.6,
+    "maxwell_lambda": 64.72846651879163
+   },
+   "ablations": {
+    "frozen_3d_core_pseudopotential": 64.95905417304253,
+    "shifted_k8_mesh": 72.32264374354995,
+    "shifted_k8_relaxation": 69.8,
+    "wide_smearing_mv002": 67.91643704659373,
+    "clamped_reported_as_relaxed": 95.5,
+    "loose_relaxation_at_small_strain": 95.5,
+    "tensor_shear_strain_as_engineering": 129.28093253566067
+   },
+   "max_robust_error": 0.0125455234821914,
+   "nearest_ablation_error": 0.004928613972123408
+  },
+  "kleinman_zeta": {
+   "reference": 0.5884052766722837,
+   "tolerance": "+-0.012",
+   "robustness": {
+    "gamma_k16": 0.5899191445618549,
+    "cutoff_60_Ry": 0.5883628731110837,
+    "small_smearing_mv002": 0.5952225563006488,
+    "displacement_scan": 0.5882390399262141,
+    "relaxation_1e-5": 0.5876135200000119,
+    "maxwell_lambda": 0.5875657179880164
+   },
+   "ablations": {
+    "frozen_3d_core_pseudopotential": 0.5849180327842786,
+    "shifted_k8_mesh": 0.5361887546962731,
+    "shifted_k8_relaxation": 0.5357608799999963,
+    "wide_smearing_mv002": 0.5874965129994836,
+    "clamped_reported_as_relaxed": 0.0,
+    "loose_relaxation_at_small_strain": 0.0,
+    "tensor_shear_strain_as_engineering": 1.1768105533445674
+   },
+   "max_robust_error": 0.006817279628365092,
+   "nearest_ablation_error": 0.000908763672800128
+  },
+  "raman_frequency_cm-1": {
+   "reference": 305.5065407249361,
+   "tolerance": "+-1.5",
+   "robustness": {
+    "gamma_k16": 305.2467910514364,
+    "cutoff_60_Ry": 305.52481575665337,
+    "small_smearing_mv002": 305.4665208891559,
+    "central_111_displacement": 305.62231663284086,
+    "displacement_0.03_along_x": 305.41126178976526
+   },
+   "ablations": {
+    "frozen_3d_core_pseudopotential": 311.1946408900242,
+    "shifted_k8_mesh": 305.2196685159,
+    "wide_smearing_mv002": 300.0924799420311,
+    "smearing_0.01_gamma_k12": 299.9381446304011,
+    "one_sided_111_displacement_0.02": 297.9443810424164,
+    "one_sided_111_displacement_0.05": 285.48120557029154,
+    "one_sided_111_displacement_-0.05": 324.56980866234517,
+    "atomic_mass_in_frequency": 216.02574664344644
+   },
+   "max_robust_error": 0.259749673499698,
+   "nearest_ablation_error": 0.28687220903606203
+  },
+  "raman_gruneisen": {
+   "reference": 1.0315592025264404,
+   "tolerance": "+-0.05",
+   "robustness": {
+    "gruneisen_compression_side_1pct": 1.0266474109939505,
+    "gruneisen_compression_side_half_pct": 1.030594361433567,
+    "gruneisen_expansion_side_half_pct": 1.0325288788970155
+   },
+   "ablations": {
+    "gruneisen_from_1pct_steps": 1.428715241488353,
+    "gruneisen_from_1pct_steps_k8": 2.427715081969122,
+    "wide_smearing_mv002": 1.10097711946923
+   },
+   "max_robust_error": 0.004911791532489884,
+   "nearest_ablation_error": 0.06941791694278954
+  },
+  "informational": {
+   "shifted_k12_mesh (not graded as robustness or ablation)": {
+    "C44_clamped_ion_GPa": 95.39999999999999,
+    "C44_relaxed_ion_GPa": 65.80255413743845,
+    "kleinman_zeta": 0.5769756734177006,
+    "raman_frequency_cm-1": 305.1209347463158
+   }
+  }
+ },
+ "notes": "Deviation from the candidate design (accepted by the coordinator): PBE Ge (GBRV, no spin-orbit coupling) is a band-inverted semimetal at its own zero-pressure lattice parameter (E(Gamma2')-E(Gamma25') = -0.44 eV), and there the internal-strain force does not converge with any mesh the lab offers (shifted k6-k12: 0.180/0.225/0.250/0.263 Ry/bohr; Gamma-centred 0.29-0.35), so zeta and the relaxed C44 are not uniquely recoverable at zero pressure. The shear/Raman analysis is therefore graded at 6 GPa (a = 5.601 A), where the direct gap at Gamma is open (+0.31 eV) and Gamma-centred meshes converge (Lambda 0.3978/0.3997/0.4004/0.4008 at k8/k10/k12/k16). The zero-pressure lattice parameter and the signed Gamma gap remain graded. The candidate's hidden validation SCFs were dropped: every graded number is derived from several agent-bought calculations. Elastic constants under pressure are graded as Cauchy stress-strain coefficients; the experimental C/zeta/omega are rubric context only."
+}

@@ -1,0 +1,211 @@
+{
+ "task_id": "gwbse-1d-chain-excitons",
+ "catalog_id": "gwbse-1d-chain-excitons",
+ "start": "released",
+ "source_group": "grillo_2026_1d_gwbse",
+ "title": "Exfoliable 1D chains: GW-BSE excitons, self-consistency and SOC",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which QP energies each archived BSE run used (BSE_G0W0 label versus the KfnQPdb header and the IP spectrum)",
+   "wrong_choice": "Trust the labels: treat the BSE_G0W0 runs of Te3 and As2S3 as G0W0-energy runs",
+   "consequence": "Delta_W Te3 -1.351 and As2S3 -0.868 eV instead of -0.545 and -0.12; Bi2Te3 E_b 0.633 eV from the G0W0 gap",
+   "ablation": "run_labels_trusted"
+  },
+  {
+   "id": "dp2",
+   "fork": "Whether every chain's two runs share QP energies",
+   "wrong_choice": "Generalize the Te3 finding to S3 and take the raw difference of its two runs",
+   "consequence": "Delta_W S3 0.445 eV (wrong sign) instead of -0.347",
+   "ablation": "s3_runs_assumed_same_energies"
+  },
+  {
+   "id": "dp3",
+   "fork": "Whether the archived GW already includes SOC (Eo versus the SOC and SOC-free band structures)",
+   "wrong_choice": "Assume GW without SOC, as is common, and add the DFT SOC change to the archived gaps",
+   "consequence": "Te3 gaps low by 0.284 eV and Bi2Te3 by 0.088 eV, with and without SOC",
+   "ablation": "soc_added_again"
+  },
+  {
+   "id": "dp4",
+   "fork": "How to obtain the withheld Bi2Te3 scGW gap: transfer the self-consistency increment or use Bi2Te3's own BSE_G0W0 run",
+   "wrong_choice": "Add the mean G0W0-to-scGW increment of S3, Te3 and As2S3 to the Bi2Te3 G0W0 gap",
+   "consequence": "Bi2Te3 gap 2.321 eV instead of 1.649 (its own increment is 0.111 eV)",
+   "ablation": "self_consistency_increment_transferred"
+  },
+  {
+   "id": "dp5",
+   "fork": "Bright exciton versus weak or dark features below it",
+   "wrong_choice": "Take the first visible feature of the spectrum",
+   "consequence": "As2S3 optical gap 1.861 eV instead of 2.706; As2S3 Delta_W -0.51",
+   "ablation": "first_spectral_feature"
+  },
+  {
+   "id": "dp6",
+   "fork": "Transfer model for the Bi2Te3 binding energy",
+   "wrong_choice": "1D screened-wire model with the DFPT supercell polarizability (raw or calibrated on S3 and Te3), or the mean of the released chains",
+   "consequence": "E_b 1.573, 1.317 or 1.584 eV against 0.854",
+   "ablation": "wire_model_transfer"
+  }
+ ],
+ "graded_fields": [
+  "scgw_direct_gap_eV (Te3, Bi2Te3; with and without SOC) within +-0.05 eV",
+  "scgw_optical_gap_eV (S3, Te3, As2S3) within +-0.05 eV",
+  "screening_update_shift_eV (S3, Te3, As2S3) within +-0.1 eV",
+  "bi2te3_binding_energy_eV in [0.68, 1.15] eV (regime window)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 19,
+  "oracle_charge": 39,
+  "budget": 45,
+  "catalog_units": 208,
+  "tool_calls": "40-70",
+  "gpt6astra_cost_usd": "2-4",
+  "why": "Parsing Yambo headers and spectra, cross-checking QP energies between runs and against the SOC and SOC-free bands, peak finding with the brightness rule, and a transfer estimate for Bi2Te3 under a budget that covers about a fifth of the catalog.",
+  "oracle_errors_eV": {
+   "gap:Te3:with_soc": 0.0,
+   "gap:Te3:without_soc": 0.0,
+   "gap:Bi2Te3:with_soc": 0.0114,
+   "gap:Bi2Te3:without_soc": 0.0114,
+   "optical_gap:S3": -0.0,
+   "optical_gap:Te3": 0.0,
+   "optical_gap:As2S3": -0.0,
+   "screening_shift:S3": -0.0,
+   "screening_shift:Te3": 0.0,
+   "screening_shift:As2S3": 0.0,
+   "bi2te3_binding_energy": -0.01
+  }
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image); no extra layer"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/42t0v-jam38",
+  "doi": "10.24435/materialscloud:xq-dy",
+  "paper_doi": "10.1021/acsnano.5c14061",
+  "files_used": [
+   "1D_ACS_Nano_Exciton.zip",
+   "README.txt"
+  ],
+  "md5": {
+   "1D_ACS_Nano_Exciton.zip": "a3cdbff7bbca1465fa0d2a8ec75ccec4",
+   "README.txt": "781fc14a3db2c37c787b60dac65d45cf"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the candidate design (see the construction README). The archived GW and BSE already include SOC, so the design's \"add DFT SOC to GW\" step became the double-counting trap dp3. Cross-chain model transfer of the Bi2Te3 gap and binding energy is not uniquely recoverable (the 1D wire model overestimates every chain, and Bi2Te3's self-consistency increment is 0.11 eV against 0.75-0.81 eV for the others). The Bi2Te3 gap is therefore graded tightly through evidence in Bi2Te3's own BSE_G0W0 run, and its binding energy through a regime window. Phonon data are not staged.",
+ "calibration": {
+  "scgw_direct_gap_eV Te3 with_soc": {
+   "reference": 4.31,
+   "oracle": 4.31,
+   "robustness": {
+    "fundamental_gap_instead_of_direct (convention deviation)": 4.274
+   },
+   "near_miss": {
+    "first IP peak of the spectrum (bright onset above the weak band-edge transition)": 4.362
+   },
+   "nearest_ablation": {
+    "soc_added_again": 4.026
+   },
+   "tolerance": "+-0.05"
+  },
+  "scgw_direct_gap_eV Te3 without_soc": {
+   "reference": 4.595,
+   "oracle": 4.595,
+   "robustness": {
+    "k_resolved_corrections_on_soc_free_bands": 4.59,
+    "soc_change_at_the_qp_minimum_k": 4.631
+   },
+   "nearest_ablation": {
+    "soc_added_again": 4.31
+   },
+   "tolerance": "+-0.05"
+  },
+  "scgw_direct_gap_eV Bi2Te3 with_soc": {
+   "reference": 1.649,
+   "oracle": 1.661,
+   "robustness": {
+    "ip_onset_1pct": 1.636,
+    "first_ip_peak": 1.661
+   },
+   "nearest_ablation": {
+    "soc_added_again": 1.561,
+    "g0w0_gap": 1.539,
+    "increment_transferred": 2.321
+   },
+   "tolerance": "+-0.05"
+  },
+  "scgw_direct_gap_eV Bi2Te3 without_soc": {
+   "reference": 1.737,
+   "oracle": 1.749,
+   "robustness": {
+    "ip_onset_1pct": 1.724,
+    "first_ip_peak": 1.749,
+    "soc_change_at_the_qp_minimum_k": 1.767
+   },
+   "nearest_ablation": {
+    "soc_added_again": 1.649,
+    "g0w0_gap": 1.627
+   },
+   "tolerance": "+-0.05"
+  },
+  "scgw_optical_gap_eV": {
+   "reference": {
+    "S3": 4.067,
+    "Te3": 2.171,
+    "As2S3": 2.706
+   },
+   "oracle": {
+    "S3": 4.067,
+    "Te3": 2.171,
+    "As2S3": 2.706
+   },
+   "robustness": "peak position on the 5 meV Haydock grid; any bright threshold between 3% and 30% gives the same peaks",
+   "nearest_ablation": {
+    "first_spectral_feature As2S3": 1.861,
+    "BSE_G0W0 run read for Te3": 2.716
+   },
+   "tolerance": "+-0.05"
+  },
+  "screening_update_shift_eV": {
+   "reference": {
+    "S3": -0.347,
+    "Te3": -0.545,
+    "As2S3": -0.12
+   },
+   "oracle": {
+    "S3": -0.347,
+    "Te3": -0.545,
+    "As2S3": -0.12
+   },
+   "robustness": {
+    "S3 with the IP-peak shift instead of the QP gap shift": -0.335
+   },
+   "nearest_ablation": {
+    "run_labels_trusted Te3": -1.351,
+    "run_labels_trusted As2S3": -0.868,
+    "S3 runs assumed to share energies": 0.445,
+    "first_spectral_feature As2S3": -0.51
+   },
+   "tolerance": "+-0.1"
+  },
+  "bi2te3_binding_energy_eV": {
+   "reference": 0.854,
+   "oracle": 0.844,
+   "robustness": {
+    "no_W_correction": 0.755,
+    "additive_mean_shift": 1.093,
+    "mean_ratio": 1.026,
+    "ratio_scaled_by_self_consistency": 0.844
+   },
+   "nearest_ablation": {
+    "labels_trusted (G0W0 gap - BSE_G0W0 peak)": 0.633,
+    "wire_model_calibrated_on_S3_Te3": 1.317,
+    "wire_model": 1.573,
+    "mean_released": 1.584
+   },
+   "tolerance": "window [0.68, 1.15] (regime check)"
+  }
+ }
+}

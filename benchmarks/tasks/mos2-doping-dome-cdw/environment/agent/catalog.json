@@ -1,0 +1,466 @@
+{
+ "material": "Electron-doped MoS2 monolayer (1x1 H, 2x2 CDW and 1T' phases). Released DFT/DFPT/EPW data of Girotto Erhardt, Berges, Ponce and Novko (2025), Materials Cloud record 51yyy-ksf72.",
+ "cells_and_doping": {
+  "convention": "Doping is added as a uniform background charge: Quantum ESPRESSO tot_charge = -q means q extra electrons per simulation cell. Different archive items use different simulation cells.",
+  "qe_system_blocks": {
+   "1x1H (input/1x1H/sc.in)": {
+    "nat": "3",
+    "ntyp": "2",
+    "ecutwfc": "100",
+    "ibrav": "4",
+    "celldm(1)": "6.019884994575074",
+    "celldm(3)": "5",
+    "tot_charge": "-0.13",
+    "assume_isolated": "'2D'",
+    "occupations": "'smearing'",
+    "smearing": "'f-d'",
+    "degauss": "0.005"
+   },
+   "2x2 CDW, low doping (input/2x2CDW_lowdop/sc.in)": {
+    "nat": "12",
+    "ntyp": "2",
+    "ecutwfc": "100",
+    "ibrav": "4",
+    "celldm(1)": "12.0397699892",
+    "celldm(3)": "2.5",
+    "tot_charge": "-0.74",
+    "occupations": "'smearing'",
+    "assume_isolated": "'2D'",
+    "smearing": "'fd'",
+    "degauss": "0.005"
+   },
+   "2x2 CDW, high doping (input/2x2CDW_highdop/sc.in)": {
+    "nat": "12",
+    "ntyp": "2",
+    "ecutwfc": "100",
+    "ibrav": "4",
+    "assume_isolated": "'2D'",
+    "celldm(1)": "12.0397699892",
+    "celldm(3)": "2.5",
+    "tot_charge": "-1.5",
+    "occupations": "'smearing'",
+    "smearing": "'fd'",
+    "degauss": "0.005"
+   },
+   "1T' (input/1T_prime/sc.in)": {
+    "nat": "6",
+    "ntyp": "2",
+    "ecutwfc": "100",
+    "ibrav": "8",
+    "celldm(1)": "10.426747",
+    "celldm(2)": "0.57735027",
+    "celldm(3)": "2.88675134524",
+    "tot_charge": "-0.42",
+    "occupations": "'smearing'",
+    "smearing": "'f-d'",
+    "degauss": "0.005",
+    "assume_isolated": "'2D'"
+   }
+  },
+  "lattice": "ibrav = 4 (hexagonal); celldm(1) is the in-plane lattice constant in bohr (1 bohr = 0.529177 A). The 2x2 cells repeat the 1x1 cell twice along a1 and a2; the 1T' cell holds two formula units."
+ },
+ "requests": {
+  "spectrum": {
+   "example": {
+    "kind": "spectrum",
+    "phase": "1x1H",
+    "label": "0.14",
+    "flavor": "FA"
+   },
+   "cost": 1,
+   "returns": "Eliashberg spectral function: omega (meV), alpha^2F, cumulative lambda(omega)."
+  },
+  "dos": {
+   "example": {
+    "kind": "dos",
+    "phase": "1x1H",
+    "label": "0.14"
+   },
+   "cost": 1,
+   "returns": "Electronic DOS of the two lowest conduction bands (states per eV, per spin and 1x1 cell) on a 1 meV grid: total, the dz2-weighted part (K valleys) and the remainder (Q valleys)."
+  },
+  "eliashberg": {
+   "example": {
+    "kind": "eliashberg",
+    "phase": "1x1H",
+    "label": "0.14",
+    "flavor": "FA",
+    "dos": "full",
+    "mu_star": 0.13
+   },
+   "cost": 2,
+   "returns": "Tc (K) from the linearized isotropic Migdal-Eliashberg equations for an archived spectrum, with lambda, omega_log and omega_2 of the spectrum and solver diagnostics. \"dos\": \"full\" keeps the energy-dependent DOS (1x1H and 1x1H-SOC only), \"constant\" uses the constant-DOS limit."
+  },
+  "eliashberg_custom": {
+   "example": {
+    "kind": "eliashberg_custom",
+    "spectrum_meV": [
+     [
+      0.15,
+      0.0003
+     ],
+     [
+      0.3,
+      0.0007
+     ],
+     [
+      "...",
+      "..."
+     ]
+    ],
+    "dos": {
+     "phase": "1x1H",
+     "label": "0.14"
+    },
+    "electrons_per_cell": 0.14,
+    "mu_star": 0.13
+   },
+   "cost": 2,
+   "returns": "The same solver for a spectrum you supply (3-600 rows of [omega_meV, alpha^2F], omega increasing in (0, 100] meV). \"dos\" is \"constant\" or an archived DOS; with an archived DOS, electrons_per_cell sets the electron count in those bands (rigid band)."
+  },
+  "moments_table": {
+   "example": {
+    "kind": "moments_table"
+   },
+   "cost": 1,
+   "returns": "The authors' table of lambda and omega_log (A, NA, FA) for the 1x1 H phase at 0.11-0.19 (archive fig2a-d/lambda_2d.txt and omegalog_2d.txt; paper Fig. 2d)."
+  },
+  "pes": {
+   "example": {
+    "kind": "pes",
+    "label": "pes_074"
+   },
+   "cost": 1,
+   "returns": "Total energies (Ry per simulation cell) at 11 equally spaced points of the paper's Fig. 3(c) path, from the 1x1 H structure (first point) to the 2x2 CDW structure (last point), in the 2x2 supercell. Labels are the archive file names."
+  },
+  "soft_mode": {
+   "example": {
+    "kind": "soft_mode",
+    "branch": "1x1H"
+   },
+   "cost": 1,
+   "returns": "Frequency (meV) of the Gamma* mode of the 2x2 supercell (folded from M of the 1x1 cell) along the 1x1 H or the 2x2 CDW branch, versus charge concentration n in 10^14 cm^-2 (paper Fig. 3e; negative values denote imaginary frequencies)."
+  },
+  "mo_displacement": {
+   "example": {
+    "kind": "mo_displacement",
+    "branch": "2x2CDW"
+   },
+   "cost": 1,
+   "returns": "Mo displacement (A) after relaxing a 2x2 supercell started from the 1x1 H or the CDW structure, versus n in 10^14 cm^-2 (paper Fig. 3d)."
+  },
+  "archived_tc_table": {
+   "example": {
+    "kind": "archived_tc_table",
+    "phase": "2x2CDW"
+   },
+   "cost": 1,
+   "returns": "The authors' Tc table of a phase (archive fig5/), as archived: its header names the doping column and three Tc columns (adiabatic, NA, fully NA). The archive does not state how these Tc were computed. Phases: 1x1H, 2x2CDW, 1Tprime."
+  },
+  "a1g_raman": {
+   "example": {
+    "kind": "a1g_raman"
+   },
+   "cost": 1,
+   "returns": "A1g frequency versus doping across phases (adiabatic, nonadiabatic; meV) and the Raman data on LixMoS2 (Li per MoS2, cm^-1) shown in the paper's Fig. 5(a)."
+  },
+  "experiment_dome": {
+   "example": {
+    "kind": "experiment_dome"
+   },
+   "cost": 1,
+   "returns": "Measured Tc (K) of gated MoS2 versus carrier density (10^14 cm^-2) as plotted in Fig. 5(b)."
+  }
+ },
+ "spectra_available": [
+  {
+   "phase": "1x1H",
+   "label": "0.12",
+   "flavor": "A",
+   "archive_file": "fig2e/data/dop_012/800K_a2f_lam_A.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.12",
+   "flavor": "NA",
+   "archive_file": "fig2e/data/dop_012/800K_a2f_lam_NA.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.12",
+   "flavor": "FA",
+   "archive_file": "fig2e/data/dop_012/800K_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.13",
+   "flavor": "A",
+   "archive_file": "fig2e/data/dop_013/800K_a2f_lam_A.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.13",
+   "flavor": "NA",
+   "archive_file": "fig2e/data/dop_013/800K_a2f_lam_NA.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.13",
+   "flavor": "FA",
+   "archive_file": "fig2e/data/dop_013/800K_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.14",
+   "flavor": "A",
+   "archive_file": "fig2e/data/dop_014/800K_a2f_lam_A.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.14",
+   "flavor": "NA",
+   "archive_file": "fig2e/data/dop_014/800K_a2f_lam_NA.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.14",
+   "flavor": "FA",
+   "archive_file": "fig2e/data/dop_014/800K_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.16",
+   "flavor": "A",
+   "archive_file": "fig2e/data/dop_016/800K_a2f_lam_A.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.16",
+   "flavor": "NA",
+   "archive_file": "fig2e/data/dop_016/800K_a2f_lam_NA.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.16",
+   "flavor": "FA",
+   "archive_file": "fig2e/data/dop_016/800K_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.18",
+   "flavor": "A",
+   "archive_file": "fig2e/data/dop_018/800K_a2f_lam_A.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.18",
+   "flavor": "NA",
+   "archive_file": "fig2e/data/dop_018/800K_a2f_lam_NA.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.18",
+   "flavor": "FA",
+   "archive_file": "fig2e/data/dop_018/800K_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "1x1H-SOC",
+   "label": "0.18",
+   "flavor": "A",
+   "archive_file": "fig2e/data/dop_018_soc/800K_a2f_lam_A.txt"
+  },
+  {
+   "phase": "1x1H-SOC",
+   "label": "0.18",
+   "flavor": "NA",
+   "archive_file": "fig2e/data/dop_018_soc/800K_a2f_lam_NA.txt"
+  },
+  {
+   "phase": "1x1H-SOC",
+   "label": "0.18",
+   "flavor": "FA",
+   "archive_file": "fig2e/data/dop_018_soc/800K_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.19",
+   "flavor": "A",
+   "archive_file": "fig2e/data/dop_019/800K_a2f_lam_A.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.19",
+   "flavor": "NA",
+   "archive_file": "fig2e/data/dop_019/800K_a2f_lam_NA.txt"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.19",
+   "flavor": "FA",
+   "archive_file": "fig2e/data/dop_019/800K_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "1x1H-SOC",
+   "label": "0.19",
+   "flavor": "A",
+   "archive_file": "fig2e/data/dop_019_soc/800K_a2f_lam_A.txt"
+  },
+  {
+   "phase": "1x1H-SOC",
+   "label": "0.19",
+   "flavor": "NA",
+   "archive_file": "fig2e/data/dop_019_soc/800K_a2f_lam_NA.txt"
+  },
+  {
+   "phase": "1x1H-SOC",
+   "label": "0.19",
+   "flavor": "FA",
+   "archive_file": "fig2e/data/dop_019_soc/800K_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "1Tprime",
+   "label": "archived",
+   "flavor": "A",
+   "archive_file": "fig4/1tprime_a2f_lam_A.txt"
+  },
+  {
+   "phase": "1Tprime",
+   "label": "archived",
+   "flavor": "FA",
+   "archive_file": "fig4/1tprime_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "1Tprime",
+   "label": "archived",
+   "flavor": "NA",
+   "archive_file": "fig4/1tprime_a2f_lam_NA.txt"
+  },
+  {
+   "phase": "2x2CDW-high",
+   "label": "dop1",
+   "flavor": "A",
+   "archive_file": "fig4/2x2cdw_dop1_a2f_lam_A.txt"
+  },
+  {
+   "phase": "2x2CDW-high",
+   "label": "dop1",
+   "flavor": "FA",
+   "archive_file": "fig4/2x2cdw_dop1_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "2x2CDW-high",
+   "label": "dop1",
+   "flavor": "NA",
+   "archive_file": "fig4/2x2cdw_dop1_a2f_lam_NA.txt"
+  },
+  {
+   "phase": "2x2CDW-high",
+   "label": "dop2",
+   "flavor": "A",
+   "archive_file": "fig4/2x2cdw_dop2_a2f_lam_A.txt"
+  },
+  {
+   "phase": "2x2CDW-high",
+   "label": "dop2",
+   "flavor": "FA",
+   "archive_file": "fig4/2x2cdw_dop2_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "2x2CDW-high",
+   "label": "dop2",
+   "flavor": "NA",
+   "archive_file": "fig4/2x2cdw_dop2_a2f_lam_NA.txt"
+  },
+  {
+   "phase": "2x2CDW-high",
+   "label": "dop3",
+   "flavor": "A",
+   "archive_file": "fig4/2x2cdw_dop3_a2f_lam_A.txt"
+  },
+  {
+   "phase": "2x2CDW-high",
+   "label": "dop3",
+   "flavor": "FA",
+   "archive_file": "fig4/2x2cdw_dop3_a2f_lam_FA.txt"
+  },
+  {
+   "phase": "2x2CDW-high",
+   "label": "dop3",
+   "flavor": "NA",
+   "archive_file": "fig4/2x2cdw_dop3_a2f_lam_NA.txt"
+  }
+ ],
+ "dos_available": [
+  {
+   "phase": "1x1H",
+   "label": "0.12"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.13"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.14"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.16"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.18"
+  },
+  {
+   "phase": "1x1H-SOC",
+   "label": "0.18"
+  },
+  {
+   "phase": "1x1H",
+   "label": "0.19"
+  },
+  {
+   "phase": "1x1H-SOC",
+   "label": "0.19"
+  }
+ ],
+ "pes_available": [
+  "pes_074",
+  "pes_076",
+  "pes_077",
+  "pes_078"
+ ],
+ "labels": {
+  "1x1H": "label = tot_charge per 1x1 cell (archive directories fig2e/data/dop_0XX)",
+  "1x1H-SOC": "fully relativistic spectra and DOS at 0.18 and 0.19 (archive dop_018_soc, dop_019_soc); both use one Wannier Hamiltonian, with the electron count set by the doping",
+  "2x2CDW-high": "archive labels dop1, dop2, dop3 (fig4/2x2cdw_dopN_*); the archive gives no doping for them. The paper's Fig. 4 caption: \"the largest doping values considered in this work; n1 = 3.0 x 10^14 cm^-2, n2 = 4.3 x 10^14 cm^-2, n3 = 4.6 x 10^14 cm^-2\".",
+  "1Tprime": "label \"archived\" (fig4/1tprime_*); the paper's Fig. 4(a) quotes n = 2.62 x 10^14 cm^-2",
+  "pes": "archive files fig3/pes_074, pes_076, pes_077, pes_078; the colour scale of Fig. 3(c) spans n = 2.1-2.2 x 10^14 cm^-2"
+ },
+ "withheld": "The 1x1 H spectra, DOS and archived Tc of the 0.15 and 0.17 calculations are withheld. The SOC calculations exist only at 0.18 and 0.19. No DOS is archived for the CDW and 1T' phases.",
+ "methods": {
+  "dft": "Quantum ESPRESSO, PBE, fully relativistic norm-conserving PseudoDojo potentials, 100 Ry, Coulomb truncation (assume_isolated = 2D), Fermi-Dirac smearing 0.005 Ry (Tscf = 800 K), 24x24 k (1x1), 12x12 q.",
+  "epc": "EPW, 11 Wannier functions, fine grids 360x360 k and 120x120 q (1x1); alpha^2F at the 800 K electronic temperature.",
+  "flavors": {
+   "A": "adiabatic (static DFPT phonons)",
+   "NA": "nonadiabatic phonon frequency shifts",
+   "FA": "fully nonadiabatic: frequency shifts plus phonon linewidths (Girotto and Novko, PRB 107, 064310 (2023))"
+  },
+  "dos": "From the authors' Wannier Hamiltonians on a 313x313 grid (fig2e/dos.py); energies relative to the Fermi level of the doped cell at the 800 K smearing.",
+  "eliashberg_solver": "Linearized isotropic Migdal-Eliashberg equations on the Matsubara axis (paper Eqs. 1-9). Full DOS: energy-dependent N(eps) over the archived energy window, with the energy shift chi and conservation of the electron count, mu* referenced to omega_2 and rescaled to the Matsubara cutoff (20 omega_2). Constant DOS: mu*_C = mu* / (1 + mu* ln(omega_2/omega_C)). Tc below 1 K is reported as such. The solver reproduces the authors' archived Eliashberg tables."
+ },
+ "purchase_costs": {
+  "spectrum": 1,
+  "dos": 1,
+  "eliashberg": 2,
+  "eliashberg_custom": 2,
+  "moments_table": 1,
+  "pes": 1,
+  "soft_mode": 1,
+  "mo_displacement": 1,
+  "archived_tc_table": 1,
+  "a1g_raman": 1,
+  "experiment_dome": 1
+ },
+ "budget": 34
+}

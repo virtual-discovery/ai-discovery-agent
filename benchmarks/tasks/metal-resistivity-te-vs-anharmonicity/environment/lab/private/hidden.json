@@ -1,0 +1,45 @@
+{
+ "targets": {
+  "al_te_change_percent_481K": 8.944573405547306,
+  "pb_te_resistivity_610K": 85.44160493510711,
+  "pb_anharmonic_change_percent_0K_lattice": {
+   "410": -25.188360554713395,
+   "610": -29.459774093068624
+  },
+  "pb_te_anharm_resistivity_510K": 36.723392066278386,
+  "nb_te_anharm_resistivity_2000K": 91.76416609314063
+ },
+ "thresholds": {
+  "al_te_change_abs_pp": 1.0,
+  "pb_te_610_rel": 0.06,
+  "pb_anharm_abs_pp": 3.0,
+  "pb_te_anharm_510_rel": 0.05,
+  "nb_te_anharm_2000_rel": 0.055
+ },
+ "withheld_resistivity_uohm_cm": {
+  "Pb/4-epw/2-with_TE/610K": [
+   85.44160493510711
+  ],
+  "Pb/4-epw/3-anharm/210K": [
+   12.768733967258411
+  ],
+  "Pb/4-epw/3-anharm/410K": [
+   22.49081250309249
+  ],
+  "Pb/4-epw/3-anharm/610K": [
+   31.46336091621307
+  ],
+  "Pb/4-epw/4-TE_and_anharm/410K": [
+   29.477742830276
+  ],
+  "Pb/4-epw/4-TE_and_anharm/510K": [
+   36.723392066278386
+  ],
+  "Pb/4-epw/4-TE_and_anharm/610K": [
+   44.659604494542606
+  ],
+  "Nb/4-epw/3-TE_and_anharm/2000K": [
+   91.76416609314063
+  ]
+ }
+}

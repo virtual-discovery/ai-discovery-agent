@@ -1,0 +1,259 @@
+{
+ "title": "Hole-doped BaB2: archived DFPT, EPW and Migdal-Eliashberg results (Bercx et al., PRX Energy 4, 033012 (2025))",
+ "material": "BaB2 in the AlB2 structure (P6/mmm): one formula unit (Ba at 1a, B at 2d) per primitive cell; hexagonal B layers as in MgB2.",
+ "archive_readme_excerpt": "`bab2-analysis.zip`: Additional analysis on the two-gap candidate superconductor BaB2, as explained in the Supplementary Material. Contains three folders:\n\n* `331`: phonon calculation of homogeneously 1-hole doped 3*3*1 supercell BaB2 which is shown in fig. S8.\n* `331_cs`: phonon calculation of Cs-substituted 3*3*1 BaB2 supercell which is shown in fig. S8.\n* `sensitivity`: sensitivity check of phonon dispersion, Alley-Dynes isotropic, anisotropic Tcs versus hole doping levels (0.0, 0.02, 0.04, 0.06, 0.065, 0.08, 0.1 hole/u.c.), as shown in fig.S7.",
+ "methods": "Quantum ESPRESSO, PBE, 80 Ry cutoff, cold smearing 0.02 Ry, 12x12x8 k-points; holes added as a homogeneous background charge with the cell relaxed at each charge; DFPT on a 6x6x4 q-grid (21 irreducible points). EPW v5.8 with Wannier interpolation to 40x40x24 k and q grids; isotropic and anisotropic Migdal-Eliashberg equations on the imaginary axis, continued to the real axis with Pade approximants. Supercells: 3x3x1 cells (27 atoms), phonons at two wave vectors. The returned input files and log lines record each run's settings.",
+ "runs": [
+  {
+   "run": "sensitivity/0",
+   "archive_folder": "bab2-analysis/sensitivity/0",
+   "purchasable": [
+    "iso_log",
+    "a2f",
+    "aniso_gap",
+    "eliashberg_iso",
+    "dfpt_phonons"
+   ],
+   "archived_anisotropic_temperatures_K": [
+    15.0,
+    20.0,
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0
+   ]
+  },
+  {
+   "run": "sensitivity/1",
+   "archive_folder": "bab2-analysis/sensitivity/1",
+   "purchasable": [
+    "iso_log",
+    "a2f",
+    "aniso_gap",
+    "eliashberg_iso",
+    "dfpt_phonons"
+   ],
+   "archived_anisotropic_temperatures_K": [
+    15.0,
+    20.0,
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0
+   ]
+  },
+  {
+   "run": "sensitivity/2",
+   "archive_folder": "bab2-analysis/sensitivity/2",
+   "purchasable": [
+    "iso_log",
+    "a2f",
+    "aniso_gap",
+    "eliashberg_iso",
+    "dfpt_phonons"
+   ],
+   "archived_anisotropic_temperatures_K": [
+    15.0,
+    20.0,
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0
+   ]
+  },
+  {
+   "run": "sensitivity/3",
+   "archive_folder": "bab2-analysis/sensitivity/3",
+   "purchasable": [
+    "iso_log",
+    "a2f",
+    "aniso_gap",
+    "eliashberg_iso"
+   ],
+   "archived_anisotropic_temperatures_K": [
+    15.0,
+    20.0,
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0
+   ]
+  },
+  {
+   "run": "sensitivity/4",
+   "archive_folder": "bab2-analysis/sensitivity/4",
+   "purchasable": [
+    "iso_log",
+    "a2f",
+    "aniso_gap",
+    "eliashberg_iso",
+    "dfpt_phonons"
+   ],
+   "archived_anisotropic_temperatures_K": [
+    15.0,
+    20.0,
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0
+   ]
+  },
+  {
+   "run": "sensitivity/5",
+   "archive_folder": "bab2-analysis/sensitivity/5",
+   "purchasable": [
+    "iso_log",
+    "a2f",
+    "aniso_gap",
+    "eliashberg_iso"
+   ],
+   "archived_anisotropic_temperatures_K": [
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0
+   ]
+  },
+  {
+   "run": "sensitivity/6",
+   "archive_folder": "bab2-analysis/sensitivity/6",
+   "purchasable": [
+    "iso_log",
+    "a2f",
+    "aniso_gap",
+    "eliashberg_iso",
+    "dfpt_phonons"
+   ],
+   "archived_anisotropic_temperatures_K": [
+    15.0,
+    20.0,
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0,
+    55.0,
+    60.0
+   ]
+  },
+  {
+   "run": "331",
+   "archive_folder": "bab2-analysis/331",
+   "purchasable": [
+    "supercell_phonons"
+   ]
+  },
+  {
+   "run": "331_cs",
+   "archive_folder": "bab2-analysis/331_cs",
+   "purchasable": [
+    "supercell_phonons"
+   ]
+  }
+ ],
+ "requests": {
+  "dfpt_phonons": {
+   "example": {
+    "kind": "dfpt_phonons",
+    "run": "sensitivity/0"
+   },
+   "cost": 2,
+   "returns": "harmonic frequencies at the 21 irreducible DFPT q-points (archived bab2.dyn1-21) with ph.in and the run header"
+  },
+  "a2f": {
+   "example": {
+    "kind": "a2f",
+    "run": "sensitivity/0"
+   },
+   "cost": 1,
+   "returns": "the archived EPW file bab2.a2f (rows as archived, with its first line and footer) and the run header"
+  },
+  "iso_log": {
+   "example": {
+    "kind": "iso_log",
+    "run": "sensitivity/0"
+   },
+   "cost": 1,
+   "returns": "the archived isotropic Eliashberg input (iso.in) and the solver section of iso.out"
+  },
+  "aniso_gap": {
+   "example": {
+    "kind": "aniso_gap",
+    "run": "sensitivity/0",
+    "temperature_K": 15,
+    "axis": "imaginary"
+   },
+   "cost": 2,
+   "returns": "the archived EPW gap-distribution file at one archived temperature, on the imaginary axis (bab2.imag_aniso_gap0_T) or continued to the real axis (bab2.pade_aniso_gap0_T), as archived (first line and two columns), with that temperature's log lines, epw_int.in and the run header"
+  },
+  "eliashberg_iso": {
+   "example": {
+    "kind": "eliashberg_iso",
+    "run": "sensitivity/0",
+    "mu_star": 0.13,
+    "cutoff_meV": 500,
+    "temperatures_K": [
+     15,
+     20,
+     25
+    ]
+   },
+   "optional": {
+    "a2f_column": "1-10 (smearing column of bab2.a2f; default 1)",
+    "max_iter": "default 500, at most 5000",
+    "conv_thr": "default 1e-3, at least 1e-10",
+    "mixing": "default 0.4, in (0, 1]",
+    "initial_gap_meV": "default 5"
+   },
+   "cost": 1,
+   "returns": "a new numpy solution of the isotropic Migdal-Eliashberg equations on the archived alpha2F of that run, at up to 8 temperatures (5-150 K)"
+  },
+  "supercell_phonons": {
+   "example": {
+    "kind": "supercell_phonons",
+    "run": "331"
+   },
+   "cost": 2,
+   "returns": "frequencies at the two archived supercell wave vectors with the scf/ph inputs, selected scf output lines (and the relaxation for 331_cs)"
+  }
+ },
+ "withheld": [
+  "dfpt_phonons of sensitivity/3",
+  "dfpt_phonons of sensitivity/5"
+ ],
+ "eliashberg_iso_solver": "Matsubara frequencies w_n = (2n+1) pi kB T, n = 0..N-1, N = int((cutoff/(pi kB T) - 1)/2) + 1; with lambda(m) = int 2 w a2F(w)/(w^2 + (2 m pi kB T)^2) dw: Z_n = 1 + (pi kB T/w_n) sum_m [lambda(n-m) - lambda(n+m+1)] w_m/sqrt(w_m^2 + D_m^2); Z_n D_n = pi kB T sum_m [lambda(n-m) + lambda(n+m+1) - 2 mu*] D_m/sqrt(w_m^2 + D_m^2) (the form solved by EPW). Linear mixing D <- mixing*D_new + (1-mixing)*D_old from a constant initial gap; residual = sum|D_new - D_old|/sum|D_new|; a run stops when the residual falls below conv_thr, when D(iw_0) falls below 1e-6 meV (reported as zero), or at max_iter. Returns D(iw_0) in meV, Z(iw_0), N, the iteration count, the final residual and whether it converged.",
+ "purchase_costs": {
+  "dfpt_phonons": 2,
+  "a2f": 1,
+  "iso_log": 1,
+  "aniso_gap": 2,
+  "eliashberg_iso": 1,
+  "supercell_phonons": 2
+ },
+ "budget": 34
+}

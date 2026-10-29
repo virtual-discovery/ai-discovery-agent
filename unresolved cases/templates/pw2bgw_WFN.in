@@ -1,0 +1,23 @@
+&input_pw2bgw
+  prefix = '<prefix>'
+  outdir = './out'
+  real_or_complex = 2
+  wfng_flag = .true.
+  wfng_file = 'WFN'
+  wfng_kgrid = .true.
+  wfng_nk1 = <k1>
+  wfng_nk2 = <k2>
+  wfng_nk3 = <k3>
+  wfng_dk1 = 0.0
+  wfng_dk2 = 0.0
+  wfng_dk3 = 0.0
+  rhog_flag = .true.
+  rhog_file = 'RHO'
+  vxc_flag = .true.
+  vxc_file = 'vxc.dat'
+  vxc_diag_nmin = <sigma band_index_min>
+  vxc_diag_nmax = <sigma band_index_max>
+  vxc_offdiag_nmin = 0
+  vxc_offdiag_nmax = 0
+/
+! then: wfn2hdf.x BIN WFN WFN.h5 (all BerkeleyGW stages below use use_wfn_hdf5)

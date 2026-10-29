@@ -1,0 +1,122 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 9,
+  "task_mb": 0.49,
+  "hidden_values": 5,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 7,
+   "budget": 8,
+   "evaluations": 7,
+   "failed_evaluations": 0,
+   "container_seconds": 9
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "shell_averaged_no_split",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "anisotropy_gap_as_splitting",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "in20_nominal_l",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "in20_nominal_l_h_scaled",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "ignore_in20_pnd",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "flip_for_positive_l_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "pnd_z_channel",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "max_on_measured_line",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "chiral_dipole_full_chirality",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "chiral_dipole_full_chirality_true_l",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "ordered_pair_convention",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "in20_h_rescaled_to_instrument_a",
+    "passes_grading": true
+   },
+   {
+    "name": "dJ_from_cut_g_only",
+    "passes_grading": true
+   },
+   {
+    "name": "dJ_from_cut_h_only",
+    "passes_grading": true
+   },
+   {
+    "name": "dJ_published_value",
+    "passes_grading": true
+   },
+   {
+    "name": "equivalent_wave_vector",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T22:45:20Z"
+}

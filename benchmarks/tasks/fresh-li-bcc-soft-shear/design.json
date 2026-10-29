@@ -1,0 +1,261 @@
+{
+ "task_id": "fresh-li-bcc-soft-shear",
+ "catalog_id": "fresh-li-bcc-soft-shear",
+ "start": "fresh",
+ "source_group": "fresh_li_bcc_elastic",
+ "title": "bcc Li: soft tetragonal shear, Zener anisotropy and compression (PBE)",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "evidence to discover (convergence of the quantity itself)",
+   "fork": "Which k mesh and smearing are converged for the shear response, as opposed to total energies and pressures",
+   "wrong_choice": "Validate the mesh on total energy and pressure (converged to <0.01 GPa and <0.1 mRy already at k16 with 0.02 Ry) and compute the moduli there",
+   "consequence": "k16/0.02 Ry gives C' = 1.53 GPa (+62 %), a plausible, experiment-like number; B' in the compressed cell 1.34 instead of 0.82. Only a k ladder of C' itself shows it.",
+   "ablation": "total_energy_converged_mesh"
+  },
+  {
+   "id": "dp2",
+   "kind": "evidence to discover (noise that can flip a conclusion)",
+   "fork": "Small smearing on coarse meshes",
+   "wrong_choice": "Use the smallest smearing (0.005 Ry, 'closest to the physical T = 0 limit') on a 16^3 or 24^3 mesh",
+   "consequence": "C' = -2.06 GPa at k16 (apparently unstable bcc, the competing explanation 'barrier-free Bain path'), 0.78 at k24; compressed B' = -0.26 at k24. The sampling noise of the Fermi-surface (N-point) contribution exceeds C' itself.",
+   "ablation": "small_smearing_coarse_mesh"
+  },
+  {
+   "id": "dp3",
+   "kind": "silent bias (k-converged but wrong)",
+   "fork": "Is the largest offered smearing width acceptable once the k mesh is converged at that width?",
+   "wrong_choice": "Use 0.02 Ry, where C' is already k-converged (0.842 at k32, 0.851 at k48), and stop",
+   "consequence": "C' = 0.851 GPa (-10 %), compressed B' 0.67 (-18 %). Only a smearing ladder at dense meshes (0.01 and 0.005 Ry at k48+, which cost 6-9 units per strain) reveals the bias.",
+   "ablation": "largest_smearing_k_converged"
+  },
+  {
+   "id": "dp4",
+   "kind": "evidence in raw outputs (strain asymmetry)",
+   "fork": "One-sided versus symmetric strains on the strongly anharmonic Bain path",
+   "wrong_choice": "Take C' from a single +1 % (or -1 %) tetragonal cell, halving the cost",
+   "consequence": "C' = 1.27 (+1 %) or 0.63 GPa (-1 %) at k48/0.01 Ry instead of 0.95: the third-order term is as large as the harmonic one at 1 % strain. Symmetric +-e differences are amplitude-independent from 0.5 % to 3 %.",
+   "ablation": "one_sided_plus_strain"
+  },
+  {
+   "id": "dp5",
+   "kind": "reference volume",
+   "fork": "Lattice parameter at which the zero-pressure constants are evaluated",
+   "wrong_choice": "Strain about the experimental lattice parameter (3.477 A at 78 K), where this protocol is at -0.48 GPa",
+   "consequence": "a0 off by 0.042 A and C44 = 11.01 GPa (-0.60); C' happens to be insensitive near a0 (0.945), so the error is silent in C' and fails through a0 and C44.",
+   "ablation": "experimental_lattice"
+  },
+  {
+   "id": "dp6",
+   "kind": "regime judgement (finite pressure)",
+   "fork": "Energy curvature versus stress-strain slopes in the pre-stressed compressed cell",
+   "wrong_choice": "Fit the energy of linear (volume-changing) tetragonal and trigonal strains of the a = 3.30 A cell as at zero pressure, or report Lagrangian (Brugger) coefficients",
+   "consequence": "The -P dV work enters: linear tetragonal energy curvature gives 1.90 GPa for B' (true 0.82) and the trigonal one 13.49 = B44 + P/2 (true ~12.8); Lagrangian coefficients are B + P (2.86, 14.9). Visible as a stress-versus-energy discrepancy of exactly P/2 that vanishes at a0.",
+   "ablation": "energy_curvature_under_pressure"
+  },
+  {
+   "id": "dp7",
+   "kind": "convention",
+   "fork": "Engineering versus tensor shear strain and the three components of the trigonal strain",
+   "wrong_choice": "Read e4 as eps_yz (factor 4) or fit dF/V = 1/2 C44 e^2 for e4 = e5 = e6 = e (factor 3)",
+   "consequence": "C44 off by a factor 1/4 or 3, anisotropy and B44 likewise",
+   "ablation": "tensor_shear_convention"
+  },
+  {
+   "id": "dp8",
+   "kind": "transfer to another regime (cascade)",
+   "fork": "Whether the a0 shear stiffnesses transfer to the compressed cell",
+   "wrong_choice": "Save budget by reusing the a0 values, or scale them with the bulk modulus (compression stiffens everything)",
+   "consequence": "C' softens under compression (B' = 0.82 at 2.04 GPa vs C' = 0.95 at 0) while C44 stiffens (12.8 vs 11.6): reuse gives B' +0.13 and B44 -1.2; B-scaling gives B' ~1.4 GPa.",
+   "ablation": "compressed_reuses_a0_moduli"
+  }
+ ],
+ "graded_fields": [
+  "a0_A within 0.005 A",
+  "bulk_modulus_GPa within 4 %",
+  "Cprime_GPa within 0.065 GPa",
+  "C44_GPa within 0.40 GPa",
+  "zener_anisotropy within 6 %",
+  "mechanically_stable_at_a0 exact (true)",
+  "compressed_pressure_GPa within 0.05 GPa",
+  "compressed_Bprime_GPa within 0.08 GPa",
+  "compressed_B44_GPa within 0.50 GPa"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 18,
+  "oracle_charge": 79,
+  "budget": 90,
+  "oracle_compute_minutes_2_cores": "measured 67 (sum of request wall times in the gate; 4052 s container time)",
+  "tool_calls": "45-75 (20-30 evaluations, each polled 1-3 times, plus analysis)",
+  "wall_time_h": "1.5-2.5",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "Quantum ESPRESSO 6.7 pw.x, OpenMPI, numpy (all in the runtime image; no extra layer)",
+  "One pseudopotential file vendored in environment/lab/ (0.38 MB)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/rcyfm-68h65",
+  "doi": "10.24435/materialscloud:f3-ym",
+  "files_used": [
+   "SSSP_1.3.0_PBE_precision.tar.gz",
+   "SSSP_1.3.0_PBE_precision.json",
+   "LICENSE.txt"
+  ],
+  "md5": {
+   "SSSP_1.3.0_PBE_precision.tar.gz": "fde94756886f32ada7bf597547557eb5",
+   "SSSP_1.3.0_PBE_precision.json": "1692c5c9ce89e1c7c783f8f0eee0cbfa",
+   "LICENSE.txt": "c0f9df05fb4cd4921f4caa25606815ef"
+  },
+  "vendored_sha256": {
+   "li_pbe_v1.4.uspp.F.UPF": "02cc4b3810e28a43b570277840d9631ca24f634d922928200c047b72c0a86bf5"
+  },
+  "license": "Archive CC BY 4.0; the GBRV 1.4 Li UPF file GPL v3 (per the archive LICENSE.txt, vendored as SSSP_LICENSE.txt)",
+  "hidden_truth": "Construction calculations through task_lab.run (reference_jobs.py, run_batch.sh, reference_results.json), stored only in environment/lab/private/"
+ },
+ "exceptions": {},
+ "notes": "The design's hidden-SCF energy check at 0.9 V0 was replaced by grading B', B44 and P of an explicitly specified cell (a = 3.30 A), with B defined by the stress-strain relation in the prompt; this keeps the target unique and makes the finite-pressure route a decision point. The 0.04 Ry smearing was not offered: there C' is k-converged at 0.94 GPa, inside the window by coincidence. The design's C11-minus-C12 and strain-amplitude wrong paths do not materialise at converged symmetric strains (uniaxial and 0.5-3 % variants agree within 0.035 GPa) and are robustness variations; the anharmonic trap is the one-sided-strain asymmetry. Relaxed versus clamped internal coordinates does not arise for a one-atom Bravais lattice. Reference C' and B' average the converged meshes (k48-k64) at 0.01 and 0.005 Ry; small-smearing trigonal values scatter by +-0.3 GPa, which sets the C44/B44 tolerances.",
+ "calibration": {
+  "a0_A": {
+   "reference": 3.4348,
+   "tolerance": "absolute 0.005",
+   "robustness": {
+    "a0_from_zero_pressure": 3.4347
+   },
+   "max_robustness_error": 0.0001,
+   "nearest_failing_ablations": {
+    "experimental_lattice": 3.477
+   }
+  },
+  "bulk_modulus_GPa": {
+   "reference": 13.918486911607088,
+   "tolerance": "relative 0.03",
+   "robustness": {
+    "oracle_like_k48_both_smearings": 13.91561
+   },
+   "max_robustness_error": 0.00021,
+   "nearest_failing_ablations": {}
+  },
+  "Cprime_GPa": {
+   "reference": 0.9468654179442741,
+   "tolerance": "absolute 0.065",
+   "robustness": {
+    "oracle_like_k48_both_smearings": 0.93767,
+    "k56_smearing_0.01": 0.93767,
+    "k56_smearing_0.005": 0.97445,
+    "smearing_0.005_k48": 0.93032,
+    "energy_route_volume_conserving": 0.95179,
+    "half_percent_strains": 0.9586,
+    "two_percent_strains": 0.94526,
+    "three_percent_tetragonal_strains": 0.97993,
+    "cutoff_60Ry_correction": 0.94687,
+    "uniaxial_strain_stress_route": 0.9709,
+    "cprime_from_c11_energy_minus_b": 0.94645
+   },
+   "max_robustness_error": 0.03307,
+   "nearest_failing_ablations": {
+    "largest_smearing_k_converged": 0.85064,
+    "small_smearing_k24": 0.77587,
+    "one_sided_minus_strain": 0.62863
+   }
+  },
+  "C44_GPa": {
+   "reference": 11.607808333333333,
+   "tolerance": "absolute 0.42",
+   "robustness": {
+    "oracle_like_k48_both_smearings": 11.41535,
+    "k56_smearing_0.01": 11.5257,
+    "k56_smearing_0.005": 11.95225,
+    "k64_smearing_0.01": 11.49625,
+    "smearing_0.005_k48": 11.73165,
+    "two_percent_strains": 11.44477
+   },
+   "max_robustness_error": 0.34444,
+   "nearest_failing_ablations": {
+    "one_sided_plus_strain": 11.1064,
+    "experimental_lattice": 11.0108,
+    "total_energy_converged_mesh": 10.81955
+   }
+  },
+  "zener_anisotropy": {
+   "reference": 12.2591955660762,
+   "tolerance": "relative 0.06",
+   "robustness": {
+    "oracle_like_k48_both_smearings": 12.17421,
+    "k56_smearing_0.01": 12.29179,
+    "k56_smearing_0.005": 12.26559,
+    "k64_smearing_0.01": 12.14138,
+    "smearing_0.005_k48": 12.61037,
+    "energy_route_volume_conserving": 12.19578,
+    "half_percent_strains": 12.10911,
+    "two_percent_strains": 12.10757,
+    "three_percent_tetragonal_strains": 11.84554,
+    "cutoff_60Ry_correction": 12.25909,
+    "uniaxial_strain_stress_route": 11.95572,
+    "cprime_from_c11_energy_minus_b": 12.26461
+   },
+   "max_robustness_error": 0.03374,
+   "nearest_failing_ablations": {
+    "largest_smearing_k_converged": 13.32454,
+    "small_smearing_k24": 14.96099,
+    "one_sided_plus_strain": 8.76041
+   }
+  },
+  "compressed_pressure_GPa": {
+   "reference": 2.0423188,
+   "tolerance": "absolute 0.05",
+   "robustness": {
+    "oracle_like_k48_both_smearings": 2.04226,
+    "k56_smearing_0.01": 2.04255,
+    "k56_smearing_0.005": 2.04226,
+    "smearing_0.005_k48": 2.04197
+   },
+   "max_robustness_error": 0.00035,
+   "nearest_failing_ablations": {}
+  },
+  "compressed_Bprime_GPa": {
+   "reference": 0.8175493267564324,
+   "tolerance": "absolute 0.09",
+   "robustness": {
+    "oracle_like_k48_both_smearings": 0.80897,
+    "k56_smearing_0.01": 0.78445,
+    "k56_smearing_0.005": 0.83716,
+    "k64_smearing_0.01": 0.78691,
+    "smearing_0.005_k48": 0.87025,
+    "energy_route_volume_conserving": 0.8681
+   },
+   "max_robustness_error": 0.0527,
+   "nearest_failing_ablations": {
+    "compressed_reuses_a0_moduli": 0.94687,
+    "largest_smearing_k_converged": 0.67414,
+    "one_sided_plus_strain": 1.1118
+   }
+  },
+  "compressed_B44_GPa": {
+   "reference": 12.784658333333333,
+   "tolerance": "absolute 0.56",
+   "robustness": {
+    "oracle_like_k48_both_smearings": 12.47455,
+    "k56_smearing_0.01": 12.6731,
+    "k56_smearing_0.005": 13.26155,
+    "k64_smearing_0.01": 12.6437,
+    "smearing_0.005_k48": 12.85695,
+    "energy_route_volume_conserving": 12.4652
+   },
+   "max_robustness_error": 0.47689,
+   "nearest_failing_ablations": {
+    "one_sided_plus_strain": 12.1362,
+    "energy_curvature_under_pressure": 13.48633,
+    "small_smearing_coarse_mesh": 13.53365
+   }
+  },
+  "mechanically_stable_at_a0": {
+   "reference": true,
+   "tolerance": "exact",
+   "ablations_failing_this_field": [
+    "small_smearing_coarse_mesh"
+   ]
+  }
+ }
+}

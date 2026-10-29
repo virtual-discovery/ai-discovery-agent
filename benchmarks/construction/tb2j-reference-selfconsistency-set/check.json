@@ -1,0 +1,151 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 8,
+  "task_mb": 2.36,
+  "hidden_values": 13,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 60,
+   "budget": 68,
+   "evaluations": 45,
+   "failed_evaluations": 0,
+   "container_seconds": 39
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "FeP_exchange_truncated_at_14A",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "FeP_exchange_truncated_at_11A",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "paper_kmin_quoted",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "commensurate_approximant_as_kmin",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "FeP_energies_from_kmin_converged_range_18A",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "insulator_energies_from_short_lists",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "FeCl2_supercell_long_windows_skipped",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "FeP_supercell_long_windows_skipped",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "FeP_spiral_folded_as_listed",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "FeP_spiral_folded_as_listed_sum_over_five",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "FePS3_DFT+U_FM_duplicate_used",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "FeP_fm_energy_of_its_own_LT_helix",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "FeP_reference_independence_assumed",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "bond_counted_once",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "FeP_kmin_from_pairs_below_18A",
+    "passes_grading": true
+   },
+   {
+    "name": "FeP_kmin_from_pairs_below_23A",
+    "passes_grading": true
+   },
+   {
+    "name": "FeP_energies_on_relaxed_spiral",
+    "passes_grading": true
+   },
+   {
+    "name": "insulator_energies_from_shorter_lists",
+    "passes_grading": true
+   },
+   {
+    "name": "FeP_spiral_folded_sum_over_five",
+    "passes_grading": true
+   },
+   {
+    "name": "FeP_spiral_folded_without_half_box_pairs",
+    "passes_grading": true
+   },
+   {
+    "name": "FeP_spiral_bought_below_30A",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T20:37:07Z"
+}

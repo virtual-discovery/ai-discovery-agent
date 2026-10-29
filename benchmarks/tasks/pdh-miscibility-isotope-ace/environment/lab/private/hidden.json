@@ -1,0 +1,51 @@
+{
+ "reference": {
+  "solution_energy_0K_eV": -0.13909338939644877,
+  "OT_difference_static_eV": 0.026231268482632686,
+  "OT_difference_with_zpe_eV": 0.12514971564828933,
+  "lattice_expansion_A3_per_H": 3.0366209520457232,
+  "tetrahedral_fraction_H_300K": 0.01305626379047158,
+  "sieverts_ratio_H_over_D_300K": 2.2688648576926864,
+  "log10_plateau_pressure_H_300K_bar": -3.1076254547910116,
+  "Tc_incoherent_K": 418.98275710702165,
+  "Tc_coherent_K": 281.93554809596895
+ },
+ "tolerance": {
+  "solution_energy_0K_eV": [
+   "abs",
+   0.012
+  ],
+  "OT_difference_static_eV": [
+   "abs",
+   0.01
+  ],
+  "OT_difference_with_zpe_eV": [
+   "abs",
+   0.015
+  ],
+  "lattice_expansion_A3_per_H": [
+   "rel",
+   0.08
+  ],
+  "tetrahedral_fraction_H_300K": [
+   "log",
+   2.0
+  ],
+  "sieverts_ratio_H_over_D_300K": [
+   "rel",
+   0.2
+  ],
+  "log10_plateau_pressure_H_300K_bar": [
+   "abs",
+   0.4
+  ],
+  "Tc_incoherent_K": [
+   "rel",
+   0.15
+  ],
+  "Tc_coherent_K": [
+   "rel",
+   0.2
+  ]
+ }
+}

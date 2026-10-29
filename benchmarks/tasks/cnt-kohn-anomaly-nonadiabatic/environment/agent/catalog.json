@@ -1,0 +1,101 @@
+{
+ "system": "(3,3) single-wall carbon nanotube (diameter about 4 A): 12 C atoms per cell, period c = 2.4477 A along the tube axis z, 13 A of vacuum; LDA, norm-conserving PseudoDojo pseudopotential, 100 Ry; Quantum ESPRESSO 7.3 (DFPT) and EPW with two Wannier bands around the Fermi level.",
+ "source": "E. Marazzi, S. Ponce, J.-C. Charlier, G.-M. Rignanese, Materials Cloud Archive record vs5fd-dbv98 (DOI 10.24435/materialscloud:yx-x1, CC BY 4.0). All data are retrieved author results; the self_energy evaluator recomputes self-energies from the archived coupling tables.",
+ "nesting_wavevector": "All coupling and self-energy data refer to one phonon wavevector Q = 0.424 (units of 2 pi / c) along the tube axis.",
+ "modes_at_Q": "36 phonon branches, numbered at Q from the lowest frequency. Coupling data, archived self-energy tables and the evaluator cover nu = 1 (radial breathing mode, RBM), nu = 20 and nu = 23 (in-plane optical A1 modes).",
+ "units": {
+  "energy": "meV for phonon frequencies, self-energies and couplings; eV for electron energies",
+  "temperature": "K",
+  "k_B": "8.617333262145179e-05 eV/K",
+  "Ry": "13.605693122994 eV",
+  "cm-1_to_meV": 0.12398419843320026
+ },
+ "budget": 26,
+ "purchase_costs": {
+  "archive_file": 1,
+  "bands": 1,
+  "phonons": 1,
+  "coupling": 1,
+  "dfpt_scan": 1,
+  "self_energy_table": 1,
+  "self_energy": "1 if nk <= 100000, 2 if nk <= 1000000, else 3"
+ },
+ "requests": {
+  "archive_file": {
+   "format": {
+    "kind": "archive_file",
+    "file": "<name>"
+   },
+   "returns": "the verbatim text of one small archive file",
+   "archive_files": {
+    "README.md": "archive README",
+    "dft_inputs/scf.in": "ground-state input (Quantum ESPRESSO 7.3)",
+    "dft_inputs/ph.in": "DFPT input",
+    "dft_inputs/epw.in": "EPW input of the Wannier / electron-phonon run",
+    "dft_inputs/specfun/epw.in": "EPW input template of the phonon self-energy (spectral function) runs",
+    "dft_inputs/specfun/input.py": "script that generated the self-energy runs from the template",
+    "dft_inputs/specfun/pathq.dat": "q-point list of the self-energy runs",
+    "Fig1/coupling_calculator.c": "source of the analytic 1D model of Fig. 1 (threshold coupling)",
+    "Fig1/fig1.py": "plotting script of Fig. 1",
+    "Fig1/backup/output.csv": "archived output of coupling_calculator (Fig. 1 data)"
+   }
+  },
+  "bands": {
+   "format": {
+    "kind": "bands"
+   },
+   "returns": "DFT band structure from Fig2/e_band/band.eig: 12 bands at 5000 k along the tube axis (k in units of 2 pi / alat, alat = 13.0 A), eV, with the Fermi-level line of the authors' band-plot script (fig2_a_b.py) quoted verbatim"
+  },
+  "phonons": {
+   "format": {
+    "kind": "phonons"
+   },
+   "returns": "DFPT phonon dispersion from Fig2/ph_band/matdyn.freq: 36 branches at 1001 q from Gamma along the tube axis (q in units of 2 pi / alat), cm-1"
+  },
+  "coupling": {
+   "format": {
+    "kind": "coupling",
+    "mode": 20
+   },
+   "returns": "the archived EPW coupling tables Fig2/g/g+q.<n m nu> and g-q.<n m nu> for one mode: uniform 2000-point k grid (crystal units, -0.5 <= k < 0.5); energies (eV) of the two Wannier bands at k and at k+Q (or k-Q), ordered by energy at each k as in the archive; omega_Q (meV); |g_mn(k)| (meV) for the band pairs (n, m), n at k and m at k+-Q; plus a comment quoted from the authors' coupling-plot script"
+  },
+  "dfpt_scan": {
+   "format": {
+    "kind": "dfpt_scan"
+   },
+   "returns": "DFPT frequencies at Q of nu = 1, 20, 23 computed with Fermi-Dirac smearing sigma = 10, 5, 3, 2, 1, 0.5 mRy, as tabulated in the authors' Fig. 2 script (their \"Eq. (1)\" curves), cm-1"
+  },
+  "self_energy_table": {
+   "format": {
+    "kind": "self_energy_table",
+    "mode": 20,
+    "temperature_K": 700
+   },
+   "released_temperatures_K": [
+    50.0,
+    700.0,
+    800.0,
+    900.0,
+    1000.0,
+    1250.0,
+    1578.87
+   ],
+   "returns": "the archived EPW phonon self-energy file Fig2/PiT/<T> for one mode: its two header lines and its 801 data lines (frequencies w from -500 to 150 meV), verbatim. Tables at other temperatures exist in the archive but are withheld."
+  },
+  "self_energy": {
+   "format": {
+    "kind": "self_energy",
+    "mode": "1 | 20 | 23",
+    "temperature_K": "number, 30-2000",
+    "omega_meV": "list of 1-41 real frequencies in [-500, 500]",
+    "nk": "integer, 2000-4000000",
+    "eta_meV": "number in (0, 50]",
+    "processes": "non-empty list from [\"k+q\", \"k-q\"]",
+    "band_pairs": "non-empty list of distinct [n, m], n and m in {1, 2}"
+   },
+   "returns": "Re and Im of Pi_nu(w, T) (meV) at the requested frequencies",
+   "definition": "For one process p (k -> k+Q or k -> k-Q): Pi(w, T) = (2/N_k) sum_k sum_(n,m) |g_mn(k)|^2 [f(e_m(k+pQ)) - f(e_n(k))] / [e_m(k+pQ) - e_n(k) - w - i eta]; the result is summed over the selected processes and band pairs. f is the Fermi-Dirac function at temperature_K with the chemical potential fixed at -1.0380 eV (fermi_energy of the archived EPW self-energy input). The archived 2000-point bands and |g|^2 are linearly interpolated onto nk uniform k-points after the two bands have been followed through their crossings; band_pairs use the archive's energy ordering (1 = lower band) at each k.",
+   "sign_convention": "Re Pi < 0 softens the mode; Im Pi(w > 0) < 0."
+  }
+ }
+}

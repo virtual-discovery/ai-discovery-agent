@@ -1,0 +1,438 @@
+{
+ "ablations": {
+  "sqs_values_read_per_cation": {
+   "mixing_enthalpy_x050_meV_per_cation": 228.72838750508566,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 5491.210354119539,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 3563.00860453438,
+    "r2SCAN": 3676.8827298298056
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     9.858579222379638e-05,
+     0.9999805382269032
+    ],
+    "spinodal": [
+     0.067593364815,
+     0.957406585185
+    ]
+   }
+  },
+  "strain_per_cell_mixed_with_per_cation": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 155.92349293384638,
+    "100": 299.4523745102747,
+    "101": 465.07111959482006
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 58.43146757518687,
+    "r2SCAN": 0.0
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": null,
+    "spinodal": null
+   }
+  },
+  "r2scan_unrelaxed_sqs_kept": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 866.4880095870009,
+    "r2SCAN": 903.8774566390872
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.12797433467064764,
+     0.8175714906929691
+    ],
+    "spinodal": [
+     0.24618800762499998,
+     0.67664464671
+    ]
+   }
+  },
+  "r2scan_index0_sqs_unscreened": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 866.4880095870009,
+    "r2SCAN": 959.6244058962964
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.12797433467064764,
+     0.8175714906929691
+    ],
+    "spinodal": [
+     0.24618800762499998,
+     0.67664464671
+    ]
+   }
+  },
+  "inplane_c_not_constrained": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 21.825664518540684,
+    "101": 54.032075563542925
+   },
+   "habit_plane": "100",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 2299.2987522491417,
+    "r2SCAN": 2503.5474289677977
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.007063984175746364,
+     0.9993155700846345
+    ],
+    "spinodal": [
+     0.15722068556,
+     0.9423066153849999
+    ]
+   }
+  },
+  "no_out_of_plane_relaxation": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 104.88596734958605,
+    "100": 223.64965764781908,
+    "101": 246.53093699261686
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 613.9880772837197,
+    "r2SCAN": 470.38951722615326
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": null,
+    "spinodal": null
+   }
+  },
+  "habit_plane_100": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "100",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 41.082328700635514,
+    "r2SCAN": 36.29574159166877
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": null,
+    "spinodal": null
+   }
+  },
+  "incoherent_model_reported_as_coherent": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 2745.6093492451064,
+    "r2SCAN": 3063.897339833412
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.001357518762168803,
+     0.9998064582777572
+    ],
+    "spinodal": [
+     0.105668288665,
+     0.9482541034899999
+    ]
+   }
+  },
+  "binodal_spinodal_swapped": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 866.4880095870009,
+    "r2SCAN": 664.688252555832
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.24618800762499998,
+     0.67664464671
+    ],
+    "spinodal": [
+     0.12797433467064764,
+     0.8175714906929691
+    ]
+   }
+  },
+  "functional_mixing": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 310.55297144332474,
+    "r2SCAN": 1219.5477809520464
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": null,
+    "spinodal": null
+   }
+  },
+  "overtruncated_cluster_expansion_Tc": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 1650.0,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 866.4880095870009,
+    "r2SCAN": 664.688252555832
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.12797433467064764,
+     0.8175714906929691
+    ],
+    "spinodal": [
+     0.24618800762499998,
+     0.67664464671
+    ]
+   }
+  }
+ },
+ "robustness": {
+  "lowest_sqs_per_composition": {
+   "mixing_enthalpy_x050_meV_per_cation": 113.2262120634909,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2733.881015330553,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 834.4378440266449,
+    "r2SCAN": 647.3272111390485
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.16052325417472155,
+     0.8068179273147021
+    ],
+    "spinodal": [
+     0.27858794282499993,
+     0.677702144595
+    ]
+   }
+  },
+  "mean_sqs_per_composition": {
+   "mixing_enthalpy_x050_meV_per_cation": 109.15879847222243,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 866.4880095869983,
+    "r2SCAN": 671.2613661350617
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.12797433467064956,
+     0.8175714906929679
+    ],
+    "spinodal": [
+     0.24618800762499998,
+     0.67664464671
+    ]
+   }
+  },
+  "raw_scan_minima_three_compositions": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 78.0973866894781,
+    "100": 149.8503425536291,
+    "101": 233.23460314807616
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 862.2710300755357,
+    "r2SCAN": 660.5301217817159
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.1299981530441178,
+     0.8130127444268959
+    ],
+    "spinodal": [
+     0.24726050547999998,
+     0.6727371545249999
+    ]
+   }
+  },
+  "one_sqs_per_composition": {
+   "mixing_enthalpy_x050_meV_per_cation": 112.44990489609238,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2716.169912368059,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 816.0607366622309,
+    "r2SCAN": 681.9487223837286
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.17490765488583734,
+     0.786490697699757
+    ],
+    "spinodal": [
+     0.28795292409499995,
+     0.66238467523
+    ]
+   }
+  },
+  "cluster_expansion_monte_carlo_Tc": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2450.0,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 866.4880095870009,
+    "r2SCAN": 664.688252555832
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.12797433467064764,
+     0.8175714906929691
+    ],
+    "spinodal": [
+     0.24618800762499998,
+     0.67664464671
+    ]
+   }
+  },
+  "cluster_expansion_12_clusters_monte_carlo_Tc": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.96174646692319,
+    "100": 149.72618725513735,
+    "101": 232.53555979741003
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2250.0,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 866.4880095870009,
+    "r2SCAN": 664.688252555832
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.12797433467064764,
+     0.8175714906929691
+    ],
+    "spinodal": [
+     0.24618800762499998,
+     0.67664464671
+    ]
+   }
+  },
+  "strain_from_subregular_fit": {
+   "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+   "coherency_strain_energy_x050_meV_per_cation": {
+    "001": 77.3707935106936,
+    "100": 150.0016333554832,
+    "101": 232.57958737507337
+   },
+   "habit_plane": "001",
+   "incoherent_Tc_K": 2745.605134218931,
+   "coherent_spinodal_Tc_K": {
+    "PBE": 866.4880095870009,
+    "r2SCAN": 664.688252555832
+   },
+   "coherent_boundaries_700K_PBE": {
+    "binodal": [
+     0.12797433467064764,
+     0.8175714906929691
+    ],
+    "spinodal": [
+     0.24618800762499998,
+     0.67664464671
+    ]
+   }
+  }
+ },
+ "reference": {
+  "mixing_enthalpy_x050_meV_per_cation": 114.36419375254283,
+  "coherency_strain_energy_x050_meV_per_cation": {
+   "001": 77.96174646692319,
+   "100": 149.72618725513735,
+   "101": 232.53555979741003
+  },
+  "habit_plane": "001",
+  "incoherent_Tc_K": 2745.605134218931,
+  "coherent_spinodal_Tc_K": {
+   "PBE": 866.4880095870009,
+   "r2SCAN": 664.688252555832
+  },
+  "coherent_boundaries_700K_PBE": {
+   "binodal": [
+    0.12797433467064764,
+    0.8175714906929691
+   ],
+   "spinodal": [
+    0.24618800762499998,
+    0.67664464671
+   ]
+  }
+ }
+}

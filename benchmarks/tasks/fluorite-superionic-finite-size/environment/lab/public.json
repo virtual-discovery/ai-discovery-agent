@@ -1,0 +1,8 @@
+{
+ "task_id": "fluorite-superionic-finite-size",
+ "solver_budget": 140,
+ "reserved_validation_charge": 0,
+ "requests": {"md_run": {"kind": "md_run", "material": "CaF2|PbF2|UO2|AgI", "supercell": "<n>", "temperature_K": "<T>",
+                         "cost": "max(1, ceil(atoms / 300)); see runs_available"}},
+ "catalog": "/app/catalog.json"
+}

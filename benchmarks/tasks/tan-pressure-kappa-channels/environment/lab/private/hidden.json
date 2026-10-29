@@ -1,0 +1,31 @@
+{
+ "reference": {
+  "kappa_xx_80GPa_300K_W_mK": 1878.42,
+  "kappa_zz_80GPa_300K_W_mK": 1536.82,
+  "kappa_xx_40GPa_300K_W_mK": 1835.3,
+  "kappa_xx_60GPa_600K_W_mK": 629.725,
+  "phel_resistivity_fraction_80GPa_300K": 0.234928
+ },
+ "tolerance": {
+  "kappa_xx_80GPa_300K_W_mK": {
+   "type": "rel",
+   "value": 0.1
+  },
+  "kappa_zz_80GPa_300K_W_mK": {
+   "type": "rel",
+   "value": 0.1
+  },
+  "kappa_xx_40GPa_300K_W_mK": {
+   "type": "rel",
+   "value": 0.05
+  },
+  "kappa_xx_60GPa_600K_W_mK": {
+   "type": "rel",
+   "value": 0.04
+  },
+  "phel_resistivity_fraction_80GPa_300K": {
+   "type": "abs",
+   "value": 0.06
+  }
+ }
+}

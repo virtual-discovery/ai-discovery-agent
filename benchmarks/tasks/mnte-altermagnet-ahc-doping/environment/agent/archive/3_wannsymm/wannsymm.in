@@ -1,0 +1,31 @@
+######### WannSymm INPUT File Follows ########
+# Modify according to your system
+# template input file of wannsymm.x
+# anything following '#', '!' or '//' in a line will be regard as comments
+# tag names are case insensitive( SeedName and seednAme are equivalent)
+
+DFTcode  = VASP
+Spinors  = T
+SeedName = 'wannier90'
+Use_POSCAR = 'POSCAR'
+restart  = F
+
+Global_TRsymm = F
+SAXIS    = 0 0 1
+MAGMOM   = 0 4 0 0 -4 0 0 0 0 0 0 0
+
+# Projections_in_Format_of_wannier90
+begin projections
+Mn:d
+Te:p
+end projections
+
+nk_per_kpath = 101
+begin kpath
+  K   0.3333333333333333   0.3333333333333333   0.00000    G   0.00000   0.00000   0.00000
+  G   0.00000   0.00000   0.00000    A   0.00000   0.00000   0.50000
+  A   0.00000   0.00000   0.50000    K   0.3333333333333333   0.3333333333333333   0.00000
+  K   0.3333333333333333   0.3333333333333333   0.00000    H   0.3333333333333333   0.3333333333333333   0.50000
+  H   0.3333333333333333   0.3333333333333333   0.50000    M   0.50000   0.00000   0.00000
+  M   0.50000   0.00000   0.00000    L   0.50000   0.00000   0.50000
+end kpath

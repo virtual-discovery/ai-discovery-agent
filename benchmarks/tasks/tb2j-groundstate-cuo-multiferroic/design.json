@@ -1,0 +1,249 @@
+{
+ "task_id": "tb2j-groundstate-cuo-multiferroic",
+ "catalog_id": "tb2j-groundstate-cuo-multiferroic",
+ "start": "released",
+ "source_group": "tellezmora_2024_tb2j_groundstate",
+ "title": "CuO: self-consistent magnetic ground state from MFT exchange",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which reference state's exchange describes the ground state",
+   "wrong_choice": "Take the FM-reference exchange (and the incommensurate state it predicts) as final",
+   "consequence": "Converged q off by 0.028 r.l.u.; chain J 117.1 instead of 129.7 meV (-9.7%); magnon mean/max 132.4/178.6 instead of 149.1/190.5 meV",
+   "ablation": "fm_reference_exchange_as_final_model",
+   "difficulty_type": "self-consistency loop; reference dependence discovered only after buying and testing the AFM reference"
+  },
+  {
+   "id": "dp2",
+   "fork": "Whether the uncorrected (no spin-ligand) workflow converges",
+   "wrong_choice": "Accept the uncorrected exchange / AFM calculation without testing it",
+   "consequence": "The uncorrected AFM calculation has two inequivalent Cu sites (different Cu-O bonds and moments), equivalent bonds split by tens of meV and h(k) minimum -5.2 meV at its own reference; using the uncorrected exchange gives chain J 170.1 meV (+31%) and a wrong stability verdict",
+   "ablation": "uncorrected_exchange_judged_converged",
+   "difficulty_type": "metadata inconsistency discovered in the purchased calculation"
+  },
+  {
+   "id": "dp3",
+   "fork": "How far the exchange list must extend",
+   "wrong_choice": "Buy only the windows below 6 A (13 neighbour shells)",
+   "consequence": "k_min shifts by 0.010 (corrected) and 0.006 (uncorrected) r.l.u.; converged only beyond ~8 A, and long-range windows cost 2-3 units",
+   "ablation": "exchange_truncated_at_6A",
+   "difficulty_type": "convergence under a binding budget"
+  },
+  {
+   "id": "dp4",
+   "fork": "k_min versus the commensurate approximant or a remembered vector",
+   "wrong_choice": "Report (1/2,0,1/2) / (0,1/2,0), the paper's rounded SI vectors, or the experimental AF2 vector",
+   "consequence": "Off by 0.028 / 0.0042 r.l.u. (commensurate), 0.018 (paper SI quoted in the staged axes, whose c sign differs), 0.018 (AF2)",
+   "ablation": "commensurate_approximant_reported_as_kmin",
+   "difficulty_type": "regime judgement (incommensurate minimum) and anti-memorisation"
+  },
+  {
+   "id": "dp5",
+   "fork": "Are the splittings of symmetry-equivalent bonds in the AFM-reference list noise or physics",
+   "wrong_choice": "Symmetrise (average) the AFM-reference exchange over crystal-equivalent bonds before the LSWT",
+   "consequence": "The splitting correlates with the relative spin orientation (antiparallel pairs more AF by up to 1.07 meV); averaging lowers the AF1 stabilisation from 44.33 to 40.18 meV/Cu, makes an incommensurate spiral (0.502,0,0.516) the LT optimum (0.04 meV/Cu below AF1), and lowers magnon mean/max to 128.4/174.5 meV",
+   "ablation": "symmetrized_afm_reference_exchange",
+   "difficulty_type": "evidence that must be discovered in the data; cascade into q and magnons"
+  },
+  {
+   "id": "dp6",
+   "fork": "Which eigenproblem gives magnon energies",
+   "wrong_choice": "Diagonalise the Hermitian bosonic matrix h(k) (what the authors' dispersion files contain) instead of the paraunitary g.h problem",
+   "consequence": "Mean/max 177.3/327.5 meV instead of 149.1/190.5",
+   "ablation": "hamiltonian_eigenvalues_as_magnon_energies",
+   "difficulty_type": "confounder in the archived files"
+  },
+  {
+   "id": "dp7",
+   "fork": "Spin length and pair-counting conventions",
+   "wrong_choice": "Spin waves with S = 1, or the chain coupling without the ordered-pair / S^2 factors",
+   "consequence": "Magnons halved (74.6/95.2 meV); chain J 64.9 or 32.4 meV instead of 129.7",
+   "ablation": "spin_length_one",
+   "difficulty_type": "convention"
+  }
+ ],
+ "graded_fields": [
+  "kmin_FM_reference_rlu.ligand_corrected within 0.006 r.l.u. (sign and integer shifts equivalent)",
+  "kmin_FM_reference_rlu.uncorrected within 0.003 r.l.u.",
+  "stable_at_own_reference: all four verdicts exact",
+  "converged_propagation_vector_rlu within 0.006 r.l.u.",
+  "chain_exchange_meV within 4%",
+  "mean_magnon_energy_meV within 5%",
+  "magnon_band_maximum_meV within 4%"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 20,
+  "oracle_charge": 21,
+  "budget": 24,
+  "catalog_value": 68,
+  "oracle_container_seconds": 26,
+  "harbor_oracle_runtime_s": 65,
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "3-5",
+  "why": "Parse windowed pair lists for up to four calculations, Luttinger-Tisza/h(k) minimisation with an exchange-range convergence test, a 16-site paraunitary LSWT with zone averages, stability tests and convention bookkeeping.",
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image); the lab is a lookup of archived values"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/rbrcp-0tc34",
+  "doi": "10.24435/materialscloud:5m-2t",
+  "paper_doi": "10.1038/s41524-024-01202-z",
+  "files_used": [
+   "CuO.tar.gz (members listed in SOURCE.md)"
+  ],
+  "md5": {
+   "CuO.tar.gz": "b57a770ecd719fe8e9713b727fb1290b"
+  },
+  "sha256": {
+   "CuO.tar.gz": "6d2507643f20c18873e8a4de656c9bddebdaf1bcbfa83dcdd63b4dec80650a71"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the design. (1) Anisotropic/DMI blocks are not served: the archive README declares them invalid and the collinear runs cannot determine them, so that fork was dropped. (2) Classical Monte Carlo T_N is not graded: the reference-dependent exchange is only defined in the AF1 supercell, and T_N depends on how it is extended to disordered states; it is a rubric item. (3) 'Magnon energies at hidden q' became the zone-averaged magnon energy and the band maximum, which do not depend on the choice of magnetic cell. (4) The ground-state target is split into the first-iteration k_min (both treatments), the stability verdicts and the converged propagation vector. The sibling task tb2j-reference-selfconsistency-set uses FeP/FeCl2/FePS3/NiO from the same record; this task uses only CuO.",
+ "calibration": {
+  "kmin_ligand_corrected": {
+   "reference": [
+    0.4911,
+    0.0,
+    0.5264
+   ],
+   "tolerance_rlu": 0.006,
+   "robustness_distance": {
+    "kmin_r8": 0.0023,
+    "kmin_r10": 0.0005,
+    "kmin_r14": 0.0001,
+    "kmin_r17": 0.0
+   },
+   "ablation_distance": {
+    "truncated_6A": 0.0102,
+    "commensurate": 0.0278,
+    "AF2_memorised": 0.0176,
+    "paper_verbatim": 0.0179,
+    "uncorrected_set": 0.8434
+   }
+  },
+  "kmin_uncorrected": {
+   "reference": [
+    0.0,
+    0.5042,
+    0.0
+   ],
+   "tolerance_rlu": 0.003,
+   "robustness_distance": {
+    "kmin_r8": 0.0007,
+    "kmin_r10": 0.0001,
+    "kmin_r14": 0.0001,
+    "kmin_r17": 0.0
+   },
+   "ablation_distance": {
+    "truncated_6A": 0.0063,
+    "commensurate": 0.0042
+   }
+  },
+  "converged_q": {
+   "reference": [
+    0.5,
+    0,
+    0.5
+   ],
+   "tolerance_rlu": 0.006,
+   "ablation_distance": {
+    "symmetrized_afm": 0.0165,
+    "fm_reference_final": 0.0278
+   }
+  },
+  "chain_exchange_meV": {
+   "reference": 129.742,
+   "tolerance": "+-4%",
+   "robustness": {
+    "single_bond_low": 129.389,
+    "single_bond_high": 130.11
+   },
+   "ablations": {
+    "fm_reference": 117.11,
+    "uncorrected": 170.08,
+    "bond_twice": 64.87,
+    "unit_vector": 32.44
+   }
+  },
+  "mean_magnon_energy_meV": {
+   "reference": 149.117,
+   "tolerance": "+-5%",
+   "robustness": {
+    "magnons_native_r6.5": 149.903,
+    "magnons_native_r10": 148.891,
+    "magnons_native_r14": 149.097,
+    "magnons_grid4_unrefined_max": 149.128,
+    "magnons_native_r6_info": 145.686
+   },
+   "ablations": {
+    "fm_reference_as_final": 132.43,
+    "symmetrized_afm_exchange": 128.43,
+    "hamiltonian_eigenvalues_as_magnons": 177.32,
+    "spin_length_one": 74.56
+   }
+  },
+  "magnon_band_maximum_meV": {
+   "reference": 190.49,
+   "tolerance": "+-4%",
+   "robustness": {
+    "magnons_native_r6.5": 188.355,
+    "magnons_native_r10": 190.443,
+    "magnons_native_r14": 190.471,
+    "magnons_grid4_unrefined_max": 188.755,
+    "magnons_native_r6_info": 184.499
+   },
+   "ablations": {
+    "fm_reference_as_final": 178.56,
+    "symmetrized_afm_exchange": 174.54,
+    "hamiltonian_eigenvalues_as_magnons": 327.48,
+    "spin_length_one": 95.24
+   }
+  },
+  "stability": {
+   "reference": {
+    "FM/ligand": false,
+    "AFM/ligand": true,
+    "FM/no_ligand": false,
+    "AFM/no_ligand": false
+   },
+   "min_h_eigenvalue_meV": {
+    "FM/ligand": -142.07,
+    "AFM/ligand": -0.0,
+    "FM/no_ligand": -219.936,
+    "AFM/no_ligand": -5.185
+   }
+  },
+  "author_path_check": {
+   "A_rlu": [
+    -0.3921,
+    0.5001,
+    -0.3922
+   ],
+   "X_rlu": [
+    0.392,
+    0.0001,
+    0.392
+   ],
+   "max_dev_eV_FM_ligand": 2.355472202057729e-05,
+   "max_dev_eV_AFM_ligand": 0.00012445510215471078,
+   "max_dev_eV_AFM_ligand_Y_Gamma_X": 1.0241185619541682e-05
+  },
+  "symmetrized_afm_af1_minus_spiral_meV_per_Cu": 0.04063080939966568,
+  "AF1_energy_native_vs_symmetrized_meV_per_Cu": [
+   -44.330675,
+   -40.18093782173285
+  ]
+ },
+ "tightest_margins": {
+  "kmin_uncorrected": "tolerance 0.003 r.l.u.; commensurate (0,1/2,0) at 0.0042; defensible spread <= 0.0007",
+  "magnon_band_maximum": "tolerance 4%; FM-reference exchange -6.3%; defensible -1.1%..+0.3% (6 A cutoff -3.1%)",
+  "kmin_ligand_corrected": "tolerance 0.006 r.l.u.; 6 A cutoff at 0.0102; defensible <= 0.0023 (8 A cutoff)",
+  "mean_magnon_energy": "tolerance 5%; FM-reference -11.2%, symmetrised -13.9%; defensible -0.2..+0.5% (6 A cutoff -2.3%)",
+  "chain_exchange": "tolerance 4%; FM-reference -9.7%; single bonds +-0.3%",
+  "converged_q": "tolerance 0.006 r.l.u.; symmetrised-model spiral at 0.0165"
+ }
+}

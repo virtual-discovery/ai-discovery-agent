@@ -1,0 +1,39 @@
+{
+ "reference": {
+  "a0_A": 5.758492706645057,
+  "gamma_gap_at_a0_eV": -0.44252674230145883,
+  "a_6GPa_A": 5.601208556149733,
+  "C11_GPa": 135.60000000000002,
+  "C12_GPa": 62.650000000000006,
+  "C44_clamped_ion_GPa": 95.5,
+  "C44_relaxed_ion_GPa": 64.64046626783033,
+  "kleinman_zeta": 0.5884052766722837,
+  "raman_frequency_cm-1": 305.5065407249361,
+  "raman_gruneisen": 1.0315592025264404
+ },
+ "tolerances": {
+  "absolute": {
+   "a0_A": 0.006,
+   "gamma_gap_at_a0_eV": 0.05,
+   "a_6GPa_A": 0.006,
+   "kleinman_zeta": 0.012,
+   "raman_frequency_cm-1": 1.5,
+   "raman_gruneisen": 0.05
+  },
+  "relative": {
+   "C11_GPa": 0.02,
+   "C12_GPa": 0.03,
+   "C44_clamped_ion_GPa": 0.015,
+   "C44_relaxed_ion_GPa": 0.02
+  }
+ },
+ "provenance": {
+  "runs": "benchmarks/construction/fresh-ge-internal-strain/reference_runs.jsonl (task_lab.run, QE 6.7, 2 MPI ranks)",
+  "lattice_parameters_of_stage_b": {
+   "A0": 5.7585,
+   "A6": 5.6012
+  },
+  "Lambda_Ry_per_bohr": 0.39943399999999996,
+  "Phi_Ry_per_bohr2": 0.256536115833189
+ }
+}

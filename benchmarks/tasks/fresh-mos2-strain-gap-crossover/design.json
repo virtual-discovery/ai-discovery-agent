@@ -1,0 +1,458 @@
+{
+ "task_id": "fresh-mos2-strain-gap-crossover",
+ "catalog_id": "fresh-mos2-strain-gap-crossover",
+ "start": "fresh",
+ "source_group": "campi_2023_mc2d",
+ "title": "Monolayer MoS2 under strain: where the gap turns indirect (PBE)",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Whether spin-orbit coupling enters the band energies that decide the gap type",
+   "wrong_choice": "Run the strain ladder scalar-relativistically (4x cheaper)",
+   "consequence": "In scalar-relativistic PBE the Gamma and K valence states are degenerate almost at zero strain, so the upper (tensile) end of the direct range collapses towards 0 % instead of about +0.6 %; the lower end also moves",
+   "ablation": "scalar_relativistic_band_energies"
+  },
+  {
+   "id": "dp2",
+   "fork": "Where spin-orbit coupling acts",
+   "wrong_choice": "Scalar-relativistic ladder corrected by raising the K valence band by half its spin-orbit splitting (the textbook K-valley picture)",
+   "consequence": "The Q-valley conduction states also split (lower branch ~35 meV down), so the compressive end is misplaced by ~0.2 % strain; the tensile end survives",
+   "ablation": "spin_orbit_shift_of_K_valence_only"
+  },
+  {
+   "id": "dp3",
+   "fork": "Relaxed-ion versus clamped-ion strain (S height, and the in-plane S shift under uniaxial stress)",
+   "wrong_choice": "Give every strained (spin-orbit, scf-only) cell the unstrained S height, or skip relaxations to save budget",
+   "consequence": "The out-of-plane Gamma valence and Q conduction states shift by ~0.1 eV per % of strain relative to relaxed cells: both ends of the direct range move by 0.3-0.7 %, the K deformation potentials change by 20-40 %, and the clamped-ion transverse strain of the uniaxial state is wrong",
+   "ablation": "clamped_sulfur_height"
+  },
+  {
+   "id": "dp4",
+   "fork": "Which zero-stress criterion is converged",
+   "wrong_choice": "Zero of the analytic stress at 35 Ry (cheap) or at 45-55 Ry (where it agrees between 45 and 55 Ry and looks converged)",
+   "consequence": "The analytic in-plane stress carries a Pulay stress (about 2 N/m at 35 Ry, about 0.25 N/m at 45-55 Ry; it moves only at 70 Ry), so a0 comes out 1.2 % or 0.15 % too small; the minimum of E(a) is converged at 45 Ry",
+   "ablation": "analytic_stress_zero_45Ry"
+  },
+  {
+   "id": "dp5",
+   "fork": "Strain reference",
+   "wrong_choice": "Strains relative to the experimental lattice parameter 3.16 A",
+   "consequence": "Every strain is offset by about +0.8 %; the band crossings are graded as lattice parameters a0 (1 + strain), so the offset fails",
+   "ablation": "experimental_lattice_as_strain_reference"
+  },
+  {
+   "id": "dp6",
+   "fork": "Absolute energy scale",
+   "wrong_choice": "Differentiate the raw pw.x eigenvalues with respect to strain",
+   "consequence": "The raw eigenvalues are referred to the cell-averaged electrostatic potential, which moves by about -8.6 eV per unit biaxial strain relative to the vacuum plateau: the K valence deformation potential even changes sign",
+   "ablation": "raw_eigenvalues_without_vacuum_alignment"
+  },
+  {
+   "id": "dp7",
+   "fork": "Uniaxial stress versus uniaxial strain",
+   "wrong_choice": "Compress along zigzag with the armchair direction clamped (one relaxation fewer)",
+   "consequence": "Transverse strain 0 instead of about +0.8 % and a different gap",
+   "ablation": "uniaxial_strain_instead_of_stress"
+  },
+  {
+   "id": "dp8",
+   "fork": "Locating the conduction minimum when uniaxial strain lowers the symmetry",
+   "wrong_choice": "Sample the Q valleys on the standard Gamma-K line towards (1/3, 1/3) only",
+   "consequence": "Uniaxial strain splits the six Q valleys into the pair along k_x and the four at +-60 degrees; the pair along k_x is lowest here, so the one-line path reports a gap ~40 meV too large and the wrong CBM valley",
+   "ablation": "q_valleys_on_one_gamma_k_line"
+  },
+  {
+   "id": "dp9",
+   "fork": "Cascade of the Pulay stress into the uniaxial-stress condition",
+   "wrong_choice": "Use the converged a0 but impose zero transverse stress on the raw analytic stress",
+   "consequence": "The isotropic Pulay offset (~0.26 N/m) acts as a spurious transverse stress: the transverse strain is ~0.2 % too small",
+   "ablation": "uniaxial_zero_of_uncorrected_analytic_stress"
+  },
+  {
+   "id": "dp10",
+   "fork": "Band edges from the scf mesh versus a search along Gamma-K",
+   "wrong_choice": "Read the conduction minimum off a 9x9 scf mesh (or its highest-occupied/lowest-unoccupied levels)",
+   "consequence": "The Q minimum (t ~ 0.51 of Gamma-K) lies between the mesh points t = 1/3 and 2/3, so the compressive end and its edge location are wrong",
+   "ablation": "band_edges_from_9x9_mesh_points"
+  }
+ ],
+ "graded_fields": [
+  "a0_A (+-0.003 A; reference 3.1864 from the minimum of E(a), relaxed ions, 45 Ry)",
+  "direct_gap_strain_range_percent [lower, upper] (graded as lattice parameters a0(1+strain) with the submitted a0, +-0.0035 A each, i.e. ~+-0.11 % strain; reference [-1.44, +0.43] %)",
+  "edge_leaving_K_at_lower_end / upper_end (band name exact; k within 0.1 1/A of a symmetry image of Q (t~0.51 of Gamma-K) / Gamma)",
+  "deformation_potentials_eV valence_K, conduction_K (+-8 %), gap_K (+-6 %); reference -5.13, -16.35, -11.22 eV",
+  "uniaxial_zigzag_compression: transverse_strain_percent (+-0.1; reference +0.927), gap_eV (+-0.015; reference 1.7315), vbm_k_crystal and cbm_k_crystal (within 0.1 1/A of a symmetry image of K and of Q along k_x)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 10,
+  "oracle_charge": 38,
+  "budget": 48,
+  "oracle_compute_minutes": 42.7,
+  "tool_calls": "45-80 (15-30 evaluations: lattice parameter at 2-3 cutoffs, scalar relaxations for the S height, a spin-orbit ladder of 4-6 strains with Gamma-K band k points, 2-3 uniaxial relaxations and one low-symmetry spin-orbit run; each 1-8 minute job followed by 2-6 polls)",
+  "agent_wall_time_h": "1.5-2.5",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (sonnet, terra)"
+ },
+ "runtime_dependencies": [
+  "Quantum ESPRESSO 6.7 pw.x, pp.x and OpenMPI from the runtime image (lab only)",
+  "numpy 1.21.5 from the runtime image (lab charge counter, planar averages, grading)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://pseudopotentials.quantum-espresso.org/upf_files/ (PSlibrary 1.0.0)",
+  "files_used": [
+   "Mo.pbe-spn-rrkjus_psl.1.0.0.UPF",
+   "S.pbe-n-rrkjus_psl.1.0.0.UPF",
+   "Mo.rel-pbe-spn-rrkjus_psl.1.0.0.UPF",
+   "S.rel-pbe-n-rrkjus_psl.1.0.0.UPF",
+   "https://raw.githubusercontent.com/dalcorso/pslibrary/master/License"
+  ],
+  "md5": {
+   "Mo.pbe-spn-rrkjus_psl.1.0.0.UPF": "03f09b12e49601d1a456a78ce8b2d514",
+   "S.pbe-n-rrkjus_psl.1.0.0.UPF": "9d0fe39aa2a799ea84730884c9b010f4",
+   "Mo.rel-pbe-spn-rrkjus_psl.1.0.0.UPF": "efb2e050edcba4ab52b616d1147efb03",
+   "S.rel-pbe-n-rrkjus_psl.1.0.0.UPF": "425a098c3228d5d3ee792f5a4250baba"
+  },
+  "sha256": {
+   "Mo.pbe-spn-rrkjus_psl.1.0.0.UPF": "0d7c57996e624698242e6428a34d5f13a1e52b4cddac2ce215be4dce429073dd",
+   "S.pbe-n-rrkjus_psl.1.0.0.UPF": "90fb585e830674f2de7b4cbace28d5dd0c05ca1a919d1f92a59b54d6b95cbfc4",
+   "Mo.rel-pbe-spn-rrkjus_psl.1.0.0.UPF": "a39da9404fae8865b491eef86edf5f4dfec45fc994031b493ea7247814653e39",
+   "S.rel-pbe-n-rrkjus_psl.1.0.0.UPF": "800bb92fdf3054b5e71aace4ae19a3e4b1053b1a9d74361f832b6dcc6200bf75",
+   "PSLIBRARY_License.txt": "204d8eff92f95aac4df6c8122bc1505f468f3a901e5a4cc08940e0ede1938994"
+  },
+  "license": "PSlibrary: GNU GPL v2",
+  "paired_study": "Campi et al., MC2D, ACS Nano (2023), Materials Cloud 17gf6-84915, DOI 10.24435/materialscloud:36-nd (question-level pairing only; no file used)",
+  "reference_calculations": "benchmarks/construction/fresh-mos2-strain-gap-crossover/reference_runs.jsonl (task_lab.run, QE 6.7, 2 MPI ranks)"
+ },
+ "exceptions": {},
+ "notes": "Deviations from the candidate design: (1) PSlibrary 1.0.0 scalar and fully relativistic pairs instead of SSSP, so spin-orbit coupling enters the graded band energies (in scalar-relativistic PBE the Gamma/K valence ordering at a0 is decided by ~10 meV and the tensile end sits near 0 %, not uniquely gradable); geometries stay scalar-relativistic (relax is scalar-only). (2) a0 is graded from the energy minimum: the analytic stress carries a Pulay stress of ~0.26 N/m even at 45-55 Ry (it moves only at 70 Ry), discovered in construction; this became dp4/dp9. (3) No hidden validation SCFs: the uniaxial state (zigzag -4 % under uniaxial stress) is graded from agent-bought runs. (4) Vacuum size is not a decision point: vacuum-referenced edges change by < 1 meV between c = 15 and 30 A; nor is crossover interpolation (1 % ladders agree with 0.5 % ladders to 0.01 %). Graded strains are compared as lattice parameters with the submitted a0 so that admissible a0 estimates do not double count.",
+ "calibration": {
+  "reference": {
+   "a0_A": 3.1864333499319195,
+   "direct_gap_strain_range_percent": [
+    -1.4363636822806718,
+    0.43203859488487223
+   ],
+   "edge_leaving_K_at_lower_end": {
+    "band": "conduction",
+    "k_crystal": [
+     0.171503,
+     0.171503
+    ]
+   },
+   "edge_leaving_K_at_upper_end": {
+    "band": "valence",
+    "k_crystal": [
+     0.0,
+     0.0
+    ]
+   },
+   "deformation_potentials_eV": {
+    "valence_K": -5.127664256229301,
+    "conduction_K": -16.34557756075805,
+    "gap_K": -11.217913304528746
+   },
+   "uniaxial_zigzag_compression": {
+    "transverse_strain_percent": 0.9273,
+    "gap_eV": 1.7315025616482833,
+    "vbm_k_crystal": [
+     0.323333,
+     0.333333
+    ],
+    "cbm_k_crystal": [
+     -0.344302,
+     0.172151
+    ]
+   }
+  },
+  "tolerances": {
+   "a0_A": 0.003,
+   "crossover_lattice_A": 0.0035,
+   "k_inverse_A": 0.1,
+   "deformation_potential_relative": {
+    "valence_K": 0.08,
+    "conduction_K": 0.08,
+    "gap_K": 0.06
+   },
+   "transverse_strain_percent": 0.1,
+   "gap_eV": 0.015
+  },
+  "errors_by_check": {
+   "a0_A": {
+    "robustness": {
+     "a0_energy_minimum_55Ry": 7e-05,
+     "a0_energy_minimum_70Ry": -0.00013,
+     "a0_stress_zero_70Ry": -0.0012,
+     "a0_energy_minimum_three_points_45Ry": 0.00018,
+     "stress_70Ry_a0_with_consistent_strains": -0.0012
+    },
+    "ablations": {
+     "analytic_stress_zero_35Ry": -0.03878,
+     "analytic_stress_zero_45Ry": -0.00494
+    }
+   },
+   "direct_gap_lower_end_lattice_A": {
+    "robustness": {
+     "a0_energy_minimum_55Ry": 7e-05,
+     "a0_energy_minimum_70Ry": -0.00013,
+     "a0_stress_zero_70Ry": -0.00118,
+     "a0_energy_minimum_three_points_45Ry": 0.00017,
+     "quadratic_interpolation_of_crossings": -3e-05,
+     "one_percent_soc_ladder": 0.00026,
+     "scalar_ladder_plus_soc_shifts_of_all_edges": 0.00092
+    },
+    "ablations": {
+     "scalar_relativistic_band_energies": -0.0053,
+     "spin_orbit_shift_of_K_valence_only": -0.0053,
+     "clamped_sulfur_height": -0.02583,
+     "analytic_stress_zero_35Ry": -0.03822,
+     "analytic_stress_zero_45Ry": -0.00486,
+     "experimental_lattice_as_strain_reference": 0.02627,
+     "band_edges_from_9x9_mesh_points": -0.04482
+    }
+   },
+   "direct_gap_upper_end_lattice_A": {
+    "robustness": {
+     "a0_energy_minimum_55Ry": 7e-05,
+     "a0_energy_minimum_70Ry": -0.00013,
+     "a0_stress_zero_70Ry": -0.0012,
+     "a0_energy_minimum_three_points_45Ry": 0.00018,
+     "quadratic_interpolation_of_crossings": -3e-05,
+     "one_percent_soc_ladder": 9e-05,
+     "scalar_ladder_plus_soc_shifts_of_all_edges": -0.00023
+    },
+    "ablations": {
+     "scalar_relativistic_band_energies": -0.01795,
+     "spin_orbit_shift_of_K_valence_only": 0.00091,
+     "clamped_sulfur_height": 0.00886,
+     "analytic_stress_zero_35Ry": -0.03895,
+     "analytic_stress_zero_45Ry": -0.00496,
+     "experimental_lattice_as_strain_reference": 0.02677
+    }
+   },
+   "dp_valence_K": {
+    "robustness": {
+     "deformation_potentials_half_percent": 0.00339,
+     "deformation_potentials_scalar_relativistic": 0.02607
+    },
+    "ablations": {
+     "clamped_sulfur_height": -0.38937,
+     "raw_eigenvalues_without_vacuum_alignment": 1.67808
+    }
+   },
+   "dp_conduction_K": {
+    "robustness": {
+     "deformation_potentials_half_percent": 0.00158,
+     "deformation_potentials_scalar_relativistic": 0.00231
+    },
+    "ablations": {
+     "clamped_sulfur_height": -0.22578,
+     "raw_eigenvalues_without_vacuum_alignment": 0.52642
+    }
+   },
+   "dp_gap_K": {
+    "robustness": {
+     "deformation_potentials_half_percent": 0.00076,
+     "deformation_potentials_scalar_relativistic": -0.00855
+    },
+    "ablations": {
+     "clamped_sulfur_height": -0.151
+    }
+   },
+   "uniaxial_transverse_strain_percent": {
+    "robustness": {
+     "uniaxial_quadratic_fit_of_corrected_stress": 0.00712,
+     "uniaxial_offset_corrected_stress": 0.0073
+    },
+    "ablations": {
+     "uniaxial_strain_instead_of_stress": -0.9273,
+     "uniaxial_zero_of_uncorrected_analytic_stress": -0.1909,
+     "uniaxial_clamped_ions": 0.35739
+    }
+   },
+   "uniaxial_gap_eV": {
+    "robustness": {
+     "uniaxial_coarse_sampling": 0.00028,
+     "uniaxial_grid_point_edges": 0.00016
+    },
+    "ablations": {
+     "uniaxial_strain_instead_of_stress": -0.01734,
+     "q_valleys_on_one_gamma_k_line": 0.02583,
+     "uniaxial_zero_of_uncorrected_analytic_stress": -0.00345,
+     "uniaxial_clamped_ions": -0.02002
+    }
+   }
+  },
+  "variation_outcomes": {
+   "a0_energy_minimum_55Ry": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "a0_energy_minimum_70Ry": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "a0_stress_zero_70Ry": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "a0_energy_minimum_three_points_45Ry": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "stress_70Ry_a0_with_consistent_strains": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "quadratic_interpolation_of_crossings": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "one_percent_soc_ladder": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "scalar_ladder_plus_soc_shifts_of_all_edges": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "deformation_potentials_half_percent": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "deformation_potentials_scalar_relativistic": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "uniaxial_quadratic_fit_of_corrected_stress": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "uniaxial_offset_corrected_stress": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "uniaxial_coarse_sampling": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "uniaxial_grid_point_edges": {
+    "kind": "robustness",
+    "passes": true,
+    "failing_checks": []
+   },
+   "scalar_relativistic_band_energies": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "direct_gap_lower_end",
+     "direct_gap_upper_end"
+    ]
+   },
+   "spin_orbit_shift_of_K_valence_only": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "direct_gap_lower_end"
+    ]
+   },
+   "clamped_sulfur_height": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "direct_gap_lower_end",
+     "direct_gap_upper_end",
+     "deformation_potential_valence_K",
+     "deformation_potential_conduction_K",
+     "deformation_potential_gap_K"
+    ]
+   },
+   "analytic_stress_zero_35Ry": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "a0_A",
+     "direct_gap_lower_end",
+     "direct_gap_upper_end"
+    ]
+   },
+   "analytic_stress_zero_45Ry": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "a0_A",
+     "direct_gap_lower_end",
+     "direct_gap_upper_end"
+    ]
+   },
+   "experimental_lattice_as_strain_reference": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "direct_gap_lower_end",
+     "direct_gap_upper_end"
+    ]
+   },
+   "raw_eigenvalues_without_vacuum_alignment": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "deformation_potential_valence_K",
+     "deformation_potential_conduction_K"
+    ]
+   },
+   "uniaxial_strain_instead_of_stress": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "uniaxial_transverse_strain",
+     "uniaxial_gap"
+    ]
+   },
+   "q_valleys_on_one_gamma_k_line": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "uniaxial_gap",
+     "uniaxial_cbm"
+    ]
+   },
+   "uniaxial_zero_of_uncorrected_analytic_stress": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "uniaxial_transverse_strain"
+    ]
+   },
+   "uniaxial_clamped_ions": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "uniaxial_transverse_strain",
+     "uniaxial_gap",
+     "uniaxial_cbm"
+    ]
+   },
+   "band_edges_from_9x9_mesh_points": {
+    "kind": "ablation",
+    "passes": false,
+    "failing_checks": [
+     "direct_gap_lower_end",
+     "edge_leaving_K_at_lower_end"
+    ]
+   }
+  }
+ }
+}

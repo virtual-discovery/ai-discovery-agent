@@ -1,0 +1,107 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 7,
+  "task_mb": 0.32,
+  "hidden_values": 43,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 58,
+   "budget": 60,
+   "evaluations": 58,
+   "failed_evaluations": 0,
+   "container_seconds": 6
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "spiral_001_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "flat_spiral_convention",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "four_shells",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "spiral_model_for_random_states",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "random_341_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "random_221_three_shells",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "random_wrong_lattice_constant",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "stiffness_without_2pi",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "stiffness_from_truncated_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "J1_from_random_states",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "ten_shell_spiral_model",
+    "passes_grading": true
+   },
+   {
+    "name": "eight_shell_random_model_all_cells",
+    "passes_grading": true
+   },
+   {
+    "name": "stiffness_three_smallest_q",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T03:25:27Z"
+}

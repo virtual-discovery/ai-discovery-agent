@@ -1,0 +1,218 @@
+{
+ "material": "Bi2Te3 with substitutional 3d/4d transition-metal dopants on Bi sites",
+ "source": "R. Mozumder, J. Wasmer, D. Antognini Silva, S. Bluegel, P. Ruessmann, High-throughput magnetic co-doping and design of exchange interactions in topological insulators, Materials Cloud Archive 2024 (doi:10.24435/materialscloud:b7-6k), arXiv:2407.04413; KKR impurity embedding (JuKKR/aiida-kkr), spin-orbit coupling included, exchange from infinitesimal rotations in impurity-dimer calculations",
+ "host_structure_cif": [
+  "data_0",
+  "loop_",
+  "  _atom_site_label",
+  "  _atom_site_fract_x",
+  "  _atom_site_fract_y",
+  "  _atom_site_fract_z",
+  "  _atom_site_type_symbol",
+  "         Te1       0.0       0.0       0.0       Te        ",
+  "         Te2       0.2120000000000264  0.2120000000000264  0.21199999999997843           Te       ",
+  "         Te3       0.7880000000000326  0.7880000000000329  0.7880000000000016  Te       ",
+  "         Bi1       0.4000000000000119  0.4000000000000119  0.39999999999999597           Bi       ",
+  "         Bi2       0.6000000000000343  0.6000000000000342  0.6000000000000104  Bi",
+  "_cell_angle_alpha                       24.157680577616187",
+  "_cell_angle_beta                        24.157680577616187",
+  "_cell_angle_gamma                       24.157680577615878",
+  "_cell_length_a                          10.472657559692419",
+  "_cell_length_b                          10.472657559692419",
+  "_cell_length_c                          10.472657559692438",
+  "loop_",
+  "  _symmetry_equiv_pos_as_xyz",
+  "         'x, y, z' ",
+  "_symmetry_int_tables_number             1",
+  "_symmetry_space_group_name_H-M          'P 1'"
+ ],
+ "host_hexagonal_A": {
+  "a": 4.382963164015663,
+  "c": 30.48701213585697,
+  "note": "Bi1 at z = 0.4 and Bi2 at z = 0.6 of the rhombohedral cell; the two Bi layers of a quintuple layer are related by inversion"
+ },
+ "dopants": {
+  "Sc": 21,
+  "Ti": 22,
+  "V": 23,
+  "Cr": 24,
+  "Mn": 25,
+  "Fe": 26,
+  "Co": 27,
+  "Ni": 28,
+  "Cu": 29,
+  "Zn": 30,
+  "Y": 39,
+  "Zr": 40,
+  "Nb": 41,
+  "Mo": 42,
+  "Tc": 43,
+  "Ru": 44,
+  "Rh": 45,
+  "Pd": 46,
+  "Ag": 47,
+  "Cd": 48
+ },
+ "archive": {
+  "file": "Jij_table.csv (2077 rows)",
+  "columns": {
+   "i_shell": "index of the impurity-dimer configuration (neighbour shell), 0-16",
+   "R": "impurity-impurity distance (Angstrom)",
+   "Rx, Ry, Rz": "one connecting vector of the shell (Angstrom), as extracted by the authors",
+   "ilayer2": "Bi layer of impurity 2 (impurity 1 always substitutes Bi1): 3 = Bi1 sublattice, 4 = Bi2 sublattice",
+   "Zimp1, Zimp2": "atomic numbers of impurity 1 and impurity 2 (Zimp1 <= Zimp2)",
+   "num_neighbors": "number of equivalent Bi sites in this shell",
+   "m1, m2": "spin moments (muB) of impurity 1 and impurity 2 read from the dimer calculation",
+   "m01, m02": "spin moments (muB) of impurity 1 and impurity 2 as isolated single impurities",
+   "J": "isotropic exchange constant J_ij (meV) of the dimer",
+   "J_data_uuid": "AiiDA uuid of the JijData node (provenance)"
+  },
+  "authors_hamiltonian": "H = -(1/2) sum_{i,j} J_ij S_i . S_j with S_i = m_i/|m_i| the unit vector along the moment of impurity i (paper Eq. 2)",
+  "authors_note": "single impurities with spin moment below 1e-3 muB are treated as non-magnetic (paper, Sec. III D)"
+ },
+ "purchases": {
+  "pair": {
+   "request": {
+    "kind": "pair",
+    "species": [
+     "Cr",
+     "V"
+    ],
+    "shells": "0-6"
+   },
+   "shell_windows": {
+    "0-6": "shells 0-6 (R = 4.38-7.83 A)",
+    "7-16": "shells 7-16 (R = 8.77-12.17 A)"
+   },
+   "cost": 1,
+   "returns": "every archived row of that dopant pair (either order) within the window, verbatim; calculations that are not in the archive are simply absent"
+  },
+  "monte_carlo": {
+   "request": {
+    "kind": "monte_carlo",
+    "spins": {
+     "V": 0.05,
+     "Cr": 0.05
+    },
+    "exchange_meV": {
+     "V-V": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "V-Cr": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "Cr-Cr": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "size": 4,
+    "samples": 16,
+    "temperatures_K": [
+     30,
+     20,
+     15,
+     10
+    ],
+    "seed": 0
+   },
+   "model": "classical unit-vector spins on randomly chosen Bi sites (both Bi layers), H = -sum_{i<j} J_ij e_i.e_j with exchange_meV[pair][k] applied to every pair of spins at the distance of archive shell k (k = 0-16) and nothing beyond; keys are species pairs ordered by atomic number",
+   "spins": "concentration of each spin-carrying species as a fraction of all Bi sites (one or two species, 0.005-0.11 each, at most 0.11 in total); non-magnetic dopants need not be listed",
+   "supercell": "periodic orthorhombic cell of (7 size) x (4 size) x (size) units of (a, sqrt(3) a, c), 336 size^3 Bi sites; each species gets round(concentration x sites) spins",
+   "samples": "independent random dopant placements; seed selects a different set of placements",
+   "sweeps": "per temperature 1000 equilibration + 3000 measurement sweeps (heat bath + 2 over-relaxation); temperatures are run from high to low, each continuing from the previous configuration",
+   "cost_per_16_samples_by_size": {
+    "2": 1,
+    "3": 1,
+    "4": 2,
+    "5": 4,
+    "6": 8
+   },
+   "max_samples_by_size": {
+    "2": 32,
+    "3": 32,
+    "4": 32,
+    "5": 32,
+    "6": 16
+   },
+   "max_temperatures": 8,
+   "note": "runs take up to a few minutes; poll the job"
+  }
+ },
+ "budget": 60,
+ "compositions": {
+  "V5Cr5": {
+   "V": 0.05,
+   "Cr": 0.05
+  },
+  "Cr5Mo5": {
+   "Cr": 0.05,
+   "Mo": 0.05
+  },
+  "Cr5Mn5": {
+   "Cr": 0.05,
+   "Mn": 0.05
+  },
+  "V2Cr2": {
+   "V": 0.02,
+   "Cr": 0.02
+  },
+  "Cr5Co5": {
+   "Cr": 0.05,
+   "Co": 0.05
+  }
+ },
+ "codopant_candidates_with_Cr": [
+  "V",
+  "Nb",
+  "Mo",
+  "Mn"
+ ]
+}

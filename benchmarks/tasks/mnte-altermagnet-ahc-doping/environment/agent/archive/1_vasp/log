@@ -1,0 +1,212 @@
+ running on   64 total cores
+ distrk:  each k-point on   64 cores,    1 groups
+ distr:  one band on    1 cores,   64 groups
+ using from now: INCAR     
+ vasp.5.4.4.18Apr17-6-g9f103f2a35 (build Jul 05 2021 00:57:26) complex          
+  
+ POSCAR found type information on POSCAR  Mn Te
+ POSCAR found :  2 types and       4 ions
+ scaLAPACK will be used
+
+ ----------------------------------------------------------------------------- 
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|      For optimal performance we recommend to set                            |
+|        NCORE= 4 - approx SQRT( number of cores)                             |
+|      NCORE specifies how many cores store one orbital (NPAR=cpu/NCORE).     |
+|      This setting can  greatly improve the performance of VASP for DFT.     |
+|      The default,   NCORE=1            might be grossly inefficient         |
+|      on modern multi-core architectures or massively parallel machines.     |
+|      Do your own testing !!!!                                               |
+|      Unfortunately you need to use the default for GW and RPA calculations. |
+|      (for HF NCORE is supported but not extensively tested yet)             |
+|                                                                             |
+ ----------------------------------------------------------------------------- 
+
+ LDA part: xc-table for Pade appr. of Perdew
+ found WAVECAR, reading the header
+  number of k-points has changed, file:   100 present:   288
+  trying to continue reading WAVECAR, but it might fail
+ WARNING: stress and forces are not correct
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ reading WAVECAR
+ the WAVECAR file was read successfully
+ reading imaginary part of occupancies ...
+ charge-density read from file: MnTe                                    
+ reading imaginary part of occupancies ...
+ magnetization density read from file 1
+ reading imaginary part of occupancies ...
+ magnetization density read from file 2
+ reading imaginary part of occupancies ...
+ magnetization density read from file 3
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          ort
+ gam= 0.000 g(H,U,f)=  0.418E+03 0.148E+03 0.752E-39 ort(H,U,f) = 0.000E+00 0.000E+00 0.000E+00
+SDA:   1     0.248083695595E+03    0.24808E+03   -0.28274E+03 18432   0.565E+03 0.000E+00
+ gam= 0.333 g(H,U,f)=  0.325E+03 0.707E+02 0.139E-01 ort(H,U,f) =-0.129E+03 0.796E+02 0.564E-03
+DMP:   2     0.112442381121E+03   -0.13564E+03   -0.18959E+03 18432   0.396E+03-0.491E+02
+ gam= 0.333 g(H,U,f)=  0.223E+03 0.301E+02 0.758E+01 ort(H,U,f) =-0.130E+03 0.552E+02 0.182E+02
+DMP:   3     0.377064175485E+02   -0.74736E+02   -0.12098E+03 18432   0.261E+03-0.565E+02
+ gam= 0.333 g(H,U,f)=  0.101E+03 0.121E+02 0.147E+01 ort(H,U,f) =-0.795E+02 0.257E+02 0.598E+00
+DMP:   4    -0.274822499229E+01   -0.40455E+02   -0.48445E+02 18432   0.115E+03-0.532E+02
+ gam= 0.333 g(H,U,f)=  0.388E+02 0.477E+01 0.402E+00 ort(H,U,f) =-0.329E+02 0.112E+02 0.132E+00
+DMP:   5    -0.207446373741E+02   -0.17996E+02   -0.18421E+02 18432   0.440E+02-0.215E+02
+ gam= 0.333 g(H,U,f)=  0.112E+02 0.215E+01 0.156E+01 ort(H,U,f) =-0.972E+01 0.543E+01 0.223E+01
+DMP:   6    -0.297352613317E+02   -0.89906E+01   -0.71055E+01 18432   0.149E+02-0.206E+01
+ gam= 0.333 g(H,U,f)=  0.247E+01 0.112E+01 0.125E+01 ort(H,U,f) =-0.182E+01 0.300E+01 0.227E+01
+DMP:   7    -0.340880698542E+02   -0.43528E+01   -0.30005E+01 18432   0.485E+01 0.345E+01
+ gam= 0.333 g(H,U,f)=  0.695E+00 0.536E+00 0.196E-03 ort(H,U,f) =-0.280E+00 0.154E+01 0.615E-03
+DMP:   8    -0.359308257439E+02   -0.18428E+01   -0.82548E+00 18432   0.123E+01 0.126E+01
+ gam= 0.333 g(H,U,f)=  0.254E+00 0.246E+00 0.563E-32 ort(H,U,f) =-0.118E+00 0.752E+00 0.157E-31
+DMP:   9    -0.366239622084E+02   -0.69314E+00   -0.35564E+00 18432   0.500E+00 0.633E+00
+ gam= 0.333 g(H,U,f)=  0.731E-01 0.107E+00 0.238E-27 ort(H,U,f) =-0.281E-01 0.342E+00 0.690E-27
+DMP:  10    -0.368826466405E+02   -0.25868E+00   -0.14218E+00 18432   0.180E+00 0.314E+00
+ gam= 0.333 g(H,U,f)=  0.249E-01 0.442E-01 0.971E-67 ort(H,U,f) =-0.501E-02 0.148E+00 0.315E-66
+DMP:  11    -0.369901200691E+02   -0.10747E+00   -0.58347E-01 18432   0.691E-01 0.143E+00
+ gam= 0.333 g(H,U,f)=  0.764E-02 0.177E-01 0.127-183 ort(H,U,f) =-0.129E-02 0.607E-01 0.449-183
+DMP:  12    -0.370343716277E+02   -0.44252E-01   -0.22567E-01 18432   0.253E-01 0.594E-01
+ gam= 0.333 g(H,U,f)=  0.259E-02 0.687E-02 0.103E-48 ort(H,U,f) =-0.756E-04 0.240E-01 0.382E-48
+DMP:  13    -0.370516981225E+02   -0.17326E-01   -0.87157E-02 18432   0.946E-02 0.239E-01
+ gam= 0.333 g(H,U,f)=  0.829E-03 0.263E-02 0.198E-51 ort(H,U,f) = 0.472E-04 0.923E-02 0.768E-51
+DMP:  14    -0.370583915784E+02   -0.66935E-02   -0.32749E-02 18432   0.346E-02 0.927E-02
+ gam= 0.333 g(H,U,f)=  0.283E-03 0.101E-02 0.878E-16 ort(H,U,f) = 0.602E-04 0.351E-02 0.360E-15
+DMP:  15    -0.370609253348E+02   -0.25338E-02   -0.12405E-02 18432   0.129E-02 0.357E-02
+ gam= 0.333 g(H,U,f)=  0.932E-04 0.394E-03 0.776-182 ort(H,U,f) = 0.326E-04 0.134E-02 0.334-181
+DMP:  16    -0.370618899513E+02   -0.96462E-03   -0.47279E-03 18432   0.488E-03 0.137E-02
+ gam= 0.333 g(H,U,f)=  0.339E-04 0.160E-03 0.516E-82 ort(H,U,f) = 0.151E-04 0.524E-03 0.232E-81
+DMP:  17    -0.370622613543E+02   -0.37140E-03   -0.18674E-03 18432   0.194E-03 0.539E-03
+ gam= 0.333 g(H,U,f)=  0.122E-04 0.679E-04 0.897E-54 ort(H,U,f) = 0.826E-05 0.213E-03 0.419E-53
+DMP:  18    -0.370624099725E+02   -0.14862E-03   -0.76879E-04 18432   0.801E-04 0.221E-03
+ gam= 0.333 g(H,U,f)=  0.472E-05 0.306E-04 0.186E-33 ort(H,U,f) = 0.433E-05 0.906E-04 0.910E-33
+DMP:  19    -0.370624721514E+02   -0.62179E-04   -0.33463E-04 18432   0.353E-04 0.949E-04
+ gam= 0.333 g(H,U,f)=  0.197E-05 0.147E-04 0.941E-68 ort(H,U,f) = 0.242E-05 0.410E-04 0.484E-67
+DMP:  20    -0.370624997269E+02   -0.27575E-04   -0.15547E-04 18432   0.166E-04 0.434E-04
+ gam= 0.333 g(H,U,f)=  0.913E-06 0.753E-05 0.382E-48 ort(H,U,f) = 0.140E-05 0.198E-04 0.222E-47
+DMP:  21    -0.370625127876E+02   -0.13061E-04   -0.77459E-05 18432   0.844E-05 0.212E-04
+ gam= 0.333 g(H,U,f)=  0.482E-06 0.414E-05 0.742E-34 ort(H,U,f) = 0.838E-06 0.102E-04 0.505E-33
+DMP:  22    -0.370625194212E+02   -0.66336E-05   -0.41509E-05 18432   0.462E-05 0.110E-04
+ gam= 0.333 g(H,U,f)=  0.299E-06 0.243E-05 0.140E-23 ort(H,U,f) = 0.524E-06 0.565E-05 0.855E-23
+DMP:  23    -0.370625230393E+02   -0.36181E-05   -0.23910E-05 18432   0.273E-05 0.617E-05
+ gam= 0.333 g(H,U,f)=  0.221E-06 0.150E-05 0.284E-16 ort(H,U,f) = 0.336E-06 0.333E-05 0.725E-16
+DMP:  24    -0.370625251518E+02   -0.21125E-05   -0.14734E-05 18432   0.172E-05 0.367E-05
+ gam= 0.333 g(H,U,f)=  0.207E-06 0.976E-06 0.460-205 ort(H,U,f) = 0.206E-06 0.208E-05 0.901-205
+DMP:  25    -0.370625264586E+02   -0.13068E-05   -0.97169E-06 18432   0.118E-05 0.228E-05
+ gam= 0.333 g(H,U,f)=  0.234E-06 0.656E-06 0.196-176 ort(H,U,f) = 0.105E-06 0.135E-05 0.480-176
+DMP:  26    -0.370625273090E+02   -0.85041E-06   -0.68798E-06 18432   0.890E-06 0.146E-05
+ gam= 0.333 g(H,U,f)=  0.323E-06 0.452E-06 0.507-151 ort(H,U,f) =-0.483E-08 0.912E-06 0.138-150
+DMP:  27    -0.370625278799E+02   -0.57088E-06   -0.53885E-06 18432   0.775E-06 0.908E-06
+ gam= 0.333 g(H,U,f)=  0.446E-06 0.318E-06 0.199-128 ort(H,U,f) =-0.123E-06 0.631E-06 0.559-128
+DMP:  28    -0.370625282761E+02   -0.39623E-06   -0.46628E-06 18432   0.763E-06 0.507E-06
+ gam= 0.333 g(H,U,f)=  0.618E-06 0.226E-06 0.254-108 ort(H,U,f) =-0.272E-06 0.444E-06 0.698-108
+DMP:  29    -0.370625285521E+02   -0.27597E-06   -0.45080E-06 18432   0.844E-06 0.171E-06
+ gam= 0.333 g(H,U,f)=  0.808E-06 0.162E-06 0.172E-90 ort(H,U,f) =-0.424E-06 0.316E-06 0.457E-90
+DMP:  30    -0.370625287505E+02   -0.19841E-06   -0.46702E-06 18432   0.970E-06-0.108E-06
+ gam= 0.333 g(H,U,f)=  0.107E-05 0.117E-06 0.102E-74 ort(H,U,f) =-0.612E-06 0.227E-06 0.240E-74
+DMP:  31    -0.370625288878E+02   -0.13727E-06   -0.52918E-06 18432   0.119E-05-0.385E-06
+ gam= 0.333 g(H,U,f)=  0.150E-05 0.853E-07 0.645E-61 ort(H,U,f) =-0.900E-06 0.164E-06 0.132E-60
+DMP:  32    -0.370625289684E+02   -0.80681E-07   -0.66833E-06 18432   0.158E-05-0.735E-06
+ gam= 0.333 g(H,U,f)=  0.198E-05 0.622E-07 0.614E-49 ort(H,U,f) =-0.126E-05 0.120E-06 0.111E-48
+DMP:  33    -0.370625290164E+02   -0.47983E-07   -0.83172E-06 18432   0.204E-05-0.114E-05
+ gam= 0.333 g(H,U,f)=  0.250E-05 0.455E-07 0.953E-39 ort(H,U,f) =-0.170E-05 0.872E-07 0.161E-38
+DMP:  34    -0.370625290297E+02   -0.13228E-07   -0.10058E-05 18432   0.255E-05-0.161E-05
+ gam= 0.333 g(H,U,f)=  0.272E-05 0.334E-07 0.228E-30 ort(H,U,f) =-0.193E-05 0.638E-07 0.391E-30
+DMP:  35    -0.370625290669E+02   -0.37288E-07   -0.10686E-05 18432   0.276E-05-0.186E-05
+ gam= 0.333 g(H,U,f)=  0.294E-05 0.245E-07 0.318E-69 ort(H,U,f) =-0.212E-05 0.467E-07 0.486E-69
+DMP:  36    -0.370625290821E+02   -0.15162E-07   -0.11353E-05 18432   0.296E-05-0.208E-05
+ gam= 0.333 g(H,U,f)=  0.301E-05 0.180E-07 0.425E-57 ort(H,U,f) =-0.218E-05 0.343E-07 0.692E-57
+DMP:  37    -0.370625291132E+02   -0.31063E-07   -0.11565E-05 18432   0.303E-05-0.215E-05
+ gam= 0.333 g(H,U,f)=  0.303E-05 0.133E-07 0.122E-46 ort(H,U,f) =-0.228E-05 0.252E-07 0.203E-46
+DMP:  38    -0.370625291278E+02   -0.14586E-07   -0.11484E-05 18432   0.305E-05-0.225E-05
+ gam= 0.333 g(H,U,f)=  0.261E-05 0.980E-08 0.934E-38 ort(H,U,f) =-0.208E-05 0.186E-07 0.153E-37
+DMP:  39    -0.370625291874E+02   -0.59662E-07   -0.96443E-06 18432   0.261E-05-0.206E-05
+ gam= 0.333 g(H,U,f)=  0.206E-05 0.721E-08 0.186E-30 ort(H,U,f) =-0.165E-05 0.137E-07 0.334E-30
+DMP:  40    -0.370625292612E+02   -0.73827E-07   -0.76058E-06 18432   0.207E-05-0.163E-05
+ gam= 0.333 g(H,U,f)=  0.193E-05 0.536E-08 0.182E-24 ort(H,U,f) =-0.139E-05 0.101E-07 0.297E-24
+DMP:  41    -0.370625292955E+02   -0.34288E-07   -0.73715E-06 18432   0.194E-05-0.138E-05
+ gam= 0.333 g(H,U,f)=  0.214E-05 0.395E-08 0.640E-21 ort(H,U,f) =-0.152E-05 0.748E-08 0.134E-20
+DMP:  42    -0.370625292871E+02    0.84847E-08   -0.82139E-06 18432   0.215E-05-0.151E-05
+ gam= 0.333 g(H,U,f)=  0.207E-05 0.293E-08 0.313-220 ort(H,U,f) =-0.164E-05 0.553E-08 0.525-220
+DMP:  43    -0.370625292898E+02   -0.27640E-08   -0.76520E-06 18432   0.207E-05-0.163E-05
+ gam= 0.333 g(H,U,f)=  0.147E-05 0.219E-08 0.876-201 ort(H,U,f) =-0.125E-05 0.411E-08 0.167-200
+DMP:  44    -0.370625293602E+02   -0.70358E-07   -0.52608E-06 18432   0.147E-05-0.125E-05
+ gam= 0.333 g(H,U,f)=  0.106E-05 0.158E-08 0.696-183 ort(H,U,f) =-0.837E-06 0.302E-08 0.125-182
+DMP:  45    -0.370625294146E+02   -0.54410E-07   -0.39048E-06 18432   0.106E-05-0.834E-06
+ gam= 0.333 g(H,U,f)=  0.111E-05 0.122E-08 0.148-166 ort(H,U,f) =-0.785E-06 0.227E-08 0.270-166
+DMP:  46    -0.370625294142E+02    0.40018E-09   -0.42518E-06 18432   0.111E-05-0.782E-06
+ gam= 0.333 g(H,U,f)=  0.110E-05 0.861E-09 0.113-151 ort(H,U,f) =-0.825E-06 0.165E-08 0.215-151
+DMP:  47    -0.370625294210E+02   -0.68167E-08   -0.41133E-06 18432   0.110E-05-0.823E-06
+ gam= 0.333 g(H,U,f)=  0.947E-06 0.675E-09 0.480-138 ort(H,U,f) =-0.777E-06 0.124E-08 0.865-138
+DMP:  48    -0.370625294328E+02   -0.11792E-07   -0.34456E-06 18432   0.948E-06-0.775E-06
+ gam= 0.333 g(H,U,f)=  0.589E-06 0.478E-09 0.107-125 ort(H,U,f) =-0.522E-06 0.914E-09 0.205-125
+DMP:  49    -0.370625294747E+02   -0.41947E-07   -0.20763E-06 18432   0.589E-06-0.521E-06
+ gam= 0.333 g(H,U,f)=  0.341E-06 0.364E-09 0.206-114 ort(H,U,f) =-0.312E-06 0.683E-09 0.381-114
+DMP:  50    -0.370625295007E+02   -0.25981E-07   -0.11856E-06 18432   0.341E-06-0.311E-06
+ gam= 0.333 g(H,U,f)=  0.155E-06 0.268E-09 0.356-104 ort(H,U,f) =-0.146E-06 0.508E-09 0.672-104
+DMP:  51    -0.370625295237E+02   -0.22993E-07   -0.53400E-07 18432   0.155E-06-0.145E-06
+ gam= 0.333 g(H,U,f)=  0.745E-07 0.199E-09 0.761E-95 ort(H,U,f) =-0.674E-07 0.377E-09 0.140E-94
+DMP:  52    -0.370625295336E+02   -0.99290E-08   -0.26200E-07 18432   0.747E-07-0.670E-07
+ gam= 0.333 g(H,U,f)=  0.350E-07 0.149E-09 0.196E-86 ort(H,U,f) =-0.260E-07 0.281E-09 0.384E-86
+DMP:  53    -0.370625295403E+02   -0.66493E-08   -0.13308E-07 18432   0.352E-07-0.257E-07
+ gam= 0.333 g(H,U,f)=  0.314E-07 0.111E-09 0.111E-78 ort(H,U,f) =-0.193E-07 0.209E-09 0.192E-78
+DMP:  54    -0.370625295422E+02   -0.18672E-08   -0.12584E-07 18432   0.315E-07-0.191E-07
+ gam= 0.333 g(H,U,f)=  0.264E-07 0.825E-10 0.743E-72 ort(H,U,f) =-0.163E-07 0.156E-09 0.154E-71
+DMP:  55    -0.370625295444E+02   -0.22346E-08   -0.10522E-07 18432   0.264E-07-0.162E-07
+ gam= 0.333 g(H,U,f)=  0.241E-07 0.616E-10 0.176E-65 ort(H,U,f) =-0.163E-07 0.116E-09 0.297E-65
+DMP:  56    -0.370625295456E+02   -0.12142E-08   -0.93701E-08 18432   0.241E-07-0.162E-07
+ final diagonalization
+ Projection   1 done.
+ Projection   2 done.
+ Projection   3 done.
+ Projection   4 done.
+ Projection   5 done.
+ Projection   6 done.
+ Projection   7 done.
+ Projection   8 done.
+ Projection   9 done.
+ Projection  10 done.
+ Projection  11 done.
+ Projection  12 done.
+ Projection  13 done.
+ Projection  14 done.
+ Projection  15 done.
+ Projection  16 done.
+ Projection  17 done.
+ Projection  18 done.
+ Projection  19 done.
+ Projection  20 done.
+ Projection  21 done.
+ Projection  22 done.
+ Projection  23 done.
+ Projection  24 done.
+ Projection  25 done.
+ Projection  26 done.
+ Projection  27 done.
+ Projection  28 done.
+ Projection  29 done.
+ Projection  30 done.
+ Projection  31 done.
+ Projection  32 done.
+MLWF_WANNIER90: WARNING: wannier90.win seems to contains
+the SPINORS tag, I hope it applies to the current setup ...
+
+MLWF_WANNIER90: WARNING: wannier90.win seems to contains
+a UNIT_CELL_CART block already, I hope it applies to the current setup ...
+
+MLWF_WANNIER90: WARNING: wannier90.win seems to contains
+a ATOMS_CART block already, I hope it applies to the current setup ...
+
+MLWF_WANNIER90: WARNING: wannier90.win seems to contains
+the MP_GRID tag already, I hope it applies to the current setup ...
+
+MLWF_WANNIER90: WARNING: wannier90.win seems to contains
+a KPOINTS block already, I hope it applies to the current setup ...
+
+   1 F= -.37062530E+02 E0= -.37062530E+02  d E =-.243766E-50  mag=    -0.0000     0.0000     0.0006
+ writing wavefunctions

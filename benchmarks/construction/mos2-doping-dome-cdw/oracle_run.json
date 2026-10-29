@@ -1,0 +1,40 @@
+{
+ "evaluations": 20,
+ "charge_used": 29,
+ "budget": 34,
+ "requests": [
+  "moments_table",
+  "eliashberg",
+  "eliashberg",
+  "eliashberg",
+  "spectrum",
+  "spectrum",
+  "eliashberg_custom",
+  "pes",
+  "pes",
+  "pes",
+  "pes",
+  "soft_mode",
+  "soft_mode",
+  "mo_displacement",
+  "eliashberg",
+  "eliashberg",
+  "archived_tc_table",
+  "eliashberg",
+  "eliashberg",
+  "eliashberg"
+ ],
+ "errors": {
+  "tc_1x1_rel": {
+   "0.15": -0.01091813354736082,
+   "0.17": -9.651727529946807e-05
+  },
+  "critical_doping_abs": 0.0,
+  "tc_soc_rel": 1.2534811037356874e-05,
+  "tc_cdw_rel": {
+   "0.35": 0.0,
+   "0.40": 0.0
+  }
+ },
+ "container_seconds": 27
+}

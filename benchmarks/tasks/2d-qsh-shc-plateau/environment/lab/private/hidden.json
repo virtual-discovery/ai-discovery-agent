@@ -1,0 +1,139 @@
+{
+ "targets": {
+  "z2": {
+   "Bi2_P-3m1": 1,
+   "Hf2Br2_P-3m1": 1,
+   "CuLi2As_P-6m2": 1,
+   "Ti2I2N2_Pmm2": 1,
+   "Li2Tl2_P3m1": 1,
+   "Bi2In2_P4_nmm": 0,
+   "Hg4O2_P1": 1,
+   "KSnAs_P3m1": 0
+  },
+  "plateau_sigma_z": {
+   "Bi2_P-3m1": 0.5685154498631076,
+   "Hf2Br2_P-3m1": -0.9768300885266519,
+   "CuLi2As_P-6m2": 1.0000316353864585,
+   "Ti2I2N2_Pmm2": -0.8519960203514431,
+   "Li2Tl2_P3m1": 2.785692787997078,
+   "Bi2In2_P4_nmm": 0.823335900010211,
+   "Hg4O2_P1": -0.7579497981512255,
+   "KSnAs_P3m1": -0.0012833874118362552
+  },
+  "spin_direction": {
+   "Bi2_P-3m1": {
+    "theta_deg": 31.77581146619596,
+    "phi_deg": 89.75548939762457
+   },
+   "Hg4O2_P1": {
+    "theta_deg": 150.2447733308322,
+    "phi_deg": -5.787013416514816
+   }
+  }
+ },
+ "thresholds": {
+  "plateau_rel": 0.03,
+  "plateau_abs_floor": 0.02,
+  "theta_deg": 2.5,
+  "phi_deg": 5.0
+ },
+ "reference_definition": "archived Wannier models, wannier_centres position convention, eta = 1e-4 eV, 180 x 180 mesh + 8 x 8 refinement of points with |Omega| > 10 A^2, mu at the mid-gap of the 300 x 300 band edges; Z2 from 201 x 300 Wilson loops",
+ "facts": {
+  "Bi2_P-3m1": {
+   "nocc": 10,
+   "wannier_vbm": -3.8509643235231126,
+   "wannier_cbm": -3.275065631030609,
+   "wannier_gap": 0.5758986924925034,
+   "scf_fermi": -3.4963,
+   "win_vbm": -3.851779717032966,
+   "win_cbm": -3.2740015906676274,
+   "scf_fermi_in_valence_band": false,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  },
+  "Hf2Br2_P-3m1": {
+   "nocc": 22,
+   "wannier_vbm": -3.086093930139127,
+   "wannier_cbm": -3.0365315966809834,
+   "wannier_gap": 0.04956233345814365,
+   "scf_fermi": -3.0995,
+   "win_vbm": -3.0860950110245082,
+   "win_cbm": -3.0365236672406186,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  },
+  "CuLi2As_P-6m2": {
+   "nocc": 18,
+   "wannier_vbm": -1.718383076530877,
+   "wannier_cbm": -1.6728442430596087,
+   "wannier_gap": 0.0455388334712683,
+   "scf_fermi": -1.7368,
+   "win_vbm": -1.7183913026527395,
+   "win_cbm": -1.6685837432048374,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  },
+  "Ti2I2N2_Pmm2": {
+   "nocc": 32,
+   "wannier_vbm": -5.296621157687534,
+   "wannier_cbm": -5.274518995983172,
+   "wannier_gap": 0.02210216170436219,
+   "scf_fermi": -5.3596,
+   "win_vbm": -5.298856398550803,
+   "win_cbm": -5.272755566678481,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  },
+  "Li2Tl2_P3m1": {
+   "nocc": 8,
+   "wannier_vbm": -2.3980831799842433,
+   "wannier_cbm": -2.3667103172074047,
+   "wannier_gap": 0.031372862776838595,
+   "scf_fermi": -2.4602,
+   "win_vbm": -2.4001304931286636,
+   "win_cbm": -2.365876705350646,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  },
+  "Bi2In2_P4_nmm": {
+   "nocc": 16,
+   "wannier_vbm": -3.8721110144497315,
+   "wannier_cbm": -3.8349912595040254,
+   "wannier_gap": 0.037119754945706074,
+   "scf_fermi": -3.9092,
+   "win_vbm": -3.9592383338983286,
+   "win_cbm": -3.8336449576725635,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": true,
+   "win_fermi_energy_is_vbm": true
+  },
+  "Hg4O2_P1": {
+   "nocc": 60,
+   "wannier_vbm": -3.5130751987584903,
+   "wannier_cbm": -3.4537456370350736,
+   "wannier_gap": 0.059329561723416635,
+   "scf_fermi": -3.5676,
+   "win_vbm": -3.5248446432143337,
+   "win_cbm": -3.4356131347837615,
+   "scf_fermi_in_valence_band": true,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": false
+  },
+  "KSnAs_P3m1": {
+   "nocc": 10,
+   "wannier_vbm": -3.9526596465287405,
+   "wannier_cbm": -3.3372411806874904,
+   "wannier_gap": 0.61541846584125,
+   "scf_fermi": -3.5286,
+   "win_vbm": -3.9542654073614587,
+   "win_cbm": -3.3351449965321525,
+   "scf_fermi_in_valence_band": false,
+   "win_mid_gap_in_valence_band": false,
+   "win_fermi_energy_is_vbm": true
+  }
+ }
+}

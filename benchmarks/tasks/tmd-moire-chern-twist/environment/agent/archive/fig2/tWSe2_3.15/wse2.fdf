@@ -1,0 +1,88 @@
+SystemName      wse2
+SystemLabel     wse2
+NumberOfSpecies	        2
+NumberOfAtoms           1986
+%block ChemicalSpeciesLabel
+  1  34 Se
+  2  74 W 
+%endblock ChemicalSpeciesLabel
+
+LatticeConstant      59.6743698120    Ang
+%block LatticeVectors
+  1.0 0.0 0.0 
+  0.5   0.8660254037844386 0.0
+0.0 0.0  0.4189403269571305
+%endblock LatticeVectors
+
+#SPIN spin-orbit 
+PAO.BasisSize   DZP
+Mesh.Cutoff   100.0 Ry
+SCF.FreeE.Tolerance 1e-5 eV
+XC.functional          GGA
+XC.authors             PBE
+MaxSCFIterations   200
+SCF.MustConverge   .true.
+
+
+
+NumberOfEigenStates  15226 
+Diag.Algorithm   MRRR
+SCF.Mixer.History 7
+
+
+
+SaveRho .true.
+SaveElectrostaticPotential .true.
+SaveTotalPotential .true.
+
+DM.UseSaveDM .true.
+
+
+ForceAuxCell .true.
+SaveHS    .true.  
+COOP.Write   .true.
+
+
+
+WFS.Write.For.Bands .true.
+WFS.Band.Min  15026
+WFS.Band.Max  15226
+
+
+WriteDenchar   .true.
+
+
+#MD.TypeOfRun       CG  
+#MD.VariableCell    .false.
+#MD.NumCGsteps      1000
+#MD.MaxForceTol     0.01 eV/Ang
+#MD.MaxStressTol    1e-3 GPa
+
+
+AtomicCoordinatesFormat          ScaledByLatticeVectors
+%include pos_wse2.fdf
+
+%block kgrid_Monkhorst_Pack
+   1  0  0  0.0
+   0  1  0  0.0
+   0  0  1  0.0
+%endblock kgrid_Monkhorst_Pack
+
+
+
+%block Geometry.Constraints
+cell-angle gamma
+stress 3 4 5 6 
+%endblock Geometry.Constraints
+
+
+
+#WriteDenchar   .true.
+
+#BandLinesScale       ReciprocalLatticeVectors
+#%block BandLines
+#1   0.0   0.0   0.0   \Gamma             # Begin at K
+#51  0.5   0.0   0.0   M        # 38 points from K to Gamma
+#101  0.3333333333        0.3333333333    0.0000000000    K # 36 points from Gamma to X
+#151  0.0   0.0   0.0   \Gamma             # 18 points from X to W
+#%endblock BandLines

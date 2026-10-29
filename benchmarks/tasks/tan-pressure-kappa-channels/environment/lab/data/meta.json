@@ -1,0 +1,83 @@
+{
+ "pressures_GPa": [
+  0,
+  20,
+  40,
+  60,
+  80,
+  100
+ ],
+ "meshes": [
+  8,
+  10,
+  12,
+  14,
+  16,
+  18,
+  20
+ ],
+ "archived_files": {
+  "0": [
+   "POSCAR",
+   "CONTROL",
+   "BTE.sr_phel_metal",
+   "README.md"
+  ],
+  "20": [
+   "POSCAR",
+   "CONTROL",
+   "BTE.sr_phel_metal",
+   "README.md"
+  ],
+  "40": [
+   "POSCAR",
+   "CONTROL",
+   "BTE.sr_phel_metal",
+   "README.md"
+  ],
+  "60": [
+   "POSCAR",
+   "CONTROL",
+   "BTE.sr_phel_metal",
+   "README.md"
+  ],
+  "80": [
+   "POSCAR",
+   "CONTROL",
+   "README.md"
+  ],
+  "100": [
+   "POSCAR",
+   "CONTROL",
+   "BTE.sr_phel_metal",
+   "README.md"
+  ]
+ },
+ "fourph_available": [
+  [
+   0,
+   300
+  ],
+  [
+   20,
+   300
+  ],
+  [
+   60,
+   300
+  ],
+  [
+   100,
+   300
+  ],
+  [
+   20,
+   600
+  ],
+  [
+   100,
+   600
+  ]
+ ],
+ "nirr16": 270
+}

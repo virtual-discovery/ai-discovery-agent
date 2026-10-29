@@ -1,0 +1,215 @@
+{
+ "study": "J. Zhou, S. Ponce, J.-C. Charlier, High-throughput calculations of spin Hall conductivity in non-magnetic 2D materials, npj 2D Mater. Appl. 9, 39 (2025); Materials Cloud Archive record rfcdy-wcy32 (CC BY 4.0)",
+ "budget": 40,
+ "materials": {
+  "Bi2_P-3m1": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Bi2_P-3m1",
+   "staged_files": [
+    "/app/archive/Bi2_P-3m1/aiida.in",
+    "/app/archive/Bi2_P-3m1/aiida.out.excerpt",
+    "/app/archive/Bi2_P-3m1/aiida.win",
+    "/app/archive/Bi2_P-3m1/cut_aiida.wout.excerpt"
+   ],
+   "num_wann": 16
+  },
+  "Hf2Br2_P-3m1": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Hf2Br2_P-3m1",
+   "staged_files": [
+    "/app/archive/Hf2Br2_P-3m1/aiida.in",
+    "/app/archive/Hf2Br2_P-3m1/aiida.out.excerpt",
+    "/app/archive/Hf2Br2_P-3m1/aiida.win",
+    "/app/archive/Hf2Br2_P-3m1/cut_aiida.wout.excerpt"
+   ],
+   "num_wann": 40
+  },
+  "CuLi2As_P-6m2": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/CuLi2As_P-6m2",
+   "staged_files": [
+    "/app/archive/CuLi2As_P-6m2/aiida.in",
+    "/app/archive/CuLi2As_P-6m2/aiida.out.excerpt",
+    "/app/archive/CuLi2As_P-6m2/aiida.win",
+    "/app/archive/CuLi2As_P-6m2/cut_aiida.wout.excerpt"
+   ],
+   "num_wann": 30
+  },
+  "Ti2I2N2_Pmm2": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Ti2I2N2_Pmm2",
+   "staged_files": [
+    "/app/archive/Ti2I2N2_Pmm2/aiida.in",
+    "/app/archive/Ti2I2N2_Pmm2/aiida.out.excerpt",
+    "/app/archive/Ti2I2N2_Pmm2/aiida.win",
+    "/app/archive/Ti2I2N2_Pmm2/cut_aiida.wout.excerpt"
+   ],
+   "num_wann": 56
+  },
+  "Li2Tl2_P3m1": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Li2Tl2_P3m1",
+   "staged_files": [
+    "/app/archive/Li2Tl2_P3m1/aiida.in",
+    "/app/archive/Li2Tl2_P3m1/aiida.out.excerpt",
+    "/app/archive/Li2Tl2_P3m1/aiida.win",
+    "/app/archive/Li2Tl2_P3m1/cut_aiida.wout.excerpt"
+   ],
+   "num_wann": 20
+  },
+  "Bi2In2_P4_nmm": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Bi2In2_P4|nmm",
+   "staged_files": [
+    "/app/archive/Bi2In2_P4_nmm/aiida.in",
+    "/app/archive/Bi2In2_P4_nmm/aiida.out.excerpt",
+    "/app/archive/Bi2In2_P4_nmm/aiida.win",
+    "/app/archive/Bi2In2_P4_nmm/cut_aiida.wout.excerpt"
+   ],
+   "num_wann": 32
+  },
+  "Hg4O2_P1": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/Hg4O2_P1",
+   "staged_files": [
+    "/app/archive/Hg4O2_P1/aiida.in",
+    "/app/archive/Hg4O2_P1/aiida.out.excerpt",
+    "/app/archive/Hg4O2_P1/aiida.win",
+    "/app/archive/Hg4O2_P1/cut_aiida.wout.excerpt"
+   ],
+   "num_wann": 64
+  },
+  "KSnAs_P3m1": {
+   "archive_folder": "Wannier_Hamiltonians/insulators/KSnAs_P3m1",
+   "staged_files": [
+    "/app/archive/KSnAs_P3m1/aiida.in",
+    "/app/archive/KSnAs_P3m1/aiida.out.excerpt",
+    "/app/archive/KSnAs_P3m1/aiida.win",
+    "/app/archive/KSnAs_P3m1/cut_aiida.wout.excerpt"
+   ],
+   "num_wann": 18
+  }
+ },
+ "archived_shc_folders": [
+  "Top_materials/Bi2/SHC-xyx",
+  "Top_materials/Bi2/SHC-xyy",
+  "Top_materials/Bi2/SHC-xyz",
+  "Top_materials/CuLi2As/SHC-xyx",
+  "Top_materials/CuLi2As/SHC-xyy",
+  "Top_materials/CuLi2As/SHC-xyz",
+  "Top_materials/Hf2Br2/SHC-xyx",
+  "Top_materials/Hf2Br2/SHC-xyy",
+  "Top_materials/Hf2Br2/SHC-xyz",
+  "Top_materials/Ti2N2I2/SHC-xyx",
+  "Top_materials/Ti2N2I2/SHC-xyy",
+  "Top_materials/Ti2N2I2/SHC-xyz"
+ ],
+ "requests": {
+  "bands": {
+   "cost": 1,
+   "format": {
+    "kind": "bands",
+    "material": "<material>",
+    "k_frac": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.5,
+      0.0
+     ]
+    ],
+    "spin": false
+   },
+   "limits": "up to 1000 k-points; spin = true adds <sigma_x>, <sigma_y>, <sigma_z> of every band"
+  },
+  "band_edges": {
+   "cost": 1,
+   "format": {
+    "kind": "band_edges",
+    "material": "<material>",
+    "band": 10,
+    "mesh": 120
+   },
+   "limits": "mesh 12-300 (Gamma-centred N x N); returns max of band n, min of band n+1 and the smallest direct gap between them, with their k"
+  },
+  "wcc": {
+   "cost": "1 if len(k) * n_loop <= 6000, 2 if <= 24000, else 3",
+   "format": {
+    "kind": "wcc",
+    "material": "<material>",
+    "bands": 10,
+    "loop_axis": 1,
+    "k": [
+     0.0,
+     0.25,
+     0.5
+    ],
+    "n_loop": 60
+   },
+   "limits": "up to 201 k values, n_loop 20-300; Wilson loop of bands 1..n along reciprocal axis loop_axis at each reduced k of the other axis"
+  },
+  "shc": {
+   "cost": "ceil((N1*N2 + factor^2 * max_points) / 40000) + (number of spin components - 1)",
+   "format": {
+    "kind": "shc",
+    "material": "<material>",
+    "spin": [
+     "z"
+    ],
+    "mesh": [
+     60,
+     60
+    ],
+    "eta_eV": 0.005,
+    "position": "<lattice or wannier_centres>",
+    "mu_eV": [
+     -3.5
+    ],
+    "refine": {
+     "factor": 8,
+     "threshold_A2": 10.0,
+     "max_points": 500
+    }
+   },
+   "limits": "mesh N1, N2 in 12-300 (Gamma-centred); N1*N2 + factor^2*max_points <= 160000; eta_eV 1e-4 to 0.05; up to 41 mu values; refine optional",
+   "parameters": {
+    "spin": "spin axes gamma among x, y, z (Cartesian axes of the archived cell)",
+    "eta_eV": "constant broadening eta in the Kubo denominator (e_n - e_m)^2 + eta^2",
+    "position": "how the velocity operator places the Wannier functions: \"lattice\" = at the lattice point of their home cell (the phase convention of aiida_hr.dat); \"wannier_centres\" = at their final centres in cut_aiida.wout (diagonal position operator)",
+    "mu_eV": "chemical potentials; T = 0 step occupation",
+    "refine": "optional adaptive refinement as in Wannier90 berry_curv_adpt_kmesh: coarse points where the occupied spin Berry curvature exceeds threshold_A2 (Angstrom^2) for any requested spin and mu (at most max_points, largest first) are replaced by the average over a factor x factor sub-mesh of their mesh cell"
+   },
+   "output": "sigma^gamma_xy(mu) in Wannier90 units, (hbar/e) S/cm, computed with the volume of the archived cell (area x c, vacuum included), as in the archived aiida-shc-fermiscan.dat files"
+  },
+  "ribbon": {
+   "cost": 2,
+   "format": {
+    "kind": "ribbon",
+    "material": "<material>",
+    "finite_axis": 1,
+    "width": 40,
+    "k": [
+     0.0,
+     0.1,
+     0.2
+    ],
+    "window_eV": [
+     -3.7,
+     -3.4
+    ]
+   },
+   "limits": "width * num_wann <= 1300; up to 31 k values; window width <= 0.6 eV; open ribbon finite along lattice vector finite_axis"
+  },
+  "archived_shc": {
+   "cost": 1,
+   "format": {
+    "kind": "archived_shc",
+    "folder": "Top_materials/Bi2/SHC-xyz"
+   },
+   "limits": "returns the archived aiida-shc-fermiscan.dat rows and the aiida.win of that folder"
+  }
+ },
+ "conventions": {
+  "k": "reduced coordinates of the reciprocal basis of CELL_PARAMETERS in aiida.in; k_z = 0",
+  "energies": "eV on the energy scale of each archived calculation",
+  "bands": "Wannier bands numbered from 1 (lowest Wannier band) within each model",
+  "hamiltonian": "archived aiida_hr.dat with the use_ws_distance image selection of Wannier90 (as in the archived runs); it reproduces the archived aiida_band.dat",
+  "spin_operator": "Pauli matrices on the spinor index of the Wannier functions (ordered 1 up, 1 down, 2 up, ...); the archive has no .spn file",
+  "spin_berry_curvature": "Omega^gamma_n = sum_{m != n} -2 Im[<n|j^gamma|m><m|v_y|n>] / ((e_n - e_m)^2 + eta^2), j^gamma = {sigma^gamma, v_x}/2 (Qiao et al., PRB 98, 214402 (2018); Wannier90 berry_task = shc)"
+ }
+}

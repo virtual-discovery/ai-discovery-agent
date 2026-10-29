@@ -1,0 +1,5 @@
+FROM ai-theorist-benchmark-runtime:20261007
+ENV PYTHONDONTWRITEBYTECODE=1 OMPI_MCA_btl_vader_single_copy_mechanism=none
+COPY lab/ /lab/
+RUN gcc -O2 -o /lab/mc_dilute /lab/mc_dilute.c -lm && mkdir -p /lab-results
+CMD ["python3", "/lab/labkit.py"]

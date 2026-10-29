@@ -1,0 +1,199 @@
+{
+ "task_id": "hydride-coulomb-mustar",
+ "catalog_id": "hydride-coulomb-mustar",
+ "start": "released",
+ "source_group": "bozier_2026_hydride_mustar",
+ "title": "Hydrides: first-principles Coulomb repulsion and Tc",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Bare mu = N(E_F)W(E_F,E_F) versus the pseudopotential mu* at a 1 eV cutoff",
+   "wrong_choice": "Use mu itself as the constant-DOS mu*, or Morel-Anderson-rescale mu to the cutoff",
+   "consequence": "mu* = 0.549 or 0.228 instead of 0.588",
+   "ablation": "mu_star_equals_bare_mu"
+  },
+  {
+   "id": "dp2",
+   "fork": "Smeared versus dense-grid N(E_F) in mu (mu_results \"mu\" vs \"mu rescaled\")",
+   "wrong_choice": "Transfer the sigma = 0.3 eV smeared mu (0.33) to the withheld Mg2IrH6 pressures",
+   "consequence": "Mg2IrH6 Tc +20-22 %",
+   "ablation": "mu_from_smeared_NF"
+  },
+  {
+   "id": "dp3",
+   "fork": "Which smearing row of mu_results to trust",
+   "wrong_choice": "Take the smallest sigma (0.01 eV) as the least-smeared value",
+   "consequence": "W(0,0) blows up, mu ~0.70-0.74, Mg2IrH6 Tc -10 / -15 %",
+   "ablation": "mu_from_smallest_sigma"
+  },
+  {
+   "id": "dp4",
+   "fork": "Constant versus energy-dependent DOS in the Eliashberg solver",
+   "wrong_choice": "Constant-DOS solver with the transferred mu",
+   "consequence": "Tc +41-45 % (Mg2IrH6), +6-8 % (H3S)",
+   "ablation": "constant_dos_solver"
+  },
+  {
+   "id": "dp5",
+   "fork": "Allen-Dynes versus Migdal-Eliashberg mu* (the archived Info.txt prints a muc_AD)",
+   "wrong_choice": "Allen-Dynes Tc with the archived muc_AD of neighbouring full-W runs",
+   "consequence": "Tc +30-32 % (Mg2IrH6), +3-6 % (H3S)",
+   "ablation": "allen_dynes_with_archived_mucAD"
+  },
+  {
+   "id": "dp6",
+   "fork": "Interpolate Tc(P) or compute Tc from each pressure's own alpha2F",
+   "wrong_choice": "Linear interpolation of archived full-W Tc between released pressures",
+   "consequence": "H3S 180 GPa -10 %, 190 GPa -5.3 % (the H3S Tc(P) peak near 180 GPa)",
+   "ablation": "tc_interpolated_in_pressure"
+  },
+  {
+   "id": "dp7",
+   "fork": "Hold the Coulomb parameter fixed (conventional mu* or the 0 GPa mu) or let mu track N(E_F)",
+   "wrong_choice": "mu* = 0.16 everywhere; or mu = 0.62 from 0 GPa for all Mg2IrH6 pressures",
+   "consequence": "mu* = 0.16: Mg2IrH6 Tc +46-47 %, H3S +7-9 %; 0 GPa mu: Mg2IrH6 -3.9 / -6.9 %",
+   "ablation": "conventional_mustar_0.16"
+  },
+  {
+   "id": "dp8",
+   "fork": "Cell content of the H3S calculations (conventional bcc cell, two formula units)",
+   "wrong_choice": "Report the DOS file per cell (or spin-summed) as per formula unit per spin",
+   "consequence": "N(E_F) off by a factor 2",
+   "ablation": "NF_per_conventional_cell"
+  },
+  {
+   "id": "dp9",
+   "fork": "Which solver defines the equivalent mu*",
+   "wrong_choice": "Match the full-W Tc with the vDOS solver at 7 eV instead of the constant-DOS solver at 1 eV",
+   "consequence": "mu* = 0.537",
+   "ablation": "mu_star_equivalent_in_vdos_solver"
+  }
+ ],
+ "graded_fields": [
+  "tc_full_W_K at Mg2IrH6 15/25 GPa and H3S 180/190 GPa, each within 3.5 % of the archived IsoME full-W Tc",
+  "mu_star_cdos_1eV_Mg2IrH6_20GPa within 0.025 of the validated-solver value",
+  "N_EF_H3S_180GPa_per_fu_per_spin within 3 %"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 18,
+  "oracle_charge": 30,
+  "budget": 38,
+  "catalog_retrieval_units": "about 115 retrievals plus unlimited solver runs (2 units each)",
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "solver_seconds": "cdos <1 s, vdos 5-20 s per mu*, vdos_W 10-40 s (2 cores)"
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/23235290",
+  "doi": "10.5281/zenodo.23235290",
+  "files_used": [
+   "mantel_data_files_v1.tar.gz (459 members, see members.md5)"
+  ],
+  "md5": {
+   "mantel_data_files_v1.tar.gz": "31b5f98dafc279ce627f7a1473d08d3d"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Graded Tc are the authors' archived IsoME values (released start). The lab solver reproduces 15 archived full-W runs within 1.6 % (0.1-0.25 % at the withheld pressures that have W) and the archived fixed-mu* runs within 0.5 %. The equivalent mu* reference is a validated-solver value. Abstract numbers are not graded.",
+ "calibration": {
+  "tc_full_W_K": {
+   "reference_archived": {
+    "Mg2IrH6_15GPa": 88.45,
+    "Mg2IrH6_25GPa": 91.65,
+    "H3S_180GPa": 256.5,
+    "H3S_190GPa": 244.5
+   },
+   "oracle_route_rel": {
+    "Mg2IrH6_15GPa": 0.0051,
+    "Mg2IrH6_25GPa": -0.0046,
+    "H3S_180GPa": 0.001,
+    "H3S_190GPa": 0.0022
+   },
+   "robustness_rel": {
+    "tc_bare_mu_route": {
+     "Mg2IrH6_15GPa": -0.0028,
+     "Mg2IrH6_25GPa": -0.013,
+     "H3S_180GPa": -0.014,
+     "H3S_190GPa": -0.0143
+    },
+    "tc_nearest_W00": {
+     "Mg2IrH6_15GPa": 0.0097,
+     "Mg2IrH6_25GPa": -0.0022,
+     "H3S_180GPa": 0.0006,
+     "H3S_190GPa": 0.0027
+    }
+   },
+   "nearest_ablations_rel": {
+    "tc_interpolated_in_pressure": {
+     "Mg2IrH6_15GPa": 0.0034,
+     "Mg2IrH6_25GPa": -0.0087,
+     "H3S_180GPa": -0.1014,
+     "H3S_190GPa": -0.0532
+    },
+    "tc_conventional_mustar_0.16": {
+     "Mg2IrH6_15GPa": 0.4734,
+     "Mg2IrH6_25GPa": 0.4582,
+     "H3S_180GPa": 0.0738,
+     "H3S_190GPa": 0.0909
+    },
+    "tc_constant_mu_from_0GPa": {
+     "Mg2IrH6_15GPa": -0.0389,
+     "Mg2IrH6_25GPa": -0.069,
+     "H3S_180GPa": 0.001,
+     "H3S_190GPa": 0.0022
+    },
+    "tc_smeared_NF_mu_sigma0.3": {
+     "Mg2IrH6_15GPa": 0.2181,
+     "Mg2IrH6_25GPa": 0.201,
+     "H3S_180GPa": 0.001,
+     "H3S_190GPa": 0.0022
+    },
+    "tc_mu_rescaled_sigma0.01": {
+     "Mg2IrH6_15GPa": -0.0963,
+     "Mg2IrH6_25GPa": -0.15,
+     "H3S_180GPa": 0.001,
+     "H3S_190GPa": 0.0022
+    },
+    "tc_constant_dos_solver": {
+     "Mg2IrH6_15GPa": 0.4469,
+     "Mg2IrH6_25GPa": 0.406,
+     "H3S_180GPa": 0.062,
+     "H3S_190GPa": 0.0833
+    },
+    "tc_allen_dynes_archived_mucAD": {
+     "Mg2IrH6_15GPa": 0.3242,
+     "Mg2IrH6_25GPa": 0.3035,
+     "H3S_180GPa": 0.0268,
+     "H3S_190GPa": 0.0634
+    }
+   },
+   "tolerance": "|rel| <= 0.035"
+  },
+  "mu_star_cdos_1eV_Mg2IrH6_20GPa": {
+   "reference": 0.5875,
+   "robustness": {
+    "matched_to_lab_full_W_Tc": 0.5885
+   },
+   "nearest_ablation": {
+    "bare_mu": 0.5486,
+    "vdos_7eV_equivalent": 0.5367,
+    "morel_anderson": 0.2279
+   },
+   "tolerance": "+-0.025"
+  },
+  "N_EF_H3S_180GPa_per_fu_per_spin": {
+   "reference": 0.2704,
+   "robustness": {
+    "nearest_grid_point": 0.2692
+   },
+   "nearest_ablation": {
+    "per_conventional_cell": 0.5409
+   },
+   "tolerance": "|rel| <= 0.03"
+  }
+ }
+}

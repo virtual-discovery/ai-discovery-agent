@@ -1,0 +1,232 @@
+{
+ "task_id": "her-alloy-workfunction-descriptor",
+ "catalog_id": "her-alloy-workfunction-descriptor",
+ "start": "released",
+ "source_group": "liasi_2026_her_agaupdpt",
+ "title": "Ag-Au-Pd-Pt HER: coverage, site distributions and the work function",
+ "competing_explanations": [
+  "Dilute Delta G_H (Sabatier volcano at Delta E_H = -0.24 eV on the mean site energy) explains the activity",
+  "Activity is governed by the distribution of site energies at realistic (high) H coverage, which moves the optimum by the H-H repulsion",
+  "The work function adds independent information (double-layer/charge-transfer effect) beyond adsorption energetics",
+  "The apparent work-function effect is a proxy for composition/binding (collinearity) or for library-specific offsets"
+ ],
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "evidence to be discovered",
+   "fork": "Coverage shift from the DFT filling paths: remove each added site's own dilute energy (H-H interaction, omega) versus the slope of the differential adsorption energy (alpha), which on the alloy is dominated by strong sites filling first",
+   "wrong_choice": "Fit dG_diff vs theta (total isotherm slope) or take dG_diff(1 ML) - dG_diff(1/9 ML)",
+   "consequence": "Shift 0.70-0.77 eV instead of 0.22 eV; a centre fixed from it (-0.94 eV) is wrong",
+   "ablation": "coverage_total_slope",
+   "other_ablations": [
+    "coverage_first_last"
+   ]
+  },
+  {
+   "id": "dp2",
+   "kind": "fixed vs fitted model parameter",
+   "fork": "Volcano centre: textbook dilute optimum (Delta G = 0, Delta E = -0.24 eV with ZPE/entropy) versus the centre fitted to the measured currents (consistent with the coverage shift)",
+   "wrong_choice": "Fix the centre at -0.24 eV",
+   "consequence": "R2_log ~0.71-0.75 instead of ~0.93-0.97; Lib-3 RMSE 0.211; centre wrong by ~0.2 eV",
+   "ablation": "literature_centre"
+  },
+  {
+   "id": "dp3",
+   "kind": "model class",
+   "fork": "Rate averaged over each spot's site-energy distribution versus evaluated at the spot-mean energy",
+   "wrong_choice": "Mean-energy (single-site) volcano with free slope",
+   "consequence": "Spot means all lie on the weak-binding side of the optimum, so the centre is unidentifiable (fit gives -0.81 eV) and Lib-3 RMSE 0.144",
+   "ablation": "mean_energy_descriptor"
+  },
+  {
+   "id": "dp4",
+   "kind": "regime judgement",
+   "fork": "Mass-transport (Koutecky-Levich) cap at high overpotential versus pure kinetic exponential",
+   "wrong_choice": "Ignore the saturation of the -300/-400 mV currents",
+   "consequence": "alpha_c and alpha_ads biased (fit R2_log 0.25/0.75); Lib-3 RMSE 0.153",
+   "ablation": "no_transport_cap"
+  },
+  {
+   "id": "dp5",
+   "kind": "discriminating purchase / transfer",
+   "fork": "Library-specific prefactor and limiting current, Lib-3 calibrated on bought spots (both k and j_lim) versus direct transfer",
+   "wrong_choice": "Transfer the mean Lib-1/Lib-2 k and j_lim to Lib-3, or calibrate only k",
+   "consequence": "Lib-3 RMSE 0.247 (no calibration) or 0.145 (k only)",
+   "ablation": "no_library_calibration",
+   "other_ablations": [
+    "prefactor_only_calibration"
+   ]
+  },
+  {
+   "id": "dp6",
+   "kind": "confounder",
+   "fork": "Work-function effect judged conditional on the adsorption term versus from a work-function-only fit (Phi tracks Pd/Pt content)",
+   "wrong_choice": "Report the work-function-only coefficient as the work-function effect",
+   "consequence": "alpha_wf 0.178 instead of 0.065",
+   "ablation": "wf_only_coefficient"
+  },
+  {
+   "id": "dp7",
+   "kind": "cascade",
+   "fork": "Which adsorption term the work function competes against: coverage-corrected distribution versus dilute-centre binding",
+   "wrong_choice": "Test the work function against a dilute-centre (-0.24 eV) binding term",
+   "consequence": "The mis-specified binding term leaves Pd/Pt trends for Phi to absorb: alpha_wf 0.157",
+   "ablation": "wf_with_dilute_binding"
+  },
+  {
+   "id": "dp8",
+   "kind": "confounder (Simpson-type)",
+   "fork": "Pool libraries with library-specific offsets versus one shared prefactor",
+   "wrong_choice": "Fit all spots with one k and j_lim",
+   "consequence": "Library offsets load onto the descriptors: alpha_wf 0.279",
+   "ablation": "pooled_without_library_offsets"
+  },
+  {
+   "id": "dp9",
+   "kind": "surrogate trust",
+   "fork": "GNN site-energy distributions versus the scalar linear-combination baseline (no site spread, mean shifted ~+0.08 eV vs DFT)",
+   "wrong_choice": "Use the linear-combination descriptor",
+   "consequence": "Fitted centre -0.273 eV, apparently confirming the dilute -0.24 eV textbook optimum",
+   "ablation": "linear_combination_descriptor"
+  }
+ ],
+ "graded_fields": [
+  "lib3_log10_abs_current: RMSE over the 301x4 hidden Lib-3 cells <= 0.135",
+  "volcano_centre_eV in [-0.52, -0.36]",
+  "coverage_shift_eV in [0.07, 0.45]",
+  "alpha_wf in [-0.06, 0.13]"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 49,
+  "oracle_charge": 54,
+  "budget": 60,
+  "catalog_size_units": "160 SECCM rows + 40 Lib-3 spots (x2, max 5) + 14 coverage paths + 582 DFT compositions",
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "why": "Buy and assemble ~30 SECCM row/potential tables, choose Lib-3 calibration spots, parse coverage paths; code a distribution-averaged volcano rate with a transport cap and library-specific parameters, fit with log-space residuals, compare model classes and work-function variants, calibrate and predict Lib-3.",
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/22031607",
+  "doi": "10.5281/zenodo.22031607",
+  "files_used": [
+   "01-dataset.tar.gz",
+   "03-inference.tar.gz",
+   "04-activity.tar.gz",
+   "02-models.tar.gz (metrics only)"
+  ],
+  "md5": {
+   "01-dataset.tar.gz": "eff9518f36a306a6db04347c5b427032",
+   "02-models.tar.gz": "4f184f3bd3798bf60da36aa27ee0a624",
+   "03-inference.tar.gz": "77eacf62b4e5d107a018649fc55b9ea9",
+   "04-activity.tar.gz": "1541a46cecb4c58b3aea0852a233079a"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Deviations from the catalog design: (1) the best-composition target is not graded (the measured Lib-3 optimum is broad, Pd 0.40-0.74 among the top spots, and noisy; it is rubric item 8); (2) alpha_wf is graded as a numeric window for the conditional coefficient rather than a yes/no significance verdict, because the in-sample gain is real but small and library-dependent (the paper itself reports only a small gain); (3) surrogate inference is served as precomputed per-spot descriptors (no torch in the lab); (4) the coverage-shift target (DFT filling paths) was added as an independent route to the volcano centre; (5) surface termination/segregation and dipole-correction forks do not apply to the released random-alloy slabs and were not used. Lib-3 calibration is capped at 5 spots because 10-20 spots would let a composition regression inside Lib-3 match the physics models (RMSE ~0.10).",
+ "calibration": {
+  "lib3_rmse_log10": {
+   "reference_oracle": 0.097,
+   "robustness": {
+    "combined_model_C": 0.097,
+    "centre_fixed_from_dft": 0.101,
+    "alternative_calibration_design": 0.094,
+    "random_5_calibration_spots_model_A_median_p90": [
+     0.101,
+     0.128
+    ],
+    "random_5_model_C_median_p90": [
+     0.101,
+     0.114
+    ]
+   },
+   "nearest_ablation": {
+    "mean_energy": 0.144,
+    "T1_prefactor_only": 0.145,
+    "no_cap": 0.153,
+    "wf_only": 0.16,
+    "literature_centre": 0.211,
+    "T0": 0.247
+   },
+   "other_wrong_paths_failing_elsewhere": {
+    "linear_combination": 0.125,
+    "total_slope_centre": 0.121
+   },
+   "tolerance": "<= 0.135"
+  },
+  "volcano_centre_eV": {
+   "reference_all_rows": -0.442,
+   "robustness": {
+    "oracle_subset": -0.444,
+    "combined": -0.445,
+    "per_library_fits": [
+     -0.46,
+     -0.435,
+     -0.443
+    ],
+    "fixed_from_dft_coverage": -0.461
+   },
+   "nearest_ablation": {
+    "linear_combination": -0.273,
+    "literature": -0.24,
+    "mean_energy": -0.811,
+    "total_slope": -0.942
+   },
+   "tolerance": [
+    -0.52,
+    -0.36
+   ]
+  },
+  "coverage_shift_eV": {
+   "reference_all9": 0.221,
+   "robustness": {
+    "fit_window_0.1_0.9_ML": 0.186,
+    "fit_through_dilute_point": 0.274,
+    "pooled_fit": 0.221,
+    "random_4_of_10_decorations_p5_p95": [
+     0.103,
+     0.345
+    ]
+   },
+   "nearest_ablation": {
+    "total_slope_alpha": 0.702,
+    "first_last_differential": 0.769,
+    "no_correction": 0.0
+   },
+   "tolerance": [
+    0.07,
+    0.45
+   ]
+  },
+  "alpha_wf": {
+   "reference_all_rows": 0.065,
+   "robustness": {
+    "oracle_subset": 0.062,
+    "centre_fixed": 0.069,
+    "row_subsets_range": [
+     0.064,
+     0.1
+    ],
+    "per_library_Lib1_Lib2_Lib3": [
+     -0.006,
+     0.067,
+     0.064
+    ]
+   },
+   "nearest_ablation": {
+    "dilute_binding": 0.157,
+    "wf_only": 0.178,
+    "pooled_no_offsets": 0.279,
+    "dilute_binding_row_subsets_min": 0.146
+   },
+   "tolerance": [
+    -0.06,
+    0.13
+   ]
+  }
+ }
+}

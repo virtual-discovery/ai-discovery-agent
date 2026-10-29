@@ -1,0 +1,199 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 12,
+  "rubric_items": 7,
+  "task_mb": 1.55,
+  "hidden_values": 8,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 32,
+   "budget": 36,
+   "evaluations": 19,
+   "failed_evaluations": 0,
+   "container_seconds": 1513
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "fm_afm2_only_J1_zero",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "cross_cell_fm_reference",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "coarse_rhombohedral_mesh_k3",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "tetragonal_mesh_664",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "tetragonal_mesh_444",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "energies_per_cell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "classical_S2_neel",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "curie_weiss_as_neel",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "fermi_dirac_0p02_at_U4",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "gaussian_0p05_at_U4",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "pbe_fermi_dirac_0p02",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "pbe_gaussian_0p02_free_energy",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "pbe_coarse_meshes",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "pbe_primitive_fm_k8",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "pbe_small_starting_moment",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp11",
+    "name": "gap_closing_linear_from_U4_U8",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp11",
+    "name": "gap_closing_coarse_bracket",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp12",
+    "name": "gap_closing_shifted_mesh",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "oracle_meshes_rh666_te886",
+    "passes_grading": true
+   },
+   {
+    "name": "rh444_te888",
+    "passes_grading": true
+   },
+   {
+    "name": "converged_primitive_fm_reference",
+    "passes_grading": true
+   },
+   {
+    "name": "cutoff_75_Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "cutoff_40_Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "pbe_k12_gauss0p002",
+    "passes_grading": true
+   },
+   {
+    "name": "pbe_k16_gauss0p002",
+    "passes_grading": true
+   },
+   {
+    "name": "pbe_k12_mv0p005",
+    "passes_grading": true
+   },
+   {
+    "name": "pbe_afm2_k6",
+    "passes_grading": true
+   },
+   {
+    "name": "gap_closing_k16_points",
+    "passes_grading": true
+   },
+   {
+    "name": "gap_closing_line_from_3_and_4",
+    "passes_grading": true
+   },
+   {
+    "name": "gap_closing_oracle_points",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-25T22:02:00Z"
+}

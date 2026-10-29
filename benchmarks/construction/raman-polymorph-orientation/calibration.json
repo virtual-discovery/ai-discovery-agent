@@ -1,0 +1,251 @@
+{
+ "thresholds": {
+  "scale_rel": 0.002,
+  "axis_deg": 6.0,
+  "ratio_log": 0.09531017980432493,
+  "lo_rel": 0.008
+ },
+ "reference": {
+  "main_phase": "mp-7456",
+  "minority_phase": "mp-2843",
+  "frequency_scale": 1.0237,
+  "c_axis_lab": [
+   0.5343914630976611,
+   0.5935018467341452,
+   0.6018150231520484
+  ],
+  "faceB_ratio_tt_over_zz": 1.1617472943210205,
+  "faceB_highest_optical_cm1": 461.48791384346373
+ },
+ "oracle": {
+  "main_phase": "mp-7456",
+  "frequency_scale": 1.0237108380579432,
+  "axis_offset_cm1": 2.1209190103208657,
+  "calibration_offset_cm1": 2.0978999208543883,
+  "chi2_per_point": {
+   "mp-2843": 140.63095442330584,
+   "mp-7456": 2.567577256255168,
+   "mp-7457": 56.918649212889534
+  },
+  "Q": [
+   [
+    -0.46746468635333793,
+    -0.7056923692581066,
+    0.5324237475765479
+   ],
+   [
+    0.8002900262319367,
+    -0.0819868055107259,
+    0.5939815128737869
+   ],
+   [
+    -0.3755164988735669,
+    0.7037587965297676,
+    0.6030845010284313
+   ]
+  ],
+  "linewidth": [
+   1.1897683674742539,
+   0.006911575328401518
+  ],
+  "fit_params": [
+   0.12857909487100058,
+   1.0634452884747518,
+   1.7639155101577493,
+   20.49024910641719,
+   1.0237108380579432,
+   2.1209190103208657,
+   1.1897683674742539,
+   0.006911575328401518
+  ],
+  "minority_phase": "mp-2843",
+  "ratio_tt_over_zz": 1.16299484293002,
+  "highest_optical_cm1": 461.5650232129932,
+  "c_axis_lab": [
+   0.5324237475765479,
+   0.5939815128737869,
+   0.6030845010284313
+  ]
+ },
+ "minority_test": {
+  "mp-2843": {
+   "weight": 0.021043429254705506,
+   "chi2": 18869.876281449284,
+   "width_multiplier": 1.0,
+   "chi2_drop_fraction": 0.38856849759560874
+  },
+  "mp-7457": {
+   "weight": 0.007476808678978434,
+   "chi2": 30672.565852201136,
+   "width_multiplier": 3.0,
+   "chi2_drop_fraction": 0.006131638496965741
+  }
+ },
+ "table": {
+  "oracle": {
+   "s_rel": 1.0587142662110693e-05,
+   "axis_deg": 0.13695442160793533,
+   "ratio_log": 0.0010732792327943987,
+   "lo_rel": 0.00016708860019165606,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  },
+  "ablation:raw_dft_frequencies": {
+   "s_rel": -0.023151313861482947,
+   "axis_deg": 0.13695442160793533,
+   "ratio_log": 0.0010732792327943987,
+   "lo_rel": -0.022998437236842917,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  },
+  "ablation:scale_without_axis_offset": {
+   "s_rel": 0.007469051031657514,
+   "axis_deg": 0.13695442160793533,
+   "ratio_log": 0.0010732792327943987,
+   "lo_rel": 0.009381026983410479,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  },
+  "ablation:nearest_line_peak_matching": {
+   "s_rel": 0.005079613167920272,
+   "axis_deg": 0.13695442160793533,
+   "ratio_log": 0.0010732792327943987,
+   "lo_rel": 0.00016708860019165606,
+   "main": "mp-2843",
+   "minority": "mp-2843"
+  },
+  "ablation:tetragonal_near_twin": {
+   "s_rel": -0.0023736234543003665,
+   "axis_deg": 7.070816861611616,
+   "ratio_log": 0.12812101059959216,
+   "lo_rel": 0.01906835056015077,
+   "main": "mp-7457",
+   "minority": "mp-2843"
+  },
+  "ablation:lab_axes_polarizations_only": {
+   "s_rel": 1.0587142662110693e-05,
+   "axis_deg": 64.71744040433737,
+   "ratio_log": -0.4320903981522824,
+   "lo_rel": 0.048514448181399494,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  },
+  "ablation:to_only_orientation_fit": {
+   "s_rel": 1.0587142662110693e-05,
+   "axis_deg": 12.177541386882448,
+   "ratio_log": 0.21601428941506,
+   "lo_rel": 0.013008668513001309,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  },
+  "ablation:to_only_face_b_phonon": {
+   "s_rel": 1.0587142662110693e-05,
+   "axis_deg": 0.13695442160793533,
+   "ratio_log": 0.0010732792327943987,
+   "lo_rel": -0.08443470829443567,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  },
+  "ablation:born_rows_unrotated": {
+   "s_rel": 1.0587142662110693e-05,
+   "axis_deg": 0.13695442160793533,
+   "ratio_log": 0.0010732792327943987,
+   "lo_rel": 0.05680752242476683,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  },
+  "ablation:born_rows_isotropic": {
+   "s_rel": 1.0587142662110693e-05,
+   "axis_deg": 0.13695442160793533,
+   "ratio_log": 0.0010732792327943987,
+   "lo_rel": -0.07895553688205237,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  },
+  "ablation:nac_without_eps_inf": {
+   "s_rel": 1.0587142662110693e-05,
+   "axis_deg": 0.13695442160793533,
+   "ratio_log": 0.0010732792327943987,
+   "lo_rel": 0.5640369149560138,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  },
+  "ablation:minority_phase_ignored": {
+   "s_rel": 1.0587142662110693e-05,
+   "axis_deg": 0.13695442160793533,
+   "ratio_log": 0.0010732792327943987,
+   "lo_rel": 0.00016708860019165606,
+   "main": "mp-7456",
+   "minority": "none"
+  },
+  "robustness:nonpolar_areas_centroid_calibration": {
+   "s_rel": 0.00011294713639742326,
+   "axis_deg": 0.27507289770176746,
+   "ratio_log": 0.0006113391975735491,
+   "lo_rel": 0.00011112054073159072,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  },
+  "robustness:low_window_spectra_only": {
+   "s_rel": -1.927491100395251e-06,
+   "axis_deg": 0.11874770883993051,
+   "ratio_log": -0.0010943724846143642,
+   "lo_rel": 3.18965266414839e-05,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  },
+  "robustness:constant_linewidth_fit": {
+   "s_rel": -1.5232927361719106e-06,
+   "axis_deg": 0.16257715091374075,
+   "ratio_log": 0.0008358489590483933,
+   "lo_rel": -4.820131262162075e-05,
+   "main": "mp-7456",
+   "minority": "mp-2843"
+  }
+ },
+ "info": {
+  "nearest_line_matching": {
+   "mp-2843": {
+    "scale": 1.0289,
+    "mean_abs_dev": 3.5250810480898864,
+    "raw_mean_abs_dev": 4.870823595505618
+   },
+   "mp-7456": {
+    "scale": 1.05,
+    "mean_abs_dev": 6.147976853932584,
+    "raw_mean_abs_dev": 8.756820224719103
+   },
+   "mp-7457": {
+    "scale": 1.0347,
+    "mean_abs_dev": 8.242188990224728,
+    "raw_mean_abs_dev": 9.907413483146067
+   }
+  },
+  "nearest_line_winner": "mp-2843",
+  "nearest_line_raw_winner": "mp-2843",
+  "lab_axes_only_branches": {
+   "fit": {
+    "chi2": 13431.10299714965,
+    "axis_err_deg": 0.1920249547128039
+   },
+   "mirror": {
+    "chi2": 13431.102997149286,
+    "axis_err_deg": 64.71744040433737
+   }
+  },
+  "lab_axes_only_lucky_branch": {
+   "axis_err_deg": 0.1920249547128039,
+   "ratio_tt_over_zz": 1.1637809349143848,
+   "highest_optical_cm1": 461.48463607897816
+  },
+  "no_prefactor_fit": {
+   "s_rel": 0.00020073322131763938,
+   "axis_deg": 1.1148095886161646,
+   "ratio_log": 0.0001413089443058575,
+   "lo_rel": 0.0006160898267308923,
+   "main": "mp-7456",
+   "minority": "mp-2843",
+   "chi2_per_point": 84.37305116547724
+  }
+ }
+}

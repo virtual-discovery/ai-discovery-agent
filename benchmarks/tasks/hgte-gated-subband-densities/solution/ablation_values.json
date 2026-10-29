@@ -1,0 +1,169 @@
+{
+ "fields": {
+  "top_surface_Vg_p0.20": [
+   "experiment_1e11_cm2",
+   "top_surface_at_+0.20V"
+  ],
+  "bottom_surface_Vg_p0.05": [
+   "experiment_1e11_cm2",
+   "bottom_surface_at_+0.05V"
+  ],
+  "bulk_subband_E1_Vg_p0.30": [
+   "experiment_1e11_cm2",
+   "first_bulk_subband_at_+0.30V"
+  ],
+  "top_surface_Vg_m0.45": [
+   "experiment_1e11_cm2",
+   "top_surface_at_-0.45V"
+  ],
+  "bottom_surface_Vg_m0.45": [
+   "experiment_1e11_cm2",
+   "bottom_surface_at_-0.45V"
+  ],
+  "hole_pocket_Vg_m0.70": [
+   "experiment_1e11_cm2",
+   "hole_pocket_at_-0.70V"
+  ],
+  "hole_onset_Vg": [
+   null,
+   "hole_onset_gate_V"
+  ],
+  "model_bottom_surface_Vg_p0.20": [
+   "model_1e11_cm2",
+   "bottom_surface_at_+0.20V"
+  ],
+  "model_top_surface_Vg_m0.45": [
+   "model_1e11_cm2",
+   "top_surface_at_-0.45V"
+  ],
+  "model_hole_pocket_Vg_m0.60": [
+   "model_1e11_cm2",
+   "hole_pocket_at_-0.60V"
+  ],
+  "majority_pocket_multiplicity": [
+   null,
+   "majority_pocket_multiplicity"
+  ]
+ },
+ "ablations": {
+  "steep_ridge_as_bulk_harmonic_as_top": {
+   "top_surface_Vg_p0.20": 1.4202436714543334,
+   "bulk_subband_E1_Vg_p0.30": 3.2478087049649287
+  },
+  "steep_ridge_as_bulk_sum_as_top": {
+   "top_surface_Vg_p0.20": 1.7200412027826555,
+   "bulk_subband_E1_Vg_p0.30": 3.2478087049649287
+  },
+  "bulk_spin_degenerate": {
+   "bulk_subband_E1_Vg_p0.30": 2.4480266320974096,
+   "hole_pocket_Vg_m0.70": 4.982895824882216
+  },
+  "hole_strongest_peak": {
+   "hole_pocket_Vg_m0.70": 1.1720532808751007
+  },
+  "hole_peak_nearest_model": {
+   "hole_pocket_Vg_m0.70": 2.146831428648407
+  },
+  "top_is_larger_density": {
+   "top_surface_Vg_m0.45": 0.6312096324747327,
+   "bottom_surface_Vg_m0.45": 0.44549432023437374,
+   "model_top_surface_Vg_m0.45": 0.6754313263247171
+  },
+  "four_equivalent_pockets": {
+   "majority_pocket_multiplicity": 4
+  },
+  "single_hole_pocket": {
+   "majority_pocket_multiplicity": 1
+  },
+  "wedge_own_fermi_level": {
+   "model_hole_pocket_Vg_m0.60": 1.2551462233638946
+  },
+  "band_minus1_split_in_two": {
+   "model_hole_pocket_Vg_m0.60": 1.8580021669987006
+  },
+  "band_minus1_split_in_four": {
+   "model_hole_pocket_Vg_m0.60": 0.9290010834993503
+  },
+  "wedge_not_normalised": {
+   "model_hole_pocket_Vg_m0.60": 4.81307973647237
+  },
+  "rigid_band_from_neutral_run": {
+   "model_bottom_surface_Vg_p0.20": 1.5921279
+  },
+  "holes_appear_at_neutrality": {
+   "hole_onset_Vg": -0.3264921209831936
+  },
+  "holes_appear_at_hall_sign_change": {
+   "hole_onset_Vg": -0.35
+  }
+ },
+ "robustness": {
+  "single_spectrum": {
+   "top_surface_Vg_p0.20": 2.81912468375197,
+   "bottom_surface_Vg_p0.05": 0.8349082354369027,
+   "bulk_subband_E1_Vg_p0.30": 1.1954740578750203,
+   "top_surface_Vg_m0.45": 0.44159015029398063,
+   "bottom_surface_Vg_m0.45": 0.5995832634568031,
+   "hole_pocket_Vg_m0.70": 2.4107359081241637,
+   "hole_onset_Vg": -0.19389410770066778
+  },
+  "bmax1p0_padded": {
+   "top_surface_Vg_p0.20": 2.8045993079247102,
+   "bottom_surface_Vg_p0.05": 0.8333626571832443,
+   "bulk_subband_E1_Vg_p0.30": 1.2266526922700125,
+   "top_surface_Vg_m0.45": 0.44382655603289056,
+   "bottom_surface_Vg_m0.45": 0.6278532080433302,
+   "hole_pocket_Vg_m0.70": 2.5108663544754313,
+   "hole_onset_Vg": -0.2080746746581254
+  },
+  "rho_xx_hann": {
+   "top_surface_Vg_p0.20": 2.8069037633316527,
+   "bottom_surface_Vg_p0.05": 0.8251771602647754,
+   "bulk_subband_E1_Vg_p0.30": 1.2302383822723304,
+   "top_surface_Vg_m0.45": 0.43300862990701044,
+   "bottom_surface_Vg_m0.45": 0.636946130793604,
+   "hole_pocket_Vg_m0.70": 2.4661079133214896,
+   "hole_onset_Vg": -0.22052095865703625
+  },
+  "block_average": {
+   "top_surface_Vg_p0.20": 2.8033113328019117,
+   "bottom_surface_Vg_p0.05": 0.8247558874784561,
+   "bulk_subband_E1_Vg_p0.30": 1.2256275776510488,
+   "top_surface_Vg_m0.45": 0.4461602205819117,
+   "bottom_surface_Vg_m0.45": 0.6397322219043093,
+   "hole_pocket_Vg_m0.70": 2.4908109814799717,
+   "hole_onset_Vg": -0.21712873749229555
+  },
+  "bmax0p6_padded": {
+   "top_surface_Vg_p0.20": 2.8116091327810135,
+   "bottom_surface_Vg_p0.05": 0.8242621228168392,
+   "bulk_subband_E1_Vg_p0.30": 1.214498445880826,
+   "top_surface_Vg_m0.45": 0.44502552178495947,
+   "bottom_surface_Vg_m0.45": 0.5739362076242113,
+   "hole_pocket_Vg_m0.70": 2.464680416170044,
+   "hole_onset_Vg": -0.27156412467882574
+  },
+  "bmax1p5_bmin0p2_padded": {
+   "top_surface_Vg_p0.20": 2.8141921635143454,
+   "bottom_surface_Vg_p0.05": 0.8277857946730499,
+   "bulk_subband_E1_Vg_p0.30": 1.231908153069047,
+   "top_surface_Vg_m0.45": 0.45227900408543903,
+   "bottom_surface_Vg_m0.45": 0.6427408610892857,
+   "hole_pocket_Vg_m0.70": 2.486730042508678,
+   "hole_onset_Vg": -0.18646993715238788
+  },
+  "hall_fit_window_0p06_0p28": {
+   "model_bottom_surface_Vg_p0.20": 0.970868261049284,
+   "model_top_surface_Vg_m0.45": 0.48580432204343643,
+   "model_hole_pocket_Vg_m0.60": 1.5954230199747417
+  },
+  "quadratic_interpolation": {
+   "model_bottom_surface_Vg_p0.20": 0.9697624941453992,
+   "model_top_surface_Vg_m0.45": 0.48330142256566444,
+   "model_hole_pocket_Vg_m0.60": 1.6009051183833853
+  },
+  "model_pocket_onset": {
+   "hole_onset_Vg": -0.21056396533764526
+  }
+ }
+}

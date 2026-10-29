@@ -1,0 +1,407 @@
+{
+ "a0_A": {
+  "reference": 5.9624,
+  "tolerance": "absolute 0.01",
+  "robustness": {
+   "a0_from_zero_pressure": {
+    "value": 5.961571476922626,
+    "error": -0.0008285230773736885
+   },
+   "a0_from_65Ry_eos": {
+    "value": 5.9619153296592655,
+    "error": -0.00048467034073418347
+   }
+  },
+  "ablations_failing_this_field": {
+   "experimental_lattice": {
+    "value": 5.8687,
+    "error": -0.09370000000000012
+   }
+  },
+  "max_robust_error": 0.0008285230773736885,
+  "nearest_failing_ablation_error": 0.09370000000000012
+ },
+ "omega_TO_cm-1": {
+  "reference": 284.53307278361683,
+  "tolerance": "absolute 2.0",
+  "robustness": {
+   "TO_from_k4_dfpt_and_k4_strained": {
+    "value": 284.60917790415795,
+    "error": 0.07610512054111496
+   }
+  },
+  "ablations_failing_this_field": {
+   "experimental_lattice": {
+    "value": 302.8520856159448,
+    "error": 18.319012832327985
+   }
+  },
+  "max_robust_error": 0.07610512054111496,
+  "nearest_failing_ablation_error": 18.319012832327985
+ },
+ "omega_LO_cm-1": {
+  "reference": 321.0592660060083,
+  "tolerance": "absolute 2.0",
+  "robustness": {
+   "oracle_like_k8_tensors": {
+    "value": 321.1346341603102,
+    "error": 0.0753681543019411
+   },
+   "all_from_k6_dfpt": {
+    "value": 321.2797580719628,
+    "error": 0.22049206595454507
+   },
+   "k10_tensors": {
+    "value": 320.98416197083685,
+    "error": -0.07510403517142095
+   },
+   "raw_born_charge_no_sum_rule": {
+    "value": 321.11851414705785,
+    "error": 0.05924814104957932
+   },
+   "TO_from_k4_dfpt_and_k4_strained": {
+    "value": 321.12671475277546,
+    "error": 0.06744874676718382
+   }
+  },
+  "ablations_failing_this_field": {
+   "gamma_centred_k8": {
+    "value": 303.4229357522341,
+    "error": -17.63633025377419
+   },
+   "experimental_lattice": {
+    "value": 339.60127203093776,
+    "error": 18.542006024929492
+   },
+   "analytic_frequency_as_LO": {
+    "value": 284.53307278361683,
+    "error": -36.52619322239144
+   },
+   "nonanalytic_term_with_eps0": {
+    "value": 313.57976937395455,
+    "error": -7.479496632053724
+   }
+  },
+  "max_robust_error": 0.22049206595454507,
+  "nearest_failing_ablation_error": 7.479496632053724
+ },
+ "born_charge_In": {
+  "reference": 2.6115675,
+  "tolerance": "absolute 0.02",
+  "robustness": {
+   "oracle_like_k8_tensors": {
+    "value": 2.61199,
+    "error": 0.0004224999999999923
+   },
+   "all_from_k6_dfpt": {
+    "value": 2.618263427764,
+    "error": 0.006695927763999965
+   },
+   "k10_tensors": {
+    "value": 2.611145,
+    "error": -0.0004224999999999923
+   },
+   "raw_born_charge_no_sum_rule": {
+    "value": 2.61138,
+    "error": -0.0001875000000000071
+   }
+  },
+  "ablations_failing_this_field": {
+   "gamma_centred_k8": {
+    "value": 2.7744043886784997,
+    "error": 0.16283688867849966
+   },
+   "k4_shifted_tensors": {
+    "value": 2.671885,
+    "error": 0.060317500000000024
+   },
+   "experimental_lattice": {
+    "value": 2.544821262343,
+    "error": -0.06674623765700005
+   }
+  },
+  "max_robust_error": 0.006695927763999965,
+  "nearest_failing_ablation_error": 0.060317500000000024
+ },
+ "eps_inf": {
+  "reference": 11.737220418,
+  "tolerance": "absolute 0.2",
+  "robustness": {
+   "oracle_like_k8_tensors": {
+    "value": 11.71538387,
+    "error": -0.021836547999999567
+   },
+   "all_from_k6_dfpt": {
+    "value": 11.722428058958,
+    "error": -0.014792359041999603
+   },
+   "k10_tensors": {
+    "value": 11.759056966,
+    "error": 0.021836547999999567
+   },
+   "raw_born_charge_no_sum_rule": {
+    "value": 11.71538387,
+    "error": -0.021836547999999567
+   }
+  },
+  "ablations_failing_this_field": {
+   "gamma_centred_k8": {
+    "value": 26.469660886387,
+    "error": 14.732440468387
+   },
+   "k4_shifted_tensors": {
+    "value": 12.251167893,
+    "error": 0.5139474750000002
+   },
+   "experimental_lattice": {
+    "value": 10.949905417573,
+    "error": -0.7873150004270002
+   }
+  },
+  "max_robust_error": 0.021836547999999567,
+  "nearest_failing_ablation_error": 0.5139474750000002
+ },
+ "eps_0": {
+  "reference": 14.944113915138884,
+  "tolerance": "absolute 0.35",
+  "robustness": {
+   "oracle_like_k8_tensors": {
+    "value": 14.923315075030084,
+    "error": -0.02079884010879951
+   },
+   "all_from_k6_dfpt": {
+    "value": 14.945787265072767,
+    "error": 0.0016733499338830171
+   },
+   "k10_tensors": {
+    "value": 14.964912923114737,
+    "error": 0.0207990079758531
+   },
+   "raw_born_charge_no_sum_rule": {
+    "value": 14.921816899664448,
+    "error": -0.022297015474435966
+   }
+  },
+  "ablations_failing_this_field": {
+   "gamma_centred_k8": {
+    "value": 30.087298544272418,
+    "error": 15.143184629133534
+   },
+   "k4_shifted_tensors": {
+    "value": 15.607906704278726,
+    "error": 0.6637927891398423
+   },
+   "experimental_lattice": {
+    "value": 13.768538611848193,
+    "error": -1.1755753032906906
+   },
+   "analytic_frequency_as_LO": {
+    "value": 11.737220418,
+    "error": -3.206893497138884
+   },
+   "nonanalytic_term_with_eps0": {
+    "value": 14.25593889449925,
+    "error": -0.6881750206396333
+   }
+  },
+  "max_robust_error": 0.022297015474435966,
+  "nearest_failing_ablation_error": 0.6637927891398423
+ },
+ "dlnZ_dlnV": {
+  "reference": 0.5958080252905001,
+  "tolerance": "relative 0.15",
+  "robustness": {
+   "oracle_like_k8_tensors": {
+    "value": 0.5963512086583717,
+    "error": 0.0009116751450379875
+   },
+   "all_from_k6_dfpt": {
+    "value": 0.602846509806939,
+    "error": 0.011813342918647446
+   },
+   "k10_tensors": {
+    "value": 0.5952646685660136,
+    "error": -0.0009119661055616873
+   },
+   "half_percent_steps": {
+    "value": 0.5960056125135174,
+    "error": 0.00033162900570343377
+   },
+   "one_sided_compression": {
+    "value": 0.5934834010390102,
+    "error": -0.0039016329972334837
+   },
+   "raw_born_charge_no_sum_rule": {
+    "value": 0.5949659232208769,
+    "error": -0.0014133781920990754
+   }
+  },
+  "ablations_failing_this_field": {
+   "gamma_centred_k8": {
+    "value": 1.8370404251048158,
+    "error": 2.083275731657229
+   },
+   "side_volume_on_cheaper_mesh": {
+    "value": -0.13025549426667024,
+    "error": -1.2186199056368219
+   },
+   "side_volume_on_cheaper_mesh_expansion": {
+    "value": 1.4015305605670232,
+    "error": 1.3523190374679397
+   }
+  },
+  "max_robust_error": 0.011813342918647446,
+  "nearest_failing_ablation_error": 1.2186199056368219
+ },
+ "dln_eps_inf_dlnV": {
+  "reference": 1.777939191462183,
+  "tolerance": "relative 0.2",
+  "robustness": {
+   "oracle_like_k8_tensors": {
+    "value": 1.729220463065057,
+    "error": -0.02740179677183422
+   },
+   "all_from_k6_dfpt": {
+    "value": 1.6234031171010899,
+    "error": -0.08691865003212067
+   },
+   "k10_tensors": {
+    "value": 1.8264381176885947,
+    "error": 0.02727816927559038
+   },
+   "half_percent_steps": {
+    "value": 1.7249219349171767,
+    "error": -0.0298194993392348
+   },
+   "one_sided_compression": {
+    "value": 1.5790105784751791,
+    "error": -0.1118871859860428
+   },
+   "raw_born_charge_no_sum_rule": {
+    "value": 1.729220463065057,
+    "error": -0.02740179677183422
+   }
+  },
+  "ablations_failing_this_field": {
+   "gamma_centred_k8": {
+    "value": 23.590041444750266,
+    "error": 12.26819362441172
+   },
+   "side_volume_on_cheaper_mesh": {
+    "value": 0.03297565616047035,
+    "error": -0.9814528773993946
+   },
+   "side_volume_on_cheaper_mesh_expansion": {
+    "value": 3.092604841815685,
+    "error": 0.7394322914229235
+   }
+  },
+  "max_robust_error": 0.1118871859860428,
+  "nearest_failing_ablation_error": 0.7394322914229235
+ },
+ "gruneisen_TO": {
+  "reference": 1.3246846996322592,
+  "tolerance": "relative 0.1",
+  "robustness": {
+   "half_percent_steps": {
+    "value": 1.3251495490266418,
+    "error": 0.0003509132358150375
+   },
+   "one_sided_compression": {
+    "value": 1.3178037827581592,
+    "error": -0.005194380878717902
+   }
+  },
+  "ablations_failing_this_field": {},
+  "max_robust_error": 0.005194380878717902,
+  "nearest_failing_ablation_error": null
+ },
+ "strained_omega_LO_q_z_cm-1": {
+  "reference": 326.292918227253,
+  "tolerance": "absolute 2.0",
+  "robustness": {
+   "TO_from_k4_dfpt_and_k4_strained": {
+    "value": 326.1457080914305,
+    "error": -0.14721013582249043
+   }
+  },
+  "ablations_failing_this_field": {
+   "strained_swapped_TO_pairing": {
+    "value": 328.3284635450424,
+    "error": 2.035545317789399
+   },
+   "strained_as_cubic": {
+    "value": 321.0592660060083,
+    "error": -5.233652221244711
+   }
+  },
+  "max_robust_error": 0.14721013582249043,
+  "nearest_failing_ablation_error": 2.035545317789399
+ },
+ "strained_omega_LO_q_x_cm-1": {
+  "reference": 330.1927325400668,
+  "tolerance": "absolute 2.0",
+  "robustness": {
+   "TO_from_k4_dfpt_and_k4_strained": {
+    "value": 330.0603925932923,
+    "error": -0.13233994677449346
+   }
+  },
+  "ablations_failing_this_field": {
+   "strained_swapped_TO_pairing": {
+    "value": 328.1687510011956,
+    "error": -2.023981538871226
+   },
+   "strained_as_cubic": {
+    "value": 321.0592660060083,
+    "error": -9.133466534058527
+   }
+  },
+  "max_robust_error": 0.13233994677449346,
+  "nearest_failing_ablation_error": 2.023981538871226
+ },
+ "strained_LO_anisotropy": {
+  "reference": 3.8998143128138167,
+  "tolerance": "absolute 0.8",
+  "robustness": {
+   "TO_from_k4_dfpt_and_k4_strained": {
+    "value": 3.9146845018618137,
+    "error": 0.014870189047996973
+   }
+  },
+  "ablations_failing_this_field": {
+   "strained_scalar_tensors": {
+    "value": 2.0278375631618246,
+    "error": -1.8719767496519921
+   },
+   "strained_swapped_TO_pairing": {
+    "value": -0.15971254384680833,
+    "error": -4.059526856660625
+   },
+   "strained_as_cubic": {
+    "value": 0.0,
+    "error": -3.8998143128138167
+   }
+  },
+  "max_robust_error": 0.014870189047996973,
+  "nearest_failing_ablation_error": 1.8719767496519921
+ },
+ "LOTO_splitting_under_compression": {
+  "reference": "grows",
+  "tolerance": "exact",
+  "robustness": {
+   "oracle_like_k8_tensors": "grows",
+   "all_from_k6_dfpt": "grows",
+   "k10_tensors": "grows",
+   "half_percent_steps": "grows",
+   "one_sided_compression": "grows",
+   "a0_from_zero_pressure": "grows",
+   "a0_from_65Ry_eos": "grows",
+   "raw_born_charge_no_sum_rule": "grows",
+   "TO_from_k4_dfpt_and_k4_strained": "grows"
+  },
+  "ablations_failing_this_field": {
+   "splitting_trend_from_born_charge_only": "shrinks"
+  }
+ }
+}

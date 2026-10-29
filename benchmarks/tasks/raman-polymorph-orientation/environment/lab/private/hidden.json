@@ -1,0 +1,62 @@
+{
+ "thresholds": {
+  "scale_rel": 0.002,
+  "axis_deg": 6.0,
+  "ratio_log": 0.09531017980432493,
+  "lo_rel": 0.008
+ },
+ "reference": {
+  "main_phase": "mp-7456",
+  "minority_phase": "mp-2843",
+  "frequency_scale": 1.0237,
+  "c_axis_lab": [
+   0.5343914630976611,
+   0.5935018467341452,
+   0.6018150231520484
+  ],
+  "faceB_ratio_tt_over_zz": 1.1617472943210205,
+  "faceB_highest_optical_cm1": 461.48791384346373
+ },
+ "sample": {
+  "main_phase": "mp-7456",
+  "minority_phase": "mp-2843",
+  "minority_volume_fraction": 0.03,
+  "euler_zyz_deg": [
+   48.0,
+   53.0,
+   62.0
+  ],
+  "frequency_scale": 1.0237,
+  "laser_true_nm": 532.06,
+  "T_K": 295.0,
+  "width_law": [
+   1.0,
+   0.0065
+  ],
+  "minority_width_factor": 1.3,
+  "intensity_scale": 800000000.0,
+  "background": [
+   150.0,
+   0.1
+  ],
+  "seed": 20261019
+ },
+ "axis_offset_cm1": 2.119722491581342,
+ "orientation_matrix": [
+  [
+   -0.4671050925512734,
+   -0.7044420463608113,
+   0.5343914630976611
+  ],
+  [
+   0.8007717107591775,
+   -0.08074791124839939,
+   0.5935018467341452
+  ],
+  [
+   -0.3749366609982096,
+   0.7051533011679185,
+   0.6018150231520484
+  ]
+ ]
+}

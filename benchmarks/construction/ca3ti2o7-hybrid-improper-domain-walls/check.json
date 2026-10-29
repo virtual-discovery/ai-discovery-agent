@@ -1,0 +1,107 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 7,
+  "task_mb": 0.25,
+  "hidden_values": 4,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 17,
+   "budget": 24,
+   "evaluations": 12,
+   "failed_evaluations": 0,
+   "container_seconds": 71
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "swap_psi_phi_construction",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "antiphase_boundary_as_psi_wall",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "polar_axis_swapped",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "layer_wall_in_bilayer",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "charged_slope_from_short_cells",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "charged_wall_treated_as_converged",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "slope_per_supercell_length",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "short_range_NEP",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "one_wall_per_cell_normalization",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "profile_from_polarization",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "normal_relaxed_cells",
+    "passes_grading": true
+   },
+   {
+    "name": "small_converged_cells_and_long_domain_fit",
+    "passes_grading": true
+   },
+   {
+    "name": "moderate_cells_fit_8_to_16",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T03:42:11Z"
+}

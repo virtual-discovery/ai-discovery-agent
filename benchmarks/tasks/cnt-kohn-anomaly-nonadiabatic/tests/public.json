@@ -1,0 +1,5 @@
+{
+ "task_id": "cnt-kohn-anomaly-nonadiabatic",
+ "solver_budget": 26,
+ "min_report_chars": 400
+}

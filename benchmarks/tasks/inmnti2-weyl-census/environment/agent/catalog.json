@@ -1,0 +1,192 @@
+{
+ "material": "InMnTi2, inverse full-Heusler (space group 216), noncollinear DFT with spin-orbit coupling",
+ "source": "Materials Cloud Archive record hkprp-xw234 (DOI 10.24435/materialscloud:ph-3c, CC BY 4.0): D. Grassano, L. Binci, N. Marzari, input/output files of the InMnTi2 Weyl-semimetal study",
+ "staged_files": {
+  "root": "/app/archive",
+  "files": [
+   "README.txt",
+   "files_description.md",
+   "hubbard/nscf/nscf.in",
+   "hubbard/nscfXYZ/nscf.in",
+   "hubbard/relax/relax.in",
+   "hubbard/relax/relax.out.excerpt",
+   "hubbard/scf/scf.in",
+   "hubbard/scf/scf.out",
+   "hubbard/wannier/InMnTi2.win",
+   "hubbard/wannier/InMnTi2.wout.excerpt",
+   "hubbard/wannier/kubo/InMnTi2.win",
+   "hubbard/wannier/pw2wan.in",
+   "hubbard/wannier/pw2wan.out",
+   "hubbard/wberri/run_wberri.py",
+   "standard/nscf/nscf.in",
+   "standard/nscfXYZ/nscf.in",
+   "standard/scf/scf.in",
+   "standard/scf/scf.out",
+   "standard/wannier/InMnTi2.win",
+   "standard/wannier/InMnTi2.wout.excerpt",
+   "standard/wannier/pw2wan.in",
+   "standard/wannier/pw2wan.out",
+   "standard/wberri/run_wberri.py"
+  ],
+  "note": "Archive files copied unchanged, except *.excerpt (selected lines of large outputs)."
+ },
+ "wannier_models": {
+  "hubbard": {
+   "source": "hubbard/wannier/InMnTi2_hr.dat",
+   "num_wann": 28,
+   "nrpts": 857,
+   "fermi_energy_eV_from_scf": 16.3261
+  },
+  "standard": {
+   "source": "standard/wannier/InMnTi2_hr.dat",
+   "num_wann": 40,
+   "nrpts": 1957,
+   "fermi_energy_eV_from_scf": 15.6841
+  }
+ },
+ "dft_runs_purchasable": [
+  "hubbard/nscf",
+  "hubbard/nscfXYZ",
+  "standard/nscf",
+  "standard/nscfXYZ"
+ ],
+ "kubo_runs_purchasable": {
+  "folders": [
+   "10",
+   "30",
+   "58",
+   "120",
+   "210",
+   "300"
+  ],
+  "location": "hubbard/wannier/kubo/<folder>/",
+  "components": {
+   "10": [
+    "A_xy",
+    "A_yz",
+    "A_zx",
+    "S_xx",
+    "S_xy",
+    "S_xz",
+    "S_yy",
+    "S_yz",
+    "S_zz",
+    "jdos"
+   ],
+   "30": [
+    "A_xy",
+    "A_yz",
+    "A_zx",
+    "S_xx",
+    "S_xy",
+    "S_xz",
+    "S_yy",
+    "S_yz",
+    "S_zz"
+   ],
+   "58": [
+    "A_xy",
+    "A_yz",
+    "A_zx",
+    "S_xx",
+    "S_xy",
+    "S_xz",
+    "S_yy",
+    "S_yz",
+    "S_zz"
+   ],
+   "120": [
+    "A_xy",
+    "A_yz",
+    "A_zx",
+    "S_avg",
+    "S_xx",
+    "S_xy",
+    "S_xz",
+    "S_yy",
+    "S_yz",
+    "S_zz",
+    "jdos"
+   ],
+   "210": [
+    "A_xy",
+    "A_yz",
+    "A_zx",
+    "S_avg",
+    "S_xx",
+    "S_xy",
+    "S_xz",
+    "S_yy",
+    "S_yz",
+    "S_zz",
+    "jdos"
+   ],
+   "300": [
+    "A_xy",
+    "A_yz",
+    "A_zx",
+    "S_avg",
+    "S_xx",
+    "S_xy",
+    "S_xz",
+    "S_yy",
+    "S_yz",
+    "S_zz",
+    "jdos"
+   ]
+  },
+  "served_range": "rows with omega <= 1.5 eV of each archived file (columns as in the file)"
+ },
+ "wannier_tools_runs_purchasable": {
+  "hubbard/find": [
+   "hubbard/wtool/wt_find.in",
+   "hubbard/wtool/find/Nodes.dat",
+   "hubbard/wtool/find/WT.out"
+  ],
+  "hubbard/weyl": [
+   "hubbard/wtool/wt_weyl.in",
+   "hubbard/wtool/weyl/WT.out"
+  ],
+  "standard/find": [
+   "standard/wtool/find/wt_find.in",
+   "standard/wtool/find/Nodes.dat"
+  ],
+  "standard/weyl": [
+   "standard/wtool/weyl/wt_weyl.in",
+   "standard/wtool/weyl/Cherns.dat"
+  ]
+ },
+ "costs": {
+  "wannier_bands": "1 (<= 500 k-points)",
+  "gap_scan": "1 (mesh <= 24) or 2 (mesh 25-36)",
+  "find_nodes": "1 (<= 8 seeds)",
+  "berry_flux": "1 (<= 8 spheres)",
+  "dft_bands": 3,
+  "kubo": 2,
+  "wannier_tools": 2
+ },
+ "budget": 28,
+ "conventions": {
+  "k_cart_invA": "Cartesian k in 1/Angstrom including 2 pi, axes of CELL_PARAMETERS",
+  "k_frac": "coordinates in the reciprocal basis b_i of CELL_PARAMETERS (k_cart = k_frac @ B)",
+  "reciprocal_basis_B_invA": [
+   [
+    -1.00255317,
+    1.00255317,
+    1.00255317
+   ],
+   [
+    1.00255317,
+    -1.00255317,
+    1.00255317
+   ],
+   [
+    1.00255317,
+    1.00255317,
+    -1.00255317
+   ]
+  ],
+  "wannier_band_numbering": "Wannier bands numbered from 1 (lowest Wannier band) in each model",
+  "energies": "all lab energies are absolute eV on the scale of the model / run that produced them"
+ }
+}

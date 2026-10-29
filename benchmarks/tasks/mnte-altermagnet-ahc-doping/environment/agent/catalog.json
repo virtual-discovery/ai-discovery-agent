@@ -1,0 +1,142 @@
+{
+ "material": "hexagonal MnTe (NiAs type, P6_3/mmc), HSE06 + spin-orbit coupling (VASP 5.4.4), in-plane Neel order",
+ "source": "Zenodo record 18863304 (DOI 10.5281/zenodo.18863304, CC BY 4.0): data for K. P. Kluczyk et al., Phys. Rev. B 110, 155201 (2024): 1_vasp, 2_wannier90, 3_wannsymm, 4_wtools of dft_data.zip and fig6_script.zip",
+ "staged_files": {
+  "root": "/app/archive",
+  "files": [
+   "1_vasp/IBZKPT",
+   "1_vasp/INCAR",
+   "1_vasp/KPOINTS",
+   "1_vasp/OSZICAR",
+   "1_vasp/OUTCAR",
+   "1_vasp/PCDAT",
+   "1_vasp/POSCAR",
+   "1_vasp/XDATCAR",
+   "1_vasp/log",
+   "1_vasp/wannier90.win",
+   "1_vasp/wannier90.wout",
+   "2_wannier90/wannier90.eig",
+   "2_wannier90/wannier90.nnkp",
+   "2_wannier90/wannier90.win",
+   "2_wannier90/wannier90.wout",
+   "2_wannier90/wannier90_band.dat",
+   "2_wannier90/wannier90_band.gnu",
+   "2_wannier90/wannier90_band.kpt",
+   "2_wannier90/wannier90_band.labelinfo.dat",
+   "2_wannier90/wannier90_centres.xyz",
+   "3_wannsymm/POSCAR",
+   "3_wannsymm/bands_ori.dat",
+   "3_wannsymm/bands_symmed.dat",
+   "3_wannsymm/symmetries.dat",
+   "3_wannsymm/wannsymm.in",
+   "3_wannsymm/wannsymm.out",
+   "4_wtools/WT.out",
+   "4_wtools/sigma_ahc.gnu",
+   "4_wtools/wt.in",
+   "fig6_script/0_0.450.dat",
+   "fig6_script/90_0.450.dat",
+   "fig6_script/Berrycurvature.gnu"
+  ],
+  "note": "archive files unchanged, except 4_wtools/WT.out without its k-point progress lines (\"ik/knv3 ...\"); not staged: 2_wannier90/wannier90_hr.dat (evaluated by the service) and 4_wtools/sigma_ahc.txt (withheld)"
+ },
+ "wannier_model": {
+  "source": "2_wannier90/wannier90_hr.dat",
+  "num_wann": 32,
+  "nrpts": 387,
+  "basis": "Mn d (dz2, dxz, dyz, dx2-y2, dxy) on Mn1, Mn2, then Te p (pz, px, py) on Te1, Te2, spin up (functions 1-16) then spin down (17-32), spin quantised along Cartesian z",
+  "neel": {
+   "+y": "archived state (MAGMOM 0 4 0 / 0 -4 0)",
+   "-y": "time reverse of the archived Hamiltonian, H(R) -> (i s_y) H(R)* (i s_y)^dagger: all moments reversed"
+  }
+ },
+ "requests": {
+  "bands": {
+   "format": {
+    "kind": "bands",
+    "k_frac or k_cart_invA": "[[x, y, z], ...]",
+    "neel": "+y (default) or -y",
+    "spin": "false (default; <= 1000 k-points) or true (<= 500 k-points)"
+   },
+   "cost": 1
+  },
+  "berry_curvature": {
+   "format": {
+    "kind": "berry_curvature",
+    "k_frac or k_cart_invA": "[[x, y, z], ...] (<= 500)",
+    "neel": "+y or -y"
+   },
+   "cost": 1
+  },
+  "ahc": {
+   "format": {
+    "kind": "ahc",
+    "mesh": "N, one of 48, 72, 100, 150, 200, 300, 400 (N x N x N/2 mesh)",
+    "mu_eV": "[...] (1-500 chemical potentials, 5.05-8.55 eV)",
+    "kT_eV": "0-0.025 (0 = step occupation)",
+    "neel": "+y or -y"
+   },
+   "cost": {
+    "48": 1,
+    "72": 1,
+    "100": 1,
+    "150": 2,
+    "200": 3,
+    "300": 5,
+    "400": 8
+   }
+  },
+  "electron_count": {
+   "format": {
+    "kind": "electron_count",
+    "mesh": "N as for ahc",
+    "mu_eV": "[...]",
+    "kT_eV": "0-0.025"
+   },
+   "cost": 1
+  }
+ },
+ "budget": 32,
+ "request_size_limit": "a request body may not exceed 65536 bytes (round coordinates; about 1000 k-points fit)",
+ "conventions": {
+  "cell_A": [
+   [
+    4.14,
+    0.0,
+    0.0
+   ],
+   [
+    -2.07,
+    3.585345171667576,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    6.71
+   ]
+  ],
+  "reciprocal_basis_B_invA": [
+   [
+    1.51767761,
+    0.87623158,
+    0.0
+   ],
+   [
+    0.0,
+    1.75246315,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.93639125
+   ]
+  ],
+  "k_frac": "coordinates in the reciprocal basis b_i of the POSCAR cell (k_cart = k_frac @ B)",
+  "k_cart_invA": "Cartesian k in 1/Angstrom including 2 pi, axes of the POSCAR cell",
+  "energies": "absolute eV on the scale of the Wannier Hamiltonian (the VASP scale)",
+  "mesh": "Gamma-centred N x N x N/2 mesh of fractional coordinates (i/N, j/N, l/(N/2))",
+  "berry_curvature": "Omega_n = curl_k i<u_n|grad_k u_n> (Angstrom^2), Kubo formula, velocity in the atomic (Wannier-centre) gauge with the centres at the atomic positions, as WannierTools 2.6.1 does",
+  "ahc": "sigma_ab = (e^2/hbar) (1/(N_k V)) sum_k sum_n f(E_n - mu) Omega^c_n in S/cm, (a, b, c) cyclic, Fermi-Dirac f with the given kT; electrons_per_cell counts the 32 Wannier bands"
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "ablations": {
+  "mesh_100": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -171.47149531821378,
+    "6.0e21": 111.01425697019349
+   },
+   "sigma_xy_sign_changes": 8,
+   "sign_change_hole_density_cm3": 4.1993938353834746e+21,
+   "hole_density_0p30_below_vbm_cm3": 1.3116621608184012e+21
+  },
+  "mesh_150": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -50.50304047396819,
+    "6.0e21": 113.8199441342312
+   },
+   "sigma_xy_sign_changes": 3,
+   "sign_change_hole_density_cm3": 4.160519463003292e+21,
+   "hole_density_0p30_below_vbm_cm3": 1.311734194489237e+21
+  },
+  "mesh_200": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -68.41540715572319,
+    "6.0e21": 114.26123175235385
+   },
+   "sigma_xy_sign_changes": 1,
+   "sign_change_hole_density_cm3": 4.1135474096727135e+21,
+   "hole_density_0p30_below_vbm_cm3": 1.3130039561936542e+21
+  },
+  "vbm_from_band_path": 1.4181141682362733e+21,
+  "vbm_from_dft_grid": 1.49202357560914e+21,
+  "vbm_from_outcar_efermi": 7.359874885865215e+20,
+  "spin_degeneracy_twice": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -70.06417902915048,
+    "6.0e21": -77.03715090026473
+   },
+   "sign_change_hole_density_cm3": 8.341613975832862e+21,
+   "hole_density_0p30_below_vbm_cm3": 2.6259565471814255e+21
+  },
+  "raw_forbidden_components": {
+   "yz": 3589.033503152226,
+   "zx": 17346.92443228638
+  },
+  "raw_forbidden_components_deep": {
+   "yz": 3589.033503152226,
+   "zx": 17346.92443228638
+  },
+  "symmetries_dat_literal": {
+   "neel_y": [],
+   "neel_x": []
+  },
+  "inplane_isotropic": {
+   "neel_y": [
+    "xy"
+   ],
+   "neel_x": [
+    "xy"
+   ]
+  },
+  "electron_doped_from_model": -12.59822141403336,
+  "room_temperature_smearing": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -63.74908429637151,
+    "6.0e21": 110.96008181840868
+   },
+   "sigma_xy_sign_changes": 1
+  },
+  "wt_out_100K_smearing": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -53.67840576183006,
+    "6.0e21": 113.74719992127682
+   },
+   "sigma_xy_sign_changes": 1
+  }
+ },
+ "robustness": {
+  "mesh_300": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -51.60102883425541,
+    "6.0e21": 114.36438333930525
+   },
+   "sigma_xy_sign_changes": 1,
+   "sign_change_hole_density_cm3": 4.132344150092902e+21,
+   "hole_density_0p30_below_vbm_cm3": 1.3129491810093719e+21
+  },
+  "mesh_400_model_values": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -49.97241443945742,
+    "6.0e21": 114.1027535425126
+   },
+   "sign_change_hole_density_cm3": 4.138219316000628e+21
+  },
+  "wt_in_efermi_as_vbm": 1.3248130763285211e+21,
+  "step_occupation": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -48.370047551645634,
+    "6.0e21": 114.1131484160751
+   },
+   "sigma_xy_sign_changes": 1
+  }
+ }
+}

@@ -1,0 +1,2750 @@
+{
+ "source": "A. Fedrigucci, N. Marzari, P. Ricci, Materials Cloud Archive record gpxwh-dx645 (DOI 10.24435/materialscloud:9k-09, CC BY 4.0); Quantum ESPRESSO, PBEsol, SSSP efficiency pseudopotentials",
+ "units": "Energies are reported as printed by Quantum ESPRESSO, in Ry (1 Ry = 13.605693122994 eV). Cells in Angstrom, positions in crystal (fractional) coordinates, forces in Ry/bohr, pressure in kbar.",
+ "what_a_purchase_returns": "The released run: the archive folder, the run header (code version, start time, MPI processes, wall time), the input settings (calculation type, cutoffs, k-points, smearing, spin, convergence thresholds, pseudopotentials), the cell and starting positions, and the output (final and last SCF total energies, number of SCF cycles, relaxation message, final total force, magnetization, Fermi energy, pressure, final positions and, for vc-relax, the final cell).",
+ "archive_readme_verbatim": "# DFT Calculations Repository\n\nThis repository contains the results of density functional theory (DFT) calculations performed using Quantum ESPRESSO. It includes input (`pwscf.in`) and output (`pwscf.out`) files generated from DFT calculations for 21 inorganic crystal structures identified as potential plasma-facing materials (PFMs).\n\n## Data Structure\n\n### SBE: Surface Binding Energy Calculations\n- **single_atoms**: Contains calculations for single atoms needed to compute the surface binding energy. To maintain consistency in terms of energy cutoff (ecut), the single atom energy for each component is calculated using the highest ecut among them, which is also applied to compute the material energy.\n- **unitcell**: Contains the conventional unit cells used to compute the surface energy for each structure.\n- **slab**: Contains reference slabs generated to identify the lowest surface energy configuration. Different Miller indices are reported using the hkl notation `hkl`, and slabs with the same hkl but different terminations are labeled with `hkl_tx`, where `x` is a number associated with that termination.\n- **slab_supercell**: Contains reference pristine slabs in a supercell configuration. For each structure, one Miller index is selected (hkl) along with all possible terminations (alpha). The selection is based on identifying the slab with the lowest surface energy for a specific Miller index and termination.\n- **slab_supercell_surface_vacancy**: Contains data on structures with a single vacancy created from the `slab_supercell` configurations. The vacancy is selected among all inequivalent atomic sites within 1 angstrom of the atom at the top. For each vacancy, a surface binding energy can be computed. The Miller index and termination are indicated using the same convention as in the `slab_supercell`, while subfolders report the selected species `s`, a number associated with the specific inequivalent site `x`, and the distance from the top atom `0.y` (`s_x_0.y)`\n\n### H-IFE: Hydrogen Interstitial Formation Energy Calculations\n- **hydrogen**: Contains reference structures for hydrogen, both molecular and single atoms.\n- **supercell**: Contains bulk structures in a supercell configuration.\n- **supercell_1H_int_inequivalent_sites**: Contains bulk structures with one hydrogen interstitial per structure. All inequivalent interstitial sites found for each structure are reported in a separate folder, with a number `x` identifying that specific site in the generation process.\n\n",
+ "purchase_cost": 1,
+ "budget": 61,
+ "hydrogen_references": {
+  "H2_molecule": "H-IFE/H2",
+  "H_atom": "H-IFE/H"
+ },
+ "materials": {
+  "BC2N-h-160": {
+   "formula": "BC2N",
+   "space_group_number": 160,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/BC2N-h-160/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/BC2N-h-160/site-1",
+      "generation_number": 1
+     },
+     {
+      "id": "H-IFE/BC2N-h-160/site-6",
+      "generation_number": 6
+     },
+     {
+      "id": "H-IFE/BC2N-h-160/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/BC2N-h-160/site-23",
+      "generation_number": 23
+     },
+     {
+      "id": "H-IFE/BC2N-h-160/site-25",
+      "generation_number": 25
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/BC2N-h-160/unitcell",
+    "isolated_atoms": {
+     "B": "SBE/BC2N-h-160/atom/B",
+     "C": "SBE/BC2N-h-160/atom/C",
+     "N": "SBE/BC2N-h-160/atom/N"
+    },
+    "slabs": [
+     {
+      "id": "SBE/BC2N-h-160/slab/001_t1",
+      "miller_index": "001",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/001_t2",
+      "miller_index": "001",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/001_t3",
+      "miller_index": "001",
+      "termination": "t3"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/001_t4",
+      "miller_index": "001",
+      "termination": "t4"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/10-1_t1",
+      "miller_index": "10-1",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/10-1_t2",
+      "miller_index": "10-1",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/101_t1",
+      "miller_index": "101",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/101_t2",
+      "miller_index": "101",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/101_t3",
+      "miller_index": "101",
+      "termination": "t3"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/101_t4",
+      "miller_index": "101",
+      "termination": "t4"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/111_t1",
+      "miller_index": "111",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab/111_t2",
+      "miller_index": "111",
+      "termination": "t2"
+     }
+    ],
+    "selected_facet": "001",
+    "slab_supercells": [
+     {
+      "id": "SBE/BC2N-h-160/slab_supercell/001_t1",
+      "termination": "001_t1"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab_supercell/001_t2",
+      "termination": "001_t2"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab_supercell/001_t3",
+      "termination": "001_t3"
+     },
+     {
+      "id": "SBE/BC2N-h-160/slab_supercell/001_t4",
+      "termination": "001_t4"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/BC2N-h-160/vacancy/001_t1/B_0_0.0",
+      "slab_supercell": "SBE/BC2N-h-160/slab_supercell/001_t1",
+      "removed_element": "B",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/BC2N-h-160/vacancy/001_t1/N_9_0.0",
+      "slab_supercell": "SBE/BC2N-h-160/slab_supercell/001_t1",
+      "removed_element": "N",
+      "site_number": 9,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/BC2N-h-160/vacancy/001_t2/B_0_0.25",
+      "slab_supercell": "SBE/BC2N-h-160/slab_supercell/001_t2",
+      "removed_element": "B",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.25
+     },
+     {
+      "id": "SBE/BC2N-h-160/vacancy/001_t2/C_3_0.0",
+      "slab_supercell": "SBE/BC2N-h-160/slab_supercell/001_t2",
+      "removed_element": "C",
+      "site_number": 3,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/BC2N-h-160/vacancy/001_t2/C_4_0.18",
+      "slab_supercell": "SBE/BC2N-h-160/slab_supercell/001_t2",
+      "removed_element": "C",
+      "site_number": 4,
+      "depth_below_top_atom_A": 0.18
+     },
+     {
+      "id": "SBE/BC2N-h-160/vacancy/001_t2/N_9_0.0",
+      "slab_supercell": "SBE/BC2N-h-160/slab_supercell/001_t2",
+      "removed_element": "N",
+      "site_number": 9,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/BC2N-h-160/vacancy/001_t3/C_3_0.0",
+      "slab_supercell": "SBE/BC2N-h-160/slab_supercell/001_t3",
+      "removed_element": "C",
+      "site_number": 3,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/BC2N-h-160/vacancy/001_t4/B_1_0.0",
+      "slab_supercell": "SBE/BC2N-h-160/slab_supercell/001_t4",
+      "removed_element": "B",
+      "site_number": 1,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/BC2N-h-160/vacancy/001_t4/C_3_0.0",
+      "slab_supercell": "SBE/BC2N-h-160/slab_supercell/001_t4",
+      "removed_element": "C",
+      "site_number": 3,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/BC2N-h-160/vacancy/001_t4/N_10_0.47",
+      "slab_supercell": "SBE/BC2N-h-160/slab_supercell/001_t4",
+      "removed_element": "N",
+      "site_number": 10,
+      "depth_below_top_atom_A": 0.47
+     }
+    ]
+   }
+  },
+  "BN-c-216": {
+   "formula": "BN",
+   "space_group_number": 216,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/BN-c-216/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/BN-c-216/site-5",
+      "generation_number": 5
+     },
+     {
+      "id": "H-IFE/BN-c-216/site-6",
+      "generation_number": 6
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/BN-c-216/unitcell",
+    "isolated_atoms": {
+     "B": "SBE/BN-c-216/atom/B",
+     "N": "SBE/BN-c-216/atom/N"
+    },
+    "slabs": [
+     {
+      "id": "SBE/BN-c-216/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/BN-c-216/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/BN-c-216/slab/111_t1",
+      "miller_index": "111",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/BN-c-216/slab/111_t2",
+      "miller_index": "111",
+      "termination": "t2"
+     }
+    ],
+    "selected_facet": "111",
+    "slab_supercells": [
+     {
+      "id": "SBE/BN-c-216/slab_supercell/111_t1",
+      "termination": "111_t1"
+     },
+     {
+      "id": "SBE/BN-c-216/slab_supercell/111_t2",
+      "termination": "111_t2"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/BN-c-216/vacancy/111_t1/B_4_0.0",
+      "slab_supercell": "SBE/BN-c-216/slab_supercell/111_t1",
+      "removed_element": "B",
+      "site_number": 4,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/BN-c-216/vacancy/111_t1/N_5_0.0",
+      "slab_supercell": "SBE/BN-c-216/slab_supercell/111_t1",
+      "removed_element": "N",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/BN-c-216/vacancy/111_t2/B_0_0.0",
+      "slab_supercell": "SBE/BN-c-216/slab_supercell/111_t2",
+      "removed_element": "B",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/BN-c-216/vacancy/111_t2/N_5_0.0",
+      "slab_supercell": "SBE/BN-c-216/slab_supercell/111_t2",
+      "removed_element": "N",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.0
+     }
+    ]
+   }
+  },
+  "C-c-227": {
+   "formula": "C (diamond)",
+   "space_group_number": 227,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/C-c-227/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/C-c-227/site-4",
+      "generation_number": 4
+     },
+     {
+      "id": "H-IFE/C-c-227/site-6",
+      "generation_number": 6
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/C-c-227/unitcell",
+    "isolated_atoms": {
+     "C": "SBE/C-c-227/atom/C"
+    },
+    "slabs": [
+     {
+      "id": "SBE/C-c-227/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/C-c-227/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/C-c-227/slab/111_t1",
+      "miller_index": "111",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/C-c-227/slab/111_t2",
+      "miller_index": "111",
+      "termination": "t2"
+     }
+    ],
+    "selected_facet": "110",
+    "slab_supercells": [
+     {
+      "id": "SBE/C-c-227/slab_supercell/110",
+      "termination": "110"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/C-c-227/vacancy/110/C_0_0.0",
+      "slab_supercell": "SBE/C-c-227/slab_supercell/110",
+      "removed_element": "C",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     }
+    ]
+   }
+  },
+  "C-h-194": {
+   "formula": "C (graphite)",
+   "space_group_number": 194,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/C-h-194/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/C-h-194/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/C-h-194/site-23",
+      "generation_number": 23
+     },
+     {
+      "id": "H-IFE/C-h-194/site-39",
+      "generation_number": 39
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/C-h-194/unitcell",
+    "isolated_atoms": {
+     "C": "SBE/C-h-194/atom/C"
+    },
+    "slabs": [
+     {
+      "id": "SBE/C-h-194/slab/001",
+      "miller_index": "001",
+      "termination": null
+     },
+     {
+      "id": "SBE/C-h-194/slab/100_t1",
+      "miller_index": "100",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/C-h-194/slab/100_t2",
+      "miller_index": "100",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/C-h-194/slab/101_t1",
+      "miller_index": "101",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/C-h-194/slab/101_t2",
+      "miller_index": "101",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/C-h-194/slab/101_t3",
+      "miller_index": "101",
+      "termination": "t3"
+     },
+     {
+      "id": "SBE/C-h-194/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/C-h-194/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "001",
+    "slab_supercells": [
+     {
+      "id": "SBE/C-h-194/slab_supercell/001",
+      "termination": "001"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/C-h-194/vacancy/001/C_1_0.0",
+      "slab_supercell": "SBE/C-h-194/slab_supercell/001",
+      "removed_element": "C",
+      "site_number": 1,
+      "depth_below_top_atom_A": 0.0
+     }
+    ]
+   }
+  },
+  "C3N4-h-176": {
+   "formula": "C3N4",
+   "space_group_number": 176,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/C3N4-h-176/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/C3N4-h-176/site-6",
+      "generation_number": 6
+     },
+     {
+      "id": "H-IFE/C3N4-h-176/site-15",
+      "generation_number": 15
+     },
+     {
+      "id": "H-IFE/C3N4-h-176/site-16",
+      "generation_number": 16
+     },
+     {
+      "id": "H-IFE/C3N4-h-176/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/C3N4-h-176/site-23",
+      "generation_number": 23
+     },
+     {
+      "id": "H-IFE/C3N4-h-176/site-25",
+      "generation_number": 25
+     },
+     {
+      "id": "H-IFE/C3N4-h-176/site-33",
+      "generation_number": 33
+     },
+     {
+      "id": "H-IFE/C3N4-h-176/site-45",
+      "generation_number": 45
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/C3N4-h-176/unitcell",
+    "isolated_atoms": {
+     "C": "SBE/C3N4-h-176/atom/C",
+     "N": "SBE/C3N4-h-176/atom/N"
+    },
+    "slabs": [
+     {
+      "id": "SBE/C3N4-h-176/slab/001",
+      "miller_index": "001",
+      "termination": null
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/100_t1",
+      "miller_index": "100",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/100_t2",
+      "miller_index": "100",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/100_t3",
+      "miller_index": "100",
+      "termination": "t3"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/100_t4",
+      "miller_index": "100",
+      "termination": "t4"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/100_t5",
+      "miller_index": "100",
+      "termination": "t5"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/100_t6",
+      "miller_index": "100",
+      "termination": "t6"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/100_t7",
+      "miller_index": "100",
+      "termination": "t7"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/101_t1",
+      "miller_index": "101",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/101_t2",
+      "miller_index": "101",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/101_t3",
+      "miller_index": "101",
+      "termination": "t3"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/101_t4",
+      "miller_index": "101",
+      "termination": "t4"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/101_t5",
+      "miller_index": "101",
+      "termination": "t5"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/101_t6",
+      "miller_index": "101",
+      "termination": "t6"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/110_t1",
+      "miller_index": "110",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/110_t2",
+      "miller_index": "110",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/110_t3",
+      "miller_index": "110",
+      "termination": "t3"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/110_t4",
+      "miller_index": "110",
+      "termination": "t4"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/110_t5",
+      "miller_index": "110",
+      "termination": "t5"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/111_t1",
+      "miller_index": "111",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/111_t2",
+      "miller_index": "111",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/111_t3",
+      "miller_index": "111",
+      "termination": "t3"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab/111_t4",
+      "miller_index": "111",
+      "termination": "t4"
+     }
+    ],
+    "selected_facet": "100",
+    "slab_supercells": [
+     {
+      "id": "SBE/C3N4-h-176/slab_supercell/100_t1",
+      "termination": "100_t1"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab_supercell/100_t2",
+      "termination": "100_t2"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab_supercell/100_t3",
+      "termination": "100_t3"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab_supercell/100_t4",
+      "termination": "100_t4"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab_supercell/100_t5",
+      "termination": "100_t5"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab_supercell/100_t6",
+      "termination": "100_t6"
+     },
+     {
+      "id": "SBE/C3N4-h-176/slab_supercell/100_t7",
+      "termination": "100_t7"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t1/C_3_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t1",
+      "removed_element": "C",
+      "site_number": 3,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t1/N_13_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t1",
+      "removed_element": "N",
+      "site_number": 13,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t2/C_3_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t2",
+      "removed_element": "C",
+      "site_number": 3,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t2/C_4_0.49",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t2",
+      "removed_element": "C",
+      "site_number": 4,
+      "depth_below_top_atom_A": 0.49
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t2/N_14_0.55",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t2",
+      "removed_element": "N",
+      "site_number": 14,
+      "depth_below_top_atom_A": 0.55
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t2/N_15_0.72",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t2",
+      "removed_element": "N",
+      "site_number": 15,
+      "depth_below_top_atom_A": 0.72
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t2/N_19_0.83",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t2",
+      "removed_element": "N",
+      "site_number": 19,
+      "depth_below_top_atom_A": 0.83
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t2/N_21_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t2",
+      "removed_element": "N",
+      "site_number": 21,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t2/N_24_0.34",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t2",
+      "removed_element": "N",
+      "site_number": 24,
+      "depth_below_top_atom_A": 0.34
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t3/C_2_0.82",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t3",
+      "removed_element": "C",
+      "site_number": 2,
+      "depth_below_top_atom_A": 0.82
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t3/C_4_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t3",
+      "removed_element": "C",
+      "site_number": 4,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t3/N_14_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t3",
+      "removed_element": "N",
+      "site_number": 14,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t3/N_19_0.75",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t3",
+      "removed_element": "N",
+      "site_number": 19,
+      "depth_below_top_atom_A": 0.75
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t4/C_2_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t4",
+      "removed_element": "C",
+      "site_number": 2,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t4/N_14_0.7",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t4",
+      "removed_element": "N",
+      "site_number": 14,
+      "depth_below_top_atom_A": 0.7
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t4/N_15_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t4",
+      "removed_element": "N",
+      "site_number": 15,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t4/N_19_0.57",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t4",
+      "removed_element": "N",
+      "site_number": 19,
+      "depth_below_top_atom_A": 0.57
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t5/C_2_0.26",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t5",
+      "removed_element": "C",
+      "site_number": 2,
+      "depth_below_top_atom_A": 0.26
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t5/N_15_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t5",
+      "removed_element": "N",
+      "site_number": 15,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t6/C_2_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t6",
+      "removed_element": "C",
+      "site_number": 2,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t6/N_22_0.73",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t6",
+      "removed_element": "N",
+      "site_number": 22,
+      "depth_below_top_atom_A": 0.73
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t6/N_23_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t6",
+      "removed_element": "N",
+      "site_number": 23,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t6/N_27_0.17",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t6",
+      "removed_element": "N",
+      "site_number": 27,
+      "depth_below_top_atom_A": 0.17
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t7/C_0_0.99",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t7",
+      "removed_element": "C",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.99
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t7/C_1_0.54",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t7",
+      "removed_element": "C",
+      "site_number": 1,
+      "depth_below_top_atom_A": 0.54
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t7/C_5_0.22",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t7",
+      "removed_element": "C",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.22
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t7/N_12_0.33",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t7",
+      "removed_element": "N",
+      "site_number": 12,
+      "depth_below_top_atom_A": 0.33
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t7/N_17_0.05",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t7",
+      "removed_element": "N",
+      "site_number": 17,
+      "depth_below_top_atom_A": 0.05
+     },
+     {
+      "id": "SBE/C3N4-h-176/vacancy/100_t7/N_18_0.0",
+      "slab_supercell": "SBE/C3N4-h-176/slab_supercell/100_t7",
+      "removed_element": "N",
+      "site_number": 18,
+      "depth_below_top_atom_A": 0.0
+     }
+    ]
+   }
+  },
+  "Cr-c-229": {
+   "formula": "Cr",
+   "space_group_number": 229,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/Cr-c-229/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/Cr-c-229/site-6",
+      "generation_number": 6
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/Cr-c-229/unitcell",
+    "isolated_atoms": {
+     "Cr": "SBE/Cr-c-229/atom/Cr"
+    },
+    "slabs": [
+     {
+      "id": "SBE/Cr-c-229/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/Cr-c-229/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/Cr-c-229/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "110",
+    "slab_supercells": [
+     {
+      "id": "SBE/Cr-c-229/slab_supercell/110",
+      "termination": "110"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/Cr-c-229/vacancy/110/Cr_0_0.0",
+      "slab_supercell": "SBE/Cr-c-229/slab_supercell/110",
+      "removed_element": "Cr",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     }
+    ]
+   }
+  },
+  "HfB2-h-191": {
+   "formula": "HfB2",
+   "space_group_number": 191,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/HfB2-h-191/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/HfB2-h-191/site-6",
+      "generation_number": 6
+     },
+     {
+      "id": "H-IFE/HfB2-h-191/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/HfB2-h-191/site-27",
+      "generation_number": 27
+     },
+     {
+      "id": "H-IFE/HfB2-h-191/site-32",
+      "generation_number": 32
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/HfB2-h-191/unitcell",
+    "isolated_atoms": {
+     "B": "SBE/HfB2-h-191/atom/B",
+     "Hf": "SBE/HfB2-h-191/atom/Hf"
+    },
+    "slabs": [
+     {
+      "id": "SBE/HfB2-h-191/slab/001",
+      "miller_index": "001",
+      "termination": null
+     },
+     {
+      "id": "SBE/HfB2-h-191/slab/100_t1",
+      "miller_index": "100",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/HfB2-h-191/slab/100_t2",
+      "miller_index": "100",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/HfB2-h-191/slab/101_t1",
+      "miller_index": "101",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/HfB2-h-191/slab/101_t2",
+      "miller_index": "101",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/HfB2-h-191/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/HfB2-h-191/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "101",
+    "slab_supercells": [
+     {
+      "id": "SBE/HfB2-h-191/slab_supercell/101_t1",
+      "termination": "101_t1"
+     },
+     {
+      "id": "SBE/HfB2-h-191/slab_supercell/101_t2",
+      "termination": "101_t2"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/HfB2-h-191/vacancy/101_t1/B_13_0.32",
+      "slab_supercell": "SBE/HfB2-h-191/slab_supercell/101_t1",
+      "removed_element": "B",
+      "site_number": 13,
+      "depth_below_top_atom_A": 0.32
+     },
+     {
+      "id": "SBE/HfB2-h-191/vacancy/101_t1/B_6_0.0",
+      "slab_supercell": "SBE/HfB2-h-191/slab_supercell/101_t1",
+      "removed_element": "B",
+      "site_number": 6,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/HfB2-h-191/vacancy/101_t1/Hf_4_0.0",
+      "slab_supercell": "SBE/HfB2-h-191/slab_supercell/101_t1",
+      "removed_element": "Hf",
+      "site_number": 4,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/HfB2-h-191/vacancy/101_t2/B_5_0.0",
+      "slab_supercell": "SBE/HfB2-h-191/slab_supercell/101_t2",
+      "removed_element": "B",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/HfB2-h-191/vacancy/101_t2/B_6_0.52",
+      "slab_supercell": "SBE/HfB2-h-191/slab_supercell/101_t2",
+      "removed_element": "B",
+      "site_number": 6,
+      "depth_below_top_atom_A": 0.52
+     },
+     {
+      "id": "SBE/HfB2-h-191/vacancy/101_t2/Hf_0_0.24",
+      "slab_supercell": "SBE/HfB2-h-191/slab_supercell/101_t2",
+      "removed_element": "Hf",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.24
+     }
+    ]
+   }
+  },
+  "HfC-c-225": {
+   "formula": "HfC",
+   "space_group_number": 225,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/HfC-c-225/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/HfC-c-225/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/HfC-c-225/site-18",
+      "generation_number": 18
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/HfC-c-225/unitcell",
+    "isolated_atoms": {
+     "C": "SBE/HfC-c-225/atom/C",
+     "Hf": "SBE/HfC-c-225/atom/Hf"
+    },
+    "slabs": [
+     {
+      "id": "SBE/HfC-c-225/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/HfC-c-225/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/HfC-c-225/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "100",
+    "slab_supercells": [
+     {
+      "id": "SBE/HfC-c-225/slab_supercell/100",
+      "termination": "100"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/HfC-c-225/vacancy/100/C_7_0.0",
+      "slab_supercell": "SBE/HfC-c-225/slab_supercell/100",
+      "removed_element": "C",
+      "site_number": 7,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/HfC-c-225/vacancy/100/Hf_1_0.1",
+      "slab_supercell": "SBE/HfC-c-225/slab_supercell/100",
+      "removed_element": "Hf",
+      "site_number": 1,
+      "depth_below_top_atom_A": 0.1
+     }
+    ]
+   }
+  },
+  "Mo-c-229": {
+   "formula": "Mo",
+   "space_group_number": 229,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/Mo-c-229/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/Mo-c-229/site-16",
+      "generation_number": 16
+     },
+     {
+      "id": "H-IFE/Mo-c-229/site-17",
+      "generation_number": 17
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/Mo-c-229/unitcell",
+    "isolated_atoms": {
+     "Mo": "SBE/Mo-c-229/atom/Mo"
+    },
+    "slabs": [
+     {
+      "id": "SBE/Mo-c-229/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/Mo-c-229/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/Mo-c-229/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "110",
+    "slab_supercells": [
+     {
+      "id": "SBE/Mo-c-229/slab_supercell/110",
+      "termination": "110"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/Mo-c-229/vacancy/110/Mo_0_0.0",
+      "slab_supercell": "SBE/Mo-c-229/slab_supercell/110",
+      "removed_element": "Mo",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     }
+    ]
+   }
+  },
+  "Re-h-194": {
+   "formula": "Re",
+   "space_group_number": 194,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/Re-h-194/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/Re-h-194/site-5",
+      "generation_number": 5
+     },
+     {
+      "id": "H-IFE/Re-h-194/site-17",
+      "generation_number": 17
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/Re-h-194/unitcell",
+    "isolated_atoms": {
+     "Re": "SBE/Re-h-194/atom/Re"
+    },
+    "slabs": [
+     {
+      "id": "SBE/Re-h-194/slab/001",
+      "miller_index": "001",
+      "termination": null
+     },
+     {
+      "id": "SBE/Re-h-194/slab/100_t1",
+      "miller_index": "100",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/Re-h-194/slab/100_t2",
+      "miller_index": "100",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/Re-h-194/slab/101_t1",
+      "miller_index": "101",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/Re-h-194/slab/101_t2",
+      "miller_index": "101",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/Re-h-194/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/Re-h-194/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "001",
+    "slab_supercells": [
+     {
+      "id": "SBE/Re-h-194/slab_supercell/001",
+      "termination": "001"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/Re-h-194/vacancy/001/Re_0_0.0",
+      "slab_supercell": "SBE/Re-h-194/slab_supercell/001",
+      "removed_element": "Re",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     }
+    ]
+   }
+  },
+  "Ta-c-229": {
+   "formula": "Ta",
+   "space_group_number": 229,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/Ta-c-229/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/Ta-c-229/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/Ta-c-229/site-20",
+      "generation_number": 20
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/Ta-c-229/unitcell",
+    "isolated_atoms": {
+     "Ta": "SBE/Ta-c-229/atom/Ta"
+    },
+    "slabs": [
+     {
+      "id": "SBE/Ta-c-229/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/Ta-c-229/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/Ta-c-229/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "110",
+    "slab_supercells": [
+     {
+      "id": "SBE/Ta-c-229/slab_supercell/110",
+      "termination": "110"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/Ta-c-229/vacancy/110/Ta_0_0.0",
+      "slab_supercell": "SBE/Ta-c-229/slab_supercell/110",
+      "removed_element": "Ta",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     }
+    ]
+   }
+  },
+  "TaC-c-225": {
+   "formula": "TaC",
+   "space_group_number": 225,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/TaC-c-225/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/TaC-c-225/site-1",
+      "generation_number": 1
+     },
+     {
+      "id": "H-IFE/TaC-c-225/site-16",
+      "generation_number": 16
+     },
+     {
+      "id": "H-IFE/TaC-c-225/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/TaC-c-225/site-25",
+      "generation_number": 25
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/TaC-c-225/unitcell",
+    "isolated_atoms": {
+     "C": "SBE/TaC-c-225/atom/C",
+     "Ta": "SBE/TaC-c-225/atom/Ta"
+    },
+    "slabs": [
+     {
+      "id": "SBE/TaC-c-225/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/TaC-c-225/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/TaC-c-225/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "100",
+    "slab_supercells": [
+     {
+      "id": "SBE/TaC-c-225/slab_supercell/100",
+      "termination": "100"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/TaC-c-225/vacancy/100/C_7_0.0",
+      "slab_supercell": "SBE/TaC-c-225/slab_supercell/100",
+      "removed_element": "C",
+      "site_number": 7,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/TaC-c-225/vacancy/100/Ta_1_0.2",
+      "slab_supercell": "SBE/TaC-c-225/slab_supercell/100",
+      "removed_element": "Ta",
+      "site_number": 1,
+      "depth_below_top_atom_A": 0.2
+     }
+    ]
+   }
+  },
+  "TaN-h-187": {
+   "formula": "TaN",
+   "space_group_number": 187,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/TaN-h-187/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/TaN-h-187/site-4",
+      "generation_number": 4
+     },
+     {
+      "id": "H-IFE/TaN-h-187/site-7",
+      "generation_number": 7
+     },
+     {
+      "id": "H-IFE/TaN-h-187/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/TaN-h-187/site-20",
+      "generation_number": 20
+     },
+     {
+      "id": "H-IFE/TaN-h-187/site-22",
+      "generation_number": 22
+     },
+     {
+      "id": "H-IFE/TaN-h-187/site-24",
+      "generation_number": 24
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/TaN-h-187/unitcell",
+    "isolated_atoms": {
+     "N": "SBE/TaN-h-187/atom/N",
+     "Ta": "SBE/TaN-h-187/atom/Ta"
+    },
+    "slabs": [
+     {
+      "id": "SBE/TaN-h-187/slab/001",
+      "miller_index": "001",
+      "termination": null
+     },
+     {
+      "id": "SBE/TaN-h-187/slab/100_t1",
+      "miller_index": "100",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/TaN-h-187/slab/100_t2",
+      "miller_index": "100",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/TaN-h-187/slab/101_t1",
+      "miller_index": "101",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/TaN-h-187/slab/101_t2",
+      "miller_index": "101",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/TaN-h-187/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/TaN-h-187/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "100",
+    "slab_supercells": [
+     {
+      "id": "SBE/TaN-h-187/slab_supercell/100_t1",
+      "termination": "100_t1"
+     },
+     {
+      "id": "SBE/TaN-h-187/slab_supercell/100_t2",
+      "termination": "100_t2"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/TaN-h-187/vacancy/100_t1/N_4_0.0",
+      "slab_supercell": "SBE/TaN-h-187/slab_supercell/100_t1",
+      "removed_element": "N",
+      "site_number": 4,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/TaN-h-187/vacancy/100_t1/N_7_0.86",
+      "slab_supercell": "SBE/TaN-h-187/slab_supercell/100_t1",
+      "removed_element": "N",
+      "site_number": 7,
+      "depth_below_top_atom_A": 0.86
+     },
+     {
+      "id": "SBE/TaN-h-187/vacancy/100_t1/Ta_0_0.59",
+      "slab_supercell": "SBE/TaN-h-187/slab_supercell/100_t1",
+      "removed_element": "Ta",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.59
+     },
+     {
+      "id": "SBE/TaN-h-187/vacancy/100_t1/Ta_3_0.0",
+      "slab_supercell": "SBE/TaN-h-187/slab_supercell/100_t1",
+      "removed_element": "Ta",
+      "site_number": 3,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/TaN-h-187/vacancy/100_t2/N_7_0.0",
+      "slab_supercell": "SBE/TaN-h-187/slab_supercell/100_t2",
+      "removed_element": "N",
+      "site_number": 7,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/TaN-h-187/vacancy/100_t2/Ta_0_0.0",
+      "slab_supercell": "SBE/TaN-h-187/slab_supercell/100_t2",
+      "removed_element": "Ta",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     }
+    ]
+   }
+  },
+  "TaW-c-221": {
+   "formula": "TaW (ordered)",
+   "space_group_number": 221,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/TaW-c-221/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/TaW-c-221/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/TaW-c-221/site-23",
+      "generation_number": 23
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/TaW-c-221/unitcell",
+    "isolated_atoms": {
+     "Ta": "SBE/TaW-c-221/atom/Ta",
+     "W": "SBE/TaW-c-221/atom/W"
+    },
+    "slabs": [
+     {
+      "id": "SBE/TaW-c-221/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/TaW-c-221/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/TaW-c-221/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "110",
+    "slab_supercells": [
+     {
+      "id": "SBE/TaW-c-221/slab_supercell/110",
+      "termination": "110"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/TaW-c-221/vacancy/110/Ta_0_0.0",
+      "slab_supercell": "SBE/TaW-c-221/slab_supercell/110",
+      "removed_element": "Ta",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/TaW-c-221/vacancy/110/W_5_0.02",
+      "slab_supercell": "SBE/TaW-c-221/slab_supercell/110",
+      "removed_element": "W",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.02
+     }
+    ]
+   }
+  },
+  "TiB2-h-191": {
+   "formula": "TiB2",
+   "space_group_number": 191,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/TiB2-h-191/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/TiB2-h-191/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/TiB2-h-191/site-23",
+      "generation_number": 23
+     },
+     {
+      "id": "H-IFE/TiB2-h-191/site-24",
+      "generation_number": 24
+     },
+     {
+      "id": "H-IFE/TiB2-h-191/site-25",
+      "generation_number": 25
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/TiB2-h-191/unitcell",
+    "isolated_atoms": {
+     "B": "SBE/TiB2-h-191/atom/B",
+     "Ti": "SBE/TiB2-h-191/atom/Ti"
+    },
+    "slabs": [
+     {
+      "id": "SBE/TiB2-h-191/slab/001",
+      "miller_index": "001",
+      "termination": null
+     },
+     {
+      "id": "SBE/TiB2-h-191/slab/100_t1",
+      "miller_index": "100",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/TiB2-h-191/slab/100_t2",
+      "miller_index": "100",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/TiB2-h-191/slab/101_t1",
+      "miller_index": "101",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/TiB2-h-191/slab/101_t2",
+      "miller_index": "101",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/TiB2-h-191/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/TiB2-h-191/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "101",
+    "slab_supercells": [
+     {
+      "id": "SBE/TiB2-h-191/slab_supercell/101_t1",
+      "termination": "101_t1"
+     },
+     {
+      "id": "SBE/TiB2-h-191/slab_supercell/101_t2",
+      "termination": "101_t2"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/TiB2-h-191/vacancy/101_t1/B_14_0.25",
+      "slab_supercell": "SBE/TiB2-h-191/slab_supercell/101_t1",
+      "removed_element": "B",
+      "site_number": 14,
+      "depth_below_top_atom_A": 0.25
+     },
+     {
+      "id": "SBE/TiB2-h-191/vacancy/101_t1/B_5_0.0",
+      "slab_supercell": "SBE/TiB2-h-191/slab_supercell/101_t1",
+      "removed_element": "B",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/TiB2-h-191/vacancy/101_t1/Ti_4_0.0",
+      "slab_supercell": "SBE/TiB2-h-191/slab_supercell/101_t1",
+      "removed_element": "Ti",
+      "site_number": 4,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/TiB2-h-191/vacancy/101_t2/B_5_0.48",
+      "slab_supercell": "SBE/TiB2-h-191/slab_supercell/101_t2",
+      "removed_element": "B",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.48
+     },
+     {
+      "id": "SBE/TiB2-h-191/vacancy/101_t2/B_6_0.0",
+      "slab_supercell": "SBE/TiB2-h-191/slab_supercell/101_t2",
+      "removed_element": "B",
+      "site_number": 6,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/TiB2-h-191/vacancy/101_t2/Ti_0_0.28",
+      "slab_supercell": "SBE/TiB2-h-191/slab_supercell/101_t2",
+      "removed_element": "Ti",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.28
+     }
+    ]
+   }
+  },
+  "TiN-c-225": {
+   "formula": "TiN",
+   "space_group_number": 225,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/TiN-c-225/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/TiN-c-225/site-3",
+      "generation_number": 3
+     },
+     {
+      "id": "H-IFE/TiN-c-225/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/TiN-c-225/site-22",
+      "generation_number": 22
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/TiN-c-225/unitcell",
+    "isolated_atoms": {
+     "N": "SBE/TiN-c-225/atom/N",
+     "Ti": "SBE/TiN-c-225/atom/Ti"
+    },
+    "slabs": [
+     {
+      "id": "SBE/TiN-c-225/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/TiN-c-225/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/TiN-c-225/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "100",
+    "slab_supercells": [
+     {
+      "id": "SBE/TiN-c-225/slab_supercell/100",
+      "termination": "100"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/TiN-c-225/vacancy/100/N_7_0.0",
+      "slab_supercell": "SBE/TiN-c-225/slab_supercell/100",
+      "removed_element": "N",
+      "site_number": 7,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/TiN-c-225/vacancy/100/Ti_1_0.18",
+      "slab_supercell": "SBE/TiN-c-225/slab_supercell/100",
+      "removed_element": "Ti",
+      "site_number": 1,
+      "depth_below_top_atom_A": 0.18
+     }
+    ]
+   }
+  },
+  "VB2-h-191": {
+   "formula": "VB2",
+   "space_group_number": 191,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/VB2-h-191/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/VB2-h-191/site-1",
+      "generation_number": 1
+     },
+     {
+      "id": "H-IFE/VB2-h-191/site-2",
+      "generation_number": 2
+     },
+     {
+      "id": "H-IFE/VB2-h-191/site-4",
+      "generation_number": 4
+     },
+     {
+      "id": "H-IFE/VB2-h-191/site-5",
+      "generation_number": 5
+     },
+     {
+      "id": "H-IFE/VB2-h-191/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/VB2-h-191/site-25",
+      "generation_number": 25
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/VB2-h-191/unitcell",
+    "isolated_atoms": {
+     "B": "SBE/VB2-h-191/atom/B",
+     "V": "SBE/VB2-h-191/atom/V"
+    },
+    "slabs": [
+     {
+      "id": "SBE/VB2-h-191/slab/001",
+      "miller_index": "001",
+      "termination": null
+     },
+     {
+      "id": "SBE/VB2-h-191/slab/100_t1",
+      "miller_index": "100",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/VB2-h-191/slab/100_t2",
+      "miller_index": "100",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/VB2-h-191/slab/101_t1",
+      "miller_index": "101",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/VB2-h-191/slab/101_t2",
+      "miller_index": "101",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/VB2-h-191/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/VB2-h-191/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "101",
+    "slab_supercells": [
+     {
+      "id": "SBE/VB2-h-191/slab_supercell/101_t1",
+      "termination": "101_t1"
+     },
+     {
+      "id": "SBE/VB2-h-191/slab_supercell/101_t2",
+      "termination": "101_t2"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/VB2-h-191/vacancy/101_t1/B_17_0.16",
+      "slab_supercell": "SBE/VB2-h-191/slab_supercell/101_t1",
+      "removed_element": "B",
+      "site_number": 17,
+      "depth_below_top_atom_A": 0.16
+     },
+     {
+      "id": "SBE/VB2-h-191/vacancy/101_t1/B_6_0.0",
+      "slab_supercell": "SBE/VB2-h-191/slab_supercell/101_t1",
+      "removed_element": "B",
+      "site_number": 6,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/VB2-h-191/vacancy/101_t1/B_7_0.86",
+      "slab_supercell": "SBE/VB2-h-191/slab_supercell/101_t1",
+      "removed_element": "B",
+      "site_number": 7,
+      "depth_below_top_atom_A": 0.86
+     },
+     {
+      "id": "SBE/VB2-h-191/vacancy/101_t1/V_5_0.0",
+      "slab_supercell": "SBE/VB2-h-191/slab_supercell/101_t1",
+      "removed_element": "V",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/VB2-h-191/vacancy/101_t2/B_6_0.38",
+      "slab_supercell": "SBE/VB2-h-191/slab_supercell/101_t2",
+      "removed_element": "B",
+      "site_number": 6,
+      "depth_below_top_atom_A": 0.38
+     },
+     {
+      "id": "SBE/VB2-h-191/vacancy/101_t2/B_7_0.0",
+      "slab_supercell": "SBE/VB2-h-191/slab_supercell/101_t2",
+      "removed_element": "B",
+      "site_number": 7,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/VB2-h-191/vacancy/101_t2/V_0_0.41",
+      "slab_supercell": "SBE/VB2-h-191/slab_supercell/101_t2",
+      "removed_element": "V",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.41
+     }
+    ]
+   }
+  },
+  "W-c-229": {
+   "formula": "W",
+   "space_group_number": 229,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/W-c-229/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/W-c-229/site-17",
+      "generation_number": 17
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/W-c-229/unitcell",
+    "isolated_atoms": {
+     "W": "SBE/W-c-229/atom/W"
+    },
+    "slabs": [
+     {
+      "id": "SBE/W-c-229/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/W-c-229/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/W-c-229/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "110",
+    "slab_supercells": [
+     {
+      "id": "SBE/W-c-229/slab_supercell/110",
+      "termination": "110"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/W-c-229/vacancy/110/W_0_0.0",
+      "slab_supercell": "SBE/W-c-229/slab_supercell/110",
+      "removed_element": "W",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     }
+    ]
+   }
+  },
+  "W2C-o-60": {
+   "formula": "W2C",
+   "space_group_number": 60,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/W2C-o-60/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/W2C-o-60/site-5",
+      "generation_number": 5
+     },
+     {
+      "id": "H-IFE/W2C-o-60/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/W2C-o-60/site-24",
+      "generation_number": 24
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/W2C-o-60/unitcell",
+    "isolated_atoms": {
+     "C": "SBE/W2C-o-60/atom/C",
+     "W": "SBE/W2C-o-60/atom/W"
+    },
+    "slabs": [
+     {
+      "id": "SBE/W2C-o-60/slab/001_t1",
+      "miller_index": "001",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/001_t2",
+      "miller_index": "001",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/010_t1",
+      "miller_index": "010",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/010_t2",
+      "miller_index": "010",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/011_t1",
+      "miller_index": "011",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/011_t2",
+      "miller_index": "011",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/011_t3",
+      "miller_index": "011",
+      "termination": "t3"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/011_t4",
+      "miller_index": "011",
+      "termination": "t4"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/100",
+      "miller_index": "100",
+      "termination": null
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/101_t1",
+      "miller_index": "101",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/101_t2",
+      "miller_index": "101",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/101_t3",
+      "miller_index": "101",
+      "termination": "t3"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/110_t1",
+      "miller_index": "110",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/110_t2",
+      "miller_index": "110",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/111_t1",
+      "miller_index": "111",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/111_t2",
+      "miller_index": "111",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/111_t3",
+      "miller_index": "111",
+      "termination": "t3"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/111_t4",
+      "miller_index": "111",
+      "termination": "t4"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/111_t5",
+      "miller_index": "111",
+      "termination": "t5"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab/111_t6",
+      "miller_index": "111",
+      "termination": "t6"
+     }
+    ],
+    "selected_facet": "111",
+    "slab_supercells": [
+     {
+      "id": "SBE/W2C-o-60/slab_supercell/111_t1",
+      "termination": "111_t1"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "termination": "111_t2"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab_supercell/111_t3",
+      "termination": "111_t3"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "termination": "111_t4"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab_supercell/111_t5",
+      "termination": "111_t5"
+     },
+     {
+      "id": "SBE/W2C-o-60/slab_supercell/111_t6",
+      "termination": "111_t6"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t1/C_32_0.0",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t1",
+      "removed_element": "C",
+      "site_number": 32,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t1/C_35_0.09",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t1",
+      "removed_element": "C",
+      "site_number": 35,
+      "depth_below_top_atom_A": 0.09
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t1/C_45_0.16",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t1",
+      "removed_element": "C",
+      "site_number": 45,
+      "depth_below_top_atom_A": 0.16
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t1/W_0_0.42",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t1",
+      "removed_element": "W",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.42
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t1/W_1_0.55",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t1",
+      "removed_element": "W",
+      "site_number": 1,
+      "depth_below_top_atom_A": 0.55
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t1/W_27_0.06",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t1",
+      "removed_element": "W",
+      "site_number": 27,
+      "depth_below_top_atom_A": 0.06
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t1/W_28_0.34",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t1",
+      "removed_element": "W",
+      "site_number": 28,
+      "depth_below_top_atom_A": 0.34
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t1/W_2_0.97",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t1",
+      "removed_element": "W",
+      "site_number": 2,
+      "depth_below_top_atom_A": 0.97
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t1/W_30_0.8",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t1",
+      "removed_element": "W",
+      "site_number": 30,
+      "depth_below_top_atom_A": 0.8
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t1/W_31_0.61",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t1",
+      "removed_element": "W",
+      "site_number": 31,
+      "depth_below_top_atom_A": 0.61
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t2/C_44_0.0",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "removed_element": "C",
+      "site_number": 44,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t2/C_45_0.56",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "removed_element": "C",
+      "site_number": 45,
+      "depth_below_top_atom_A": 0.56
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t2/C_46_0.43",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "removed_element": "C",
+      "site_number": 46,
+      "depth_below_top_atom_A": 0.43
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t2/C_47_0.01",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "removed_element": "C",
+      "site_number": 47,
+      "depth_below_top_atom_A": 0.01
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t2/W_0_0.0",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "removed_element": "W",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t2/W_1_0.32",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "removed_element": "W",
+      "site_number": 1,
+      "depth_below_top_atom_A": 0.32
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t2/W_27_0.36",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "removed_element": "W",
+      "site_number": 27,
+      "depth_below_top_atom_A": 0.36
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t2/W_28_0.58",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "removed_element": "W",
+      "site_number": 28,
+      "depth_below_top_atom_A": 0.58
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t2/W_2_0.72",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "removed_element": "W",
+      "site_number": 2,
+      "depth_below_top_atom_A": 0.72
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t2/W_31_0.99",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "removed_element": "W",
+      "site_number": 31,
+      "depth_below_top_atom_A": 0.99
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t2/W_5_0.89",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t2",
+      "removed_element": "W",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.89
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t3/C_44_0.0",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t3",
+      "removed_element": "C",
+      "site_number": 44,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t3/C_45_0.63",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t3",
+      "removed_element": "C",
+      "site_number": 45,
+      "depth_below_top_atom_A": 0.63
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t3/C_46_0.66",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t3",
+      "removed_element": "C",
+      "site_number": 46,
+      "depth_below_top_atom_A": 0.66
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t3/C_47_0.21",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t3",
+      "removed_element": "C",
+      "site_number": 47,
+      "depth_below_top_atom_A": 0.21
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t3/W_1_0.0",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t3",
+      "removed_element": "W",
+      "site_number": 1,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t3/W_24_0.21",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t3",
+      "removed_element": "W",
+      "site_number": 24,
+      "depth_below_top_atom_A": 0.21
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t3/W_27_0.51",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t3",
+      "removed_element": "W",
+      "site_number": 27,
+      "depth_below_top_atom_A": 0.51
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t3/W_28_0.77",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t3",
+      "removed_element": "W",
+      "site_number": 28,
+      "depth_below_top_atom_A": 0.77
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t3/W_2_0.35",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t3",
+      "removed_element": "W",
+      "site_number": 2,
+      "depth_below_top_atom_A": 0.35
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t3/W_5_0.58",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t3",
+      "removed_element": "W",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.58
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/C_33_0.84",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "C",
+      "site_number": 33,
+      "depth_below_top_atom_A": 0.84
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/C_34_0.85",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "C",
+      "site_number": 34,
+      "depth_below_top_atom_A": 0.85
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/C_44_0.0",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "C",
+      "site_number": 44,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/C_45_0.75",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "C",
+      "site_number": 45,
+      "depth_below_top_atom_A": 0.75
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/C_46_0.81",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "C",
+      "site_number": 46,
+      "depth_below_top_atom_A": 0.81
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/C_47_0.1",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "C",
+      "site_number": 47,
+      "depth_below_top_atom_A": 0.1
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/W_24_0.25",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "W",
+      "site_number": 24,
+      "depth_below_top_atom_A": 0.25
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/W_25_0.06",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "W",
+      "site_number": 25,
+      "depth_below_top_atom_A": 0.06
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/W_27_0.62",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "W",
+      "site_number": 27,
+      "depth_below_top_atom_A": 0.62
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/W_28_0.82",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "W",
+      "site_number": 28,
+      "depth_below_top_atom_A": 0.82
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/W_2_0.0",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "W",
+      "site_number": 2,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/W_5_0.29",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "W",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.29
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t4/W_6_0.8",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t4",
+      "removed_element": "W",
+      "site_number": 6,
+      "depth_below_top_atom_A": 0.8
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t5/C_33_0.51",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t5",
+      "removed_element": "C",
+      "site_number": 33,
+      "depth_below_top_atom_A": 0.51
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t5/W_5_0.0",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t5",
+      "removed_element": "W",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t5/W_6_0.52",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t5",
+      "removed_element": "W",
+      "site_number": 6,
+      "depth_below_top_atom_A": 0.52
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t5/W_7_0.74",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t5",
+      "removed_element": "W",
+      "site_number": 7,
+      "depth_below_top_atom_A": 0.74
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t6/C_32_0.0",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t6",
+      "removed_element": "C",
+      "site_number": 32,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t6/C_35_0.17",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t6",
+      "removed_element": "C",
+      "site_number": 35,
+      "depth_below_top_atom_A": 0.17
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t6/W_0_0.41",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t6",
+      "removed_element": "W",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.41
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t6/W_1_0.63",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t6",
+      "removed_element": "W",
+      "site_number": 1,
+      "depth_below_top_atom_A": 0.63
+     },
+     {
+      "id": "SBE/W2C-o-60/vacancy/111_t6/W_3_0.17",
+      "slab_supercell": "SBE/W2C-o-60/slab_supercell/111_t6",
+      "removed_element": "W",
+      "site_number": 3,
+      "depth_below_top_atom_A": 0.17
+     }
+    ]
+   }
+  },
+  "WC-h-187": {
+   "formula": "WC",
+   "space_group_number": 187,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/WC-h-187/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/WC-h-187/site-0",
+      "generation_number": 0
+     },
+     {
+      "id": "H-IFE/WC-h-187/site-6",
+      "generation_number": 6
+     },
+     {
+      "id": "H-IFE/WC-h-187/site-10",
+      "generation_number": 10
+     },
+     {
+      "id": "H-IFE/WC-h-187/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/WC-h-187/site-19",
+      "generation_number": 19
+     },
+     {
+      "id": "H-IFE/WC-h-187/site-20",
+      "generation_number": 20
+     },
+     {
+      "id": "H-IFE/WC-h-187/site-23",
+      "generation_number": 23
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/WC-h-187/unitcell",
+    "isolated_atoms": {
+     "C": "SBE/WC-h-187/atom/C",
+     "W": "SBE/WC-h-187/atom/W"
+    },
+    "slabs": [
+     {
+      "id": "SBE/WC-h-187/slab/001",
+      "miller_index": "001",
+      "termination": null
+     },
+     {
+      "id": "SBE/WC-h-187/slab/100_t1",
+      "miller_index": "100",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/WC-h-187/slab/100_t2",
+      "miller_index": "100",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/WC-h-187/slab/101_t1",
+      "miller_index": "101",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/WC-h-187/slab/101_t2",
+      "miller_index": "101",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/WC-h-187/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/WC-h-187/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "100",
+    "slab_supercells": [
+     {
+      "id": "SBE/WC-h-187/slab_supercell/100_t1",
+      "termination": "100_t1"
+     },
+     {
+      "id": "SBE/WC-h-187/slab_supercell/100_t2",
+      "termination": "100_t2"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/WC-h-187/vacancy/100_t1/C_4_0.0",
+      "slab_supercell": "SBE/WC-h-187/slab_supercell/100_t1",
+      "removed_element": "C",
+      "site_number": 4,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/WC-h-187/vacancy/100_t1/W_3_0.0",
+      "slab_supercell": "SBE/WC-h-187/slab_supercell/100_t1",
+      "removed_element": "W",
+      "site_number": 3,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/WC-h-187/vacancy/100_t2/C_4_0.77",
+      "slab_supercell": "SBE/WC-h-187/slab_supercell/100_t2",
+      "removed_element": "C",
+      "site_number": 4,
+      "depth_below_top_atom_A": 0.77
+     },
+     {
+      "id": "SBE/WC-h-187/vacancy/100_t2/C_7_0.0",
+      "slab_supercell": "SBE/WC-h-187/slab_supercell/100_t2",
+      "removed_element": "C",
+      "site_number": 7,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/WC-h-187/vacancy/100_t2/W_0_0.0",
+      "slab_supercell": "SBE/WC-h-187/slab_supercell/100_t2",
+      "removed_element": "W",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/WC-h-187/vacancy/100_t2/W_3_0.6",
+      "slab_supercell": "SBE/WC-h-187/slab_supercell/100_t2",
+      "removed_element": "W",
+      "site_number": 3,
+      "depth_below_top_atom_A": 0.6
+     }
+    ]
+   }
+  },
+  "ZrB2-h-191": {
+   "formula": "ZrB2",
+   "space_group_number": 191,
+   "hydrogen_interstitial": {
+    "pristine_supercell": "H-IFE/ZrB2-h-191/supercell",
+    "interstitial_runs": [
+     {
+      "id": "H-IFE/ZrB2-h-191/site-6",
+      "generation_number": 6
+     },
+     {
+      "id": "H-IFE/ZrB2-h-191/site-17",
+      "generation_number": 17
+     },
+     {
+      "id": "H-IFE/ZrB2-h-191/site-23",
+      "generation_number": 23
+     },
+     {
+      "id": "H-IFE/ZrB2-h-191/site-25",
+      "generation_number": 25
+     },
+     {
+      "id": "H-IFE/ZrB2-h-191/site-28",
+      "generation_number": 28
+     }
+    ]
+   },
+   "surface_binding": {
+    "bulk_unit_cell": "SBE/ZrB2-h-191/unitcell",
+    "isolated_atoms": {
+     "B": "SBE/ZrB2-h-191/atom/B",
+     "Zr": "SBE/ZrB2-h-191/atom/Zr"
+    },
+    "slabs": [
+     {
+      "id": "SBE/ZrB2-h-191/slab/001",
+      "miller_index": "001",
+      "termination": null
+     },
+     {
+      "id": "SBE/ZrB2-h-191/slab/100_t1",
+      "miller_index": "100",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/ZrB2-h-191/slab/100_t2",
+      "miller_index": "100",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/ZrB2-h-191/slab/101_t1",
+      "miller_index": "101",
+      "termination": "t1"
+     },
+     {
+      "id": "SBE/ZrB2-h-191/slab/101_t2",
+      "miller_index": "101",
+      "termination": "t2"
+     },
+     {
+      "id": "SBE/ZrB2-h-191/slab/110",
+      "miller_index": "110",
+      "termination": null
+     },
+     {
+      "id": "SBE/ZrB2-h-191/slab/111",
+      "miller_index": "111",
+      "termination": null
+     }
+    ],
+    "selected_facet": "101",
+    "slab_supercells": [
+     {
+      "id": "SBE/ZrB2-h-191/slab_supercell/101_t1",
+      "termination": "101_t1"
+     },
+     {
+      "id": "SBE/ZrB2-h-191/slab_supercell/101_t2",
+      "termination": "101_t2"
+     }
+    ],
+    "surface_vacancies": [
+     {
+      "id": "SBE/ZrB2-h-191/vacancy/101_t1/B_14_0.35",
+      "slab_supercell": "SBE/ZrB2-h-191/slab_supercell/101_t1",
+      "removed_element": "B",
+      "site_number": 14,
+      "depth_below_top_atom_A": 0.35
+     },
+     {
+      "id": "SBE/ZrB2-h-191/vacancy/101_t1/B_5_0.0",
+      "slab_supercell": "SBE/ZrB2-h-191/slab_supercell/101_t1",
+      "removed_element": "B",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/ZrB2-h-191/vacancy/101_t1/Zr_4_0.0",
+      "slab_supercell": "SBE/ZrB2-h-191/slab_supercell/101_t1",
+      "removed_element": "Zr",
+      "site_number": 4,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/ZrB2-h-191/vacancy/101_t2/B_5_0.52",
+      "slab_supercell": "SBE/ZrB2-h-191/slab_supercell/101_t2",
+      "removed_element": "B",
+      "site_number": 5,
+      "depth_below_top_atom_A": 0.52
+     },
+     {
+      "id": "SBE/ZrB2-h-191/vacancy/101_t2/B_6_0.0",
+      "slab_supercell": "SBE/ZrB2-h-191/slab_supercell/101_t2",
+      "removed_element": "B",
+      "site_number": 6,
+      "depth_below_top_atom_A": 0.0
+     },
+     {
+      "id": "SBE/ZrB2-h-191/vacancy/101_t2/Zr_0_0.2",
+      "slab_supercell": "SBE/ZrB2-h-191/slab_supercell/101_t2",
+      "removed_element": "Zr",
+      "site_number": 0,
+      "depth_below_top_atom_A": 0.2
+     }
+    ]
+   }
+  }
+ },
+ "graded_materials": {
+  "hydrogen": [
+   "C-h-194",
+   "HfB2-h-191",
+   "Mo-c-229",
+   "Re-h-194",
+   "TaC-c-225",
+   "TiN-c-225",
+   "WC-h-187"
+  ],
+  "surface_binding": {
+   "W-c-229": [
+    "W"
+   ],
+   "WC-h-187": [
+    "W",
+    "C"
+   ],
+   "TiB2-h-191": [
+    "B",
+    "Ti"
+   ]
+  },
+  "cohesive_energy": [
+   "Re-h-194",
+   "W-c-229",
+   "WC-h-187"
+  ]
+ }
+}

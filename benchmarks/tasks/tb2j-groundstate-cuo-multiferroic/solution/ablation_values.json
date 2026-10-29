@@ -1,0 +1,164 @@
+{
+ "ablations": {
+  "fm_reference_as_final": {
+   "converged_q": [
+    0.49113072146108355,
+    3.856408711354808e-07,
+    0.5263890896392005
+   ],
+   "chain": 117.1074,
+   "mean": 132.43061403938276,
+   "max": 178.55688623911806
+  },
+  "uncorrected_exchange_as_final": {
+   "chain": 170.077,
+   "stability": {
+    "FM/ligand": false,
+    "AFM/ligand": true,
+    "FM/no_ligand": false,
+    "AFM/no_ligand": true
+   }
+  },
+  "exchange_truncated_at_6A": {
+   "ligand_corrected": [
+    0.5001755692785237,
+    -4.245206364560597e-07,
+    0.5310300764244832
+   ],
+   "uncorrected": [
+    5.541284924515425e-06,
+    0.510510839522272,
+    5.150285090237767e-06
+   ]
+  },
+  "commensurate_approximant_as_kmin": {
+   "ligand_corrected": [
+    0.5,
+    0.0,
+    0.5
+   ],
+   "uncorrected": [
+    0.0,
+    0.5,
+    0.0
+   ]
+  },
+  "symmetrized_afm_exchange": {
+   "converged_q": [
+    0.5024099990210003,
+    0.00029650332348657405,
+    0.5163563134807888
+   ],
+   "mean": 128.42505200651533,
+   "max": 174.53822378322815,
+   "af1_minus_spiral_meV_per_Cu": 0.04063080939966568
+  },
+  "hamiltonian_eigenvalues_as_magnons": {
+   "mean": 177.3227,
+   "max": 327.4835905641058
+  },
+  "spin_length_one": {
+   "mean": 74.55838141642894,
+   "max": 95.24484338659305
+  },
+  "bond_counted_twice_convention": {
+   "chain": 64.8712
+  },
+  "unit_vector_bond_convention": {
+   "chain": 32.4356
+  },
+  "memorised_experimental_AF2_as_kmin": {
+   "ligand_corrected": [
+    0.506,
+    0.0,
+    -0.483
+   ]
+  },
+  "paper_SI_kmin_verbatim": {
+   "ligand_corrected": [
+    0.491,
+    0.0,
+    0.474
+   ],
+   "uncorrected": [
+    0.0,
+    0.5,
+    0.0
+   ]
+  }
+ },
+ "robustness": {
+  "kmin_r8": {
+   "ligand_corrected": [
+    0.49182841450432513,
+    3.4156066861266617e-07,
+    0.5286106697986397
+   ],
+   "uncorrected": [
+    4.126855760689548e-06,
+    0.5035085649677051,
+    2.8655309886525886e-06
+   ]
+  },
+  "kmin_r10": {
+   "ligand_corrected": [
+    0.5093963142865343,
+    0.9999995926139433,
+    0.4735876963110907
+   ],
+   "uncorrected": [
+    3.871041297892467e-06,
+    0.5042584356833048,
+    2.7007992199733313e-06
+   ]
+  },
+  "kmin_r14": {
+   "ligand_corrected": [
+    0.4911017159732236,
+    3.8279245758954056e-07,
+    0.5262661819139062
+   ],
+   "uncorrected": [
+    3.7083924333646984e-06,
+    0.5041103589887528,
+    2.5870176319036805e-06
+   ]
+  },
+  "kmin_r17": {
+   "ligand_corrected": [
+    0.49111657864711655,
+    3.8535243796190543e-07,
+    0.5263915561121068
+   ],
+   "uncorrected": [
+    3.7062037719497844e-06,
+    0.5041775160987021,
+    2.5898969710686034e-06
+   ]
+  },
+  "magnons_native_r6.5": {
+   "mean": 149.90277781370008,
+   "max": 188.35465084376256
+  },
+  "magnons_native_r10": {
+   "mean": 148.8909551179986,
+   "max": 190.442619487133
+  },
+  "magnons_native_r14": {
+   "mean": 149.09749016734878,
+   "max": 190.47052707039435
+  },
+  "magnons_grid4_unrefined_max": {
+   "mean": 149.12800569404413,
+   "max": 188.75465381980655
+  },
+  "chain_single_bond_extremes": {
+   "chain_low": 129.3888,
+   "chain_high": 130.1096
+  },
+  "magnons_native_r6_info": {
+   "mean": 145.6863711186774,
+   "max": 184.49862291438026
+  }
+ }
+}

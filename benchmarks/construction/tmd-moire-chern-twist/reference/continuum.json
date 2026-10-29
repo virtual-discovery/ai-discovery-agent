@@ -1,0 +1,444 @@
+{
+ "sets": {
+  "P": "DFT-fitted at 3.89 deg (paper ref. 25)",
+  "Q": "local-stacking approximation (paper ref. 20)"
+ },
+ "rows": [
+  {
+   "set": "P",
+   "theta": 3.89,
+   "nshell": 4,
+   "plane_waves": 61,
+   "nk": 12,
+   "variant": null,
+   "chern_raw": [
+    1.0,
+    -1.0,
+    -0.0
+   ],
+   "chern": [
+    1,
+    -1
+   ],
+   "width_band1_meV": 8.8531,
+   "min_direct_gap_12_meV": 15.6406,
+   "min_direct_gap_23_meV": 8.1654,
+   "gamma_meV": [
+    28.044,
+    5.075,
+    -3.091,
+    -23.599
+   ],
+   "seconds": 2.2
+  },
+  {
+   "set": "P",
+   "theta": 3.89,
+   "nshell": 5,
+   "plane_waves": 91,
+   "nk": 18,
+   "variant": null,
+   "chern_raw": [
+    1.0,
+    -1.0,
+    -0.0
+   ],
+   "chern": [
+    1,
+    -1
+   ],
+   "width_band1_meV": 8.8531,
+   "min_direct_gap_12_meV": 15.6406,
+   "min_direct_gap_23_meV": 8.1654,
+   "gamma_meV": [
+    28.044,
+    5.075,
+    -3.091,
+    -23.599
+   ],
+   "seconds": 11.2
+  },
+  {
+   "set": "P",
+   "theta": 3.89,
+   "nshell": 7,
+   "plane_waves": 169,
+   "nk": 24,
+   "variant": null,
+   "chern_raw": [
+    1.0,
+    -1.0,
+    -0.0
+   ],
+   "chern": [
+    1,
+    -1
+   ],
+   "width_band1_meV": 8.8531,
+   "min_direct_gap_12_meV": 15.6406,
+   "min_direct_gap_23_meV": 8.1654,
+   "gamma_meV": [
+    28.044,
+    5.075,
+    -3.091,
+    -23.599
+   ],
+   "seconds": 87.2
+  },
+  {
+   "set": "P",
+   "theta": 3.89,
+   "nshell": 5,
+   "plane_waves": 91,
+   "nk": 18,
+   "variant": "conj_tunnelling",
+   "chern_raw": [
+    1.0,
+    -1.0,
+    -0.0
+   ],
+   "chern": [
+    1,
+    -1
+   ],
+   "width_band1_meV": 8.8531,
+   "min_direct_gap_12_meV": 15.6406,
+   "min_direct_gap_23_meV": 8.1654,
+   "gamma_meV": [
+    28.044,
+    5.075,
+    -3.091,
+    -23.599
+   ],
+   "seconds": 6.5
+  },
+  {
+   "set": "P",
+   "theta": 3.89,
+   "nshell": 5,
+   "plane_waves": 91,
+   "nk": 18,
+   "variant": "layers_swapped",
+   "chern_raw": [
+    -1.0,
+    1.0,
+    0.0
+   ],
+   "chern": [
+    -1,
+    1
+   ],
+   "width_band1_meV": 8.8531,
+   "min_direct_gap_12_meV": 15.6406,
+   "min_direct_gap_23_meV": 8.1654,
+   "gamma_meV": [
+    28.044,
+    5.075,
+    -3.091,
+    -23.599
+   ],
+   "seconds": 7.1
+  },
+  {
+   "set": "P",
+   "theta": 3.89,
+   "nshell": 5,
+   "plane_waves": 91,
+   "nk": 18,
+   "variant": "plot_script_basis",
+   "chern_raw": [
+    1.0,
+    -1.0,
+    0.0
+   ],
+   "chern": [
+    1,
+    -1
+   ],
+   "width_band1_meV": 12.4497,
+   "min_direct_gap_12_meV": 6.3819,
+   "min_direct_gap_23_meV": 13.1948,
+   "gamma_meV": [
+    29.944,
+    12.717,
+    -6.724,
+    -51.396
+   ],
+   "seconds": 10.4
+  },
+  {
+   "set": "P",
+   "theta": 3.89,
+   "nshell": 5,
+   "plane_waves": 91,
+   "nk": 18,
+   "variant": "left_handed_basis",
+   "chern_raw": [
+    1.0,
+    -1.0,
+    -0.0
+   ],
+   "chern": [
+    1,
+    -1
+   ],
+   "width_band1_meV": 13.2751,
+   "min_direct_gap_12_meV": 3.4303,
+   "min_direct_gap_23_meV": 35.05,
+   "gamma_meV": [
+    22.296,
+    12.454,
+    -23.663,
+    -36.156
+   ],
+   "seconds": 11.1
+  },
+  {
+   "set": "Q",
+   "theta": 3.89,
+   "nshell": 4,
+   "plane_waves": 61,
+   "nk": 12,
+   "variant": null,
+   "chern_raw": [
+    -1.0,
+    -1.0,
+    2.0
+   ],
+   "chern": [
+    -1,
+    -1
+   ],
+   "width_band1_meV": 25.6747,
+   "min_direct_gap_12_meV": 4.9298,
+   "min_direct_gap_23_meV": 4.3277,
+   "gamma_meV": [
+    -18.233,
+    -23.163,
+    -31.58,
+    -42.103
+   ],
+   "seconds": 2.2
+  },
+  {
+   "set": "Q",
+   "theta": 3.89,
+   "nshell": 5,
+   "plane_waves": 91,
+   "nk": 18,
+   "variant": null,
+   "chern_raw": [
+    -1.0,
+    -1.0,
+    2.0
+   ],
+   "chern": [
+    -1,
+    -1
+   ],
+   "width_band1_meV": 25.6747,
+   "min_direct_gap_12_meV": 4.9298,
+   "min_direct_gap_23_meV": 4.0616,
+   "gamma_meV": [
+    -18.233,
+    -23.163,
+    -31.58,
+    -42.103
+   ],
+   "seconds": 11.8
+  },
+  {
+   "set": "Q",
+   "theta": 3.89,
+   "nshell": 7,
+   "plane_waves": 169,
+   "nk": 24,
+   "variant": null,
+   "chern_raw": [
+    -1.0,
+    -1.0,
+    2.0
+   ],
+   "chern": [
+    -1,
+    -1
+   ],
+   "width_band1_meV": 25.6747,
+   "min_direct_gap_12_meV": 4.9298,
+   "min_direct_gap_23_meV": 4.3277,
+   "gamma_meV": [
+    -18.233,
+    -23.163,
+    -31.58,
+    -42.103
+   ],
+   "seconds": 93.5
+  },
+  {
+   "set": "Q",
+   "theta": 3.89,
+   "nshell": 5,
+   "plane_waves": 91,
+   "nk": 18,
+   "variant": "conj_tunnelling",
+   "chern_raw": [
+    -1.0,
+    -1.0,
+    2.0
+   ],
+   "chern": [
+    -1,
+    -1
+   ],
+   "width_band1_meV": 25.6747,
+   "min_direct_gap_12_meV": 4.9298,
+   "min_direct_gap_23_meV": 4.0616,
+   "gamma_meV": [
+    -18.233,
+    -23.163,
+    -31.58,
+    -42.103
+   ],
+   "seconds": 11.7
+  },
+  {
+   "set": "Q",
+   "theta": 3.89,
+   "nshell": 5,
+   "plane_waves": 91,
+   "nk": 18,
+   "variant": "layers_swapped",
+   "chern_raw": [
+    1.0,
+    1.0,
+    -2.0
+   ],
+   "chern": [
+    1,
+    1
+   ],
+   "width_band1_meV": 25.6747,
+   "min_direct_gap_12_meV": 4.9298,
+   "min_direct_gap_23_meV": 4.0616,
+   "gamma_meV": [
+    -18.233,
+    -23.163,
+    -31.58,
+    -42.103
+   ],
+   "seconds": 11.9
+  },
+  {
+   "set": "Q",
+   "theta": 3.89,
+   "nshell": 5,
+   "plane_waves": 91,
+   "nk": 18,
+   "variant": "plot_script_basis",
+   "chern_raw": [
+    -1.0,
+    0.0,
+    1.0
+   ],
+   "chern": [
+    -1,
+    0
+   ],
+   "width_band1_meV": 20.2839,
+   "min_direct_gap_12_meV": 3.7909,
+   "min_direct_gap_23_meV": 1.1526,
+   "gamma_meV": [
+    -7.284,
+    -20.596,
+    -30.728,
+    -51.019
+   ],
+   "seconds": 12.2
+  },
+  {
+   "set": "Q",
+   "theta": 3.89,
+   "nshell": 5,
+   "plane_waves": 91,
+   "nk": 18,
+   "variant": "left_handed_basis",
+   "chern_raw": [
+    -1.0,
+    1.0,
+    -0.0
+   ],
+   "chern": [
+    -1,
+    1
+   ],
+   "width_band1_meV": 26.7157,
+   "min_direct_gap_12_meV": 0.1157,
+   "min_direct_gap_23_meV": 8.1609,
+   "gamma_meV": [
+    -21.566,
+    -25.591,
+    -33.752,
+    -42.483
+   ],
+   "seconds": 10.7
+  },
+  {
+   "set": "P",
+   "theta": 2.14,
+   "nshell": 5,
+   "plane_waves": 91,
+   "nk": 18,
+   "variant": null,
+   "chern_raw": [
+    1.0,
+    -1.0,
+    -0.0
+   ],
+   "chern": [
+    1,
+    -1
+   ],
+   "width_band1_meV": 1.8058,
+   "min_direct_gap_12_meV": 0.8649,
+   "min_direct_gap_23_meV": 28.741,
+   "gamma_meV": [
+    65.345,
+    59.619,
+    30.547,
+    27.613
+   ],
+   "seconds": 10.2
+  },
+  {
+   "set": "P",
+   "theta": 2.14,
+   "nshell": 7,
+   "plane_waves": 169,
+   "nk": 24,
+   "variant": null,
+   "chern_raw": [
+    1.0,
+    -1.0,
+    -0.0
+   ],
+   "chern": [
+    1,
+    -1
+   ],
+   "width_band1_meV": 1.8058,
+   "min_direct_gap_12_meV": 0.8649,
+   "min_direct_gap_23_meV": 28.7368,
+   "gamma_meV": [
+    65.345,
+    59.619,
+    30.547,
+    27.613
+   ],
+   "seconds": 82.7
+  }
+ ],
+ "rms_vs_dft_3p89_meV": {
+  "P": 1.635,
+  "Q": 7.64
+ }
+}

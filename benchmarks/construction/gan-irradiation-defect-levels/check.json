@@ -1,0 +1,111 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 7,
+  "task_mb": 1.13,
+  "hidden_values": 17,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 38,
+   "budget": 43,
+   "evaluations": 38,
+   "failed_evaluations": 0,
+   "container_seconds": 12
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "band_edges_from_R_point_supercell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "vbm_from_perfect_cell_fermi_energy",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "host_energy_from_gamma_only_supercell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "electronic_dielectric_tensor",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "no_finite_size_correction",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "point_charge_term_without_alignment",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "core_potentials_read_as_electrostatic_potentials",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "single_interstitial_site_i1",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "adjacent_charge_levels_without_stability",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "band_edges_from_Ga_d_paw_run",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "vbm_aligned_by_mean_core_potential",
+    "passes_grading": true
+   },
+   {
+    "name": "isotropic_static_dielectric_constant",
+    "passes_grading": true
+   },
+   {
+    "name": "alignment_sites_beyond_5.5_A",
+    "passes_grading": true
+   },
+   {
+    "name": "alignment_sites_beyond_4.0_A",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T02:37:26Z"
+}

@@ -1,0 +1,313 @@
+{
+ "ablation_order": [
+  [
+   "dp1",
+   "fm_afm2_only_J1_zero"
+  ],
+  [
+   "dp2",
+   "cross_cell_fm_reference"
+  ],
+  [
+   "dp3",
+   "coarse_rhombohedral_mesh_k3"
+  ],
+  [
+   "dp4",
+   "tetragonal_mesh_664"
+  ],
+  [
+   "dp4",
+   "tetragonal_mesh_444"
+  ],
+  [
+   "dp5",
+   "energies_per_cell"
+  ],
+  [
+   "dp6",
+   "classical_S2_neel"
+  ],
+  [
+   "dp6",
+   "curie_weiss_as_neel"
+  ],
+  [
+   "dp7",
+   "fermi_dirac_0p02_at_U4"
+  ],
+  [
+   "dp7",
+   "gaussian_0p05_at_U4"
+  ],
+  [
+   "dp8",
+   "pbe_fermi_dirac_0p02"
+  ],
+  [
+   "dp8",
+   "pbe_gaussian_0p02_free_energy"
+  ],
+  [
+   "dp9",
+   "pbe_coarse_meshes"
+  ],
+  [
+   "dp9",
+   "pbe_primitive_fm_k8"
+  ],
+  [
+   "dp10",
+   "pbe_small_starting_moment"
+  ],
+  [
+   "dp11",
+   "gap_closing_linear_from_U4_U8"
+  ],
+  [
+   "dp11",
+   "gap_closing_coarse_bracket"
+  ],
+  [
+   "dp12",
+   "gap_closing_shifted_mesh"
+  ]
+ ],
+ "ablations": {
+  "fm_afm2_only_J1_zero": {
+   "J1_meV": {
+    "4.0": 0.0,
+    "8.0": 0.0
+   },
+   "J2_meV": {
+    "4.0": 28.33032978652045,
+    "8.0": 13.958012546567867
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1315.0393016108212,
+    "8.0": 647.9040381607962
+   }
+  },
+  "cross_cell_fm_reference": {
+   "J1_meV": {
+    "4.0": -1.566593520459719,
+    "8.0": -0.012270634528249502
+   },
+   "J2_meV": {
+    "4.0": 29.544535854947753,
+    "8.0": 14.093958931354186
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1371.4004069092136,
+    "8.0": 654.2144073041508
+   }
+  },
+  "coarse_rhombohedral_mesh_k3": {
+   "J1_meV": {
+    "4.0": -2.1858141251141205,
+    "8.0": -0.7919023610884324
+   },
+   "J2_meV": {
+    "4.0": 33.272657338335804,
+    "8.0": 16.446998363011517
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1544.4526201653964,
+    "8.0": 763.4379622075485
+   }
+  },
+  "tetragonal_mesh_664": {
+   "J1_meV": {
+    "4.0": -2.0698766127461568,
+    "8.0": -0.7640106902690604
+   },
+   "J2_meV": {
+    "4.0": 30.400206399266608,
+    "8.0": 14.722023236836927
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1411.118984260382,
+    "8.0": 683.3679417625349
+   }
+  },
+  "tetragonal_mesh_444": {
+   "J1_meV": {
+    "4.0": -1.9596875053830445,
+    "8.0": -0.7355237702140585
+   },
+   "J2_meV": {
+    "4.0": 30.290017291903496,
+    "8.0": 14.693536316781925
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1406.004218287525,
+    "8.0": 682.0456338424909
+   }
+  },
+  "energies_per_cell": {
+   "J1_meV": {
+    "4.0": -4.371628250228241,
+    "8.0": -1.5838047221768647
+   },
+   "J2_meV": {
+    "4.0": 61.032287823269144,
+    "8.0": 29.499829815312598
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 2833.001160226877,
+    "8.0": 1369.325238720823
+   }
+  },
+  "classical_S2_neel": {
+   "neel_temperature_mean_field_K": {
+    "4.0": 708.2502900567192,
+    "8.0": 342.3313096802058
+   }
+  },
+  "curie_weiss_as_neel": {
+   "neel_temperature_mean_field_K": {
+    "4.0": 1213.5780231082042,
+    "8.0": 611.1454569611809
+   }
+  },
+  "fermi_dirac_0p02_at_U4": {
+   "J1_meV": {
+    "4.0": -2.370396611164324
+   },
+   "J2_meV": {
+    "4.0": 32.104573152066834
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1490.2324037362655
+   }
+  },
+  "gaussian_0p05_at_U4": {
+   "J1_meV": {
+    "4.0": -2.394976146169938
+   },
+   "J2_meV": {
+    "4.0": 32.421952872032605
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1504.9645585835349
+   }
+  },
+  "pbe_fermi_dirac_0p02": {
+   "pbe_fm_minus_afm2_meV_per_Ni": 288.47123898845166
+  },
+  "pbe_gaussian_0p02_free_energy": {
+   "pbe_fm_minus_afm2_meV_per_Ni": 235.07494801469147
+  },
+  "pbe_coarse_meshes": {
+   "pbe_fm_minus_afm2_meV_per_Ni": 253.51215882133693
+  },
+  "pbe_primitive_fm_k8": {
+   "pbe_fm_minus_afm2_meV_per_Ni": 274.46240917779505
+  },
+  "pbe_small_starting_moment": {
+   "pbe_fm_minus_afm2_meV_per_Ni": 307.39495536871254
+  },
+  "gap_closing_linear_from_U4_U8": {
+   "fm_gap_closing_U_eV": 1.8064883323847467
+  },
+  "gap_closing_coarse_bracket": {
+   "fm_gap_closing_U_eV": 3.0
+  },
+  "gap_closing_shifted_mesh": {
+   "fm_gap_closing_U_eV": 1.8096534653465346
+  }
+ },
+ "robustness": {
+  "oracle_meshes_rh666_te886": {
+   "J1_meV": {
+    "4.0": -2.1753292378271,
+    "8.0": -0.7902611744357273
+   },
+   "J2_meV": {
+    "4.0": 30.479195951134898,
+    "8.0": 14.746629699637802
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1414.7855270047185,
+    "8.0": 684.5101263364742
+   }
+  },
+  "rh444_te888": {
+   "J1_meV": {
+    "4.0": -2.1841644347878173,
+    "8.0": -0.7914941902272403
+   },
+   "J2_meV": {
+    "4.0": 30.16210676927585,
+    "8.0": 14.873182487053176
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1400.0668583763472,
+    "8.0": 690.3844627961506
+   }
+  },
+  "converged_primitive_fm_reference": {
+   "J1_meV": {
+    "4.0": -2.189572697854601,
+    "8.0": -0.7951252096099779
+   },
+   "J2_meV": {
+    "4.0": 30.509720890666358,
+    "8.0": 14.7404164330801
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1416.2024358605504,
+    "8.0": 684.2217184790178
+   }
+  },
+  "cutoff_75_Ry": {
+   "J1_meV": {
+    "4.0": -2.1725400707218796,
+    "8.0": -0.7904737633652985
+   },
+   "J2_meV": {
+    "4.0": 30.10152458624604,
+    "8.0": 14.845392858919999
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1397.2547502130499,
+    "8.0": 689.0945218230785
+   }
+  },
+  "cutoff_40_Ry": {
+   "J1_meV": {
+    "4.0": -2.191511509125121,
+    "8.0": -0.8073193121235818
+   },
+   "J2_meV": {
+    "4.0": 30.13331939043322,
+    "8.0": 14.88051538891159
+   },
+   "neel_temperature_mean_field_K": {
+    "4.0": 1398.7306037385197,
+    "8.0": 690.7248419661544
+   }
+  },
+  "pbe_k12_gauss0p002": {
+   "pbe_fm_minus_afm2_meV_per_Ni": 262.81437121052295
+  },
+  "pbe_k16_gauss0p002": {
+   "pbe_fm_minus_afm2_meV_per_Ni": 264.30929674208164
+  },
+  "pbe_k12_mv0p005": {
+   "pbe_fm_minus_afm2_meV_per_Ni": 262.7732820166275
+  },
+  "pbe_afm2_k6": {
+   "pbe_fm_minus_afm2_meV_per_Ni": 264.45596611406654
+  },
+  "gap_closing_k16_points": {
+   "fm_gap_closing_U_eV": 2.08373786407767
+  },
+  "gap_closing_line_from_3_and_4": {
+   "fm_gap_closing_U_eV": 2.076135796305542
+  },
+  "gap_closing_oracle_points": {
+   "fm_gap_closing_U_eV": 2.0848979591836736
+  }
+ }
+}

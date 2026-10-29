@@ -1,0 +1,79 @@
+{
+ "ablations": {
+  "sigma_tracer": {
+   "PBEsol/gamma/625": 74.7833,
+   "PBE0/gamma/750": 123.243,
+   "r2SCAN/gamma/800": 132.5
+  },
+  "haven_one": 1.0,
+  "ea_tracer": {
+   "below_transition": 1.4218302274000008,
+   "superionic_to_1000K": 0.27708230559668245
+  },
+  "ea_noise_floor": {
+   "below_transition": 0.1602570405880477,
+   "superionic_to_1000K": 0.18392466635682472
+  },
+  "tc_melting_peak": {
+   "PBE0": 875.0,
+   "r2SCAN": 925.0
+  },
+  "sigma_low_branch": {
+   "PBEsol/gamma/625": 24.253003844220878,
+   "PBE0/gamma/750": 120.25214633326966,
+   "r2SCAN/gamma/800": 80.16305336213254
+  },
+  "tc_pbesol_for_all": {
+   "PBE0": 612.5,
+   "r2SCAN": 612.5
+  },
+  "tc_experimental_alpha": {
+   "PBE0": 746.0,
+   "r2SCAN": 746.0
+  },
+  "sigma_interpolated_across_jump": {
+   "PBEsol/gamma/625": 45.68861733049656,
+   "PBE0/gamma/750": 124.00365716530972,
+   "r2SCAN/gamma/800": 74.01860240487736
+  },
+  "sigma_alpha_branch": {
+   "PBEsol/gamma/625": 275.938,
+   "PBE0/gamma/750": 410.778,
+   "r2SCAN/gamma/800": 490.521
+  },
+  "haven_alpha_branch": 0.36707662046166056,
+  "li_s_barycentric": 0.27496896679996546,
+  "log_ratio_libration": -0.29276026624136564,
+  "ea_single_arrhenius": 0.6456190398698662
+ },
+ "robustness": {
+  "sigma_tracer_branch_over_haven": {
+   "PBEsol/gamma/625": 166.24161801674848,
+   "PBE0/gamma/750": 223.46276309668175,
+   "r2SCAN/gamma/800": 233.34603725260078
+  },
+  "haven_first_three": 0.541105111342889,
+  "sigma_superionic_gk_fit": {
+   "PBEsol/gamma/625": 187.45871901125702,
+   "PBE0/gamma/750": 249.29479511899663,
+   "r2SCAN/gamma/800": 277.59775134184537
+  },
+  "haven_all_superionic_to_1100K": 0.636682926241891,
+  "ea_above_to_875K": 0.22975420447132133,
+  "ea_below_unweighted": 1.756943448688662,
+  "ea_below_tracer": 1.4218302274000008,
+  "ea_above_without_750K": 0.1732174726157955,
+  "tc_upper_bracket": {
+   "PBE0": 750.0,
+   "r2SCAN": 800.0
+  },
+  "tc_lower_bracket": {
+   "PBE0": 725.0,
+   "r2SCAN": 775.0
+  },
+  "log_ratio_domega_as_rate": 3.1024780880305944,
+  "D_Li_750K_msd": 0.2857067203629388,
+  "sigma_PBE0_750_msd_route": 255.42094137053246,
+  "log_ratio_msd_750_hop3A": 2.5703579637211402
+ }
+}

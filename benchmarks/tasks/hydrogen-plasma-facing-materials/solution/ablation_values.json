@@ -1,0 +1,472 @@
+{
+ "ablations": {
+  "atom_reference": {
+   "h_formation_energy_eV": {
+    "C-h-194": -0.9445,
+    "HfB2-h-191": -0.6695,
+    "Mo-c-229": -1.8031,
+    "Re-h-194": -2.3886,
+    "TaC-c-225": -0.5387,
+    "TiN-c-225": -0.1296,
+    "WC-h-187": -1.769
+   },
+   "distinct_site_energies_eV": {
+    "C-h-194": [
+     -0.9445,
+     -0.8959
+    ],
+    "HfB2-h-191": [
+     -0.6695,
+     -0.6147,
+     -0.1242,
+     0.4727
+    ],
+    "Mo-c-229": [
+     -1.8031
+    ],
+    "Re-h-194": [
+     -2.3886,
+     -1.8295
+    ],
+    "TaC-c-225": [
+     -0.5387,
+     -0.1941
+    ],
+    "TiN-c-225": [
+     -0.1296,
+     -0.0782
+    ],
+    "WC-h-187": [
+     -1.769,
+     -0.1158
+    ]
+   }
+  },
+  "textbook_site": {
+   "h_formation_energy_eV": {
+    "Re-h-194": 0.4827,
+    "TaC-c-225": 2.1181
+   },
+   "preferred_site": {
+    "Re-h-194": {
+     "nearest_host_element": "Re",
+     "nearest_host_distance_A": 1.7558
+    },
+    "TaC-c-225": {
+     "nearest_host_element": "Ta",
+     "nearest_host_distance_A": 1.9009
+    }
+   }
+  },
+  "archived_runs_as_sites": {
+   "distinct_site_energies_eV": {
+    "C-h-194": [
+     1.3677,
+     1.4163,
+     1.4166
+    ],
+    "HfB2-h-191": [
+     1.6427,
+     1.6975,
+     2.188,
+     2.7849
+    ],
+    "Mo-c-229": [
+     0.5091,
+     0.5092
+    ],
+    "Re-h-194": [
+     -0.0764,
+     0.4827
+    ],
+    "TaC-c-225": [
+     1.7735,
+     1.7736,
+     1.7737,
+     2.1181
+    ],
+    "TiN-c-225": [
+     2.1826,
+     2.234,
+     2.234
+    ],
+    "WC-h-187": [
+     0.5432,
+     0.5432,
+     0.5432,
+     0.5432,
+     0.5432,
+     0.5432,
+     2.1964
+    ]
+   }
+  },
+  "energy_binning_0p1eV": {
+   "distinct_site_energies_eV": {
+    "C-h-194": [
+     1.3677
+    ],
+    "HfB2-h-191": [
+     1.6427,
+     2.188,
+     2.7849
+    ],
+    "Mo-c-229": [
+     0.5091
+    ],
+    "Re-h-194": [
+     -0.0764,
+     0.4827
+    ],
+    "TaC-c-225": [
+     1.7735,
+     2.1181
+    ],
+    "TiN-c-225": [
+     2.1826
+    ],
+    "WC-h-187": [
+     0.5432,
+     2.1964
+    ]
+   }
+  },
+  "w_atom_from_w_set": {
+   "surface_binding_energy_eV": {
+    "WC-h-187": {
+     "W": 11.1474
+    }
+   },
+   "cohesive_energy_eV_per_atom": {
+    "WC-h-187": 9.0075
+   }
+  },
+  "w_atom_from_wc_set": {
+   "surface_binding_energy_eV": {
+    "W-c-229": {
+     "W": 11.0352
+    }
+   },
+   "cohesive_energy_eV_per_atom": {
+    "W-c-229": 8.9463
+   }
+  },
+  "other_termination": {
+   "surface_binding_energy_eV": {
+    "WC-h-187": {
+     "W": 10.3675,
+     "C": 5.1708
+    },
+    "TiB2-h-191": {
+     "B": 5.6221,
+     "Ti": 9.1295
+    }
+   }
+  },
+  "paper_protocol_mean": {
+   "surface_binding_energy_eV": {
+    "WC-h-187": {
+     "W": 12.8683,
+     "C": 7.9148
+    },
+    "TiB2-h-191": {
+     "B": 8.1552,
+     "Ti": 10.3094
+    }
+   }
+  },
+  "site_mean_lowest_termination": {
+   "surface_binding_energy_eV": {
+    "W-c-229": {
+     "W": 11.1646
+    },
+    "WC-h-187": {
+     "W": 13.9246,
+     "C": 9.2867
+    },
+    "TiB2-h-191": {
+     "B": 9.7149,
+     "Ti": 11.4894
+    }
+   }
+  },
+  "cohesive_bulk_from_hife_supercell": {
+   "cohesive_energy_eV_per_atom": {
+    "Re-h-194": 8.8655,
+    "WC-h-187": 8.9566
+   }
+  },
+  "cohesive_energy_as_sbe": {
+   "surface_binding_energy_eV": {
+    "W-c-229": {
+     "W": 9.0757
+    },
+    "WC-h-187": {
+     "W": 8.9428,
+     "C": 8.9428
+    },
+    "TiB2-h-191": {
+     "B": 7.6159,
+     "Ti": 7.6159
+    }
+   }
+  },
+  "starting_geometry": {
+   "preferred_site": {
+    "C-h-194": {
+     "nearest_host_element": "C",
+     "nearest_host_distance_A": 1.1403
+    },
+    "HfB2-h-191": {
+     "nearest_host_element": "B",
+     "nearest_host_distance_A": 1.346
+    },
+    "Mo-c-229": {
+     "nearest_host_element": "Mo",
+     "nearest_host_distance_A": 1.8709
+    },
+    "Re-h-194": {
+     "nearest_host_element": "Re",
+     "nearest_host_distance_A": 1.9775
+    },
+    "TaC-c-225": {
+     "nearest_host_element": "C",
+     "nearest_host_distance_A": 1.1485
+    },
+    "TiN-c-225": {
+     "nearest_host_element": "Ti",
+     "nearest_host_distance_A": 1.7956
+    },
+    "WC-h-187": {
+     "nearest_host_element": "W",
+     "nearest_host_distance_A": 1.7599
+    }
+   }
+  }
+ },
+ "robustness": {
+  "duplicate_cluster_mean": {
+   "h_formation_energy_eV": {
+    "C-h-194": 1.3677,
+    "HfB2-h-191": 1.6427,
+    "Mo-c-229": 0.5091,
+    "Re-h-194": -0.0764,
+    "TaC-c-225": 1.7736,
+    "TiN-c-225": 2.1826,
+    "WC-h-187": 0.5432
+   },
+   "distinct_site_energies_eV": {
+    "C-h-194": [
+     1.3677,
+     1.4165
+    ],
+    "HfB2-h-191": [
+     1.6427,
+     1.6975,
+     2.188,
+     2.7849
+    ],
+    "Mo-c-229": [
+     0.5091
+    ],
+    "Re-h-194": [
+     -0.0764,
+     0.4827
+    ],
+    "TaC-c-225": [
+     1.7736,
+     2.1181
+    ],
+    "TiN-c-225": [
+     2.1826,
+     2.234
+    ],
+    "WC-h-187": [
+     0.5432,
+     2.1964
+    ]
+   }
+  },
+  "carbon_atom_at_60Ry": {
+   "surface_binding_energy_eV": {
+    "WC-h-187": {
+     "C": 7.7813
+    }
+   }
+  },
+  "distance_from_another_duplicate": {
+   "preferred_site": {
+    "C-h-194": {
+     "nearest_host_element": "C",
+     "nearest_host_distance_A": 1.1321
+    },
+    "HfB2-h-191": {
+     "nearest_host_element": "B",
+     "nearest_host_distance_A": 1.4068
+    },
+    "Mo-c-229": {
+     "nearest_host_element": "Mo",
+     "nearest_host_distance_A": 1.8234
+    },
+    "Re-h-194": {
+     "nearest_host_element": "Re",
+     "nearest_host_distance_A": 1.9792
+    },
+    "TaC-c-225": {
+     "nearest_host_element": "C",
+     "nearest_host_distance_A": 1.1498
+    },
+    "TiN-c-225": {
+     "nearest_host_element": "Ti",
+     "nearest_host_distance_A": 1.7947
+    },
+    "WC-h-187": {
+     "nearest_host_element": "W",
+     "nearest_host_distance_A": 1.7459
+    }
+   }
+  },
+  "rydberg_13p6057": {
+   "h_formation_energy_eV": {
+    "C-h-194": 1.3677,
+    "HfB2-h-191": 1.6427,
+    "Mo-c-229": 0.5091,
+    "Re-h-194": -0.0764,
+    "TaC-c-225": 1.7735,
+    "TiN-c-225": 2.1826,
+    "WC-h-187": 0.5432
+   },
+   "cohesive_energy_eV_per_atom": {
+    "Re-h-194": 8.8007,
+    "W-c-229": 9.0757,
+    "WC-h-187": 8.9428
+   }
+  }
+ },
+ "reference": {
+  "h_formation_energy_eV": {
+   "C-h-194": 1.3677,
+   "HfB2-h-191": 1.6427,
+   "Mo-c-229": 0.5091,
+   "Re-h-194": -0.0764,
+   "TaC-c-225": 1.7735,
+   "TiN-c-225": 2.1826,
+   "WC-h-187": 0.5432
+  },
+  "distinct_site_energies_eV": {
+   "C-h-194": [
+    1.3677,
+    1.4163
+   ],
+   "HfB2-h-191": [
+    1.6427,
+    1.6975,
+    2.188,
+    2.7849
+   ],
+   "Mo-c-229": [
+    0.5091
+   ],
+   "Re-h-194": [
+    -0.0764,
+    0.4827
+   ],
+   "TaC-c-225": [
+    1.7735,
+    2.1181
+   ],
+   "TiN-c-225": [
+    2.1826,
+    2.234
+   ],
+   "WC-h-187": [
+    0.5432,
+    2.1964
+   ]
+  },
+  "preferred_site": {
+   "C-h-194": {
+    "nearest_host_element": "C",
+    "nearest_host_distance_A": 1.1321
+   },
+   "HfB2-h-191": {
+    "nearest_host_element": "B",
+    "nearest_host_distance_A": 1.4068
+   },
+   "Mo-c-229": {
+    "nearest_host_element": "Mo",
+    "nearest_host_distance_A": 1.8238
+   },
+   "Re-h-194": {
+    "nearest_host_element": "Re",
+    "nearest_host_distance_A": 1.9792
+   },
+   "TaC-c-225": {
+    "nearest_host_element": "C",
+    "nearest_host_distance_A": 1.1496
+   },
+   "TiN-c-225": {
+    "nearest_host_element": "Ti",
+    "nearest_host_distance_A": 1.7947
+   },
+   "WC-h-187": {
+    "nearest_host_element": "W",
+    "nearest_host_distance_A": 1.7459
+   }
+  },
+  "preferred_site_runs": {
+   "C-h-194": [
+    "23"
+   ],
+   "HfB2-h-191": [
+    "6"
+   ],
+   "Mo-c-229": [
+    "17",
+    "16"
+   ],
+   "Re-h-194": [
+    "5"
+   ],
+   "TaC-c-225": [
+    "17",
+    "16",
+    "25"
+   ],
+   "TiN-c-225": [
+    "3"
+   ],
+   "WC-h-187": [
+    "0",
+    "20",
+    "19",
+    "17",
+    "23",
+    "6"
+   ]
+  },
+  "surface_binding_energy_eV": {
+   "W-c-229": {
+    "W": 11.1646
+   },
+   "WC-h-187": {
+    "W": 11.0179,
+    "C": 7.7844
+   },
+   "TiB2-h-191": {
+    "B": 8.5101,
+    "Ti": 11.4894
+   }
+  },
+  "cohesive_energy_eV_per_atom": {
+   "Re-h-194": 8.8007,
+   "W-c-229": 9.0757,
+   "WC-h-187": 8.9428
+  },
+  "lowest_termination": {
+   "W-c-229": "110",
+   "WC-h-187": "100_t2",
+   "TiB2-h-191": "101_t2"
+  }
+ }
+}

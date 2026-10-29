@@ -1,0 +1,121 @@
+{
+ "task_id": "fresh-gete-ferroelectric-well",
+ "solver_budget": 70,
+ "reserved_validation_charge": 0,
+ "system": "GeTe, two-atom rhombohedral primitive cell (one formula unit): Ge at (0,0,0), Te at (x,x,x) in crystal coordinates; PBE; Quantum ESPRESSO 6.7 pw.x on 2 MPI ranks",
+ "request": {
+  "fields": {
+   "kind": "\"scf\": one self-consistent calculation at the given geometry, with forces and stress",
+   "pseudopotential_set": "which pseudopotential pair (see pseudopotential_sets); the fully relativistic set switches spin-orbit coupling on (noncollinear, non-magnetic)",
+   "a_rh_A": "rhombohedral lattice parameter a (edge of the primitive cell), Angstrom",
+   "alpha_deg": "rhombohedral angle between the primitive vectors, degrees (60 is the face-centred cubic lattice of rocksalt)",
+   "x_Te": "Te position (x,x,x) in crystal coordinates of the primitive cell (0.5 is the centrosymmetric rocksalt site)",
+   "ecutwfc_Ry": "wavefunction cutoff; the charge-density cutoff is 8 x ecutwfc",
+   "kmesh": "n of an n x n x n Monkhorst-Pack mesh in the reciprocal vectors of the primitive cell",
+   "kshift": "0: mesh contains Gamma; 1: mesh offset by half a step along each reciprocal vector",
+   "occupations": "\"fixed\" (insulator filling) or \"smearing\" (Marzari-Vanderbilt cold smearing)",
+   "degauss_Ry": "smearing width; null for fixed occupations"
+  },
+  "allowed": {
+   "kind": [
+    "scf"
+   ],
+   "pseudopotential_set": [
+    "sssp",
+    "pslibrary",
+    "pslibrary_fullrel"
+   ],
+   "ecutwfc_Ry": [
+    40,
+    50,
+    60,
+    75
+   ],
+   "kmesh": [
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    24
+   ],
+   "kshift": [
+    0,
+    1
+   ],
+   "occupations": [
+    "fixed",
+    "smearing"
+   ],
+   "degauss_Ry": [
+    0.002,
+    0.005,
+    0.01,
+    0.02
+   ]
+  },
+  "a_rh_A_range": [
+   3.9,
+   4.6
+  ],
+  "alpha_deg_range": [
+   54.0,
+   62.0
+  ],
+  "x_Te_range": [
+   0.42,
+   0.58
+  ],
+  "pseudopotential_sets": {
+   "sssp": {
+    "Ge": "ge_pbe_v1.4.uspp.F.UPF",
+    "Te": "Te.us.z_6.ld1.psl.v1.0.0-low.upf",
+    "spin_orbit": false,
+    "description": "SSSP 1.3 PBE precision choices: GBRV 1.4 ultrasoft Ge (3d10 4s2 4p2, Z = 14; SSSP cutoffs 45/360 Ry) and PSlibrary-1.0.0-derived ultrasoft Te (5s2 5p4, Z = 6; SSSP cutoffs 50/400 Ry); scalar-relativistic"
+   },
+   "pslibrary": {
+    "Ge": "Ge.pbe-n-rrkjus_psl.1.0.0.UPF",
+    "Te": "Te.pbe-n-rrkjus_psl.1.0.0.UPF",
+    "spin_orbit": false,
+    "description": "PSlibrary 1.0.0 ultrasoft, scalar-relativistic: Ge 4s2 4p2 (3d frozen in the core, nonlinear core correction, Z = 4), Te 5s2 5p4 (Z = 6); suggested minimum cutoffs 20/116 (Ge) and 32/151 Ry (Te)"
+   },
+   "pslibrary_fullrel": {
+    "Ge": "Ge.rel-pbe-n-rrkjus_psl.1.0.0.UPF",
+    "Te": "Te.rel-pbe-n-rrkjus_psl.1.0.0.UPF",
+    "spin_orbit": true,
+    "description": "the fully relativistic counterparts of the pslibrary set (same generation parameters); calculations are noncollinear with spin-orbit coupling and no magnetization"
+   }
+  },
+  "fixed": {
+   "functional": "PBE (from the pseudopotentials)",
+   "masses_amu": {
+    "Ge": 72.63,
+    "Te": 127.6
+   },
+   "dual": 8,
+   "empty_bands": 6,
+   "conv_thr_Ry": 1e-10,
+   "mixing_beta": 0.4,
+   "timeout_s": 1500
+  },
+  "charge": {
+   "rule": "units = max(1, ceil(N_k * set_factor[pseudopotential_set] * ecut_factor[ecutwfc_Ry] / k_points_per_unit)), where N_k is the number of symmetry-distinct k points pw.x uses for this structure and mesh (returned as charged_k_points; the polar structures x != 0.5 have fewer symmetries than rocksalt and need more k points). Requests above max_units_per_request are refused without charge.",
+   "k_points_per_unit": 160,
+   "set_factor": {
+    "sssp": 1.0,
+    "pslibrary": 0.8,
+    "pslibrary_fullrel": 3.5
+   },
+   "ecut_factor": {
+    "40": 0.75,
+    "50": 1.0,
+    "60": 1.35,
+    "75": 2.0
+   },
+   "max_units_per_request": 8
+  }
+ }
+}

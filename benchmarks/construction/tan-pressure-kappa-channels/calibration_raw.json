@@ -1,0 +1,141 @@
+{
+ "reference": {
+  "kappa_xx_80GPa_300K_W_mK": 1878.42,
+  "kappa_zz_80GPa_300K_W_mK": 1536.82,
+  "kappa_xx_40GPa_300K_W_mK": 1835.3,
+  "kappa_xx_60GPa_600K_W_mK": 629.725,
+  "phel_resistivity_fraction_80GPa_300K": 0.23492803088928882
+ },
+ "mc_seed1_kappa_xx_80": 1879.34,
+ "mc_seed2_kappa_xx_80": 1877.67,
+ "oracle": {
+  "kappa_xx_80GPa_300K_W_mK": 1757.63,
+  "kappa_zz_80GPa_300K_W_mK": 1471.98,
+  "kappa_xx_40GPa_300K_W_mK": 1809.36,
+  "kappa_xx_60GPa_600K_W_mK": 633.428,
+  "phel_resistivity_fraction_80GPa_300K": 0.2835533127348916
+ },
+ "robust_geometric_interpolation": {
+  "kappa_xx_80GPa_300K_W_mK": 1982.11,
+  "kappa_zz_80GPa_300K_W_mK": 1593.58,
+  "kappa_xx_40GPa_300K_W_mK": 1823.86,
+  "kappa_xx_60GPa_600K_W_mK": 633.652,
+  "phel_resistivity_fraction_80GPa_300K": 0.1982728633256483
+ },
+ "robust_quadratic_and_T_ratio_from_100GPa": {
+  "kappa_xx_80GPa_300K_W_mK": 1805.92,
+  "kappa_zz_80GPa_300K_W_mK": 1508.68,
+  "kappa_xx_40GPa_300K_W_mK": 1983.89,
+  "kappa_xx_60GPa_600K_W_mK": 623.538,
+  "phel_resistivity_fraction_80GPa_300K": 0.26962711316023613
+ },
+ "robust_T_ratio_from_20GPa": {
+  "kappa_xx_80GPa_300K_W_mK": 1757.63,
+  "kappa_zz_80GPa_300K_W_mK": 1471.98,
+  "kappa_xx_40GPa_300K_W_mK": 1809.36,
+  "kappa_xx_60GPa_600K_W_mK": 643.798,
+  "phel_resistivity_fraction_80GPa_300K": 0.2835533127348916
+ },
+ "abl_RTA": {
+  "kappa_xx_80GPa_300K_W_mK": 1016.17,
+  "kappa_zz_80GPa_300K_W_mK": 891.656,
+  "kappa_xx_40GPa_300K_W_mK": 960.578,
+  "kappa_xx_60GPa_600K_W_mK": 409.979,
+  "phel_resistivity_fraction_80GPa_300K": 0.213137476576172
+ },
+ "abl_no_4ph": {
+  "kappa_xx_80GPa_300K_W_mK": 5604.71,
+  "kappa_zz_80GPa_300K_W_mK": 7074.78,
+  "kappa_xx_40GPa_300K_W_mK": 7977.63,
+  "kappa_xx_60GPa_600K_W_mK": 2816.71,
+  "phel_resistivity_fraction_80GPa_300K": 1.0004287667250626
+ },
+ "abl_no_phel": {
+  "kappa_xx_80GPa_300K_W_mK": 2453.26,
+  "kappa_zz_80GPa_300K_W_mK": 2016.69,
+  "kappa_xx_40GPa_300K_W_mK": 1809.36,
+  "kappa_xx_60GPa_600K_W_mK": 633.428,
+  "phel_resistivity_fraction_80GPa_300K": 0.0
+ },
+ "abl_phel_times_2pi": {
+  "kappa_xx_80GPa_300K_W_mK": 1528.0,
+  "kappa_zz_80GPa_300K_W_mK": 1216.89,
+  "kappa_xx_40GPa_300K_W_mK": 1723.16,
+  "kappa_xx_60GPa_600K_W_mK": 598.098,
+  "phel_resistivity_fraction_80GPa_300K": 0.37715529540285175
+ },
+ "abl_phel_row_order": {
+  "kappa_xx_80GPa_300K_W_mK": 1462.61,
+  "kappa_zz_80GPa_300K_W_mK": 1255.88,
+  "kappa_xx_40GPa_300K_W_mK": 1488.68,
+  "kappa_xx_60GPa_600K_W_mK": 531.009,
+  "phel_resistivity_fraction_80GPa_300K": 0.403809624744218
+ },
+ "abl_4ph_not_rescaled_to_600K": {
+  "kappa_xx_80GPa_300K_W_mK": 1757.63,
+  "kappa_zz_80GPa_300K_W_mK": 1471.98,
+  "kappa_xx_40GPa_300K_W_mK": 1809.36,
+  "kappa_xx_60GPa_600K_W_mK": 1183.99,
+  "phel_resistivity_fraction_80GPa_300K": 0.2835533127348916
+ },
+ "abl_4ph_classical_T2_scaling": {
+  "kappa_xx_80GPa_300K_W_mK": 1757.63,
+  "kappa_zz_80GPa_300K_W_mK": 1471.98,
+  "kappa_xx_40GPa_300K_W_mK": 1809.36,
+  "kappa_xx_60GPa_600K_W_mK": 763.431,
+  "phel_resistivity_fraction_80GPa_300K": 0.2835533127348916
+ },
+ "abl_scalebroad_1": {
+  "kappa_xx_80GPa_300K_W_mK": 1559.98,
+  "kappa_zz_80GPa_300K_W_mK": 1290.3,
+  "kappa_xx_40GPa_300K_W_mK": 1568.97,
+  "kappa_xx_60GPa_600K_W_mK": 584.575,
+  "phel_resistivity_fraction_80GPa_300K": 0.27072386259513437
+ },
+ "abl_kappa_level_interpolation": {
+  "kappa_xx_80GPa_300K_W_mK": 1857.95,
+  "kappa_zz_80GPa_300K_W_mK": 1536.185,
+  "kappa_xx_40GPa_300K_W_mK": 1706.585,
+  "kappa_xx_60GPa_600K_W_mK": 951.845,
+  "phel_resistivity_fraction_80GPa_300K": 0.2463441841598215
+ },
+ "abl_trace_average": {
+  "kappa_xx_80GPa_300K_W_mK": 1764.5966666666666,
+  "kappa_zz_80GPa_300K_W_mK": 1764.5966666666666,
+  "kappa_xx_40GPa_300K_W_mK": 1683.79,
+  "kappa_xx_60GPa_600K_W_mK": 587.3820000000001,
+  "phel_resistivity_fraction_80GPa_300K": 0.23492803088928882
+ },
+ "context": {
+  "full_0": [
+   1080.53,
+   1080.79,
+   879.386
+  ],
+  "full_20": [
+   1509.48,
+   1509.35,
+   1195.34
+  ],
+  "full_60": [
+   1903.69,
+   1903.5,
+   1522.46
+  ],
+  "full_100": [
+   1812.21,
+   1811.9,
+   1549.91
+  ],
+  "3ph_sb1_60": [
+   3206.24,
+   3211.08,
+   2937.37
+  ],
+  "3ph_sb1_80": [
+   3222.57,
+   3224.07,
+   2947.67
+  ]
+ }
+}

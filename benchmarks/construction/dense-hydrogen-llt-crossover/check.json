@@ -1,0 +1,113 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 8,
+  "task_mb": 12.44,
+  "hidden_values": 7,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 117,
+   "budget": 135,
+   "evaluations": 66,
+   "failed_evaluations": 0,
+   "container_seconds": 69
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "widom_from_whole_runs",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "classification_from_small_cells",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "molecular_side_liquid_because_it_diffuses",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "absolute_structure_factor_threshold",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "nuclear_quantum_effects_ignored",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "nqe_shift_at_fixed_density",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "nqe_900K_from_mislabelled_pimd_files",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "small_cells_only_budget",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "widom_discard_5ps",
+    "passes_grading": true
+   },
+   {
+    "name": "widom_discard_20ps",
+    "passes_grading": true
+   },
+   {
+    "name": "widom_three_point_fit",
+    "passes_grading": true
+   },
+   {
+    "name": "widom_potential_energy_cv",
+    "passes_grading": true
+   },
+   {
+    "name": "widom_grid_maximum",
+    "passes_grading": true
+   },
+   {
+    "name": "pimd_crossover_from_tanh_fit",
+    "passes_grading": true
+   },
+   {
+    "name": "classical_reference_N512",
+    "passes_grading": true
+   },
+   {
+    "name": "pimd_without_transient_removal",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T13:27:39Z"
+}

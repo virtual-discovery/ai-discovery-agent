@@ -1,0 +1,14 @@
+{
+ "task_id": "cr2o3-magnetoelectric-sign",
+ "solver_budget": 44,
+ "reserved_validation_charge": 0,
+ "requests": {"born_reference": {"kind": "born_reference", "cost": 1},
+              "born_displacement": {"kind": "born_displacement", "amplitude": "<tag>", "atom": "<Cr1..O6>", "cost": 1},
+              "elk_moment": {"kind": "elk_moment", "mode": "<Eu_1_x..Eu_4_x>", "amplitude": "<tag>", "cost": 1},
+              "vasp_moment": {"kind": "vasp_moment", "mode": "<Eu_1_x..Eu_4_x>", "amplitude": "<tag>", "cost": 1},
+              "phonon_gamma": {"kind": "phonon_gamma", "masses": "CrO|Cr|H", "cost": 1},
+              "force_constant_eigenmodes": {"kind": "force_constant_eigenmodes", "cost": 1},
+              "structure": {"kind": "structure", "key": "relaxation|phonon", "cost": 1},
+              "qe_inputs": {"kind": "qe_inputs", "folder": "<phonons_at_gamma|mode_E_u_1..4>", "cost": 1}},
+ "catalog": "/app/catalog.json"
+}

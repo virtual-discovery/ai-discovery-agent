@@ -1,0 +1,82 @@
+{
+ "targets": {
+  "kmin_FM_reference_rlu": {
+   "ligand_corrected": [
+    0.49113072146108355,
+    3.856408711354808e-07,
+    -0.4736109103607995
+   ],
+   "uncorrected": [
+    3.700921194961872e-06,
+    -0.49581479565103725,
+    2.5814170673229056e-06
+   ]
+  },
+  "stable_at_own_reference": {
+   "FM/ligand": false,
+   "AFM/ligand": true,
+   "FM/no_ligand": false,
+   "AFM/no_ligand": false
+  },
+  "converged_propagation_vector_rlu": [
+   0.5,
+   0.0,
+   0.5
+  ],
+  "chain_exchange_meV": 129.7424,
+  "mean_magnon_energy_meV": 149.1167628328579,
+  "magnon_band_maximum_meV": 190.4896867731861
+ },
+ "thresholds": {
+  "kmin_ligand_rlu": 0.006,
+  "kmin_uncorrected_rlu": 0.003,
+  "converged_q_rlu": 0.006,
+  "chain_J_rel": 0.04,
+  "magnon_mean_rel": 0.05,
+  "magnon_max_rel": 0.04
+ },
+ "reference_details": {
+  "chain_bond_TB2J_meV": [
+   -16.2178,
+   3.976,
+   -16.2637,
+   -16.1736,
+   32
+  ],
+  "lt_top_eigenvalue_meV": {
+   "FM/ligand": 40.106327012339264,
+   "FM/no_ligand": 56.62119728765023
+  },
+  "min_h_eigenvalue_meV": {
+   "FM/ligand": -142.07046056626297,
+   "AFM/ligand": -7.816169554204918e-14,
+   "FM/no_ligand": -219.93600805699404,
+   "AFM/no_ligand": -5.184613565312963
+  },
+  "AF1_energy_meV_per_Cu": -44.330675,
+  "author_path_check": {
+   "A_rlu": [
+    -0.3921,
+    0.5001,
+    -0.3922
+   ],
+   "X_rlu": [
+    0.392,
+    0.0001,
+    0.392
+   ],
+   "max_dev_eV_FM_ligand": 2.355472202057729e-05,
+   "max_dev_eV_AFM_ligand": 0.00012445510215471078,
+   "max_dev_eV_AFM_ligand_Y_Gamma_X": 1.0241185619541682e-05
+  },
+  "magnon_details": {
+   "mean": 149.1167628328579,
+   "max": 190.4896867731861,
+   "min_h_eig": 1.062605362764021,
+   "max_imag": 1.1208325749862186e-13,
+   "h_mean": 177.3227,
+   "h_max": 327.4835905641058,
+   "max_grid_only": 190.01484796045983
+  }
+ }
+}

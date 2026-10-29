@@ -1,0 +1,61 @@
+{
+ "task_id": "fresh-h-chain-peierls-vs-afm",
+ "solver_budget": 36,
+ "reserved_validation_charge": 0,
+ "scf_request": {
+  "kind": "scf",
+  "atoms_per_cell": [
+   1,
+   2,
+   4
+  ],
+  "bond_length_range_A": [
+   0.5,
+   3.6
+  ],
+  "mean_spacing_range_A": [
+   1.0,
+   2.0
+  ],
+  "allowed": {
+   "k_points": [
+    12,
+    24,
+    48,
+    96,
+    192
+   ],
+   "smearing": [
+    "mv",
+    "gaussian",
+    "fd"
+   ],
+   "degauss_Ry": [
+    0.002,
+    0.005,
+    0.01,
+    0.02
+   ],
+   "box_A": [
+    6,
+    8,
+    10
+   ],
+   "ecutwfc_Ry": [
+    50,
+    60,
+    80
+   ]
+  },
+  "max_k_points_times_atoms": 384,
+  "charge_unit_k_points_times_atoms": 96,
+  "fixed": {
+   "pseudopotential": "H_ONCV_PBE-1.0.oncvpsp.upf",
+   "conv_thr_Ry_per_atom": 1e-10,
+   "mixing_beta": 0.3,
+   "timeout_s": 1200
+  },
+  "max_k_points_times_cell_length_A": 480,
+  "notes": "bond_lengths_A lists the bond from each atom to the next (periodic); cell length = sum. starting_magnetization: null = non-spin-polarized, else one value in [-1, 1] per atom (collinear). Charge = ceil(atoms_per_cell * k_points / 96), minimum 1. k_points is the Gamma-centred mesh along the chain."
+ }
+}

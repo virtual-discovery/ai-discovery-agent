@@ -1,0 +1,180 @@
+{
+ "cubic_a0_A": {
+  "reference": 6.009309217495979,
+  "tolerance": "+-0.008",
+  "robustness": {
+   "oracle_route": 6.01,
+   "eos_k16_six_points": 6.009940479506411
+  },
+  "ablations": {},
+  "max_robust_error": 0.0006907825040212145,
+  "robust_all_pass": true,
+  "ablation_errors": {},
+  "failing_ablations": []
+ },
+ "r3m_a_rh_A": {
+  "reference": 4.377517018695297,
+  "tolerance": "+-0.005",
+  "robustness": {
+   "oracle_route": 4.37702261073319,
+   "k16_grid_model_minimum_structure": 4.375016832532149
+  },
+  "ablations": {
+   "x_relaxed_in_experimental_cell": 4.28,
+   "one_sided_quadratic_model": 4.3851575184398
+  },
+  "max_robust_error": 0.002500186163148399,
+  "robust_all_pass": true,
+  "ablation_errors": {
+   "x_relaxed_in_experimental_cell": -0.09751701869529672,
+   "one_sided_quadratic_model": 0.007640499744502982
+  },
+  "failing_ablations": [
+   "one_sided_quadratic_model",
+   "x_relaxed_in_experimental_cell"
+  ]
+ },
+ "r3m_alpha_deg": {
+  "reference": 57.74336891853086,
+  "tolerance": "+-0.1",
+  "robustness": {
+   "oracle_route": 57.752205815280234,
+   "k16_grid_model_minimum_structure": 57.792105347247784
+  },
+  "ablations": {
+   "x_relaxed_in_experimental_cell": 58.36,
+   "one_sided_quadratic_model": 57.59141252575355
+  },
+  "max_robust_error": 0.04873642871692141,
+  "robust_all_pass": true,
+  "ablation_errors": {
+   "x_relaxed_in_experimental_cell": 0.6166310814691371,
+   "one_sided_quadratic_model": -0.15195639277731487
+  },
+  "failing_ablations": [
+   "one_sided_quadratic_model",
+   "x_relaxed_in_experimental_cell"
+  ]
+ },
+ "r3m_x_Te": {
+  "reference": 0.4690794068511306,
+  "tolerance": "+-0.0008",
+  "robustness": {
+   "oracle_route": 0.4691427546547085,
+   "k16_grid_model_minimum_structure": 0.4694553148665065
+  },
+  "ablations": {
+   "x_relaxed_in_experimental_cell": 0.4758352201144084,
+   "one_sided_quadratic_model": 0.4680802492868161
+  },
+  "max_robust_error": 0.0003759080153759031,
+  "robust_all_pass": true,
+  "ablation_errors": {
+   "x_relaxed_in_experimental_cell": 0.006755813263277788,
+   "one_sided_quadratic_model": -0.0009991575643145123
+  },
+  "failing_ablations": [
+   "one_sided_quadratic_model",
+   "x_relaxed_in_experimental_cell"
+  ]
+ },
+ "well_depth_meV_per_fu": {
+  "reference": 31.860040638130158,
+  "tolerance": "within 4.0%",
+  "robustness": {
+   "oracle_route": 31.861397301312536,
+   "k20_both_phases": 31.97341654356569
+  },
+  "ablations": {
+   "clamped_reported_as_well_depth": 18.42752252282525,
+   "cubic_at_r3m_volume": 41.61481886077672,
+   "x_relaxed_in_experimental_cell": 15.612546616699547,
+   "k12_mesh_both_phases": 33.800491185393184,
+   "one_sided_quadratic_model": 32.192044156137854,
+   "per_atom_energies": 15.930020319065079
+  },
+  "max_robust_error": 0.0035585612310815584,
+  "robust_all_pass": true,
+  "ablation_errors": {
+   "clamped_reported_as_well_depth": -0.42161020030931295,
+   "cubic_at_r3m_volume": 0.3061759504152053,
+   "x_relaxed_in_experimental_cell": -0.5099646358261571,
+   "k12_mesh_both_phases": 0.06090546365909821,
+   "one_sided_quadratic_model": 0.01042068721062317,
+   "per_atom_energies": -0.5
+  },
+  "failing_ablations": [
+   "clamped_reported_as_well_depth",
+   "cubic_at_r3m_volume",
+   "k12_mesh_both_phases",
+   "per_atom_energies",
+   "x_relaxed_in_experimental_cell"
+  ]
+ },
+ "clamped_well_depth_meV_per_fu": {
+  "reference": 18.42752252282525,
+  "tolerance": "within 5.0%",
+  "robustness": {
+   "oracle_route": 17.975107864315408,
+   "clamped_k16_four_points": 18.77397564458722
+  },
+  "ablations": {
+   "k12_mesh_both_phases": 20.009383930611158,
+   "per_atom_energies": 9.213761261412625
+  },
+  "max_robust_error": 0.02455103001227965,
+  "robust_all_pass": true,
+  "ablation_errors": {
+   "k12_mesh_both_phases": 0.08584232665169922,
+   "per_atom_energies": -0.5
+  },
+  "failing_ablations": [
+   "k12_mesh_both_phases",
+   "per_atom_energies"
+  ]
+ },
+ "soft_mode_critical_pressure_GPa": {
+  "reference": 8.578409566838568,
+  "tolerance": "+-0.6",
+  "robustness": {
+   "oracle_route": 8.658880431789967,
+   "soft_mode_k20_mv0.002": 8.872023113864842,
+   "soft_mode_k20_mv0.005_all_points": 8.658880431789967
+  },
+  "ablations": {
+   "fixed_occupations_soft_mode_k16": 9.892345298433453,
+   "soft_mode_k12_mv0.01": 9.645959217027322,
+   "soft_mode_from_dx0.02": 1.4961404424326812
+  },
+  "max_robust_error": 0.29361354702627374,
+  "robust_all_pass": true,
+  "ablation_errors": {
+   "fixed_occupations_soft_mode_k16": 1.313935731594885,
+   "soft_mode_k12_mv0.01": 1.067549650188754,
+   "soft_mode_from_dx0.02": -7.082269124405887
+  },
+  "failing_ablations": [
+   "fixed_occupations_soft_mode_k16",
+   "soft_mode_from_dx0.02",
+   "soft_mode_k12_mv0.01"
+  ]
+ },
+ "soc_well_depth_change_meV_per_fu": {
+  "reference": 1.4602990429848433,
+  "tolerance": "+-0.6",
+  "robustness": {
+   "oracle_route": 1.863843900966458
+  },
+  "ablations": {
+   "soc_compared_with_sssp": 0.06489915610291064
+  },
+  "max_robust_error": 0.40354485798161477,
+  "robust_all_pass": true,
+  "ablation_errors": {
+   "soc_compared_with_sssp": -1.3953998868819326
+  },
+  "failing_ablations": [
+   "soc_compared_with_sssp"
+  ]
+ }
+}

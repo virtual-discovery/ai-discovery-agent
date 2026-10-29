@@ -1,0 +1,5 @@
+{
+ "task_id": "gan-irradiation-defect-levels",
+ "solver_budget": 43,
+ "min_report_chars": 400
+}

@@ -1,0 +1,355 @@
+{
+ "task_id": "gan-hole-piezomobility",
+ "catalog_id": "gan-hole-piezomobility",
+ "start": "released",
+ "source_group": "chen_2025_gan_piezomobility",
+ "title": "Wurtzite GaN: strain engineering of the hole mobility tensor",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "How to obtain a withheld shear state (expand_3%_e4, compress_3%_e6)",
+   "wrong_choice": "Extrapolate the same-sign 1%/2% series (or a linear tensor) instead of using the exact mirror partner; or copy the partner without changing the sign of the strained off-diagonal element",
+   "consequence": "expand_3%_e4 mu_yy +19%, mu_zz +14%, mu_yz +21%; unflipped off-diagonals have the wrong sign",
+   "ablation": "W4_same_sign_series",
+   "difficulty_type": "symmetry that must be recognised and verified; the exact partner is purchasable but not labelled as such"
+  },
+  {
+   "id": "dp2",
+   "fork": "Whether e2 can be obtained from e1 by swapping x and y",
+   "wrong_choice": "Use the transverse-isotropy (linear-order) swap of the purchasable expand_3%_e1 state",
+   "consequence": "expand_3%_e2 mu_xx -18%, mu_yy +17%: uniaxial strain along a1 and perpendicular to it are inequivalent at finite strain (no 90-degree rotation in 6mm)",
+   "ablation": "W3_swap_from_e1",
+   "difficulty_type": "textbook symmetry that fails in the nonlinear regime; discovered only by buying both e1 and e2 at one strain"
+  },
+  {
+   "id": "dp3",
+   "fork": "Model class: linear piezomobility tensor vs nonlinear, one-sided response",
+   "wrong_choice": "Fit a linear (symmetry-constrained) piezomobility tensor to the +-1% states and apply it at 3%",
+   "consequence": "All targets fail (expand_3%_e3 mu_zz -48%, expand_3%_e2 mu_yy negative, shear diagonals unchanged): HH/LH are quasi-degenerate, so the response is non-analytic at zero strain",
+   "ablation": "linear_piezomobility_from_1pct",
+   "difficulty_type": "regime judgement"
+  },
+  {
+   "id": "dp4",
+   "fork": "Which regime compress_3%_e3 is in (c-axis band crossing)",
+   "wrong_choice": "Extrapolate the modest 0->1% c-axis response",
+   "consequence": "mu_zz ~94 cm2/Vs instead of ~214: the crystal-field level crosses to the top between 1% and 2%, visible in the purchasable GW bands and in the 2% mobility",
+   "ablation": "W1_precrossing_extrapolation",
+   "difficulty_type": "regime judgement; discriminating purchase"
+  },
+  {
+   "id": "dp5",
+   "fork": "SERTA (1 unit) as a cheap survey vs IBTE (3 units)",
+   "wrong_choice": "Rank the 2% states by SERTA mu_zz and rescale by the unstrained IBTE/SERTA ratio",
+   "consequence": "SERTA ranks compress_2%_e4 (71.0) above compress_2%_e3 (64.1); IBTE reverses the order (148.0 vs 163.9) because the IBTE/SERTA ratio depends on band character (2.1 vs 2.6)",
+   "ablation": "best_mu_zz_from_serta",
+   "difficulty_type": "budget allocation; consequence visible only after buying IBTE for competing states"
+  },
+  {
+   "id": "dp6",
+   "fork": "Diagonal elements vs principal values for the in-plane maximum",
+   "wrong_choice": "Compare mu_xx and mu_yy only",
+   "consequence": "Picks compress_2%_e1 (158 cm2/Vs) instead of in-plane shear e6 (~205 cm2/Vs along ~52 deg)",
+   "ablation": "best_inplane_diagonal_only",
+   "difficulty_type": "off-diagonal elements / principal axes"
+  },
+  {
+   "id": "dp7",
+   "fork": "Meaning of the archive shear labels",
+   "wrong_choice": "Read 'compress_2%_e6' as Voigt e6 = -0.02",
+   "consequence": "The archive applies eps_xy = -0.02 (visible in the cell), i.e. Voigt e6 = -0.04; the reported strain is off by a factor 2",
+   "ablation": "best_inplane_label_as_voigt",
+   "difficulty_type": "convention discovered in metadata (cells)"
+  },
+  {
+   "id": "dp8",
+   "fork": "Whether IBTE runs flagged \"reached the maximum but did not converge\" are usable",
+   "wrong_choice": "Distrust the flagged runs (15 archived, 12 purchasable: e3 expansion and most e4/e5 states) and substitute SERTA scaled by the unstrained IBTE/SERTA ratio",
+   "consequence": "expand_3%_e3 mu_xx +17%, expand_3%_e4 mu_yy +47%; the flagged runs change by <= 3e-4 cm2/Vs per iteration at the end and drift by < 0.06% (300 K diagonal) after iteration 100",
+   "ablation": "flagged_runs_replaced_by_scaled_serta",
+   "difficulty_type": "data-quality judgement from raw solver logs"
+  }
+ ],
+ "graded_fields": [
+  "mobility_predictions_cm2_per_Vs: compress_3%_e3 mu_zz in [150, 280]",
+  "expand_3%_e3 xx, yy, zz; expand_3%_e2 xx, yy; expand_3%_e4 xx, yy, zz; compress_3%_e6 xx, yy, zz within +/-10%",
+  "expand_3%_e4 yz and compress_3%_e6 xy within +/-15% (signed)",
+  "best_mu_zz_2pct: Voigt strain e3 = -0.02 and mu_zz within 5%",
+  "best_inplane_2pct: Voigt strain e6 = +/-0.04 and in-plane principal mobility within 8%"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 18,
+  "oracle_charge": 44,
+  "budget": 50,
+  "catalog_charge_all_bands_and_ibte": 133,
+  "tool_calls": "40-70",
+  "gpt6astra_cost_usd": "2-4",
+  "oracle_runs": {
+   "gate": "check_task passed 2026-10-19 (cpuset 6,7,22,23); oracle container 5 s",
+   "harbor": "oracle-r1-gan-hole-piezomobility, reward 1.0, runtime 47 s"
+  },
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image); the lab is a lookup of archived values"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/qfdfa-cs517",
+  "doi": "10.24435/materialscloud:zy-qw",
+  "files_used": [
+   "strain_GaN.tar.gz (scf.in, epw2.in, gan.eig, epw2.out of 37 states; see members.md5)",
+   "README.txt"
+  ],
+  "md5": {
+   "strain_GaN.tar.gz": "9a8747242f4759d235c5552aaea0ba52",
+   "README.txt": "e72a76b7c622cd39d0d3a91ea75811e6"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the design: the linear piezomobility coefficients are not graded (the response is non-analytic at zero strain, so a linear coefficient is not uniquely defined by the data); the withheld compress_2%_e2 is replaced by expand_3%_e2 (compress_2%_e2 is not recoverable within 10% by any defensible route); compress_3%_e3 is graded with a regime window because its exact value is not recoverable from the purchasable data; the GW-vs-DFT fork is dropped (only GW energies are archived) and replaced by the shear-label convention, the SERTA survey trap and the unconverged-flag judgement.",
+ "calibration": {
+  "compress_3%_e3:zz": {
+   "reference_value": 213.56,
+   "oracle_value": 208.3,
+   "robustness_values": {
+    "W1_saturated_at_2pct": 163.9,
+    "W1_linear_1_to_2pct": 264.7
+   },
+   "nearest_ablation_values": {
+    "linear_piezomobility_from_1pct": 70.3,
+    "W1_precrossing_extrapolation": 93.9
+   },
+   "tolerance": "window [150.0, 280.0]"
+  },
+  "expand_3%_e3:xx": {
+   "reference_value": 62.58,
+   "oracle_relative_error": -0.0095,
+   "robustness_relative_errors": {
+    "W2_flat_from_1pct": -0.0001
+   },
+   "ablation_relative_errors": {
+    "linear_piezomobility_from_1pct": 0.1663,
+    "flagged_runs_replaced_by_scaled_serta": 0.168
+   },
+   "tolerance": "+/-10% (relative, signed)"
+  },
+  "expand_3%_e3:yy": {
+   "reference_value": 62.58,
+   "oracle_relative_error": -0.0095,
+   "robustness_relative_errors": {
+    "W2_flat_from_1pct": -0.0001
+   },
+   "ablation_relative_errors": {
+    "linear_piezomobility_from_1pct": 0.1663,
+    "flagged_runs_replaced_by_scaled_serta": 0.168
+   },
+   "tolerance": "+/-10% (relative, signed)"
+  },
+  "expand_3%_e3:zz": {
+   "reference_value": 47.47,
+   "oracle_relative_error": 0.0219,
+   "robustness_relative_errors": {
+    "W2_flat_from_1pct": 0.0096
+   },
+   "ablation_relative_errors": {
+    "linear_piezomobility_from_1pct": -0.4752,
+    "flagged_runs_replaced_by_scaled_serta": -0.0499
+   },
+   "tolerance": "+/-10% (relative, signed)"
+  },
+  "expand_3%_e2:xx": {
+   "reference_value": 155.47,
+   "oracle_relative_error": -0.0168,
+   "robustness_relative_errors": {
+    "W3_linear_series": 0.0587,
+    "W3_anisotropy_ratio": -0.0481
+   },
+   "ablation_relative_errors": {
+    "W3_swap_from_e1": -0.1761,
+    "linear_piezomobility_from_1pct": -0.1251
+   },
+   "tolerance": "+/-10% (relative, signed)"
+  },
+  "expand_3%_e2:yy": {
+   "reference_value": 47.41,
+   "oracle_relative_error": -0.0143,
+   "robustness_relative_errors": {
+    "W3_linear_series": -0.0296,
+    "W3_anisotropy_ratio": -0.0348
+   },
+   "ablation_relative_errors": {
+    "W3_swap_from_e1": 0.1678,
+    "linear_piezomobility_from_1pct": -1.921
+   },
+   "tolerance": "+/-10% (relative, signed)"
+  },
+  "expand_3%_e4:xx": {
+   "reference_value": 58.26,
+   "oracle_relative_error": -0.0078,
+   "robustness_relative_errors": {},
+   "ablation_relative_errors": {
+    "W4_same_sign_series": -0.059,
+    "linear_piezomobility_from_1pct": 0.0133,
+    "flagged_runs_replaced_by_scaled_serta": -0.104
+   },
+   "tolerance": "+/-10% (relative, signed)"
+  },
+  "expand_3%_e4:yy": {
+   "reference_value": 134.13,
+   "oracle_relative_error": -0.0004,
+   "robustness_relative_errors": {},
+   "ablation_relative_errors": {
+    "W4_same_sign_series": 0.1865,
+    "linear_piezomobility_from_1pct": -0.5928,
+    "flagged_runs_replaced_by_scaled_serta": 0.4727
+   },
+   "tolerance": "+/-10% (relative, signed)"
+  },
+  "expand_3%_e4:zz": {
+   "reference_value": 185.81,
+   "oracle_relative_error": 0.0097,
+   "robustness_relative_errors": {},
+   "ablation_relative_errors": {
+    "W4_same_sign_series": 0.1373,
+    "linear_piezomobility_from_1pct": -0.7809,
+    "flagged_runs_replaced_by_scaled_serta": 0.3665
+   },
+   "tolerance": "+/-10% (relative, signed)"
+  },
+  "expand_3%_e4:yz": {
+   "reference_value": -49.06,
+   "oracle_relative_error": 0.0588,
+   "robustness_relative_errors": {},
+   "ablation_relative_errors": {
+    "W4_same_sign_series": 0.2127,
+    "shear_offdiag_sign_not_flipped": -2.0588,
+    "linear_piezomobility_from_1pct": -0.5761,
+    "flagged_runs_replaced_by_scaled_serta": 1.594
+   },
+   "tolerance": "+/-15% (relative, signed)"
+  },
+  "compress_3%_e6:xx": {
+   "reference_value": 117.45,
+   "oracle_relative_error": 0.0145,
+   "robustness_relative_errors": {
+    "W5_linear_compress_series": 0.0739
+   },
+   "ablation_relative_errors": {
+    "linear_piezomobility_from_1pct": -0.5295
+   },
+   "tolerance": "+/-10% (relative, signed)"
+  },
+  "compress_3%_e6:yy": {
+   "reference_value": 166.28,
+   "oracle_relative_error": 0.0106,
+   "robustness_relative_errors": {
+    "W5_linear_compress_series": 0.0586
+   },
+   "ablation_relative_errors": {
+    "linear_piezomobility_from_1pct": -0.6829
+   },
+   "tolerance": "+/-10% (relative, signed)"
+  },
+  "compress_3%_e6:zz": {
+   "reference_value": 52.23,
+   "oracle_relative_error": 0.0134,
+   "robustness_relative_errors": {
+    "W5_linear_compress_series": 0.0345
+   },
+   "ablation_relative_errors": {
+    "linear_piezomobility_from_1pct": -0.1059
+   },
+   "tolerance": "+/-10% (relative, signed)"
+  },
+  "compress_3%_e6:xy": {
+   "reference_value": 81.48,
+   "oracle_relative_error": -0.001,
+   "robustness_relative_errors": {
+    "W5_linear_compress_series": 0.0937
+   },
+   "ablation_relative_errors": {
+    "shear_offdiag_sign_not_flipped": -1.999,
+    "linear_piezomobility_from_1pct": 1.0171
+   },
+   "tolerance": "+/-15% (relative, signed)"
+  },
+  "best_mu_zz_2pct": {
+   "reference": {
+    "state": "compress_2%_e3",
+    "strain_voigt": [
+     0.0,
+     0.0,
+     -0.02,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "mu_zz": 163.88
+   },
+   "runner_up": {
+    "compress_2%_e4": 148.03,
+    "expand_2%_e4": 144.13,
+    "compress_2%_e5": 143.15
+   },
+   "nearest_ablation": {
+    "serta_survey": {
+     "strain_voigt": [
+      0.0,
+      0.0,
+      0.0,
+      -0.04,
+      0.0,
+      0.0
+     ],
+     "mu_zz_cm2_per_Vs": 184.59792320195618,
+     "state": "compress_2%_e4"
+    }
+   },
+   "tolerance": "strain: dominant component e3 = -0.02 +/- 0.002, others |e| <= 0.002; mu_zz +/-5%"
+  },
+  "best_inplane_2pct": {
+   "reference": {
+    "states": [
+     "compress_2%_e6",
+     "expand_2%_e6"
+    ],
+    "strain_voigt": "e6 = +/-0.04",
+    "mu_ref": 205.08,
+    "mu_values": {
+     "compress_2%_e6": 203.51,
+     "expand_2%_e6": 206.65
+    }
+   },
+   "runner_up": {
+    "compress_2%_e1": 158.34,
+    "compress_2%_e2": 150.96
+   },
+   "nearest_ablation": {
+    "diagonal_only": {
+     "strain_voigt": [
+      -0.02,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "mu_inplane_max_cm2_per_Vs": 158.338,
+     "state": "compress_2%_e1"
+    },
+    "label_read_as_voigt": {
+     "strain_voigt": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.02
+     ]
+    }
+   },
+   "tolerance": "strain: dominant component |e6| = 0.04 +/- 0.002 (either sign), others |e| <= 0.002; mu +/-8%"
+  }
+ }
+}

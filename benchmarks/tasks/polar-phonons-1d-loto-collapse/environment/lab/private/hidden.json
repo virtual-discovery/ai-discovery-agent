@@ -1,0 +1,32 @@
+{
+ "targets_1D_LO_cm-1": {
+  "BN55": {
+   "0.01": 1325.9204,
+   "0.025": 1345.4694,
+   "0.05": 1381.5918,
+   "0.075": 1411.7156,
+   "0.125": 1451.3377
+  },
+  "BN66": {
+   "0.01": 1332.8284,
+   "0.025": 1354.5943,
+   "0.05": 1392.6907,
+   "0.075": 1423.065,
+   "0.1": 1445.296,
+   "0.125": 1461.522
+  }
+ },
+ "target_3D_LO_q0_cm-1": 1420.4148,
+ "thresholds": {
+  "tolerance_cm-1": {
+   "0.01": 2.0,
+   "0.025": 3.0,
+   "0.05": 4.5,
+   "0.075": 4.5,
+   "0.1": 4.5,
+   "0.125": 4.5
+  },
+  "tolerance_3d_cm-1": 3.0
+ },
+ "definition": "explicit archived 1D-boundary-condition DFPT runs (longwave folders); LO = mode with the largest longitudinal mode effective charge, Born charges of the Gamma run; 3D: q->0 point of the archived 3D-periodic matdyn.modes of BN(5,5)"
+}

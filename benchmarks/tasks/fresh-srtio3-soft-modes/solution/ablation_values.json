@@ -1,0 +1,134 @@
+{
+ "ablations": {
+  "k4_force_constants_and_polar_well": {
+   "decision_point": "dp1",
+   "changes": {
+    "gamma_soft_mode_cm-1": -192.02709749696172,
+    "gamma_LO_highest_cm-1": 734.8376795625275,
+    "polar_well_depth_meV_per_fu": 8.737581996802273,
+    "larger_energy_gain": "polar"
+   }
+  },
+  "ti_only_slater_displacement": {
+   "decision_point": "dp2",
+   "changes": {
+    "gamma_soft_mode_cm-1": 53.31560202938294,
+    "polar_well_depth_meV_per_fu": 0.0,
+    "larger_energy_gain": "tilt"
+   }
+  },
+  "experimental_lattice_parameter": {
+   "decision_point": "dp3",
+   "changes": {
+    "a0_A": 3.905,
+    "gamma_soft_mode_cm-1": -92.02098864631307
+   }
+  },
+  "k4_dielectric_tensors": {
+   "decision_point": "dp4",
+   "changes": {
+    "eps_inf": 6.848893969,
+    "born_charge_Ti": 7.81119,
+    "gamma_LO_highest_cm-1": 743.5245126763732
+   }
+  },
+  "polar_well_from_coarse_large_amplitudes": {
+   "decision_point": "dp8",
+   "changes": {
+    "polar_well_depth_meV_per_fu": 0.9809381960020164
+   }
+  },
+  "analytic_frequency_as_LO": {
+   "decision_point": "dp5",
+   "changes": {
+    "gamma_LO_highest_cm-1": 509.2543918793444
+   }
+  },
+  "uncoupled_mode_by_mode_LO": {
+   "decision_point": "dp5",
+   "changes": {
+    "gamma_LO_highest_cm-1": 564.834353655266
+   }
+  },
+  "tilt_referenced_to_5atom_cell_other_mesh": {
+   "decision_point": "dp6",
+   "changes": {
+    "tilt_well_depth_meV_per_fu": 3.3268329112338906
+   }
+  },
+  "tilt_energies_per_10atom_cell": {
+   "decision_point": "dp6",
+   "changes": {
+    "tilt_well_depth_meV_per_fu": 8.051514733766954,
+    "R_mode_cm-1": -103.27988442854783
+   }
+  },
+  "no_poisson_relaxation": {
+   "decision_point": "dp7",
+   "changes": {
+    "strained_c_A": 3.936,
+    "strained_inplane_polar_mode_cm-1": -192.376914990916
+   }
+  },
+  "cubic_soft_mode_for_strained_cell": {
+   "decision_point": "dp7",
+   "changes": {
+    "strained_c_A": 3.936,
+    "strained_inplane_polar_mode_cm-1": -138.40394542938893
+   }
+  }
+ },
+ "robustness": {
+  "a0_from_zero_pressure_75Ry": {
+   "a0_A": 3.9346328538985618
+  },
+  "soft_mode_and_LO_from_6x6x6": {
+   "gamma_soft_mode_cm-1": -143.35435952359973,
+   "gamma_LO_highest_cm-1": 731.4830845422986,
+   "eps_inf": 6.348516709,
+   "born_charge_Ti": 7.386386000000001
+  },
+  "soft_mode_0.04A_displacements": {
+   "gamma_soft_mode_cm-1": -133.3664949625265
+  },
+  "LO_8x8x8_force_constants_6x6x6_tensors": {
+   "gamma_LO_highest_cm-1": 732.1400945835163
+  },
+  "polar_well_6x6x6_pattern_and_mesh": {
+   "polar_well_depth_meV_per_fu": 3.63526355190584
+  },
+  "polar_well_six_amplitudes_8x8x8": {
+   "polar_well_depth_meV_per_fu": 3.1533963200234636
+  },
+  "polar_well_lowest_sampled_energy_8x8x8": {
+   "polar_well_depth_meV_per_fu": 3.2697201711678385
+  },
+  "tilt_angles_3_4_5": {
+   "tilt_angle_deg": 4.668200386427305,
+   "tilt_well_depth_meV_per_fu": 4.02949541130182,
+   "R_mode_cm-1": -72.83228303881891
+  },
+  "R_mode_from_1_2_deg": {
+   "R_mode_cm-1": -72.97625777345866
+  },
+  "strained_c_from_stress_zero_60Ry": {
+   "strained_c_A": 3.9083658969804618
+  },
+  "strained_c_from_stress_zero_75Ry": {
+   "strained_c_A": 3.9096921255180583
+  }
+ },
+ "oracle_path": {
+  "a0_A": 3.935924171306125,
+  "gamma_soft_mode_cm-1": -138.40394542938893,
+  "gamma_LO_highest_cm-1": 731.4835382298982,
+  "eps_inf": 6.294134975,
+  "born_charge_Ti": 7.34583,
+  "polar_well_depth_meV_per_fu": 3.666928542883109,
+  "R_mode_cm-1": -73.02990663958909,
+  "tilt_angle_deg": 4.673055393568238,
+  "tilt_well_depth_meV_per_fu": 4.025757366883477,
+  "strained_c_A": 3.9120972820663065,
+  "strained_inplane_polar_mode_cm-1": -190.95623310105793
+ }
+}

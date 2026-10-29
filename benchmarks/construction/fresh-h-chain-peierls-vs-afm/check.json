@@ -1,0 +1,138 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 7,
+  "task_mb": 0.17,
+  "hidden_values": 9,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 29,
+   "budget": 36,
+   "evaluations": 25,
+   "failed_evaluations": 0,
+   "container_seconds": 0
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "ferromagnetic_start_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "one_atom_cell_spin_polarized",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "large_smearing_mv002",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "fermi_dirac_0005",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "coarse_k_sdw_gap",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "coarse_boundary_grid",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "linear_moment_extrapolation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "nonmagnetic_uniform_reference",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "afm_wins_at_large_spacing",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "grid_minimum_dimerization",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "energies_per_cell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "standard_settings_magnetic_gain",
+    "passes_grading": true
+   },
+   {
+    "name": "boundary_bisection_midpoint",
+    "passes_grading": true
+   },
+   {
+    "name": "boundary_converged_settings",
+    "passes_grading": true
+   },
+   {
+    "name": "gap_k96_mv0002",
+    "passes_grading": true
+   },
+   {
+    "name": "gap_gaussian_k96",
+    "passes_grading": true
+   },
+   {
+    "name": "gap_4atom_cell_k96",
+    "passes_grading": true
+   },
+   {
+    "name": "energy_parabola_minimum",
+    "passes_grading": true
+   },
+   {
+    "name": "cutoff_60_Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "converged_uniform_reference",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T02:06:48Z"
+}

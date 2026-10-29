@@ -1,0 +1,239 @@
+{
+ "ablations": {
+  "scalar_relativistic_band_energies": {
+   "decision_point": "dp1",
+   "changes": {
+    "direct_gap_strain_range_percent": [
+     -1.602552932968343,
+     -0.13144228417140405
+    ]
+   }
+  },
+  "spin_orbit_shift_of_K_valence_only": {
+   "decision_point": "dp2",
+   "changes": {
+    "direct_gap_strain_range_percent": [
+     -1.602552932968343,
+     0.46063005854665934
+    ]
+   }
+  },
+  "clamped_sulfur_height": {
+   "decision_point": "dp3",
+   "changes": {
+    "direct_gap_strain_range_percent": [
+     -2.2468720212810074,
+     0.7099355362707447
+    ],
+    "deformation_potentials_eV": {
+     "valence_K": -3.1311065137888767,
+     "conduction_K": -12.655108409673716,
+     "gap_K": -9.524001895884838
+    }
+   }
+  },
+  "analytic_stress_zero_35Ry": {
+   "decision_point": "dp4",
+   "changes": {
+    "a0_A": 3.1476552681594616
+   }
+  },
+  "analytic_stress_zero_45Ry": {
+   "decision_point": "dp4",
+   "changes": {
+    "a0_A": 3.181498264275193
+   }
+  },
+  "experimental_lattice_as_strain_reference": {
+   "decision_point": "dp5",
+   "changes": {
+    "direct_gap_strain_range_percent": [
+     -0.6118804261576516,
+     1.272151006452793
+    ]
+   }
+  },
+  "raw_eigenvalues_without_vacuum_alignment": {
+   "decision_point": "dp6",
+   "changes": {
+    "deformation_potentials_eV": {
+     "valence_K": -13.732281803368867,
+     "conduction_K": -24.95019510789764
+    }
+   }
+  },
+  "uniaxial_strain_instead_of_stress": {
+   "decision_point": "dp7",
+   "changes": {
+    "uniaxial_zigzag_compression": {
+     "transverse_strain_percent": 0.0,
+     "gap_eV": 1.714164286815537,
+     "vbm_k_crystal": [
+      0.323333,
+      0.333333
+     ],
+     "cbm_k_crystal": [
+      -0.344651,
+      0.172325
+     ]
+    }
+   }
+  },
+  "q_valleys_on_one_gamma_k_line": {
+   "decision_point": "dp8",
+   "changes": {
+    "uniaxial_zigzag_compression": {
+     "gap_eV": 1.7573289474132228,
+     "vbm_k_crystal": [
+      0.323333,
+      0.333333
+     ],
+     "cbm_k_crystal": [
+      0.169983,
+      0.169983
+     ]
+    }
+   }
+  },
+  "uniaxial_zero_of_uncorrected_analytic_stress": {
+   "decision_point": "dp9",
+   "changes": {
+    "uniaxial_zigzag_compression": {
+     "transverse_strain_percent": 0.7363999999999999,
+     "gap_eV": 1.7280501744326866,
+     "vbm_k_crystal": [
+      0.323333,
+      0.333333
+     ],
+     "cbm_k_crystal": [
+      -0.344365,
+      0.172182
+     ]
+    }
+   }
+  },
+  "uniaxial_clamped_ions": {
+   "decision_point": "dp3",
+   "changes": {
+    "uniaxial_zigzag_compression": {
+     "transverse_strain_percent": 1.2846855278011824,
+     "gap_eV": 1.71148,
+     "vbm_k_crystal": [
+      0.323333,
+      0.333333
+     ],
+     "cbm_k_crystal": [
+      0.313333,
+      0.343333
+     ]
+    }
+   }
+  },
+  "band_edges_from_9x9_mesh_points": {
+   "decision_point": "dp10",
+   "changes": {
+    "direct_gap_strain_range_percent": [
+     -2.8428329006843422,
+     0.43203859488487223
+    ],
+    "edge_leaving_K_at_lower_end": {
+     "band": "conduction",
+     "k_crystal": [
+      0.111111,
+      0.111111
+     ]
+    }
+   }
+  }
+ },
+ "robustness": {
+  "a0_energy_minimum_55Ry": {
+   "a0_A": 3.186499961499183
+  },
+  "a0_energy_minimum_70Ry": {
+   "a0_A": 3.186304181642172
+  },
+  "a0_stress_zero_70Ry": {
+   "a0_A": 3.185237479607743
+  },
+  "a0_energy_minimum_three_points_45Ry": {
+   "a0_A": 3.1866093460717466
+  },
+  "stress_70Ry_a0_with_consistent_strains": {
+   "a0_A": 3.185237479607743,
+   "direct_gap_strain_range_percent": [
+    -1.3993588032190973,
+    0.46974494969234115
+   ]
+  },
+  "quadratic_interpolation_of_crossings": {
+   "direct_gap_strain_range_percent": [
+    -1.4373125661125168,
+    0.4311077917910992
+   ]
+  },
+  "one_percent_soc_ladder": {
+   "direct_gap_strain_range_percent": [
+    -1.4282854681412998,
+    0.43499919661332653
+   ],
+   "deformation_potentials_eV": {
+    "valence_K": -5.127664256229301,
+    "conduction_K": -16.34557756075805,
+    "gap_K": -11.217913304528746
+   }
+  },
+  "scalar_ladder_plus_soc_shifts_of_all_edges": {
+   "direct_gap_strain_range_percent": [
+    -1.4075681345287534,
+    0.42471342747856367
+   ]
+  },
+  "deformation_potentials_half_percent": {
+   "deformation_potentials_eV": {
+    "valence_K": -5.14505523857511,
+    "conduction_K": -16.371468098578337,
+    "gap_K": -11.22641286000323
+   }
+  },
+  "deformation_potentials_scalar_relativistic": {
+   "deformation_potentials_eV": {
+    "valence_K": -5.261351351351307,
+    "conduction_K": -16.383351351351294,
+    "gap_K": -11.121999999999987
+   }
+  },
+  "uniaxial_quadratic_fit_of_corrected_stress": {
+   "uniaxial_zigzag_compression": {
+    "transverse_strain_percent": 0.9344180119804436
+   }
+  },
+  "uniaxial_offset_corrected_stress": {
+   "uniaxial_zigzag_compression": {
+    "transverse_strain_percent": 0.9346
+   }
+  },
+  "uniaxial_coarse_sampling": {
+   "uniaxial_zigzag_compression": {
+    "gap_eV": 1.731782016855476,
+    "vbm_k_crystal": [
+     0.323333,
+     0.343333
+    ],
+    "cbm_k_crystal": [
+     -0.344041,
+     0.17202
+    ]
+   }
+  },
+  "uniaxial_grid_point_edges": {
+   "uniaxial_zigzag_compression": {
+    "gap_eV": 1.73166,
+    "cbm_k_crystal": [
+     -0.333333,
+     0.166667
+    ]
+   }
+  }
+ }
+}

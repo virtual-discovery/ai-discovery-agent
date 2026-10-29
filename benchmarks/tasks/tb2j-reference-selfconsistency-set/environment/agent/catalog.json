@@ -1,0 +1,101 @@
+{
+ "source": "Released TB2J output of Tellez-Mora, He, Bousquet, Wirtz and Romero (2024): SIESTA DFT (PBE; DFT+U where stated), isotropic exchange from the magnetic force theorem (Green-function method) with TB2J 0.7.4.x.",
+ "materials": {
+  "NiO": "rock-salt NiO, one Ni per primitive fcc cell in the FM reference",
+  "FeCl2": "1T-FeCl2 (bulk, P-3m1 layers in rhombohedral stacking), three Fe layers per hexagonal cell",
+  "FePS3": "monoclinic FePS3 (C2/m van der Waals layers, Fe honeycomb), four Fe per cell; DFT (U = 0) and DFT+U (U = 3 eV on Fe 3d per the paper) workflows",
+  "FeP": "orthorhombic FeP (MnP type, Pnma; metallic), four Fe per cell"
+ },
+ "calculations": {
+  "NiO/FM": "FM reference",
+  "NiO/AFM": "AFM reference (the authors' updated reference)",
+  "FeCl2/FM": "FM reference",
+  "FeCl2/AFM": "AFM reference (the authors' updated reference)",
+  "FePS3/DFT/FM": "FM reference",
+  "FePS3/DFT/AFM": "AFM reference (the authors' updated reference)",
+  "FePS3/DFT+U/FM": "FM reference",
+  "FePS3/DFT+U/AFM": "AFM reference (the authors' updated reference)",
+  "FeP/FM": "FM reference",
+  "FeP/AFM": "AFM reference (the authors' updated reference)"
+ },
+ "calculation_notes": "Calculation labels are the archive folder names. Each calculation was done in its own cell and magnetic configuration; its TB2J header lines, cell, atoms (positions, Wannier charges and moments) are returned with every exchange purchase from it.",
+ "exchange_convention": "Archived TB2J convention: E = -sum_{i != j} J_ij e_i.e_j over ordered pairs (each bond appears twice, as (i,j,R) and (j,i,-R)), e_i unit vectors along the local moments, J > 0 ferromagnetic, meV. R is in lattice vectors of the calculation's own cell; vector = r_j + R.cell - r_i in Angstrom; distance is |vector|, as archived.",
+ "isotropic_only": "Only isotropic exchange is served (the archive README states that only the isotropic constants are valid for NiO, FeCl2 and FePS3).",
+ "requests": {
+  "exchange": {
+   "example": {
+    "kind": "exchange",
+    "calculation": "FeP/FM",
+    "window": "0-5"
+   },
+   "windows_A": {
+    "0-5": {
+     "distance_range_A": [
+      0,
+      5
+     ],
+     "cost": 1
+    },
+    "5-8": {
+     "distance_range_A": [
+      5,
+      8
+     ],
+     "cost": 1
+    },
+    "8-11": {
+     "distance_range_A": [
+      8,
+      11
+     ],
+     "cost": 1
+    },
+    "11-14": {
+     "distance_range_A": [
+      11,
+      14
+     ],
+     "cost": 1
+    },
+    "14-18": {
+     "distance_range_A": [
+      14,
+      18
+     ],
+     "cost": 2
+    },
+    "18-23": {
+     "distance_range_A": [
+      18,
+      23
+     ],
+     "cost": 2
+    },
+    "23-30": {
+     "distance_range_A": [
+      23,
+      30
+     ],
+     "cost": 2
+    },
+    "30-40": {
+     "distance_range_A": [
+      30,
+      40
+     ],
+     "cost": 3
+    },
+    "40-50": {
+     "distance_range_A": [
+      40,
+      50
+     ],
+     "cost": 3
+    }
+   },
+   "returns": "all isotropic pairs of that calculation with lo <= archived distance < hi, as rows [i, j, Rx, Ry, Rz, J_iso_meV, dx_A, dy_A, dz_A, distance_A], plus the calculation metadata."
+  }
+ },
+ "budget": 68,
+ "catalog_value": 160
+}

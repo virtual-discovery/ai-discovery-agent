@@ -1,0 +1,24 @@
+diagonalization
+number_val_bands_coarse <nv>
+number_cond_bands_coarse <nc>
+number_val_bands_fine <nv>
+number_cond_bands_fine <nc>
+use_wfn_hdf5
+screening_semiconductor
+use_momentum
+polarization <1.0 0.0 0.0 for b1 ; 0 1 0 for b2 ; 0 0 1 for b3  (crystal directions; for monoclinic cells state the Cartesian mapping in the record)>
+gaussian_broadening
+energy_resolution <0.03 for TiS3 low-T lines ; 0.08 round-8 default>
+no_symmetries_coarse_grid
+no_symmetries_fine_grid
+evs <from fit_scissors>
+ev0 <...>
+evdel <...>
+ecs <...>
+ec0 <...>
+ecdel <...>
+write_eigenvectors -1
+# slabs: cell_slab_truncation
+# Exact readout: fine grid = coarse grid (co = fi). Interpolated readout (a64-style): WFN_fi = a denser NSCF (nbnd = nv+nc+few),
+# WFNq_fi = the UNSHIFTED fine WFN for momentum/plotxct (round-8 trap: a shifted WFNq_fi gives incoherent real-space volumes).
+# Outputs: absorption_eh.dat (spectrum), eigenvalues.dat (sticks with strengths), eigenvectors.h5 (for plotxct / layer or chain weights).

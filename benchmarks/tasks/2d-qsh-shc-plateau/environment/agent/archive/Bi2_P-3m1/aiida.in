@@ -1,0 +1,42 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   2.0000000000d-05
+  forc_conv_thr =   1.0000000000d-04
+  max_seconds =   4.1040000000d+04
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './pseudo/'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  assume_isolated = '2D'
+  degauss =   1.0000000000d-02
+  ecutrho =   2.6400000000d+02
+  ecutwfc =   6.6000000000d+01
+  ibrav = 0
+  lspinorb = .true.
+  nat = 2
+  noncolin = .true.
+  nosym = .false.
+  ntyp = 1
+  occupations = 'smearing'
+  smearing = 'cold'
+/
+&ELECTRONS
+  conv_thr =   4.0000000000d-10
+  electron_maxstep = 80
+  mixing_beta =   4.0000000000d-01
+/
+ATOMIC_SPECIES
+Bi     208.9804 Bi.upf
+ATOMIC_POSITIONS angstrom
+Bi           2.1487234333       1.2405660526       9.9599436922
+Bi           0.0000000001       2.4811321053      11.7063332656
+K_POINTS automatic
+12 12 1 0 0 0
+CELL_PARAMETERS angstrom
+      4.2974468664       0.0000000000       0.0000000000
+     -2.1487234332       3.7216981577       0.0000000000
+      0.0000000000       0.0000000000      21.6662769578

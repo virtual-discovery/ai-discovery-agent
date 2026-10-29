@@ -1,0 +1,1798 @@
+{
+"relax_corrections": {
+"training_set/CD/config_1#0": {
+"dp_unrelaxed_eV": -36.113509,
+"dp_relaxed_eV": -36.113509,
+"natoms": 8,
+"max_force_after_eV_A": 0.000107
+},
+"training_set/CD/config_11#0": {
+"dp_unrelaxed_eV": -36.117941,
+"dp_relaxed_eV": -36.117941,
+"natoms": 8,
+"max_force_after_eV_A": 8.5e-05
+},
+"training_set/CD/config_214#0": {
+"dp_unrelaxed_eV": -33.378227,
+"dp_relaxed_eV": -33.378227,
+"natoms": 8,
+"max_force_after_eV_A": 0.000164
+},
+"training_set/CD/config_215#0": {
+"dp_unrelaxed_eV": -35.184557,
+"dp_relaxed_eV": -35.184557,
+"natoms": 8,
+"max_force_after_eV_A": 0.000136
+},
+"training_set/CD/config_216#0": {
+"dp_unrelaxed_eV": -36.011026,
+"dp_relaxed_eV": -36.011026,
+"natoms": 8,
+"max_force_after_eV_A": 6.2e-05
+},
+"training_set/CD/config_217#0": {
+"dp_unrelaxed_eV": -36.145847,
+"dp_relaxed_eV": -36.145847,
+"natoms": 8,
+"max_force_after_eV_A": 9.4e-05
+},
+"training_set/CD/config_218#0": {
+"dp_unrelaxed_eV": -36.034122,
+"dp_relaxed_eV": -36.034122,
+"natoms": 8,
+"max_force_after_eV_A": 8e-05
+},
+"training_set/CD/config_219#0": {
+"dp_unrelaxed_eV": -35.476821,
+"dp_relaxed_eV": -35.476821,
+"natoms": 8,
+"max_force_after_eV_A": 1.6e-05
+},
+"training_set/CD/config_33#0": {
+"dp_unrelaxed_eV": -36.139634,
+"dp_relaxed_eV": -36.139634,
+"natoms": 8,
+"max_force_after_eV_A": 9.8e-05
+},
+"training_set/CD/config_34#0": {
+"dp_unrelaxed_eV": -36.140376,
+"dp_relaxed_eV": -36.140376,
+"natoms": 8,
+"max_force_after_eV_A": 9.1e-05
+},
+"training_set/CD/config_35#0": {
+"dp_unrelaxed_eV": -36.145847,
+"dp_relaxed_eV": -36.145847,
+"natoms": 8,
+"max_force_after_eV_A": 9.4e-05
+},
+"training_set/CD/config_35#1": {
+"dp_unrelaxed_eV": -36.13351,
+"dp_relaxed_eV": -36.13351,
+"natoms": 8,
+"max_force_after_eV_A": 9.7e-05
+},
+"training_set/CD/config_35#2": {
+"dp_unrelaxed_eV": -36.132166,
+"dp_relaxed_eV": -36.132166,
+"natoms": 8,
+"max_force_after_eV_A": 3e-05
+},
+"training_set/CD/config_36#0": {
+"dp_unrelaxed_eV": -35.911924,
+"dp_relaxed_eV": -35.911924,
+"natoms": 8,
+"max_force_after_eV_A": 0.000138
+},
+"training_set/CD/config_36#1": {
+"dp_unrelaxed_eV": -35.172876,
+"dp_relaxed_eV": -35.172876,
+"natoms": 8,
+"max_force_after_eV_A": 0.000142
+},
+"training_set/CD/config_36#2": {
+"dp_unrelaxed_eV": -35.244741,
+"dp_relaxed_eV": -35.244741,
+"natoms": 8,
+"max_force_after_eV_A": 0.000157
+},
+"training_set/CD/config_36#3": {
+"dp_unrelaxed_eV": -35.063475,
+"dp_relaxed_eV": -35.063475,
+"natoms": 8,
+"max_force_after_eV_A": 6.1e-05
+},
+"training_set/CD/config_36#4": {
+"dp_unrelaxed_eV": -35.800485,
+"dp_relaxed_eV": -35.800485,
+"natoms": 8,
+"max_force_after_eV_A": 0.000155
+},
+"training_set/CD/config_36#5": {
+"dp_unrelaxed_eV": -35.70451,
+"dp_relaxed_eV": -35.70451,
+"natoms": 8,
+"max_force_after_eV_A": 0.000139
+},
+"training_set/CD/config_36#6": {
+"dp_unrelaxed_eV": -35.402141,
+"dp_relaxed_eV": -35.402141,
+"natoms": 8,
+"max_force_after_eV_A": 0.000121
+},
+"training_set/CD/config_36#7": {
+"dp_unrelaxed_eV": -35.600804,
+"dp_relaxed_eV": -35.600804,
+"natoms": 8,
+"max_force_after_eV_A": 3.7e-05
+},
+"training_set/CD/config_36#8": {
+"dp_unrelaxed_eV": -35.554706,
+"dp_relaxed_eV": -35.554706,
+"natoms": 8,
+"max_force_after_eV_A": 8.3e-05
+},
+"training_set/CD/config_36#9": {
+"dp_unrelaxed_eV": -35.887497,
+"dp_relaxed_eV": -35.887497,
+"natoms": 8,
+"max_force_after_eV_A": 7.9e-05
+},
+"training_set/CD/config_37#0": {
+"dp_unrelaxed_eV": -36.132166,
+"dp_relaxed_eV": -36.132166,
+"natoms": 8,
+"max_force_after_eV_A": 3e-05
+},
+"training_set/CD/config_37#1": {
+"dp_unrelaxed_eV": -36.045987,
+"dp_relaxed_eV": -36.045987,
+"natoms": 8,
+"max_force_after_eV_A": 0.000108
+},
+"training_set/CD/config_37#2": {
+"dp_unrelaxed_eV": -36.055398,
+"dp_relaxed_eV": -36.055398,
+"natoms": 8,
+"max_force_after_eV_A": 0.000107
+},
+"training_set/CD/config_37#3": {
+"dp_unrelaxed_eV": -36.056272,
+"dp_relaxed_eV": -36.056272,
+"natoms": 8,
+"max_force_after_eV_A": 0.00011
+},
+"training_set/CD/config_38#0": {
+"dp_unrelaxed_eV": -36.056272,
+"dp_relaxed_eV": -36.056272,
+"natoms": 8,
+"max_force_after_eV_A": 0.00011
+},
+"training_set/CD/config_38#1": {
+"dp_unrelaxed_eV": -35.773542,
+"dp_relaxed_eV": -35.773542,
+"natoms": 8,
+"max_force_after_eV_A": 0.000111
+},
+"training_set/CD/config_38#2": {
+"dp_unrelaxed_eV": -35.812788,
+"dp_relaxed_eV": -35.812788,
+"natoms": 8,
+"max_force_after_eV_A": 0.000118
+},
+"training_set/CD/config_38#3": {
+"dp_unrelaxed_eV": -35.498233,
+"dp_relaxed_eV": -35.498233,
+"natoms": 8,
+"max_force_after_eV_A": 1e-05
+},
+"training_set/CD/config_38#4": {
+"dp_unrelaxed_eV": -35.996438,
+"dp_relaxed_eV": -35.996438,
+"natoms": 8,
+"max_force_after_eV_A": 0.00011
+},
+"training_set/CD/config_38#5": {
+"dp_unrelaxed_eV": -36.028488,
+"dp_relaxed_eV": -36.028488,
+"natoms": 8,
+"max_force_after_eV_A": 0.000149
+},
+"training_set/CD/config_38#6": {
+"dp_unrelaxed_eV": -35.814566,
+"dp_relaxed_eV": -35.814566,
+"natoms": 8,
+"max_force_after_eV_A": 0.000116
+},
+"training_set/CD/config_38#7": {
+"dp_unrelaxed_eV": -35.860224,
+"dp_relaxed_eV": -35.860224,
+"natoms": 8,
+"max_force_after_eV_A": 1.7e-05
+},
+"training_set/CD/config_38#8": {
+"dp_unrelaxed_eV": -35.911924,
+"dp_relaxed_eV": -35.911924,
+"natoms": 8,
+"max_force_after_eV_A": 0.000138
+},
+"training_set/CD/config_61#0": {
+"dp_unrelaxed_eV": -287.295399,
+"dp_relaxed_eV": -287.295399,
+"natoms": 64,
+"max_force_after_eV_A": 0.000122
+},
+"training_set/CD/config_73#0": {
+"dp_unrelaxed_eV": -287.099973,
+"dp_relaxed_eV": -287.099973,
+"natoms": 64,
+"max_force_after_eV_A": 0.00012
+},
+"training_set/CD/config_78#0": {
+"dp_unrelaxed_eV": -34.649406,
+"dp_relaxed_eV": -34.649406,
+"natoms": 8,
+"max_force_after_eV_A": 5.9e-05
+},
+"training_set/CD/config_85#0": {
+"dp_unrelaxed_eV": -287.099973,
+"dp_relaxed_eV": -287.099973,
+"natoms": 64,
+"max_force_after_eV_A": 0.00012
+},
+"training_set/CD/config_98#0": {
+"dp_unrelaxed_eV": -36.145854,
+"dp_relaxed_eV": -36.145854,
+"natoms": 8,
+"max_force_after_eV_A": 9.7e-05
+},
+"training_set/CD/config_98#1": {
+"dp_unrelaxed_eV": -36.145686,
+"dp_relaxed_eV": -36.145686,
+"natoms": 8,
+"max_force_after_eV_A": 1.9e-05
+},
+"training_set/CD/config_98#2": {
+"dp_unrelaxed_eV": -36.145844,
+"dp_relaxed_eV": -36.145844,
+"natoms": 8,
+"max_force_after_eV_A": 9.4e-05
+},
+"training_set/CD/config_98#3": {
+"dp_unrelaxed_eV": -36.139112,
+"dp_relaxed_eV": -36.139112,
+"natoms": 8,
+"max_force_after_eV_A": 0.000102
+},
+"training_set/CD/config_98#4": {
+"dp_unrelaxed_eV": -36.145824,
+"dp_relaxed_eV": -36.145824,
+"natoms": 8,
+"max_force_after_eV_A": 9.6e-05
+},
+"training_set/CD/config_98#5": {
+"dp_unrelaxed_eV": -36.145795,
+"dp_relaxed_eV": -36.145795,
+"natoms": 8,
+"max_force_after_eV_A": 1.9e-05
+},
+"training_set/CD/config_98#6": {
+"dp_unrelaxed_eV": -36.145847,
+"dp_relaxed_eV": -36.145847,
+"natoms": 8,
+"max_force_after_eV_A": 9.4e-05
+},
+"training_set/bSn/config_25#0": {
+"dp_unrelaxed_eV": -68.547856,
+"dp_relaxed_eV": -68.549532,
+"natoms": 16,
+"max_force_after_eV_A": 0.000617
+},
+"training_set/bSn/config_25#1": {
+"dp_unrelaxed_eV": -68.53173,
+"dp_relaxed_eV": -68.534009,
+"natoms": 16,
+"max_force_after_eV_A": 0.000995
+},
+"training_set/bSn/config_25#2": {
+"dp_unrelaxed_eV": -68.544722,
+"dp_relaxed_eV": -68.54643,
+"natoms": 16,
+"max_force_after_eV_A": 0.000394
+},
+"training_set/bSn/config_25#3": {
+"dp_unrelaxed_eV": -68.546364,
+"dp_relaxed_eV": -68.548084,
+"natoms": 16,
+"max_force_after_eV_A": 0.000582
+},
+"training_set/bSn/config_26#0": {
+"dp_unrelaxed_eV": -68.1932,
+"dp_relaxed_eV": -68.195694,
+"natoms": 16,
+"max_force_after_eV_A": 7.7e-05
+},
+"training_set/bSn/config_26#1": {
+"dp_unrelaxed_eV": -67.293106,
+"dp_relaxed_eV": -67.296095,
+"natoms": 16,
+"max_force_after_eV_A": 0.000607
+},
+"training_set/bSn/config_26#2": {
+"dp_unrelaxed_eV": -67.367664,
+"dp_relaxed_eV": -67.368933,
+"natoms": 16,
+"max_force_after_eV_A": 0.000225
+},
+"training_set/bSn/config_26#3": {
+"dp_unrelaxed_eV": -67.760675,
+"dp_relaxed_eV": -67.762076,
+"natoms": 16,
+"max_force_after_eV_A": 0.000144
+},
+"training_set/bSn/config_26#4": {
+"dp_unrelaxed_eV": -67.622687,
+"dp_relaxed_eV": -67.624697,
+"natoms": 16,
+"max_force_after_eV_A": 0.000219
+},
+"training_set/bSn/config_26#5": {
+"dp_unrelaxed_eV": -67.562761,
+"dp_relaxed_eV": -67.56461,
+"natoms": 16,
+"max_force_after_eV_A": 0.00023
+},
+"training_set/bSn/config_26#6": {
+"dp_unrelaxed_eV": -67.806521,
+"dp_relaxed_eV": -67.808343,
+"natoms": 16,
+"max_force_after_eV_A": 0.000177
+},
+"training_set/bSn/config_26#7": {
+"dp_unrelaxed_eV": -67.55694,
+"dp_relaxed_eV": -67.558967,
+"natoms": 16,
+"max_force_after_eV_A": 0.000748
+},
+"training_set/bSn/config_26#8": {
+"dp_unrelaxed_eV": -67.756535,
+"dp_relaxed_eV": -67.75834,
+"natoms": 16,
+"max_force_after_eV_A": 0.000222
+},
+"training_set/bSn/config_26#9": {
+"dp_unrelaxed_eV": -67.714075,
+"dp_relaxed_eV": -67.716139,
+"natoms": 16,
+"max_force_after_eV_A": 0.000261
+},
+"training_set/bSn/config_27#0": {
+"dp_unrelaxed_eV": -67.714075,
+"dp_relaxed_eV": -67.716139,
+"natoms": 16,
+"max_force_after_eV_A": 0.000261
+},
+"training_set/bSn/config_27#3": {
+"dp_unrelaxed_eV": -65.843554,
+"dp_relaxed_eV": -65.844195,
+"natoms": 16,
+"max_force_after_eV_A": 0.001148
+},
+"training_set/bSn/config_27#4": {
+"dp_unrelaxed_eV": -63.408168,
+"dp_relaxed_eV": -63.41404,
+"natoms": 16,
+"max_force_after_eV_A": 0.000191
+},
+"training_set/bSn/config_27#5": {
+"dp_unrelaxed_eV": -65.177301,
+"dp_relaxed_eV": -65.178531,
+"natoms": 16,
+"max_force_after_eV_A": 0.00042
+},
+"training_set/bSn/config_27#6": {
+"dp_unrelaxed_eV": -64.304512,
+"dp_relaxed_eV": -64.306617,
+"natoms": 16,
+"max_force_after_eV_A": 0.000338
+},
+"training_set/bSn/config_27#7": {
+"dp_unrelaxed_eV": -65.255517,
+"dp_relaxed_eV": -65.257019,
+"natoms": 16,
+"max_force_after_eV_A": 0.000847
+},
+"training_set/bSn/config_27#8": {
+"dp_unrelaxed_eV": -64.26404,
+"dp_relaxed_eV": -64.267031,
+"natoms": 16,
+"max_force_after_eV_A": 0.000885
+},
+"training_set/bSn/config_27#9": {
+"dp_unrelaxed_eV": -65.231235,
+"dp_relaxed_eV": -65.232562,
+"natoms": 16,
+"max_force_after_eV_A": 0.000723
+},
+"training_set/bSn/config_28#0": {
+"dp_unrelaxed_eV": -68.546364,
+"dp_relaxed_eV": -68.548084,
+"natoms": 16,
+"max_force_after_eV_A": 0.000582
+},
+"training_set/bSn/config_28#1": {
+"dp_unrelaxed_eV": -68.404299,
+"dp_relaxed_eV": -68.40797,
+"natoms": 16,
+"max_force_after_eV_A": 0.000604
+},
+"training_set/bSn/config_28#2": {
+"dp_unrelaxed_eV": -68.349263,
+"dp_relaxed_eV": -68.352398,
+"natoms": 16,
+"max_force_after_eV_A": 0.000896
+},
+"training_set/bSn/config_28#3": {
+"dp_unrelaxed_eV": -68.431815,
+"dp_relaxed_eV": -68.433901,
+"natoms": 16,
+"max_force_after_eV_A": 0.000948
+},
+"training_set/bSn/config_28#4": {
+"dp_unrelaxed_eV": -68.486556,
+"dp_relaxed_eV": -68.488568,
+"natoms": 16,
+"max_force_after_eV_A": 0.000166
+},
+"training_set/bSn/config_28#5": {
+"dp_unrelaxed_eV": -68.477733,
+"dp_relaxed_eV": -68.480062,
+"natoms": 16,
+"max_force_after_eV_A": 0.000229
+},
+"training_set/bSn/config_28#6": {
+"dp_unrelaxed_eV": -68.477631,
+"dp_relaxed_eV": -68.479829,
+"natoms": 16,
+"max_force_after_eV_A": 0.000242
+},
+"training_set/bSn/config_29#3": {
+"dp_unrelaxed_eV": -57.090124,
+"dp_relaxed_eV": -57.09176,
+"natoms": 16,
+"max_force_after_eV_A": 0.001352
+},
+"training_set/bSn/config_29#4": {
+"dp_unrelaxed_eV": -58.750557,
+"dp_relaxed_eV": -58.752237,
+"natoms": 16,
+"max_force_after_eV_A": 0.000408
+},
+"training_set/bSn/config_30#0": {
+"dp_unrelaxed_eV": -68.477631,
+"dp_relaxed_eV": -68.479829,
+"natoms": 16,
+"max_force_after_eV_A": 0.000242
+},
+"training_set/bSn/config_30#1": {
+"dp_unrelaxed_eV": -68.031791,
+"dp_relaxed_eV": -68.036677,
+"natoms": 16,
+"max_force_after_eV_A": 0.000239
+},
+"training_set/bSn/config_30#2": {
+"dp_unrelaxed_eV": -67.960755,
+"dp_relaxed_eV": -67.963591,
+"natoms": 16,
+"max_force_after_eV_A": 0.000271
+},
+"training_set/bSn/config_30#3": {
+"dp_unrelaxed_eV": -68.189578,
+"dp_relaxed_eV": -68.191213,
+"natoms": 16,
+"max_force_after_eV_A": 0.000166
+},
+"training_set/bSn/config_30#4": {
+"dp_unrelaxed_eV": -68.1932,
+"dp_relaxed_eV": -68.195694,
+"natoms": 16,
+"max_force_after_eV_A": 7.7e-05
+},
+"training_set/bSn/config_41#0": {
+"dp_unrelaxed_eV": -270.8563,
+"dp_relaxed_eV": -270.864556,
+"natoms": 64,
+"max_force_after_eV_A": 0.000308
+},
+"training_set/bSn/config_52#0": {
+"dp_unrelaxed_eV": -235.002218,
+"dp_relaxed_eV": -235.008941,
+"natoms": 64,
+"max_force_after_eV_A": 0.000459
+},
+"training_set/bSn/config_61#0": {
+"dp_unrelaxed_eV": -68.546764,
+"dp_relaxed_eV": -68.54841,
+"natoms": 16,
+"max_force_after_eV_A": 0.000284
+},
+"training_set/bSn/config_61#1": {
+"dp_unrelaxed_eV": -68.547856,
+"dp_relaxed_eV": -68.549532,
+"natoms": 16,
+"max_force_after_eV_A": 0.000617
+},
+"training_set/bSn/config_83#0": {
+"dp_unrelaxed_eV": -68.317359,
+"dp_relaxed_eV": -68.320376,
+"natoms": 16,
+"max_force_after_eV_A": 0.000408
+},
+"training_set/bSn/config_86#0": {
+"dp_unrelaxed_eV": -68.305946,
+"dp_relaxed_eV": -68.310756,
+"natoms": 16,
+"max_force_after_eV_A": 0.000151
+},
+"training_set/bSn/config_87#0": {
+"dp_unrelaxed_eV": -68.291064,
+"dp_relaxed_eV": -68.291859,
+"natoms": 16,
+"max_force_after_eV_A": 0.000129
+},
+"training_set/bSn/config_88#0": {
+"dp_unrelaxed_eV": -67.665202,
+"dp_relaxed_eV": -67.668553,
+"natoms": 16,
+"max_force_after_eV_A": 0.000108
+},
+"training_set/ST12/config_1#0": {
+"dp_unrelaxed_eV": -52.464119,
+"dp_relaxed_eV": -52.46585,
+"natoms": 12,
+"max_force_after_eV_A": 3.2e-05
+},
+"training_set/ST12/config_1#1": {
+"dp_unrelaxed_eV": -52.464311,
+"dp_relaxed_eV": -52.466244,
+"natoms": 12,
+"max_force_after_eV_A": 0.000545
+},
+"training_set/ST12/config_1#2": {
+"dp_unrelaxed_eV": -52.463647,
+"dp_relaxed_eV": -52.465018,
+"natoms": 12,
+"max_force_after_eV_A": 0.000162
+},
+"training_set/ST12/config_1#3": {
+"dp_unrelaxed_eV": -52.464337,
+"dp_relaxed_eV": -52.466244,
+"natoms": 12,
+"max_force_after_eV_A": 0.001286
+},
+"training_set/ST12/config_1#4": {
+"dp_unrelaxed_eV": -52.464489,
+"dp_relaxed_eV": -52.466834,
+"natoms": 12,
+"max_force_after_eV_A": 0.0011
+},
+"training_set/ST12/config_1#5": {
+"dp_unrelaxed_eV": -52.464517,
+"dp_relaxed_eV": -52.466962,
+"natoms": 12,
+"max_force_after_eV_A": 0.000791
+},
+"training_set/ST12/config_10#0": {
+"dp_unrelaxed_eV": -52.42188,
+"dp_relaxed_eV": -52.423893,
+"natoms": 12,
+"max_force_after_eV_A": 0.001038
+},
+"training_set/ST12/config_146#0": {
+"dp_unrelaxed_eV": -206.576968,
+"dp_relaxed_eV": -207.31154,
+"natoms": 48,
+"max_force_after_eV_A": 0.00077
+},
+"training_set/ST12/config_2#0": {
+"dp_unrelaxed_eV": -52.463124,
+"dp_relaxed_eV": -52.46619,
+"natoms": 12,
+"max_force_after_eV_A": 0.000841
+},
+"training_set/ST12/config_20#0": {
+"dp_unrelaxed_eV": -52.305476,
+"dp_relaxed_eV": -52.322146,
+"natoms": 12,
+"max_force_after_eV_A": 0.000965
+},
+"training_set/ST12/config_3#0": {
+"dp_unrelaxed_eV": -52.013924,
+"dp_relaxed_eV": -52.12661,
+"natoms": 12,
+"max_force_after_eV_A": 0.000357
+},
+"training_set/ST12/config_31#0": {
+"dp_unrelaxed_eV": -52.117794,
+"dp_relaxed_eV": -52.162697,
+"natoms": 12,
+"max_force_after_eV_A": 0.001074
+},
+"training_set/ST12/config_4#0": {
+"dp_unrelaxed_eV": -51.619175,
+"dp_relaxed_eV": -51.81193,
+"natoms": 12,
+"max_force_after_eV_A": 0.00082
+},
+"training_set/ST12/config_42#0": {
+"dp_unrelaxed_eV": -51.858122,
+"dp_relaxed_eV": -51.946185,
+"natoms": 12,
+"max_force_after_eV_A": 0.000623
+},
+"training_set/ST12/config_44#0": {
+"dp_unrelaxed_eV": -51.525223,
+"dp_relaxed_eV": -51.680335,
+"natoms": 12,
+"max_force_after_eV_A": 0.000454
+},
+"training_set/ST12/config_45#0": {
+"dp_unrelaxed_eV": -51.120707,
+"dp_relaxed_eV": -51.370262,
+"natoms": 12,
+"max_force_after_eV_A": 0.000362
+},
+"training_set/ST12/config_46#0": {
+"dp_unrelaxed_eV": -52.419056,
+"dp_relaxed_eV": -52.440049,
+"natoms": 12,
+"max_force_after_eV_A": 0.000545
+},
+"training_set/ST12/config_47#0": {
+"dp_unrelaxed_eV": -52.274879,
+"dp_relaxed_eV": -52.331809,
+"natoms": 12,
+"max_force_after_eV_A": 0.000961
+},
+"training_set/ST12/config_48#0": {
+"dp_unrelaxed_eV": -52.464517,
+"dp_relaxed_eV": -52.466962,
+"natoms": 12,
+"max_force_after_eV_A": 0.000791
+},
+"training_set/ST12/config_48#1": {
+"dp_unrelaxed_eV": -52.451168,
+"dp_relaxed_eV": -52.460418,
+"natoms": 12,
+"max_force_after_eV_A": 0.000503
+},
+"training_set/ST12/config_48#2": {
+"dp_unrelaxed_eV": -52.448285,
+"dp_relaxed_eV": -52.458671,
+"natoms": 12,
+"max_force_after_eV_A": 0.00088
+},
+"training_set/ST12/config_49#0": {
+"dp_unrelaxed_eV": -52.187406,
+"dp_relaxed_eV": -52.261674,
+"natoms": 12,
+"max_force_after_eV_A": 0.000996
+},
+"training_set/ST12/config_49#1": {
+"dp_unrelaxed_eV": -51.091931,
+"dp_relaxed_eV": -51.382726,
+"natoms": 12,
+"max_force_after_eV_A": 0.001066
+},
+"training_set/ST12/config_49#2": {
+"dp_unrelaxed_eV": -51.4044,
+"dp_relaxed_eV": -51.635695,
+"natoms": 12,
+"max_force_after_eV_A": 0.00102
+},
+"training_set/ST12/config_49#3": {
+"dp_unrelaxed_eV": -51.905404,
+"dp_relaxed_eV": -52.039387,
+"natoms": 12,
+"max_force_after_eV_A": 0.001172
+},
+"training_set/ST12/config_49#4": {
+"dp_unrelaxed_eV": -51.72547,
+"dp_relaxed_eV": -51.893857,
+"natoms": 12,
+"max_force_after_eV_A": 0.00037
+},
+"training_set/ST12/config_49#5": {
+"dp_unrelaxed_eV": -51.644242,
+"dp_relaxed_eV": -51.827885,
+"natoms": 12,
+"max_force_after_eV_A": 0.00076
+},
+"training_set/ST12/config_50#0": {
+"dp_unrelaxed_eV": -52.448285,
+"dp_relaxed_eV": -52.458671,
+"natoms": 12,
+"max_force_after_eV_A": 0.00088
+},
+"training_set/ST12/config_50#1": {
+"dp_unrelaxed_eV": -52.344152,
+"dp_relaxed_eV": -52.381918,
+"natoms": 12,
+"max_force_after_eV_A": 0.001107
+},
+"training_set/ST12/config_50#2": {
+"dp_unrelaxed_eV": -52.35387,
+"dp_relaxed_eV": -52.389868,
+"natoms": 12,
+"max_force_after_eV_A": 0.001022
+},
+"training_set/ST12/config_50#3": {
+"dp_unrelaxed_eV": -52.340155,
+"dp_relaxed_eV": -52.379353,
+"natoms": 12,
+"max_force_after_eV_A": 0.000937
+},
+"training_set/ST12/config_50#4": {
+"dp_unrelaxed_eV": -52.43437,
+"dp_relaxed_eV": -52.449588,
+"natoms": 12,
+"max_force_after_eV_A": 0.000316
+},
+"training_set/ST12/config_50#5": {
+"dp_unrelaxed_eV": -52.367511,
+"dp_relaxed_eV": -52.40021,
+"natoms": 12,
+"max_force_after_eV_A": 0.000724
+},
+"training_set/ST12/config_50#6": {
+"dp_unrelaxed_eV": -52.35798,
+"dp_relaxed_eV": -52.393043,
+"natoms": 12,
+"max_force_after_eV_A": 0.000836
+},
+"training_set/ST12/config_51#0": {
+"dp_unrelaxed_eV": -52.35798,
+"dp_relaxed_eV": -52.393043,
+"natoms": 12,
+"max_force_after_eV_A": 0.000836
+},
+"training_set/ST12/config_51#1": {
+"dp_unrelaxed_eV": -51.907323,
+"dp_relaxed_eV": -52.036101,
+"natoms": 12,
+"max_force_after_eV_A": 0.000474
+},
+"training_set/ST12/config_51#2": {
+"dp_unrelaxed_eV": -52.038501,
+"dp_relaxed_eV": -52.14298,
+"natoms": 12,
+"max_force_after_eV_A": 0.00079
+},
+"training_set/ST12/config_51#3": {
+"dp_unrelaxed_eV": -52.19218,
+"dp_relaxed_eV": -52.265902,
+"natoms": 12,
+"max_force_after_eV_A": 0.000534
+},
+"training_set/ST12/config_51#4": {
+"dp_unrelaxed_eV": -52.187406,
+"dp_relaxed_eV": -52.261674,
+"natoms": 12,
+"max_force_after_eV_A": 0.000996
+},
+"training_set/ST12/config_88#0": {
+"dp_unrelaxed_eV": -52.464119,
+"dp_relaxed_eV": -52.46585,
+"natoms": 12,
+"max_force_after_eV_A": 3.1e-05
+},
+"training_set/BC8/config_1#0": {
+"dp_unrelaxed_eV": -69.980683,
+"dp_relaxed_eV": -69.985849,
+"natoms": 16,
+"max_force_after_eV_A": 0.001081
+},
+"training_set/BC8/config_11#0": {
+"dp_unrelaxed_eV": -69.98449,
+"dp_relaxed_eV": -69.98974,
+"natoms": 16,
+"max_force_after_eV_A": 0.001192
+},
+"training_set/BC8/config_117#0": {
+"dp_unrelaxed_eV": -67.134406,
+"dp_relaxed_eV": -67.365816,
+"natoms": 16,
+"max_force_after_eV_A": 0.000411
+},
+"training_set/BC8/config_119#0": {
+"dp_unrelaxed_eV": -68.762269,
+"dp_relaxed_eV": -68.843523,
+"natoms": 16,
+"max_force_after_eV_A": 2.6e-05
+},
+"training_set/BC8/config_147#0": {
+"dp_unrelaxed_eV": -68.250213,
+"dp_relaxed_eV": -68.399768,
+"natoms": 16,
+"max_force_after_eV_A": 9e-05
+},
+"training_set/BC8/config_148#0": {
+"dp_unrelaxed_eV": -69.796302,
+"dp_relaxed_eV": -69.8168,
+"natoms": 16,
+"max_force_after_eV_A": 0.000165
+},
+"training_set/BC8/config_149#0": {
+"dp_unrelaxed_eV": -70.039852,
+"dp_relaxed_eV": -70.039854,
+"natoms": 16,
+"max_force_after_eV_A": 0.001194
+},
+"training_set/BC8/config_150#0": {
+"dp_unrelaxed_eV": -69.81857,
+"dp_relaxed_eV": -69.83607,
+"natoms": 16,
+"max_force_after_eV_A": 2e-05
+},
+"training_set/BC8/config_30#0": {
+"dp_unrelaxed_eV": -70.039852,
+"dp_relaxed_eV": -70.039854,
+"natoms": 16,
+"max_force_after_eV_A": 0.001194
+},
+"training_set/BC8/config_30#1": {
+"dp_unrelaxed_eV": -70.022478,
+"dp_relaxed_eV": -70.023945,
+"natoms": 16,
+"max_force_after_eV_A": 0.000282
+},
+"training_set/BC8/config_30#2": {
+"dp_unrelaxed_eV": -70.020061,
+"dp_relaxed_eV": -70.021747,
+"natoms": 16,
+"max_force_after_eV_A": 0.000324
+},
+"training_set/BC8/config_31#0": {
+"dp_unrelaxed_eV": -69.648946,
+"dp_relaxed_eV": -69.681013,
+"natoms": 16,
+"max_force_after_eV_A": 0.000379
+},
+"training_set/BC8/config_31#2": {
+"dp_unrelaxed_eV": -68.752875,
+"dp_relaxed_eV": -68.85752,
+"natoms": 16,
+"max_force_after_eV_A": 4.7e-05
+},
+"training_set/BC8/config_31#3": {
+"dp_unrelaxed_eV": -69.117677,
+"dp_relaxed_eV": -69.191705,
+"natoms": 16,
+"max_force_after_eV_A": 0.001478
+},
+"training_set/BC8/config_31#4": {
+"dp_unrelaxed_eV": -68.876043,
+"dp_relaxed_eV": -68.970161,
+"natoms": 16,
+"max_force_after_eV_A": 3.4e-05
+},
+"training_set/BC8/config_31#5": {
+"dp_unrelaxed_eV": -69.000023,
+"dp_relaxed_eV": -69.083722,
+"natoms": 16,
+"max_force_after_eV_A": 2.4e-05
+},
+"training_set/BC8/config_31#6": {
+"dp_unrelaxed_eV": -68.902667,
+"dp_relaxed_eV": -68.994548,
+"natoms": 16,
+"max_force_after_eV_A": 3.4e-05
+},
+"training_set/BC8/config_31#7": {
+"dp_unrelaxed_eV": -69.062801,
+"dp_relaxed_eV": -69.141303,
+"natoms": 16,
+"max_force_after_eV_A": 0.001609
+},
+"training_set/BC8/config_32#0": {
+"dp_unrelaxed_eV": -70.020061,
+"dp_relaxed_eV": -70.021747,
+"natoms": 16,
+"max_force_after_eV_A": 0.000324
+},
+"training_set/BC8/config_32#1": {
+"dp_unrelaxed_eV": -69.873835,
+"dp_relaxed_eV": -69.888049,
+"natoms": 16,
+"max_force_after_eV_A": 8.6e-05
+},
+"training_set/BC8/config_32#2": {
+"dp_unrelaxed_eV": -69.906924,
+"dp_relaxed_eV": -69.918398,
+"natoms": 16,
+"max_force_after_eV_A": 5.7e-05
+},
+"training_set/BC8/config_32#3": {
+"dp_unrelaxed_eV": -69.918889,
+"dp_relaxed_eV": -69.929363,
+"natoms": 16,
+"max_force_after_eV_A": 5e-05
+},
+"training_set/BC8/config_33#0": {
+"dp_unrelaxed_eV": -69.918889,
+"dp_relaxed_eV": -69.929363,
+"natoms": 16,
+"max_force_after_eV_A": 5e-05
+},
+"training_set/BC8/config_33#1": {
+"dp_unrelaxed_eV": -69.249639,
+"dp_relaxed_eV": -69.31298,
+"natoms": 16,
+"max_force_after_eV_A": 0.001175
+},
+"training_set/BC8/config_33#2": {
+"dp_unrelaxed_eV": -69.381324,
+"dp_relaxed_eV": -69.434253,
+"natoms": 16,
+"max_force_after_eV_A": 0.000887
+},
+"training_set/BC8/config_33#3": {
+"dp_unrelaxed_eV": -69.725883,
+"dp_relaxed_eV": -69.751944,
+"natoms": 16,
+"max_force_after_eV_A": 0.000257
+},
+"training_set/BC8/config_33#4": {
+"dp_unrelaxed_eV": -69.669781,
+"dp_relaxed_eV": -69.700239,
+"natoms": 16,
+"max_force_after_eV_A": 0.000343
+},
+"training_set/BC8/config_33#5": {
+"dp_unrelaxed_eV": -69.608551,
+"dp_relaxed_eV": -69.643737,
+"natoms": 16,
+"max_force_after_eV_A": 0.000443
+},
+"training_set/BC8/config_33#6": {
+"dp_unrelaxed_eV": -69.648946,
+"dp_relaxed_eV": -69.681013,
+"natoms": 16,
+"max_force_after_eV_A": 0.000379
+},
+"training_set/BC8/config_44#0": {
+"dp_unrelaxed_eV": -276.251207,
+"dp_relaxed_eV": -276.56522,
+"natoms": 64,
+"max_force_after_eV_A": 4.2e-05
+},
+"training_set/BC8/config_61#0": {
+"dp_unrelaxed_eV": -70.039121,
+"dp_relaxed_eV": -70.039135,
+"natoms": 16,
+"max_force_after_eV_A": 0.001146
+},
+"training_set/BC8/config_61#1": {
+"dp_unrelaxed_eV": -70.039852,
+"dp_relaxed_eV": -70.039854,
+"natoms": 16,
+"max_force_after_eV_A": 0.001194
+},
+"training_set/R8/config_1#0": {
+"dp_unrelaxed_eV": -104.780911,
+"dp_relaxed_eV": -104.790003,
+"natoms": 24,
+"max_force_after_eV_A": 0.000286
+},
+"training_set/R8/config_11#0": {
+"dp_unrelaxed_eV": -104.791637,
+"dp_relaxed_eV": -104.810401,
+"natoms": 24,
+"max_force_after_eV_A": 0.000742
+},
+"training_set/R8/config_151#0": {
+"dp_unrelaxed_eV": -102.125594,
+"dp_relaxed_eV": -102.431119,
+"natoms": 24,
+"max_force_after_eV_A": 0.001268
+},
+"training_set/R8/config_152#0": {
+"dp_unrelaxed_eV": -104.494923,
+"dp_relaxed_eV": -104.538078,
+"natoms": 24,
+"max_force_after_eV_A": 2.4e-05
+},
+"training_set/R8/config_153#0": {
+"dp_unrelaxed_eV": -104.872202,
+"dp_relaxed_eV": -104.873803,
+"natoms": 24,
+"max_force_after_eV_A": 0.000199
+},
+"training_set/R8/config_154#0": {
+"dp_unrelaxed_eV": -104.552731,
+"dp_relaxed_eV": -104.6082,
+"natoms": 24,
+"max_force_after_eV_A": 0.000294
+},
+"training_set/R8/config_155#0": {
+"dp_unrelaxed_eV": -103.010663,
+"dp_relaxed_eV": -103.288051,
+"natoms": 24,
+"max_force_after_eV_A": 9.5e-05
+},
+"training_set/R8/config_156#0": {
+"dp_unrelaxed_eV": -100.516062,
+"dp_relaxed_eV": -101.287684,
+"natoms": 24,
+"max_force_after_eV_A": 0.000346
+},
+"training_set/R8/config_29#0": {
+"dp_unrelaxed_eV": -104.872202,
+"dp_relaxed_eV": -104.873803,
+"natoms": 24,
+"max_force_after_eV_A": 0.000199
+},
+"training_set/R8/config_29#1": {
+"dp_unrelaxed_eV": -104.828099,
+"dp_relaxed_eV": -104.832113,
+"natoms": 24,
+"max_force_after_eV_A": 0.000413
+},
+"training_set/R8/config_29#2": {
+"dp_unrelaxed_eV": -104.847873,
+"dp_relaxed_eV": -104.850055,
+"natoms": 24,
+"max_force_after_eV_A": 0.00087
+},
+"training_set/R8/config_29#3": {
+"dp_unrelaxed_eV": -104.850203,
+"dp_relaxed_eV": -104.852197,
+"natoms": 24,
+"max_force_after_eV_A": 0.000795
+},
+"training_set/R8/config_30#0": {
+"dp_unrelaxed_eV": -104.227818,
+"dp_relaxed_eV": -104.303103,
+"natoms": 24,
+"max_force_after_eV_A": 0.000646
+},
+"training_set/R8/config_30#1": {
+"dp_unrelaxed_eV": -102.125881,
+"dp_relaxed_eV": -102.431918,
+"natoms": 24,
+"max_force_after_eV_A": 0.000638
+},
+"training_set/R8/config_30#2": {
+"dp_unrelaxed_eV": -103.245552,
+"dp_relaxed_eV": -103.430781,
+"natoms": 24,
+"max_force_after_eV_A": 0.000754
+},
+"training_set/R8/config_30#3": {
+"dp_unrelaxed_eV": -103.532021,
+"dp_relaxed_eV": -103.686281,
+"natoms": 24,
+"max_force_after_eV_A": 0.000854
+},
+"training_set/R8/config_30#4": {
+"dp_unrelaxed_eV": -103.302401,
+"dp_relaxed_eV": -103.481614,
+"natoms": 24,
+"max_force_after_eV_A": 0.00094
+},
+"training_set/R8/config_30#5": {
+"dp_unrelaxed_eV": -103.326609,
+"dp_relaxed_eV": -103.503143,
+"natoms": 24,
+"max_force_after_eV_A": 0.000634
+},
+"training_set/R8/config_31#0": {
+"dp_unrelaxed_eV": -104.850203,
+"dp_relaxed_eV": -104.852197,
+"natoms": 24,
+"max_force_after_eV_A": 0.000795
+},
+"training_set/R8/config_31#1": {
+"dp_unrelaxed_eV": -104.492556,
+"dp_relaxed_eV": -104.535978,
+"natoms": 24,
+"max_force_after_eV_A": 0.001082
+},
+"training_set/R8/config_31#2": {
+"dp_unrelaxed_eV": -104.601955,
+"dp_relaxed_eV": -104.632408,
+"natoms": 24,
+"max_force_after_eV_A": 0.001097
+},
+"training_set/R8/config_31#3": {
+"dp_unrelaxed_eV": -104.72655,
+"dp_relaxed_eV": -104.74216,
+"natoms": 24,
+"max_force_after_eV_A": 0.000765
+},
+"training_set/R8/config_31#4": {
+"dp_unrelaxed_eV": -104.723352,
+"dp_relaxed_eV": -104.739305,
+"natoms": 24,
+"max_force_after_eV_A": 0.001198
+},
+"training_set/R8/config_32#0": {
+"dp_unrelaxed_eV": -104.723352,
+"dp_relaxed_eV": -104.739305,
+"natoms": 24,
+"max_force_after_eV_A": 0.001198
+},
+"training_set/R8/config_32#1": {
+"dp_unrelaxed_eV": -103.692288,
+"dp_relaxed_eV": -103.828212,
+"natoms": 24,
+"max_force_after_eV_A": 0.00075
+},
+"training_set/R8/config_32#2": {
+"dp_unrelaxed_eV": -104.055208,
+"dp_relaxed_eV": -104.150494,
+"natoms": 24,
+"max_force_after_eV_A": 0.000638
+},
+"training_set/R8/config_32#3": {
+"dp_unrelaxed_eV": -104.377829,
+"dp_relaxed_eV": -104.435475,
+"natoms": 24,
+"max_force_after_eV_A": 0.000364
+},
+"training_set/R8/config_32#4": {
+"dp_unrelaxed_eV": -104.176569,
+"dp_relaxed_eV": -104.257869,
+"natoms": 24,
+"max_force_after_eV_A": 0.000653
+},
+"training_set/R8/config_32#5": {
+"dp_unrelaxed_eV": -104.242027,
+"dp_relaxed_eV": -104.315643,
+"natoms": 24,
+"max_force_after_eV_A": 0.000602
+},
+"training_set/R8/config_32#6": {
+"dp_unrelaxed_eV": -103.898691,
+"dp_relaxed_eV": -104.01187,
+"natoms": 24,
+"max_force_after_eV_A": 0.00045
+},
+"training_set/R8/config_32#7": {
+"dp_unrelaxed_eV": -104.303833,
+"dp_relaxed_eV": -104.370247,
+"natoms": 24,
+"max_force_after_eV_A": 0.000685
+},
+"training_set/R8/config_32#8": {
+"dp_unrelaxed_eV": -104.219385,
+"dp_relaxed_eV": -104.295673,
+"natoms": 24,
+"max_force_after_eV_A": 0.000508
+},
+"training_set/R8/config_32#9": {
+"dp_unrelaxed_eV": -104.227818,
+"dp_relaxed_eV": -104.303103,
+"natoms": 24,
+"max_force_after_eV_A": 0.000646
+},
+"training_set/R8/config_43#0": {
+"dp_unrelaxed_eV": -206.65322,
+"dp_relaxed_eV": -207.006286,
+"natoms": 48,
+"max_force_after_eV_A": 0.000919
+}
+},
+"dp_relaxed_curves": {
+"CD": [
+{
+"P_GPa": -2,
+"H_eV_atom": -4.821743375,
+"V_A3_atom": 24.792836875,
+"E_eV_atom": -4.512254,
+"max_force": 6.3e-05,
+"stress_kB": [
+-19.958055,
+-19.958055,
+-19.958055,
+-0.000763,
+-0.000763,
+-0.000763
+]
+},
+{
+"P_GPa": 0,
+"H_eV_atom": -4.518231625,
+"V_A3_atom": 23.852812375,
+"E_eV_atom": -4.518231625,
+"max_force": 0.000201,
+"stress_kB": [
+0.075071,
+0.075071,
+0.075071,
+0.000521,
+0.000521,
+0.000521
+]
+},
+{
+"P_GPa": 2,
+"H_eV_atom": -4.22539175,
+"V_A3_atom": 23.092811875,
+"E_eV_atom": -4.51365975,
+"max_force": 7e-06,
+"stress_kB": [
+19.998538,
+19.998538,
+19.998538,
+4.2e-05,
+4.2e-05,
+4.2e-05
+]
+},
+{
+"P_GPa": 4,
+"H_eV_atom": -3.941089,
+"V_A3_atom": 22.473052375,
+"E_eV_atom": -4.502152125,
+"max_force": 0.000197,
+"stress_kB": [
+40.087541,
+40.087541,
+40.087541,
+-0.0,
+0.0,
+0.0
+]
+},
+{
+"P_GPa": 6,
+"H_eV_atom": -3.663923875,
+"V_A3_atom": 21.940934125,
+"E_eV_atom": -4.485591,
+"max_force": 6.5e-05,
+"stress_kB": [
+60.048557,
+60.048557,
+60.048557,
+-0.000569,
+-0.000569,
+-0.000569
+]
+},
+{
+"P_GPa": 8,
+"H_eV_atom": -3.393042125,
+"V_A3_atom": 21.46564975,
+"E_eV_atom": -4.4648665,
+"max_force": 0.000102,
+"stress_kB": [
+80.039994,
+80.039994,
+80.039994,
+0.001002,
+0.001002,
+0.001002
+]
+},
+{
+"P_GPa": 10,
+"H_eV_atom": -3.127788125,
+"V_A3_atom": 21.038424125,
+"E_eV_atom": -4.44090325,
+"max_force": 6.3e-05,
+"stress_kB": [
+100.041754,
+100.041754,
+100.041754,
+-0.0008,
+-0.0008,
+-0.0008
+]
+},
+{
+"P_GPa": 12,
+"H_eV_atom": -2.867605625,
+"V_A3_atom": 20.651719625,
+"E_eV_atom": -4.414380375,
+"max_force": 0.000227,
+"stress_kB": [
+120.049046,
+120.049046,
+120.049046,
+-0.001607,
+-0.001607,
+-0.001607
+]
+}
+],
+"bSn": [
+{
+"P_GPa": -2,
+"H_eV_atom": -4.528772,
+"V_A3_atom": 19.84953925,
+"E_eV_atom": -4.2809898125,
+"max_force": 6.1e-05,
+"stress_kB": [
+-20.000235,
+-19.999874,
+-20.000484,
+0.0,
+6e-06,
+6e-06
+]
+},
+{
+"P_GPa": 0,
+"H_eV_atom": -4.2850103125,
+"V_A3_atom": 19.23538225,
+"E_eV_atom": -4.2850103125,
+"max_force": 0.000118,
+"stress_kB": [
+-0.00055,
+-0.000509,
+-0.000653,
+0.0,
+-1.4e-05,
+0.000221
+]
+},
+{
+"P_GPa": 2,
+"H_eV_atom": -4.048073375,
+"V_A3_atom": 18.73738,
+"E_eV_atom": -4.2819724375,
+"max_force": 0.000163,
+"stress_kB": [
+19.999349,
+20.00043,
+20.001096,
+0.0,
+3e-05,
+0.000258
+]
+},
+{
+"P_GPa": 4,
+"H_eV_atom": -3.8170136875,
+"V_A3_atom": 18.2888089375,
+"E_eV_atom": -4.27361275,
+"max_force": 0.000115,
+"stress_kB": [
+39.997562,
+40.001741,
+39.999591,
+0.0,
+-2.3e-05,
+-3e-05
+]
+},
+{
+"P_GPa": 6,
+"H_eV_atom": -3.5913076875,
+"V_A3_atom": 17.8808915625,
+"E_eV_atom": -4.2609301875,
+"max_force": 0.000157,
+"stress_kB": [
+60.002171,
+59.996854,
+59.999621,
+1e-06,
+3e-05,
+3.4e-05
+]
+},
+{
+"P_GPa": 8,
+"H_eV_atom": -3.3703924375,
+"V_A3_atom": 17.52192275,
+"E_eV_atom": -4.245298375,
+"max_force": 0.000194,
+"stress_kB": [
+79.996604,
+80.005645,
+80.000489,
+0.0,
+1.5e-05,
+0.000268
+]
+},
+{
+"P_GPa": 10,
+"H_eV_atom": -3.1536686875,
+"V_A3_atom": 17.2072813125,
+"E_eV_atom": -4.22766275,
+"max_force": 0.0001,
+"stress_kB": [
+99.995762,
+100.00416,
+99.998462,
+-1e-06,
+0.000157,
+0.00043
+]
+},
+{
+"P_GPa": 12,
+"H_eV_atom": -2.9406670625,
+"V_A3_atom": 16.9235159375,
+"E_eV_atom": -4.2082064375,
+"max_force": 0.000127,
+"stress_kB": [
+120.003575,
+119.99488,
+120.000149,
+-0.0,
+-1.1e-05,
+-0.000168
+]
+}
+],
+"ST12": [
+{
+"P_GPa": -2,
+"H_eV_atom": -4.646019416666666,
+"V_A3_atom": 22.495868083333335,
+"E_eV_atom": -4.365203083333333,
+"max_force": 4.9e-05,
+"stress_kB": [
+-20.00027,
+-19.999747,
+-19.999986,
+0.000103,
+-9.6e-05,
+9.8e-05
+]
+},
+{
+"P_GPa": 0,
+"H_eV_atom": -4.3723155,
+"V_A3_atom": 21.412497166666668,
+"E_eV_atom": -4.3723155,
+"max_force": 0.000109,
+"stress_kB": [
+-0.0005,
+-0.000578,
+0.001875,
+-0.000486,
+0.000653,
+0.000258
+]
+},
+{
+"P_GPa": 2,
+"H_eV_atom": -4.1101255,
+"V_A3_atom": 20.635013583333333,
+"E_eV_atom": -4.36771275,
+"max_force": 0.000168,
+"stress_kB": [
+19.998908,
+19.999097,
+19.999076,
+0.000275,
+-0.00127,
+3.9e-05
+]
+},
+{
+"P_GPa": 4,
+"H_eV_atom": -3.856397916666667,
+"V_A3_atom": 20.038233333333334,
+"E_eV_atom": -4.356673166666667,
+"max_force": 0.000141,
+"stress_kB": [
+39.998979,
+40.000322,
+39.99947,
+-6.1e-05,
+0.001003,
+-0.000124
+]
+},
+{
+"P_GPa": 6,
+"H_eV_atom": -3.6094565833333334,
+"V_A3_atom": 19.53736025,
+"E_eV_atom": -4.34111225,
+"max_force": 0.000119,
+"stress_kB": [
+60.00171,
+60.001582,
+59.999036,
+9e-06,
+8.8e-05,
+0.00047
+]
+},
+{
+"P_GPa": 8,
+"H_eV_atom": -3.368417583333333,
+"V_A3_atom": 19.088114333333333,
+"E_eV_atom": -4.321526666666666,
+"max_force": 2.2e-05,
+"stress_kB": [
+80.000445,
+79.999915,
+79.999887,
+-5e-06,
+8.1e-05,
+-0.000131
+]
+},
+{
+"P_GPa": 10,
+"H_eV_atom": -3.1327466666666663,
+"V_A3_atom": 18.676533916666667,
+"E_eV_atom": -4.29844425,
+"max_force": 0.000117,
+"stress_kB": [
+99.997816,
+99.998275,
+99.999135,
+0.000151,
+-6e-06,
+5.5e-05
+]
+},
+{
+"P_GPa": 12,
+"H_eV_atom": -2.9019863333333333,
+"V_A3_atom": 18.301509833333334,
+"E_eV_atom": -4.272734833333334,
+"max_force": 0.000231,
+"stress_kB": [
+120.001751,
+119.998218,
+119.998947,
+7.8e-05,
+0.000226,
+-0.001402
+]
+}
+],
+"BC8": [
+{
+"P_GPa": -2,
+"H_eV_atom": -4.656846375,
+"V_A3_atom": 22.8196425625,
+"E_eV_atom": -4.371988375,
+"max_force": 0.000227,
+"stress_kB": [
+-19.999679,
+-19.999679,
+-19.999679,
+-1.1e-05,
+-1.1e-05,
+-1.1e-05
+]
+},
+{
+"P_GPa": 0,
+"H_eV_atom": -4.377491375,
+"V_A3_atom": 21.946550375,
+"E_eV_atom": -4.377491375,
+"max_force": 3.1e-05,
+"stress_kB": [
+-7.8e-05,
+-7.8e-05,
+-7.8e-05,
+9e-06,
+9e-06,
+9e-06
+]
+},
+{
+"P_GPa": 2,
+"H_eV_atom": -4.1084950625,
+"V_A3_atom": 21.1773693125,
+"E_eV_atom": -4.3728525625,
+"max_force": 0.000134,
+"stress_kB": [
+19.99725,
+19.99725,
+19.99725,
+0.000114,
+0.000114,
+0.000114
+]
+},
+{
+"P_GPa": 4,
+"H_eV_atom": -3.848117125,
+"V_A3_atom": 20.5633315625,
+"E_eV_atom": -4.361502,
+"max_force": 4.2e-05,
+"stress_kB": [
+40.000145,
+40.000145,
+40.000145,
+-3.9e-05,
+-3.9e-05,
+-3.9e-05
+]
+},
+{
+"P_GPa": 6,
+"H_eV_atom": -3.5946360625,
+"V_A3_atom": 20.063663,
+"E_eV_atom": -4.3460013125,
+"max_force": 0.00016,
+"stress_kB": [
+59.997913,
+59.997913,
+59.997913,
+0.001308,
+0.001308,
+0.001308
+]
+},
+{
+"P_GPa": 8,
+"H_eV_atom": -3.3469194375,
+"V_A3_atom": 19.6339604375,
+"E_eV_atom": -4.3272838125,
+"max_force": 7.1e-05,
+"stress_kB": [
+79.996507,
+79.996507,
+79.996507,
+-0.000946,
+-0.000946,
+-0.000946
+]
+},
+{
+"P_GPa": 10,
+"H_eV_atom": -3.104278875,
+"V_A3_atom": 19.2470706875,
+"E_eV_atom": -4.3055865,
+"max_force": 0.000148,
+"stress_kB": [
+99.999986,
+99.999986,
+99.999986,
+-0.001096,
+-0.001096,
+-0.001096
+]
+},
+{
+"P_GPa": 12,
+"H_eV_atom": -2.8662786875,
+"V_A3_atom": 18.8883475,
+"E_eV_atom": -4.2809801875,
+"max_force": 0.000185,
+"stress_kB": [
+120.013014,
+120.013014,
+120.013014,
+-0.00137,
+-0.00137,
+-0.00137
+]
+}
+],
+"R8": [
+{
+"P_GPa": -2,
+"H_eV_atom": -4.644905333333333,
+"V_A3_atom": 22.528076,
+"E_eV_atom": -4.363686958333333,
+"max_force": 0.000144,
+"stress_kB": [
+-20.000262,
+-19.999944,
+-20.000136,
+0.006249,
+-0.007386,
+-0.000149
+]
+},
+{
+"P_GPa": 0,
+"H_eV_atom": -4.369752541666666,
+"V_A3_atom": 21.580245416666667,
+"E_eV_atom": -4.369752541666666,
+"max_force": 0.000161,
+"stress_kB": [
+-0.000679,
+0.001327,
+-0.00034,
+-0.001963,
+0.002234,
+0.001298
+]
+},
+{
+"P_GPa": 2,
+"H_eV_atom": -4.1054085,
+"V_A3_atom": 20.804615583333334,
+"E_eV_atom": -4.365112875,
+"max_force": 0.000149,
+"stress_kB": [
+20.000012,
+19.999584,
+20.000947,
+-0.000425,
+0.000517,
+0.000418
+]
+},
+{
+"P_GPa": 4,
+"H_eV_atom": -3.8496235416666664,
+"V_A3_atom": 20.200387833333334,
+"E_eV_atom": -4.353947125,
+"max_force": 6.6e-05,
+"stress_kB": [
+40.000347,
+39.999778,
+39.99984,
+-0.000309,
+0.000322,
+-8.3e-05
+]
+},
+{
+"P_GPa": 6,
+"H_eV_atom": -3.600619583333333,
+"V_A3_atom": 19.709124541666664,
+"E_eV_atom": -4.338707666666667,
+"max_force": 5.5e-05,
+"stress_kB": [
+60.000769,
+59.999306,
+60.000043,
+-0.00058,
+0.000128,
+0.00067
+]
+},
+{
+"P_GPa": 8,
+"H_eV_atom": -3.3572691666666667,
+"V_A3_atom": 19.289229333333335,
+"E_eV_atom": -4.320420375,
+"max_force": 0.00014,
+"stress_kB": [
+80.000553,
+80.000084,
+80.002356,
+6.6e-05,
+-9.3e-05,
+0.001808
+]
+},
+{
+"P_GPa": 10,
+"H_eV_atom": -3.118859,
+"V_A3_atom": 18.913985999999998,
+"E_eV_atom": -4.299377166666667,
+"max_force": 0.000106,
+"stress_kB": [
+100.001188,
+99.998623,
+100.000512,
+0.000316,
+-0.000418,
+0.000986
+]
+},
+{
+"P_GPa": 12,
+"H_eV_atom": -2.8849563333333332,
+"V_A3_atom": 18.564112541666667,
+"E_eV_atom": -4.275373291666667,
+"max_force": 6.9e-05,
+"stress_kB": [
+120.000481,
+119.999585,
+120.000086,
+-0.000342,
+0.000466,
+0.000308
+]
+}
+]
+}
+}

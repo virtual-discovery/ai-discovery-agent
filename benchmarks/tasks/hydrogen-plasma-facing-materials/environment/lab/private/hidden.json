@@ -1,0 +1,138 @@
+{
+ "reference": {
+  "h_formation_energy_eV": {
+   "C-h-194": 1.3677,
+   "HfB2-h-191": 1.6427,
+   "Mo-c-229": 0.5091,
+   "Re-h-194": -0.0764,
+   "TaC-c-225": 1.7735,
+   "TiN-c-225": 2.1826,
+   "WC-h-187": 0.5432
+  },
+  "distinct_site_energies_eV": {
+   "C-h-194": [
+    1.3677,
+    1.4163
+   ],
+   "HfB2-h-191": [
+    1.6427,
+    1.6975,
+    2.188,
+    2.7849
+   ],
+   "Mo-c-229": [
+    0.5091
+   ],
+   "Re-h-194": [
+    -0.0764,
+    0.4827
+   ],
+   "TaC-c-225": [
+    1.7735,
+    2.1181
+   ],
+   "TiN-c-225": [
+    2.1826,
+    2.234
+   ],
+   "WC-h-187": [
+    0.5432,
+    2.1964
+   ]
+  },
+  "preferred_site": {
+   "C-h-194": {
+    "nearest_host_element": "C",
+    "nearest_host_distance_A": 1.1321
+   },
+   "HfB2-h-191": {
+    "nearest_host_element": "B",
+    "nearest_host_distance_A": 1.4068
+   },
+   "Mo-c-229": {
+    "nearest_host_element": "Mo",
+    "nearest_host_distance_A": 1.8238
+   },
+   "Re-h-194": {
+    "nearest_host_element": "Re",
+    "nearest_host_distance_A": 1.9792
+   },
+   "TaC-c-225": {
+    "nearest_host_element": "C",
+    "nearest_host_distance_A": 1.1496
+   },
+   "TiN-c-225": {
+    "nearest_host_element": "Ti",
+    "nearest_host_distance_A": 1.7947
+   },
+   "WC-h-187": {
+    "nearest_host_element": "W",
+    "nearest_host_distance_A": 1.7459
+   }
+  },
+  "preferred_site_runs": {
+   "C-h-194": [
+    "23"
+   ],
+   "HfB2-h-191": [
+    "6"
+   ],
+   "Mo-c-229": [
+    "17",
+    "16"
+   ],
+   "Re-h-194": [
+    "5"
+   ],
+   "TaC-c-225": [
+    "17",
+    "16",
+    "25"
+   ],
+   "TiN-c-225": [
+    "3"
+   ],
+   "WC-h-187": [
+    "0",
+    "20",
+    "19",
+    "17",
+    "23",
+    "6"
+   ]
+  },
+  "surface_binding_energy_eV": {
+   "W-c-229": {
+    "W": 11.1646
+   },
+   "WC-h-187": {
+    "W": 11.0179,
+    "C": 7.7844
+   },
+   "TiB2-h-191": {
+    "B": 8.5101,
+    "Ti": 11.4894
+   }
+  },
+  "cohesive_energy_eV_per_atom": {
+   "Re-h-194": 8.8007,
+   "W-c-229": 9.0757,
+   "WC-h-187": 8.9428
+  },
+  "lowest_termination": {
+   "W-c-229": "110",
+   "WC-h-187": "100_t2",
+   "TiB2-h-191": "101_t2"
+  }
+ },
+ "thresholds": {
+  "h_formation_tol_eV": 0.03,
+  "site_energy_tol_eV": 0.03,
+  "distance_tol_A": 0.04,
+  "sbe_tol_eV": 0.06,
+  "cohesive_tol_eV": 0.03
+ },
+ "null_also_accepted": [
+  "TiB2-h-191/Ti"
+ ]
+}

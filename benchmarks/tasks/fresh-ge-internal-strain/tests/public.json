@@ -1,0 +1,5 @@
+{
+ "task_id": "fresh-ge-internal-strain",
+ "solver_budget": 32,
+ "min_report_chars": 400
+}

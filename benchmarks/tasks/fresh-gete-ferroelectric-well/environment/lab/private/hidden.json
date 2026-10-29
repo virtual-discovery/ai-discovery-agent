@@ -1,0 +1,29 @@
+{
+ "reference": {
+  "cubic_a0_A": 6.009309217495979,
+  "r3m_a_rh_A": 4.377517018695297,
+  "r3m_alpha_deg": 57.74336891853086,
+  "r3m_x_Te": 0.4690794068511306,
+  "well_depth_meV_per_fu": 31.860040638130158,
+  "clamped_well_depth_meV_per_fu": 18.42752252282525,
+  "soft_mode_critical_pressure_GPa": 8.578409566838568,
+  "soc_well_depth_change_meV_per_fu": 1.4602990429848433
+ },
+ "tolerances": {
+  "absolute": {
+   "cubic_a0_A": 0.008,
+   "r3m_a_rh_A": 0.005,
+   "r3m_alpha_deg": 0.1,
+   "r3m_x_Te": 0.0008,
+   "soft_mode_critical_pressure_GPa": 0.6,
+   "soc_well_depth_change_meV_per_fu": 0.6
+  },
+  "relative": {
+   "well_depth_meV_per_fu": 0.04,
+   "clamped_well_depth_meV_per_fu": 0.05
+  }
+ },
+ "provenance": {
+  "runs": "benchmarks/construction/fresh-gete-ferroelectric-well/reference_runs.jsonl (task_lab.run, QE 6.7, 2 MPI ranks)"
+ }
+}

@@ -1,0 +1,302 @@
+{
+ "task_id": "halfheusler-strain-hinge",
+ "catalog_id": "halfheusler-strain-hinge",
+ "start": "released",
+ "source_group": "das_2025_halfheusler_hinge",
+ "title": "Half-Heusler LiSbZn and LiBiZn: hinge states and the archived strain models",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "What the archived \"strained_setup\" models contain. Their bct lattice vectors give c = sqrt(2) a_t = c0 and the volume of the orig cell, the Gamma8 quartet is intact, and the LiBiZn bands match the orig model to a few meV. They are the equilibrium cubic structures in a tetragonal setting, and the kwant_ham \"*_strain.ham\" pickles hold the same data. The archive contains no strained Hamiltonian.",
+   "wrong_choice": "Trust the file names and the paper (delta = +-2 %)",
+   "consequence": "strain +-2 % instead of 0 for both strained-setup models; LiSbZn calculation differences read as strain effects",
+   "ablation": "strain_from_file_names"
+  },
+  {
+   "id": "dp2",
+   "fork": "Fundamental gap of LiSbZn from a full-zone search. The conduction-band minimum lies next to L (about 1 meV below L), not at Gamma6, so the gap is indirect.",
+   "wrong_choice": "Gamma6 - Gamma8 at Gamma",
+   "consequence": "352.0 and 313.0 meV instead of 343.8 and 251.7 meV",
+   "ablation": "gap_at_gamma"
+  },
+  {
+   "id": "dp3",
+   "fork": "Whether LiBiZn is a zero-gap semiconductor with E_F at Gamma8, or a compensated semimetal. Band 7 near L lies 871.0 meV below the Gamma8 maximum, and E_F follows from the six-electron count (Li 1 + Zn 2 + X-p 3) on a converged mesh.",
+   "wrong_choice": "E_F at the Gamma8 touching point (half-filled quartet, as the paper describes it), or a coarse mesh",
+   "consequence": "E_F 0, -546.0 or -386.0 meV instead of -402.0 meV relative to Gamma8; gap 0 instead of -871.0 meV",
+   "ablation": "fermi_at_gamma8"
+  },
+  {
+   "id": "dp4",
+   "fork": "Energy reference for LiSbZn. The FPLO zero sits at an arbitrary point inside the gap, and at a different point in the two LiSbZn calculations, so energies must be referred to each model's own VBM.",
+   "wrong_choice": "Use the model zero as the reference (taken as E_F)",
+   "consequence": "hinge energies 181.1 and -113.4 meV instead of 227.8 and 175.2 meV",
+   "ablation": "hinge_energy_model_zero"
+  },
+  {
+   "id": "dp5",
+   "fork": "Which hinge carries the in-gap state. In the service geometry the Zn site sits at +1/4 along both sides, so Zn is outermost on the t = N-1 facets; the state lies at the Zn/Zn hinge with about two-thirds Zn-4s weight. The paper puts it at the Bi/Sb hinge with about 95 % Bi/Sb weight. Its real-space picture is mirrored by the authors' kwant HoppingKind assignment, which reverses each hopping vector relative to the site positions.",
+   "wrong_choice": "Adopt the paper's Bi/Sb-hinge assignment and orbital character",
+   "consequence": "termination X/X and Zn-4s weight 0.05 instead of Zn/Zn and 0.68",
+   "ablation": "paper_termination"
+  },
+  {
+   "id": "dp6",
+   "fork": "Finite-size convergence of the k = 0 hinge level. It sits close to the conduction band and converges slowly: +7.9 meV at N = 12 and +1.2 meV at N = 20.",
+   "wrong_choice": "Read the level from a small prism (N <= 12)",
+   "consequence": "240.8 (N = 10) or 235.7 meV (N = 12) instead of 227.8 meV",
+   "ablation": "hinge_energy_small_prism_N10"
+  },
+  {
+   "id": "dp7",
+   "fork": "Hinge-band window. The minimum is at k = pi, not k = 0. The upper of the two spin-split branches peaks near k = 1.0, inside the projected gap but far above the global conduction-band minimum.",
+   "wrong_choice": "A coarse k grid, clipping to the global gap, assuming the minimum at k = 0, or keeping one branch only",
+   "consequence": "windows [218.9, 734.3], [218.3, 343.8], [227.8, 773.4] or [218.3, 684.4] instead of [218.3, 773.4] meV",
+   "ablation": "window_grid5"
+  },
+  {
+   "id": "dp8",
+   "fork": "The same physical prism in the strained-setup file. Its Cartesian frame is rotated by -45 deg about z and its lattice basis differs, so P_N needs the basis [[1,0,0],[1,1,1],[1,0,1]], which puts the Zn site at reduced (1/4, 1/4, 1/4).",
+   "wrong_choice": "Reuse the orig integer basis, as the authors' shape function does in the file's own basis",
+   "consequence": "a prism with (100) and (111) facets whose gap is full of facet states; the most corner-weighted level is 205.5 meV instead of 175.2 meV",
+   "ablation": "str_hinge_identity_basis"
+  },
+  {
+   "id": "dp9",
+   "fork": "Trivial or higher-order origin. The decisive test is a local potential at the hinge that carries the state. An attractive potential of -0.38 eV on its 2x2 cells pushes the level into the valence band and pulls new bound states out of the conduction band.",
+   "wrong_choice": "Apply the test at the paper's Bi/Sb (X/X) hinge, see no effect and conclude that the state is protected",
+   "consequence": "removal potential null instead of -0.38 eV (and -0.313 eV if the level is driven to the FPLO zero instead of the VBM, dp4)",
+   "ablation": "removal_potential_wrong_corner"
+  }
+ ],
+ "graded_fields": [
+  "strain_percent of all four models within +-0.25 of 0",
+  "band_inverted: LiSbZn false, LiBiZn true",
+  "fundamental_gap_meV: LiSbZn_orig 343.8 +-3.5, LiSbZn_strained_setup 251.7 +-3.5, LiBiZn_orig -870.6 +-15.0",
+  "libizn_fermi_level_meV -401.9 +-12.0 (relative to Gamma8)",
+  "hinge.termination == Zn/Zn",
+  "hinge.energy_k0_meV: LiSbZn_orig 227.8 +-6.0, LiSbZn_strained_setup 175.2 +-6.0 (relative to each VBM)",
+  "hinge.band_window_meV [218.3 +-6.0, 773.4 +-15.0]",
+  "hinge.zn_s_weight_k0 0.681 +-0.08",
+  "hinge.removal_potential_eV -0.38 +-0.035 (null fails)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 19,
+  "oracle_charge": 25,
+  "budget": 30,
+  "catalog_units": "unbounded: every request is a new evaluation (bulk bands, band-edge meshes, Fermi levels, slabs, prisms of any size up to 28 with optional potentials)",
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "why": "Bulk classification of four models (inversion, full-zone gaps, a semimetal Fermi level), discovery that the \"strained\" files are cubic and use another frame, prism size convergence, assignment of the hinge from the cell geometry against the paper, a k-resolved hinge-band scan, the same prism rebuilt in the rotated file, and a potential scan; prisms of size 21-28 cost 3 units, so the 30-unit budget forces choices.",
+  "oracle_errors": {
+   "strain_percent:LiSbZn_orig": 0.0,
+   "strain_percent:LiSbZn_strained_setup": -0.0,
+   "strain_percent:LiBiZn_orig": 0.0,
+   "strain_percent:LiBiZn_strained_setup": -0.0,
+   "gap:LiSbZn_orig": 0.110394,
+   "gap:LiSbZn_strained_setup": 0.147413,
+   "gap:LiBiZn_orig": 1.61878,
+   "libizn_fermi_level_meV": 0.008189,
+   "hinge_energy_k0:LiSbZn_orig": 0.017503,
+   "hinge_energy_k0:LiSbZn_strained_setup": 0.246539,
+   "hinge_band_bottom_meV": 0.017972,
+   "hinge_band_top_meV": -0.221811,
+   "hinge_zn_s_weight": 0.0,
+   "hinge_removal_potential_eV": 0.002405
+  },
+  "oracle_seconds_per_request": {
+   "1": 0.0,
+   "2": 0.0,
+   "3": 0.8,
+   "4": 0.0,
+   "5": 1.1,
+   "6": 0.0,
+   "7": 0.6,
+   "8": 0.0,
+   "9": 11.6,
+   "10": 1.4,
+   "11": 11.0,
+   "12": 36.7,
+   "13": 36.9,
+   "14": 10.5,
+   "15": 11.0,
+   "16": 10.7,
+   "17": 2.3,
+   "18": 1.3,
+   "19": 1.6
+  }
+ },
+ "runtime_dependencies": [
+  "numpy and scipy (runtime image); no extra layer"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/16927281",
+  "doi": "10.5281/zenodo.16927281",
+  "paper_doi": "10.1103/PhysRevB.112.125132",
+  "files_used": [
+   "strained_hH_zenodo.zip"
+  ],
+  "md5": {
+   "strained_hH_zenodo.zip": "f66b568ce17e4055122facfe02e01e24"
+  },
+  "members": "benchmarks/construction/halfheusler-strain-hinge/fetch.py (MEMBERS)",
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the candidate design (see the construction README). The archive holds no strained Hamiltonian: both \"eq_strained_setup\" files are the cubic equilibrium structures in a tetragonal setting. Strain-dependent targets were therefore replaced by what the data contain: the identification of the archived models, bulk band edges and the LiBiZn Fermi level, and the LiSbZn hinge state (assignment, converged energy, dispersion window, orbital character, removal by a local potential) in two independent LiSbZn calculations. Strong Z2 is not graded: it is trivially 0 for normal-ordered LiSbZn and undefined for cubic LiBiZn, where the Gamma8 touching is unremoved.",
+ "calibration": {
+  "strain_percent": {
+   "reference": {
+    "LiSbZn_orig": 0.0,
+    "LiSbZn_strained_setup": 0.0,
+    "LiBiZn_orig": 0.0,
+    "LiBiZn_strained_setup": 0.0
+   },
+   "nearest_ablation": {
+    "file_names": 2.0,
+    "compressive": -2.0
+   },
+   "tolerance": "+-0.25"
+  },
+  "fundamental_gap_meV": {
+   "reference": {
+    "LiSbZn_orig": 343.76,
+    "LiSbZn_strained_setup": 251.71,
+    "LiBiZn_orig": -870.59
+   },
+   "robustness": {
+    "grid_L_point": {
+     "LiSbZn_orig": 344.99,
+     "LiSbZn_strained_setup": 253.38,
+     "LiBiZn_orig": -866.89
+    }
+   },
+   "nearest_ablation": {
+    "gap_at_gamma": {
+     "LiSbZn_orig": 352.02,
+     "LiSbZn_strained_setup": 313.0,
+     "LiBiZn_orig": 0.0
+    }
+   },
+   "tolerance": {
+    "LiSbZn_orig": "+-3.5",
+    "LiSbZn_strained_setup": "+-3.5",
+    "LiBiZn_orig": "+-15.0"
+   }
+  },
+  "libizn_fermi_level_meV": {
+   "reference_96cube": -401.91,
+   "robustness": {
+    "mesh_48": -405.51,
+    "mesh_64_offset": -401.9
+   },
+   "nearest_ablation": {
+    "mesh_12": -386.47,
+    "mesh_8": -545.55,
+    "at_gamma8": 0.0
+   },
+   "tolerance": "+-12.0"
+  },
+  "hinge_energy_k0_meV": {
+   "reference_extrapolated": {
+    "LiSbZn_orig": 227.82,
+    "LiSbZn_strained_setup": 175.18
+   },
+   "robustness": {
+    "N28_direct": {
+     "LiSbZn_orig": 228.02,
+     "LiSbZn_strained_setup": 175.43
+    },
+    "N20_direct": {
+     "LiSbZn_orig": 229.05,
+     "LiSbZn_strained_setup": 176.57
+    }
+   },
+   "nearest_ablation": {
+    "N12": {
+     "LiSbZn_orig": 235.72,
+     "LiSbZn_strained_setup": 183.6
+    },
+    "N10": {
+     "LiSbZn_orig": 240.81,
+     "LiSbZn_strained_setup": 188.96
+    },
+    "model_zero": {
+     "LiSbZn_orig": 181.14,
+     "LiSbZn_strained_setup": -113.42
+    },
+    "strained_setup_identity_basis": 205.53
+   },
+   "tolerance": "+-6.0"
+  },
+  "hinge_band_window_meV": {
+   "reference": [
+    218.3,
+    773.42
+   ],
+   "robustness": {
+    "window_N12_refined": [
+     218.93,
+     773.44
+    ],
+    "window_N12_grid25": [
+     218.93,
+     771.62
+    ]
+   },
+   "nearest_ablation": {
+    "window_grid5": [
+     218.93,
+     734.29
+    ],
+    "window_clipped_to_bulk_gap": [
+     218.3,
+     343.76
+    ],
+    "window_bottom_at_k0": [
+     227.82,
+     773.42
+    ],
+    "window_lower_branch_only": [
+     218.3,
+     684.44
+    ]
+   },
+   "tolerance": "bottom +-6.0, top +-15.0"
+  },
+  "hinge_termination": {
+   "reference": "Zn/Zn",
+   "nearest_ablation": {
+    "paper": "X/X (Bi/Sb hinge)"
+   }
+  },
+  "hinge_zn_s_weight_k0": {
+   "reference_N28": 0.6809,
+   "robustness": {
+    "N16": 0.6651
+   },
+   "nearest_ablation": {
+    "paper_95_percent_on_X": 0.05
+   },
+   "tolerance": "+-0.08"
+  },
+  "hinge_removal_potential_eV": {
+   "reference_N20_brentq": -0.38,
+   "robustness": {
+    "N16_linear": -0.3792,
+    "N16_brentq": -0.3791
+   },
+   "nearest_ablation": {
+    "to_model_zero": -0.313,
+    "wrong_corner": null
+   },
+   "tolerance": "+-0.035"
+  },
+  "band_inverted": {
+   "reference": {
+    "LiSbZn": false,
+    "LiBiZn": true
+   }
+  }
+ }
+}

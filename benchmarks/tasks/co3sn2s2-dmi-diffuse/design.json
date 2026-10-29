@@ -1,0 +1,236 @@
+{
+ "task_id": "co3sn2s2-dmi-diffuse",
+ "catalog_id": "co3sn2s2-dmi-diffuse",
+ "start": "released",
+ "source_group": "tam_2026_co3sn2s2",
+ "title": "Co3Sn2S2: critical diffuse scattering and the DMI-canted kagome ferromagnet",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which data constrain the steep onset of the (003) critical scattering just below T_C",
+   "wrong_choice": "Predict 170 and 175 K from the narrow scans alone (140 K and 178 K bracket them)",
+   "consequence": "170 K profile chi2r 13.3-19.6 (limit 12): the narrow scans jump from no critical signal to the maximum, while the 165 K wide-scan (003) region shows that the signal vanishes within ~10 K below T_C",
+   "ablation": "narrow_scans_only",
+   "difficulty_type": "discriminating data under a binding budget"
+  },
+  {
+   "id": "dp2",
+   "fork": "Critical scattering above versus below T_C",
+   "wrong_choice": "Treat the critical scattering as symmetric in |T - T_C| (mirror the above-T_C amplitude and width)",
+   "consequence": "170 K chi2r 20.4 and 200 K chi2r 45.3: the amplitude falls slowly above T_C and collapses below it",
+   "ablation": "critical_scattering_mirrored_about_tc",
+   "difficulty_type": "regime judgement / model class"
+  },
+  {
+   "id": "dp3",
+   "fork": "Background for the (101) prediction at 180 K",
+   "wrong_choice": "Take the 1.5 K (ordered, no critical fluctuations) or the 300 K (paramagnetic) (101) data as the background",
+   "consequence": "chi2r 59.8 (1.5 K) or 136 (300 K), limit 15: the background rises smoothly with T and must be taken from temperatures bracketing 180 K",
+   "ablation": "wide_101_background_from_1p5K",
+   "difficulty_type": "evidence in the data (temperature-dependent background)"
+  },
+  {
+   "id": "dp4",
+   "fork": "Transfer of the (003) critical scattering to (101), at the same |Q| and form factor",
+   "wrong_choice": "Assume the same diffuse intensity at (101) as at (003), or apply only the c-axis polarisation factor",
+   "consequence": "chi2r 409 or 317: ferromagnetic correlations have |F|^2 = 1 at (101) versus 9 at (003), so the (101) critical signal is about 1/9 of the (003) one",
+   "ablation": "wide_101_equal_to_003",
+   "difficulty_type": "transfer to an unmeasured observable (structure and polarisation factors)"
+  },
+  {
+   "id": "dp5",
+   "fork": "Competing explanation: incipient in-plane antiferromagnetic (q = 0, 120 degree) order near T_C",
+   "wrong_choice": "Interpret the critical fluctuations as in-plane AFM correlations of an intermediate phase and predict their (101) signal (|F|^2 = 4 at (101), 0 at (003))",
+   "consequence": "chi2r 2182: the withheld (101) map shows no critical peak; the (003) signal is ferromagnetic",
+   "ablation": "wide_101_in_plane_afm_correlations",
+   "difficulty_type": "competing explanation decided by a withheld measurement"
+  },
+  {
+   "id": "dp6",
+   "fork": "How SpinW turns the single bond-1 DM matrix into couplings of all nearest-neighbour bonds",
+   "wrong_choice": "Copy the same matrix onto every bond (no space-group transformation)",
+   "consequence": "Ground state tilted 77 deg with zero gap instead of 8.66 deg and 4.15 meV",
+   "ablation": "dm_matrix_copied_to_all_bonds",
+   "difficulty_type": "symmetry (Moriya rules) discovered from the script semantics"
+  },
+  {
+   "id": "dp7",
+   "fork": "Which DM components matter on the kagome bonds",
+   "wrong_choice": "Keep only the out-of-plane DM component (the usual kagome assumption), or only the in-plane one",
+   "consequence": "Out-of-plane only: collinear state, tilt 0, gap 0. In-plane only: tilt 8.18 deg but gap 3.70 meV (-10.9%)",
+   "ablation": "out_of_plane_dm_only",
+   "difficulty_type": "model class"
+  },
+  {
+   "id": "dp8",
+   "fork": "Orientation of the bond carrying J1dmi (E = S_i^T J S_j; a reversed bond carries the transpose)",
+   "wrong_choice": "Attach the matrix to the bond Co(1/2,1/2,1/2) -> Co(0,1/2,1/2) (or the other +a bond of the row)",
+   "consequence": "Tilt 7.75 deg and gap 3.31 meV (-20%)",
+   "ablation": "dm_matrix_on_reversed_bond",
+   "difficulty_type": "convention / cascade into ground state and LSWT"
+  },
+  {
+   "id": "dp9",
+   "fork": "Spin length of the model",
+   "wrong_choice": "Use S = 0.15 from the 0.3 muB ordered moment instead of the script's S = 1",
+   "consequence": "Gap 0.62 meV (spin-wave energies scale with J S)",
+   "ablation": "spin_length_from_ordered_moment",
+   "difficulty_type": "energy-scale convention"
+  },
+  {
+   "id": "dp10",
+   "fork": "Bond counting in the SpinW energy",
+   "wrong_choice": "Sum over ordered pairs (each bond twice)",
+   "consequence": "Gap 8.30 meV",
+   "ablation": "bonds_counted_twice",
+   "difficulty_type": "convention"
+  }
+ ],
+ "graded_fields": [
+  "narrow_003_profiles: reduced chi2 (no free scale or offset) <= 12 for each withheld narrow scan (170, 175, 200 K)",
+  "wide_101_profile_180K: reduced chi2 <= 15 against the withheld (101) region of the 180 K wide scan",
+  "canting_angle_deg within 0.5 deg of the classical ground state of the archived Hamiltonian (8.661 deg)",
+  "spin_wave_gap_meV within 6% of the zone-centre LSWT gap of that ground state (4.151 meV)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 9,
+  "oracle_charge": 14,
+  "budget": 16,
+  "catalog_worth_units": 47,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "oracle_container_seconds": 21,
+  "why": "Few purchases, each a full 2-D detector map, but heavy local work: reproducing the annular reduction from four raw channels, a joint temperature model of the critical scattering, structure- and polarisation-factor transfer to (101), SpinW bond numbering and symmetry propagation of the DM matrix, a classical ground-state search and linear spin-wave theory in canted local frames.",
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy and scipy (runtime image); the lab is a lookup of archived arrays, grading is pure Python"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/0cwzy-zz096",
+  "doi": "10.24435/materialscloud:xw-6f",
+  "paper_doi": "10.1038/s41467-026-77000-6",
+  "files_used": [
+   "narrowscans.zip",
+   "widescans.zip",
+   "README.md",
+   "readcombined.py",
+   "SpinW_Co3Sn2S2_DMI.m"
+  ],
+  "md5": {
+   "narrowscans.zip": "1900407dd1f7b413ba3786980eb9103a",
+   "widescans.zip": "5c96956ea4dace5ef9ca4ca488808de7",
+   "README.md": "d56203a3e02a037e8ee037b8fd4041d0",
+   "readcombined.py": "237aa52e042fe890e98614bc636bc8a6",
+   "SpinW_Co3Sn2S2_DMI.m": "83a27de47d4381f4933e04ab156bd6ea"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the design (candidates.json / DETAILS.md section 15). The archived diffuse data are critical scattering near T_C (the paper's own DMS analysis), not a DMI fingerprint, and no archived observable fixes D/J1 independently: it is not graded; the authors' Hamiltonian is staged and its consequences (canting, gap) are graded instead. The design's 'temperature window of the in-plane AFM component' does not exist in this source (the authors find one canted state at all T < T_C), so the AFM question is graded through the withheld (101) map. Oracle evaluations (9) are below the 15-60 target: each purchase is a whole 2-D map and the analysis is local.",
+ "calibration": {
+  "narrow_170_K_profile_chi2r": {
+   "reference_recipe": 4.918,
+   "oracle": 4.918,
+   "robustness": {
+    "narrow_more_data": 3.576,
+    "narrow_bin_interpolation": 3.934,
+    "narrow_independent_fits": 10.681
+   },
+   "nearest_ablation": {
+    "narrow_scans_only": 19.643,
+    "narrow_scans_only_bin_interpolation": 13.281,
+    "narrow_scans_only_independent_fits": 18.242,
+    "mirror_about_tc": 20.427,
+    "temperature_independent_background (passes: absorbed by the fit, so not an ablation)": 3.352
+   },
+   "tolerance": "<= 12"
+  },
+  "narrow_175_K_profile_chi2r": {
+   "reference_recipe": 1.248,
+   "oracle": 1.248,
+   "robustness": {
+    "narrow_more_data": 2.147,
+    "narrow_bin_interpolation": 6.473,
+    "narrow_independent_fits": 3.735
+   },
+   "nearest_ablation": {
+    "narrow_scans_only": 1.469,
+    "narrow_scans_only_bin_interpolation": 4.95,
+    "narrow_scans_only_independent_fits": 9.215,
+    "mirror_about_tc": 5.089,
+    "temperature_independent_background (passes: absorbed by the fit, so not an ablation)": 2.519
+   },
+   "tolerance": "<= 12"
+  },
+  "narrow_200_K_profile_chi2r": {
+   "reference_recipe": 1.75,
+   "oracle": 1.75,
+   "robustness": {
+    "narrow_more_data": 2.524,
+    "narrow_bin_interpolation": 3.181,
+    "narrow_independent_fits": 2.191
+   },
+   "nearest_ablation": {
+    "narrow_scans_only": 2.345,
+    "narrow_scans_only_bin_interpolation": 3.181,
+    "narrow_scans_only_independent_fits": 2.191,
+    "mirror_about_tc": 45.289,
+    "temperature_independent_background (passes: absorbed by the fit, so not an ablation)": 3.482
+   },
+   "tolerance": "<= 12"
+  },
+  "wide_101_180K_profile_chi2r": {
+   "reference_recipe": 2.343,
+   "oracle": 2.343,
+   "robustness": {
+    "wide_101_background_only": 3.87,
+    "wide_101_xy_ratio": 1.586,
+    "wide_101_raw_background": 3.494,
+    "wide_101_background_165K_only": 1.478
+   },
+   "nearest_ablation": {
+    "wide_101_equal_to_003": 408.661,
+    "wide_101_c_axis_polarisation_only": 317.266,
+    "wide_101_in_plane_afm_correlations": 2182.262,
+    "wide_101_background_from_1p5K": 59.829,
+    "wide_101_background_from_300K": 136.448
+   },
+   "tolerance": "<= 15"
+  },
+  "canting_angle_deg": {
+   "reference": 8.661,
+   "robustness": {
+    "rounded_to_0.01": 8.66,
+    "no_interlayer_coupling (passes, not an ablation)": 9.123
+   },
+   "nearest_ablation": {
+    "reversed_generator_bond": 7.749,
+    "in_plane_dm_only (fails via the gap)": 8.18,
+    "out_of_plane_dm_only": 0.0,
+    "copy_matrix_to_all_bonds": 77.002,
+    "measured_canting_paper (not graded)": 17.0
+   },
+   "tolerance": "+-0.5 deg"
+  },
+  "spin_wave_gap_meV": {
+   "reference": 4.151,
+   "independent_check": {
+    "linearised_landau_lifshitz_k0": 4.151
+   },
+   "robustness": {
+    "conventional_9_site_cell": 4.151,
+    "no_interlayer_coupling (passes, not an ablation)": 4.384
+   },
+   "nearest_ablation": {
+    "in_plane_dm_only": 3.697,
+    "reversed_generator_bond": 3.312,
+    "spin_0.15": 0.623,
+    "bonds_counted_twice": 8.301,
+    "out_of_plane_dm_only / copy": 0.0,
+    "measured_gap_literature (not graded)": "2-3"
+   },
+   "tolerance": "+-6%"
+  }
+ }
+}

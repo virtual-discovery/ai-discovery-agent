@@ -1,0 +1,339 @@
+{
+ "task_id": "hzo-vacancy-local-environment",
+ "catalog_id": "hzo-vacancy-local-environment",
+ "start": "released",
+ "source_group": "taper_2026_hzo_vacancies",
+ "title": "Hf1-xZrxO2: what sets the oxygen-vacancy formation energy",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "What controls E_f: cation identity of the first shell resolved by the two O sublattices (O3/O4), versus Zr count alone or geometric descriptors",
+   "wrong_choice": "Regress E_f on n_Zr with the sublattices pooled; or use the released geometric descriptors (identical within a sublattice in the staged cells) instead of cation identity",
+   "consequence": "Prediction RMSE ~0.12 eV and biases of 0.04-0.08 eV; x=0.25 population mean n_Zr 2.79 (pooled) or 1.00 (geometry) vs 2.24",
+   "ablation": "pooled_nZr_regression",
+   "other_ablations": [
+    "geometry_descriptor_model"
+   ],
+   "kind": "model class"
+  },
+  {
+   "id": "dp2",
+   "fork": "Whether E_f depends on composition at fixed first-shell environment (a ~-0.03 eV shift per 0.25 in x, below the 0.02-0.035 eV within-class scatter and confounded with the Zr slope because each cell's environment mix follows its composition)",
+   "wrong_choice": "Fit one composition-blind local model to the x=0.50 table and the purchased x=0.25/0.75 sites",
+   "consequence": "Mean prediction error -0.028 eV at x=0.25 and +0.031 eV at x=0.75 (tolerance 0.02); x=0.75 site fraction low by 0.19 in log10",
+   "ablation": "composition_blind_pooled_model",
+   "kind": "discovered confounder (evidence in the data)"
+  },
+  {
+   "id": "dp3",
+   "fork": "Spend budget on matched first-shell environments at x=0.25 and 0.75 (discriminating purchases) rather than transferring the free x=0.50 model",
+   "wrong_choice": "Assume purely local physics and transfer the x=0.50 table model to the other compositions",
+   "consequence": "Mean prediction errors -0.026 / +0.030 eV; x=0.75 site fraction low by 0.30 in log10",
+   "ablation": "x050_model_transferred",
+   "kind": "discriminating experiment under a budget"
+  },
+  {
+   "id": "dp4",
+   "fork": "Environment statistics of the macroscopic random alloy versus those of the released 96-atom cells (one decoration at fixed composition)",
+   "wrong_choice": "Boltzmann-average over the 64 sites of the composition's supercell; or sample random 96-atom cells with exactly x*32 Zr (hypergeometric)",
+   "consequence": "x=0.25 cell has one 4-Zr O4 site of 64 (8x the random-alloy share): mean n_Zr 3.07 vs 2.24, 4-Zr share 0.43 vs 0.10; fixed-composition cells halve the 4-Zr probability (share 0.056)",
+   "ablation": "supercell_decoration_statistics",
+   "other_ablations": [
+    "fixed_composition_cell_statistics"
+   ],
+   "kind": "regime judgement"
+  },
+  {
+   "id": "dp5",
+   "fork": "Population = configurational degeneracy (environment probability) x Boltzmann factor",
+   "wrong_choice": "Boltzmann weights over environment classes without their multiplicity; or the lowest-energy class only",
+   "consequence": "x=0.25 mean n_Zr 3.66 or 4.0 vs 2.24",
+   "ablation": "no_configurational_degeneracy",
+   "other_ablations": [
+    "lowest_energy_class_only"
+   ],
+   "kind": "statistical mechanics"
+  },
+  {
+   "id": "dp6",
+   "fork": "Rare low-energy environments that cannot be bought (the only 4-Zr site at x=0.25 is withheld) must be predicted by the model and included",
+   "wrong_choice": "Build the population from the classes actually purchased at that composition, dropping unseen ones",
+   "consequence": "x=0.25 4-Zr share 0 vs 0.10 (tolerance 0.03), mean n_Zr 2.06",
+   "ablation": "unpurchased_classes_dropped",
+   "kind": "cascade"
+  },
+  {
+   "id": "dp7",
+   "fork": "CASTEP cells: use the authors' per-calculation labels returned with each purchase; the released coordinates map onto the VASP x=0.50 cell but the decorations differ",
+   "wrong_choice": "Classify the purchased CASTEP-LDA sites with the environments of the VASP x=0.50 cell at the same index",
+   "consequence": "LDA Zr slope +0.045 instead of -0.111 eV (tolerance 0.05); with 10 random LDA sites this path passes 5 % of the time, against 98 % for the correct labels",
+   "ablation": "castep_sites_given_vasp_cell_environments",
+   "kind": "inconsistency visible only in released metadata"
+  },
+  {
+   "id": "dp8",
+   "fork": "Which conclusions transfer across functionals: the Zr softening does, the O3-O4 offset does not",
+   "wrong_choice": "Report the PBE description (VASP table or CASTEP-PBE) for LDA, treating the description as functional-independent",
+   "consequence": "LDA offset 0.250 (VASP) or 0.226 (CASTEP-PBE) eV vs 0.120 (tolerance 0.075)",
+   "ablation": "pbe_description_reported_for_lda",
+   "other_ablations": [
+    "castep_pbe_reported_for_lda"
+   ],
+   "kind": "regime judgement / functional transfer"
+  }
+ ],
+ "graded_fields": [
+  "predicted_formation_energies_eV: 10 withheld sites per composition (x=0.25, 0.75); per composition RMSE <= 0.035 eV and |mean error| <= 0.02 eV",
+  "vacancy_Zr_neighbour_distribution: sum 1 +- 0.02; mean n_Zr within 0.25 (x=0.25) / 0.15 (x=0.75); 4-Zr share within 0.03 (x=0.25) / 0.08 (x=0.75)",
+  "vacancy_site_fraction: |log10(value/reference)| <= 0.20 (x=0.25) / 0.15 (x=0.75)",
+  "lda_common_slope_model: offset within 0.075 eV, slope within 0.05 eV of the all-64-site least-squares values"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 32,
+  "oracle_charge": 32,
+  "budget": 36,
+  "catalog_size_units": 713,
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "pilot": "pending (sonnet, terra)",
+  "catalog_note": "172 VASP vacancy sites + 3 pristine cells + 448 CASTEP vacancies + 45 CASTEP 3x3x3 vacancies at 2 units"
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://www.repository.cam.ac.uk/handle/1810/389433",
+  "doi": "10.17863/CAM.121316 (data); 10.1103/vz64-n5xh (paper)",
+  "files_used": [
+   "Data.zip (members: Main text/Structures/Fig2b_e_0.25_HZO.cif, Fig2c_f_0.50_HZO.cif, FIG2d_g_0.75_HZO.cif; Main text/Fig_2/Data_Fig2b_g.csv; SM material/FIGS3.csv, FIGS4.txt, FIGS4 3x3x3_supercell.cif, FIGS5.txt, FIGS12.csv)"
+  ],
+  "md5": {
+   "Data.zip": "70721b2c03a34c84e9a2deab61160afb",
+   "Readme.md": "77a9d035a0ac4ff76779ff70356b7934"
+  },
+  "sha256": {
+   "Data.zip": "e6fd7f7aa4ed5ba2154fcf06dd9808d8c643637576b8b489887780942a0c4ea9"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Neutral vacancies only: the archive's +2 data use a VBM column that CompMat-Bench documents as the pristine-cell Fermi energy (0.92 eV above the true VBM), and charged-defect thermodynamics overlap CompMat-Bench task 202603_028. The design's composition-dependent oxygen-poor limit was replaced by the authors' single mu_O = -10.09 eV, stated in the prompt, because the archive contains no O2, metal or oxide reference energies. The design's Spearman and lowest-class targets were dropped (trivial: 4-Zr is lowest at every composition), and so was the O3 fraction at x=0.50 (exponentially sensitive and not discriminating between the degeneracy paths). They are replaced by the n_Zr distribution, site fractions and an LDA description. Contamination: no graded value uses the Fig2a_Fig3 reference cell or any CompMat-Bench target (see SOURCE.md).",
+ "calibration": {
+  "prediction_mean_error_eV (per composition)": {
+   "reference_oracle": {
+    "x0.25": 0.0051,
+    "x0.75": -0.0003
+   },
+   "robustness": {
+    "per_composition_offsets": [
+     0.0074,
+     0.0024
+    ],
+    "x050_slopes_plus_offset": [
+     0.0099,
+     -0.0005
+    ],
+    "independent_fits": [
+     0.001,
+     0.0156
+    ],
+    "common_slope": [
+     0.0006,
+     0.0018
+    ]
+   },
+   "budgeted_oracle_designs_5_95pct": {
+    "x0.25": [
+     -0.0024,
+     0.0153
+    ],
+    "x0.75": [
+     -0.0109,
+     0.0093
+    ]
+   },
+   "nearest_ablation": {
+    "x050_model_transferred": [
+     -0.026,
+     0.0304
+    ],
+    "composition_blind": [
+     -0.0278,
+     0.0307
+    ],
+    "pooled_nZr": [
+     -0.0446,
+     0.0435
+    ]
+   },
+   "tolerance": "|mean error| <= 0.02"
+  },
+  "prediction_rmse_eV (per composition)": {
+   "reference_oracle": {
+    "x0.25": 0.0218,
+    "x0.75": 0.025
+   },
+   "irreducible_class_mean_predictor": {
+    "x0.25": 0.0172,
+    "x0.75": 0.0232
+   },
+   "robustness_max": 0.0322,
+   "nearest_ablation": {
+    "composition_blind": [
+     0.0351,
+     0.0396
+    ],
+    "x050_model_transferred": [
+     0.0337,
+     0.0397
+    ],
+    "pooled_nZr": [
+     0.1247,
+     0.1267
+    ],
+    "geometry": [
+     0.1146,
+     0.1219
+    ]
+   },
+   "tolerance": "<= 0.035"
+  },
+  "mean_nZr_x0.25": {
+   "reference": 2.2394,
+   "reference_oracle": 2.255,
+   "robustness": {
+    "independent_fits": 2.337,
+    "common_slope": 2.361,
+    "x050_slopes_plus_offset": 2.203,
+    "purchased_site_boltzmann": 2.272
+   },
+   "nearest_ablation": {
+    "composition_blind (passes; fails elsewhere)": 2.369,
+    "pooled_nZr": 2.785,
+    "supercell_decoration": 3.071,
+    "no_degeneracy": 3.655,
+    "geometry": 0.998
+   },
+   "tolerance": "+-0.25"
+  },
+  "share_4Zr_x0.25": {
+   "reference": 0.1027,
+   "reference_oracle": 0.101,
+   "robustness": {
+    "common_slope": 0.121,
+    "independent_fits": 0.116,
+    "x050_slopes_plus_offset": 0.092
+   },
+   "nearest_ablation": {
+    "fixed_composition_cell": 0.056,
+    "unpurchased_classes_dropped": 0.0,
+    "pooled_nZr": 0.228,
+    "supercell_decoration": 0.43
+   },
+   "tolerance": "+-0.03"
+  },
+  "mean_nZr_x0.75": {
+   "reference": 3.6927,
+   "reference_oracle": 3.678,
+   "robustness_range": [
+    3.662,
+    3.749
+   ],
+   "nearest_ablation": {
+    "lowest_energy_class_only": 4.0,
+    "geometry": 2.995
+   },
+   "tolerance": "+-0.15"
+  },
+  "share_4Zr_x0.75": {
+   "reference": 0.7265,
+   "reference_oracle": 0.715,
+   "robustness_range": [
+    0.682,
+    0.771
+   ],
+   "nearest_ablation": {
+    "lowest_energy_class_only": 1.0,
+    "geometry": 0.314
+   },
+   "tolerance": "+-0.08"
+  },
+  "log10_site_fraction_x0.25": {
+   "reference": -5.8662,
+   "reference_oracle_delta": -0.06,
+   "robustness_delta_range": [
+    -0.098,
+    -0.034
+   ],
+   "nearest_ablation_delta": {
+    "supercell_decoration": 0.212,
+    "pooled_nZr": -0.299
+   },
+   "tolerance": "+-0.20"
+  },
+  "log10_site_fraction_x0.75": {
+   "reference": -4.4018,
+   "reference_oracle_delta": -0.018,
+   "robustness_delta_range": [
+    -0.049,
+    0.041
+   ],
+   "budgeted_model_only_designs_5_95pct": [
+    -0.117,
+    0.009
+   ],
+   "nearest_ablation_delta": {
+    "composition_blind": -0.19,
+    "x050_model_transferred": -0.3,
+    "geometry": -0.225,
+    "pooled_nZr": -0.372
+   },
+   "tolerance": "+-0.15"
+  },
+  "lda_offset_O3_eV": {
+   "reference_all_64_sites": 0.1197,
+   "reference_oracle": 0.1267,
+   "robustness": {
+    "other_twelve_sites": 0.1643
+   },
+   "random_site_designs_pass_rate": {
+    "8": 0.931,
+    "10": 0.977,
+    "12": 0.992
+   },
+   "random_10_site_designs_5_95pct": [
+    0.074,
+    0.167
+   ],
+   "nearest_ablation": {
+    "castep_pbe": 0.2259,
+    "vasp_pbe": 0.2503,
+    "vasp_cell_environments (fails on slope)": 0.0693
+   },
+   "tolerance": "+-0.075"
+  },
+  "lda_slope_per_Zr_eV": {
+   "reference_all_64_sites": -0.1112,
+   "reference_oracle": -0.1214,
+   "robustness": {
+    "other_twelve_sites": -0.1059
+   },
+   "random_10_site_designs_5_95pct": [
+    -0.137,
+    -0.09
+   ],
+   "nearest_ablation": {
+    "vasp_cell_environments": 0.0446,
+    "vasp_pbe (passes; fails on offset)": -0.0872
+   },
+   "tolerance": "+-0.05"
+  },
+  "pass_rates_correct_method (calibrate.py, 400 designs)": {
+   "class_targeted_9+9": 0.975,
+   "random_9+9": 0.983,
+   "random_6+6": 0.965,
+   "random_12+12": 0.97,
+   "composition_blind_any_design": 0.0
+  }
+ }
+}

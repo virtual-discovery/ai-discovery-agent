@@ -1,0 +1,138 @@
+{
+ "title": "Exfoliable 1D chalcogenide chains: archived DFT, GW and BSE results (Grillo et al., ACS Nano 2026)",
+ "chains": {
+  "S3": {
+   "atoms_per_cell": 3,
+   "chain_lattice_constant_A": 4.414661953,
+   "valence_band_max_index": 18,
+   "qp_band_range_archived": [
+    9,
+    28
+   ],
+   "scGW_iteration": "G3W3"
+  },
+  "Te3": {
+   "atoms_per_cell": 3,
+   "chain_lattice_constant_A": 5.724222759,
+   "valence_band_max_index": 48,
+   "qp_band_range_archived": [
+    39,
+    58
+   ],
+   "scGW_iteration": "G3W3"
+  },
+  "As2S3": {
+   "atoms_per_cell": 5,
+   "chain_lattice_constant_A": 3.537854419,
+   "valence_band_max_index": 48,
+   "qp_band_range_archived": [
+    38,
+    59
+   ],
+   "scGW_iteration": "G4W4"
+  },
+  "Bi2Te3": {
+   "atoms_per_cell": 5,
+   "chain_lattice_constant_A": 4.333060856,
+   "valence_band_max_index": 78,
+   "qp_band_range_archived": [
+    69,
+    88
+   ],
+   "scGW_iteration": "G3W3"
+  }
+ },
+ "k_points": {
+  "count": 25,
+  "k_frac_of_index": {
+   "1": 0.0,
+   "2": 0.020833,
+   "3": 0.041667,
+   "4": 0.0625,
+   "5": 0.083333,
+   "6": 0.104167,
+   "7": 0.125,
+   "8": 0.145833,
+   "9": 0.166667,
+   "10": 0.1875,
+   "11": 0.208333,
+   "12": 0.229167,
+   "13": 0.25,
+   "14": 0.270833,
+   "15": 0.291667,
+   "16": 0.3125,
+   "17": 0.333333,
+   "18": 0.354167,
+   "19": 0.375,
+   "20": 0.395833,
+   "21": 0.416667,
+   "22": 0.4375,
+   "23": 0.458333,
+   "24": 0.479167,
+   "25": 0.5
+  },
+  "note": "irreducible points of a 48-point grid along the chain; k_frac in units of 2*pi/c"
+ },
+ "levels": {
+  "G0W0": "one-shot GW on PBE (archived o-G0W0.qp)",
+  "scGW": "last archived iteration of eigenvalue self-consistent GW, G and W updated (o-G3W3.qp; o-G4W4.qp for As2S3)"
+ },
+ "requests": {
+  "qp": {
+   "example": {
+    "kind": "qp",
+    "chain": "Te3",
+    "level": "scGW",
+    "k_indices": [
+     20,
+     21,
+     22
+    ]
+   },
+   "cost": "one unit per k-point",
+   "returns": "all archived bands at those k-points (Eo, E-Eo, Sc|Eo) and the Yambo run header"
+  },
+  "bse_spectrum": {
+   "example": {
+    "kind": "bse_spectrum",
+    "chain": "Te3",
+    "run": "BSE_scGW"
+   },
+   "runs": [
+    "BSE_G0W0",
+    "BSE_scGW"
+   ],
+   "cost": 3,
+   "returns": "the archived Haydock spectrum (0-10 eV, field along the chain) with its Yambo header; run names are the authors' labels"
+  },
+  "dft_bands": {
+   "example": {
+    "kind": "dft_bands",
+    "chain": "Te3",
+    "soc": true
+   },
+   "cost": 1,
+   "returns": "archived PBE bands along Gamma-Z (301 points), computed with or without spin-orbit coupling, bands near the gap"
+  },
+  "wire_screening": {
+   "example": {
+    "kind": "wire_screening",
+    "chain": "Te3"
+   },
+   "cost": 1,
+   "returns": "DFPT electronic dielectric tensor of the supercell, cells and the Environ quantum-volume record"
+  }
+ },
+ "withheld_for_grading": [
+  "qp of Bi2Te3 at the scGW level",
+  "bse_spectrum Bi2Te3 BSE_scGW"
+ ],
+ "purchase_costs": {
+  "qp_per_k_point": 1,
+  "bse_spectrum": 3,
+  "dft_bands": 1,
+  "wire_screening": 1
+ },
+ "budget": 45,
+ "methods": "PBE with Quantum ESPRESSO; GW and BSE with Yambo 5.2.3 (plasmon-pole GW, cylindrical Coulomb cutoff, random-integration method; BSE in the Tamm-Dancoff approximation solved by the Haydock method with 5 meV damping, light polarized along the chain). Isolated chains in periodic supercells with vacuum perpendicular to the chain. The headers returned with each purchase record the run parameters."
+}

@@ -1,0 +1,96 @@
+{
+ "ablations": {
+  "input_e_fermi": {
+   "neutral_mu_eV": {
+    "ZrSiS": 8.9117,
+    "ZrSiSe": 8.9117,
+    "ZrSiTe": 8.8965
+   },
+   "butterfly_peak_angle_deg": 46.77175116269613,
+   "mr_b_over_c": 1.9370840964535512,
+   "mr_exponent_b": 0.26396480125056393,
+   "zrsite_mr_c_over_b": 12.738575900241118,
+   "mr_ratio_se_over_te": 1.6503986961473316
+  },
+  "zrsis_copied_input": {
+   "neutral_mu_eV": {
+    "ZrSiS": 8.9117,
+    "ZrSiSe": 8.92219743762801,
+    "ZrSiTe": 8.86099330579736
+   }
+  },
+  "thirteen_filled_bands": {
+   "neutral_mu_eV": {
+    "ZrSiS": 9.692800138529376,
+    "ZrSiSe": 8.92219743762801,
+    "ZrSiTe": 9.82865330500688
+   },
+   "mu13": {
+    "ZrSiS": 10.695075914442723,
+    "ZrSiSe": 9.94200520179447,
+    "ZrSiTe": 9.82865330500688
+   }
+  },
+  "carrier_density_one_spin": {
+   "carrier_density_cm3": {
+    "ZrSiSe": 7.546807637785013e+19,
+    "ZrSiTe": 2.0034904872388067e+20
+   }
+  },
+  "mesh_80": {
+   "butterfly_peak_angle_deg": 51.608918054073996,
+   "mr_b_over_c": 2.147114986162137,
+   "mr_exponent_b": 1.4150134119023272,
+   "zrsite_mr_c_over_b": 10.128615168304666,
+   "mr_ratio_se_over_te": 2.7189019948974056
+  },
+  "mesh_40": {
+   "butterfly_peak_angle_deg": 35.63561483451979,
+   "mr_b_over_c": 0.9308288919010586,
+   "mr_exponent_b": 0.266811771388382,
+   "zrsite_mr_c_over_b": 9.723576774418639,
+   "mr_ratio_se_over_te": 3.7681064393635135
+  },
+  "closed_orbit_mass_model": {
+   "butterfly_peak_angle_deg": 90.0
+  },
+  "samples_at_equal_btau": {
+   "mr_ratio_se_over_te": 0.46880628643529715
+  },
+  "samples_at_equal_btau_swapped": {
+   "mr_ratio_se_over_te": 0.14226992523461587
+  }
+ },
+ "robustness": {
+  "mesh120_potentials": {
+   "neutral_mu_eV": {
+    "ZrSiS": 9.692616175521811,
+    "ZrSiSe": 8.922131448651372,
+    "ZrSiTe": 8.861719050951079
+   },
+   "carrier_density_cm3": {
+    "ZrSiSe": 1.51300451251442e+20,
+    "ZrSiTe": 3.994502290020372e+20
+   },
+   "butterfly_peak_angle_deg": 54.777101882786006,
+   "mr_b_over_c": 2.604929338401886,
+   "mr_exponent_b": 1.602153882531568,
+   "zrsite_mr_c_over_b": 12.399733206411549,
+   "mr_ratio_se_over_te": 2.248287735551231
+  },
+  "cubic_peak": {
+   "butterfly_peak_angle_deg": 54.7,
+   "mr_b_over_c": 2.6067474336989185,
+   "mr_exponent_b": 1.610461349882908,
+   "zrsite_mr_c_over_b": 12.826293554661005,
+   "mr_ratio_se_over_te": 2.201733794838667
+  },
+  "oracle_angles": {
+   "butterfly_peak_angle_deg": 54.82091737844173,
+   "mr_b_over_c": 2.6067474336989185,
+   "mr_exponent_b": 1.610461349882908,
+   "zrsite_mr_c_over_b": 12.826293554661005,
+   "mr_ratio_se_over_te": 2.201733794838667
+  }
+ }
+}

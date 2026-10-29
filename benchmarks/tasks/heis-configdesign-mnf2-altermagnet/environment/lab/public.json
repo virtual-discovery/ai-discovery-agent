@@ -1,0 +1,7 @@
+{
+ "task_id": "heis-configdesign-mnf2-altermagnet",
+ "solver_budget": 24,
+ "reserved_validation_charge": 0,
+ "requests": {"spiral": {"kind": "spiral", "key": "<key from spirals_available>", "cost": 1}},
+ "catalog": "/app/catalog.json"
+}

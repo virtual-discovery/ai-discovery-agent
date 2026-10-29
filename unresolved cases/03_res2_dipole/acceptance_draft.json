@@ -1,0 +1,27 @@
+{
+  "campaign": "RES2-DIPOLE-1",
+  "status": "DRAFT 2026-10-28 - fill S0 inputs, freeze (acceptance.json + sha256) before stage S2; never edit after a production spectrum exists",
+  "question": "Does AB stacking give ReS2 excitons a permanent out-of-plane dipole (AA forbidden by symmetry), and does it account for the ~13 meV Stark shift?",
+  "source": {"paper": "Paul et al., Nano Lett. 26, 8482 (2026)", "doi": "10.1021/acs.nanolett.6c01130", "AB_shift_meV": 13, "AA_shift": "negligible", "thickness_layers": [6, 8], "verification": "provisional (main text not verified)"},
+  "li": {"paper": "Zhou et al., ACS Photonics 8 (2021)", "doi": "10.1021/acsphotonics.0c01225", "method": "G0W0-BSE few-layer AA/AB along and across the Re chain", "PL_excitons_eV": {"AB": [1.48, 1.52, 1.57], "AA": [1.46, 1.50, 1.56]}, "support": "van der Laan et al., ACS Photonics 10 (2023), DOI 10.1021/acsphotonics.3c00477"},
+  "S0_inputs_TO_FILL": {"stacking_definition_source": null, "F_ext_max_V_per_nm": null, "gate_dielectric_thickness_nm": null, "measured_exciton_label": null, "linear_part_meV": null, "quadratic_part_meV": null, "li_soc_choice": null},
+  "prior_expectation_declared": {"AA_d_S_A": 0.0, "AB_d_S_A": [0.2, 1.0], "note": "an interlayer shift of ~2.6 A (van der Laan: AB interlayer distance 2.61 A) can give a fraction-of-a-layer e-h offset; 13 meV at F_in ~0.03 V/nm needs d ~0.4 A"},
+  "definitions": {"layer_weights": "w_e(l), w_h(l) from |A_vck|^2 x layer fraction of |psi_nk|^2; same-gauge WFN + eigenvectors", "d_S_A": "sum_l z_l (w_e - w_h)", "F_in": "F_ext / eps_perp (eps_perp computed by sawtooth DFT, S1)", "dE_lin_meV": "e d_S F_in at F_ext_max"},
+  "gates": {
+    "G0_litcheck": {"energy_tol_eV": 0.15, "polarization_must_match": true, "AB_minus_AA_sign_must_match": true, "on_fail": "LITCHECK_FAIL"},
+    "G1_symmetry": {"tool": "spglib 1e-3 A", "AA_must_have_layer_exchange_op": true, "AB_must_not": true, "AB_has_op": "NO_DIPOLE_BY_SYMMETRY", "AA_lacks_op": "PROCESS_BLOCKED"},
+    "G2_null": {"AA_max_abs_d_S_A": 0.05, "on_fail": "PROCESS_BLOCKED"},
+    "G3_dipole": {"AB_min_abs_d_S_A": 0.20, "on_fail": "DIPOLE_TOO_SMALL"},
+    "G4_magnitude": {"factor": 2.0, "target": "linear part of 13 meV (full 13 meV if not separated)"},
+    "G5_convergence": {"k_levels": 2, "vacuum_levels": 2, "max_change_d_S_A": 0.10},
+    "G6_soc": {"max_change_d_S_A": 0.10, "on_exceed": "SOC chain primary"},
+    "G7_thickness": {"gated": false, "slab": "4-layer AB"},
+    "G8_quadratic": {"optional": true, "method": "two-field sawtooth GW-BSE on AA"}
+  },
+  "status_vocabulary": ["DIPOLE_CONFIRMED", "DIPOLE_TOO_SMALL", "DIPOLE_TOO_LARGE", "NO_DIPOLE_BY_SYMMETRY", "LITCHECK_FAIL", "PROCESS_BLOCKED"],
+  "non_vacuity": "G0-G4 can each fail; G2 is a symmetry null, G3 the positive; outcomes recorded before any eigenvector is read",
+  "scorers": ["dipole_score.py (reads results/dipoles.json only)", "layer_weights.py (validated on a synthetic two-layer test)"],
+  "compute": {"route": "1-2x H100 with dph_total verified; S0-S2 + G1 first (free)", "budget_estimate_GPU_h": [40, 80], "budget_cap": "60 % of credit", "disk_rule": "heavy files stay remote; eigenvectors + WFN pulled together or layer weights computed remotely"},
+  "out_of_scope": ["6-8 layer sample", "defect fields", "exciton-phonon", "AA/AB broadening", "moire/twist", "excitonic Raman"],
+  "deliverables_count": 9
+}

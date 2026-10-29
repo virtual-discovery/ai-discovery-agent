@@ -1,0 +1,47 @@
+{
+ "task_id": "cnt-kohn-anomaly-nonadiabatic",
+ "solver_budget": 26,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "archive_file": {
+   "kind": "archive_file",
+   "file": "<one of archive_files>",
+   "cost": 1
+  },
+  "bands": {
+   "kind": "bands",
+   "cost": 1
+  },
+  "phonons": {
+   "kind": "phonons",
+   "cost": 1
+  },
+  "coupling": {
+   "kind": "coupling",
+   "mode": "<1, 20 or 23>",
+   "cost": 1
+  },
+  "dfpt_scan": {
+   "kind": "dfpt_scan",
+   "cost": 1
+  },
+  "self_energy_table": {
+   "kind": "self_energy_table",
+   "mode": "<1, 20 or 23>",
+   "temperature_K": "<released temperature>",
+   "cost": 1
+  },
+  "self_energy": {
+   "kind": "self_energy",
+   "mode": "<1, 20 or 23>",
+   "temperature_K": "<30-2000>",
+   "omega_meV": "<list>",
+   "nk": "<2000-4000000>",
+   "eta_meV": "<(0, 50]>",
+   "processes": "<list>",
+   "band_pairs": "<list>",
+   "cost": "1 if nk <= 100000, 2 if nk <= 1000000, else 3"
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

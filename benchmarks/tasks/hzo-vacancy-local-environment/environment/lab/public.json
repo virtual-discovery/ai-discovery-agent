@@ -1,0 +1,10 @@
+{
+ "task_id": "hzo-vacancy-local-environment",
+ "solver_budget": 36,
+ "reserved_validation_charge": 0,
+ "requests": {"vacancy": {"kind": "vacancy", "composition": "x0.25|x0.50|x0.75", "site": "<O atom index from vacancy_sites_available>", "cost": 1},
+              "pristine": {"kind": "pristine", "composition": "x0.25|x0.50|x0.75", "cost": 1},
+              "castep_vacancy": {"kind": "castep_vacancy", "functional": "B3LYP|LDA|PBE|PBEsol|RPBE|RSCAN|WC", "site": "<O index from castep_sets.sites>", "cost": 1},
+              "castep_333_vacancy": {"kind": "castep_333_vacancy", "site": "<index from castep_333.sites>", "cost": 2}},
+ "catalog": "/app/catalog.json"
+}

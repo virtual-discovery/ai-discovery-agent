@@ -1,0 +1,36 @@
+{
+ "reference": {
+  "a0_A": 3.9359854061323283,
+  "gamma_soft_mode_cm-1": -138.40394542938893,
+  "gamma_LO_highest_cm-1": 731.4835382298982,
+  "eps_inf": 6.294134975,
+  "born_charge_Ti": 7.34583,
+  "polar_well_depth_meV_per_fu": 3.3250938485298946,
+  "R_mode_cm-1": -73.04580493066177,
+  "tilt_angle_deg": 4.673870519381624,
+  "tilt_well_depth_meV_per_fu": 4.025497917504835,
+  "strained_c_A": 3.9121780175309686,
+  "strained_inplane_polar_mode_cm-1": -187.16919070846058,
+  "larger_energy_gain": "tilt"
+ },
+ "tolerances": {
+  "absolute": {
+   "a0_A": 0.004,
+   "gamma_soft_mode_cm-1": 10.0,
+   "gamma_LO_highest_cm-1": 4.0,
+   "eps_inf": 0.12,
+   "born_charge_Ti": 0.1,
+   "polar_well_depth_meV_per_fu": 0.5,
+   "R_mode_cm-1": 8.0,
+   "tilt_angle_deg": 0.3,
+   "tilt_well_depth_meV_per_fu": 0.5,
+   "strained_c_A": 0.005,
+   "strained_inplane_polar_mode_cm-1": 10.0
+  },
+  "relative": {}
+ },
+ "provenance": {
+  "runs": "benchmarks/construction/fresh-srtio3-soft-modes/reference_runs.jsonl (task_lab.run, QE 6.7, 2 MPI ranks)",
+  "definitions": "a0: cubic fit of 75 Ry 6x6x6 EOS; Gamma: 0.01 A frozen phonons 8x8x8 with ASR, dielectric 8x8x8; polar well: 8x8x8 pattern and mesh; tilt: 4x4x4 rotated_10, 8 angles, same-cell reference; strain: 75 Ry energy minimum in c, 8x8x8 in-plane frozen phonons"
+ }
+}

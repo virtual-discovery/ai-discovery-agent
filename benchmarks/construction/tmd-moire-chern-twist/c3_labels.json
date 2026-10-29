@@ -1,0 +1,21 @@
+{
+ "source": "Transcribed by hand from the C3z labels of Fig. 2c (tWSe2) and Fig. 2d (tMoTe2) of arXiv:2311.12776v3 (= Nat. Commun. 15, 4223 (2024)), read from a 450-dpi rendering of page 2. Each entry lists the K-valley spin-up eigenvalue of moire valence bands 1, 2, 3 (band 1 = topmost) at the point; the figure gives the spin-down (K') partner of every doublet as the complex conjugate (|up, xi> with |down, xi*>, |up, -1> with |down, -1>). Caption: the C3z eigenvalue is the same at kappa and kappa'. Notation: xi = exp(i pi/3), xis = exp(-i pi/3), m1 = -1.",
+ "chern_K_up_in_figure": {
+  "tWSe2": {"3.15": [1, 1], "1.70": [1, 1], "1.54": [0, 0], "1.25": [-1, -1]},
+  "tMoTe2": {"3.89": [1, -1, 0], "3.15": [1, -1, 0], "2.14": [1, 1, 1], "1.25": [0, 0]}
+ },
+ "labels": {
+  "tWSe2": {
+   "3.15": {"gamma": ["m1", "xi", "xis"], "kappa": ["xi", "xis", "xi"]},
+   "1.70": {"gamma": ["m1", "xi", "xis"], "kappa": ["xi", "xis", "m1"]},
+   "1.54": {"gamma": ["xi", "m1", "xis"], "kappa": ["xi", "m1", "xis"]},
+   "1.25": {"gamma": ["xis", "xi", "m1"], "kappa": ["xi", "m1", "xi"]}
+  },
+  "tMoTe2": {
+   "3.89": {"gamma": ["m1", "m1", "xi"], "kappa": ["xi", "xis", "xi"]},
+   "3.15": {"gamma": ["m1", "m1", "xi"], "kappa": ["xi", "xis", "xi"]},
+   "2.14": {"gamma": ["m1", "xi", "xis"], "kappa": ["xi", "xis", "m1"]},
+   "1.25": {"gamma": ["xi", "m1", "xis"], "kappa": ["xi", "m1", "xi"]}
+  }
+ }
+}

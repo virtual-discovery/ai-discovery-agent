@@ -1,0 +1,234 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 10,
+  "rubric_items": 7,
+  "task_mb": 1.63,
+  "hidden_values": 12,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 27,
+   "budget": 32,
+   "evaluations": 11,
+   "failed_evaluations": 0,
+   "container_seconds": 1
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "gap_from_shifted_mesh_band_edges",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "gap_from_gamma_mesh_band_edges",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "pressures_at_35_Ry",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "experimental_lattice_parameter",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "frozen_3d_core_pseudopotential",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "shifted_k8_mesh",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "shifted_k8_relaxation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "wide_smearing_mv002",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "smearing_0.01_gamma_k12",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "clamped_reported_as_relaxed",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "loose_relaxation_at_small_strain",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "one_sided_111_displacement_0.02",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "one_sided_111_displacement_0.05",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "energy_route_ignoring_prestress",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "one_sided_normal_strain_0.02",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "gruneisen_from_1pct_steps",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "gruneisen_from_1pct_steps_k8",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "atomic_mass_in_frequency",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "tensor_shear_strain_as_engineering",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "gamma_k16",
+    "passes_grading": true
+   },
+   {
+    "name": "cutoff_60_Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "small_smearing_mv002",
+    "passes_grading": true
+   },
+   {
+    "name": "displacement_scan",
+    "passes_grading": true
+   },
+   {
+    "name": "relaxation_1e-5",
+    "passes_grading": true
+   },
+   {
+    "name": "maxwell_lambda",
+    "passes_grading": true
+   },
+   {
+    "name": "central_111_displacement",
+    "passes_grading": true
+   },
+   {
+    "name": "displacement_0.03_along_x",
+    "passes_grading": true
+   },
+   {
+    "name": "normal_strain_0.005",
+    "passes_grading": true
+   },
+   {
+    "name": "normal_strain_shifted_k8",
+    "passes_grading": true
+   },
+   {
+    "name": "gruneisen_compression_side_1pct",
+    "passes_grading": true
+   },
+   {
+    "name": "gruneisen_compression_side_half_pct",
+    "passes_grading": true
+   },
+   {
+    "name": "gruneisen_expansion_side_half_pct",
+    "passes_grading": true
+   },
+   {
+    "name": "pressures_at_45_Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "five_point_pressure_fits",
+    "passes_grading": true
+   },
+   {
+    "name": "gap_direct_at_a0_k8",
+    "passes_grading": true
+   },
+   {
+    "name": "shifted_mesh_pressures",
+    "passes_grading": true
+   },
+   {
+    "name": "gap_smeared_k12",
+    "passes_grading": true
+   },
+   {
+    "name": "energy_route_with_pressure_work",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T17:02:25Z"
+}

@@ -1,0 +1,50 @@
+{
+ "ablations": {
+  "xc_readme_order": 0.04273344369563158,
+  "iso_readme_order": {
+   "0.065": 33.48221724467718,
+   "0.10": 41.792341944495966
+  },
+  "xc_omega_linear": 0.07037851762535374,
+  "hom_omega_linear": 30.81110416666666,
+  "hom_331_as_homogeneous": -32.039633,
+  "cs_gamma_point": -0.792576,
+  "iso_archived_mu013": {
+   "0.065": 34.67575067653493,
+   "0.10": 30.58220546724257
+  },
+  "iso_allen_dynes": {
+   "0.065": 32.087503382316534,
+   "0.10": 30.3786763277431
+  },
+  "iso_unconverged_scan": {
+   "0.065": 40.0,
+   "0.10": 36.0
+  },
+  "aniso_iso_reported": 36.71254159471303,
+  "aniso_linear_gap": 67.09249487931025,
+  "ratio_real_axis": 5.910145507403471
+ },
+ "robustness": {
+  "xc_w2_linear_released_0.06_0.10": 0.06437350991301052,
+  "xc_w2_quadratic_released": 0.0640242505219553,
+  "xc_w2_linear_regression_released": 0.06551363118736465,
+  "hom_w2_quadratic_released": 25.39871273641776,
+  "hom_w2_linear_released_0.06_0.10": 25.66366503353784,
+  "hom_w2_linear_regression_released": 26.40015923536686,
+  "iso_converged_extrapolation": {
+   "0.065": 36.70555081667011,
+   "0.10": 33.4845986411524
+  },
+  "iso_a2f_column_10": {
+   "0.065": 36.707987513877185,
+   "0.10": 33.47781013758069
+  },
+  "aniso_large_cluster_squared": 62.66980666833782,
+  "aniso_sqrt_free_energy": 62.434851493179,
+  "aniso_three_point_fit": 61.94729335554958,
+  "aniso_real_axis_max_squared": 62.27917493369078,
+  "ratio_median": 5.1066666666666665,
+  "ratio_unweighted_bins": 4.574016050455841
+ }
+}

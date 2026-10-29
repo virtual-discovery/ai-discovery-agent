@@ -1,0 +1,166 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 8,
+  "task_mb": 14.74,
+  "hidden_values": 10,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 22,
+   "budget": 25,
+   "evaluations": 22,
+   "failed_evaluations": 0,
+   "container_seconds": 7
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "bulk_spin_degenerate",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "hole_strongest_peak",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "hole_peak_nearest_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "top_is_larger_density",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "four_equivalent_pockets",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "single_hole_pocket",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "wedge_own_fermi_level",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "band_minus1_split_in_two",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "band_minus1_split_in_four",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "wedge_not_normalised",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "rigid_band_from_neutral_run",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "holes_appear_at_neutrality",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "holes_appear_at_hall_sign_change",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "steep_ridge_as_bulk_harmonic_as_top",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "steep_ridge_as_bulk_sum_as_top",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "single_spectrum",
+    "passes_grading": true
+   },
+   {
+    "name": "bmax1p0_padded",
+    "passes_grading": true
+   },
+   {
+    "name": "rho_xx_hann",
+    "passes_grading": true
+   },
+   {
+    "name": "block_average",
+    "passes_grading": true
+   },
+   {
+    "name": "bmax0p6_padded",
+    "passes_grading": true
+   },
+   {
+    "name": "bmax1p5_bmin0p2_padded",
+    "passes_grading": true
+   },
+   {
+    "name": "hall_fit_window_0p06_0p28",
+    "passes_grading": true
+   },
+   {
+    "name": "quadratic_interpolation",
+    "passes_grading": true
+   },
+   {
+    "name": "model_pocket_onset",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-27T08:56:41Z"
+}

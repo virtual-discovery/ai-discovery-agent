@@ -1,0 +1,245 @@
+{
+ "task_id": "cein3-kondo-rkky-magnons",
+ "catalog_id": "cein3-kondo-rkky-magnons",
+ "start": "released",
+ "source_group": "simeth_2023_cein3",
+ "title": "CeIn3: nearest-neighbour versus long-range RKKY exchange in the magnon spectrum",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which measurements discriminate: the 12-meV zone-boundary maps or the high-resolution data near R",
+   "wrong_choice": "Spend the budget on 12-meV spectra and fit a nearest-neighbour model, which describes them well",
+   "consequence": "eta fixed at 0.577; the predicted R-M map (chi2r 2.05), R-M 1.4-meV cut (3.67) and integrated chi'' (10.6) all fail",
+   "ablation": "nearest_neighbour_model_from_12meV_data_only",
+   "difficulty_type": "discriminating experiment under a binding budget"
+  },
+  {
+   "id": "dp2",
+   "fork": "Exchange range: short-range shells (up to third or sixth neighbours) or a long-range staggered term",
+   "wrong_choice": "Add second and third (or up to sixth) neighbour couplings until the visible spectra fit",
+   "consequence": "The R-M predictions pass, but the Q-integrated chi'' is predicted strongly modulated (chi2r 10.2 and 25.2, limit 5.5) and eta stays below 1 (0.91, 0.87)",
+   "ablation": "short_range_J1_J3_model",
+   "difficulty_type": "model class; transfer to a withheld observable"
+  },
+  {
+   "id": "dp3",
+   "fork": "Momentum binning: the archived spectra are averaged over wide perpendicular windows",
+   "wrong_choice": "Model each spectrum as taken exactly on the line (no perpendicular integration)",
+   "consequence": "The broad constant-q profiles near R force a cusp-like J(q): eta 4.06 (limit 3.0) and integrated chi2r 6.94",
+   "ablation": "momentum_integration_window_ignored",
+   "difficulty_type": "evidence in the reduction metadata that must be discovered"
+  },
+  {
+   "id": "dp4",
+   "fork": "Bandwidth: zone-boundary data versus a compromise fit",
+   "wrong_choice": "Force one nearest-neighbour model through the 12-meV and high-resolution data together",
+   "consequence": "The steep low-energy data inflate J1: W 4.87 meV (window [2.35, 3.25]), J1 1.62 meV, eta 0.577",
+   "ablation": "nearest_neighbour_model_forced_through_all_data",
+   "difficulty_type": "cascade"
+  },
+  {
+   "id": "dp5",
+   "fork": "Effective spin of the Ce3+ ground state",
+   "wrong_choice": "Use the free-ion J = 5/2 instead of the Gamma7 doublet (S = 1/2)",
+   "consequence": "J1 = 0.198 meV instead of about 1 meV",
+   "ablation": "free_ion_J_5_2_as_effective_spin",
+   "difficulty_type": "convention"
+  },
+  {
+   "id": "dp6",
+   "fork": "Spin waves or an incoherent Kondo continuum",
+   "wrong_choice": "Read the broad, plateau-like spectra near R as a Q-independent continuum",
+   "consequence": "Non-dispersive predictions fail the R-M map (chi2r 2.05) and cut (2.35)",
+   "ablation": "broad_spectra_read_as_incoherent_continuum",
+   "difficulty_type": "competing explanation"
+  },
+  {
+   "id": "dp7",
+   "fork": "How many free exchange parameters",
+   "wrong_choice": "Fit ten free real-space shells and trust the result",
+   "consequence": "Underdetermined: the fit places a spurious branch off the measured paths, W 5.55 meV and eta 0.61 (integrated chi2r 5.51); another start of the same fit lands near W 2.9 meV, so the shell signs and the bandwidth are not stable",
+   "ablation": "ten_free_shells_overfit",
+   "difficulty_type": "underdetermined fit"
+  }
+ ],
+ "graded_fields": [
+  "rm_map_prediction: reduced chi2 (best scale and offset) <= 1.70 against the withheld high-resolution R-M map",
+  "rm_cut_1p4meV_prediction: reduced chi2 (best scale and offset) <= 1.90 against the withheld R-M 1.4-meV cut",
+  "integrated_chi_prediction: reduced chi2 (best scale) <= 5.5 against the withheld Q-integrated chi''",
+  "bandwidth_meV in [2.35, 3.25]",
+  "velocity_bandwidth_ratio in [0.75, 3.0]",
+  "J1_nearest_neighbour_meV in [0.8, 1.2]",
+  "exchange_range == long_range"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 49,
+  "oracle_charge": 53,
+  "budget": 60,
+  "catalog_worth_units": 198,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "oracle_container_seconds": 22,
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy and scipy (runtime image); the lab is a lookup of archived data, grading is numpy"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/10146787",
+  "doi": "10.5281/zenodo.10146787",
+  "paper_doi": "10.1038/s41467-023-43947-z",
+  "files_used": [
+   "all 48 .dat files (members.json)"
+  ],
+  "md5": {
+   "Experiment_ConstQ1.dat": "a76bf8f4ea1171f6da1c7c144eade10d",
+   "Experiment_ConstQ2.dat": "b9304e8196641fa60d8a6ad79788ac0d",
+   "Experiment_IntegralOverchi.dat": "33c3d457b454cec7c934a2d8df089619",
+   "HighEnergy_E_GX.dat": "a9fd750f016054a7beeaef39584fff0a",
+   "HighEnergy_E_MG.dat": "c185cc8a0c1e36d93327a8e0a1860a74",
+   "HighEnergy_E_RG.dat": "a9fd750f016054a7beeaef39584fff0a",
+   "HighEnergy_E_XM.dat": "a9fd750f016054a7beeaef39584fff0a",
+   "HighEnergy_IntXM.dat": "39df6921a2cca1bf7a308180070046e0",
+   "HighEnergy_Int_GX.dat": "43e5630439b4da2bcea904ab5dcab512",
+   "HighEnergy_Int_MG.dat": "61c1744b848bb7ddf864d01775ce921d",
+   "HighEnergy_Int_RG.dat": "c28a1a2085eeb5f8a01cf34924fd3e94",
+   "HighEnergy_Q_GX.dat": "1d7c68bce429836d32fcf71841820e9d",
+   "HighEnergy_Q_MG.dat": "3f1283087d37ff0cfa084e5cea6f29e2",
+   "HighEnergy_Q_RG.dat": "7af493f1ae73eac7858f011e05a069ef",
+   "HighEnergy_Q_XM.dat": "9ecd83e8c127ca7eba5012d57d293eb2",
+   "HighResolution_E_RG.dat": "d011c2c36db0f1cf4606c3fe90a46917",
+   "HighResolution_E_RM.dat": "7aca24c7745f74c3153cf9167ce8ae9a",
+   "HighResolution_E_RX.dat": "06d70a65ef1080bc69ff6a23dae3223f",
+   "HighResolution_IntRG.dat": "d549df821aab73e807c60e6681965b3e",
+   "HighResolution_Int_RG.dat": "d549df821aab73e807c60e6681965b3e",
+   "HighResolution_Int_RM.dat": "8ae21852690a7b9c89d10909457ce24b",
+   "HighResolution_Int_RX.dat": "2f3b4bae4fb32af5f6eee99e61ab1bec",
+   "HighResolution_Q_RG.dat": "4929edd877ebc082e1cd34fc9bb0d4fb",
+   "HighResolution_Q_RM.dat": "3144f3254dc8d7b719ca6105a978fee8",
+   "HighResolution_Q_RX.dat": "4929edd877ebc082e1cd34fc9bb0d4fb",
+   "HighResolution_RG_ConstEcut_0p6meV.dat": "390d005c965cc0cb5468c4955f625fe7",
+   "HighResolution_RG_ConstEcut_1p4meV.dat": "06331a18b72c45eec89e93789053c0af",
+   "HighResolution_RM_ConstEcut_0p4meV.dat": "7cb9a3addd87e8d80609fccbb29b03ef",
+   "HighResolution_RM_ConstEcut_1p4meV.dat": "33422d0b76b09389f2eff3107e505112",
+   "HighResolution_RX_ConstEcut_0p6meV.dat": "e46703685c0ba1f35131b52992caa6b3",
+   "HighResolution_RX_ConstEcut_1p4meV.dat": "9fb1a071019a74aa8a88b5cc05824466",
+   "InteractionSpectrum.dat": "277c6e7732199c3b55624d82f6574220",
+   "J1Model-Dispersion_RG.dat": "750217b56d500350135efe2b7c95e725",
+   "J1Model-Dispersion_RGXMG.dat": "f42a6264b1759a936b87f36f07779609",
+   "J1Model-Dispersion_RM.dat": "f0e10304aca2854071a955db84d7a9ce",
+   "J1Model-Dispersion_RX.dat": "234b304508a99f01e2a9dadca83087ff",
+   "MOPAM-Dispersion_RG.dat": "0749785ace91c829cc37711493592699",
+   "MOPAM-Dispersion_RGXMG.dat": "0749785ace91c829cc37711493592699",
+   "MOPAM-Dispersion_RM.dat": "f8e78821a064e8026960c197ad3590d5",
+   "MOPAM-Dispersion_RX.dat": "1c0b9f4216c72f6a847a3d255ddeaa9e",
+   "Theory_ConstQ1.dat": "81b3f27761175002ad4acea763980dcb",
+   "Theory_ConstQ2.dat": "053bac6e65bb1886a313173dd5dacd78",
+   "Theory_E_RGXMG.dat": "a9fd750f016054a7beeaef39584fff0a",
+   "Theory_Int_RGXMG.dat": "addbb6197f635ed7f93a81af609a8938",
+   "Theory_IntegralOverchi.dat": "6ba455f744f26b72d58136445bc1e542",
+   "Theory_Q_RGXMG.dat": "caba6a16a209c7cfa69ad6574d8b89c2",
+   "allotherbands.dat": "2adda0a391c76f98ce1f49fcbae48c0a",
+   "fbands.dat": "de7d8e49e71b0decbc5267f4543d33fd"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the design: the lab serves archived data (constant-Q spectra, cuts, band structure) instead of an LSWT calculator, because the agent can run LSWT itself and the budget would not bind. Graded targets are the withheld archived R-M map, R-M 1.4-meV cut and Q-integrated chi'' (reduced chi2 after best scale), plus windows on W, eta and J1. The gap at R is not graded: the archived bins below ~0.25 meV are dominated by the subtracted elastic line and fits give 0-0.43 meV depending on the energy cut. The J1..J4 sign pattern is not graded: it is not uniquely recoverable. The RX constant-energy cuts are served (the design withheld them) because they are the only visible cuts besides RG. eta windows are wide because the velocity depends on the reading of the 0.08 r.l.u. window (22-33 meV/r.l.u.), and the paper's v = 38.6 used cuts that are not archived.",
+ "calibration": {
+  "rm_map_chi2r": {
+   "oracle": 1.123,
+   "reference_all_data": 1.0738,
+   "robustness": {
+    "J1LR": 1.0567,
+    "J123LR": 1.0806,
+    "J1LR_h004": 1.1021
+   },
+   "nearest_ablation": {
+    "nearest_neighbour_12meV_only": 2.0532,
+    "continuum": 2.0484,
+    "no_integration_window (passes)": 1.4079
+   },
+   "tolerance": "<= 1.70"
+  },
+  "rm_cut_1p4meV_chi2r": {
+   "oracle": 1.349,
+   "reference_all_data": 1.3129,
+   "robustness": {
+    "J1LR": 1.3383,
+    "J123LR": 1.3317,
+    "J1LR_h004": 1.4525
+   },
+   "nearest_ablation": {
+    "nearest_neighbour_12meV_only": 3.6662,
+    "continuum": 2.348,
+    "no_integration_window (passes)": 1.7244
+   },
+   "tolerance": "<= 1.90"
+  },
+  "integrated_chi2r": {
+   "oracle": 0.399,
+   "reference_all_data": 0.3873,
+   "robustness": {
+    "J1LR": 1.7767,
+    "J123LR": 0.4321,
+    "J1LR_h004": 3.2629
+   },
+   "nearest_ablation": {
+    "no_integration_window": 6.9399,
+    "J1_J3": 10.2317,
+    "nearest_neighbour": 10.625,
+    "six_shells": 25.1553,
+    "flat_continuum (passes)": 2.5244
+   },
+   "tolerance": "<= 5.5"
+  },
+  "bandwidth_meV": {
+   "reference_all_data": 2.842,
+   "oracle": 2.644,
+   "robustness": {
+    "J1LR": 2.612,
+    "J123LR": 2.827,
+    "J1LR_h004": 2.733,
+    "J1_HEonly": 2.977,
+    "paper": 2.75
+   },
+   "nearest_ablation": {
+    "J1_forced_all": 4.871,
+    "six_shells": 3.393,
+    "ten_free_shells": 5.547
+   },
+   "tolerance": "[2.35, 3.25]"
+  },
+  "velocity_bandwidth_ratio": {
+   "reference_all_data": 1.223,
+   "oracle": 1.359,
+   "robustness": {
+    "J1LR": 1.399,
+    "J123LR": 1.251,
+    "J1LR_h004": 1.929,
+    "cut_box_widths": 0.83406,
+    "paper": 2.23
+   },
+   "nearest_ablation": {
+    "nearest_neighbour": 0.577,
+    "no_integration_window": 4.06,
+    "ten_free_shells": 0.613,
+    "six_shells (passes)": 0.867,
+    "J1_J3 (passes)": 0.911
+   },
+   "tolerance": "[0.75, 3.0]"
+  },
+  "J1_nearest_neighbour_meV": {
+   "reference": 0.9924,
+   "oracle": 0.981,
+   "robustness": {
+    "from_W_2.75": 0.9167
+   },
+   "nearest_ablation": {
+    "forced_all_data": 1.6236,
+    "free_ion_J_5_2": 0.19847
+   },
+   "tolerance": "[0.8, 1.2]"
+  }
+ }
+}

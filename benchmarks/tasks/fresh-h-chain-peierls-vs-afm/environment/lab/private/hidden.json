@@ -1,0 +1,39 @@
+{
+ "reference": {
+  "delta_eq": {
+   "1.25": 0.4021388262254387,
+   "1.75": 0.5717167411674927
+  },
+  "dimerization_energy_meV_per_atom": {
+   "1.25": 646.0352628690798,
+   "1.75": 1611.6887713718388
+  },
+  "uniform_magnetic_energy_gain_meV_per_atom": {
+   "1.75": 35.439973389842635,
+   "2.0": 128.21603831162247
+  },
+  "critical_dimerization": {
+   "1.75": 0.1151487141038188,
+   "2.0": 0.20114395566599846
+  },
+  "uniform_chain_band_gap_eV": {
+   "1.25": 0.2131
+  },
+  "ground_state": {
+   "1.0": "dimerized_nonmagnetic",
+   "2.0": "dimerized_nonmagnetic"
+  }
+ },
+ "tolerances": {
+  "absolute": {
+   "delta_eq": 0.01,
+   "dimerization_energy_meV_per_atom": 10.0,
+   "critical_dimerization": 0.015,
+   "uniform_chain_band_gap_eV": 0.04
+  },
+  "relative": {
+   "uniform_magnetic_energy_gain_meV_per_atom": 0.1
+  }
+ },
+ "provenance": "derived from reference_runs.jsonl (task_lab.run, QE 6.7, 2 MPI ranks) by make_task.py"
+}

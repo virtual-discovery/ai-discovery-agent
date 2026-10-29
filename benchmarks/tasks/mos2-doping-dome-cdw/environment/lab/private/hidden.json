@@ -1,0 +1,26 @@
+{
+ "targets": {
+  "tc_1x1_K": {
+   "0.15": 15.991,
+   "0.17": 26.802
+  },
+  "critical_doping_e_per_cell": 0.18895488598673874,
+  "tc_1x1_soc_at_critical_doping_K": 27.04201136443096,
+  "tc_cdw_high_K": {
+   "0.35": 12.930331457719943,
+   "0.40": 6.332914397694706
+  }
+ },
+ "thresholds": {
+  "tc_1x1_rel": 0.03,
+  "critical_doping_abs": 0.002,
+  "tc_soc_rel": 0.03,
+  "tc_cdw_rel": 0.04
+ },
+ "provenance": {
+  "tc_1x1_K": "archived fig2e/tc_013.dat, column DA (Eliashberg, full DOS, FA, mu*=0.13)",
+  "critical_doping": "linear interpolation of E(2x2 CDW endpoint) - E(1x1 H) of fig3/pes_074 and pes_076, divided by 4",
+  "tc_soc": "archived fig2e/tc_013.dat SOC rows (DA) at 0.18 and 0.19, interpolated linearly to the critical doping",
+  "tc_cdw_high": "eliashberg.py constant-DOS Tc of the archived fig4 2x2cdw_dop1/dop3 FA spectra; dop1 = 1.4 and dop3 = 1.6 e per 2x2 cell from the archived fig5/tcs_CDW_800K.txt"
+ }
+}

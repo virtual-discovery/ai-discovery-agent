@@ -1,0 +1,20 @@
+{
+ "task_id": "tan-pressure-kappa-channels",
+ "solver_budget": 30,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "archived_file": {
+   "cost": 1
+  },
+  "harmonic": {
+   "cost": 1
+  },
+  "rates": {
+   "cost": 2
+  },
+  "kappa": {
+   "cost": 1
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

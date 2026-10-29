@@ -1,0 +1,215 @@
+{
+ "task_id": "wurtzite-ferroelectric-switching",
+ "catalog_id": "wurtzite-ferroelectric-switching",
+ "start": "released",
+ "source_group": "calderon_2023_wurtzite_switching",
+ "title": "Wurtzite AlN and (Al,B)N: polarization switching path, barrier and Berry-phase polarization",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which neb.x run is the (Al,B)N minimum-energy path: the converged first-stage NEB (collective, 7.35 eV/cell), the crashed refined_NEB, or the converged 75-image refined_NEB2",
+   "wrong_choice": "Take the first-stage NEB (the 'NEB' folder) as the path",
+   "consequence": "AlBN barrier 460 instead of 200 meV/f.u.; saddle at the half-reversed midpoint; mode reported collective",
+   "ablation": "AlBN_first_stage_NEB_as_MEP"
+  },
+  {
+   "id": "dp2",
+   "fork": "Identifying the homogeneous (collective) (Al,B)N path among the runs, from structure (every cation planar at its saddle)",
+   "wrong_choice": "Assume the collective barrier is composition-independent and reuse AlN's",
+   "consequence": "523 vs 460 meV/f.u. (+14%); hides that homogeneous effects lower the barrier by only ~12%",
+   "ablation": "collective_barrier_from_AlN"
+  },
+  {
+   "id": "dp3",
+   "fork": "Normalization: 32-atom cells hold 16 formula units",
+   "wrong_choice": "Per atom or per supercell",
+   "consequence": "Barriers off by x1/2 or x16",
+   "ablation": "per_atom_normalization"
+  },
+  {
+   "id": "dp4",
+   "fork": "Berry phase is defined modulo the quantum eR/Omega (0.472 / 0.481 C/m^2 here)",
+   "wrong_choice": "Use the printed P values directly",
+   "consequence": "Ps ~0.1-0.16 C/m^2 (resembles zinc-blende-referenced literature values) instead of ~1.3",
+   "ablation": "raw_berry_phase_values"
+  },
+  {
+   "id": "dp5",
+   "fork": "How densely to buy Berry images to unwrap the branch under a 28-unit budget (AlN steps reach 0.119 C/m^2 per image; half quantum 0.236)",
+   "wrong_choice": "Nearest-branch unwrapping at stride 2 (AlN half path) or stride 6 (AlBN)",
+   "consequence": "Ps off by one quantum or more (AlN -0.85, AlBN -0.40)",
+   "ablation": "sparse_branch_tracking"
+  },
+  {
+   "id": "dp6",
+   "fork": "Branch from a Born-charge (or displacement) estimate: over short segments or end to end",
+   "wrong_choice": "Estimate the whole-path change from the two end images with ground-state Z*",
+   "consequence": "Z* grows along the path; the 10% underestimate exceeds half a quantum and picks the wrong branch (AlN -1.08, AlBN -1.12)",
+   "ablation": "born_charge_end_to_end_branch"
+  },
+  {
+   "id": "dp7",
+   "fork": "Reference for (Al,B)N, whose path has no layered-hexagonal image",
+   "wrong_choice": "Take the metastable half-switched intermediate (P close to 0) as the nonpolar reference",
+   "consequence": "Ps(AlBN) -1.389 instead of -1.362 (outside 0.015)",
+   "ablation": "half_switched_state_as_reference"
+  },
+  {
+   "id": "dp8",
+   "fork": "Mapping Berry folders (0-based NN_image, provenance unstated) to NEB images (1-based, neb.x numbering); checkable via scf energies",
+   "wrong_choice": "Match folder NN to NEB image NN",
+   "consequence": "Saddle polarization change 1.040 (or 0.951) instead of 0.994",
+   "ablation": "berry_folder_off_by_one"
+  },
+  {
+   "id": "dp9",
+   "fork": "Multi-hump (Al,B)N path: global maximum and lowest intermediate vs the first sub-barrier and first minimum",
+   "wrong_choice": "Stop at the first hump / first local minimum",
+   "consequence": "Barrier 153 meV/f.u., saddle dP 0.50; intermediate 135 meV/f.u. with 4 inverted cations",
+   "ablation": "first_subbarrier_as_saddle"
+  },
+  {
+   "id": "dp10",
+   "fork": "Mechanism from image-resolved cation offsets rather than from the barrier",
+   "wrong_choice": "Collective switching through the layered-hexagonal state",
+   "consequence": "Wrong switching mode",
+   "ablation": "collective_mechanism"
+  }
+ ],
+ "graded_fields": [
+  "barrier_meV_per_fu.AlN and .AlBN (relative 8%)",
+  "AlBN_collective_barrier_meV_per_fu (relative 8%)",
+  "spontaneous_polarization_C_m2.AlN and .AlBN (absolute 0.015 C/m^2)",
+  "AlBN_saddle_polarization_change_C_m2 (absolute 0.025 C/m^2)",
+  "AlBN_intermediate.energy_meV_per_fu (relative 10%) and .inverted_cations (exact)",
+  "AlBN_switching_mode (exact)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 20,
+  "oracle_charge": 21,
+  "budget": 28,
+  "catalog_size_units": 317,
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "why": "Four to six NEB logs must be read for convergence and compared; collective vs non-collective paths identified from structures; 10-15 Berry outputs parsed and their branches fixed under a budget that forbids dense unwrapping (Born-charge or displacement estimates over short segments); folder-to-image mapping discovered; per-cation polarity analysis at the intermediate.",
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/7916565",
+  "doi": "10.5281/zenodo.7916565",
+  "files_used": [
+   "AlBN-system-Science.zip"
+  ],
+  "md5": {
+   "AlBN-system-Science.zip": "814d04e76cfb237221c961154c5e8716"
+  },
+  "sha256": {
+   "AlBN-system-Science.zip": "a9b32ffc6b7af09de803552d480ce2af7ef478abd25df005d1ac842fef4e652e"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Deviations from the catalog design: no fresh pw.x mode (no zinc-blende reference is archived; the zinc-blende convention is a rubric point and its numerical analogue, raw end-state Berry values ~0.1 C/m^2, is ablation dp4); the AlBN/AlN barrier ratio is not graded separately (it follows from the two graded barriers); the coercive field is a rubric point (homogeneous estimates are convention-dependent). Added graded quantities: collective (Al,B)N barrier, saddle polarization change and the intermediate state.",
+ "calibration": {
+  "barrier_AlN_meV_per_fu": {
+   "reference": 522.98,
+   "robustness": {
+    "first_stage_run": 523.06
+   },
+   "nearest_ablation": {
+    "per_atom": 261.5
+   },
+   "tolerance": "relative 8%"
+  },
+  "barrier_AlBN_meV_per_fu": {
+   "reference": 199.84,
+   "robustness": {
+    "vs_relaxed_endpoint": 199.87,
+    "unconverged_refined_NEB_max": 199.07
+   },
+   "nearest_ablation": {
+    "first_subbarrier": 153.3,
+    "per_atom": 99.9,
+    "first_stage_collective": 459.6
+   },
+   "tolerance": "relative 8%"
+  },
+  "AlBN_collective_barrier_meV_per_fu": {
+   "reference": 459.64,
+   "robustness": {
+    "qe_spline_max": 459.64
+   },
+   "nearest_ablation": {
+    "from_AlN": 522.98,
+    "per_atom": 229.8
+   },
+   "tolerance": "relative 8% (nearest wrong path +13.8%)"
+  },
+  "Ps_AlN_C_m2": {
+   "reference": -1.3197,
+   "robustness": {
+    "midpoint_reference": -1.3196
+   },
+   "nearest_ablation": {
+    "bec_end_to_end": -1.0835,
+    "sparse_stride2": -0.8473,
+    "raw": 0.0973
+   },
+   "tolerance": "0.015 absolute"
+  },
+  "Ps_AlBN_C_m2": {
+   "reference": -1.3623,
+   "robustness": {
+    "any_stride<=5_or_segment_bec": -1.3623
+   },
+   "nearest_ablation": {
+    "half_switched_reference": -1.3891,
+    "bec_end_to_end": -1.1216,
+    "sparse_stride6": -0.3995,
+    "raw": -0.1588
+   },
+   "tolerance": "0.015 absolute (nearest wrong path 0.027)"
+  },
+  "AlBN_saddle_dP_C_m2": {
+   "reference": 0.9939,
+   "robustness": {
+    "parabolic_saddle_position": 0.9919
+   },
+   "nearest_ablation": {
+    "off_by_one_plus": 1.0401,
+    "off_by_one_minus": 0.9508,
+    "collective_midpoint": 1.3623,
+    "first_subbarrier": 0.4992
+   },
+   "tolerance": "0.025 absolute"
+  },
+  "AlBN_intermediate_energy_meV_per_fu": {
+   "reference": 100.94,
+   "robustness": {
+    "unconverged_refined_NEB_lowest_minimum": 102.9
+   },
+   "nearest_ablation": {
+    "first_minimum": 134.7,
+    "per_atom": 50.5
+   },
+   "tolerance": "relative 10%"
+  },
+  "AlBN_intermediate_inverted_cations": {
+   "reference": 8,
+   "nearest_ablation": {
+    "first_minimum": 4
+   },
+   "tolerance": "exact"
+  },
+  "AlBN_switching_mode": {
+   "reference": "non-collective",
+   "nearest_ablation": {
+    "first_stage_or_barrier_only": "collective"
+   },
+   "tolerance": "exact"
+  }
+ }
+}

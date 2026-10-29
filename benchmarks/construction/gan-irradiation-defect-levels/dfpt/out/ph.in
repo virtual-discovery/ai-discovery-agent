@@ -1,0 +1,5 @@
+phonons at Gamma with dielectric tensor and Born charges
+&inputph
+  prefix='gan', outdir='./tmp', tr2_ph=1.0d-15, epsil=.true., fildyn='out/gan.dyn'
+/
+0.0 0.0 0.0

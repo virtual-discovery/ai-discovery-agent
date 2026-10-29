@@ -1,0 +1,808 @@
+{
+ "material": "Li3PS4 (lithium ortho-thiophosphate); NpT ML-MD of a 768-atom cell (288 Li, 96 P, 384 S) at p = 0, released by Gigli, Tisi, Grasselli and Ceriotti (2024)",
+ "potentials": {
+  "PBEsol": "ML potential trained on PBEsol DFT",
+  "r2SCAN": "ML potential trained on r2SCAN DFT",
+  "PBE0": "ML potential trained on PBE0 (hybrid) DFT"
+ },
+ "initial_phases": {
+  "alpha": "started from ideal alpha-Li3PS4 (Cmcm)",
+  "beta": "started from ideal beta-Li3PS4 (Pnma)",
+  "gamma": "started from ideal gamma-Li3PS4 (Pmn2_1), the stable room-temperature polymorph"
+ },
+ "simulated_temperatures_K": [
+  200,
+  250,
+  300,
+  350,
+  400,
+  450,
+  475,
+  500,
+  525,
+  550,
+  575,
+  600,
+  625,
+  650,
+  675,
+  700,
+  725,
+  750,
+  775,
+  800,
+  850,
+  900,
+  950,
+  1000,
+  1050,
+  1100,
+  1150,
+  1200
+ ],
+ "run_lengths": "about 6 ns (gamma), 4 ns (beta) and 2 ns (alpha) per temperature, 2 fs time step",
+ "ideal_starting_cells_768_atoms": {
+  "gamma": {
+   "edges_A": [
+    24.4148,
+    26.1408,
+    23.1249
+   ],
+   "volume_A3": 14758.8
+  },
+  "beta": {
+   "edges_A": [
+    24.852736,
+    24.397362,
+    26.367248
+   ],
+   "volume_A3": 15987.5
+  },
+  "alpha": {
+   "lattice_A": [
+    [
+     24.997572,
+     0.0,
+     -1.138712
+    ],
+    [
+     0.0,
+     25.4337,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     25.023496
+    ]
+   ],
+   "volume_A3": 15909.5
+  }
+ },
+ "ionic_charges": {
+  "Li": 1,
+  "P": 5,
+  "S": -2
+ },
+ "masses_amu": {
+  "Li": 6.941,
+  "P": 30.973762,
+  "S": 32.065
+ },
+ "purchase_costs": {
+  "conductivity (nernst_einstein)": 1,
+  "conductivity (green_kubo)": 2,
+  "sublattice_dynamics": 1,
+  "heat_capacity": 1,
+  "li_msd": 2,
+  "current_breakdown": 1,
+  "li_pair_correlation": 1,
+  "order_parameters": 1
+ },
+ "budget": 60,
+ "requests": {
+  "conductivity": {
+   "request": {
+    "kind": "conductivity",
+    "functional": "<PBEsol|r2SCAN|PBE0>",
+    "initial_phase": "<alpha|beta|gamma>",
+    "T_K": "<simulated temperature>",
+    "estimator": "<nernst_einstein|green_kubo>"
+   },
+   "returns": "conductivity in S/m with its block-averaging error and the run mean temperature. nernst_einstein: from the Li self-diffusion coefficient (tracer MSD). green_kubo: from the total charge-current autocorrelation (Helfand-Einstein form).",
+   "available": {
+    "PBEsol/alpha": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     625,
+     650,
+     675,
+     700,
+     725,
+     750,
+     775,
+     800,
+     850,
+     900,
+     950,
+     1000,
+     1050,
+     1100,
+     1150,
+     1200
+    ],
+    "PBEsol/beta": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     625
+    ],
+    "PBEsol/gamma": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     650,
+     675,
+     700,
+     725,
+     750,
+     775,
+     800,
+     850,
+     900,
+     950,
+     1000,
+     1050,
+     1100,
+     1150,
+     1200
+    ],
+    "r2SCAN/alpha": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     625,
+     650,
+     675,
+     700,
+     725,
+     750,
+     775,
+     800,
+     850,
+     900,
+     950,
+     1000,
+     1050,
+     1100,
+     1150,
+     1200
+    ],
+    "r2SCAN/beta": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     625
+    ],
+    "r2SCAN/gamma": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     625,
+     650,
+     675,
+     700,
+     725,
+     750,
+     775,
+     850,
+     900,
+     950,
+     1000,
+     1050,
+     1100,
+     1150,
+     1200
+    ],
+    "PBE0/alpha": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     625,
+     650,
+     675,
+     700,
+     725,
+     750,
+     775,
+     800,
+     850,
+     900,
+     950,
+     1000,
+     1050,
+     1100,
+     1150,
+     1200
+    ],
+    "PBE0/beta": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     625
+    ],
+    "PBE0/gamma": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     625,
+     650,
+     675,
+     700,
+     725,
+     775,
+     800,
+     850,
+     900,
+     950,
+     1000,
+     1050,
+     1100,
+     1150,
+     1200
+    ]
+   }
+  },
+  "sublattice_dynamics": {
+   "request": {
+    "kind": "sublattice_dynamics",
+    "functional": "<functional>",
+    "T_K": "<temperature>"
+   },
+   "returns": "whichever of these the archive holds at that temperature: rms fluctuation of the P-S polar angle about its local equilibrium (deg), PS4 rotational diffusion coefficient from the P-S bond angular-velocity autocorrelation (rad^2/ps), and P linear diffusion coefficient (A^2/ps); with block errors",
+   "source": "the authors' NpT temperature series used for their phase-transition analysis (initial phase not labelled in the archive)",
+   "available": {
+    "PBEsol": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     625,
+     650,
+     675,
+     700,
+     725,
+     750,
+     775,
+     800,
+     850,
+     900,
+     950,
+     1000,
+     1050
+    ],
+    "r2SCAN": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     625,
+     650,
+     675,
+     700,
+     725,
+     750,
+     775,
+     800,
+     850,
+     900,
+     950,
+     1000,
+     1050
+    ],
+    "PBE0": [
+     200,
+     250,
+     300,
+     350,
+     400,
+     450,
+     475,
+     500,
+     525,
+     550,
+     575,
+     600,
+     625,
+     650,
+     675,
+     700,
+     725,
+     750,
+     775,
+     800,
+     850,
+     900,
+     950,
+     1000,
+     1050
+    ]
+   }
+  },
+  "heat_capacity": {
+   "request": {
+    "kind": "heat_capacity",
+    "functional": "<functional>",
+    "T_low_K": "<T>",
+    "T_high_K": "<next T>"
+   },
+   "returns": "isobaric heat capacity in k_B per atom from the finite difference of the mean enthalpy between two consecutive simulated temperatures, with block error (same series as sublattice_dynamics)",
+   "available": {
+    "PBEsol": [
+     [
+      200,
+      250
+     ],
+     [
+      250,
+      300
+     ],
+     [
+      300,
+      350
+     ],
+     [
+      350,
+      400
+     ],
+     [
+      400,
+      450
+     ],
+     [
+      450,
+      475
+     ],
+     [
+      475,
+      500
+     ],
+     [
+      500,
+      525
+     ],
+     [
+      525,
+      550
+     ],
+     [
+      550,
+      575
+     ],
+     [
+      575,
+      600
+     ],
+     [
+      600,
+      625
+     ],
+     [
+      625,
+      650
+     ],
+     [
+      650,
+      675
+     ],
+     [
+      675,
+      700
+     ],
+     [
+      700,
+      725
+     ],
+     [
+      725,
+      750
+     ],
+     [
+      750,
+      775
+     ],
+     [
+      775,
+      800
+     ],
+     [
+      800,
+      850
+     ],
+     [
+      850,
+      900
+     ],
+     [
+      900,
+      950
+     ],
+     [
+      950,
+      1000
+     ],
+     [
+      1000,
+      1050
+     ],
+     [
+      1050,
+      1100
+     ],
+     [
+      1100,
+      1150
+     ],
+     [
+      1150,
+      1200
+     ]
+    ],
+    "r2SCAN": [
+     [
+      200,
+      250
+     ],
+     [
+      250,
+      300
+     ],
+     [
+      300,
+      350
+     ],
+     [
+      350,
+      400
+     ],
+     [
+      400,
+      450
+     ],
+     [
+      450,
+      475
+     ],
+     [
+      475,
+      500
+     ],
+     [
+      500,
+      525
+     ],
+     [
+      525,
+      550
+     ],
+     [
+      550,
+      575
+     ],
+     [
+      575,
+      600
+     ],
+     [
+      600,
+      625
+     ],
+     [
+      625,
+      650
+     ],
+     [
+      650,
+      675
+     ],
+     [
+      675,
+      700
+     ],
+     [
+      700,
+      725
+     ],
+     [
+      725,
+      750
+     ],
+     [
+      750,
+      775
+     ],
+     [
+      775,
+      800
+     ],
+     [
+      800,
+      850
+     ],
+     [
+      850,
+      900
+     ],
+     [
+      900,
+      950
+     ],
+     [
+      950,
+      1000
+     ],
+     [
+      1000,
+      1050
+     ],
+     [
+      1050,
+      1100
+     ],
+     [
+      1100,
+      1150
+     ],
+     [
+      1150,
+      1200
+     ]
+    ],
+    "PBE0": [
+     [
+      200,
+      250
+     ],
+     [
+      250,
+      300
+     ],
+     [
+      300,
+      350
+     ],
+     [
+      350,
+      400
+     ],
+     [
+      400,
+      450
+     ],
+     [
+      450,
+      475
+     ],
+     [
+      475,
+      500
+     ],
+     [
+      500,
+      525
+     ],
+     [
+      525,
+      550
+     ],
+     [
+      550,
+      575
+     ],
+     [
+      575,
+      600
+     ],
+     [
+      600,
+      625
+     ],
+     [
+      625,
+      650
+     ],
+     [
+      650,
+      675
+     ],
+     [
+      675,
+      700
+     ],
+     [
+      700,
+      725
+     ],
+     [
+      725,
+      750
+     ],
+     [
+      750,
+      775
+     ],
+     [
+      775,
+      800
+     ],
+     [
+      800,
+      850
+     ],
+     [
+      850,
+      900
+     ],
+     [
+      900,
+      950
+     ],
+     [
+      950,
+      1000
+     ],
+     [
+      1000,
+      1050
+     ],
+     [
+      1050,
+      1100
+     ],
+     [
+      1100,
+      1150
+     ],
+     [
+      1150,
+      1200
+     ]
+    ]
+   }
+  },
+  "li_msd": {
+   "request": {
+    "kind": "li_msd"
+   },
+   "returns": "Li mean-squared displacement (A^2) with block errors versus time (0-654 ps; every 10 fs to 2 ps, every 0.1 ps to 20 ps, then every 1 ps) for the ML-PBE0 run started from gamma at 750 K"
+  },
+  "current_breakdown": {
+   "request": {
+    "kind": "current_breakdown",
+    "frame": "<matrix|barycentric>"
+   },
+   "returns": "running Green-Kubo integral sigma(tau) in S/cm, 0-8 ps every 20 fs, of the total conductivity and of the Li-S cross-correlation term, for one superionic ML-MD run (the archive does not state its functional or temperature). matrix: velocities relative to the centre of mass of the P and S atoms; barycentric: centre of mass of all atoms fixed"
+  },
+  "li_pair_correlation": {
+   "request": {
+    "kind": "li_pair_correlation"
+   },
+   "returns": "distance-resolved integral of the Li-Li, Li-P and Li-S velocity cross-correlation (A^2/ps^2, matrix frame) and the Li-A radial distribution functions, from 190 ps of an alpha-phase run at 650 K"
+  },
+  "order_parameters": {
+   "request": {
+    "kind": "order_parameters",
+    "T_K": "<700|750|800>"
+   },
+   "returns": "samples of the PS4 orientational order parameters (s1, s2) along the ML-PBE0 run started from gamma at that temperature, plus the centroids of reference samples from alpha, beta and gamma runs below the transition. Ideal structures: alpha (-1, 0), beta (0, 0), gamma (1, 1)"
+  }
+ },
+ "to_predict": [
+  "PBEsol/gamma/625",
+  "PBE0/gamma/750",
+  "r2SCAN/gamma/800"
+ ],
+ "notes": [
+  "Results are author-archived analyses of the released simulations; no new simulation is run.",
+  "Beta-initialised conductivities are served only up to 625 K: above that the archived r2SCAN and PBE0 beta series coincide to 0.1 %, far below their block errors, so at least one of them is mislabelled.",
+  "The conductivity cells listed in to_predict are not served with either estimator."
+ ]
+}

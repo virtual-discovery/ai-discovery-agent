@@ -1,0 +1,114 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 8,
+  "task_mb": 0.29,
+  "hidden_values": 8,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 17,
+   "budget": 20,
+   "evaluations": 15,
+   "failed_evaluations": 0,
+   "container_seconds": 50
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "raw_dft_frequencies",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "scale_without_axis_offset",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "nearest_line_peak_matching",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "tetragonal_near_twin",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "lab_axes_polarizations_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "to_only_orientation_fit",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "to_only_face_b_phonon",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "born_rows_unrotated",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "born_rows_isotropic",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "nac_without_eps_inf",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "minority_phase_ignored",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "nonpolar_areas_centroid_calibration",
+    "passes_grading": true
+   },
+   {
+    "name": "low_window_spectra_only",
+    "passes_grading": true
+   },
+   {
+    "name": "constant_linewidth_fit",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T01:22:24Z"
+}

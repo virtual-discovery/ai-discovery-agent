@@ -1,0 +1,53 @@
+&TB_FILE
+Hrfile  = 'wannier90_symmed_hr.dat'
+Package = 'VASP'
+/
+
+&CONTROL
+BulkGap_cube_calc     = F
+AHC_calc              = T
+/
+
+&SYSTEM
+NumOccupied = 22        ! NumOccupied   !!! IMPORTANT !!!
+SOC = 1                 ! soc
+E_FERMI = 6.13012952    ! e-fermi       !!! IMPORTANT !!!
+/
+
+&PARAMETERS
+Gap_threshold = 8.0 ! threshold for GapCube output
+Nk1 = 801           ! number k points  odd number would be better
+Nk2 = 801           ! number k points  odd number would be better
+Nk3 = 401           ! number k points  odd number would be better
+OmegaNum = 2001     ! omega number
+OmegaMin = -1.0     ! energy interval
+OmegaMax =  0.0     ! energy interval
+Eta_Arc = 0.001     ! infinite small value, like broadening
+/
+
+LATTICE
+Angstrom
+  4.1400000000000000  0.0000000000000000  0.0000000000000000
+ -2.0700000000000000  3.5853451716675760  0.0000000000000000
+  0.0000000000000000  0.0000000000000000  6.7100000000000000
+
+ATOM_POSITIONS
+4                   ! number of atoms for projectors
+Direct              ! Direct or Cartisen coordinate
+Mn  0.0000000000000000  0.0000000000000000  0.0000000000000000
+Mn  0.0000000000000000  0.0000000000000000  0.5000000000000000
+Te  0.3333333333333333  0.6666666666666667  0.2500000000000000
+Te  0.6666666666666667  0.3333333333333333  0.7500000000000000
+
+PROJECTORS
+5 5 3 3             ! number of projectors
+Mn  dz2 dxz dyz dx2-y2 dxy
+Mn  dz2 dxz dyz dx2-y2 dxy
+Te  pz px py
+Te  pz px py
+
+KCUBE_BULK
+  0.00  0.00  0.00
+  1.00  0.00  0.00
+  0.00  1.00  0.00
+  0.00  0.00  1.00

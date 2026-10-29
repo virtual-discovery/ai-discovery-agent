@@ -1,0 +1,138 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 7,
+  "task_mb": 2.7,
+  "hidden_values": 16,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 33,
+   "budget": 40,
+   "evaluations": 13,
+   "failed_evaluations": 0,
+   "container_seconds": 1
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "gamma_centred_k8",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "k4_shifted_tensors",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "side_volume_on_cheaper_mesh",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "side_volume_on_cheaper_mesh_expansion",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "experimental_lattice",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "analytic_frequency_as_LO",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "nonanalytic_term_with_eps0",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "strained_scalar_tensors",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "strained_swapped_TO_pairing",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "strained_as_cubic",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "splitting_trend_from_born_charge_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "oracle_like_k8_tensors",
+    "passes_grading": true
+   },
+   {
+    "name": "all_from_k6_dfpt",
+    "passes_grading": true
+   },
+   {
+    "name": "k10_tensors",
+    "passes_grading": true
+   },
+   {
+    "name": "half_percent_steps",
+    "passes_grading": true
+   },
+   {
+    "name": "one_sided_compression",
+    "passes_grading": true
+   },
+   {
+    "name": "a0_from_zero_pressure",
+    "passes_grading": true
+   },
+   {
+    "name": "a0_from_65Ry_eos",
+    "passes_grading": true
+   },
+   {
+    "name": "raw_born_charge_no_sum_rule",
+    "passes_grading": true
+   },
+   {
+    "name": "TO_from_k4_dfpt_and_k4_strained",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T01:12:40Z"
+}

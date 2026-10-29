@@ -1,0 +1,100 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 6,
+  "rubric_items": 8,
+  "task_mb": 11.01,
+  "hidden_values": 10,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 44,
+   "budget": 50,
+   "evaluations": 22,
+   "failed_evaluations": 0,
+   "container_seconds": 6
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "input_e_fermi",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "zrsis_copied_input",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "thirteen_filled_bands",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "carrier_density_one_spin",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "mesh_80",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "mesh_40",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "closed_orbit_mass_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "samples_at_equal_btau",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "samples_at_equal_btau_swapped",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "mesh_120_potentials_and_densities",
+    "passes_grading": true
+   },
+   {
+    "name": "cubic_peak_finder",
+    "passes_grading": true
+   },
+   {
+    "name": "oracle_angle_subset",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-27T03:47:04Z"
+}

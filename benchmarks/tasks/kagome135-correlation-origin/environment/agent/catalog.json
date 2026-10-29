@@ -1,0 +1,37 @@
+{
+ "material_family": "CsM3Pn5 kagome metals (M = Ti, V, Cr; Pn = Sb, Bi), nonmagnetic PBE (Quantum ESPRESSO 7.1, no spin-orbit coupling), Wannier90 models of 33 orbitals per cell",
+ "source": "Zenodo record 17951035 (DOI 10.5281/zenodo.17951035, CC BY 4.0), S. Enzner and G. Sangiovanni, \"135 Kagome Wannier Hamiltonians\"",
+ "staged_files": {
+  "archive": "/app/archive/<model>/: Fermi_level.dat, turn_*.win, turn_*.wout, turn_*_bands.dat.gnu (DFT bands), unchanged from the record; /app/archive/DFT/: the record's example QE input scf.in and output scf.out (per-k eigenvalue listing removed; pseudopotentials, rel.in/rel.out and the Wannier band files turn_*_band.dat not staged)",
+  "models": "/app/models/<model>.npz: the archived turn_*_hr.dat converted losslessly to numpy: R (n_R, 3) lattice vectors in units of the cell of the .wout, degen (n_R,) Wigner-Seitz degeneracies, H (n_R, 33, 33) complex hoppings H_mn(R) = <m,0|H|n,R> in eV on the absolute energy scale of the archive (H(k) = sum_R exp(2 pi i k.R) H(R) / degen(R))."
+ },
+ "models": {
+  "TiSb": "archive folder TiSb (CsTiSb.zip)",
+  "VSb": "archive folder VSb (CsVSb.zip)",
+  "CrSb": "archive folder CrSb (CsCrSb.zip)",
+  "TiBi": "archive folder TiBi (CsTiBi.zip)",
+  "CrBi": "archive folder CrBi (CsCrBi.zip)",
+  "CrBi_9.2": "archive folder CrBi_9.2 (CsCrBi_9.2.zip)"
+ },
+ "requests": {
+  "ssmf": {
+   "format": {
+    "kind": "ssmf",
+    "model": "TiSb | VSb | CrSb | TiBi | CrBi | CrBi_9.2",
+    "electrons": "electrons per cell in the 33-orbital model, both spins (26-36)",
+    "U_eV": "0-8",
+    "J_over_U": "0-0.3"
+   },
+   "cost": 1,
+   "returns": "metallic_solution; if true, Z and occupation per spin for Wannier functions 1-15 (the d orbitals) and the chemical potential (eV, absolute scale of the model)"
+  }
+ },
+ "budget": 20,
+ "slave_spin_method": {
+  "correlated_orbitals": "Wannier functions 1-15 (5 d orbitals on each of the 3 transition-metal sites); all other orbitals are uncorrelated",
+  "interaction": "density-density Kanamori: U n_up n_dn per orbital, U - 2J between opposite spins in different orbitals, U - 3J between equal spins in different orbitals",
+  "double_counting": "fully localized limit",
+  "solution": "Z2 slave-spin mean field (paramagnetic, T = 0, 10 meV Fermi smearing, 9x9x6 k mesh); the metallic solution is followed continuously from weak coupling (U ramped at fixed J/U); the three transition-metal sites are symmetry-equivalent",
+  "Z": "quasiparticle weight of each d Wannier function (1 = uncorrelated, 0 = Mott localized)"
+ }
+}

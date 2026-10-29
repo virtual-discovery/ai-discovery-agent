@@ -1,0 +1,12 @@
+# Physical-reasoning rubric
+
+Each item is a checkable statement that the report must make explicitly.
+
+1. Uses the hybrid single points for all energetics and band edges, and justifies it against the semilocal relaxations: the PBE gap is about 0.7 eV, and PBE makes V_O⁺ stable. Notes that the "HSE06" runs use 37 % exact exchange (AEXX = 0.37), which gives a gap near 3.25 eV, so no further gap correction is applied.
+2. Fixes the chemical potentials from the archived phases at the same level of theory. Identifies Zn(OH)₂, not H₂ or H₂O, as the phase that bounds μ_H at the Zn-rich limit (Δμ_H ≈ −0.08 eV), using the correct number of formula units per cell.
+3. Recognizes from the raw outputs (odd electron count with total moment −0.25 or 0, and occupations of conduction-band states at several k-points) that the neutral OH_O and H_O cells, and Zn_i⁺/Zn_i⁰, hold electrons in host conduction-band states rather than bound to the defect. Removes the band filling using the k-point weights instead of treating these states as localized, and states the size of the effect (about 0.65 eV for OH_O⁰).
+4. Concludes that OH_O and H_O are shallow donors with (+/0) levels just below the CBM, within the resolution of a 72-atom cell, and that the effective-mass binding cannot be resolved by these supercells.
+5. Shows that V_O is a negative-U defect with a deep (2+/0) level near 2.6 eV and that V_O⁺ is never the stable state. V_O therefore cannot account for an equilibrium EPR signal, and Zn_i is excluded by its tiny concentration and delocalized electrons. The diamagnetic OH_O⁺ and the complexes are ruled out as well.
+6. Identifies the hydrogen in OH_O as a bond-centre site parallel to c (O–H ≈ 0.98 Å along c, with the c-axis Zn pushed out to ≈ 2.1 Å from H). Assigns g = 1.96 to neutral OH_O (H_BC) as an effective-mass donor introduced unintentionally during synthesis.
+7. Finds the 1000 K Fermi level about 0.07 eV below the CBM, pinned by ionized OH_O⁺ against free electrons, with OH_O near 10¹⁹ cm⁻³ and V_O near 10¹⁶ cm⁻³. Distinguishes these synthesis-temperature equilibrium values from the room-temperature EPR spin density, which the archive cannot predict: it holds nothing on out-diffusion during the vacuum anneal or the quench.
+8. States the limits: the OH_O⁰ concentration is uncertain by about half a decade, because it depends exponentially on an unresolved shallow-level position. Notes also that the archive holds only one hydrogen configuration per defect and no zero-point or thermal terms, and that ε = 10.4 is the authors' choice.

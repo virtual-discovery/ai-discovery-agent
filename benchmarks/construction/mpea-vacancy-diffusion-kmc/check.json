@@ -1,0 +1,121 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 6,
+  "rubric_items": 8,
+  "task_mb": 2.13,
+  "hidden_values": 107,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 54,
+   "budget": 60,
+   "evaluations": 47,
+   "failed_evaluations": 0,
+   "container_seconds": 36
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "thermo_ideal_as_real",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "direct_forward_barrier_fit",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "species_mean_barriers",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "jump_count_tracers",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "rom_from_linear_model_pure_limit",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "ea_from_rom_barrier",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "ea_from_mean_accepted_barrier",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "untested_attribution",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "all_purchasable_hops",
+    "passes_grading": true
+   },
+   {
+    "name": "half_of_hops_seed0",
+    "passes_grading": true
+   },
+   {
+    "name": "half_of_hops_seed1",
+    "passes_grading": true
+   },
+   {
+    "name": "random_800_hops_seed0",
+    "passes_grading": true
+   },
+   {
+    "name": "random_800_hops_seed1",
+    "passes_grading": true
+   },
+   {
+    "name": "random_800_hops_seed2",
+    "passes_grading": true
+   },
+   {
+    "name": "with_pathological_entries",
+    "passes_grading": true
+   },
+   {
+    "name": "linear_kra_no_quadratic",
+    "passes_grading": true
+   },
+   {
+    "name": "two_shell_pair_hamiltonian",
+    "passes_grading": true
+   },
+   {
+    "name": "four_orbit_kra",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T23:49:22Z"
+}

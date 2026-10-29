@@ -1,0 +1,150 @@
+{
+ "fm_reference_kmin_FeP": {
+  "reference": [
+   0.0,
+   0.0306,
+   0.2179
+  ],
+  "tolerance_rlu": 0.005,
+  "robustness_distance": {
+   "kmin_FeP_pairs_below_18A": 0.0028,
+   "kmin_FeP_pairs_below_23A": 0.0001
+  },
+  "ablation_distance": {
+   "kmin_FeP_from_pairs_below_14A": 0.0118,
+   "kmin_FeP_from_pairs_below_11A": 0.3556,
+   "kmin_FeP_paper_verbatim": 0.008,
+   "kmin_FeP_commensurate_approximant": 0.0354
+  }
+ },
+ "converged_exchange_kmin_FeP": {
+  "reference": [
+   0.0021,
+   0.0268,
+   0.1885
+  ],
+  "tolerance_rlu": 0.012,
+  "robustness_distance": {
+   "kmin_conv_FeP_sum5": 0.0056,
+   "kmin_conv_FeP_drop_half_box": 0.0058,
+   "kmin_conv_FeP_bought_below_30A": 0.0007
+  },
+  "ablation_distance": {
+   "kmin_conv_FeP_folded_as_listed": 0.5093,
+   "kmin_conv_FeP_folded_as_listed_sum5": 0.0186,
+   "kmin_conv_FeP_assumed_reference_independent": 0.0297,
+   "kmin_FeP_commensurate_approximant": 0.0293
+  }
+ },
+ "stabilization_energy_meV_per_ion": {
+  "reference": {
+   "NiO": {
+    "fm_reference": 139.1684,
+    "converged_reference": 137.4226
+   },
+   "FeCl2": {
+    "fm_reference": 0.4932,
+    "converged_reference": 0.4785
+   },
+   "FePS3_DFT": {
+    "fm_reference": 48.478,
+    "converged_reference": 53.9606
+   },
+   "FePS3_DFT+U": {
+    "fm_reference": null,
+    "converged_reference": 27.036
+   },
+   "FeP": {
+    "fm_reference": 13.3902,
+    "converged_reference": 101.908
+   }
+  },
+  "tolerance": "relative 4% per entry; FePS3_DFT+U fm_reference must be null",
+  "robustness_relative": {
+   "FeP_relaxed_spiral": {
+    "fm_reference": 0.0195,
+    "converged_reference": 0.0022
+   },
+   "FePS3_DFT_below_14A": {
+    "fm_reference": -0.0243,
+    "converged_reference": -0.0163
+   },
+   "FeCl2_fm_below_11A": -0.0024,
+   "NiO_below_5A": {
+    "fm_reference": -0.0147,
+    "converged_reference": -0.0043
+   }
+  },
+  "ablation_relative": {
+   "FeP_fm_pairs_below_18A": 0.1508,
+   "FeP_fm_own_LT_helix": 1.1717,
+   "FeCl2_fm_below_8A": -0.3301,
+   "FePS3_DFT_fm_below_11A": -0.0376,
+   "FePS3_DFT_conv_below_11A": -0.1384,
+   "FeCl2_conv_long_windows_skipped": -0.1615,
+   "FeP_conv_long_windows_skipped": -0.054,
+   "FePS3_DFT+U_fm_from_duplicate": 48.4774,
+   "bond_counted_once": -0.5
+  }
+ },
+ "reference_ratio_converged_over_fm": {
+  "NiO": 0.9875,
+  "FeCl2": 0.9703,
+  "FePS3_DFT": 1.1131,
+  "FePS3_DFT+U": null,
+  "FeP": 7.6107
+ },
+ "stability": {
+  "NiO/AFM": 3.474023445884777e-14,
+  "NiO/FM": -278.53199999999987,
+  "FeCl2/AFM": 7.0497675281108925e-15,
+  "FeCl2/FM": -0.9864780820593149,
+  "FePS3/DFT/AFM": -1.0912242853038452e-14,
+  "FePS3/DFT/FM": -96.95600000000005,
+  "FePS3/DFT+U/AFM": -0.0003083297701637159,
+  "FePS3/DFT+U/FM": -96.95600000000005,
+  "FeP/AFM": -0.9882458262247917,
+  "FeP/FM": -54.39960840748095,
+  "FeP/AFM relaxed, as listed": -9.880315881647225e-13,
+  "FeP/AFM relaxed, minimum image": -0.07703027207746344
+ },
+ "validation": {
+  "FePS3_FM_Z_minus_Gamma_meV": -2.0040000000000617,
+  "FePS3_FM_archived_dev_at_Gamma_Z_meV": 0.0018297415695940344,
+  "FeCl2/FM_archived_dev_at_nodes_meV": 0.002912785901571624,
+  "FeCl2/AFM_archived_dev_at_nodes_meV": 0.009879042203706945,
+  "FeP_AFM_archived_dev_meV": 0.09814871795575186,
+  "FeP_AFM_archived_GammaZ_flatness_meV": 1.3589016134574194e-08,
+  "FeP_AFM_archived_min_meV": -1.0963926597901628,
+  "paper_checks": {
+   "FeP_AFM_NN": -4.6424,
+   "NiO_FM_J2": -11.5815,
+   "NiO_AFM_J2": -11.5161,
+   "FeCl2_AFM_J1": 7.329972222222221,
+   "FePS3_U_AFM_J3": -3.3498875
+  },
+  "FePS3_DFT+U_FM_duplicates_DFT_FM": true,
+  "R_long_axis_values": {
+   "FeCl2/AFM": [
+    0
+   ],
+   "FeP/AFM": [
+    0
+   ],
+   "FePS3/DFT/AFM": [
+    -1,
+    0,
+    1
+   ],
+   "NiO/AFM": [
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3
+   ]
+  }
+ }
+}

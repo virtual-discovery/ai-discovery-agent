@@ -1,0 +1,12 @@
+{
+ "task_id": "ca3ti2o7-hybrid-improper-domain-walls",
+ "solver_budget": 24,
+ "reserved_validation_charge": 0,
+ "requests": {"single_point": {"kind": "single_point", "structure": "<structure>", "potential": "qNEP-w-BECs | qNEP | NEP", "cost": 1},
+              "relax": {"kind": "relax", "structure": "<structure>", "potential": "qNEP-w-BECs | qNEP | NEP", "cell": "fixed | normal",
+                        "normal_axis": "0 | 1 | 2 (with cell normal)", "fmax": 0.02, "max_steps": 600,
+                        "cost": "ceil(N_atoms / 400); ceil(N_atoms / 800) with NEP"},
+              "born_charges": {"kind": "born_charges", "structure": "<structure>", "cost": 1}},
+ "structure": {"symbols": ["Ca", "..."], "positions": [[0.0, 0.0, 0.0]], "cell": [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]]},
+ "catalog": "/app/catalog.json"
+}

@@ -1,0 +1,92 @@
+{
+ "ablations": {
+  "raw_dft_frequencies": {
+   "frequency_scale": 1.0,
+   "faceB_highest_optical_phonon_cm1": 450.87441302137324
+  },
+  "scale_without_axis_offset": {
+   "frequency_scale": 1.031346067541108,
+   "faceB_highest_optical_phonon_cm1": 465.81714441574707
+  },
+  "nearest_line_peak_matching": {
+   "main_phase": "mp-2843",
+   "frequency_scale": 1.0289
+  },
+  "tetragonal_near_twin": {
+   "main_phase": "mp-7457",
+   "frequency_scale": 1.0212701216698328,
+   "c_axis_lab": [
+    -0.4263609254699168,
+    -0.6317289957665638,
+    0.6474062381072685
+   ],
+   "faceB_strongest_mode_ratio_tt_over_zz": 1.3205471662717523,
+   "faceB_highest_optical_phonon_cm1": 470.2877271639035
+  },
+  "lab_axes_polarizations_only": {
+   "c_axis_lab": [
+    -0.5360412503572337,
+    0.5908267590387695,
+    0.6029788708729331
+   ],
+   "faceB_strongest_mode_ratio_tt_over_zz": 0.754149060048752,
+   "faceB_highest_optical_phonon_cm1": 483.8767453259646
+  },
+  "to_only_orientation_fit": {
+   "c_axis_lab": [
+    0.41832096633722915,
+    0.5043708495672691,
+    0.7553923584664319
+   ],
+   "faceB_strongest_mode_ratio_tt_over_zz": 1.441867934081579,
+   "faceB_highest_optical_phonon_cm1": 467.4912571374099
+  },
+  "to_only_face_b_phonon": {
+   "faceB_highest_optical_phonon_cm1": 422.5223164566832
+  },
+  "born_rows_unrotated": {
+   "faceB_highest_optical_phonon_cm1": 487.7038988578852
+  },
+  "born_rows_isotropic": {
+   "faceB_highest_optical_phonon_cm1": 425.05088784137473
+  },
+  "nac_without_eps_inf": {
+   "faceB_highest_optical_phonon_cm1": 721.7841330572177
+  },
+  "minority_phase_ignored": {
+   "minority_phase": "none"
+  }
+ },
+ "robustness": {
+  "nonpolar_areas_centroid_calibration": {
+   "frequency_scale": 1.02381562398353,
+   "c_axis_lab": [
+    -0.5366476422100471,
+    -0.5896529158148496,
+    0.6035882263442875
+   ],
+   "faceB_strongest_mode_ratio_tt_over_zz": 1.1624577331171295,
+   "faceB_highest_optical_phonon_cm1": 461.53919462999113
+  },
+  "low_window_spectra_only": {
+   "frequency_scale": 1.0236980268273606,
+   "c_axis_lab": [
+    0.5331111968804058,
+    0.5950766771003885,
+    0.6013952112645238
+   ],
+   "faceB_strongest_mode_ratio_tt_over_zz": 1.1604766054783135,
+   "faceB_highest_optical_phonon_cm1": 461.5026337050024
+  },
+  "constant_linewidth_fit": {
+   "frequency_scale": 1.023698440605226,
+   "c_axis_lab": [
+    0.5361241581769012,
+    0.5913342856442827,
+    0.6024073784746291
+   ],
+   "faceB_strongest_mode_ratio_tt_over_zz": 1.1627187455243364,
+   "faceB_highest_optical_phonon_cm1": 461.46566952025745
+  }
+ }
+}

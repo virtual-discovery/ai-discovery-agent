@@ -1,0 +1,26 @@
+{
+ "reference": {
+  "a0_A": 5.768513213357251,
+  "delta0_at_a0_eV": 0.28476000000000035,
+  "s_level_at_a0_eV": -0.5655699999999992,
+  "c_over_a_at_minus1pct": 1.017203997025785,
+  "hh_minus_lh_at_minus1pct_eV": 0.07221419847328292,
+  "so_minus_hh_at_minus1pct_eV": -0.3449757251908405,
+  "b_shear_deformation_potential_eV": -2.4756314296562403,
+  "s_so_crossing_strain_percent": -1.9459756204941423
+ },
+ "tolerances": {
+  "a0_A": 0.005,
+  "delta0_at_a0_eV": 0.005,
+  "s_level_at_a0_eV": 0.035,
+  "c_over_a_at_minus1pct": 0.0008,
+  "hh_minus_lh_at_minus1pct_eV": 0.005,
+  "so_minus_hh_at_minus1pct_eV": 0.008,
+  "b_shear_deformation_potential_eV": 0.12,
+  "s_so_crossing_strain_percent": 0.1
+ },
+ "provenance": {
+  "runs": "benchmarks/construction/fresh-ge-soc-strained-valence/reference_runs.jsonl (task_lab.run, QE 6.7, 2 MPI ranks)",
+  "A0_of_stage_B": 5.7685
+ }
+}

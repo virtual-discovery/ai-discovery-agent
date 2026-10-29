@@ -1,0 +1,706 @@
+{
+"BN_atomic_chain/1D_code/dyn1": {
+"kind": "dfpt",
+"blob": "17134df5ce2317730bc6.gz"
+},
+"BN_atomic_chain/1D_code/dyn10": {
+"kind": "dfpt",
+"blob": "87a03850a5920cb1feb3.gz"
+},
+"BN_atomic_chain/1D_code/dyn11": {
+"kind": "dfpt",
+"blob": "6cc21d7a4b88c592f856.gz"
+},
+"BN_atomic_chain/1D_code/dyn12": {
+"kind": "dfpt",
+"blob": "00149fd0d160d38c9f67.gz"
+},
+"BN_atomic_chain/1D_code/dyn13": {
+"kind": "dfpt",
+"blob": "6b9873bab236d5000152.gz"
+},
+"BN_atomic_chain/1D_code/dyn14": {
+"kind": "dfpt",
+"blob": "fcf5899894540c63fea6.gz"
+},
+"BN_atomic_chain/1D_code/dyn15": {
+"kind": "dfpt",
+"blob": "67067f6d96a92f3da346.gz"
+},
+"BN_atomic_chain/1D_code/dyn16": {
+"kind": "dfpt",
+"blob": "4ee993cc55721e42af9a.gz"
+},
+"BN_atomic_chain/1D_code/dyn17": {
+"kind": "dfpt",
+"blob": "a53d7ff2cf2a0317977c.gz"
+},
+"BN_atomic_chain/1D_code/dyn18": {
+"kind": "dfpt",
+"blob": "79ea1cfec1f90fd1dcf7.gz"
+},
+"BN_atomic_chain/1D_code/dyn19": {
+"kind": "dfpt",
+"blob": "8a0be448aeedc5366feb.gz"
+},
+"BN_atomic_chain/1D_code/dyn2": {
+"kind": "dfpt",
+"blob": "2b3b132c2c6fa78f1307.gz"
+},
+"BN_atomic_chain/1D_code/dyn20": {
+"kind": "dfpt",
+"blob": "6da342371144678386db.gz"
+},
+"BN_atomic_chain/1D_code/dyn21": {
+"kind": "dfpt",
+"blob": "c25fadb10b5486a5b10e.gz"
+},
+"BN_atomic_chain/1D_code/dyn3": {
+"kind": "dfpt",
+"blob": "d734e5028ad0aebd80ef.gz"
+},
+"BN_atomic_chain/1D_code/dyn4": {
+"kind": "dfpt",
+"blob": "8bd437690b97c77344b9.gz"
+},
+"BN_atomic_chain/1D_code/dyn5": {
+"kind": "dfpt",
+"blob": "06da197c87c80589696f.gz"
+},
+"BN_atomic_chain/1D_code/dyn6": {
+"kind": "dfpt",
+"blob": "dd9a510b8d412832dc48.gz"
+},
+"BN_atomic_chain/1D_code/dyn7": {
+"kind": "dfpt",
+"blob": "ed302fdd09ae87f01945.gz"
+},
+"BN_atomic_chain/1D_code/dyn8": {
+"kind": "dfpt",
+"blob": "a1ecf6f5b5e5ba7af40a.gz"
+},
+"BN_atomic_chain/1D_code/dyn9": {
+"kind": "dfpt",
+"blob": "ec034d1d239a81f52694.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-01": {
+"kind": "dfpt",
+"blob": "b5e327a9cc1fcc775997.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-02": {
+"kind": "dfpt",
+"blob": "c5e24ed18a9297b24232.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-03": {
+"kind": "dfpt",
+"blob": "ac2b47f71c6de9b1201f.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-04": {
+"kind": "dfpt",
+"blob": "677138f7543d4bec464b.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-05": {
+"kind": "dfpt",
+"blob": "ff8989315d24e5c79c08.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-06": {
+"kind": "dfpt",
+"blob": "8a3b14cdf95e0ac55369.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-1": {
+"kind": "dfpt",
+"blob": "c631d55dc329f078b2ef.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-2": {
+"kind": "dfpt",
+"blob": "580053b157faef8807e2.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-3": {
+"kind": "dfpt",
+"blob": "d9b340515b2188400a46.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-4": {
+"kind": "dfpt",
+"blob": "d6f890bd883d74d26b78.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-5": {
+"kind": "dfpt",
+"blob": "1ff49f333904328c5e84.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-0-6": {
+"kind": "dfpt",
+"blob": "134b7b2d7c3c87f2bab3.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-1": {
+"kind": "dfpt",
+"blob": "2c1d9db0b3b53850d7c8.gz"
+},
+"BN_atomic_chain/1D_code/longwave/dyn_6-1-5": {
+"kind": "dfpt",
+"blob": "ffdb4ab76b90bceaabaf.gz"
+},
+"interpolated:BN_atomic_chain/1D_code": {
+"kind": "interpolated",
+"blob": "478c886887ae34465942.gz"
+},
+"file:BN_atomic_chain/1D_code/bn.out": {
+"kind": "archived_file",
+"blob": "71ff88d197c0b640bcf2.gz"
+},
+"file:BN_atomic_chain/1D_code/matdyn.out": {
+"kind": "archived_file",
+"blob": "4e3fdad5b632aff26fb5.gz"
+},
+"file:BN_atomic_chain/1D_code/ph.out": {
+"kind": "archived_file",
+"blob": "4abe194726563ae844e8.gz"
+},
+"file:BN_atomic_chain/1D_code/q2r.out": {
+"kind": "archived_file",
+"blob": "71da325274ab9073e20e.gz"
+},
+"BN_atomic_chain/3D_code/dyn1": {
+"kind": "dfpt",
+"blob": "be7ad5931c67d76fd163.gz"
+},
+"BN_atomic_chain/3D_code/dyn10": {
+"kind": "dfpt",
+"blob": "fe913e4a19046587c3c7.gz"
+},
+"BN_atomic_chain/3D_code/dyn11": {
+"kind": "dfpt",
+"blob": "ec9c79db7298fcc3696b.gz"
+},
+"BN_atomic_chain/3D_code/dyn12": {
+"kind": "dfpt",
+"blob": "03dcfd6c6627aa3ee02c.gz"
+},
+"BN_atomic_chain/3D_code/dyn13": {
+"kind": "dfpt",
+"blob": "6d274ec799e151845050.gz"
+},
+"BN_atomic_chain/3D_code/dyn14": {
+"kind": "dfpt",
+"blob": "b6a9d412867dc0b78a37.gz"
+},
+"BN_atomic_chain/3D_code/dyn15": {
+"kind": "dfpt",
+"blob": "0313f7ce6caef3e6100f.gz"
+},
+"BN_atomic_chain/3D_code/dyn16": {
+"kind": "dfpt",
+"blob": "523ed0b194629c8af9df.gz"
+},
+"BN_atomic_chain/3D_code/dyn17": {
+"kind": "dfpt",
+"blob": "3b7ec28f7746fc97d3f2.gz"
+},
+"BN_atomic_chain/3D_code/dyn18": {
+"kind": "dfpt",
+"blob": "56345a7ac0924c118ee2.gz"
+},
+"BN_atomic_chain/3D_code/dyn19": {
+"kind": "dfpt",
+"blob": "a749027c09331df73e07.gz"
+},
+"BN_atomic_chain/3D_code/dyn2": {
+"kind": "dfpt",
+"blob": "ad0c3a572e782a570de5.gz"
+},
+"BN_atomic_chain/3D_code/dyn20": {
+"kind": "dfpt",
+"blob": "686e9f75fc067c350f89.gz"
+},
+"BN_atomic_chain/3D_code/dyn21": {
+"kind": "dfpt",
+"blob": "ff0c8ee80ffdf8b3e2a8.gz"
+},
+"BN_atomic_chain/3D_code/dyn3": {
+"kind": "dfpt",
+"blob": "a74142642a2e84946ed4.gz"
+},
+"BN_atomic_chain/3D_code/dyn4": {
+"kind": "dfpt",
+"blob": "f8e6d0050e054af7410e.gz"
+},
+"BN_atomic_chain/3D_code/dyn5": {
+"kind": "dfpt",
+"blob": "02baee352f53c9b06a88.gz"
+},
+"BN_atomic_chain/3D_code/dyn6": {
+"kind": "dfpt",
+"blob": "699e6f2c30dafac40709.gz"
+},
+"BN_atomic_chain/3D_code/dyn7": {
+"kind": "dfpt",
+"blob": "0623c8b401f177b7c6f8.gz"
+},
+"BN_atomic_chain/3D_code/dyn8": {
+"kind": "dfpt",
+"blob": "8409e7a597c91cdd1c34.gz"
+},
+"BN_atomic_chain/3D_code/dyn9": {
+"kind": "dfpt",
+"blob": "bcf6738c0372fc730ee3.gz"
+},
+"interpolated:BN_atomic_chain/3D_code": {
+"kind": "interpolated",
+"blob": "e9c4e05a902ce8ffee04.gz"
+},
+"file:BN_atomic_chain/3D_code/bn.out": {
+"kind": "archived_file",
+"blob": "f590904432328306c680.gz"
+},
+"file:BN_atomic_chain/3D_code/matdyn.out": {
+"kind": "archived_file",
+"blob": "0b81b8d122cf2f033c9c.gz"
+},
+"file:BN_atomic_chain/3D_code/q2r.out": {
+"kind": "archived_file",
+"blob": "1e300f13db4cf0ec79a4.gz"
+},
+"BN_nanotubes/44/1D_code/dyn1": {
+"kind": "dfpt",
+"blob": "b3106e2d0e7f142599cd.gz"
+},
+"BN_nanotubes/44/1D_code/dyn10": {
+"kind": "dfpt",
+"blob": "7edead54d6caf6b4d673.gz"
+},
+"BN_nanotubes/44/1D_code/dyn125": {
+"kind": "dfpt",
+"blob": "3ad80917fc9a53553ef1.gz"
+},
+"BN_nanotubes/44/1D_code/dyn2": {
+"kind": "dfpt",
+"blob": "6d5703a230358afc7977.gz"
+},
+"BN_nanotubes/44/1D_code/dyn25": {
+"kind": "dfpt",
+"blob": "c40d596aa06a2bb42920.gz"
+},
+"BN_nanotubes/44/1D_code/dyn3": {
+"kind": "dfpt",
+"blob": "4a364e6999c3103584a1.gz"
+},
+"BN_nanotubes/44/1D_code/dyn4": {
+"kind": "dfpt",
+"blob": "9a9d4b59015db0c52915.gz"
+},
+"BN_nanotubes/44/1D_code/dyn5": {
+"kind": "dfpt",
+"blob": "da8b7001173f6932b617.gz"
+},
+"BN_nanotubes/44/1D_code/dyn6": {
+"kind": "dfpt",
+"blob": "a3335588402c070d492a.gz"
+},
+"BN_nanotubes/44/1D_code/dyn7": {
+"kind": "dfpt",
+"blob": "105a620a6f429f77e581.gz"
+},
+"BN_nanotubes/44/1D_code/dyn75": {
+"kind": "dfpt",
+"blob": "6c1f63711d489f50a9a6.gz"
+},
+"BN_nanotubes/44/1D_code/dyn8": {
+"kind": "dfpt",
+"blob": "ee3be217d6649eb5485c.gz"
+},
+"BN_nanotubes/44/1D_code/dyn9": {
+"kind": "dfpt",
+"blob": "4bee81517c02165848a8.gz"
+},
+"BN_nanotubes/44/1D_code/longwave/dyn10": {
+"kind": "dfpt",
+"blob": "4bee81517c02165848a8.gz"
+},
+"BN_nanotubes/44/1D_code/longwave/dyn125": {
+"kind": "dfpt",
+"blob": "3ad80917fc9a53553ef1.gz"
+},
+"BN_nanotubes/44/1D_code/longwave/dyn15": {
+"kind": "dfpt",
+"blob": "7edead54d6caf6b4d673.gz"
+},
+"BN_nanotubes/44/1D_code/longwave/dyn25": {
+"kind": "dfpt",
+"blob": "c40d596aa06a2bb42920.gz"
+},
+"BN_nanotubes/44/1D_code/longwave/dyn4": {
+"kind": "dfpt",
+"blob": "9a9d4b59015db0c52915.gz"
+},
+"BN_nanotubes/44/1D_code/longwave/dyn6": {
+"kind": "dfpt",
+"blob": "a3335588402c070d492a.gz"
+},
+"BN_nanotubes/44/1D_code/longwave/dyn75": {
+"kind": "dfpt",
+"blob": "6c1f63711d489f50a9a6.gz"
+},
+"BN_nanotubes/44/1D_code/longwave/dyn_05": {
+"kind": "dfpt",
+"blob": "ee3be217d6649eb5485c.gz"
+},
+"interpolated:BN_nanotubes/44/1D_code": {
+"kind": "interpolated",
+"blob": "3e877c2e804f6def7c09.gz"
+},
+"file:BN_nanotubes/44/1D_code/matdyn.out": {
+"kind": "archived_file",
+"blob": "bbee27017b3c5298646b.gz"
+},
+"file:BN_nanotubes/44/1D_code/q2r.out": {
+"kind": "archived_file",
+"blob": "6d28fb01707ae0ddc0a5.gz"
+},
+"BN_nanotubes/44/3D_code/dyn1": {
+"kind": "dfpt",
+"blob": "0c09210d716fa969883d.gz"
+},
+"BN_nanotubes/44/3D_code/dyn10": {
+"kind": "dfpt",
+"blob": "332af79dd77fa26f0618.gz"
+},
+"BN_nanotubes/44/3D_code/dyn2": {
+"kind": "dfpt",
+"blob": "62e8817b51e710164422.gz"
+},
+"BN_nanotubes/44/3D_code/dyn3": {
+"kind": "dfpt",
+"blob": "28b69aa079ff89c79834.gz"
+},
+"BN_nanotubes/44/3D_code/dyn4": {
+"kind": "dfpt",
+"blob": "83f0edd8a43637f4f244.gz"
+},
+"BN_nanotubes/44/3D_code/dyn5": {
+"kind": "dfpt",
+"blob": "675f3690b94c66c841b8.gz"
+},
+"BN_nanotubes/44/3D_code/dyn6": {
+"kind": "dfpt",
+"blob": "248ae2f78919f89d7d24.gz"
+},
+"BN_nanotubes/44/3D_code/dyn7": {
+"kind": "dfpt",
+"blob": "7dcbce3413053e1cdc13.gz"
+},
+"BN_nanotubes/44/3D_code/dyn8": {
+"kind": "dfpt",
+"blob": "2c29f386fd421b78dd0b.gz"
+},
+"BN_nanotubes/44/3D_code/dyn9": {
+"kind": "dfpt",
+"blob": "827831ecddac0c7a1b9d.gz"
+},
+"BN_nanotubes/44/3D_code/longwave/dyn_05": {
+"kind": "dfpt",
+"blob": "2c29f386fd421b78dd0b.gz"
+},
+"BN_nanotubes/44/3D_code/longwave/dyn_10": {
+"kind": "dfpt",
+"blob": "827831ecddac0c7a1b9d.gz"
+},
+"BN_nanotubes/44/3D_code/longwave/dyn_15": {
+"kind": "dfpt",
+"blob": "332af79dd77fa26f0618.gz"
+},
+"interpolated:BN_nanotubes/44/3D_code": {
+"kind": "interpolated",
+"blob": "a2e614aaba6a7f5ce0ef.gz"
+},
+"file:BN_nanotubes/44/3D_code/matdyn.out": {
+"kind": "archived_file",
+"blob": "df53fa54b41ae06e40b7.gz"
+},
+"file:BN_nanotubes/44/3D_code/ph.out": {
+"kind": "archived_file",
+"blob": "9c8242c5b5b2060ae7c5.gz"
+},
+"file:BN_nanotubes/44/3D_code/q2r.out": {
+"kind": "archived_file",
+"blob": "8b84e8ff84bf6d77a101.gz"
+},
+"file:BN_nanotubes/44/3D_code/scf.out": {
+"kind": "archived_file",
+"blob": "f2e48050cb5dfdc7634a.gz"
+},
+"BN_nanotubes/55/1D_code/dyn1": {
+"kind": "dfpt",
+"blob": "73a4ec2a0ad0278cc13b.gz"
+},
+"BN_nanotubes/55/1D_code/dyn2": {
+"kind": "dfpt",
+"blob": "72475f83c88b9e33f753.gz"
+},
+"BN_nanotubes/55/1D_code/dyn3": {
+"kind": "dfpt",
+"blob": "978266f81103d80adf70.gz"
+},
+"BN_nanotubes/55/1D_code/dyn4": {
+"kind": "dfpt",
+"blob": "92072f08d6a51b3b7867.gz"
+},
+"BN_nanotubes/55/1D_code/dyn5": {
+"kind": "dfpt",
+"blob": "5bca8e390249bab274b7.gz"
+},
+"BN_nanotubes/55/1D_code/dyn6": {
+"kind": "dfpt",
+"blob": "4ee6c0ce475320dda2b4.gz"
+},
+"BN_nanotubes/55/1D_code/dyn7": {
+"kind": "dfpt",
+"blob": "08fb9e00066c5c556d2b.gz"
+},
+"BN_nanotubes/55/1D_code/longwave/dyn15": {
+"kind": "dfpt",
+"blob": "9a0bdff7e9a8413caf45.gz"
+},
+"file:BN_nanotubes/55/1D_code/q2r.out": {
+"kind": "archived_file",
+"blob": "e032362911eab236be4a.gz"
+},
+"file:BN_nanotubes/55/1D_code/scf.out": {
+"kind": "archived_file",
+"blob": "3be6d5ed81d4377c7473.gz"
+},
+"BN_nanotubes/55/3D_code/dyn1": {
+"kind": "dfpt",
+"blob": "be8bf1dfc209887483e9.gz"
+},
+"BN_nanotubes/55/3D_code/dyn2": {
+"kind": "dfpt",
+"blob": "2fd0a5016f0715abd8f6.gz"
+},
+"BN_nanotubes/55/3D_code/dyn3": {
+"kind": "dfpt",
+"blob": "08211eb0d204899b7bd5.gz"
+},
+"BN_nanotubes/55/3D_code/dyn4": {
+"kind": "dfpt",
+"blob": "9753262690b055645e6f.gz"
+},
+"BN_nanotubes/55/3D_code/dyn5": {
+"kind": "dfpt",
+"blob": "5763ed3546e4458c0ef3.gz"
+},
+"BN_nanotubes/55/3D_code/dyn6": {
+"kind": "dfpt",
+"blob": "9d8ff73a2e110ba16604.gz"
+},
+"BN_nanotubes/55/3D_code/dyn7": {
+"kind": "dfpt",
+"blob": "db2ffff5f6d260aa9455.gz"
+},
+"file:BN_nanotubes/55/3D_code/q2r.out": {
+"kind": "archived_file",
+"blob": "0fc2e6efbdf21acdd359.gz"
+},
+"BN_nanotubes/66/1D_code/dyn1": {
+"kind": "dfpt",
+"blob": "68db7c860d464b8f0ab5.gz"
+},
+"BN_nanotubes/66/1D_code/dyn2": {
+"kind": "dfpt",
+"blob": "3ebe3bdc75a9ab09787c.gz"
+},
+"BN_nanotubes/66/1D_code/dyn3": {
+"kind": "dfpt",
+"blob": "908ae44234c12a8cc9ec.gz"
+},
+"BN_nanotubes/66/1D_code/dyn4": {
+"kind": "dfpt",
+"blob": "3e01c7d483c56a2b85e1.gz"
+},
+"BN_nanotubes/66/1D_code/dyn5": {
+"kind": "dfpt",
+"blob": "2aec022b356e4906b64c.gz"
+},
+"BN_nanotubes/66/1D_code/dyn6": {
+"kind": "dfpt",
+"blob": "48d56b1db9c862902534.gz"
+},
+"BN_nanotubes/66/1D_code/dyn7": {
+"kind": "dfpt",
+"blob": "cf04fcd54122df09a13d.gz"
+},
+"BN_nanotubes/66/1D_code/longwave/dyn15": {
+"kind": "dfpt",
+"blob": "1f6b1edfa534d80d4b5b.gz"
+},
+"file:BN_nanotubes/66/1D_code/q2r.out": {
+"kind": "archived_file",
+"blob": "ce23d812c70bdb054e39.gz"
+},
+"BN_nanotubes/66/3D_code/dyn1": {
+"kind": "dfpt",
+"blob": "cdbaad6a02d3a383b69c.gz"
+},
+"BN_nanotubes/66/3D_code/dyn2": {
+"kind": "dfpt",
+"blob": "d388726d2ff374d8f9de.gz"
+},
+"BN_nanotubes/66/3D_code/dyn3": {
+"kind": "dfpt",
+"blob": "1123d8177af73cd2620b.gz"
+},
+"BN_nanotubes/66/3D_code/dyn4": {
+"kind": "dfpt",
+"blob": "71ac282ecccc2e0e40e0.gz"
+},
+"BN_nanotubes/66/3D_code/dyn5": {
+"kind": "dfpt",
+"blob": "d1f34189a6c81f13090f.gz"
+},
+"BN_nanotubes/66/3D_code/dyn6": {
+"kind": "dfpt",
+"blob": "6dd343202a963332698b.gz"
+},
+"BN_nanotubes/66/3D_code/dyn7": {
+"kind": "dfpt",
+"blob": "153524964c3bbfe9c8b9.gz"
+},
+"file:BN_nanotubes/66/3D_code/q2r.out": {
+"kind": "archived_file",
+"blob": "5b46eb5dde87911d62d1.gz"
+},
+"file:BN_nanotubes/66/3D_code/scf.out": {
+"kind": "archived_file",
+"blob": "cc0ec25bfad10624ce59.gz"
+},
+"GaAs_nanowire/1D_code/dyn1": {
+"kind": "dfpt",
+"blob": "4ef3acbf543835b49a57.gz"
+},
+"GaAs_nanowire/1D_code/dyn2": {
+"kind": "dfpt",
+"blob": "29e96c57a17b10a214c9.gz"
+},
+"GaAs_nanowire/1D_code/dyn3": {
+"kind": "dfpt",
+"blob": "ebb9f2a5281d90baca48.gz"
+},
+"GaAs_nanowire/1D_code/dyn4": {
+"kind": "dfpt",
+"blob": "d3e83af6e8f837ede891.gz"
+},
+"GaAs_nanowire/1D_code/dyn5": {
+"kind": "dfpt",
+"blob": "965bea43e4239e972b83.gz"
+},
+"GaAs_nanowire/1D_code/dyn6": {
+"kind": "dfpt",
+"blob": "cd83e57a1b450726f990.gz"
+},
+"GaAs_nanowire/1D_code/longwave/dyn10": {
+"kind": "dfpt",
+"blob": "a15a093f9bf71e0c9480.gz"
+},
+"GaAs_nanowire/1D_code/longwave/dyn100": {
+"kind": "dfpt",
+"blob": "ceb1d52b758dba55925a.gz"
+},
+"GaAs_nanowire/1D_code/longwave/dyn125": {
+"kind": "dfpt",
+"blob": "fcaddb5cf5916e382b0f.gz"
+},
+"GaAs_nanowire/1D_code/longwave/dyn15": {
+"kind": "dfpt",
+"blob": "a1b7ba0ac4f398cfd114.gz"
+},
+"GaAs_nanowire/1D_code/longwave/dyn25": {
+"kind": "dfpt",
+"blob": "53420c4f89e2c2f38ea1.gz"
+},
+"GaAs_nanowire/1D_code/longwave/dyn50": {
+"kind": "dfpt",
+"blob": "fd1dce0a00024ad9c9dc.gz"
+},
+"GaAs_nanowire/1D_code/longwave/dyn75": {
+"kind": "dfpt",
+"blob": "57d35859a6e744288916.gz"
+},
+"interpolated:GaAs_nanowire/1D_code": {
+"kind": "interpolated",
+"blob": "97aa744c24b4d42a1032.gz"
+},
+"file:GaAs_nanowire/1D_code/matdyn.out": {
+"kind": "archived_file",
+"blob": "4598764f2ff2fe89a57c.gz"
+},
+"file:GaAs_nanowire/1D_code/q2r.out": {
+"kind": "archived_file",
+"blob": "368d54502dca9a130fd7.gz"
+},
+"file:GaAs_nanowire/1D_code/scf.out": {
+"kind": "archived_file",
+"blob": "441eef55fac3959adfa9.gz"
+},
+"GaAs_nanowire/3D_code/dyn1": {
+"kind": "dfpt",
+"blob": "4feaf7e004538917ed3c.gz"
+},
+"GaAs_nanowire/3D_code/dyn2": {
+"kind": "dfpt",
+"blob": "a5f655588487f4e3e711.gz"
+},
+"GaAs_nanowire/3D_code/dyn3": {
+"kind": "dfpt",
+"blob": "0dd3473e9a02bddf79e8.gz"
+},
+"GaAs_nanowire/3D_code/dyn4": {
+"kind": "dfpt",
+"blob": "f9832004bc04259092c2.gz"
+},
+"GaAs_nanowire/3D_code/dyn5": {
+"kind": "dfpt",
+"blob": "0ff8df5b592bebbc2475.gz"
+},
+"GaAs_nanowire/3D_code/dyn6": {
+"kind": "dfpt",
+"blob": "f73d4d5d94eea177cff6.gz"
+},
+"interpolated:GaAs_nanowire/3D_code": {
+"kind": "interpolated",
+"blob": "e94b5c66085d3bc06ae0.gz"
+},
+"file:GaAs_nanowire/3D_code/matdyn.out": {
+"kind": "archived_file",
+"blob": "42c7c816bb0aa597026b.gz"
+},
+"file:GaAs_nanowire/3D_code/q2r.out": {
+"kind": "archived_file",
+"blob": "baaa32f1f872ce2c990e.gz"
+},
+"file:GaAs_nanowire/3D_code/scf.out": {
+"kind": "archived_file",
+"blob": "04dfd8cc402b019aa697.gz"
+},
+"GaAs_bulk/ZB_phase/dyn1": {
+"kind": "dfpt",
+"blob": "4f25eb8e372ce58e9573.gz"
+},
+"file:GaAs_bulk/ZB_phase/ph.out": {
+"kind": "archived_file",
+"blob": "0c75cd8874dd1b433d4d.gz"
+},
+"file:GaAs_bulk/ZB_phase/scf.out": {
+"kind": "archived_file",
+"blob": "2d48d53b4d81d4e96614.gz"
+},
+"GaAs_bulk/WZ_phase/dyn1": {
+"kind": "dfpt",
+"blob": "4f25eb8e372ce58e9573.gz"
+},
+"file:GaAs_bulk/WZ_phase/ph.out": {
+"kind": "archived_file",
+"blob": "6c085264ca515ea5a5a5.gz"
+},
+"file:GaAs_bulk/WZ_phase/scf.out": {
+"kind": "archived_file",
+"blob": "4c3b1778ba05ffe97555.gz"
+}
+}

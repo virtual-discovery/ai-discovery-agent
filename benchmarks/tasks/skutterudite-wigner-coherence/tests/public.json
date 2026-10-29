@@ -1,0 +1,5 @@
+{
+ "task_id": "skutterudite-wigner-coherence",
+ "solver_budget": 32,
+ "min_report_chars": 400
+}

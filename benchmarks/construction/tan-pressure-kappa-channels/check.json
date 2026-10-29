@@ -1,0 +1,107 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 7,
+  "task_mb": 1.56,
+  "hidden_values": 5,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 22,
+   "budget": 30,
+   "evaluations": 17,
+   "failed_evaluations": 0,
+   "container_seconds": 198
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "abl_RTA",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "abl_no_4ph",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "abl_no_phel",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "abl_phel_times_2pi",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "abl_phel_row_order",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "abl_scalebroad_1",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "abl_kappa_level_interpolation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "abl_4ph_not_rescaled_to_600K",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "abl_4ph_classical_T2_scaling",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "abl_trace_average",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "geometric_interpolation",
+    "passes_grading": true
+   },
+   {
+    "name": "quadratic_80GPa_T_ratio_100GPa",
+    "passes_grading": true
+   },
+   {
+    "name": "T_ratio_from_20GPa_only",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T22:47:08Z"
+}

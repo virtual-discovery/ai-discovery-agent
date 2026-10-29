@@ -1,0 +1,77 @@
+{
+ "task_id": "fresh-li-bcc-soft-shear",
+ "solver_budget": 90,
+ "reserved_validation_charge": 0,
+ "system": "bcc lithium, one atom per primitive cell; primitive vectors (a/2)(-1,1,1), (a/2)(1,-1,1), (a/2)(1,1,-1) before strain; PBE; SSSP 1.3 precision ultrasoft pseudopotential li_pbe_v1.4.uspp.F.UPF (GBRV 1.4, 1s2 2s1 in valence); Marzari-Vanderbilt cold smearing; Gamma-centred Monkhorst-Pack meshes; ecutrho = 8 x ecutwfc; Quantum ESPRESSO 6.7 pw.x on 2 cores",
+ "request": {
+  "kind": "optional, \"scf\" (the only kind)",
+  "lattice_A": "cubic lattice parameter a in Angstrom",
+  "strain_voigt": "optional, default [0,0,0,0,0,0]: [e1,e2,e3,e4,e5,e6] = [eps_xx, eps_yy, eps_zz, 2 eps_yz, 2 eps_xz, 2 eps_xy] (engineering shears); every lattice vector r becomes (1 + eps) r",
+  "kmesh": "n of an n x n x n Gamma-centred Monkhorst-Pack mesh of the (strained) primitive cell",
+  "smearing_Ry": "Marzari-Vanderbilt smearing width in Ry",
+  "ecutwfc_Ry": "optional, 40 (default) or 60"
+ },
+ "limits": {
+  "lattice_A": [
+   3.2,
+   3.6
+  ],
+  "strain_component_max_abs": 0.04,
+  "smearing_Ry": [
+   0.005,
+   0.01,
+   0.02
+  ],
+  "ecutwfc_Ry": [
+   40,
+   60
+  ],
+  "max_cost_at_ecut60": 4
+ },
+ "costs": {
+  "cubic": {
+   "16": 1,
+   "24": 1,
+   "32": 1,
+   "40": 2,
+   "48": 2,
+   "56": 3
+  },
+  "tetragonal": {
+   "16": 1,
+   "24": 1,
+   "32": 2,
+   "40": 4,
+   "48": 6,
+   "56": 9
+  },
+  "trigonal": {
+   "16": 1,
+   "24": 1,
+   "32": 3,
+   "40": 4,
+   "48": 7
+  },
+  "orthorhombic": {
+   "16": 1,
+   "24": 2,
+   "32": 4,
+   "40": 6
+  },
+  "monoclinic": {
+   "16": 1,
+   "24": 3,
+   "32": 6
+  },
+  "triclinic": {
+   "16": 2,
+   "24": 5
+  }
+ },
+ "cost_notes": "Units per request (about one unit per minute of computing). The class is the point symmetry of the strained lattice (number of operations: cubic 48, tetragonal 16, trigonal 12, orthorhombic 8, monoclinic 4, triclinic 2) and sets the number of irreducible k-points; the allowed meshes per class are the keys. ecutwfc_Ry 60 doubles the cost and is available when the 40 Ry cost is at most 4. Failed jobs stay charged.",
+ "result_units": {
+  "energies": "Ry and eV per cell (one atom); free_energy = F = E - TS (the variational functional, consistent with the stress); internal_energy = E",
+  "stress_GPa": "3x3 Cauchy stress of the strained cell in GPa, Quantum ESPRESSO sign convention (positive = compressive); pressure_GPa = trace/3",
+  "fermi_energy_eV": "eV"
+ }
+}

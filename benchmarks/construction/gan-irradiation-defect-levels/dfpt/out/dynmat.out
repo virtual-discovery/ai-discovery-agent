@@ -1,0 +1,63 @@
+
+     Program DYNMAT v.6.7MaX starts on 26Oct2026 at  2:34:23 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+
+     Reading Dynamical Matrix from file out/gan.dyn
+     ...Force constants read
+     ...epsilon and Z* read
+     Acoustic Sum Rule: || Z*(ASR) - Z*(orig)|| =    5.474437E-02
+     Acoustic Sum Rule: ||dyn(ASR) - dyn(orig)||=    6.119197E-04
+     A direction for q was not specified:TO-LO splitting will be absent
+
+     Polarizability (A^3 units)
+     multiply by 0.374779 for Clausius-Mossotti correction
+        18.109600   -0.000000    0.000000
+         0.000000   18.109600   -0.000000
+         0.000000   -0.000000   18.579245
+
+     IR activities are in (D/A)^2/amu units
+
+# mode   [cm-1]    [THz]      IR
+    1     -0.00   -0.0000    0.0000
+    2      0.00    0.0000    0.0000
+    3      0.00    0.0000    0.0000
+    4    132.58    3.9746    0.0000
+    5    132.58    3.9746    0.0000
+    6    336.91   10.1002    0.0000
+    7    539.90   16.1859   31.1026
+    8    564.86   16.9342   28.2238
+    9    564.86   16.9342   28.2238
+   10    575.25   17.2455    0.0000
+   11    575.25   17.2455    0.0000
+   12    700.04   20.9867    0.0000
+
+Electronic dielectric permittivity tensor (F/m units)
+         5.961831   -0.000000    0.000000
+         0.000000    5.961831   -0.000000
+         0.000000   -0.000000    6.090509
+
+ ... with zone-center polar mode contributions
+        10.075277   -0.000000   -0.000000
+        -0.000000   10.075277   -0.000000
+        -0.000000   -0.000000   11.052349
+
+
+     DYNMAT       :      0.00s CPU      0.00s WALL
+
+
+   This run was terminated on:   2:34:23  26Oct2026            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

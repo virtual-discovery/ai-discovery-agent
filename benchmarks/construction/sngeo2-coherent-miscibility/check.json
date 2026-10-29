@@ -1,0 +1,130 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 8,
+  "task_mb": 5.56,
+  "hidden_values": 11,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 52,
+   "budget": 58,
+   "evaluations": 37,
+   "failed_evaluations": 0,
+   "container_seconds": 7
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "sqs_values_read_per_cation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "strain_per_cell_mixed_with_per_cation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "r2scan_unrelaxed_sqs_kept",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "r2scan_index0_sqs_unscreened",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "inplane_c_not_constrained",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "no_out_of_plane_relaxation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "habit_plane_100",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "incoherent_model_reported_as_coherent",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "binodal_spinodal_swapped",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "functional_mixing",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "overtruncated_cluster_expansion_Tc",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "lowest_sqs_per_composition",
+    "passes_grading": true
+   },
+   {
+    "name": "mean_sqs_per_composition",
+    "passes_grading": true
+   },
+   {
+    "name": "raw_scan_minima_three_compositions",
+    "passes_grading": true
+   },
+   {
+    "name": "one_sqs_per_composition",
+    "passes_grading": true
+   },
+   {
+    "name": "cluster_expansion_monte_carlo_Tc",
+    "passes_grading": true
+   },
+   {
+    "name": "cluster_expansion_12_clusters_monte_carlo_Tc",
+    "passes_grading": true
+   },
+   {
+    "name": "strain_from_subregular_fit",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T08:38:34Z"
+}

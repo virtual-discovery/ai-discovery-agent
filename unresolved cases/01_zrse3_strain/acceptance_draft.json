@@ -1,0 +1,26 @@
+{
+  "campaign": "ZRSE3-STRAIN-1",
+  "status": "DRAFT 2026-10-28 - freeze (rename acceptance.json, sha256) before stage S2; never edit after a strained chain exists",
+  "question": "Which term drives the ~136 meV/% A-exciton redshift of ZrSe3 under biaxial compression: E_QP(eps) or E_b(eps)?",
+  "source": {"paper": "Li et al., Nano Research 19, 94908438 (2026)", "doi": "10.26599/NR.2026.94908438", "measured_gauge_meV_per_pct": 136, "sign": "redshift under compression (g > 0 with eps > 0 tensile)"},
+  "literature_baseline": {"paper": "Li et al., Adv. Mater. 2022", "doi": "10.1002/adma.202103571", "gw_direct_gap_eV": 1.29, "gw_indirect_gap_eV": 0.66, "uniaxial_qp_shift_meV_per_pct": {"b": 90, "a": 45}, "measured_uniaxial_exciton_gauge_meV_per_pct": {"b": [60, 95], "a": [0, 15]}, "cited_bulk_Eb_eV": 0.049, "exciton_A_eV": 1.75},
+  "prior_expectation_declared": {"additivity_gauge_meV_per_pct": 135, "f_QP": [0.85, 1.0], "note": "E_b ~0.05 eV cannot move by 136 meV per % unless the exciton character changes; the test is whether the BSE agrees"},
+  "strain_protocol": {"type": "biaxial in-plane, a and b scaled equally", "relaxed": "c, beta, internal coordinates (PBE-D3)", "fixed": "a, b", "points_pct": [-1.0, -0.5, 0.0, 0.5], "uniaxial_controls_pct": {"b_only": 1.0, "a_only": 1.0}},
+  "observables": {"E_QP": "G0W0 direct gap at the A-exciton transition k-point (record k)", "E_A": "leading stick of the first bright E||b exciton (momentum operator)", "E_b": "E_QP - E_A", "slopes": "linear fit over the four biaxial points, meV/%"},
+  "gates": {
+    "G0_litcheck": {"uniaxial_qp_shift_tol_meV": 30, "targets_meV": {"b": 90, "a": 45}, "on_fail": "LITCHECK_FAIL (stop)"},
+    "G1_anchor_recorded": {"E_A_target_eV": 1.75, "abs_off_flag_eV": 0.30, "gated": false},
+    "G2_gauge": {"g_opt_window_meV_per_pct": [109, 218], "rationale": "0.8x-1.6x measured; partial strain transfer makes the measured value a lower bound of the intrinsic one", "on_fail": "SLOPE_OFF"},
+    "G2b_linearity": {"max_residual_meV": 10, "fallback": "local slope at -0.5 % if nonlinear"},
+    "G3_decomposition": {"f_QP_classes": {"QP_DRIVEN": ">=0.70", "MIXED": "(0.30,0.70)", "BINDING_DRIVEN": "<=0.30"}},
+    "G4_convergence": {"k_ladder_levels": 2, "max_change_s_QP_meV_per_pct": 15, "max_change_s_b_meV_per_pct": 15, "class_must_hold": true, "on_fail": "one refinement, then PROCESS_BLOCKED"},
+    "G5_soc_covariate": {"points_pct": [0.0, -1.0], "max_slope_change_meV_per_pct": 20, "on_exceed": "SOC chain becomes primary, rerun four points"},
+    "G6_uniaxial_exciton": {"g_b_window": [60, 95], "g_a_window": [0, 15], "blocking": false}
+  },
+  "status_vocabulary": ["QP_DRIVEN", "MIXED", "BINDING_DRIVEN", "SLOPE_OFF", "LITCHECK_FAIL", "PROCESS_BLOCKED"],
+  "non_vacuity": "G0, G2, G4 can each fail; G3 returns any of three classes; record the possible outcomes before reading numbers",
+  "scorer": "strain_score.py (frozen with this card; reads results/strain_table.json only)",
+  "compute": {"route": "local 32 cores if pilot chain <= 2 h, else 1x H100 with dph_total verified from --raw", "budget_cap": "60 % of Vast credit", "disk_rule": "heavy BGW files stay remote; pull readouts + checksums", "destroy_rule": "destroy in the same pipeline as the pull + md5 check"},
+  "out_of_scope": ["thickness series", "strain transfer efficiency", "temperature dependence", "substrate optics", "B exciton / A_2s fine structure (separate card)", "evGW"],
+  "deliverables_count": 8
+}

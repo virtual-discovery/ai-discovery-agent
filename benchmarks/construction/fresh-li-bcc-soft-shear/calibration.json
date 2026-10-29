@@ -1,0 +1,435 @@
+{
+ "a0_A": {
+  "reference": 3.4348,
+  "tolerance": "absolute 0.005",
+  "robustness": {
+   "a0_from_zero_pressure": {
+    "value": 3.4346950753490058,
+    "error": -0.00010492465099432025
+   }
+  },
+  "ablations_failing_this_field": {
+   "experimental_lattice": {
+    "value": 3.477,
+    "error": 0.04219999999999979
+   }
+  },
+  "max_robust_error": 0.00010492465099432025,
+  "nearest_failing_ablation_error": 0.04219999999999979
+ },
+ "bulk_modulus_GPa": {
+  "reference": 13.918486911607088,
+  "tolerance": "relative 0.03",
+  "robustness": {
+   "oracle_like_k48_both_smearings": {
+    "value": 13.91561056627635,
+    "error": -0.00020665646697128352
+   }
+  },
+  "ablations_failing_this_field": {},
+  "max_robust_error": 0.00020665646697128352,
+  "nearest_failing_ablation_error": null
+ },
+ "Cprime_GPa": {
+  "reference": 0.9468654179442741,
+  "tolerance": "absolute 0.065",
+  "robustness": {
+   "oracle_like_k48_both_smearings": {
+    "value": 0.937666644447407,
+    "error": -0.009198773496867152
+   },
+   "k56_smearing_0.01": {
+    "value": 0.9376749766697774,
+    "error": -0.009190441274496752
+   },
+   "k56_smearing_0.005": {
+    "value": 0.974453406212505,
+    "error": 0.027587988268230834
+   },
+   "smearing_0.005_k48": {
+    "value": 0.9303176243167578,
+    "error": -0.01654779362751635
+   },
+   "energy_route_volume_conserving": {
+    "value": 0.9517891084980734,
+    "error": 0.004923690553799265
+   },
+   "half_percent_strains": {
+    "value": 0.9586013799540015,
+    "error": 0.011735962009727374
+   },
+   "two_percent_strains": {
+    "value": 0.9452580472887635,
+    "error": -0.0016073706555106426
+   },
+   "three_percent_tetragonal_strains": {
+    "value": 0.979930837550812,
+    "error": 0.03306541960653786
+   },
+   "cutoff_60Ry_correction": {
+    "value": 0.9468737501666444,
+    "error": 8.332222370288633e-06
+   },
+   "uniaxial_strain_stress_route": {
+    "value": 0.9709000000000009,
+    "error": 0.024034582055726728
+   },
+   "cprime_from_c11_energy_minus_b": {
+    "value": 0.9464477379176732,
+    "error": -0.0004176800266009195
+   }
+  },
+  "ablations_failing_this_field": {
+   "total_energy_converged_mesh": {
+    "value": 1.5309125449940009,
+    "error": 0.5840471270497267
+   },
+   "small_smearing_coarse_mesh": {
+    "value": -2.0592004399413413,
+    "error": -3.0060658578856154
+   },
+   "small_smearing_k24": {
+    "value": 0.7758715504599387,
+    "error": -0.17099386748433543
+   },
+   "largest_smearing_k_converged": {
+    "value": 0.8506449140114651,
+    "error": -0.09622050393280901
+   },
+   "one_sided_plus_strain": {
+    "value": 1.2677943505830032,
+    "error": 0.320928932638729
+   },
+   "one_sided_minus_strain": {
+    "value": 0.6286288466393105,
+    "error": -0.31823657130496363
+   }
+  },
+  "max_robust_error": 0.03306541960653786,
+  "nearest_failing_ablation_error": 0.09622050393280901
+ },
+ "C44_GPa": {
+  "reference": 11.607808333333333,
+  "tolerance": "absolute 0.42",
+  "robustness": {
+   "oracle_like_k48_both_smearings": {
+    "value": 11.415349999999998,
+    "error": -0.1924583333333345
+   },
+   "k56_smearing_0.01": {
+    "value": 11.525699999999999,
+    "error": -0.08210833333333412
+   },
+   "k56_smearing_0.005": {
+    "value": 11.95225,
+    "error": 0.34444166666666653
+   },
+   "k64_smearing_0.01": {
+    "value": 11.49625,
+    "error": -0.11155833333333298
+   },
+   "smearing_0.005_k48": {
+    "value": 11.731650000000002,
+    "error": 0.12384166666666907
+   },
+   "two_percent_strains": {
+    "value": 11.444775,
+    "error": -0.16303333333333292
+   }
+  },
+  "ablations_failing_this_field": {
+   "total_energy_converged_mesh": {
+    "value": 10.81955,
+    "error": -0.7882583333333333
+   },
+   "small_smearing_coarse_mesh": {
+    "value": 6.156349999999999,
+    "error": -5.451458333333334
+   },
+   "one_sided_plus_strain": {
+    "value": 11.106399999999999,
+    "error": -0.5014083333333339
+   },
+   "experimental_lattice": {
+    "value": 11.010800000000001,
+    "error": -0.5970083333333314
+   },
+   "tensor_shear_convention": {
+    "value": 2.901952083333333,
+    "error": -8.70585625
+   },
+   "trigonal_single_component": {
+    "value": 34.823425,
+    "error": 23.21561666666667
+   }
+  },
+  "max_robust_error": 0.34444166666666653,
+  "nearest_failing_ablation_error": 0.5014083333333339
+ },
+ "zener_anisotropy": {
+  "reference": 12.2591955660762,
+  "tolerance": "relative 0.06",
+  "robustness": {
+   "oracle_like_k48_both_smearings": {
+    "value": 12.174209317989957,
+    "error": -0.006932449003539598
+   },
+   "k56_smearing_0.01": {
+    "value": 12.291785839198122,
+    "error": 0.0026584348823104286
+   },
+   "k56_smearing_0.005": {
+    "value": 12.265594151346729,
+    "error": 0.0005219416915279473
+   },
+   "k64_smearing_0.01": {
+    "value": 12.141376992053784,
+    "error": -0.009610628477813354
+   },
+   "smearing_0.005_k48": {
+    "value": 12.610370580279977,
+    "error": 0.028645844852622566
+   },
+   "energy_route_volume_conserving": {
+    "value": 12.195777646216708,
+    "error": -0.0051730898261368756
+   },
+   "half_percent_strains": {
+    "value": 12.109108724515224,
+    "error": -0.012242796907188406
+   },
+   "two_percent_strains": {
+    "value": 12.107566852063812,
+    "error": -0.01236856963371858
+   },
+   "three_percent_tetragonal_strains": {
+    "value": 11.845538367121177,
+    "error": -0.03374260543650184
+   },
+   "cutoff_60Ry_correction": {
+    "value": 12.259087688607298,
+    "error": -8.799718408887445e-06
+   },
+   "uniaxial_strain_stress_route": {
+    "value": 11.955719778899292,
+    "error": -0.02475495113371789
+   },
+   "cprime_from_c11_energy_minus_b": {
+    "value": 12.264605712801691,
+    "error": 0.00044131335505101965
+   }
+  },
+  "ablations_failing_this_field": {
+   "total_energy_converged_mesh": {
+    "value": 7.067386073345161,
+    "error": -0.42350327676457655
+   },
+   "small_smearing_coarse_mesh": {
+    "value": -2.989679819695148,
+    "error": -1.2438724305833107
+   },
+   "small_smearing_k24": {
+    "value": 14.960992352989607,
+    "error": 0.22038940257955045
+   },
+   "largest_smearing_k_converged": {
+    "value": 13.324537434249835,
+    "error": 0.08690144980814758
+   },
+   "one_sided_plus_strain": {
+    "value": 8.760411335555053,
+    "error": -0.28540080070204815
+   },
+   "one_sided_minus_strain": {
+    "value": 18.65059178031496,
+    "error": 0.5213552699921938
+   },
+   "tensor_shear_convention": {
+    "value": 3.06479889151905,
+    "error": -0.75
+   },
+   "trigonal_single_component": {
+    "value": 36.777586698228596,
+    "error": 1.9999999999999998
+   }
+  },
+  "max_robust_error": 0.03374260543650184,
+  "nearest_failing_ablation_error": 0.08690144980814758
+ },
+ "compressed_pressure_GPa": {
+  "reference": 2.0423188,
+  "tolerance": "absolute 0.05",
+  "robustness": {
+   "oracle_like_k48_both_smearings": {
+    "value": 2.04226,
+    "error": -5.879999999969243e-05
+   },
+   "k56_smearing_0.01": {
+    "value": 2.042554,
+    "error": 0.000235200000000102
+   },
+   "k56_smearing_0.005": {
+    "value": 2.04226,
+    "error": -5.879999999969243e-05
+   },
+   "smearing_0.005_k48": {
+    "value": 2.041966,
+    "error": -0.00035279999999993095
+   }
+  },
+  "ablations_failing_this_field": {},
+  "max_robust_error": 0.00035279999999993095,
+  "nearest_failing_ablation_error": null
+ },
+ "compressed_Bprime_GPa": {
+  "reference": 0.8175493267564324,
+  "tolerance": "absolute 0.09",
+  "robustness": {
+   "oracle_like_k48_both_smearings": {
+    "value": 0.8089671377149675,
+    "error": -0.008582189041464905
+   },
+   "k56_smearing_0.01": {
+    "value": 0.7844537395013996,
+    "error": -0.03309558725503281
+   },
+   "k56_smearing_0.005": {
+    "value": 0.8371633782162419,
+    "error": 0.019614051459809434
+   },
+   "k64_smearing_0.01": {
+    "value": 0.7869117451006525,
+    "error": -0.0306375816557799
+   },
+   "smearing_0.005_k48": {
+    "value": 0.8702506332489001,
+    "error": 0.052701306492467626
+   },
+   "energy_route_volume_conserving": {
+    "value": 0.8681043268744341,
+    "error": 0.050555000118001625
+   }
+  },
+  "ablations_failing_this_field": {
+   "total_energy_converged_mesh": {
+    "value": 1.3433875483268873,
+    "error": 0.5258382215704549
+   },
+   "small_smearing_coarse_mesh": {
+    "value": -0.2610735235301946,
+    "error": -1.078622850286627
+   },
+   "small_smearing_k24": {
+    "value": -0.2610735235301946,
+    "error": -1.078622850286627
+   },
+   "largest_smearing_k_converged": {
+    "value": 0.67413511531796,
+    "error": -0.14341421143847244
+   },
+   "one_sided_plus_strain": {
+    "value": 1.1118049956318894,
+    "error": 0.29425566887545695
+   },
+   "one_sided_minus_strain": {
+    "value": 0.5121262669511141,
+    "error": -0.30542305980531836
+   },
+   "energy_curvature_under_pressure": {
+    "value": 1.8965785103871724,
+    "error": 1.07902918363074
+   },
+   "lagrangian_coefficients_under_pressure": {
+    "value": 2.859809326756433,
+    "error": 2.0422600000000006
+   },
+   "compressed_reuses_a0_moduli": {
+    "value": 0.9468654179442741,
+    "error": 0.1293160911878417
+   },
+   "compressed_scaled_with_bulk_modulus": {
+    "value": 1.3801619930749194,
+    "error": 0.5626126663184869
+   }
+  },
+  "max_robust_error": 0.052701306492467626,
+  "nearest_failing_ablation_error": 0.1293160911878417
+ },
+ "compressed_B44_GPa": {
+  "reference": 12.784658333333333,
+  "tolerance": "absolute 0.56",
+  "robustness": {
+   "oracle_like_k48_both_smearings": {
+    "value": 12.47455,
+    "error": -0.3101083333333321
+   },
+   "k56_smearing_0.01": {
+    "value": 12.673100000000002,
+    "error": -0.1115583333333312
+   },
+   "k56_smearing_0.005": {
+    "value": 13.26155,
+    "error": 0.47689166666666694
+   },
+   "k64_smearing_0.01": {
+    "value": 12.643700000000003,
+    "error": -0.1409583333333302
+   },
+   "smearing_0.005_k48": {
+    "value": 12.85695,
+    "error": 0.07229166666666664
+   },
+   "energy_route_volume_conserving": {
+    "value": 12.465201198398539,
+    "error": -0.3194571349347939
+   }
+  },
+  "ablations_failing_this_field": {
+   "total_energy_converged_mesh": {
+    "value": 11.577200000000001,
+    "error": -1.2074583333333315
+   },
+   "small_smearing_coarse_mesh": {
+    "value": 13.53365,
+    "error": 0.7489916666666669
+   },
+   "one_sided_plus_strain": {
+    "value": 12.1362,
+    "error": -0.6484583333333322
+   },
+   "energy_curvature_under_pressure": {
+    "value": 13.486331198398538,
+    "error": 0.7016728650652055
+   },
+   "lagrangian_coefficients_under_pressure": {
+    "value": 14.826918333333333,
+    "error": 2.0422600000000006
+   },
+   "tensor_shear_convention": {
+    "value": 3.196164583333333,
+    "error": -9.58849375
+   },
+   "trigonal_single_component": {
+    "value": 38.353975,
+    "error": 25.569316666666666
+   },
+   "compressed_reuses_a0_moduli": {
+    "value": 11.607808333333333,
+    "error": -1.17685
+   },
+   "compressed_scaled_with_bulk_modulus": {
+    "value": 16.919675785970938,
+    "error": 4.135017452637605
+   }
+  },
+  "max_robust_error": 0.47689166666666694,
+  "nearest_failing_ablation_error": 0.6484583333333322
+ },
+ "mechanically_stable_at_a0": {
+  "reference": true,
+  "tolerance": "exact",
+  "ablations_failing_this_field": [
+   "small_smearing_coarse_mesh"
+  ]
+ }
+}

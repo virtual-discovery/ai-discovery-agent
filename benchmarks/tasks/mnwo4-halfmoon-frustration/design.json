@@ -1,0 +1,218 @@
+{
+ "task_id": "mnwo4-halfmoon-frustration",
+ "catalog_id": "mnwo4-halfmoon-frustration",
+ "start": "released",
+ "source_group": "natsch_2026_mnwo4",
+ "title": "MnWO4: which competing exchanges make the paramagnetic half-moons",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which purchases determine the twelve exchange constants: the archived dispersion alone, or dispersion plus diffuse data",
+   "wrong_choice": "Fit J1..J12, D to the 1.5 K spectra only (buying more spectra) and split the undetermined combination at minimum norm",
+   "consequence": "Along the archived [102]/[010] paths the AF1 spectrum depends on J3 and J11 only through J3 + J11 (exact null vector). The min-norm split J3 = J11 = -0.168 moves k_LT by 0.049 r.l.u. (tolerance 0.020) and puts the flat spiral 0.155 meV/Mn below AF1; the spectral fit is unchanged, so the error shows only after buying a map or a zone slice",
+   "ablation": "dispersion_only_min_norm_split",
+   "difficulty_type": "underdetermined fit discovered by rank analysis; discriminating purchase under a binding budget; cascade into the ground state"
+  },
+  {
+   "id": "dp2",
+   "fork": "How classical spin dynamics of 5 muB moments maps onto spin-wave energies",
+   "wrong_choice": "Treat the unit-vector Hamiltonian as S = 1 spins (energies ~ J instead of J/S with S = 5/2)",
+   "consequence": "All J and D come out 0.4x too small; the 14 K map (r 0.72), the 5e map (0.81) and k_LT (off 0.031) fail; the spectra and the maps imply inconsistent exchange scales",
+   "ablation": "spin_length_one_in_dynamics",
+   "difficulty_type": "convention exposed only by cross-checking two data types"
+  },
+  {
+   "id": "dp3",
+   "fork": "Paramagnetic structure factor: spin-length-constrained (SCGA/MC) or mean-field RPA",
+   "wrong_choice": "Mean-field RPA susceptibility at the nominal temperatures (or at the lowest temperature where it is finite)",
+   "consequence": "RPA is singular below its mean-field temperature (~16 K); its 14 K map gives r 0.50 (0.81 at 17 K) and the strongly coupled reduced model 5e (easy-axis mean-field temperature ~21 K) gives r 0.31",
+   "ablation": "mean_field_rpa_nominal_T",
+   "difficulty_type": "model class; regime judgement near T_N"
+  },
+  {
+   "id": "dp4",
+   "fork": "Whether the single-ion anisotropy is needed",
+   "wrong_choice": "Isotropic Heisenberg model (D = 0), J refitted to the same spectra",
+   "consequence": "The incommensurate spiral becomes the ground state and k_LT moves by 0.034 (fails); the paramagnetic maps barely change (r14 0.889), so the error is invisible in the diffuse data",
+   "ablation": "isotropic_model_no_anisotropy",
+   "difficulty_type": "confounder: anisotropy irrelevant above T_N but decisive for the ground state"
+  },
+  {
+   "id": "dp5",
+   "fork": "What the archived structure factor contains",
+   "wrong_choice": "Apply the Mn2+ magnetic form factor (as in the experiment) to the predicted maps",
+   "consequence": "14 K r 0.71, 5d r 0.29, 5e r 0.75: the archived |S| has no form factor (the purchased maps show no |q| decay)",
+   "ablation": "magnetic_form_factor_applied",
+   "difficulty_type": "evidence in the raw outputs (neutron convention)"
+  },
+  {
+   "id": "dp6",
+   "fork": "Interpretation of the half-moons: classical spin-liquid local constraint (temperature-insensitive) or short-range order of competing 3D exchange",
+   "wrong_choice": "Spin-liquid view: the half-moons do not sharpen on cooling (use the 20 K map as the 14 K map) and do not depend on particular bonds",
+   "consequence": "14 K r 0.83, 5d r 0.61, 5e r 0.79 and the wrong origin",
+   "ablation": "temperature_insensitive_spin_liquid",
+   "difficulty_type": "competing explanation; transfer to a withheld temperature"
+  },
+  {
+   "id": "dp7",
+   "fork": "Quasi-1D zigzag-chain explanation versus 3D couplings",
+   "wrong_choice": "Keep only the intra-chain couplings J1 and J4",
+   "consequence": "All maps fail (r 0.35-0.51), k_LT wrong, wrong origin",
+   "ablation": "quasi_1d_chain_model",
+   "difficulty_type": "competing explanation"
+  }
+ ],
+ "graded_fields": [
+  "propagation_vector_rlu within 0.020 r.l.u. (max component, modulo sign and G) of the Luttinger-Tisza vector of the archived Hamiltonian",
+  "map_14K_prediction: Pearson r >= 0.85 with the archived 14 K block averages",
+  "reduced_model_predictions: 5d r >= 0.68, 5e r >= 0.88 against the archived 20 K block averages",
+  "half_moon_origin == competing_3d_exchange",
+  "not graded numerically (required, reviewed with the report): exchange_meV, anisotropy_D_meV, spiral_minus_af1_meV_per_Mn"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 23,
+  "oracle_charge": 29,
+  "budget": 33,
+  "catalog_worth_units": 169,
+  "tool_calls": "55-85",
+  "gpt6astra_cost_usd": "3.5-5",
+  "why": "Bond bookkeeping for a 2-site monoclinic cell with 12 paths, an 8-sublattice AF1 linear spin-wave code with anisotropy, robust fitting of noisy spectra, a rank/null-vector analysis, a 2-sublattice SCGA with anisotropy, Luttinger-Tisza minimisation and block-averaged map predictions.",
+  "oracle_container_seconds": 25,
+  "pilot": "pending (coordinator)",
+  "harbor_oracle_runtime_s": 63
+ },
+ "runtime_dependencies": [
+  "numpy and scipy (runtime image); the lab is a lookup of archived UppASD outputs (data.npz, 3.1 MB), grading is numpy"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/p8297-g9n39",
+  "doi": "10.24435/materialscloud:s5-a8",
+  "paper": "arXiv:2503.23704",
+  "files_used": [
+   "Fig_2.zip",
+   "Fig_4.zip",
+   "Fig_7.zip",
+   "Fig_5_and_Fig_10.zip"
+  ],
+  "md5": {
+   "Fig_2.zip": "aa3841d1f4b7be0718f4cf502ff12a9f",
+   "Fig_4.zip": "9520e07c20ddde03d70f42770ec7890c",
+   "Fig_7.zip": "c2080da562d727f4651f863e0c7a040e",
+   "Fig_5_and_Fig_10.zip": "eb1da6949f380e604eb8610030a2d924"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the design: the lab serves the authors' archived UppASD outputs (spectra, maps, reduced-model maps, zone slices) instead of an LSWT/SCGA calculator, because the agent can run those itself and the budget would not bind. No synthetic data are generated: the archived spin-dynamics outputs of the authors' model are the 'measurements' and the experimental neutron data (not archived) are not used. Model T_N is not graded (no archived temperature sweep; the paper's ~11 K comes from heat-capacity runs that are not archived; it is a rubric item). The categorical 'three dominant bonds' target was replaced by predictions of the withheld reduced-model maps (paper Fig. 5d,e) plus the origin category, because a ranking of |J| is not stable (J4 -0.334 vs J9 -0.317). The withheld zone-boundary magnon energy was dropped: off-path energies would have to come from builder forward modelling, and on-path points are interpolation. Coordinator review (2026-10-20): individual J/D windows and the spiral-AF1 energy window were removed from grading. Without literature priors the archived data do not pin them: a spectra-only global search finds a solution that fits the 20 spectra better than the archived parameters (cost 109.5 vs 121.5, J1 = +0.02, D = -0.37) but fails the maps, and joint spectra+maps searches give J1 from -0.37 to -0.87 and spiral-AF1 from -0.076 to +0.048 meV/Mn while all reproducing the graded maps and k. The box-quantised/experimental k decision point (old dp5) was dropped from grading for the same reason (the k tolerance needed by non-recall fits, 0.020, accepts k_ic at 0.0157); it remains rubric item 7.",
+ "calibration": {
+  "propagation_vector_distance_rlu": {
+   "reference": 0.0,
+   "oracle": 0.0109,
+   "robustness": {
+    "wide_spectra_20K": 0.0066,
+    "three_maps": 0.0112,
+    "zone_peak_null": 0.004,
+    "no_literature_best_of_4_seeds": 0.0156,
+    "no_literature_seed1": 0.0159
+   },
+   "nearest_ablation": {
+    "spin_length_one": 0.0309,
+    "isotropic": 0.034,
+    "min_norm": 0.0488
+   },
+   "not_failing_any_more": {
+    "experimental_kic": 0.0157,
+    "48x24x24_box_peak": 0.017
+   },
+   "tolerance": "<= 0.020"
+  },
+  "map_14K_pearson": {
+   "reference_model_scga": 0.9429,
+   "oracle": 0.916,
+   "robustness": {
+    "wide_spectra_20K": 0.9243,
+    "three_maps": 0.9154,
+    "zone_peak_null": 0.931,
+    "monte_carlo_archived_H (7x8 blocks)": 0.92,
+    "no_literature_best_of_4_seeds": 0.9167
+   },
+   "nearest_ablation": {
+    "temperature_insensitive": 0.8252,
+    "rpa_17K": 0.8148,
+    "form_factor": 0.7142,
+    "spin_length_one": 0.7202,
+    "isotropic (passes; fails D, k, energy)": 0.8886,
+    "min_norm (passes; fails k, energy)": 0.9046
+   },
+   "tolerance": ">= 0.85"
+  },
+  "reduced_5d_pearson": {
+   "reference_model_scga": 0.7442,
+   "oracle": 0.7356,
+   "robustness": {
+    "wide_spectra_20K": 0.7348,
+    "three_maps": 0.7352,
+    "zone_peak_null": 0.7463,
+    "no_literature_best_of_4_seeds": 0.7213
+   },
+   "nearest_ablation": {
+    "temperature_insensitive": 0.6124,
+    "chain_only": 0.3537,
+    "form_factor": 0.2885,
+    "spin_length_one (passes; fails elsewhere)": 0.703,
+    "rpa (passes; fails 5e)": 0.7507
+   },
+   "tolerance": ">= 0.68"
+  },
+  "reduced_5e_pearson": {
+   "reference_model_scga": 0.9411,
+   "oracle": 0.9365,
+   "robustness": {
+    "wide_spectra_20K": 0.9362,
+    "zone_peak_null": 0.9365,
+    "no_literature_best_of_4_seeds": 0.9097
+   },
+   "nearest_ablation": {
+    "spin_length_one": 0.8113,
+    "temperature_insensitive": 0.7881,
+    "form_factor": 0.7461,
+    "chain_only": 0.5063,
+    "rpa": 0.3069
+   },
+   "tolerance": ">= 0.88"
+  },
+  "reported_not_graded": {
+   "J1_meV": {
+    "reference": -0.5865,
+    "oracle": -0.5976,
+    "no_literature_seeds": [
+     -0.6223,
+     -0.3707,
+     -0.6174,
+     -0.8697
+    ]
+   },
+   "D_meV": {
+    "reference": -0.1918,
+    "oracle": -0.189,
+    "no_literature_seeds": [
+     -0.1138,
+     -0.1847,
+     -0.1747,
+     -0.1003
+    ]
+   },
+   "spiral_minus_af1_meV_per_Mn": {
+    "reference": 0.0312,
+    "oracle": 0.0542,
+    "no_literature_seeds": [
+     -0.0196,
+     0.048,
+     0.0328,
+     -0.0756
+    ]
+   }
+  }
+ },
+ "solution_route": "Oracle (solve.py): 20 spectra fitted from the paper's rounded Table I as a starting point (fast and deterministic), J3 - J11 fixed by the 20/30 K maps, SCGA/LT predictions. Non-recall route (construction/.../nonrecall.py, fitlib.Joint): differential evolution over J1..J12, D and the SCGA temperature scale on 10 spectra + 20/30 K block maps + the 11 K ordering-peak constraint, joint polish, null scan; ~13 min single-threaded per seed. Best of 4 seeds by objective passes every graded check (k 0.0156, r14 0.917, 5d 0.721, 5e 0.910; listed in ROBUSTNESS); seed 1 also passes, seed 3 fails 5d/5e and seed 4 fails k (0.0214). Graded checks therefore do not depend on recalling literature values."
+}

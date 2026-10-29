@@ -1,0 +1,214 @@
+{
+ "task_id": "superionic-heat-transport-size-onsager",
+ "catalog_id": "superionic-heat-transport-size-onsager",
+ "start": "released",
+ "source_group": "grasselli_2022_superionic_finite_size",
+ "title": "Superionic heat transport: multicomponent Green-Kubo and cell size",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "competing explanation / evidence in the data",
+   "fork": "Single-flux Green-Kubo of the raw LAMMPS heat flux vs multicomponent (Onsager) analysis with the anion current once anions diffuse",
+   "wrong_choice": "Integrate the raw heat-flux spectrum/autocorrelation for every run (it is right in the crystal, where both agree)",
+   "consequence": "kappa inflated by 1.2x (UO2), ~2x (CaF2) and ~4x (PbF2) in the superionic regime, gauge dependent, with a spurious rise above the transition",
+   "ablation": "raw_heat_flux_single_component_gk"
+  },
+  {
+   "id": "dp2",
+   "kind": "discriminating purchase under budget / finite size",
+   "fork": "Which supercell to spend the budget on (cost 1/2/4 for 96/324/768 atoms)",
+   "wrong_choice": "Use the cheap 96-atom cells",
+   "consequence": "kappa 15-25% low (UO2 1700 K -25%, UO2 3400 K -15%, PbF2 1200 K -19%)",
+   "ablation": "smallest_96_atom_cells"
+  },
+  {
+   "id": "dp3",
+   "kind": "convention in metadata",
+   "fork": "Normalisation of the served flux: compute heat/flux is extensive (J*V) and S(0) = 2 int_0^inf <JJ>",
+   "wrong_choice": "Take the zero-frequency spectrum as int_0^inf <JJ> (one-sided normalisation)",
+   "consequence": "all kappa doubled",
+   "ablation": "spectrum_normalisation_factor_two"
+  },
+  {
+   "id": "dp4",
+   "kind": "regime judgement / competing explanation",
+   "fork": "Whether the crystalline (phonon-gas) temperature dependence continues into the superionic regime",
+   "wrong_choice": "Extrapolate crystalline 4x4x4 kappa with kappa ~ 1/T to the superionic states",
+   "consequence": "UO2 3400 K -28%, CaF2 1600 K -25%, PbF2 1200 K -43%: kappa saturates instead",
+   "ablation": "phonon_gas_one_over_T_extrapolation"
+  },
+  {
+   "id": "dp5",
+   "kind": "regime judgement (transfer of a convergence conclusion)",
+   "fork": "Whether the 324-atom cell, adequate in the superionic regime (within 3-10% of 768 atoms), is adequate for crystalline UO2",
+   "wrong_choice": "Use 3x3x3 UO2 at 1700 K",
+   "consequence": "kappa 15% low (long-wavelength phonons cut off in the crystal)",
+   "ablation": "uo2_324_atom_cell_assumed_converged"
+  },
+  {
+   "id": "dp6",
+   "kind": "competing explanation / discriminating purchase",
+   "fork": "Does the NVT (CSVR) thermostat bias the Green-Kubo integral? NVE runs are missing for PbF2 4x4x4 above 900 K and for CaF2 below 900 K",
+   "wrong_choice": "Assume thermostat bias, discard NVT, use the largest NVE cell (3x3x3) for PbF2 at 1200 K",
+   "consequence": "Wrong thermostat verdict (116 NVE/NVT pairs agree: ratio 0.998 +- 0.064) and PbF2 1200 K -12%",
+   "ablation": "thermostat_bias_assumed_nvt_discarded"
+  }
+ ],
+ "graded_fields": [
+  "kappa_predictions_W_mK for 4 withheld 768-atom states (UO2 1700 K, UO2 3400 K, CaF2 1600 K, PbF2 1200 K), each within 12% relative",
+  "kappa_runs_W_mK for 3 served superionic runs (UO2-NVE-4x4x4-3500K, CaF2-NVE-4x4x4-1700K, PbF2-NVT-4x4x4-1300K), each within 12% relative",
+  "thermostat_biases_kappa == false"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 13,
+  "oracle_charge": 43,
+  "budget": 48,
+  "catalog_total_cost": 544,
+  "catalog_runs": 241,
+  "tool_calls": "40-70",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "pilot": "pending (sonnet, terra)"
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image); no extra lab dependencies"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/yzhmw-vje16",
+  "doi": "10.24435/materialscloud:jy-tw",
+  "paper_doi": "10.1063/5.0087382",
+  "license": "CC BY 4.0",
+  "files_used": [
+   "UO2_heat.zip: UO2_heat/NVE_L_T/, UO2_heat/NVT_L_T_heat/",
+   "CaF2.zip: CaF2/NVE_L_T_heat/, CaF2/NVT_L_T_heat/",
+   "PbF2.zip: PbF2/NVE_L_T_6p056_heat/, PbF2/NVT_L_T_6p056_heat/"
+  ],
+  "md5": {
+   "UO2_heat.zip": "de844afbecd3fd5e72812ccb341644ad",
+   "CaF2.zip": "7a88bad620f87627aa4acb18266254d1",
+   "PbF2.zip": "7c99d63a2e0e0662a2aa634496405e39"
+  },
+  "member_checksums": "benchmarks/construction/superionic-heat-transport-size-onsager/members.json (SHA256 of 511 members)",
+  "not_used": "the NVT diffusion folders of the sibling task fluorite-superionic-finite-size; alpha-AgI heat folder (no NVE runs)"
+ },
+ "exceptions": {},
+ "notes": "Design adaptations: (b) a saturation temperature is not graded (the onset is located only to within ~200-300 K with 3-5% noise per run); it is a rubric item. (c) the relative size of the mass-flux correction is not graded as a number because naming the raw-flux estimate would reveal decision point 1; it is graded implicitly through kappa of three served superionic runs (raw-flux values fail by 22%, 118% and 325%) and is a rubric item. (d) a size-extrapolated kappa is not graded: three cell sizes, 3-5% noise and 1/L vs 1/N forms give extrapolations differing by >20%, so it is not uniquely recoverable; graded states are 768-atom states instead. The thermostat fork became a graded verdict because the released NVT runs (global CSVR) agree with NVE.",
+ "calibration": {
+  "kappa_predictions_W_mK[UO2-4x4x4-1700K]": {
+   "reference": 1.6717,
+   "oracle": 1.6441,
+   "robustness_rel": {
+    "lowpass_3THz": -0.029,
+    "nve_only": 0.019,
+    "single_neighbour": -0.052,
+    "linear_extrapolation_both_ensembles": 0.029
+   },
+   "ablations_rel": {
+    "plain_flux": -0.024,
+    "smallest_cells": -0.255,
+    "factor_two": 0.967,
+    "phonon_gas": -0.016,
+    "cell3_converged": -0.152,
+    "thermostat_bias": 0.019
+   },
+   "tolerance": "+-12% relative"
+  },
+  "kappa_predictions_W_mK[UO2-4x4x4-3400K]": {
+   "reference": 1.2112,
+   "oracle": 1.215,
+   "robustness_rel": {
+    "lowpass_3THz": 0.002,
+    "nve_only": 0.003,
+    "single_neighbour": 0.019,
+    "linear_extrapolation_both_ensembles": 0.021
+   },
+   "ablations_rel": {
+    "plain_flux": 0.211,
+    "smallest_cells": -0.151,
+    "factor_two": 1.006,
+    "phonon_gas": -0.279,
+    "cell3_converged": 0.003,
+    "thermostat_bias": 0.003
+   },
+   "tolerance": "+-12% relative"
+  },
+  "kappa_predictions_W_mK[CaF2-4x4x4-1600K]": {
+   "reference": 1.3859,
+   "oracle": 1.4001,
+   "robustness_rel": {
+    "lowpass_3THz": -0.013,
+    "nve_only": 0.01,
+    "single_neighbour": 0.026,
+    "linear_extrapolation_both_ensembles": 0.005
+   },
+   "ablations_rel": {
+    "plain_flux": 0.898,
+    "smallest_cells": -0.118,
+    "factor_two": 1.02,
+    "phonon_gas": -0.25,
+    "cell3_converged": 0.01,
+    "thermostat_bias": 0.01
+   },
+   "tolerance": "+-12% relative"
+  },
+  "kappa_predictions_W_mK[PbF2-4x4x4-1200K]": {
+   "reference": 0.6888,
+   "oracle": 0.6571,
+   "robustness_rel": {
+    "lowpass_3THz": -0.013,
+    "nve_only": -0.046,
+    "single_neighbour": -0.092,
+    "linear_extrapolation_both_ensembles": -0.046
+   },
+   "ablations_rel": {
+    "plain_flux": 2.696,
+    "smallest_cells": -0.191,
+    "factor_two": 0.908,
+    "phonon_gas": -0.434,
+    "cell3_converged": -0.046,
+    "thermostat_bias": -0.118
+   },
+   "tolerance": "+-12% relative"
+  },
+  "kappa_runs_W_mK[UO2-NVE-4x4x4-3500K]": {
+   "reference": 1.196,
+   "oracle": 1.196,
+   "robustness_rel": {
+    "lowpass_3THz": -0.016
+   },
+   "ablations_rel": {
+    "plain_flux": 0.225,
+    "factor_two": 1.0
+   },
+   "tolerance": "+-12% relative"
+  },
+  "kappa_runs_W_mK[CaF2-NVE-4x4x4-1700K]": {
+   "reference": 1.3789,
+   "oracle": 1.3789,
+   "robustness_rel": {
+    "lowpass_3THz": -0.036
+   },
+   "ablations_rel": {
+    "plain_flux": 1.181,
+    "factor_two": 1.0
+   },
+   "tolerance": "+-12% relative"
+  },
+  "kappa_runs_W_mK[PbF2-NVT-4x4x4-1300K]": {
+   "reference": 0.6256,
+   "oracle": 0.6256,
+   "robustness_rel": {
+    "lowpass_3THz": -0.013
+   },
+   "ablations_rel": {
+    "plain_flux": 3.247,
+    "factor_two": 1.0
+   },
+   "tolerance": "+-12% relative"
+  },
+  "thermostat_biases_kappa": {
+   "reference": false,
+   "evidence": "116 NVE/NVT pairs: kappa_NVT/kappa_NVE = 0.998 +- 0.064 (per-run cepstral error 3-5%)",
+   "ablation": "thermostat_bias_assumed_nvt_discarded -> true"
+  }
+ }
+}

@@ -1,0 +1,5 @@
+!    total energy              =    -158.35849127 Ry
+     estimated scf accuracy    <          1.7E-10 Ry
+     The total energy is F=E-TS. E is the sum of the following terms:
+     total magnetization       =     6.00 Bohr mag/cell
+     PWSCF        :   4m41.95s CPU   5m24.18s WALL

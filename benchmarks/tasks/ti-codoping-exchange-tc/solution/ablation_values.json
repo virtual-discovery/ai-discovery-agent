@@ -1,0 +1,91 @@
+{
+ "ablations": {
+  "mean_field_two_sublattice": {
+   "curie_temperature_K": {
+    "V5Cr5": 81.798,
+    "Cr5Mo5": 76.722,
+    "Cr5Mn5": 60.214,
+    "V2Cr2": 32.719,
+    "Cr5Co5": 50.607
+   },
+   "best_codopant_for_Cr": "Nb"
+  },
+  "authors_averaged_mean_field": {
+   "curie_temperature_K": {
+    "V5Cr5": 39.225,
+    "Cr5Mo5": 33.972,
+    "Cr5Mn5": 22.322,
+    "V2Cr2": 15.69,
+    "Cr5Co5": 12.855
+   },
+   "best_codopant_for_Cr": "Nb"
+  },
+  "single_placement_per_size": {
+   "curie_temperature_K": {
+    "V5Cr5": 14.889,
+    "Cr5Mo5": 17.647,
+    "Cr5Mn5": 0.0
+   }
+  },
+  "codopant_by_mean_field": {
+   "best_codopant_for_Cr": "Nb"
+  },
+  "linear_in_concentration": {
+   "curie_temperature_K": {
+    "V2Cr2": 4.282
+   }
+  },
+  "zero_filled_coco": {
+   "curie_temperature_K": {
+    "Cr5Co5": 0.0
+   }
+  },
+  "near_shells_only": {
+   "curie_temperature_K": {
+    "V5Cr5": 0.0,
+    "Cr5Mo5": 0.0
+   }
+  },
+  "dimer_moment_collapse": {
+   "curie_temperature_K": {
+    "Cr5Mn5": 5.349,
+    "Cr5Mo5": 5.349
+   }
+  }
+ },
+ "robustness": {
+  "scaled_m2_crossing_L3_L4": {
+   "curie_temperature_K": {
+    "V5Cr5": 11.35,
+    "Cr5Mo5": 18.618,
+    "Cr5Mn5": 10.283
+   }
+  },
+  "scaled_m2_crossing_L5_L6": {
+   "curie_temperature_K": {
+    "V5Cr5": 10.754,
+    "Cr5Mo5": 19.579,
+    "Cr5Mn5": 11.007
+   }
+  },
+  "binder_crossing_L3_L4": {
+   "curie_temperature_K": {
+    "V5Cr5": 9.809,
+    "Cr5Mo5": 18.275,
+    "Cr5Mn5": 9.891
+   }
+  },
+  "binder_crossing_L5_L6": {
+   "curie_temperature_K": {
+    "V5Cr5": 11.365,
+    "Cr5Mo5": 17.372,
+    "Cr5Mn5": 11.96
+   }
+  },
+  "V2Cr2_binder_noise_crossing": {
+   "curie_temperature_K": {
+    "V2Cr2": 2.036
+   }
+  }
+ }
+}

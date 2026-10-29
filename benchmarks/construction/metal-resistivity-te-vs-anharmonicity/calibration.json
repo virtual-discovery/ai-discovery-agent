@@ -1,0 +1,102 @@
+{
+ "truth": {
+  "al_te_change_percent_481K": 8.944573405547306,
+  "pb_te_resistivity_610K": 85.44160493510711,
+  "pb_anharmonic_change_percent_0K_lattice": {
+   "410": -25.188360554713395,
+   "610": -29.459774093068624
+  },
+  "pb_te_anharm_resistivity_510K": 36.723392066278386,
+  "nb_te_anharm_resistivity_2000K": 91.76416609314063
+ },
+ "oracle_model": {
+  "al": 8.944573405547306,
+  "te610": 83.88830355400103,
+  "anh": {
+   "410": -25.48420081831686,
+   "610": -29.591953207838806
+  },
+  "ta510": 37.337501132955026,
+  "nb": 94.09099381295049
+ },
+ "ablations": {
+  "al_reference_mesh70": 10.914361636193703,
+  "al_reference_mesh60": 11.09271971558341,
+  "te_anh_510_separable_multiplicative": 43.30117780555153,
+  "te_anh_510_separable_additive": 49.481783425133045,
+  "anharm_from_expanded_lattice": {
+   "410": -29.25012372482473,
+   "610": -45.139802342069956
+  },
+  "anharm_inverse_square_moment": {
+   "410": -29.683413486294818,
+   "610": -29.80212100536942
+  },
+  "te_anh_510_inverse_square_moment": 40.121604816874864,
+  "nb_cancellation": 103.0583598880374,
+  "nb_pb_calibrated_surrogate": 97.96214172697269,
+  "nb_uncalibrated_surrogate": 99.17942805934807,
+  "nb_constant_anharmonic_fraction": 102.43436667251106,
+  "te_610_linear_extrapolation": 77.39395610444237,
+  "te_610_phonon_only": 75.04370396930771,
+  "serta": {
+   "al": 9.518446358954025,
+   "te610": 86.65412146854193,
+   "anh": {
+    "410": -24.65077131124215,
+    "610": -28.804467273627566
+   },
+   "ta510": 39.30016167448901,
+   "nb": 99.025220514957
+  },
+  "te_anh_510_linear_fit_with_10K": 33.14376201433011,
+  "calibration_with_10K": {
+   "anh": {
+    "410": -22.363466517952634,
+    "610": -26.643252273823215
+   },
+   "ta510": 38.901202009213534
+  }
+ },
+ "robustness": {
+  "longitudinal_q2": {
+   "anh": {
+    "410": -24.445113784336215,
+    "610": -29.115830298321
+   },
+   "ta510": 38.13728751511799,
+   "nb": 89.75451953195935,
+   "te610": 83.12427990383331
+  },
+  "calibration_110_310": {
+   "anh": {
+    "410": -25.169015020249564,
+    "610": -29.294142318574355
+   },
+   "ta510": 37.49543072938512
+  },
+  "uncalibrated_q2_pb": {
+   "anh": {
+    "410": -24.558260834861844,
+    "610": -28.717056522870287
+   }
+  },
+  "te_610_ratio_quadratic": 82.71694987229745,
+  "te_610_rho_cubic": 83.59587911906033,
+  "te_610_residual_constant": 82.17698358833091,
+  "te_610_rho_quadratic": 81.54772179742974,
+  "te_610_uniform_weight_with_residual": 84.36107192805528,
+  "nb_ratio_to_harmonic": 89.10764827959241,
+  "nb_proportional_T": 95.73683857811646,
+  "te_anh_510_ratio_to_harmonic_linear": 37.01264545316012,
+  "te_anh_510_linear_fit_110_310": 35.392422003517886,
+  "al_linear_interpolation": 8.914808374796257
+ },
+ "thresholds": {
+  "al_te_change_abs_pp": 1.0,
+  "pb_te_610_rel": 0.06,
+  "pb_anharm_abs_pp": 3.0,
+  "pb_te_anharm_510_rel": 0.05,
+  "nb_te_anharm_2000_rel": 0.055
+ }
+}

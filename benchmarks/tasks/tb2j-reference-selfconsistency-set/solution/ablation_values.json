@@ -1,0 +1,96 @@
+{
+ "ablations": {
+  "kmin_FeP_from_pairs_below_14A": [
+   -3.772866205007658e-06,
+   0.020659346406509016,
+   -0.22434156666476746
+  ],
+  "kmin_FeP_from_pairs_below_11A": [
+   2.543127879883445e-08,
+   -0.312828219144033,
+   -0.0016225578078197973
+  ],
+  "kmin_FeP_paper_verbatim": [
+   0.0,
+   0.03,
+   0.21
+  ],
+  "kmin_FeP_commensurate_approximant": [
+   0.0,
+   0.0,
+   0.2
+  ],
+  "FeP_fm_energy_pairs_below_18A": 15.408881328794342,
+  "kmin_FeP_pairs_below_18A": [
+   0.00012160665122597057,
+   -0.03146338025920553,
+   -0.22057439195534911
+  ],
+  "insulators_truncated": {
+   "FeCl2_fm_below_8A": 0.3304000000000116,
+   "FePS3_DFT_fm_below_11A": 46.655,
+   "FePS3_DFT_conv_below_11A": 46.49279999999999
+  },
+  "FeCl2_conv_long_windows_skipped": 0.4012666666666789,
+  "FeP_conv_long_windows_skipped": 96.40564674129725,
+  "kmin_conv_FeP_folded_as_listed": [
+   0.0,
+   0.5,
+   0.0
+  ],
+  "kmin_conv_FeP_folded_as_listed_sum5": [
+   -0.0018722200812044628,
+   0.02458809082896059,
+   0.2069255085410296
+  ],
+  "FePS3_DFT+U_fm_from_archived_FM_file": 48.477424889105336,
+  "FeP_fm_energy_of_its_own_LT_helix": 29.079331079872556,
+  "kmin_conv_FeP_assumed_reference_independent": [
+   4.589074414826892e-05,
+   0.030572949919458983,
+   0.21793334026827776
+  ]
+ },
+ "robustness": {
+  "kmin_FeP_pairs_below_18A": [
+   0.00012160665122597057,
+   -0.03146338025920553,
+   -0.22057439195534911
+  ],
+  "kmin_FeP_pairs_below_23A": [
+   -3.6067829360709726e-05,
+   -0.030634000049109655,
+   -0.21793212096685255
+  ],
+  "FeP_relaxed_spiral": {
+   "fm_reference": 13.651877610752736,
+   "converged_reference": 102.13543366719679
+  },
+  "insulators_pairs_below_14A": {
+   "FePS3_DFT": {
+    "fm_reference": 47.2983,
+    "converged_reference": 53.081000000000024
+   },
+   "FeCl2_fm_below_11A": 0.4919999999999902,
+   "NiO": {
+    "fm_reference": 137.1232,
+    "converged_reference": 136.8252
+   }
+  },
+  "kmin_conv_FeP_sum5": [
+   0.0023537071224020564,
+   -0.026624550878394177,
+   -0.1828695069622832
+  ],
+  "kmin_conv_FeP_drop_half_box": [
+   0.0024077762399848466,
+   -0.02589347859564651,
+   -0.18281874147282595
+  ],
+  "kmin_conv_FeP_bought_below_30A": [
+   -0.0022731188938781904,
+   0.02722707044109569,
+   0.18796150712723847
+  ]
+ }
+}

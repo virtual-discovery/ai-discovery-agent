@@ -1,0 +1,32 @@
+{
+ "task_id": "hgte-gated-subband-densities",
+ "solver_budget": 25,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "hall_scan": {
+   "kind": "hall_scan",
+   "sample": "<sample>",
+   "cost": 1
+  },
+  "transport": {
+   "kind": "transport",
+   "sample": "<sample>",
+   "vg_center": "<value from catalog transport.vg_centers>",
+   "cost": 1
+  },
+  "calculation": {
+   "kind": "calculation",
+   "sample": "<sample>",
+   "n_nm2": "<value from catalog calculations>",
+   "cost": 1
+  },
+  "pocket_calculation": {
+   "kind": "pocket_calculation",
+   "sample": "<sample>",
+   "n_nm2": "<value from catalog pocket_calculations>",
+   "kphi_deg": "[105, 165] or [165, 285]",
+   "cost": 1
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

@@ -1,0 +1,423 @@
+{
+  "currency": "USD",
+  "pricing_checked_date": "2026-10-08",
+  "rates": {
+    "Opus 4.6": {
+      "input_per_million": "5",
+      "output_per_million": "25",
+      "source": "https://platform.claude.com/docs/en/models/opus-4-6/overview",
+      "input_per_token": "0.000005",
+      "output_per_token": "0.000025"
+    },
+    "GPT-5.3-Codex": {
+      "input_per_million": "1.75",
+      "output_per_million": "14",
+      "source": "https://developers.openai.com/api/docs/models/gpt-5.3-codex",
+      "input_per_token": "0.00000175",
+      "output_per_token": "0.000014"
+    },
+    "Gemini 3.1 Pro": {
+      "model_id": "gemini-3.1-pro-preview",
+      "input_per_million": "2",
+      "output_per_million": "12",
+      "cached_input_per_million": "0.2",
+      "long_context_threshold_tokens": "200000",
+      "input_per_million_long_context": "4",
+      "output_per_million_long_context": "18",
+      "cached_input_per_million_long_context": "0.4",
+      "output_includes_thinking_tokens": true,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checked_date": "2026-10-10"
+    }
+  },
+  "groups": [
+    {
+      "name": "1: Released-start generalization",
+      "tasks_or_episodes": 12,
+      "conditions_per_model": 1,
+      "estimated_requests_per_run": 20,
+      "mean_input_tokens_per_request": 25000,
+      "mean_output_tokens_per_request": 2500,
+      "runs_per_model": 12,
+      "input_tokens_per_run": 500000,
+      "output_tokens_per_run": 50000,
+      "cost_by_model": {
+        "Opus 4.6": {
+          "per_run_usd": "3.75",
+          "group_usd": "45.00",
+          "input_cost_per_run_usd": "2.500000",
+          "output_cost_per_run_usd": "1.250000",
+          "group_input_cost_usd": "30.000000",
+          "group_output_cost_usd": "15.000000"
+        },
+        "GPT-5.3-Codex": {
+          "per_run_usd": "1.575",
+          "group_usd": "18.900",
+          "input_cost_per_run_usd": "0.87500000",
+          "output_cost_per_run_usd": "0.700000",
+          "group_input_cost_usd": "10.50000000",
+          "group_output_cost_usd": "8.400000"
+        }
+      }
+    },
+    {
+      "name": "1: Fresh-start generalization",
+      "tasks_or_episodes": 3,
+      "conditions_per_model": 1,
+      "estimated_requests_per_run": 40,
+      "mean_input_tokens_per_request": 25000,
+      "mean_output_tokens_per_request": 2500,
+      "runs_per_model": 3,
+      "input_tokens_per_run": 1000000,
+      "output_tokens_per_run": 100000,
+      "cost_by_model": {
+        "Opus 4.6": {
+          "per_run_usd": "7.5",
+          "group_usd": "22.5",
+          "input_cost_per_run_usd": "5.000000",
+          "output_cost_per_run_usd": "2.500000",
+          "group_input_cost_usd": "15.000000",
+          "group_output_cost_usd": "7.500000"
+        },
+        "GPT-5.3-Codex": {
+          "per_run_usd": "3.15",
+          "group_usd": "9.45",
+          "input_cost_per_run_usd": "1.75000000",
+          "output_cost_per_run_usd": "1.400000",
+          "group_input_cost_usd": "5.25000000",
+          "group_output_cost_usd": "4.200000"
+        }
+      }
+    },
+    {
+      "name": "2: Calculation-design episodes",
+      "tasks_or_episodes": 24,
+      "conditions_per_model": 1,
+      "estimated_requests_per_run": 10,
+      "mean_input_tokens_per_request": 10000,
+      "mean_output_tokens_per_request": 1000,
+      "runs_per_model": 24,
+      "input_tokens_per_run": 100000,
+      "output_tokens_per_run": 10000,
+      "cost_by_model": {
+        "Opus 4.6": {
+          "per_run_usd": "0.75",
+          "group_usd": "18.00",
+          "input_cost_per_run_usd": "0.500000",
+          "output_cost_per_run_usd": "0.250000",
+          "group_input_cost_usd": "12.000000",
+          "group_output_cost_usd": "6.000000"
+        },
+        "GPT-5.3-Codex": {
+          "per_run_usd": "0.315",
+          "group_usd": "7.560",
+          "input_cost_per_run_usd": "0.17500000",
+          "output_cost_per_run_usd": "0.140000",
+          "group_input_cost_usd": "4.20000000",
+          "group_output_cost_usd": "3.360000"
+        }
+      }
+    },
+    {
+      "name": "3: Generated fitting tasks",
+      "tasks_or_episodes": 12,
+      "conditions_per_model": 2,
+      "estimated_requests_per_run": 20,
+      "mean_input_tokens_per_request": 10000,
+      "mean_output_tokens_per_request": 1000,
+      "runs_per_model": 24,
+      "input_tokens_per_run": 200000,
+      "output_tokens_per_run": 20000,
+      "cost_by_model": {
+        "Opus 4.6": {
+          "per_run_usd": "1.5",
+          "group_usd": "36.0",
+          "input_cost_per_run_usd": "1.000000",
+          "output_cost_per_run_usd": "0.500000",
+          "group_input_cost_usd": "24.000000",
+          "group_output_cost_usd": "12.000000"
+        },
+        "GPT-5.3-Codex": {
+          "per_run_usd": "0.63",
+          "group_usd": "15.12",
+          "input_cost_per_run_usd": "0.35000000",
+          "output_cost_per_run_usd": "0.280000",
+          "group_input_cost_usd": "8.40000000",
+          "group_output_cost_usd": "6.720000"
+        }
+      }
+    },
+    {
+      "name": "3: Live fitting transfer",
+      "tasks_or_episodes": 3,
+      "conditions_per_model": 2,
+      "estimated_requests_per_run": 20,
+      "mean_input_tokens_per_request": 10000,
+      "mean_output_tokens_per_request": 1000,
+      "runs_per_model": 6,
+      "input_tokens_per_run": 200000,
+      "output_tokens_per_run": 20000,
+      "cost_by_model": {
+        "Opus 4.6": {
+          "per_run_usd": "1.5",
+          "group_usd": "9.0",
+          "input_cost_per_run_usd": "1.000000",
+          "output_cost_per_run_usd": "0.500000",
+          "group_input_cost_usd": "6.000000",
+          "group_output_cost_usd": "3.000000"
+        },
+        "GPT-5.3-Codex": {
+          "per_run_usd": "0.63",
+          "group_usd": "3.78",
+          "input_cost_per_run_usd": "0.35000000",
+          "output_cost_per_run_usd": "0.280000",
+          "group_input_cost_usd": "2.10000000",
+          "group_output_cost_usd": "1.680000"
+        }
+      }
+    }
+  ],
+  "runs_total": 138,
+  "api_subtotal_usd": "185.310",
+  "measured_development_cost_usd": "11.36537010",
+  "prior_credential_check_usd": ".00016",
+  "pilot_based_projection": {
+    "status": "provisional: heterogeneous small pilots, two model/block combinations unmeasured",
+    "rows": [
+      {
+        "block": "1: Released-start generalization",
+        "model": "claude-opus-4-6",
+        "basis": "measured development mean",
+        "complete_pilot_n": 2,
+        "runs": 12,
+        "tokens_per_run": {
+          "uncached_input": "105462",
+          "cache_read_input": "78106",
+          "cache_write_input": "18405.5",
+          "output": "14446.5"
+        },
+        "usd_per_token": {
+          "uncached_input": "0.000005",
+          "cache_read_input": "5E-7",
+          "cache_write_input": "0.00000625",
+          "output": "0.000025"
+        },
+        "cost_per_run_usd": "1.042559875",
+        "total_usd": "12.510718500"
+      },
+      {
+        "block": "1: Released-start generalization",
+        "model": "gpt-5.3-codex",
+        "basis": "measured development mean",
+        "complete_pilot_n": 3,
+        "runs": 12,
+        "tokens_per_run": {
+          "uncached_input": "29697.33333333333333333333333",
+          "cache_read_input": "164522.6666666666666666666667",
+          "cache_write_input": "0",
+          "output": "7340.666666666666666666666667"
+        },
+        "usd_per_token": {
+          "uncached_input": "0.00000175",
+          "cache_read_input": "1.75E-7",
+          "cache_write_input": "0.00000175",
+          "output": "0.000014"
+        },
+        "cost_per_run_usd": "0.1835311333333333333333333333",
+        "total_usd": "2.202373600000000000000000000"
+      },
+      {
+        "block": "1: Fresh-start generalization",
+        "model": "claude-opus-4-6",
+        "basis": "unmeasured planning assumption",
+        "complete_pilot_n": 0,
+        "runs": 3,
+        "tokens_per_run": {
+          "uncached_input": "1000000",
+          "cache_read_input": "0",
+          "cache_write_input": "0",
+          "output": "100000"
+        },
+        "usd_per_token": {
+          "uncached_input": "0.000005",
+          "cache_read_input": "5E-7",
+          "cache_write_input": "0.00000625",
+          "output": "0.000025"
+        },
+        "cost_per_run_usd": "7.50000000",
+        "total_usd": "22.50000000"
+      },
+      {
+        "block": "1: Fresh-start generalization",
+        "model": "gpt-5.3-codex",
+        "basis": "measured development mean",
+        "complete_pilot_n": 1,
+        "runs": 3,
+        "tokens_per_run": {
+          "uncached_input": "73796",
+          "cache_read_input": "1010688",
+          "cache_write_input": "0",
+          "output": "11127"
+        },
+        "usd_per_token": {
+          "uncached_input": "0.00000175",
+          "cache_read_input": "1.75E-7",
+          "cache_write_input": "0.00000175",
+          "output": "0.000014"
+        },
+        "cost_per_run_usd": "0.461791400",
+        "total_usd": "1.385374200"
+      },
+      {
+        "block": "2: Calculation-design episodes",
+        "model": "claude-opus-4-6",
+        "basis": "measured development mean",
+        "complete_pilot_n": 2,
+        "runs": 24,
+        "tokens_per_run": {
+          "uncached_input": "62815",
+          "cache_read_input": "46356.5",
+          "cache_write_input": "11316",
+          "output": "9569"
+        },
+        "usd_per_token": {
+          "uncached_input": "0.000005",
+          "cache_read_input": "5E-7",
+          "cache_write_input": "0.00000625",
+          "output": "0.000025"
+        },
+        "cost_per_run_usd": "0.64720325",
+        "total_usd": "15.53287800"
+      },
+      {
+        "block": "2: Calculation-design episodes",
+        "model": "gpt-5.3-codex",
+        "basis": "measured development mean",
+        "complete_pilot_n": 4,
+        "runs": 24,
+        "tokens_per_run": {
+          "uncached_input": "15959.5",
+          "cache_read_input": "46080",
+          "cache_write_input": "0",
+          "output": "4215.75"
+        },
+        "usd_per_token": {
+          "uncached_input": "0.00000175",
+          "cache_read_input": "1.75E-7",
+          "cache_write_input": "0.00000175",
+          "output": "0.000014"
+        },
+        "cost_per_run_usd": "0.095013625",
+        "total_usd": "2.280327000"
+      },
+      {
+        "block": "3: Generated fitting tasks",
+        "model": "claude-opus-4-6",
+        "basis": "measured development mean",
+        "complete_pilot_n": 2,
+        "runs": 24,
+        "tokens_per_run": {
+          "uncached_input": "86441.5",
+          "cache_read_input": "63552.5",
+          "cache_write_input": "10408.5",
+          "output": "11931"
+        },
+        "usd_per_token": {
+          "uncached_input": "0.000005",
+          "cache_read_input": "5E-7",
+          "cache_write_input": "0.00000625",
+          "output": "0.000025"
+        },
+        "cost_per_run_usd": "0.827311875",
+        "total_usd": "19.855485000"
+      },
+      {
+        "block": "3: Generated fitting tasks",
+        "model": "gpt-5.3-codex",
+        "basis": "measured development mean",
+        "complete_pilot_n": 2,
+        "runs": 24,
+        "tokens_per_run": {
+          "uncached_input": "27604",
+          "cache_read_input": "88320",
+          "cache_write_input": "0",
+          "output": "5762"
+        },
+        "usd_per_token": {
+          "uncached_input": "0.00000175",
+          "cache_read_input": "1.75E-7",
+          "cache_write_input": "0.00000175",
+          "output": "0.000014"
+        },
+        "cost_per_run_usd": "0.144431000",
+        "total_usd": "3.466344000"
+      },
+      {
+        "block": "3: Live fitting transfer",
+        "model": "claude-opus-4-6",
+        "basis": "unmeasured planning assumption",
+        "complete_pilot_n": 0,
+        "runs": 6,
+        "tokens_per_run": {
+          "uncached_input": "200000",
+          "cache_read_input": "0",
+          "cache_write_input": "0",
+          "output": "20000"
+        },
+        "usd_per_token": {
+          "uncached_input": "0.000005",
+          "cache_read_input": "5E-7",
+          "cache_write_input": "0.00000625",
+          "output": "0.000025"
+        },
+        "cost_per_run_usd": "1.50000000",
+        "total_usd": "9.00000000"
+      },
+      {
+        "block": "3: Live fitting transfer",
+        "model": "gpt-5.3-codex",
+        "basis": "measured development mean",
+        "complete_pilot_n": 1,
+        "runs": 6,
+        "tokens_per_run": {
+          "uncached_input": "82488",
+          "cache_read_input": "833536",
+          "cache_write_input": "0",
+          "output": "5681"
+        },
+        "usd_per_token": {
+          "uncached_input": "0.00000175",
+          "cache_read_input": "1.75E-7",
+          "cache_write_input": "0.00000175",
+          "output": "0.000014"
+        },
+        "cost_per_run_usd": "0.369756800",
+        "total_usd": "2.218540800"
+      }
+    ],
+    "runs": 138,
+    "future_api_usd": "90.95204110000000000000000000",
+    "future_api_plus_recorded_spend_usd": "102.3175712000000000000000000",
+    "excludes": "future retries, rental, Qwen compute/adaptation, full AI Theorist runs",
+    "cache_policy": "Observed pilot cache mix is extrapolated, not guaranteed for future runs."
+  },
+  "prior_rental_estimate_usd": "0.07499914033",
+  "total_budget_usd": "2000",
+  "note": "Token rate estimates, not reconciled invoices. Prior developmental spending is additional to future comparative runs. Any other billed compute, storage, transfer or training must be added before spending. Historical Table4 cost claims are separate, unreconciled records.",
+  "experiment1_actual": {
+    "basis": "provider-reported tokens x list rates (usage.json per episode); invoices not reconciled",
+    "recorded_utc": "2026-10-11",
+    "campaign_api_usd": {
+      "exp1-smoke": 6.6920192,
+      "exp1-smoke-v2": 3.8914632,
+      "exp1-opus": 11.94891275,
+      "exp1-codex": 3.65118005,
+      "exp1-gemini": 6.8299928
+    },
+    "outside_runner_api_usd": {
+      "gemini_access_probe_and_harness_dry_run": 0.0303
+    },
+    "experiment1_api_total_usd": 33.0439,
+    "compute": "local host only (no rental) for Experiment 1"
+  }
+}

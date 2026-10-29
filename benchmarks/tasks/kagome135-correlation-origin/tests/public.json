@@ -1,0 +1,5 @@
+{
+ "task_id": "kagome135-correlation-origin",
+ "solver_budget": 20,
+ "min_report_chars": 400
+}

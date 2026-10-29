@@ -1,0 +1,118 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 7,
+  "task_mb": 5.11,
+  "hidden_values": 6,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 30,
+   "budget": 38,
+   "evaluations": 18,
+   "failed_evaluations": 0,
+   "container_seconds": 68
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "mu_star_equals_bare_mu",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "mu_star_morel_anderson_rescaling",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "mu_from_smeared_NF",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "mu_from_smallest_sigma",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "constant_dos_solver",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "allen_dynes_with_archived_mucAD",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "tc_interpolated_in_pressure",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "conventional_mustar_0.16",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "mu_held_at_0GPa_value",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "NF_per_conventional_cell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "mu_star_equivalent_in_vdos_solver",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "bare_mu_in_vdos_without_kappa",
+    "passes_grading": true
+   },
+   {
+    "name": "nearest_pressure_W_EF",
+    "passes_grading": true
+   },
+   {
+    "name": "mu_star_matched_to_lab_full_W_Tc",
+    "passes_grading": true
+   },
+   {
+    "name": "NF_nearest_grid_point",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T13:21:01Z"
+}

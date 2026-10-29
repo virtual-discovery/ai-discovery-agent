@@ -1,0 +1,1 @@
+&input fildyn='out/gan.dyn', asr='crystal', lperm=.true., filout='out/dynmat.modes' /

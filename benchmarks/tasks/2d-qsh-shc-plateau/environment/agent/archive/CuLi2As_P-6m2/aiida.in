@@ -1,0 +1,46 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   4.0000000000d-05
+  forc_conv_thr =   1.0000000000d-04
+  max_seconds =   4.1040000000d+04
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './pseudo/'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  assume_isolated = '2D'
+  degauss =   1.0000000000d-02
+  ecutrho =   3.6800000000d+02
+  ecutwfc =   9.2000000000d+01
+  ibrav = 0
+  lspinorb = .true.
+  nat = 4
+  noncolin = .true.
+  nosym = .false.
+  ntyp = 3
+  occupations = 'smearing'
+  smearing = 'cold'
+/
+&ELECTRONS
+  conv_thr =   8.0000000000d-10
+  electron_maxstep = 80
+  mixing_beta =   4.0000000000d-01
+/
+ATOMIC_SPECIES
+As     74.9216 As.upf
+Cu     63.546 Cu.upf
+Li     6.941 Li.upf
+ATOMIC_POSITIONS angstrom
+Li           2.0665397339       1.1931172717      12.5766973335
+Li           2.0665397339       1.1931172717      10.0431369178
+Cu           0.0000000000       0.0000000000      11.3099171257
+As           0.0000000001       2.3862345433      11.3099171257
+K_POINTS automatic
+12 12 1 0 0 0
+CELL_PARAMETERS angstrom
+      4.1330794677       0.0000000000       0.0000000000
+     -2.0665397338       3.5793518150       0.0000000000
+      0.0000000000       0.0000000000      22.6198342513

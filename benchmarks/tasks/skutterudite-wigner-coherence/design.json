@@ -1,0 +1,278 @@
+{
+ "task_id": "skutterudite-wigner-coherence",
+ "catalog_id": "skutterudite-wigner-coherence",
+ "start": "released",
+ "source_group": "dilucente_2024_skutterudite_wigner",
+ "title": "Yb-filled skutterudites: Boltzmann-to-Wigner crossover",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Whether the archived isotope rates of the Yb-filled runs are physical",
+   "wrong_choice": "Use the archived gamma_isotope as is (it reproduces the archived YbCo4Sb12 table exactly)",
+   "consequence": "21 entries of 1.7e3-2.0e7 THz at the q-point nearest Gamma kill the long-wavelength acoustic modes: kappa_P of YbIr4Sb12 11% low, T_half 58 K low",
+   "evidence": "gamma_isotope >> frequency only at q-index 1; all other entries < 0.01 THz",
+   "ablation": "archived_isotope_rates_as_is"
+  },
+  {
+   "id": "dp2",
+   "fork": "Whether isotope scattering must be added to the archived (ph-ph) gamma",
+   "wrong_choice": "Use gamma alone (or conclude from the byte-identical 1.19 \"isotope\" files that isotopes do nothing)",
+   "consequence": "Passes for YbIr4Sb12 (0.6%) but IrSb3 kappa_P at 50 K 6.3% high",
+   "evidence": "FeSb3/YbCo4Sb12 logs reproduce only with gamma + gamma_isotope; the 1.19 isotope kappa files equal the no-isotope ones while their logs differ",
+   "ablation": "isotope_scattering_omitted"
+  },
+  {
+   "id": "dp3",
+   "fork": "Which archived CoSb3 Wigner table validates the lifetime convention",
+   "wrong_choice": "Calibrate on tc_data.dat (kP twice the phono3py log) and take tau = 1/(2 pi gamma)",
+   "consequence": "All kappa_P doubled, Lorentzian widths halved (kappa_C 10-20% low), T_half beyond 800 K",
+   "evidence": "phono3py log in the same folder; the script that wrote tc_data.dat uses a 0.5 populations prefactor and omega_1 for omega_2",
+   "ablation": "lifetime_convention_from_tc_data"
+  },
+  {
+   "id": "dp4",
+   "fork": "Where velocity-operator elements within degenerate subspaces belong",
+   "wrong_choice": "Count every off-diagonal element as a coherence",
+   "consequence": "kappa_C of YbIr4Sb12 at 100 K 10% high (2.5% at 300 K)",
+   "evidence": "archived kappa_C of the released runs reproduces only with degenerate pairs excluded",
+   "ablation": "degenerate_pairs_counted_as_coherences"
+  },
+  {
+   "id": "dp5",
+   "fork": "Band-overlap function and width in the coherence term",
+   "wrong_choice": "Gaussian overlap, or a Lorentzian with the phono3py gamma as full width",
+   "consequence": "kappa_C 15-28% (Gaussian) or 16-20% (half width) low; T_half 47-66 K high",
+   "evidence": "archived kappa_C of released runs",
+   "ablation": "gaussian_band_overlap"
+  },
+  {
+   "id": "dp6",
+   "fork": "How to repair the corrupted isotope entries",
+   "wrong_choice": "Discard the affected q-point from the Brillouin-zone sum",
+   "consequence": "kappa_P of YbIr4Sb12 15% low, T_half 86 K low (the q-point carries the long-wavelength acoustic heat)",
+   "evidence": "the ph-ph linewidths and velocities at that q-point are normal; only gamma_isotope failed",
+   "ablation": "corrupted_qpoint_discarded"
+  },
+  {
+   "id": "dp7",
+   "fork": "Units of the archived projected-DOS frequency axis",
+   "wrong_choice": "Read the projected_dos.dat axis as THz",
+   "consequence": "Rattler frequency 6.75 THz instead of 0.97 THz (factor 6.97); the rattler band appears in the optical range",
+   "evidence": "PDOS extends to ~45 on its axis while modes stop at 6.4 THz; the PDOS run used phonopy --qe (factor 108.97) on eV/A^2 force constants (phono3py factor 15.633); the Yb MSD Einstein frequency is 0.98 THz",
+   "ablation": "pdos_axis_taken_as_THz"
+  }
+ ],
+ "graded_fields": [
+  "YbIr4Sb12 kappa_P 300 K (within 5%)",
+  "YbIr4Sb12 kappa_P 700 K (within 5%)",
+  "YbIr4Sb12 kappa_C 100 K (within 6%)",
+  "YbIr4Sb12 kappa_C 300 K (within 6%)",
+  "YbIr4Sb12 kappa_C 700 K (within 6%)",
+  "YbIr4Sb12 T_half (K) (+-25 K)",
+  "YbIr4Sb12 rattler frequency (THz) (within 20%)",
+  "IrSb3 kappa_P 50 K (within 4%)",
+  "IrSb3 kappa_TOT 300 K (within 5%)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 18,
+  "oracle_charge": 27,
+  "budget": 32,
+  "catalog_units": "10 runs x 16 temperatures of mode_data (160) + 6 velocity operators (24) + 11 archived files + 7 harmonic = 202",
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "why": "Parsing large per-mode JSON, implementing the Wigner populations/coherences formula with degenerate handling, validating it against released logs, resolving conflicting archived tables, detecting corrupted isotope rates, and locating the crossover from several temperatures under a budget of about 15% of the catalog.",
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/5jsfj-cdg70",
+  "doi": "10.24435/materialscloud:xn-qr",
+  "files_used": "materials_cloud_archive_submission.zip, 87 members read by HTTP range (list and sha256 in construction/members.json)",
+  "md5": {
+   "materials_cloud_archive_submission.zip": "9dc2bd3b8659022e5703862f82adaa40"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Graded values come from the archived inputs of the withheld runs with the authors' formula (reproduced to 1e-6 on every released 2.1.0 run); the only change is that corrupted gamma_isotope entries (> 1 THz, all at the q-point nearest Gamma) are set to zero. Any repair that keeps the q-point (zero, band median, omega^4 fit) agrees within 0.4%. YbFe4Sb12 is not graded: its two archived fc3 variants differ by 2.4x in kappa_P and neither uses the paper's DFPT-fc2 + hiPhive-fc3 combination. The design's velocity-operator transfer to the hidden compound was dropped (not uniquely recoverable).",
+ "calibration": {
+  "YbIr4Sb12 kappa_P 300 K": {
+   "reference": 0.9167,
+   "robustness": {
+    "isotope_dropped_for_filled_compound_only": "0.922 (+0.6%)",
+    "isotope_repaired_with_band_median": "0.9135 (-0.4%)",
+    "diagonal_populations": "0.9122 (-0.5%)",
+    "degeneracy_threshold_0p1_cm1": "0.9173 (+0.1%)",
+    "T_half_from_separate_interpolation": "0.9167 (+0.0%)",
+    "rattler_from_yb_msd_einstein": "0.9167 (+0.0%)",
+    "rattler_from_lowest_gamma_optical_mode": "0.9167 (+0.0%)"
+   },
+   "ablations_that_move_it": {
+    "archived_isotope_rates_as_is": "0.8159 (-11.0%)",
+    "isotope_scattering_omitted": "0.922 (+0.6%)",
+    "lifetime_convention_from_tc_data": "1.8334 (+100.0%)",
+    "corrupted_qpoint_discarded": "0.7825 (-14.6%)"
+   },
+   "tolerance": "within 5%"
+  },
+  "YbIr4Sb12 kappa_P 700 K": {
+   "reference": 0.3968,
+   "robustness": {
+    "isotope_dropped_for_filled_compound_only": "0.3979 (+0.3%)",
+    "isotope_repaired_with_band_median": "0.3962 (-0.1%)",
+    "diagonal_populations": "0.3948 (-0.5%)",
+    "degeneracy_threshold_0p1_cm1": "0.3971 (+0.1%)",
+    "T_half_from_separate_interpolation": "0.3968 (+0.0%)",
+    "rattler_from_yb_msd_einstein": "0.3968 (+0.0%)",
+    "rattler_from_lowest_gamma_optical_mode": "0.3968 (+0.0%)"
+   },
+   "ablations_that_move_it": {
+    "archived_isotope_rates_as_is": "0.354 (-10.8%)",
+    "isotope_scattering_omitted": "0.3979 (+0.3%)",
+    "lifetime_convention_from_tc_data": "0.7937 (+100.0%)",
+    "corrupted_qpoint_discarded": "0.34 (-14.3%)"
+   },
+   "tolerance": "within 5%"
+  },
+  "YbIr4Sb12 kappa_C 100 K": {
+   "reference": 0.1101,
+   "robustness": {
+    "isotope_dropped_for_filled_compound_only": "0.109 (-1.0%)",
+    "isotope_repaired_with_band_median": "0.1101 (+0.0%)",
+    "diagonal_populations": "0.1101 (+0.0%)",
+    "degeneracy_threshold_0p1_cm1": "0.1088 (-1.2%)",
+    "T_half_from_separate_interpolation": "0.1101 (+0.0%)",
+    "rattler_from_yb_msd_einstein": "0.1101 (+0.0%)",
+    "rattler_from_lowest_gamma_optical_mode": "0.1101 (+0.0%)"
+   },
+   "ablations_that_move_it": {
+    "archived_isotope_rates_as_is": "0.1086 (-1.4%)",
+    "isotope_scattering_omitted": "0.109 (-1.0%)",
+    "lifetime_convention_from_tc_data": "0.0883 (-19.8%)",
+    "degenerate_pairs_counted_as_coherences": "0.1214 (+10.3%)",
+    "gaussian_band_overlap": "0.079 (-28.3%)",
+    "half_width_lorentzian": "0.0883 (-19.8%)"
+   },
+   "tolerance": "within 6%"
+  },
+  "YbIr4Sb12 kappa_C 300 K": {
+   "reference": 0.1784,
+   "robustness": {
+    "isotope_dropped_for_filled_compound_only": "0.1777 (-0.4%)",
+    "isotope_repaired_with_band_median": "0.1784 (+0.0%)",
+    "diagonal_populations": "0.1784 (+0.0%)",
+    "degeneracy_threshold_0p1_cm1": "0.1778 (-0.3%)",
+    "T_half_from_separate_interpolation": "0.1784 (+0.0%)",
+    "rattler_from_yb_msd_einstein": "0.1784 (+0.0%)",
+    "rattler_from_lowest_gamma_optical_mode": "0.1784 (+0.0%)"
+   },
+   "ablations_that_move_it": {
+    "archived_isotope_rates_as_is": "0.1764 (-1.1%)",
+    "isotope_scattering_omitted": "0.1777 (-0.4%)",
+    "lifetime_convention_from_tc_data": "0.1491 (-16.4%)",
+    "degenerate_pairs_counted_as_coherences": "0.1829 (+2.5%)",
+    "gaussian_band_overlap": "0.1521 (-14.7%)",
+    "half_width_lorentzian": "0.1491 (-16.4%)"
+   },
+   "tolerance": "within 6%"
+  },
+  "YbIr4Sb12 kappa_C 700 K": {
+   "reference": 0.2094,
+   "robustness": {
+    "isotope_dropped_for_filled_compound_only": "0.2092 (-0.1%)",
+    "isotope_repaired_with_band_median": "0.2094 (+0.0%)",
+    "diagonal_populations": "0.2094 (+0.0%)",
+    "degeneracy_threshold_0p1_cm1": "0.2091 (-0.1%)",
+    "T_half_from_separate_interpolation": "0.2094 (+0.0%)",
+    "rattler_from_yb_msd_einstein": "0.2094 (+0.0%)",
+    "rattler_from_lowest_gamma_optical_mode": "0.2094 (+0.0%)"
+   },
+   "ablations_that_move_it": {
+    "archived_isotope_rates_as_is": "0.2071 (-1.1%)",
+    "isotope_scattering_omitted": "0.2092 (-0.1%)",
+    "lifetime_convention_from_tc_data": "0.1878 (-10.3%)",
+    "degenerate_pairs_counted_as_coherences": "0.2114 (+1.0%)",
+    "gaussian_band_overlap": "0.1938 (-7.4%)",
+    "half_width_lorentzian": "0.1878 (-10.3%)"
+   },
+   "tolerance": "within 6%"
+  },
+  "YbIr4Sb12 T_half (K)": {
+   "reference": 667.1,
+   "robustness": {
+    "isotope_dropped_for_filled_compound_only": "669.5 (+2.3 K)",
+    "isotope_repaired_with_band_median": "666.2 (-0.9 K)",
+    "diagonal_populations": "664.2 (-3.0 K)",
+    "degeneracy_threshold_0p1_cm1": "668.4 (+1.3 K)",
+    "T_half_from_separate_interpolation": "668.0 (+0.8 K)",
+    "rattler_from_yb_msd_einstein": "667.1 (+0.0 K)",
+    "rattler_from_lowest_gamma_optical_mode": "667.1 (+0.0 K)"
+   },
+   "ablations_that_move_it": {
+    "archived_isotope_rates_as_is": "608.9 (-58.2 K)",
+    "isotope_scattering_omitted": "669.5 (+2.3 K)",
+    "lifetime_convention_from_tc_data": "1343.4 (+676.2 K)",
+    "degenerate_pairs_counted_as_coherences": "661.2 (-5.9 K)",
+    "gaussian_band_overlap": "713.7 (+46.6 K)",
+    "half_width_lorentzian": "733.0 (+65.8 K)",
+    "corrupted_qpoint_discarded": "581.4 (-85.7 K)"
+   },
+   "tolerance": "+-25 K"
+  },
+  "YbIr4Sb12 rattler frequency (THz)": {
+   "reference": 0.9677,
+   "robustness": {
+    "isotope_dropped_for_filled_compound_only": "0.9677 (+0.0%)",
+    "isotope_repaired_with_band_median": "0.9677 (+0.0%)",
+    "diagonal_populations": "0.9677 (+0.0%)",
+    "degeneracy_threshold_0p1_cm1": "0.9677 (+0.0%)",
+    "T_half_from_separate_interpolation": "0.9677 (+0.0%)",
+    "rattler_from_yb_msd_einstein": "0.9781 (+1.1%)",
+    "rattler_from_lowest_gamma_optical_mode": "0.8294 (-14.3%)"
+   },
+   "ablations_that_move_it": {
+    "pdos_axis_taken_as_THz": "6.7456 (+597.0%)"
+   },
+   "tolerance": "within 20%"
+  },
+  "IrSb3 kappa_P 50 K": {
+   "reference": 131.8925,
+   "robustness": {
+    "isotope_dropped_for_filled_compound_only": "131.8925 (+0.0%)",
+    "isotope_repaired_with_band_median": "131.8925 (+0.0%)",
+    "diagonal_populations": "131.6443 (-0.2%)",
+    "degeneracy_threshold_0p1_cm1": "131.8999 (+0.0%)",
+    "T_half_from_separate_interpolation": "131.8925 (+0.0%)",
+    "rattler_from_yb_msd_einstein": "131.8925 (+0.0%)",
+    "rattler_from_lowest_gamma_optical_mode": "131.8925 (+0.0%)"
+   },
+   "ablations_that_move_it": {
+    "isotope_scattering_omitted": "140.1991 (+6.3%)",
+    "lifetime_convention_from_tc_data": "263.785 (+100.0%)"
+   },
+   "tolerance": "within 4%"
+  },
+  "IrSb3 kappa_TOT 300 K": {
+   "reference": 11.7604,
+   "robustness": {
+    "isotope_dropped_for_filled_compound_only": "11.7604 (+0.0%)",
+    "isotope_repaired_with_band_median": "11.7604 (+0.0%)",
+    "diagonal_populations": "11.7158 (-0.4%)",
+    "degeneracy_threshold_0p1_cm1": "11.7605 (+0.0%)",
+    "T_half_from_separate_interpolation": "11.7604 (+0.0%)",
+    "rattler_from_yb_msd_einstein": "11.7604 (+0.0%)",
+    "rattler_from_lowest_gamma_optical_mode": "11.7604 (+0.0%)"
+   },
+   "ablations_that_move_it": {
+    "isotope_scattering_omitted": "11.9016 (+1.2%)",
+    "lifetime_convention_from_tc_data": "23.4309 (+99.2%)",
+    "degenerate_pairs_counted_as_coherences": "11.8049 (+0.4%)",
+    "gaussian_band_overlap": "11.7308 (-0.3%)",
+    "half_width_lorentzian": "11.7407 (-0.2%)"
+   },
+   "tolerance": "within 5%"
+  }
+ }
+}

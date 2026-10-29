@@ -1,0 +1,285 @@
+{
+ "task_id": "fresh-srtio3-soft-modes",
+ "catalog_id": "fresh-srtio3-soft-modes",
+ "start": "fresh",
+ "source_group": "esswein_2022_quantum_paraelectric",
+ "title": "SrTiO3: polar and antiferrodistortive soft modes at the PBE lattice",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "evidence to discover (silent k-mesh error that cascades into the verdict)",
+   "fork": "k mesh for the zone-centre force constants and the polar well",
+   "wrong_choice": "4x4x4 mesh (total energy and pressure already look converged there: E changes by 1 meV/f.u. 4->8)",
+   "consequence": "soft mode -192 instead of -138 cm^-1, polar well 8.7 instead of 3.3 meV/f.u., so the polar well appears deeper than the 4.0 meV/f.u. tilt well and the competition verdict flips to 'polar'; visible only through a k ladder of forces/wells",
+   "ablation": "k4_force_constants_and_polar_well"
+  },
+  {
+   "id": "dp2",
+   "kind": "model class",
+   "fork": "Full polar force-constant block versus a single-atom (Ti, Slater-mode) displacement",
+   "wrong_choice": "Displace only Ti and read a 'Ti frequency' from its on-site force constant",
+   "consequence": "+53 cm^-1 (stable) instead of -138 cm^-1: the instability lives in the coupled Ti/O-cage (Last/Slater/Axe mixture) mode; the Ti-only coordinate shows no polar well",
+   "ablation": "ti_only_slater_displacement"
+  },
+  {
+   "id": "dp3",
+   "kind": "reference volume (cascade)",
+   "fork": "Lattice parameter at which the protocol's soft modes are evaluated",
+   "wrong_choice": "Experimental a = 3.905 A instead of the protocol's a0 = 3.936 A",
+   "consequence": "soft mode -92 instead of -138 cm^-1 (the polar instability is strongly volume dependent); a0 fails",
+   "ablation": "experimental_lattice_parameter"
+  },
+  {
+   "id": "dp4",
+   "kind": "evidence to discover (convergence that matters only for some quantities)",
+   "fork": "k mesh of the electric-field response",
+   "wrong_choice": "Use the 4x4x4 dielectric run because the SCF energy is converged there",
+   "consequence": "eps_inf 6.85 vs 6.29, Z*(Ti) 7.81 vs 7.35 (raw sum-rule violation 0.26 e flags it), highest LO +12 cm^-1",
+   "ablation": "k4_dielectric_tensors"
+  },
+  {
+   "id": "dp5",
+   "kind": "which frequency is the LO",
+   "fork": "Analytic Gamma frequency or mode-by-mode LO-TO versus the nonanalytic term added to the full polar block",
+   "wrong_choice": "Report the highest analytic (TO) frequency as LO, or add each TO mode's own LO-TO shift without mode mixing",
+   "consequence": "509 or 565 cm^-1 instead of 731 cm^-1",
+   "ablation": "analytic_frequency_as_LO"
+  },
+  {
+   "id": "dp6",
+   "kind": "cross-cell referencing and normalization",
+   "fork": "Reference energy and normalization of the octahedral-rotation well",
+   "wrong_choice": "Reference the 10-atom tilt energies to twice a five-atom energy on a different (6x6x6) mesh, or report energies per 10-atom cell",
+   "consequence": "Depth 3.33 (k-sampling offset 0.70 meV/f.u. between cells) or 8.05 instead of 4.03 meV/f.u.; per-cell energies also inflate the R-mode frequency by sqrt(2) (-103 vs -73 cm^-1)",
+   "ablation": "tilt_referenced_to_5atom_cell_other_mesh"
+  },
+  {
+   "id": "dp7",
+   "kind": "strain state (cascade)",
+   "fork": "Out-of-plane relaxation under biaxial tension",
+   "wrong_choice": "Keep c = a0 (no Poisson contraction), or reuse the cubic soft mode for the strained cell",
+   "consequence": "c 3.936 instead of 3.912 A; the cubic soft mode (-138) instead of the strained in-plane -187 cm^-1",
+   "ablation": "no_poisson_relaxation"
+  },
+  {
+   "id": "dp8",
+   "kind": "regime judgement (anharmonic well sampling)",
+   "fork": "Displacement amplitudes used to map the polar double well",
+   "wrong_choice": "Scan at typical frozen-phonon amplitudes (Ti 0.04-0.12 A) and fit E = A x^2 + B x^4",
+   "consequence": "The well minimum (Ti ~0.03 A) lies below the first point; depth 0.98 instead of 3.3 meV/f.u.",
+   "ablation": "polar_well_from_coarse_large_amplitudes"
+  }
+ ],
+ "graded_fields": [
+  "a0_A within 0.004 A",
+  "gamma_soft_mode_cm-1 within 10 cm^-1",
+  "gamma_LO_highest_cm-1 within 4 cm^-1",
+  "eps_inf within 0.12; born_charge_Ti within 0.10",
+  "polar_well_depth_meV_per_fu within 0.5 meV/f.u.",
+  "R_mode_cm-1 within 8 cm^-1; tilt_angle_deg within 0.3 deg; tilt_well_depth_meV_per_fu within 0.5 meV/f.u.",
+  "larger_energy_gain exact ('tilt')",
+  "strained_c_A within 0.005 A; strained_inplane_polar_mode_cm-1 within 10 cm^-1"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 29,
+  "oracle_charge": 66,
+  "budget": 80,
+  "oracle_compute_minutes_2_cores": "62 (sum of reference wall times under shared host load; gate/Harbor in README)",
+  "tool_calls": "50-80 (25-40 evaluations plus polling of 1-9 minute jobs and analysis)",
+  "wall_time_h": "2-3",
+  "gpt6astra_cost_usd": "3.5-5",
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "Quantum ESPRESSO 6.7 pw.x and ph.x, OpenMPI, numpy (all in the runtime image; no extra layer)",
+  "Three pseudopotential files vendored in environment/lab/ (2.1 MB)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/rcyfm-68h65",
+  "doi": "10.24435/materialscloud:f3-ym",
+  "files_used": [
+   "SSSP_1.3.0_PBE_precision.tar.gz",
+   "SSSP_1.3.0_PBE_precision.json",
+   "LICENSE.txt"
+  ],
+  "md5": {
+   "SSSP_1.3.0_PBE_precision.tar.gz": "fde94756886f32ada7bf597547557eb5",
+   "SSSP_1.3.0_PBE_precision.json": "1692c5c9ce89e1c7c783f8f0eee0cbfa",
+   "LICENSE.txt": "c0f9df05fb4cd4921f4caa25606815ef"
+  },
+  "vendored_sha256": {
+   "Sr_pbe_v1.uspp.F.UPF": "292f7f1da5cae4b18da817ab2e82943ad90e74f267a06a6172db8dbcb6edf0ce",
+   "ti_pbe_v1.4.uspp.F.UPF": "747afa52fa17dc061e9eff72bcea534e81ffa5a4a5d33af3eb8fc9f1b3aee580",
+   "O.pbe-n-kjpaw_psl.0.1.UPF": "7c4b6ed541f83d0afdf5c1d3a8c611340f073f3e2b11e95b7963bb2ee26929aa"
+  },
+  "license": "Archive CC BY 4.0; Sr and Ti GBRV files GPL v3, O PSlibrary file GPL v2 or later (archive LICENSE.txt vendored as SSSP_LICENSE.txt)",
+  "paired_study": "Esswein & Spaldin, Phys. Rev. Research 4, 033020 (2022), Materials Cloud 4bdqc-a9g25 (CC BY 4.0) - context only, no files used",
+  "hidden_truth": "Construction calculations through task_lab.run (reference_runs.jsonl), stored only in environment/lab/private/"
+ },
+ "exceptions": {},
+ "calibration": {
+  "a0_A": {
+   "reference": 3.93599,
+   "tolerance": 0.004,
+   "oracle_path": 3.93592,
+   "robustness": {
+    "a0_from_zero_pressure_75Ry": 3.93463
+   },
+   "ablations": {
+    "experimental_lattice_parameter": 3.905
+   },
+   "max_robustness_error": 0.00135,
+   "nearest_ablation_error": 0.03099
+  },
+  "gamma_soft_mode_cm-1": {
+   "reference": -138.40395,
+   "tolerance": 10.0,
+   "oracle_path": -138.40395,
+   "robustness": {
+    "soft_mode_and_LO_from_6x6x6": -143.35436,
+    "soft_mode_0.04A_displacements": -133.36649
+   },
+   "ablations": {
+    "k4_force_constants_and_polar_well": -192.0271,
+    "ti_only_slater_displacement": 53.3156,
+    "experimental_lattice_parameter": -92.02099
+   },
+   "max_robustness_error": 5.03745,
+   "nearest_ablation_error": 46.38296
+  },
+  "gamma_LO_highest_cm-1": {
+   "reference": 731.48354,
+   "tolerance": 4.0,
+   "oracle_path": 731.48354,
+   "robustness": {
+    "soft_mode_and_LO_from_6x6x6": 731.48308,
+    "LO_8x8x8_force_constants_6x6x6_tensors": 732.14009
+   },
+   "ablations": {
+    "k4_force_constants_and_polar_well": 734.83768,
+    "k4_dielectric_tensors": 743.52451,
+    "analytic_frequency_as_LO": 509.25439,
+    "uncoupled_mode_by_mode_LO": 564.83435
+   },
+   "max_robustness_error": 0.65656,
+   "nearest_ablation_error": 3.35414
+  },
+  "eps_inf": {
+   "reference": 6.29413,
+   "tolerance": 0.12,
+   "oracle_path": 6.29413,
+   "robustness": {
+    "soft_mode_and_LO_from_6x6x6": 6.34852
+   },
+   "ablations": {
+    "k4_dielectric_tensors": 6.84889
+   },
+   "max_robustness_error": 0.05438,
+   "nearest_ablation_error": 0.55476
+  },
+  "born_charge_Ti": {
+   "reference": 7.34583,
+   "tolerance": 0.1,
+   "oracle_path": 7.34583,
+   "robustness": {
+    "soft_mode_and_LO_from_6x6x6": 7.38639
+   },
+   "ablations": {
+    "k4_dielectric_tensors": 7.81119
+   },
+   "max_robustness_error": 0.04056,
+   "nearest_ablation_error": 0.46536
+  },
+  "polar_well_depth_meV_per_fu": {
+   "reference": 3.32509,
+   "tolerance": 0.5,
+   "oracle_path": 3.66693,
+   "robustness": {
+    "polar_well_6x6x6_pattern_and_mesh": 3.63526,
+    "polar_well_six_amplitudes_8x8x8": 3.1534,
+    "polar_well_lowest_sampled_energy_8x8x8": 3.26972
+   },
+   "ablations": {
+    "k4_force_constants_and_polar_well": 8.73758,
+    "ti_only_slater_displacement": 0.0,
+    "polar_well_from_coarse_large_amplitudes": 0.98094
+   },
+   "max_robustness_error": 0.34183,
+   "nearest_ablation_error": 2.34416
+  },
+  "R_mode_cm-1": {
+   "reference": -73.0458,
+   "tolerance": 8.0,
+   "oracle_path": -73.02991,
+   "robustness": {
+    "tilt_angles_3_4_5": -72.83228,
+    "R_mode_from_1_2_deg": -72.97626
+   },
+   "ablations": {
+    "tilt_energies_per_10atom_cell": -103.27988
+   },
+   "max_robustness_error": 0.21352,
+   "nearest_ablation_error": 30.23408
+  },
+  "tilt_angle_deg": {
+   "reference": 4.67387,
+   "tolerance": 0.3,
+   "oracle_path": 4.67306,
+   "robustness": {
+    "tilt_angles_3_4_5": 4.6682
+   },
+   "ablations": {},
+   "max_robustness_error": 0.00567,
+   "nearest_ablation_error": null
+  },
+  "tilt_well_depth_meV_per_fu": {
+   "reference": 4.0255,
+   "tolerance": 0.5,
+   "oracle_path": 4.02576,
+   "robustness": {
+    "tilt_angles_3_4_5": 4.0295
+   },
+   "ablations": {
+    "tilt_referenced_to_5atom_cell_other_mesh": 3.32683,
+    "tilt_energies_per_10atom_cell": 8.05151
+   },
+   "max_robustness_error": 0.004,
+   "nearest_ablation_error": 0.69867
+  },
+  "strained_c_A": {
+   "reference": 3.91218,
+   "tolerance": 0.005,
+   "oracle_path": 3.9121,
+   "robustness": {
+    "strained_c_from_stress_zero_60Ry": 3.90837,
+    "strained_c_from_stress_zero_75Ry": 3.90969
+   },
+   "ablations": {
+    "no_poisson_relaxation": 3.936,
+    "cubic_soft_mode_for_strained_cell": 3.936
+   },
+   "max_robustness_error": 0.00381,
+   "nearest_ablation_error": 0.02382
+  },
+  "strained_inplane_polar_mode_cm-1": {
+   "reference": -187.16919,
+   "tolerance": 10.0,
+   "oracle_path": -190.95623,
+   "robustness": {},
+   "ablations": {
+    "no_poisson_relaxation": -192.37691,
+    "cubic_soft_mode_for_strained_cell": -138.40395
+   },
+   "max_robustness_error": 3.78704,
+   "nearest_ablation_error": 5.20772
+  },
+  "larger_energy_gain": {
+   "reference": "tilt",
+   "ablations": {
+    "k4_force_constants_and_polar_well": "polar",
+    "ti_only_slater_displacement": "tilt"
+   }
+  }
+ },
+ "notes": "Design changes: no DFPT phonons (ph.x phonons at Gamma took 13 min and at R 10 min on 2 cores at k4 - too slow and k4 is unconverged); the lab offers pw.x frozen phonons in the 5-atom and R-doubled 10-atom cells plus a ph.x electric-field kind for eps_inf and Z*. Cutoff fork dropped (60 vs 75 Ry: a0 differs by 0.00006 A, strained c by 0.0001 A; the 60 Ry Pulay stress shifts stress-zero c by 0.004 A, inside tolerance). The frozen-phonon amplitude fork for the frequency was dropped (0.04 A changes the soft mode by 5 cm^-1) and replaced by the well-sampling fork dp8. Hidden SCFs replaced by grading the agent's own calculations at specified configurations. Polar well graded along the harmonic soft-mode eigendisplacement (not the fully relaxed minimum) to keep it unique. The strained-cell frequency is insensitive to the Poisson relaxation (-192 with c = a0 vs -191 at relaxed c, 6x6x6), so dp7 is graded through strained_c_A."
+}

@@ -1,0 +1,19 @@
+{
+ "evaluations": 40,
+ "charge": 50,
+ "transition_K": {
+  "PBE0": 0.0,
+  "r2SCAN": 0.0
+ },
+ "sigma_log10": {
+  "PBEsol/gamma/625": 0.0359,
+  "PBE0/gamma/750": 0.0476,
+  "r2SCAN/gamma/800": 0.027
+ },
+ "haven_ratio": -0.000762,
+ "ea_below_eV": -0.138,
+ "ea_above_eV": -0.0179,
+ "li_s_fraction": 0.0,
+ "log10_rate_ratio": 0.0,
+ "harbor_reward": 1.0
+}

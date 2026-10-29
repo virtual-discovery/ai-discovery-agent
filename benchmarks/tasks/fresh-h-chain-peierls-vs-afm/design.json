@@ -1,0 +1,248 @@
+{
+ "task_id": "fresh-h-chain-peierls-vs-afm",
+ "catalog_id": "fresh-h-chain-peierls-vs-afm",
+ "start": "fresh",
+ "source_group": "fresh_h_chain",
+ "title": "Hydrogen chain: Peierls dimerization versus antiferromagnetism in PBE",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "discovered evidence (wrong state unless checked)",
+   "fork": "How to look for magnetism",
+   "wrong_choice": "Spin-polarized runs with equal starting moments (or the cheap 1-atom cell, which only allows ferromagnetism)",
+   "consequence": "The ferromagnetic start relaxes to the nonmagnetic state at every R up to 2.0 A (a half-filled 1D band has its DOS minimum at E_F, so there is no Stoner instability), so the agent concludes the chain is nonmagnetic: magnetic gains ~0.03 meV instead of 35 and 128 meV/atom, critical dimerization 0, gap at 1.25 A 0, dimerization energy at 1.75 A 36 meV/atom too large",
+   "ablation": "ferromagnetic_start_only"
+  },
+  {
+   "id": "dp2",
+   "kind": "discovered evidence (smearing converges to the wrong state)",
+   "fork": "Smearing for the weak-coupling uniform chain",
+   "wrong_choice": "0.02 Ry Marzari-Vanderbilt smearing, or Fermi-Dirac at 0.005 Ry (electronic temperature above the mean-field ordering scale)",
+   "consequence": "The weak spin-density wave at R = 1.25 A disappears; the uniform chain looks like a nonmagnetic metal (gap 0 instead of ~0.21 eV), supporting the 'artefact' explanation",
+   "ablation": "large_smearing_mv002"
+  },
+  {
+   "id": "dp3",
+   "kind": "regime judgement (convergence that matters only for some quantities)",
+   "fork": "k-point convergence of the nesting-driven gap",
+   "wrong_choice": "Keep the 48-point mesh that converges every gapped quantity (dimers, large-R magnetism)",
+   "consequence": "The 1.25 A SDW gap is 0.288 eV at 48 k-points versus 0.213 eV at 192 (0.229 at 96); outside tolerance",
+   "ablation": "coarse_k_sdw_gap"
+  },
+  {
+   "id": "dp4",
+   "kind": "discriminating calculation under the budget",
+   "fork": "Whether and how to map magnetism in dimerized chains",
+   "wrong_choice": "A coarse delta grid (step 0.1) with the boundary placed between grid points, or a linear extrapolation of the moment",
+   "consequence": "delta_c off by 0.035-0.065 (the moment vanishes as m^2 ~ A - B delta^2, steeply near delta_c); the coexistence window is misplaced. Requires 3-5 extra 1-unit calculations per R that only pay off if placed near the boundary",
+   "ablation": "coarse_boundary_grid"
+  },
+  {
+   "id": "dp5",
+   "kind": "cascade",
+   "fork": "Reference state of the dimerization energy",
+   "wrong_choice": "Nonmagnetic uniform chain as the reference (or any reference reached through dp1)",
+   "consequence": "At 1.75 A the dimerization energy is overstated by the 36 meV/atom magnetic energy of the uniform chain",
+   "ablation": "nonmagnetic_uniform_reference"
+  },
+  {
+   "id": "dp6",
+   "kind": "competing explanations",
+   "fork": "Which state is the global minimum at large spacing",
+   "wrong_choice": "Conclude that the antiferromagnetic chain wins at large R (comparing uniform states, or dimerizing only within a small 'Peierls' window)",
+   "consequence": "ground_state[2.0] wrong; the H2-like dimerized chain is lower by ~1.9 eV/atom",
+   "ablation": "afm_wins_at_large_spacing"
+  },
+  {
+   "id": "dp7",
+   "kind": "fit window",
+   "fork": "Locating the equilibrium dimerization",
+   "wrong_choice": "Take the lowest point of a 0.1-step delta scan",
+   "consequence": "delta_eq(1.75) = 0.60 instead of 0.572 and the dimerization energy 23 meV/atom low",
+   "ablation": "grid_minimum_dimerization"
+  },
+  {
+   "id": "dp8",
+   "kind": "convention",
+   "fork": "Normalization of lab energies (Ry per cell; 1-, 2- and 4-atom cells)",
+   "wrong_choice": "Use energy differences per 2-atom cell",
+   "consequence": "Energies a factor 2 too large",
+   "ablation": "energies_per_cell"
+  }
+ ],
+ "graded_fields": [
+  "delta_eq at R = 1.25, 1.75 A (+-0.01)",
+  "dimerization_energy_meV_per_atom at R = 1.25, 1.75 A (+-10 meV/atom), relative to the lowest uniform state",
+  "uniform_magnetic_energy_gain_meV_per_atom at R = 1.75, 2.0 A (within 10%)",
+  "critical_dimerization at R = 1.75, 2.0 A (+-0.015)",
+  "uniform_chain_band_gap_eV at R = 1.25 A (+-0.04 eV)",
+  "ground_state labels at R = 1.0 and 2.0 A (exact)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 25,
+  "oracle_charge": 29,
+  "budget": 36,
+  "oracle_wall_minutes": {
+   "check_task (cpuset 10,11,26,27)": 45,
+   "harbor (pinned cores)": 50
+  },
+  "oracle_scf_compute_minutes": 47.8,
+  "tool_calls": "50-80 (25-35 evaluations, each followed by 1-4 polls of a 0.5-6 minute job)",
+  "agent_wall_time_h": "1-2",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (sonnet, terra)"
+ },
+ "runtime_dependencies": [
+  "Quantum ESPRESSO 6.7 pw.x and OpenMPI from the runtime image (lab only)",
+  "numpy not required; lab and oracle use the Python standard library"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/rcyfm-68h65",
+  "doi": "10.24435/materialscloud:f3-ym",
+  "files_used": [
+   "SSSP_1.3.0_PBE_precision.tar.gz -> H_ONCV_PBE-1.0.oncvpsp.upf"
+  ],
+  "md5": {
+   "SSSP_1.3.0_PBE_precision.tar.gz": "fde94756886f32ada7bf597547557eb5",
+   "SSSP_1.3.0_PBE_precision.json": "1692c5c9ce89e1c7c783f8f0eee0cbfa",
+   "H_ONCV_PBE-1.0.oncvpsp.upf": "1790becc920ee074925cf490c71280fe"
+  },
+  "sha256": {
+   "H_ONCV_PBE-1.0.oncvpsp.upf": "69d631780c0178c5239ed3dcb4a3e22c13bd13cde9beb97e123d036949da5c09"
+  },
+  "license": "SSSP record CC BY 4.0; the vendored SG15 UPF is CC BY-SA 4.0",
+  "reference_calculations": "benchmarks/construction/fresh-h-chain-peierls-vs-afm/reference_runs.jsonl (task_lab.run, QE 6.7, 2 MPI ranks)"
+ },
+ "exceptions": {},
+ "notes": "Deviations from the candidate design: (1) no R is withheld; the graded quantities are derived from several calculations each (minimum positions, energy differences, a moment-vanishing boundary, a converged gap), never returned by the lab as such. (2) R_c 'where the AFM-uniform state undercuts the dimerized minimum' does not exist: the H2-like dimerized chain is lower than any uniform state by 0.2-1.9 eV/atom at every R in [1, 2] A, so it is replaced by the coexistence boundary delta_c(R) and the ground-state labels. (3) The 'AFM moment at delta=0' target is replaced by the magnetic energy gain (derived) and the converged SDW gap at 1.25 A. (4) Box convergence is not a decision point: 8-12 A changes energies by <0.5 meV/atom (neutral, nonpolar chain, PBE without long-range tails). (5) Energies are returned per cell (Ry) as pw.x prints them. delta_eq is roughly 1 - 0.75/R (H2 bond length) and could be guessed; it is graded with the energies that depend on it, not on its own.",
+ "calibration": {
+  "delta_eq[1.25]": {
+   "reference": 0.4021388262254387,
+   "tolerance": "+-0.01",
+   "robustness": {
+    "energy_parabola_minimum": 0.4020185252640912
+   },
+   "ablations": {
+    "grid_minimum_dimerization": 0.4
+   }
+  },
+  "delta_eq[1.75]": {
+   "reference": 0.5717167411674927,
+   "tolerance": "+-0.01",
+   "robustness": {
+    "energy_parabola_minimum": 0.5715483429413779
+   },
+   "ablations": {
+    "grid_minimum_dimerization": 0.6
+   }
+  },
+  "dimerization_energy_meV_per_atom[1.25]": {
+   "reference": 646.0352628690798,
+   "tolerance": "+-10.0",
+   "robustness": {
+    "energy_parabola_minimum": 646.0354520661749,
+    "cutoff_60_Ry": 646.0352628690798,
+    "converged_uniform_reference": 645.5333488497763
+   },
+   "ablations": {
+    "ferromagnetic_start_only": 646.9713345559448,
+    "nonmagnetic_uniform_reference": 646.9909267540406,
+    "grid_minimum_dimerization": 645.9821867334012,
+    "energies_per_cell": 1292.0705257381596
+   }
+  },
+  "dimerization_energy_meV_per_atom[1.75]": {
+   "reference": 1611.6887713718388,
+   "tolerance": "+-10.0",
+   "robustness": {
+    "energy_parabola_minimum": 1611.6895042361302,
+    "cutoff_60_Ry": 1610.3699060660365,
+    "converged_uniform_reference": 1611.6885672864428
+   },
+   "ablations": {
+    "ferromagnetic_start_only": 1647.3133740173616,
+    "nonmagnetic_uniform_reference": 1647.3421500583172,
+    "grid_minimum_dimerization": 1588.2763693167271,
+    "energies_per_cell": 3223.3775427436776
+   }
+  },
+  "uniform_magnetic_energy_gain_meV_per_atom[1.75]": {
+   "reference": 35.439973389842635,
+   "tolerance": "within 10%",
+   "robustness": {
+    "standard_settings_magnetic_gain": 35.65337868647839
+   },
+   "ablations": {
+    "ferromagnetic_start_only": 0.028776040955563076,
+    "one_atom_cell_spin_polarized": 0.028639984026085585,
+    "energies_per_cell": 70.87994677968527
+   }
+  },
+  "uniform_magnetic_energy_gain_meV_per_atom[2.0]": {
+   "reference": 128.21603831162247,
+   "tolerance": "within 10%",
+   "robustness": {
+    "standard_settings_magnetic_gain": 128.26882840094186
+   },
+   "ablations": {
+    "ferromagnetic_start_only": 0.03680339989841741,
+    "one_atom_cell_spin_polarized": 0.03680339989841741,
+    "energies_per_cell": 256.43207662324494
+   }
+  },
+  "critical_dimerization[1.75]": {
+   "reference": 0.1151487141038188,
+   "tolerance": "+-0.015",
+   "robustness": {
+    "boundary_bisection_midpoint": 0.1175,
+    "boundary_converged_settings": 0.11443168812548175
+   },
+   "ablations": {
+    "ferromagnetic_start_only": 0.0,
+    "coarse_boundary_grid": 0.15000000000000002,
+    "linear_moment_extrapolation": 0.18006825938566556
+   }
+  },
+  "critical_dimerization[2.0]": {
+   "reference": 0.20114395566599846,
+   "tolerance": "+-0.015",
+   "robustness": {
+    "boundary_bisection_midpoint": 0.2025,
+    "boundary_converged_settings": 0.20114395566599846
+   },
+   "ablations": {
+    "ferromagnetic_start_only": 0.0,
+    "coarse_boundary_grid": 0.25,
+    "linear_moment_extrapolation": 0.21342097217976155
+   }
+  },
+  "uniform_chain_band_gap_eV[1.25]": {
+   "reference": 0.2131,
+   "tolerance": "+-0.04",
+   "robustness": {
+    "gap_k96_mv0002": 0.2294,
+    "gap_gaussian_k96": 0.22647,
+    "gap_4atom_cell_k96": 0.21428
+   },
+   "ablations": {
+    "ferromagnetic_start_only": 0.0,
+    "one_atom_cell_spin_polarized": 0.0,
+    "large_smearing_mv002": 0.00079,
+    "fermi_dirac_0005": 0.00214,
+    "coarse_k_sdw_gap": 0.288
+   }
+  },
+  "ground_state": {
+   "reference": {
+    "1.0": "dimerized_nonmagnetic",
+    "2.0": "dimerized_nonmagnetic"
+   },
+   "ablations": {
+    "afm_wins_at_large_spacing": {
+     "1.0": "dimerized_nonmagnetic",
+     "2.0": "uniform_antiferromagnetic"
+    }
+   }
+  }
+ }
+}

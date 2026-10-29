@@ -1,0 +1,8 @@
+{
+ "task_id": "zrsix-butterfly-amr",
+ "solver_budget": 50,
+ "reserved_validation_charge": 0,
+ "requests": {"bands": {"cost": 1}, "fermi_slice": {"cost": 1}, "electron_count": {"cost": 1}, "orbit": {"cost": 1},
+              "magnetotransport": {"cost": {"40": 1, "80": 1, "160": 3}}},
+ "catalog": "/app/catalog.json"
+}

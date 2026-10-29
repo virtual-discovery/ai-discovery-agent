@@ -1,0 +1,5 @@
+{
+ "task_id": "polar-phonons-1d-loto-collapse",
+ "solver_budget": 30,
+ "min_report_chars": 400
+}

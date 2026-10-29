@@ -1,0 +1,27 @@
+{
+ "reference": {
+  "electron_counts": {
+   "TiSb": 28,
+   "VSb": 31,
+   "CrSb": 34,
+   "TiBi": 28,
+   "CrBi": 34,
+   "CrBi_9.2": 34
+  },
+  "CrSb_Z_mean": 0.26769837448316014,
+  "CrSb_Z_min": 0.07045956009262065,
+  "most_renormalized_orbital": "dxz",
+  "filling_share": 0.464048486241204,
+  "hund_ratio": 3.140163343165496,
+  "CrBi_U4p5_Z_mean": 0.6776799666196324,
+  "CrBi92_U4p5_Z_mean": 0.3951318670568714,
+  "sigma_CrBi": 1.3308845051806977,
+  "sigma_TiSb": 1.714877593599356
+ },
+ "tolerances": {
+  "Z_abs": 0.025,
+  "share_abs": 0.08,
+  "hund_rel": 0.1,
+  "sigma_rel": 0.03
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "eps_inf": [
+  [
+   5.962,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   5.962,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   6.091
+  ]
+ ],
+ "eps_0": [
+  [
+   10.075,
+   0.0,
+   0.0
+  ],
+  [
+   0.0,
+   10.075,
+   0.0
+  ],
+  [
+   0.0,
+   0.0,
+   11.052
+  ]
+ ],
+ "gamma_frequencies_cm-1": [
+  -0.0,
+  0.0,
+  0.0,
+  132.58,
+  132.58,
+  336.91,
+  539.9,
+  564.86,
+  564.86,
+  575.25,
+  575.25,
+  700.04
+ ],
+ "method": "DFPT (Quantum ESPRESSO 6.7, PBE, pslibrary 1.0.0 ultrasoft potentials with Ga 3d in valence, 45/360 Ry, 8x8x5 k-mesh) at the lattice parameters (a = 3.1948 A, c = 5.1886 A) and internal parameter (u = 0.3775) of the archive's perfect supercell; eps_0 includes the zone-centre polar phonons (dynmat.x, crystal acoustic sum rule, lperm). Computed by the task builders, not by the authors."
+}

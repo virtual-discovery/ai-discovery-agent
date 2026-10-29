@@ -1,0 +1,79 @@
+{
+ "oracle_expected": {
+  "tc": {
+   "Mg2IrH6_15GPa": 88.9,
+   "Mg2IrH6_25GPa": 91.23,
+   "H3S_180GPa": 256.76,
+   "H3S_190GPa": 245.04
+  }
+ },
+ "ablations": {
+  "tc_interpolated_in_pressure": {
+   "Mg2IrH6_15GPa": 88.75,
+   "Mg2IrH6_25GPa": 90.85,
+   "H3S_180GPa": 230.5,
+   "H3S_190GPa": 231.5
+  },
+  "tc_conventional_mustar_0.16": {
+   "Mg2IrH6_15GPa": 130.32,
+   "Mg2IrH6_25GPa": 133.64,
+   "H3S_180GPa": 275.43,
+   "H3S_190GPa": 266.72
+  },
+  "tc_constant_mu_from_0GPa": {
+   "Mg2IrH6_15GPa": 85.01,
+   "Mg2IrH6_25GPa": 85.33,
+   "H3S_180GPa": 256.76,
+   "H3S_190GPa": 245.04
+  },
+  "tc_smeared_NF_mu_sigma0.3": {
+   "Mg2IrH6_15GPa": 107.74,
+   "Mg2IrH6_25GPa": 110.07,
+   "H3S_180GPa": 256.76,
+   "H3S_190GPa": 245.04
+  },
+  "tc_mu_rescaled_sigma0.01": {
+   "Mg2IrH6_15GPa": 79.93,
+   "Mg2IrH6_25GPa": 77.9,
+   "H3S_180GPa": 256.76,
+   "H3S_190GPa": 245.04
+  },
+  "tc_constant_dos_solver": {
+   "Mg2IrH6_15GPa": 127.98,
+   "Mg2IrH6_25GPa": 128.86,
+   "H3S_180GPa": 272.41,
+   "H3S_190GPa": 264.86
+  },
+  "tc_allen_dynes_archived_mucAD": {
+   "Mg2IrH6_15GPa": 117.12135268960829,
+   "Mg2IrH6_25GPa": 119.46796354023297,
+   "H3S_180GPa": 263.3679381778652,
+   "H3S_190GPa": 259.99768434955814
+  },
+  "mu_star_bare_mu": 0.5485978632844427,
+  "mu_star_morel_anderson": 0.22788580604407532,
+  "mu_star_vdos_7eV": 0.5367175526777808,
+  "nef_per_cell": 0.5408999999999948,
+  "nef_spin_summed_per_fu": 0.5408999999999948
+ },
+ "robustness": {
+  "tc_bare_mu_route": {
+   "Mg2IrH6_15GPa": 88.2,
+   "Mg2IrH6_25GPa": 90.46,
+   "H3S_180GPa": 252.92,
+   "H3S_190GPa": 241.0
+  },
+  "tc_nearest_W00": {
+   "Mg2IrH6_15GPa": 89.31,
+   "Mg2IrH6_25GPa": 91.45,
+   "H3S_180GPa": 256.66,
+   "H3S_190GPa": 245.15
+  },
+  "mu_star_vs_lab_TcW": 0.5885387161548616,
+  "nef_nearest_grid": 0.26925
+ },
+ "kappa": {
+  "Mg2IrH6": 0.9810473142532526,
+  "H3S": 0.919212836781827
+ }
+}

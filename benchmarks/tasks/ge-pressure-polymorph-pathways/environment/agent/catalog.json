@@ -1,0 +1,6472 @@
+{
+"material": "Ge, PBE (VASP 6, PAW Ge_d, ENCUT 500 eV), training database of the DeePMD potential of Fantasia et al. (2024), Materials Cloud archive 238ad-1bg44",
+"phases": {
+"CD": "cubic diamond (Fd-3m), Ge-I",
+"bSn": "beta-tin (I4_1/amd), Ge-II",
+"ST12": "simple tetragonal, 12 atoms per cell (P4_32_12), Ge-III",
+"BC8": "body-centred cubic, 8 atoms per primitive cell (Ia-3), Ge-IV",
+"R8": "rhombohedral, 8 atoms per primitive cell (R-3)"
+},
+"records_note": "One record = one archived VASP calculation (a single point or a relaxation). volume_per_atom_A3 refers to the last ionic step.",
+"purchase_costs": {
+"record": 1,
+"dp": 1
+},
+"budget": 34,
+"records": [
+{
+"id": "BC8-001",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.29
+},
+{
+"id": "BC8-002",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.16
+},
+{
+"id": "BC8-003",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.39
+},
+{
+"id": "BC8-004",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.8
+},
+{
+"id": "BC8-005",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.21
+},
+{
+"id": "BC8-006",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.52
+},
+{
+"id": "BC8-007",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.06
+},
+{
+"id": "BC8-008",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.46
+},
+{
+"id": "BC8-009",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.17
+},
+{
+"id": "BC8-010",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.93
+},
+{
+"id": "BC8-011",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.6
+},
+{
+"id": "BC8-012",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.1
+},
+{
+"id": "BC8-013",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.51
+},
+{
+"id": "BC8-014",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.08
+},
+{
+"id": "BC8-015",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.41
+},
+{
+"id": "BC8-016",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.63
+},
+{
+"id": "BC8-017",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.72
+},
+{
+"id": "BC8-018",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.63
+},
+{
+"id": "BC8-019",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.28
+},
+{
+"id": "BC8-020",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.67
+},
+{
+"id": "BC8-021",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.58
+},
+{
+"id": "BC8-022",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.63
+},
+{
+"id": "BC8-023",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.89
+},
+{
+"id": "BC8-024",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.41
+},
+{
+"id": "BC8-025",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.11
+},
+{
+"id": "BC8-026",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.08
+},
+{
+"id": "BC8-027",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.76
+},
+{
+"id": "BC8-028",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.54
+},
+{
+"id": "BC8-029",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.92
+},
+{
+"id": "BC8-030",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 3,
+"volume_per_atom_A3": 21.56
+},
+{
+"id": "BC8-031",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 8,
+"volume_per_atom_A3": 19.52
+},
+{
+"id": "BC8-032",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 4,
+"volume_per_atom_A3": 21.02
+},
+{
+"id": "BC8-033",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 7,
+"volume_per_atom_A3": 20.33
+},
+{
+"id": "BC8-034",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.41
+},
+{
+"id": "BC8-035",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.65
+},
+{
+"id": "BC8-036",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.94
+},
+{
+"id": "BC8-037",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.28
+},
+{
+"id": "BC8-038",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.41
+},
+{
+"id": "BC8-039",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.65
+},
+{
+"id": "BC8-040",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.94
+},
+{
+"id": "BC8-041",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.28
+},
+{
+"id": "BC8-042",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.56
+},
+{
+"id": "BC8-043",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.56
+},
+{
+"id": "BC8-044",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.52
+},
+{
+"id": "BC8-045",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.52
+},
+{
+"id": "BC8-046",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.52
+},
+{
+"id": "BC8-047",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.52
+},
+{
+"id": "BC8-048",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.52
+},
+{
+"id": "BC8-049",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.52
+},
+{
+"id": "BC8-050",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.52
+},
+{
+"id": "BC8-051",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.52
+},
+{
+"id": "BC8-052",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.52
+},
+{
+"id": "BC8-053",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.56
+},
+{
+"id": "BC8-054",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.56
+},
+{
+"id": "BC8-055",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.56
+},
+{
+"id": "BC8-056",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.56
+},
+{
+"id": "BC8-057",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.56
+},
+{
+"id": "BC8-058",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.56
+},
+{
+"id": "BC8-059",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.56
+},
+{
+"id": "BC8-060",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.56
+},
+{
+"id": "BC8-061",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 2,
+"volume_per_atom_A3": 21.94
+},
+{
+"id": "BC8-062",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.83
+},
+{
+"id": "BC8-063",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.83
+},
+{
+"id": "BC8-064",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.62
+},
+{
+"id": "BC8-065",
+"phase": "BC8",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.62
+},
+{
+"id": "BC8-066",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 27.64
+},
+{
+"id": "BC8-067",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 27.64
+},
+{
+"id": "BC8-068",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 27.64
+},
+{
+"id": "BC8-069",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.54
+},
+{
+"id": "BC8-070",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.54
+},
+{
+"id": "BC8-071",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.54
+},
+{
+"id": "BC8-072",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.39
+},
+{
+"id": "BC8-073",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.39
+},
+{
+"id": "BC8-074",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.39
+},
+{
+"id": "BC8-075",
+"phase": "BC8",
+"natoms": 128,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.88
+},
+{
+"id": "BC8-076",
+"phase": "BC8",
+"natoms": 128,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.58
+},
+{
+"id": "BC8-077",
+"phase": "BC8",
+"natoms": 128,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.53
+},
+{
+"id": "BC8-078",
+"phase": "BC8",
+"natoms": 128,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.03
+},
+{
+"id": "BC8-079",
+"phase": "BC8",
+"natoms": 128,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.64
+},
+{
+"id": "BC8-080",
+"phase": "BC8",
+"natoms": 128,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.17
+},
+{
+"id": "BC8-081",
+"phase": "BC8",
+"natoms": 128,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.71
+},
+{
+"id": "BC8-082",
+"phase": "BC8",
+"natoms": 128,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.47
+},
+{
+"id": "BC8-083",
+"phase": "BC8",
+"natoms": 128,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.04
+},
+{
+"id": "BC8-084",
+"phase": "BC8",
+"natoms": 128,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.88
+},
+{
+"id": "BC8-085",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.13
+},
+{
+"id": "BC8-086",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.1
+},
+{
+"id": "BC8-087",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.48
+},
+{
+"id": "BC8-088",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.18
+},
+{
+"id": "BC8-089",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.35
+},
+{
+"id": "BC8-090",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.92
+},
+{
+"id": "BC8-091",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.12
+},
+{
+"id": "BC8-092",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.67
+},
+{
+"id": "BC8-093",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.94
+},
+{
+"id": "BC8-094",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.92
+},
+{
+"id": "BC8-095",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.19
+},
+{
+"id": "BC8-096",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.87
+},
+{
+"id": "BC8-097",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.33
+},
+{
+"id": "BC8-098",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.94
+},
+{
+"id": "BC8-099",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.54
+},
+{
+"id": "BC8-100",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.92
+},
+{
+"id": "BC8-101",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.19
+},
+{
+"id": "BC8-102",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.87
+},
+{
+"id": "BC8-103",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.33
+},
+{
+"id": "BC8-104",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.66
+},
+{
+"id": "BC8-105",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.54
+},
+{
+"id": "BC8-106",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.92
+},
+{
+"id": "BC8-107",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.19
+},
+{
+"id": "BC8-108",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.87
+},
+{
+"id": "BC8-109",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.33
+},
+{
+"id": "BC8-110",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.94
+},
+{
+"id": "BC8-111",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.54
+},
+{
+"id": "BC8-112",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.92
+},
+{
+"id": "BC8-113",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.19
+},
+{
+"id": "BC8-114",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.87
+},
+{
+"id": "BC8-115",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.33
+},
+{
+"id": "BC8-116",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.66
+},
+{
+"id": "BC8-117",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 27.64
+},
+{
+"id": "BC8-118",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.54
+},
+{
+"id": "BC8-119",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.4
+},
+{
+"id": "BC8-120",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.87
+},
+{
+"id": "BC8-121",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.33
+},
+{
+"id": "BC8-122",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.66
+},
+{
+"id": "BC8-123",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.94
+},
+{
+"id": "BC8-124",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.54
+},
+{
+"id": "BC8-125",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.19
+},
+{
+"id": "BC8-126",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.87
+},
+{
+"id": "BC8-127",
+"phase": "BC8",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.33
+},
+{
+"id": "BC8-128",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.18
+},
+{
+"id": "BC8-129",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.84
+},
+{
+"id": "BC8-130",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.5
+},
+{
+"id": "BC8-131",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.38
+},
+{
+"id": "BC8-132",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.04
+},
+{
+"id": "BC8-133",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.69
+},
+{
+"id": "BC8-134",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.18
+},
+{
+"id": "BC8-135",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.84
+},
+{
+"id": "BC8-136",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.5
+},
+{
+"id": "BC8-137",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.38
+},
+{
+"id": "BC8-138",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.04
+},
+{
+"id": "BC8-139",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.69
+},
+{
+"id": "BC8-140",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.18
+},
+{
+"id": "BC8-141",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.84
+},
+{
+"id": "BC8-142",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.5
+},
+{
+"id": "BC8-143",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.38
+},
+{
+"id": "BC8-144",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.04
+},
+{
+"id": "BC8-145",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.69
+},
+{
+"id": "BC8-146",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.08
+},
+{
+"id": "BC8-147",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.81
+},
+{
+"id": "BC8-148",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.65
+},
+{
+"id": "BC8-149",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.94
+},
+{
+"id": "BC8-150",
+"phase": "BC8",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.28
+},
+{
+"id": "CD-001",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.14
+},
+{
+"id": "CD-002",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.69
+},
+{
+"id": "CD-003",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.25
+},
+{
+"id": "CD-004",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.3
+},
+{
+"id": "CD-005",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.05
+},
+{
+"id": "CD-006",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.77
+},
+{
+"id": "CD-007",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.27
+},
+{
+"id": "CD-008",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.97
+},
+{
+"id": "CD-009",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.77
+},
+{
+"id": "CD-010",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.48
+},
+{
+"id": "CD-011",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.57
+},
+{
+"id": "CD-012",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.08
+},
+{
+"id": "CD-013",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.78
+},
+{
+"id": "CD-014",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.45
+},
+{
+"id": "CD-015",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.74
+},
+{
+"id": "CD-016",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.72
+},
+{
+"id": "CD-017",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.05
+},
+{
+"id": "CD-018",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.14
+},
+{
+"id": "CD-019",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.76
+},
+{
+"id": "CD-020",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "CD-021",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.77
+},
+{
+"id": "CD-022",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.91
+},
+{
+"id": "CD-023",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.3
+},
+{
+"id": "CD-024",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.88
+},
+{
+"id": "CD-025",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.23
+},
+{
+"id": "CD-026",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.4
+},
+{
+"id": "CD-027",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.05
+},
+{
+"id": "CD-028",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.7
+},
+{
+"id": "CD-029",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.49
+},
+{
+"id": "CD-030",
+"phase": "CD",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.18
+},
+{
+"id": "CD-031",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.56
+},
+{
+"id": "CD-032",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.13
+},
+{
+"id": "CD-033",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.61
+},
+{
+"id": "CD-034",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.08
+},
+{
+"id": "CD-035",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 3,
+"volume_per_atom_A3": 23.38
+},
+{
+"id": "CD-036",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 10,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-037",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 4,
+"volume_per_atom_A3": 22.69
+},
+{
+"id": "CD-038",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 9,
+"volume_per_atom_A3": 22.04
+},
+{
+"id": "CD-039",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.1
+},
+{
+"id": "CD-040",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.44
+},
+{
+"id": "CD-041",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.84
+},
+{
+"id": "CD-042",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.3
+},
+{
+"id": "CD-043",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.1
+},
+{
+"id": "CD-044",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.44
+},
+{
+"id": "CD-045",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.84
+},
+{
+"id": "CD-046",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.3
+},
+{
+"id": "CD-047",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.1
+},
+{
+"id": "CD-048",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.44
+},
+{
+"id": "CD-049",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.84
+},
+{
+"id": "CD-050",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.3
+},
+{
+"id": "CD-051",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.1
+},
+{
+"id": "CD-052",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.44
+},
+{
+"id": "CD-053",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.84
+},
+{
+"id": "CD-054",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.3
+},
+{
+"id": "CD-055",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.1
+},
+{
+"id": "CD-056",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.44
+},
+{
+"id": "CD-057",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.84
+},
+{
+"id": "CD-058",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.3
+},
+{
+"id": "CD-059",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.38
+},
+{
+"id": "CD-060",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.38
+},
+{
+"id": "CD-061",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.03
+},
+{
+"id": "CD-062",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.03
+},
+{
+"id": "CD-063",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.03
+},
+{
+"id": "CD-064",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.03
+},
+{
+"id": "CD-065",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.03
+},
+{
+"id": "CD-066",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.03
+},
+{
+"id": "CD-067",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.03
+},
+{
+"id": "CD-068",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.03
+},
+{
+"id": "CD-069",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.03
+},
+{
+"id": "CD-070",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.38
+},
+{
+"id": "CD-071",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.03
+},
+{
+"id": "CD-072",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.03
+},
+{
+"id": "CD-073",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-074",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-075",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-076",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-077",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-078",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 30.04
+},
+{
+"id": "CD-079",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-080",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-081",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.38
+},
+{
+"id": "CD-082",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-083",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-084",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-085",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-086",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-087",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-088",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-089",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-090",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-091",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.95
+},
+{
+"id": "CD-092",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.38
+},
+{
+"id": "CD-093",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.38
+},
+{
+"id": "CD-094",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.38
+},
+{
+"id": "CD-095",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.38
+},
+{
+"id": "CD-096",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.38
+},
+{
+"id": "CD-097",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.38
+},
+{
+"id": "CD-098",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 7,
+"volume_per_atom_A3": 23.84
+},
+{
+"id": "CD-099",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.21
+},
+{
+"id": "CD-100",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.21
+},
+{
+"id": "CD-101",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 30.04
+},
+{
+"id": "CD-102",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 30.04
+},
+{
+"id": "CD-103",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 30.04
+},
+{
+"id": "CD-104",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.56
+},
+{
+"id": "CD-105",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.56
+},
+{
+"id": "CD-106",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.56
+},
+{
+"id": "CD-107",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.83
+},
+{
+"id": "CD-108",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.83
+},
+{
+"id": "CD-109",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.83
+},
+{
+"id": "CD-110",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.48
+},
+{
+"id": "CD-111",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.26
+},
+{
+"id": "CD-112",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.17
+},
+{
+"id": "CD-113",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.87
+},
+{
+"id": "CD-114",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.59
+},
+{
+"id": "CD-115",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.59
+},
+{
+"id": "CD-116",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.41
+},
+{
+"id": "CD-117",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.05
+},
+{
+"id": "CD-118",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.13
+},
+{
+"id": "CD-119",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.8
+},
+{
+"id": "CD-120",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.75
+},
+{
+"id": "CD-121",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.25
+},
+{
+"id": "CD-122",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.63
+},
+{
+"id": "CD-123",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.07
+},
+{
+"id": "CD-124",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.87
+},
+{
+"id": "CD-125",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.68
+},
+{
+"id": "CD-126",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.55
+},
+{
+"id": "CD-127",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.25
+},
+{
+"id": "CD-128",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.7
+},
+{
+"id": "CD-129",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.38
+},
+{
+"id": "CD-130",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.56
+},
+{
+"id": "CD-131",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.51
+},
+{
+"id": "CD-132",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.66
+},
+{
+"id": "CD-133",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.01
+},
+{
+"id": "CD-134",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.57
+},
+{
+"id": "CD-135",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.33
+},
+{
+"id": "CD-136",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.08
+},
+{
+"id": "CD-137",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.72
+},
+{
+"id": "CD-138",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.29
+},
+{
+"id": "CD-139",
+"phase": "CD",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.94
+},
+{
+"id": "CD-140",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.71
+},
+{
+"id": "CD-141",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.25
+},
+{
+"id": "CD-142",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.06
+},
+{
+"id": "CD-143",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.25
+},
+{
+"id": "CD-144",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.02
+},
+{
+"id": "CD-145",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.6
+},
+{
+"id": "CD-146",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.02
+},
+{
+"id": "CD-147",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.54
+},
+{
+"id": "CD-148",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.83
+},
+{
+"id": "CD-149",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.64
+},
+{
+"id": "CD-150",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.98
+},
+{
+"id": "CD-151",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.12
+},
+{
+"id": "CD-152",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.79
+},
+{
+"id": "CD-153",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.19
+},
+{
+"id": "CD-154",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.83
+},
+{
+"id": "CD-155",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.47
+},
+{
+"id": "CD-156",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.64
+},
+{
+"id": "CD-157",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.98
+},
+{
+"id": "CD-158",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.12
+},
+{
+"id": "CD-159",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.79
+},
+{
+"id": "CD-160",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.19
+},
+{
+"id": "CD-161",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.83
+},
+{
+"id": "CD-162",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.47
+},
+{
+"id": "CD-163",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.64
+},
+{
+"id": "CD-164",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.98
+},
+{
+"id": "CD-165",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.12
+},
+{
+"id": "CD-166",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.79
+},
+{
+"id": "CD-167",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.19
+},
+{
+"id": "CD-168",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.44
+},
+{
+"id": "CD-169",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.47
+},
+{
+"id": "CD-170",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.64
+},
+{
+"id": "CD-171",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.12
+},
+{
+"id": "CD-172",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.79
+},
+{
+"id": "CD-173",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.19
+},
+{
+"id": "CD-174",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.83
+},
+{
+"id": "CD-175",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.47
+},
+{
+"id": "CD-176",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.64
+},
+{
+"id": "CD-177",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.12
+},
+{
+"id": "CD-178",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.79
+},
+{
+"id": "CD-179",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.19
+},
+{
+"id": "CD-180",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.44
+},
+{
+"id": "CD-181",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.83
+},
+{
+"id": "CD-182",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.47
+},
+{
+"id": "CD-183",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.12
+},
+{
+"id": "CD-184",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.79
+},
+{
+"id": "CD-185",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.19
+},
+{
+"id": "CD-186",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.44
+},
+{
+"id": "CD-187",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.83
+},
+{
+"id": "CD-188",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.47
+},
+{
+"id": "CD-189",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.12
+},
+{
+"id": "CD-190",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.79
+},
+{
+"id": "CD-191",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.19
+},
+{
+"id": "CD-192",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.83
+},
+{
+"id": "CD-193",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.47
+},
+{
+"id": "CD-194",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.12
+},
+{
+"id": "CD-195",
+"phase": "CD",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.79
+},
+{
+"id": "CD-196",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.94
+},
+{
+"id": "CD-197",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.65
+},
+{
+"id": "CD-198",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.37
+},
+{
+"id": "CD-199",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.32
+},
+{
+"id": "CD-200",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.04
+},
+{
+"id": "CD-201",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.75
+},
+{
+"id": "CD-202",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.94
+},
+{
+"id": "CD-203",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.65
+},
+{
+"id": "CD-204",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.37
+},
+{
+"id": "CD-205",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.32
+},
+{
+"id": "CD-206",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.04
+},
+{
+"id": "CD-207",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.75
+},
+{
+"id": "CD-208",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.94
+},
+{
+"id": "CD-209",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.65
+},
+{
+"id": "CD-210",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.37
+},
+{
+"id": "CD-211",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.32
+},
+{
+"id": "CD-212",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.04
+},
+{
+"id": "CD-213",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.75
+},
+{
+"id": "CD-214",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.57
+},
+{
+"id": "CD-215",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.44
+},
+{
+"id": "CD-216",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.44
+},
+{
+"id": "CD-217",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.84
+},
+{
+"id": "CD-218",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.3
+},
+{
+"id": "CD-219",
+"phase": "CD",
+"natoms": 8,
+"ionic_steps": 1,
+"volume_per_atom_A3": 27.6
+},
+{
+"id": "R8-001",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.9
+},
+{
+"id": "R8-002",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.81
+},
+{
+"id": "R8-003",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.25
+},
+{
+"id": "R8-004",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.28
+},
+{
+"id": "R8-005",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.75
+},
+{
+"id": "R8-006",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.04
+},
+{
+"id": "R8-007",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.71
+},
+{
+"id": "R8-008",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.21
+},
+{
+"id": "R8-009",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.69
+},
+{
+"id": "R8-010",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.35
+},
+{
+"id": "R8-011",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.2
+},
+{
+"id": "R8-012",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.47
+},
+{
+"id": "R8-013",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.25
+},
+{
+"id": "R8-014",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.15
+},
+{
+"id": "R8-015",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.29
+},
+{
+"id": "R8-016",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.13
+},
+{
+"id": "R8-017",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.34
+},
+{
+"id": "R8-018",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.51
+},
+{
+"id": "R8-019",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.72
+},
+{
+"id": "R8-020",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.68
+},
+{
+"id": "R8-021",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.0
+},
+{
+"id": "R8-022",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.33
+},
+{
+"id": "R8-023",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.53
+},
+{
+"id": "R8-024",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.81
+},
+{
+"id": "R8-025",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.12
+},
+{
+"id": "R8-026",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.89
+},
+{
+"id": "R8-027",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.13
+},
+{
+"id": "R8-028",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.68
+},
+{
+"id": "R8-029",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 4,
+"volume_per_atom_A3": 21.23
+},
+{
+"id": "R8-030",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 6,
+"volume_per_atom_A3": 19.14
+},
+{
+"id": "R8-031",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 5,
+"volume_per_atom_A3": 20.73
+},
+{
+"id": "R8-032",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 10,
+"volume_per_atom_A3": 19.92
+},
+{
+"id": "R8-033",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.06
+},
+{
+"id": "R8-034",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.28
+},
+{
+"id": "R8-035",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.54
+},
+{
+"id": "R8-036",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.86
+},
+{
+"id": "R8-037",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.06
+},
+{
+"id": "R8-038",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.28
+},
+{
+"id": "R8-039",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.54
+},
+{
+"id": "R8-040",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.86
+},
+{
+"id": "R8-041",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.23
+},
+{
+"id": "R8-042",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.23
+},
+{
+"id": "R8-043",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.14
+},
+{
+"id": "R8-044",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.14
+},
+{
+"id": "R8-045",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.14
+},
+{
+"id": "R8-046",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.14
+},
+{
+"id": "R8-047",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.14
+},
+{
+"id": "R8-048",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.14
+},
+{
+"id": "R8-049",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.14
+},
+{
+"id": "R8-050",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.14
+},
+{
+"id": "R8-051",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.14
+},
+{
+"id": "R8-052",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.23
+},
+{
+"id": "R8-053",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.23
+},
+{
+"id": "R8-054",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.23
+},
+{
+"id": "R8-055",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.23
+},
+{
+"id": "R8-056",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.23
+},
+{
+"id": "R8-057",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.23
+},
+{
+"id": "R8-058",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.23
+},
+{
+"id": "R8-059",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.23
+},
+{
+"id": "R8-060",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.92
+},
+{
+"id": "R8-061",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.92
+},
+{
+"id": "R8-062",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.98
+},
+{
+"id": "R8-063",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.98
+},
+{
+"id": "R8-064",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.33
+},
+{
+"id": "R8-065",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.68
+},
+{
+"id": "R8-066",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.68
+},
+{
+"id": "R8-067",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.68
+},
+{
+"id": "R8-068",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.13
+},
+{
+"id": "R8-069",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.13
+},
+{
+"id": "R8-070",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.13
+},
+{
+"id": "R8-071",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.33
+},
+{
+"id": "R8-072",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.33
+},
+{
+"id": "R8-073",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.94
+},
+{
+"id": "R8-074",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.94
+},
+{
+"id": "R8-075",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.94
+},
+{
+"id": "R8-076",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 27.14
+},
+{
+"id": "R8-077",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 27.14
+},
+{
+"id": "R8-078",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 27.14
+},
+{
+"id": "R8-079",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.22
+},
+{
+"id": "R8-080",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.59
+},
+{
+"id": "R8-081",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.1
+},
+{
+"id": "R8-082",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.4
+},
+{
+"id": "R8-083",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.5
+},
+{
+"id": "R8-084",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.07
+},
+{
+"id": "R8-085",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.64
+},
+{
+"id": "R8-086",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.39
+},
+{
+"id": "R8-087",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.94
+},
+{
+"id": "R8-088",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.68
+},
+{
+"id": "R8-089",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.57
+},
+{
+"id": "R8-090",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.58
+},
+{
+"id": "R8-091",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "R8-092",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.96
+},
+{
+"id": "R8-093",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.53
+},
+{
+"id": "R8-094",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.27
+},
+{
+"id": "R8-095",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.01
+},
+{
+"id": "R8-096",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.91
+},
+{
+"id": "R8-097",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.45
+},
+{
+"id": "R8-098",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.6
+},
+{
+"id": "R8-099",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.79
+},
+{
+"id": "R8-100",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.52
+},
+{
+"id": "R8-101",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.02
+},
+{
+"id": "R8-102",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.45
+},
+{
+"id": "R8-103",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.1
+},
+{
+"id": "R8-104",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.6
+},
+{
+"id": "R8-105",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.79
+},
+{
+"id": "R8-106",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.52
+},
+{
+"id": "R8-107",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.02
+},
+{
+"id": "R8-108",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.36
+},
+{
+"id": "R8-109",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.1
+},
+{
+"id": "R8-110",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.6
+},
+{
+"id": "R8-111",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.79
+},
+{
+"id": "R8-112",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.52
+},
+{
+"id": "R8-113",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.02
+},
+{
+"id": "R8-114",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.45
+},
+{
+"id": "R8-115",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.1
+},
+{
+"id": "R8-116",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.6
+},
+{
+"id": "R8-117",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.79
+},
+{
+"id": "R8-118",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.52
+},
+{
+"id": "R8-119",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.02
+},
+{
+"id": "R8-120",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.36
+},
+{
+"id": "R8-121",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.45
+},
+{
+"id": "R8-122",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.1
+},
+{
+"id": "R8-123",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.79
+},
+{
+"id": "R8-124",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.52
+},
+{
+"id": "R8-125",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.02
+},
+{
+"id": "R8-126",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.36
+},
+{
+"id": "R8-127",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.45
+},
+{
+"id": "R8-128",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.1
+},
+{
+"id": "R8-129",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.79
+},
+{
+"id": "R8-130",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.52
+},
+{
+"id": "R8-131",
+"phase": "R8",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.02
+},
+{
+"id": "R8-132",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.82
+},
+{
+"id": "R8-133",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.47
+},
+{
+"id": "R8-134",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "R8-135",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.97
+},
+{
+"id": "R8-136",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.62
+},
+{
+"id": "R8-137",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.27
+},
+{
+"id": "R8-138",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.82
+},
+{
+"id": "R8-139",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.47
+},
+{
+"id": "R8-140",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "R8-141",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.97
+},
+{
+"id": "R8-142",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.62
+},
+{
+"id": "R8-143",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.27
+},
+{
+"id": "R8-144",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.82
+},
+{
+"id": "R8-145",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.47
+},
+{
+"id": "R8-146",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "R8-147",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.97
+},
+{
+"id": "R8-148",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.62
+},
+{
+"id": "R8-149",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.27
+},
+{
+"id": "R8-150",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.78
+},
+{
+"id": "R8-151",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.47
+},
+{
+"id": "R8-152",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.28
+},
+{
+"id": "R8-153",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.54
+},
+{
+"id": "R8-154",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.86
+},
+{
+"id": "R8-155",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.94
+},
+{
+"id": "R8-156",
+"phase": "R8",
+"natoms": 24,
+"ionic_steps": 1,
+"volume_per_atom_A3": 27.14
+},
+{
+"id": "ST12-001",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 6,
+"volume_per_atom_A3": 21.48
+},
+{
+"id": "ST12-002",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.52
+},
+{
+"id": "ST12-003",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.64
+},
+{
+"id": "ST12-004",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.04
+},
+{
+"id": "ST12-005",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.46
+},
+{
+"id": "ST12-006",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.83
+},
+{
+"id": "ST12-007",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.2
+},
+{
+"id": "ST12-008",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.27
+},
+{
+"id": "ST12-009",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.78
+},
+{
+"id": "ST12-010",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.18
+},
+{
+"id": "ST12-011",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.43
+},
+{
+"id": "ST12-012",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.48
+},
+{
+"id": "ST12-013",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.45
+},
+{
+"id": "ST12-014",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.89
+},
+{
+"id": "ST12-015",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.74
+},
+{
+"id": "ST12-016",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.47
+},
+{
+"id": "ST12-017",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.64
+},
+{
+"id": "ST12-018",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.65
+},
+{
+"id": "ST12-019",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.16
+},
+{
+"id": "ST12-020",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.84
+},
+{
+"id": "ST12-021",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.78
+},
+{
+"id": "ST12-022",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.51
+},
+{
+"id": "ST12-023",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.97
+},
+{
+"id": "ST12-024",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.0
+},
+{
+"id": "ST12-025",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.54
+},
+{
+"id": "ST12-026",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.25
+},
+{
+"id": "ST12-027",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.04
+},
+{
+"id": "ST12-028",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.84
+},
+{
+"id": "ST12-029",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.85
+},
+{
+"id": "ST12-030",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.14
+},
+{
+"id": "ST12-031",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.52
+},
+{
+"id": "ST12-032",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.18
+},
+{
+"id": "ST12-033",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.16
+},
+{
+"id": "ST12-034",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.94
+},
+{
+"id": "ST12-035",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.53
+},
+{
+"id": "ST12-036",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.47
+},
+{
+"id": "ST12-037",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.03
+},
+{
+"id": "ST12-038",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.77
+},
+{
+"id": "ST12-039",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-040",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.14
+},
+{
+"id": "ST12-041",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.75
+},
+{
+"id": "ST12-042",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.21
+},
+{
+"id": "ST12-043",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.97
+},
+{
+"id": "ST12-044",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.92
+},
+{
+"id": "ST12-045",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.64
+},
+{
+"id": "ST12-046",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.89
+},
+{
+"id": "ST12-047",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.26
+},
+{
+"id": "ST12-048",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 3,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-049",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 6,
+"volume_per_atom_A3": 19.06
+},
+{
+"id": "ST12-050",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 7,
+"volume_per_atom_A3": 20.54
+},
+{
+"id": "ST12-051",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 5,
+"volume_per_atom_A3": 20.0
+},
+{
+"id": "ST12-052",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-053",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-054",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-055",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-056",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-057",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-058",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-059",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-060",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-061",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-062",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-063",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-064",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-065",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-066",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-067",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-068",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-069",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-070",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-071",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-072",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-073",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-074",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.22
+},
+{
+"id": "ST12-075",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.22
+},
+{
+"id": "ST12-076",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.22
+},
+{
+"id": "ST12-077",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.22
+},
+{
+"id": "ST12-078",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-079",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-080",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-081",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-082",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-083",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-084",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-085",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-086",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-087",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-088",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-089",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-090",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.98
+},
+{
+"id": "ST12-091",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-092",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.5
+},
+{
+"id": "ST12-093",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.82
+},
+{
+"id": "ST12-094",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-095",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.37
+},
+{
+"id": "ST12-096",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-097",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-098",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.91
+},
+{
+"id": "ST12-099",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.14
+},
+{
+"id": "ST12-100",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.29
+},
+{
+"id": "ST12-101",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.67
+},
+{
+"id": "ST12-102",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.07
+},
+{
+"id": "ST12-103",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.09
+},
+{
+"id": "ST12-104",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.87
+},
+{
+"id": "ST12-105",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-106",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.01
+},
+{
+"id": "ST12-107",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.86
+},
+{
+"id": "ST12-108",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-109",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.12
+},
+{
+"id": "ST12-110",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.96
+},
+{
+"id": "ST12-111",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.29
+},
+{
+"id": "ST12-112",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-113",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.02
+},
+{
+"id": "ST12-114",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-115",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-116",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-117",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.21
+},
+{
+"id": "ST12-118",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.87
+},
+{
+"id": "ST12-119",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.55
+},
+{
+"id": "ST12-120",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.25
+},
+{
+"id": "ST12-121",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-122",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-123",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.41
+},
+{
+"id": "ST12-124",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.05
+},
+{
+"id": "ST12-125",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-126",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.42
+},
+{
+"id": "ST12-127",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-128",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-129",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.09
+},
+{
+"id": "ST12-130",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.78
+},
+{
+"id": "ST12-131",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-132",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.58
+},
+{
+"id": "ST12-133",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-134",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.32
+},
+{
+"id": "ST12-135",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.22
+},
+{
+"id": "ST12-136",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.48
+},
+{
+"id": "ST12-137",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.8
+},
+{
+"id": "ST12-138",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.22
+},
+{
+"id": "ST12-139",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.48
+},
+{
+"id": "ST12-140",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.8
+},
+{
+"id": "ST12-141",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.86
+},
+{
+"id": "ST12-142",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.55
+},
+{
+"id": "ST12-143",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.3
+},
+{
+"id": "ST12-144",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-145",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-146",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.06
+},
+{
+"id": "ST12-147",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.06
+},
+{
+"id": "ST12-148",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-149",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-150",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-151",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-152",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-153",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-154",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-155",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-156",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.44
+},
+{
+"id": "ST12-157",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.44
+},
+{
+"id": "ST12-158",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.02
+},
+{
+"id": "ST12-159",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.02
+},
+{
+"id": "ST12-160",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-161",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-162",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-163",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-164",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-165",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-166",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-167",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-168",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-169",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-170",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-171",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-172",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-173",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.22
+},
+{
+"id": "ST12-174",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.22
+},
+{
+"id": "ST12-175",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.22
+},
+{
+"id": "ST12-176",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.22
+},
+{
+"id": "ST12-177",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-178",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-179",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-180",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-181",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-182",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-183",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-184",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-185",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-186",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-187",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-188",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.06
+},
+{
+"id": "ST12-189",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.25
+},
+{
+"id": "ST12-190",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.25
+},
+{
+"id": "ST12-191",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.25
+},
+{
+"id": "ST12-192",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.52
+},
+{
+"id": "ST12-193",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.52
+},
+{
+"id": "ST12-194",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 23.52
+},
+{
+"id": "ST12-195",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-196",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-197",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.11
+},
+{
+"id": "ST12-198",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.92
+},
+{
+"id": "ST12-199",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.06
+},
+{
+"id": "ST12-200",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.92
+},
+{
+"id": "ST12-201",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.92
+},
+{
+"id": "ST12-202",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.06
+},
+{
+"id": "ST12-203",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.64
+},
+{
+"id": "ST12-204",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.64
+},
+{
+"id": "ST12-205",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 25.64
+},
+{
+"id": "ST12-206",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.21
+},
+{
+"id": "ST12-207",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.21
+},
+{
+"id": "ST12-208",
+"phase": "ST12",
+"natoms": 12,
+"ionic_steps": 1,
+"volume_per_atom_A3": 24.21
+},
+{
+"id": "ST12-209",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-210",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-211",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-212",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-213",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-214",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-215",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-216",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-217",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-218",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-219",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-220",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-221",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.22
+},
+{
+"id": "ST12-222",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-223",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-224",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-225",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-226",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-227",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-228",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-229",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-230",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.43
+},
+{
+"id": "ST12-231",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-232",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-233",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-234",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.22
+},
+{
+"id": "ST12-235",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-236",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-237",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-238",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-239",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "ST12-240",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.22
+},
+{
+"id": "ST12-241",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.27
+},
+{
+"id": "ST12-242",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.95
+},
+{
+"id": "ST12-243",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.66
+},
+{
+"id": "ST12-244",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.39
+},
+{
+"id": "ST12-245",
+"phase": "ST12",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.9
+},
+{
+"id": "bSn-001",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.19
+},
+{
+"id": "bSn-002",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.01
+},
+{
+"id": "bSn-003",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.81
+},
+{
+"id": "bSn-004",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.69
+},
+{
+"id": "bSn-005",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.65
+},
+{
+"id": "bSn-006",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.5
+},
+{
+"id": "bSn-007",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.2
+},
+{
+"id": "bSn-008",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.99
+},
+{
+"id": "bSn-009",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.5
+},
+{
+"id": "bSn-010",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 14.71
+},
+{
+"id": "bSn-011",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.81
+},
+{
+"id": "bSn-012",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.61
+},
+{
+"id": "bSn-013",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.25
+},
+{
+"id": "bSn-014",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.48
+},
+{
+"id": "bSn-015",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.27
+},
+{
+"id": "bSn-016",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.02
+},
+{
+"id": "bSn-017",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.79
+},
+{
+"id": "bSn-018",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.62
+},
+{
+"id": "bSn-019",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.18
+},
+{
+"id": "bSn-020",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.11
+},
+{
+"id": "bSn-021",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.25
+},
+{
+"id": "bSn-022",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.55
+},
+{
+"id": "bSn-023",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 14.31
+},
+{
+"id": "bSn-024",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.78
+},
+{
+"id": "bSn-025",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 4,
+"volume_per_atom_A3": 19.12
+},
+{
+"id": "bSn-026",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 10,
+"volume_per_atom_A3": 17.29
+},
+{
+"id": "bSn-027",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 10,
+"volume_per_atom_A3": 15.69
+},
+{
+"id": "bSn-028",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 7,
+"volume_per_atom_A3": 18.63
+},
+{
+"id": "bSn-029",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 5,
+"volume_per_atom_A3": 13.83
+},
+{
+"id": "bSn-030",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 5,
+"volume_per_atom_A3": 17.92
+},
+{
+"id": "bSn-031",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.52
+},
+{
+"id": "bSn-032",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.94
+},
+{
+"id": "bSn-033",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.24
+},
+{
+"id": "bSn-034",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.12
+},
+{
+"id": "bSn-035",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.06
+},
+{
+"id": "bSn-036",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.06
+},
+{
+"id": "bSn-037",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.06
+},
+{
+"id": "bSn-038",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.15
+},
+{
+"id": "bSn-039",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.06
+},
+{
+"id": "bSn-040",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.15
+},
+{
+"id": "bSn-041",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.29
+},
+{
+"id": "bSn-042",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.29
+},
+{
+"id": "bSn-043",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.29
+},
+{
+"id": "bSn-044",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.29
+},
+{
+"id": "bSn-045",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.29
+},
+{
+"id": "bSn-046",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.29
+},
+{
+"id": "bSn-047",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.69
+},
+{
+"id": "bSn-048",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.69
+},
+{
+"id": "bSn-049",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.69
+},
+{
+"id": "bSn-050",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.69
+},
+{
+"id": "bSn-051",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.69
+},
+{
+"id": "bSn-052",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.83
+},
+{
+"id": "bSn-053",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.83
+},
+{
+"id": "bSn-054",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.83
+},
+{
+"id": "bSn-055",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.83
+},
+{
+"id": "bSn-056",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.83
+},
+{
+"id": "bSn-057",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.83
+},
+{
+"id": "bSn-058",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.82
+},
+{
+"id": "bSn-060",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.82
+},
+{
+"id": "bSn-061",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 2,
+"volume_per_atom_A3": 19.28
+},
+{
+"id": "bSn-062",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.96
+},
+{
+"id": "bSn-063",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.82
+},
+{
+"id": "bSn-064",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.82
+},
+{
+"id": "bSn-065",
+"phase": "bSn",
+"natoms": 64,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.96
+},
+{
+"id": "bSn-066",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.12
+},
+{
+"id": "bSn-067",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.51
+},
+{
+"id": "bSn-068",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.89
+},
+{
+"id": "bSn-069",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.67
+},
+{
+"id": "bSn-070",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.05
+},
+{
+"id": "bSn-071",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.44
+},
+{
+"id": "bSn-072",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.12
+},
+{
+"id": "bSn-073",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.51
+},
+{
+"id": "bSn-074",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.89
+},
+{
+"id": "bSn-075",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.67
+},
+{
+"id": "bSn-076",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.05
+},
+{
+"id": "bSn-077",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.44
+},
+{
+"id": "bSn-078",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.12
+},
+{
+"id": "bSn-079",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.51
+},
+{
+"id": "bSn-080",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.89
+},
+{
+"id": "bSn-081",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.67
+},
+{
+"id": "bSn-082",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.05
+},
+{
+"id": "bSn-083",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.44
+},
+{
+"id": "bSn-084",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.01
+},
+{
+"id": "bSn-085",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.06
+},
+{
+"id": "bSn-086",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.15
+},
+{
+"id": "bSn-087",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 20.46
+},
+{
+"id": "bSn-088",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 21.69
+},
+{
+"id": "bSn-089",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 22.96
+},
+{
+"id": "bSn-090",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.17
+},
+{
+"id": "bSn-091",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 14.13
+},
+{
+"id": "bSn-092",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.95
+},
+{
+"id": "bSn-093",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.77
+},
+{
+"id": "bSn-094",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.57
+},
+{
+"id": "bSn-095",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.43
+},
+{
+"id": "bSn-096",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.29
+},
+{
+"id": "bSn-097",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.12
+},
+{
+"id": "bSn-098",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.88
+},
+{
+"id": "bSn-099",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.73
+},
+{
+"id": "bSn-100",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.59
+},
+{
+"id": "bSn-101",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.34
+},
+{
+"id": "bSn-102",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 12.52
+},
+{
+"id": "bSn-103",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.81
+},
+{
+"id": "bSn-104",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.53
+},
+{
+"id": "bSn-105",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.67
+},
+{
+"id": "bSn-106",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.34
+},
+{
+"id": "bSn-107",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 14.95
+},
+{
+"id": "bSn-108",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 14.82
+},
+{
+"id": "bSn-109",
+"phase": "bSn",
+"natoms": 48,
+"ionic_steps": 1,
+"volume_per_atom_A3": 14.41
+},
+{
+"id": "bSn-110",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.52
+},
+{
+"id": "bSn-111",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.65
+},
+{
+"id": "bSn-112",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.15
+},
+{
+"id": "bSn-113",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.93
+},
+{
+"id": "bSn-114",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.57
+},
+{
+"id": "bSn-115",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.45
+},
+{
+"id": "bSn-116",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.88
+},
+{
+"id": "bSn-117",
+"phase": "bSn",
+"natoms": 16,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.61
+},
+{
+"id": "bSn-118",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.24
+},
+{
+"id": "bSn-119",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.23
+},
+{
+"id": "bSn-120",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.52
+},
+{
+"id": "bSn-121",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.94
+},
+{
+"id": "bSn-122",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.12
+},
+{
+"id": "bSn-123",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 14.4
+},
+{
+"id": "bSn-124",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.06
+},
+{
+"id": "bSn-125",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.32
+},
+{
+"id": "bSn-126",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.24
+},
+{
+"id": "bSn-127",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.23
+},
+{
+"id": "bSn-128",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.52
+},
+{
+"id": "bSn-129",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.94
+},
+{
+"id": "bSn-130",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.12
+},
+{
+"id": "bSn-131",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 14.4
+},
+{
+"id": "bSn-132",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.06
+},
+{
+"id": "bSn-133",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 13.32
+},
+{
+"id": "bSn-134",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.24
+},
+{
+"id": "bSn-135",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.23
+},
+{
+"id": "bSn-136",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.52
+},
+{
+"id": "bSn-137",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.94
+},
+{
+"id": "bSn-138",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.12
+},
+{
+"id": "bSn-139",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 14.4
+},
+{
+"id": "bSn-140",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.06
+},
+{
+"id": "bSn-141",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.24
+},
+{
+"id": "bSn-142",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.23
+},
+{
+"id": "bSn-143",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.52
+},
+{
+"id": "bSn-144",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.94
+},
+{
+"id": "bSn-145",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.12
+},
+{
+"id": "bSn-146",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.06
+},
+{
+"id": "bSn-147",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 19.24
+},
+{
+"id": "bSn-148",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.23
+},
+{
+"id": "bSn-149",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.52
+},
+{
+"id": "bSn-150",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 15.94
+},
+{
+"id": "bSn-151",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 18.06
+},
+{
+"id": "bSn-152",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 17.23
+},
+{
+"id": "bSn-153",
+"phase": "bSn",
+"natoms": 32,
+"ionic_steps": 1,
+"volume_per_atom_A3": 16.52
+}
+]
+}

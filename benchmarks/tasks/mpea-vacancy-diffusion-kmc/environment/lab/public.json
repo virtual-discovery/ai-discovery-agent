@@ -1,0 +1,19 @@
+{
+ "task_id": "mpea-vacancy-diffusion-kmc",
+ "solver_budget": 60,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "hops": {
+   "kind": "hops",
+   "ids": [
+    "<up to 20 ids from hops_available>"
+   ],
+   "cost": 1
+  },
+  "kmc": {
+   "kind": "kmc",
+   "cost": "see catalog purchase.kmc_cost"
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

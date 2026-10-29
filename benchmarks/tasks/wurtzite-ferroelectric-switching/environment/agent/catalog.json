@@ -1,0 +1,197 @@
+{
+ "source": "Released DFT data of Calderon et al., Science 380, 1034 (2023), Zenodo record 7916565 (CC BY 4.0). Quantum ESPRESSO 6.7, PBE, PseudoDojo pseudopotentials, 32-atom wurtzite supercells.",
+ "systems": {
+  "AlN": "pure AlN supercell",
+  "AlBN": "B-substituted AlN supercell, (Al,B)N"
+ },
+ "budget": 28,
+ "purchase_costs": {
+  "neb_run": 2,
+  "neb_image": 1,
+  "berry_phase": 1,
+  "born_charges": 1,
+  "vc_relax": 1
+ },
+ "requests": {
+  "neb_run": {
+   "example": {
+    "kind": "neb_run",
+    "system": "AlBN",
+    "run": "refined_NEB"
+   },
+   "returns": "Settings and the final iteration of one archived neb.x run: path and engine settings, the image energy/error table (images numbered 1..N as printed by neb.x), recent activation-energy lines, the convergence message if any, and the end of the log and scheduler output."
+  },
+  "neb_image": {
+   "example": {
+    "kind": "neb_image",
+    "system": "AlBN",
+    "run": "NEB",
+    "image": 13
+   },
+   "returns": "Final structure of one image of one run (cell, species, Cartesian positions in A)."
+  },
+  "berry_phase": {
+   "example": {
+    "kind": "berry_phase",
+    "system": "AlN",
+    "folder": "00_image"
+   },
+   "returns": "One archived Berry-phase calculation (scf + nscf with lberry, gdir = 3): run settings, the scf total energy, the structure, and the POLARIZATION CALCULATION section of the nscf output as printed by pw.x."
+  },
+  "born_charges": {
+   "example": {
+    "kind": "born_charges",
+    "system": "AlBN"
+   },
+   "returns": "The authors' file 'Born effective charge (AlBN).csv' (Z33 per atom)."
+  },
+  "vc_relax": {
+   "example": {
+    "kind": "vc_relax",
+    "key": "AlN_primitive"
+   },
+   "returns": "Final cell and coordinates, energy and pressure of one archived vc-relax run."
+  }
+ },
+ "neb_runs": {
+  "AlN": {
+   "NEB": {
+    "images": 25
+   },
+   "refined_NEB": {
+    "images": 25
+   },
+   "refined_NEB2": {
+    "images": 25
+   }
+  },
+  "AlBN": {
+   "NEB": {
+    "images": 25
+   },
+   "refined_NEB": {
+    "images": 25
+   },
+   "refined_NEB2": {
+    "images": 75
+   }
+  }
+ },
+ "neb_run_note": "Run names are the authors' folder names under <system>/NEB/.",
+ "berry_phase_folders": {
+  "AlN": [
+   "00_image",
+   "01_image",
+   "02_image",
+   "03_image",
+   "04_image",
+   "05_image",
+   "06_image",
+   "07_image",
+   "08_image",
+   "09_image",
+   "10_image",
+   "11_image",
+   "12_image",
+   "13_image",
+   "14_image",
+   "15_image",
+   "16_image",
+   "17_image",
+   "18_image",
+   "19_image",
+   "20_image",
+   "21_image",
+   "22_image",
+   "23_image",
+   "24_image"
+  ],
+  "AlBN": [
+   "00_image",
+   "01_image",
+   "02_image",
+   "03_image",
+   "04_image",
+   "05_image",
+   "06_image",
+   "07_image",
+   "08_image",
+   "09_image",
+   "10_image",
+   "11_image",
+   "12_image",
+   "13_image",
+   "14_image",
+   "15_image",
+   "16_image",
+   "17_image",
+   "18_image",
+   "19_image",
+   "20_image",
+   "21_image",
+   "22_image",
+   "23_image",
+   "24_image",
+   "25_image",
+   "26_image",
+   "27_image",
+   "28_image",
+   "29_image",
+   "30_image",
+   "31_image",
+   "32_image",
+   "33_image",
+   "34_image",
+   "35_image",
+   "36_image",
+   "37_image",
+   "38_image",
+   "39_image",
+   "40_image",
+   "41_image",
+   "42_image",
+   "43_image",
+   "44_image",
+   "45_image",
+   "46_image",
+   "47_image",
+   "48_image",
+   "49_image",
+   "50_image",
+   "51_image",
+   "52_image",
+   "53_image",
+   "54_image",
+   "55_image",
+   "56_image",
+   "57_image",
+   "58_image",
+   "59_image",
+   "60_image",
+   "61_image",
+   "62_image",
+   "63_image",
+   "64_image",
+   "65_image",
+   "66_image",
+   "67_image",
+   "68_image",
+   "69_image",
+   "70_image",
+   "71_image",
+   "72_image",
+   "73_image",
+   "74_image"
+  ]
+ },
+ "berry_phase_note": "Folder names are the authors' names under <system>/polarization/nscf/; the archive does not say which NEB run they were taken from.",
+ "vc_relax_keys": {
+  "AlN_primitive": "AlN/vc-relax (4-atom cell)",
+  "AlN_32atom_initial_state": "AlN/NEB/initial_state",
+  "AlBN_32atom_initial_state": "AlBN/NEB/initial_state",
+  "AlBN_192atom": "AlBN/443_vc-relax (larger B-substituted supercell)"
+ },
+ "born_charges_systems": [
+  "AlBN"
+ ]
+}

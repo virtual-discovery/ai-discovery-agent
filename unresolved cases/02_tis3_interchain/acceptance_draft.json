@@ -1,0 +1,164 @@
+{
+ "campaign": "TIS3-INTERCHAIN-1",
+ "status": "DRAFT 2026-10-28 - fill S0 anchors, freeze (acceptance.json + sha256) before stage S2; never edit after a production spectrum exists",
+ "question": "Is the 1.28 eV low-T absorption peak of bulk TiS3 for E perpendicular to the chains an interchain exciton (hole and electron on different chains), distinct from the E||b edge exciton?",
+ "source": {
+  "paper": "Boldyrev et al., JETP Lett. 120, 565 (2024)",
+  "doi": "10.1134/S002136402460335X",
+  "peak_eV": 1.28,
+  "polarization": "perpendicular to chains (b2 = E||a assumed; S0 confirms the measured face)",
+  "visible_below_K": 150
+ },
+ "anchors_S0_TO_FILL": {
+  "edge_exciton_E_par_b_eV": null,
+  "edge_E_perp_b_eV": null,
+  "peak_1p28_fwhm_eV": null,
+  "measured_face": null,
+  "fallback_optical_gap_eV": 1.07,
+  "fallback_source": "Molina-Mendoza et al., Adv. Electron. Mater. 1, 1500126 (2015): STS gap 1.2, optical gap 1.07, E_b 0.13"
+ },
+ "prior_expectation_declared": {
+  "bulk_E_b_X_b_eV": [
+   0.08,
+   0.2
+  ],
+  "E_P_minus_E_Xb_eV": [
+   0.15,
+   0.25
+  ],
+  "w_ic_if_interchain": ">= 0.5",
+  "note": "a CT-like interchain pair polarized along a is plausible in a quasi-1D lattice; the maps decide"
+ },
+ "definitions": {
+  "channels": {
+   "b1": "E||b (chains)",
+   "b2": "E||a (in-plane perpendicular)",
+   "b3": "E||c* (recorded)"
+  },
+  "shift": "ONE global shift |s| <= 0.15 eV fixing X_b on its anchor",
+  "broadening_eV": 0.03,
+  "peak_window_eV": [
+   1.18,
+   1.38
+  ],
+  "selectivity_R": "eps2_b2(E_P)/eps2_b1(E_P)",
+  "w_ic": "electron density on in-layer chains other than the hole's chain / in-layer total; hole on Ti and on S",
+  "box_rule": "Born-von-Karman cell of the fine grid, hole at centre, OMP=1, log render, containment face/max <= 1e-5"
+ },
+ "gates": {
+  "G0_litcheck": {
+   "bulk_E_QP_E_opt_E_b_tol_eV": 0.1,
+   "second_feature_must_be_present": true,
+   "on_fail": "LITCHECK_FAIL (stop)"
+  },
+  "G1_anchor": {
+   "shift_cap_eV": 0.15,
+   "E_QP_target_eV": 1.2,
+   "E_QP_tol_eV": 0.25,
+   "E_b_target_eV": 0.13,
+   "E_b_tol_eV": 0.07,
+   "on_shift_fail": "PROCESS_BLOCKED",
+   "on_Eb_fail": "BINDING_OFF flag, proceed"
+  },
+  "G2_peak": {
+   "window_eV": [
+    1.18,
+    1.38
+   ],
+   "min_prominence_of_b2_max_in_0p9_1p8": 0.2,
+   "on_fail": "PEAK_NOT_REPRODUCED"
+  },
+  "G2b_selectivity": {
+   "R_pass": 3.0,
+   "R_fail": 1.0,
+   "between": "weak selectivity, non-blocking"
+  },
+  "G3_identity": {
+   "min_E_b_eV": 0.03,
+   "max_overlap_with_Xb": 0.1,
+   "weight_threshold": 0.5,
+   "on_fail": "MIXED_CHARACTER with composition"
+  },
+  "G4_interchain": {
+   "INTERCHAIN_CONFIRMED": ">= 0.50",
+   "INTRACHAIN_ASSIGNED": "<= 0.25",
+   "MIXED_CHARACTER": "(0.25, 0.50)",
+   "both_hole_sites_must_agree": true
+  },
+  "G4c_control": {
+   "w_ic_of_Xb_max": 0.35,
+   "on_fail": "PROCESS_BLOCKED (measure non-discriminating)"
+  },
+  "G5_dimensionality": {
+   "min_abs_delta_diff_eV": 0.1,
+   "effect": "permits the dimensionality statement",
+   "role": "control only; monolayer published values recorded, not gated"
+  },
+  "G6_convergence": {
+   "k_levels": [
+    [
+     4,
+     6,
+     2,
+     8,
+     12,
+     4
+    ],
+    [
+     6,
+     8,
+     3,
+     12,
+     16,
+     6
+    ]
+   ],
+   "max_dE_eV": 0.03,
+   "max_dR_rel": 0.25,
+   "max_dw_ic": 0.1
+  },
+  "G7_window": {
+   "factor": 1.5,
+   "max_dE_eV": 0.03
+  }
+ },
+ "status_vocabulary": [
+  "INTERCHAIN_CONFIRMED",
+  "INTRACHAIN_ASSIGNED",
+  "MIXED_CHARACTER",
+  "PEAK_NOT_REPRODUCED",
+  "LITCHECK_FAIL",
+  "PROCESS_BLOCKED"
+ ],
+ "non_vacuity": "G0, G2, G4c can fail; G4 returns three classes; possible outcomes recorded before reading numbers",
+ "scorers": [
+  "interchain_score.py (spectra gates)",
+  "realspace_score.py (w_ic)"
+ ],
+ "compute": {
+  "route": "ZrSe3 first; TiS3 pilot local; maps remote (local disk 21 GB)",
+  "budget_cap": "60 % of Vast credit",
+  "gauge_rule": "eigenvectors kept with the WFN they were computed from",
+  "destroy_rule": "destroy in the pull+md5 pipeline"
+ },
+ "out_of_scope": [
+  "temperature onset (no e-ph)",
+  "phonons",
+  "defects",
+  "SOC",
+  "evGW",
+  "thickness series"
+ ],
+ "deliverables_count": 9,
+ "litcheck_target": {
+  "paper": "Molina-Mendoza et al., Adv. Electron. Mater. 1, 1500126 (2015) - bulk G0W0+BSE, Yambo, PPA, 10x10x10, 30v x 70c, Haydock",
+  "E_QP_eV": 1.15,
+  "E_opt_eV": 1.05,
+  "E_b_eV": 0.1,
+  "second_feature_eV": [
+   1.2,
+   1.3
+  ],
+  "tol_eV": 0.1
+ }
+}

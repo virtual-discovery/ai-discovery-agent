@@ -1,0 +1,194 @@
+{
+ "reference": {
+  "solution_energy_0K_eV": -0.13909338939644877,
+  "OT_difference_static_eV": 0.026231268482632686,
+  "OT_difference_with_zpe_eV": 0.12514971564828933,
+  "lattice_expansion_A3_per_H": 3.0366209520457232,
+  "tetrahedral_fraction_H_300K": 0.01305626379047158,
+  "sieverts_ratio_H_over_D_300K": 2.2688648576926864,
+  "log10_plateau_pressure_H_300K_bar": -3.1076254547910116,
+  "Tc_incoherent_K": 418.98275710702165,
+  "Tc_coherent_K": 281.93554809596895
+ },
+ "robustness": {
+  "grid_coarse_h": {
+   "solution_energy_0K_eV": -0.14031237088758075,
+   "OT_difference_with_zpe_eV": 0.12350398338143107,
+   "tetrahedral_fraction_H_300K": 0.013721660086956867,
+   "sieverts_ratio_H_over_D_300K": 2.210901094593969,
+   "log10_plateau_pressure_H_300K_bar": -3.167381150076989
+  },
+  "grid_small_box": {
+   "solution_energy_0K_eV": -0.1390872947088914,
+   "OT_difference_with_zpe_eV": 0.12684672548804415,
+   "tetrahedral_fraction_H_300K": 0.012159611453733267,
+   "sieverts_ratio_H_over_D_300K": 2.2665320793843273,
+   "log10_plateau_pressure_H_300K_bar": -3.1072014536026726
+  },
+  "rk3_all": {
+   "Tc_incoherent_K": 416.7894803187267,
+   "Tc_coherent_K": 278.44240280609904,
+   "log10_plateau_pressure_H_300K_bar": -3.10351881502687
+  },
+  "rk5_all": {
+   "Tc_incoherent_K": 425.7388431266087,
+   "Tc_coherent_K": 279.66866173087016,
+   "log10_plateau_pressure_H_300K_bar": -3.098220456843066
+  },
+  "rk4_108_only": {
+   "Tc_incoherent_K": 426.494451048201,
+   "Tc_coherent_K": 295.40643087773117,
+   "log10_plateau_pressure_H_300K_bar": -3.1201219612877975
+  },
+  "rk4_32_only": {
+   "Tc_incoherent_K": 409.71984881167873,
+   "Tc_coherent_K": 263.52158756336314,
+   "log10_plateau_pressure_H_300K_bar": -3.088770463232266
+  },
+  "rk4_isotropic_volume": {
+   "Tc_incoherent_K": 418.3885502111501,
+   "Tc_coherent_K": 279.57090719963014,
+   "log10_plateau_pressure_H_300K_bar": -3.1038272829245925
+  },
+  "dilute_108_only": {
+   "lattice_expansion_A3_per_H": 3.0326368576384084,
+   "OT_difference_static_eV": 0.02621366616534715,
+   "solution_energy_0K_eV": -0.13945916365086797
+  },
+  "dilute_256_fixed_volume": {
+   "solution_energy_0K_eV": -0.1374877774540395,
+   "lattice_expansion_A3_per_H": 3.0441257835386435
+  },
+  "elastic_constants_d0.01": {
+   "Tc_coherent_K": 282.40957275146405
+  }
+ },
+ "ablations": {
+  "fixed_volume_configurational": {
+   "Tc_incoherent_K": 5.697722396939193,
+   "Tc_coherent_K": 0.0,
+   "log10_plateau_pressure_H_300K_bar": 2.571408251240523
+  },
+  "no_coherency": {
+   "Tc_coherent_K": 418.98275710702165
+  },
+  "coherency_111": {
+   "Tc_coherent_K": 177.52650838372284
+  },
+  "small_cell_dilute": {
+   "solution_energy_0K_eV": -0.19966647311484076,
+   "OT_difference_static_eV": 0.0024946498641646997,
+   "OT_difference_with_zpe_eV": 0.10141309702982135,
+   "lattice_expansion_A3_per_H": 2.8941201833491093
+  },
+  "small_cell_fixed_volume_dilute": {
+   "solution_energy_0K_eV": -0.12482834709954327,
+   "OT_difference_static_eV": 0.08006576393151832,
+   "OT_difference_with_zpe_eV": 0.178984211097175
+  },
+  "harmonic_zpe": {
+   "solution_energy_0K_eV": -0.17456946566272197,
+   "OT_difference_with_zpe_eV": 0.15676776988311864,
+   "tetrahedral_fraction_H_300K": 0.0019568758436819254,
+   "sieverts_ratio_H_over_D_300K": 3.3167265849741576,
+   "log10_plateau_pressure_H_300K_bar": -4.890868089727382
+  },
+  "zpe_only_no_thermal": {
+   "solution_energy_0K_eV": -0.13909338939644877,
+   "OT_difference_with_zpe_eV": 0.12514971564828933,
+   "tetrahedral_fraction_H_300K": 0.015552487894543728,
+   "sieverts_ratio_H_over_D_300K": 3.1576588958035225,
+   "log10_plateau_pressure_H_300K_bar": -2.925658548743332
+  },
+  "static_site_preference": {
+   "tetrahedral_fraction_H_300K": 0.4203044828075446,
+   "OT_difference_with_zpe_eV": 0.026231268482632686
+  },
+  "elastic_only_wagner_horner": {
+   "Tc_incoherent_K": 1836.0987655343822,
+   "Tc_coherent_K": 1513.8209056799633
+  },
+  "ordered_small_cells": {
+   "Tc_incoherent_K": 634.2403192297234,
+   "Tc_coherent_K": 513.5422147215397,
+   "log10_plateau_pressure_H_300K_bar": -3.541777269148879
+  },
+  "tetrahedral_site_as_dilute": {
+   "solution_energy_0K_eV": -0.01432705031986417,
+   "lattice_expansion_A3_per_H": 4.4186988463097805
+  }
+ },
+ "tolerance": {
+  "solution_energy_0K_eV": [
+   "abs",
+   0.012
+  ],
+  "OT_difference_static_eV": [
+   "abs",
+   0.01
+  ],
+  "OT_difference_with_zpe_eV": [
+   "abs",
+   0.015
+  ],
+  "lattice_expansion_A3_per_H": [
+   "rel",
+   0.08
+  ],
+  "tetrahedral_fraction_H_300K": [
+   "log",
+   2.0
+  ],
+  "sieverts_ratio_H_over_D_300K": [
+   "rel",
+   0.2
+  ],
+  "log10_plateau_pressure_H_300K_bar": [
+   "abs",
+   0.4
+  ],
+  "Tc_incoherent_K": [
+   "rel",
+   0.15
+  ],
+  "Tc_coherent_K": [
+   "rel",
+   0.2
+  ]
+ },
+ "extra": {
+  "a0": 3.939857465334708,
+  "Cij_GPa": [
+   203.92065641624893,
+   150.2314590019612,
+   64.62922677751905
+  ],
+  "E_sol_static": -0.09224082143209911,
+  "eta": 0.06620454265003421,
+  "coh_eV": 0.11108702885318635,
+  "Ymin_GPa": 132.79649926338152,
+  "u_el_eV": 0.6328909985822628,
+  "E0": {
+   "O_H": 0.08819743203565034,
+   "O_D": 0.0577522570105146,
+   "T_H": 0.18711587920130698,
+   "T_D": 0.13087682750578816
+  },
+  "F300": {
+   "O_H": 0.0827815119489065,
+   "O_D": 0.04348965546212219,
+   "T_H": 0.1862883030299919,
+   "T_D": 0.12746732076409165
+  },
+  "fT": {
+   "H": 0.01305626379047158,
+   "D": 0.027386816174157665
+  },
+  "harmonic_zpe": {
+   "O_H": 0.05272135576937716,
+   "O_D": 0.03729395422014775,
+   "T_H": 0.18325785716986312,
+   "T_D": 0.12963267040535728
+  }
+ }
+}

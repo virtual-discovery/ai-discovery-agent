@@ -1,0 +1,137 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 7,
+  "task_mb": 3.11,
+  "hidden_values": 9,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 21,
+   "budget": 24,
+   "evaluations": 20,
+   "failed_evaluations": 0,
+   "container_seconds": 27
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "fm_reference_exchange_as_final_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "uncorrected_exchange_judged_converged",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "exchange_truncated_at_6A",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "commensurate_approximant_reported_as_kmin",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "paper_SI_kmin_quoted_verbatim",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "experimental_AF2_vector_quoted",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "symmetrized_afm_reference_exchange",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "symmetrized_afm_reference_exchange_magnons_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "hamiltonian_eigenvalues_as_magnon_energies",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "spin_length_one",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "bond_counted_twice_in_chain_exchange",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "unit_vector_bond_convention_for_chain_exchange",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "kmin_from_exchange_within_8A",
+    "passes_grading": true
+   },
+   {
+    "name": "kmin_from_exchange_within_10A",
+    "passes_grading": true
+   },
+   {
+    "name": "magnons_from_exchange_within_6.5A",
+    "passes_grading": true
+   },
+   {
+    "name": "magnons_from_exchange_within_10A",
+    "passes_grading": true
+   },
+   {
+    "name": "magnons_4x4x4_grid_unrefined_maximum",
+    "passes_grading": true
+   },
+   {
+    "name": "chain_exchange_from_weakest_single_bond",
+    "passes_grading": true
+   },
+   {
+    "name": "chain_exchange_from_strongest_single_bond",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T18:28:08Z"
+}

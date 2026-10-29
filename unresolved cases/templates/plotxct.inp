@@ -1,0 +1,8 @@
+# Real-space conditional electron density for exciton state <n>, hole fixed at <site>.
+# RULES (round 8): supercell_size = the fine k-grid (BvK period) EXACTLY; hole_position = the site translated by whole cells to the box centre;
+# OMP_NUM_THREADS=1; render on a log scale (4 decades); containment check face density / max <= 1e-5 before calling a state bound.
+plot_state <n>
+hole_position <x y z crystal, translated to the box centre>
+supercell_size <k1 k2 k3 of the fine grid>
+use_wfn_hdf5
+# optional: spinor off (scalar chains); restrict_kpoints not used

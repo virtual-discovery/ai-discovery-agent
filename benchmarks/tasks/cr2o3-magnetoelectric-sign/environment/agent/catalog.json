@@ -1,0 +1,243 @@
+{
+ "material": "Cr2O3 (corundum, R-3c), antiferromagnetic, 10-atom rhombohedral cell (4 Cr, 6 O).",
+ "source": "Bousquet et al., J. Phys.: Condens. Matter (2024), doi 10.1088/1361-648X/ad1a59; Materials Cloud Archive record xd06z-0pp29 (doi 10.24435/materialscloud:ek-fp), CC BY 4.0. Retrieved archived results, no new calculations.",
+ "archive_README": "Publication:\n------------\n\nInput data and extracted results for arXiv pre-print 2309.02095,\nOn the sign of the linear magnetoelectric coefficient in Cr2O3\nEric Bousquet, Eddy Leli\u00e8vre-Berna, Navid Qureshi, Jian-Rui Soh, Nicola A. Spaldin, Andrea Urru, Xanthe H. Verbeek and  Sophie F. Weber\narXiv:2309.02095\n\nAbstract:\n---------\nWe establish the sign of the linear magnetoelectric (ME) coefficient, \u03b1, in chromia, Cr2O3. Cr2O3 is the prototypical linear ME material, in which an electric (magnetic) field induces a linearly proportional magnetization (polarization), and a single magnetic domain can be selected by annealing in combined magnetic (H) and electric (E) fields. Opposite antiferromagnetic domains have opposite ME responses, and which antiferromagnetic domain corresponds to which sign of response has previously been unclear. We use density functional theory (DFT) to calculate the magnetic response of a single antiferromagnetic domain of Cr2O3 to an applied in-plane electric field at 0 K. We find that the domain with nearest neighbor magnetic moments oriented away from (towards) each other has a negative (positive) in-plane ME coefficient, \u03b1\u22a5, at 0 K. We show that this sign is consistent with all other DFT calculations in the literature that specified the domain orientation, independent of the choice of DFT code or functional, the method used to apply the field, and whether the direct (magnetic field) or inverse (electric field) ME response was calculated. Next, we reanalyze our previously published spherical neutron polarimetry data to determine the antiferromagnetic domain produced by annealing in combined E and H fields oriented along the crystallographic symmetry axis at room temperature. We find that the antiferromagnetic domain with nearest-neighbor magnetic moments oriented away from (towards) each other is produced by annealing in (anti-)parallel E and H fields, corresponding to a positive (negative) axial ME coefficient, \u03b1\u2225, at room temperature. Since \u03b1\u22a5 at 0 K and \u03b1\u2225 at room temperature are known to be of opposite sign, our computational and experimental results are consistent. \n\nDescription of uploaded tar.gz archive:\n----------------------------------------------------------------\nThe archive contains the data needed to run the DFT calculations described in the paper, \n\nThere are two main sections:\n\n--------------\n\nSection 1: VASP and Elk input files, necessary to compute the lattice-mediated, spin contribution to the magnetoelectric response of Cr2O3 and to reproduce the Elk and VASP data reported in Figure 3 of the manuscript. To prevent multiple copies of the same file, the structure is as follows. An input file is located in the folder where it should be copied to all subdirectories. For example, the directory called 'Elk_calculations' contains a file called 'O.in', which is the one that was used for all ELK calculations. Similarly, 'VASP_calculations/Born_effective_charges' contains a file called 'KPOINTS', which was used for all calculations of the Born effective charge. This section contains two subsections:\n\n         a) VASP calculations: Input and relevant output data to relax the structure, calculate the Born effective charges, determine the eigenvectors of the force constant matrix and their energies (using VASP AND phonopy), and calculate the induced magnetic moments when different amplitudes of the eigenvectors are frozen in. The .hdf5 files contain the eigenvectors we were interested in and their corresponding energies, labeled by their symmetry, polarization direction (x,y,z), and ascending in energy. We use this labeling when we freeze in the eigenvectors as well. Note that the structural relaxation was done with a different unit cell rotation. Results were rotated after to create input for all other calculations. \n\n         b) ELK calculations: Input and relevant output data to calculate the magnetic moments induced when freezing in different amplitudes of the eigenvectors of the force constant matrix. Again, labeling is by symmetry, polarisation direction, and ascending in energy, e.g. Eu_1_x is the lowest energy (1) E_u symmetry (Eu) eigenvector, with a polarization along the cartesian x direction (x). The relevant structural parameter, eigenvectors of the force constant matrix, etc. were obtained from the VASP calculations. \n\n- Clarification of the folder structure of VASP and ELK calculation section: The first layer contains two folders labeled with the two DFT codes used, i.e VASP and ELK. Then, under each of these are the main types of calculations that were done in this code, for the VASP calculations these are:\n            - Structural_relaxation: contains the relevant input and output for relaxing the crystal structure for the given parameters\n\t    - Born_effective_charges: contains several folders labeled Disp_### with ### the magnitude and sign of the displacement in angstrom. Each Disp_### folder contains 30 folders labeled Element_number_direction, for example, Cr_1_x which indicates which atoms, i.e. the first Cr atom (order follows POSCAR) and in which cartesian direction it was displaced. As there are 10 atoms in the unit cell and 3 cartesian directions there are 30 folders. The magnitude of the displacement can be read from the parent folder (i.e. Disp_###). The Element_number_direction folders each contain the relevant POSCAR with the displacement and the OUTCAR where the calculated polarisation can be read. From the polarization as a function of atomic displacement the Born effective charges can be constructed.\n            - Phonon_calculation: contains the five POSCARS generated by phonopy with the command 'phonopy -d --dim=\"1 1 1\" ', called POSCAR-00n with n = (1,2,3,4,5) and folders labeled pos_n, which contain the tar.gz zipped vasprun.xml files from an electronic relaxation where the forces were calculated for these POSCARS. These POSCARS contain specific displacement phonopy needs to calculate the force constant matrix. The compound folders also contain a file called FORCE_SETS generated by running 'phonopy -f *vasprun.xml'. Finally, there is a folder called Getting_eigenvectors_force_constant_matrix which contains the FORCE_SETS an adapted POSCAR (with all the atoms said to H), a band.conf file and band.yaml files generated with different POSCARS. the band.yaml files were generated using 'phonopy bands.conf -p -s --dim=\"1 1 1\"'. band_CrO.yaml was generated with the original POSCAR file of Cr2O3 and the generated phonons are the eigenvectors of the dynamical matrix (real phonons). band_Cr.yaml and band_H.yaml were generated with the POSCAR files adapted to have all the atoms be either Cr or H. This means that the generated dynamical matrix is the same as the force constant matrix (up to a constant). The phonons generated this way are not 'true' phonons, they are the eigenvectors of the force constant matrix. Finally, there are .hdf5 files containing the eigenvectors we were interested in and their corresponding energies, labeled by their symmetry and ascending in energy. The energies are corrected for the mass (such that they are true eigenvalues of the force constant matrix)\n\n            - Induced_magnetic_moments: contains subfolders labled Eu_#_x, with # = 1,2,3,4 representing the four eigenvectors of the force constant matrix with E_u symmetry and polarization along x, in ascending order of energy. Each of these contains subfolders labeled Amplitude_#### with #### indicating the amplitude (in Angstrom) of the frozen-in eigenvector.  \n\nFor the ELK calculations, the subfolders are:\n           - Induced_magnetic_moments: contains subfolders labled Eu_#_x, with # = 1,2,3,4 representing the four eigenvectors of the force constant matrix with E_u symmetry and polarization along x, in ascending order of energy. Each of these contains subfolders labeled Amplitude_#### with #### indicating the amplitude (in Angstrom) of the frozen-in eigenvector. Each of these contains a subfolder called Calc_force, which contains the input files. \n\n- Code versions: We used VASP 5.4.4 (6.2.0 for the induced moment calculations),phonopy 1.10.4, and elk 8.4.21\n\n------------------\n\nSection 2: Quantum espresso calculations. This folder contains several subfolders, each containing input files for the calculations performed with Quantum Espresso (version 6.4.1) and thermo_pw (version 1.2.0), necessary to compute the lattice-mediated, spin contribution to the magnetoelectric response of Cr2O3 and to reproduce the Quantum Espresso data reported in Figure 3 of the manuscript.\n\n-Clarification of the folder structure of the Quantum Espresso section: \n         -The folder \"phonons_at_gamma\" contains the input files for the calculation of the eigenmodes ('phonons') of the force constant matrix of Cr2O3 at the k-point Gamma and the corresponding frequencies and energies. There are three input files: (i) the input file of pw.x, named \"Cr2O3.in\", (ii) the input file of thermo_pw.x, named \"thermo_control\", and (iii) the input file of ph.x for the calculation\nof the eigenmodes, named \"ph_control\".\n\n          - The folders \"mode_E_u_X\", with X = 1, 2, 3, 4, contain the input files for the calculation of the magnetic moment induced by freezing each of the 4 E_u infrared-active modes. The modes are ordered from X = 1 to X = 4 in increasing order of energy (and frequency). Concretely, in each folder \"mode_E_u_X\" there are 11 subfolders, named \"displacement_amplitude_X\", one for each amplitude of the phonon mode taken into account. The amplitudes, indicated by X in the subfolder's name, take the values from -0.02 Angstrom to +0.02 Angstrom, in\nsteps of 0.004 Angstrom. In each subfolder there are two input files: (i) the input file of pw.x, named \"Cr2O3.in\", and the input file of thermo_pw.x, named \"thermo_control\".\n\n- Note: in all the Cr2O3.in files, the \"outdir\" and \"pseudo_dir\" variables are left blank\nbecause their path is machine-dependent and has to be chosen by the user. \n\n-Code versions: Quantum Espresso (version 6.4.1) and thermo_pw (version 1.2.0)\n\n---------------------\n\n- All code versions: We used VASP 5.4.4 (6.2.0 for the induced moment calculations), phonopy 1.10.4, and elk 8.4.21, Quantum Espresso (version 6.4.1) and thermo_pw (version 1.2.0)\n\n",
+ "budget": 44,
+ "requests": {
+  "born_reference": {
+   "cost": 1,
+   "request": {
+    "kind": "born_reference"
+   },
+   "returns": "Born_effective_charges/Disp_0_0: POSCAR, INCAR, OUTCAR ion positions, dipole lines, energy and pseudopotential header lines"
+  },
+  "born_displacement": {
+   "cost": 1,
+   "request": {
+    "kind": "born_displacement",
+    "amplitude": "<folder tag>",
+    "atom": "<Cr1..Cr4, O1..O6>"
+   },
+   "returns": "the three folders Disp_<tag>/Pos_<atom>_{x,y,z}: POSCAR, OUTCAR ion positions, dipole lines (LCALCPOL), energy",
+   "amplitudes": [
+    "-0_05",
+    "-0_02",
+    "-0_005",
+    "0_005",
+    "0_02",
+    "0_05"
+   ],
+   "atoms": [
+    "Cr1",
+    "Cr2",
+    "Cr3",
+    "Cr4",
+    "O1",
+    "O2",
+    "O3",
+    "O4",
+    "O5",
+    "O6"
+   ]
+  },
+  "elk_moment": {
+   "cost": 1,
+   "request": {
+    "kind": "elk_moment",
+    "mode": "<Eu_1_x..Eu_4_x>",
+    "amplitude": "<tag>"
+   },
+   "returns": "Elk_calculations/Induced_magnetic_moments/<mode>/Amplitude_<tag>/Calc_force: elk.in, final Moments block of INFO.OUT, SCF information, other files in the folder",
+   "amplitudes": {
+    "Eu_1_x": [
+     "-0_05",
+     "-0_03",
+     "-0_02",
+     "-0_015",
+     "-0_014",
+     "-0_013",
+     "-0_012",
+     "-0_01",
+     "-0_008",
+     "-0_007",
+     "-0_006",
+     "-0_005",
+     "-0_004",
+     "-0_003",
+     "0_003",
+     "0_004",
+     "0_005",
+     "0_006",
+     "0_007",
+     "0_008",
+     "0_01",
+     "0_012",
+     "0_013",
+     "0_014",
+     "0_015",
+     "0_02",
+     "0_03",
+     "0_05"
+    ],
+    "Eu_2_x": [
+     "-0_05",
+     "-0_03",
+     "-0_02",
+     "-0_015",
+     "-0_014",
+     "-0_013",
+     "-0_012",
+     "-0_01",
+     "-0_008",
+     "-0_007",
+     "-0_006",
+     "-0_005",
+     "-0_004",
+     "-0_003",
+     "0_003",
+     "0_004",
+     "0_005",
+     "0_006",
+     "0_007",
+     "0_008",
+     "0_01",
+     "0_012",
+     "0_013",
+     "0_014",
+     "0_015",
+     "0_02",
+     "0_03",
+     "0_05"
+    ],
+    "Eu_3_x": [
+     "-0_05",
+     "-0_03",
+     "-0_02",
+     "-0_015",
+     "-0_014",
+     "-0_013",
+     "-0_012",
+     "-0_01",
+     "-0_008",
+     "-0_007",
+     "-0_006",
+     "-0_005",
+     "-0_004",
+     "-0_003",
+     "0_003",
+     "0_004",
+     "0_005",
+     "0_006",
+     "0_007",
+     "0_008",
+     "0_01",
+     "0_012",
+     "0_013",
+     "0_014",
+     "0_015",
+     "0_02",
+     "0_03",
+     "0_05"
+    ],
+    "Eu_4_x": [
+     "-0_05",
+     "-0_03",
+     "-0_02",
+     "-0_015",
+     "-0_014",
+     "-0_013",
+     "-0_012",
+     "-0_01",
+     "-0_008",
+     "-0_007",
+     "-0_006",
+     "-0_005",
+     "-0_004",
+     "-0_003",
+     "0_003",
+     "0_004",
+     "0_005",
+     "0_006",
+     "0_007",
+     "0_008",
+     "0_01",
+     "0_012",
+     "0_013",
+     "0_014",
+     "0_015",
+     "0_02",
+     "0_03",
+     "0_05"
+    ]
+   }
+  },
+  "vasp_moment": {
+   "cost": 1,
+   "request": {
+    "kind": "vasp_moment",
+    "mode": "<Eu_1_x..Eu_4_x>",
+    "amplitude": "<tag>"
+   },
+   "returns": "VASP_calculations/Induced_magnetic_moments/<mode>/Amplitude_<tag>: POSCAR, final total magnetization line, last per-ion tables, run status (INCAR and KPOINTS of these runs are included in every result)",
+   "amplitudes": {
+    "Eu_1_x": [
+     "-0_05",
+     "-0_025",
+     "0_025",
+     "0_05"
+    ],
+    "Eu_2_x": [
+     "-0_05",
+     "-0_025",
+     "0_025",
+     "0_05"
+    ],
+    "Eu_3_x": [
+     "-0_05",
+     "-0_025",
+     "0_025",
+     "0_05"
+    ],
+    "Eu_4_x": [
+     "-0_05",
+     "-0_025",
+     "0_025",
+     "0_05"
+    ]
+   }
+  },
+  "phonon_gamma": {
+   "cost": 1,
+   "request": {
+    "kind": "phonon_gamma",
+    "masses": "<CrO|Cr|H>"
+   },
+   "returns": "Gamma-point block of band_<masses>.yaml (phonopy): masses, frequencies (THz), eigenvectors"
+  },
+  "force_constant_eigenmodes": {
+   "cost": 1,
+   "request": {
+    "kind": "force_constant_eigenmodes"
+   },
+   "returns": "contents of Cr_ph_eigenval_pol.hdf5 and Cr_ph_eigenvec_pol.hdf5 (dataset names, values and 10x3 vectors as archived)"
+  },
+  "structure": {
+   "cost": 1,
+   "request": {
+    "kind": "structure",
+    "key": "<relaxation|phonon>"
+   },
+   "returns": "relaxation: POSCAR, CONTCAR, INCAR; phonon: POSCAR, INCAR, FORCE_SETS, bands.conf"
+  },
+  "qe_inputs": {
+   "cost": 1,
+   "request": {
+    "kind": "qe_inputs",
+    "folder": "<phonons_at_gamma|mode_E_u_1..4>"
+   },
+   "returns": "Quantum ESPRESSO / thermo_pw input files of that folder (the archive holds no QE outputs)"
+  }
+ },
+ "amplitude_tags": "Folder tags as archived: '0_02' is +0.02 A, '-0_005' is -0.005 A, and so on.",
+ "atom_order": "POSCAR order: Cr1..Cr4 then O1..O6 (Elk lists the same atoms per species in the same order)."
+}

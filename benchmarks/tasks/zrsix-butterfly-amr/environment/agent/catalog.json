@@ -1,0 +1,273 @@
+{
+ "material": "ZrSiX (X = S, Se, Te), P4/nmm; GGA Wannier models without spin-orbit coupling released by Zhang and Yazyev (2025), Materials Cloud record tyan3-q3j67",
+ "hamiltonians": {
+  "ZrSiS": "input_MR/ZrSiS/wannier90_hr.dat_nsymm16",
+  "ZrSiSe": "input_MR/ZrSiSe/wannier90_hr.dat_nsymm16",
+  "ZrSiTe": "input_MR/ZrSiTe/wannier90_hr.dat"
+ },
+ "orbitals": "per cell: Zr1 d(5), Zr2 d(5), Si1 s p(4), Si2 s p(4), X1 p(3), X2 p(3); no spin index (24 bands)",
+ "cells_A": {
+  "ZrSiS": {
+   "a": 3.5496074,
+   "c": 8.1636955,
+   "source": "POSCAR / wannier90.win of the compound"
+  },
+  "ZrSiSe": {
+   "a": 3.623,
+   "c": 8.365,
+   "source": "POSCAR / wannier90.win of the compound"
+  },
+  "ZrSiTe": {
+   "a": 3.6974,
+   "c": 9.508,
+   "source": "POSCAR / wannier90.win of the compound"
+  }
+ },
+ "budget": 50,
+ "requests": {
+  "bands": {
+   "cost": 1,
+   "format": {
+    "kind": "bands",
+    "compound": "ZrSiSe",
+    "k_frac": [
+     [
+      0,
+      0,
+      0
+     ]
+    ],
+    "velocities": false
+   },
+   "limits": "k_frac: 1-500 points; velocities true returns dE/dk (eV Angstrom) per band"
+  },
+  "fermi_slice": {
+   "cost": 1,
+   "format": {
+    "kind": "fermi_slice",
+    "compound": "ZrSiSe",
+    "origin": [
+     -0.5,
+     -0.5,
+     0.0
+    ],
+    "u": [
+     1,
+     0,
+     0
+    ],
+    "v": [
+     0,
+     1,
+     0
+    ],
+    "n": [
+     61,
+     61
+    ]
+   },
+   "limits": "k = origin + i/(nu-1) u + j/(nv-1) v (fractional); 2 <= nu, nv <= 121; returns bands 10-15"
+  },
+  "electron_count": {
+   "cost": 1,
+   "format": {
+    "kind": "electron_count",
+    "compound": "ZrSiSe",
+    "mesh": 80,
+    "mu_eV": [
+     8.9
+    ],
+    "temperature_K": 30
+   },
+   "limits": "mesh in [40, 80, 120, 160] (Gamma-centred N x N x N/2); 1-200 chemical potentials within mu_range_eV; temperature 0-300 K"
+  },
+  "orbit": {
+   "cost": 1,
+   "format": {
+    "kind": "orbit",
+    "compound": "ZrSiSe",
+    "band": 12,
+    "k_frac": [
+     [
+      0.2,
+      0.2,
+      0.0
+     ]
+    ],
+    "field_direction": [
+     0,
+     0,
+     1
+    ],
+    "max_length_invA": 20
+   },
+   "limits": "1-8 start points; any field direction (Cartesian); arc length 0.1-40 1/Angstrom"
+  },
+  "magnetotransport": {
+   "cost": {
+    "40": 1,
+    "80": 1,
+    "160": 3
+   },
+   "format": {
+    "kind": "magnetotransport",
+    "compound": "ZrSiSe",
+    "field": {
+     "plane": "bc",
+     "angle_deg": 45
+    },
+    "mesh": 80,
+    "mu_eV": [
+     8.91
+    ],
+    "temperature_K": 30,
+    "bands": [
+     12,
+     13
+    ]
+   },
+   "limits": "1-4 chemical potentials within mu_range_eV; temperature 10-40 K; bands from the list below; field from field_menu"
+  }
+ },
+ "electron_count": {
+  "mu_range_eV": {
+   "ZrSiS": [
+    8.7,
+    10.7
+   ],
+   "ZrSiSe": [
+    8.05,
+    10.0
+   ],
+   "ZrSiTe": [
+    7.95,
+    9.95
+   ]
+  },
+  "meshes": [
+   40,
+   80,
+   120,
+   160
+  ]
+ },
+ "magnetotransport": {
+  "mu_range_eV": {
+   "ZrSiS": [
+    9.688,
+    9.725
+   ],
+   "ZrSiSe": [
+    8.902,
+    8.925
+   ],
+   "ZrSiTe": [
+    8.85,
+    8.9
+   ]
+  },
+  "bands": {
+   "ZrSiS": [
+    12,
+    13
+   ],
+   "ZrSiSe": [
+    12,
+    13
+   ],
+   "ZrSiTe": [
+    12,
+    13,
+    14
+   ]
+  },
+  "meshes": [
+   40,
+   80,
+   160
+  ],
+  "Btau_Tps": [
+   0.0,
+   0.5,
+   1.0,
+   1.5,
+   2.0,
+   3.0,
+   4.0,
+   5.0,
+   6.0,
+   7.0,
+   8.0,
+   10.0,
+   12.0,
+   15.0,
+   20.0
+  ],
+  "field_menu": {
+   "ZrSiS": {
+    "bc": [
+     0.0,
+     20.0,
+     40.0,
+     50.0,
+     60.0,
+     90.0
+    ],
+    "ab": [
+     45.0
+    ]
+   },
+   "ZrSiSe": {
+    "bc": [
+     0.0,
+     5.0,
+     10.0,
+     15.0,
+     20.0,
+     25.0,
+     30.0,
+     35.0,
+     40.0,
+     45.0,
+     50.0,
+     55.0,
+     60.0,
+     65.0,
+     70.0,
+     75.0,
+     80.0,
+     85.0,
+     90.0
+    ],
+    "ac": [
+     30.0,
+     45.0,
+     60.0,
+     90.0
+    ],
+    "ab": [
+     45.0
+    ]
+   },
+   "ZrSiTe": {
+    "bc": [
+     -90.0,
+     -80.0,
+     -70.0,
+     -60.0,
+     -50.0,
+     0.0,
+     30.0,
+     60.0,
+     90.0
+    ]
+   }
+  },
+  "field_planes": {
+   "bc": "B = (0, sin a, cos a): from c (a = 0) towards b (a = 90)",
+   "ac": "B = (sin a, 0, cos a): from c (a = 0) towards a (a = 90)",
+   "ab": "B = (cos a, sin a, 0): in the ab plane, a from the a axis"
+  },
+  "method": "Chambers formula, one relaxation time for all bands; orbits of every start point of the Gamma-centred N x N x N/2 mesh traced on the start point's constant-energy surface (the 40 and 80 meshes are subsets of the 160 mesh); results scale as rho = rho_tau / tau."
+ }
+}

@@ -1,0 +1,146 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 8,
+  "task_mb": 2.11,
+  "hidden_values": 11,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 66,
+   "budget": 80,
+   "evaluations": 29,
+   "failed_evaluations": 0,
+   "container_seconds": 3629
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "k4_force_constants_and_polar_well",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "ti_only_slater_displacement",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "experimental_lattice_parameter",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "k4_dielectric_tensors",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "polar_well_from_coarse_large_amplitudes",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "analytic_frequency_as_LO",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "uncoupled_mode_by_mode_LO",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "tilt_referenced_to_5atom_cell_other_mesh",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "tilt_energies_per_10atom_cell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "no_poisson_relaxation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "cubic_soft_mode_for_strained_cell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "a0_from_zero_pressure_75Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "soft_mode_and_LO_from_6x6x6",
+    "passes_grading": true
+   },
+   {
+    "name": "soft_mode_0.04A_displacements",
+    "passes_grading": true
+   },
+   {
+    "name": "LO_8x8x8_force_constants_6x6x6_tensors",
+    "passes_grading": true
+   },
+   {
+    "name": "polar_well_6x6x6_pattern_and_mesh",
+    "passes_grading": true
+   },
+   {
+    "name": "polar_well_six_amplitudes_8x8x8",
+    "passes_grading": true
+   },
+   {
+    "name": "polar_well_lowest_sampled_energy_8x8x8",
+    "passes_grading": true
+   },
+   {
+    "name": "tilt_angles_3_4_5",
+    "passes_grading": true
+   },
+   {
+    "name": "R_mode_from_1_2_deg",
+    "passes_grading": true
+   },
+   {
+    "name": "strained_c_from_stress_zero_60Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "strained_c_from_stress_zero_75Ry",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-27T00:07:33Z"
+}

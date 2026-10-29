@@ -1,0 +1,295 @@
+{
+ "record": "https://zenodo.org/records/10146787",
+ "doi": "10.5281/zenodo.10146787",
+ "license": "CC BY 4.0",
+ "files": [
+  {
+   "name": "Experiment_ConstQ1.dat",
+   "size": 4018,
+   "md5": "a76bf8f4ea1171f6da1c7c144eade10d",
+   "url": "https://zenodo.org/api/records/10146787/files/Experiment_ConstQ1.dat/content"
+  },
+  {
+   "name": "Experiment_ConstQ2.dat",
+   "size": 3871,
+   "md5": "b9304e8196641fa60d8a6ad79788ac0d",
+   "url": "https://zenodo.org/api/records/10146787/files/Experiment_ConstQ2.dat/content"
+  },
+  {
+   "name": "Experiment_IntegralOverchi.dat",
+   "size": 784,
+   "md5": "33c3d457b454cec7c934a2d8df089619",
+   "url": "https://zenodo.org/api/records/10146787/files/Experiment_IntegralOverchi.dat/content"
+  },
+  {
+   "name": "HighEnergy_E_GX.dat",
+   "size": 1156,
+   "md5": "a9fd750f016054a7beeaef39584fff0a",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_E_GX.dat/content"
+  },
+  {
+   "name": "HighEnergy_E_MG.dat",
+   "size": 1734,
+   "md5": "c185cc8a0c1e36d93327a8e0a1860a74",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_E_MG.dat/content"
+  },
+  {
+   "name": "HighEnergy_E_RG.dat",
+   "size": 1156,
+   "md5": "a9fd750f016054a7beeaef39584fff0a",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_E_RG.dat/content"
+  },
+  {
+   "name": "HighEnergy_E_XM.dat",
+   "size": 1156,
+   "md5": "a9fd750f016054a7beeaef39584fff0a",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_E_XM.dat/content"
+  },
+  {
+   "name": "HighEnergy_IntXM.dat",
+   "size": 22869,
+   "md5": "39df6921a2cca1bf7a308180070046e0",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_IntXM.dat/content"
+  },
+  {
+   "name": "HighEnergy_Int_GX.dat",
+   "size": 22869,
+   "md5": "43e5630439b4da2bcea904ab5dcab512",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_Int_GX.dat/content"
+  },
+  {
+   "name": "HighEnergy_Int_MG.dat",
+   "size": 47357,
+   "md5": "61c1744b848bb7ddf864d01775ce921d",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_Int_MG.dat/content"
+  },
+  {
+   "name": "HighEnergy_Int_RG.dat",
+   "size": 64251,
+   "md5": "c28a1a2085eeb5f8a01cf34924fd3e94",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_Int_RG.dat/content"
+  },
+  {
+   "name": "HighEnergy_Q_GX.dat",
+   "size": 357,
+   "md5": "1d7c68bce429836d32fcf71841820e9d",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_Q_GX.dat/content"
+  },
+  {
+   "name": "HighEnergy_Q_MG.dat",
+   "size": 493,
+   "md5": "3f1283087d37ff0cfa084e5cea6f29e2",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_Q_MG.dat/content"
+  },
+  {
+   "name": "HighEnergy_Q_RG.dat",
+   "size": 1003,
+   "md5": "7af493f1ae73eac7858f011e05a069ef",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_Q_RG.dat/content"
+  },
+  {
+   "name": "HighEnergy_Q_XM.dat",
+   "size": 357,
+   "md5": "9ecd83e8c127ca7eba5012d57d293eb2",
+   "url": "https://zenodo.org/api/records/10146787/files/HighEnergy_Q_XM.dat/content"
+  },
+  {
+   "name": "HighResolution_E_RG.dat",
+   "size": 442,
+   "md5": "d011c2c36db0f1cf4606c3fe90a46917",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_E_RG.dat/content"
+  },
+  {
+   "name": "HighResolution_E_RM.dat",
+   "size": 867,
+   "md5": "7aca24c7745f74c3153cf9167ce8ae9a",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_E_RM.dat/content"
+  },
+  {
+   "name": "HighResolution_E_RX.dat",
+   "size": 442,
+   "md5": "06d70a65ef1080bc69ff6a23dae3223f",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_E_RX.dat/content"
+  },
+  {
+   "name": "HighResolution_IntRG.dat",
+   "size": 14178,
+   "md5": "d549df821aab73e807c60e6681965b3e",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_IntRG.dat/content"
+  },
+  {
+   "name": "HighResolution_Int_RG.dat",
+   "size": 14178,
+   "md5": "d549df821aab73e807c60e6681965b3e",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_Int_RG.dat/content"
+  },
+  {
+   "name": "HighResolution_Int_RM.dat",
+   "size": 28595,
+   "md5": "8ae21852690a7b9c89d10909457ce24b",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_Int_RM.dat/content"
+  },
+  {
+   "name": "HighResolution_Int_RX.dat",
+   "size": 14178,
+   "md5": "2f3b4bae4fb32af5f6eee99e61ab1bec",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_Int_RX.dat/content"
+  },
+  {
+   "name": "HighResolution_Q_RG.dat",
+   "size": 578,
+   "md5": "4929edd877ebc082e1cd34fc9bb0d4fb",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_Q_RG.dat/content"
+  },
+  {
+   "name": "HighResolution_Q_RM.dat",
+   "size": 595,
+   "md5": "3144f3254dc8d7b719ca6105a978fee8",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_Q_RM.dat/content"
+  },
+  {
+   "name": "HighResolution_Q_RX.dat",
+   "size": 578,
+   "md5": "4929edd877ebc082e1cd34fc9bb0d4fb",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_Q_RX.dat/content"
+  },
+  {
+   "name": "HighResolution_RG_ConstEcut_0p6meV.dat",
+   "size": 4263,
+   "md5": "390d005c965cc0cb5468c4955f625fe7",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_RG_ConstEcut_0p6meV.dat/content"
+  },
+  {
+   "name": "HighResolution_RG_ConstEcut_1p4meV.dat",
+   "size": 4263,
+   "md5": "06331a18b72c45eec89e93789053c0af",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_RG_ConstEcut_1p4meV.dat/content"
+  },
+  {
+   "name": "HighResolution_RM_ConstEcut_0p4meV.dat",
+   "size": 3430,
+   "md5": "7cb9a3addd87e8d80609fccbb29b03ef",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_RM_ConstEcut_0p4meV.dat/content"
+  },
+  {
+   "name": "HighResolution_RM_ConstEcut_1p4meV.dat",
+   "size": 3430,
+   "md5": "33422d0b76b09389f2eff3107e505112",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_RM_ConstEcut_1p4meV.dat/content"
+  },
+  {
+   "name": "HighResolution_RX_ConstEcut_0p6meV.dat",
+   "size": 3381,
+   "md5": "e46703685c0ba1f35131b52992caa6b3",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_RX_ConstEcut_0p6meV.dat/content"
+  },
+  {
+   "name": "HighResolution_RX_ConstEcut_1p4meV.dat",
+   "size": 3528,
+   "md5": "9fb1a071019a74aa8a88b5cc05824466",
+   "url": "https://zenodo.org/api/records/10146787/files/HighResolution_RX_ConstEcut_1p4meV.dat/content"
+  },
+  {
+   "name": "InteractionSpectrum.dat",
+   "size": 14661,
+   "md5": "277c6e7732199c3b55624d82f6574220",
+   "url": "https://zenodo.org/api/records/10146787/files/InteractionSpectrum.dat/content"
+  },
+  {
+   "name": "J1Model-Dispersion_RG.dat",
+   "size": 33066,
+   "md5": "750217b56d500350135efe2b7c95e725",
+   "url": "https://zenodo.org/api/records/10146787/files/J1Model-Dispersion_RG.dat/content"
+  },
+  {
+   "name": "J1Model-Dispersion_RGXMG.dat",
+   "size": 66132,
+   "md5": "f42a6264b1759a936b87f36f07779609",
+   "url": "https://zenodo.org/api/records/10146787/files/J1Model-Dispersion_RGXMG.dat/content"
+  },
+  {
+   "name": "J1Model-Dispersion_RM.dat",
+   "size": 33066,
+   "md5": "f0e10304aca2854071a955db84d7a9ce",
+   "url": "https://zenodo.org/api/records/10146787/files/J1Model-Dispersion_RM.dat/content"
+  },
+  {
+   "name": "J1Model-Dispersion_RX.dat",
+   "size": 33066,
+   "md5": "234b304508a99f01e2a9dadca83087ff",
+   "url": "https://zenodo.org/api/records/10146787/files/J1Model-Dispersion_RX.dat/content"
+  },
+  {
+   "name": "MOPAM-Dispersion_RG.dat",
+   "size": 5973,
+   "md5": "0749785ace91c829cc37711493592699",
+   "url": "https://zenodo.org/api/records/10146787/files/MOPAM-Dispersion_RG.dat/content"
+  },
+  {
+   "name": "MOPAM-Dispersion_RGXMG.dat",
+   "size": 5973,
+   "md5": "0749785ace91c829cc37711493592699",
+   "url": "https://zenodo.org/api/records/10146787/files/MOPAM-Dispersion_RGXMG.dat/content"
+  },
+  {
+   "name": "MOPAM-Dispersion_RM.dat",
+   "size": 1320,
+   "md5": "f8e78821a064e8026960c197ad3590d5",
+   "url": "https://zenodo.org/api/records/10146787/files/MOPAM-Dispersion_RM.dat/content"
+  },
+  {
+   "name": "MOPAM-Dispersion_RX.dat",
+   "size": 1023,
+   "md5": "1c0b9f4216c72f6a847a3d255ddeaa9e",
+   "url": "https://zenodo.org/api/records/10146787/files/MOPAM-Dispersion_RX.dat/content"
+  },
+  {
+   "name": "Theory_ConstQ1.dat",
+   "size": 4983,
+   "md5": "81b3f27761175002ad4acea763980dcb",
+   "url": "https://zenodo.org/api/records/10146787/files/Theory_ConstQ1.dat/content"
+  },
+  {
+   "name": "Theory_ConstQ2.dat",
+   "size": 4983,
+   "md5": "053bac6e65bb1886a313173dd5dacd78",
+   "url": "https://zenodo.org/api/records/10146787/files/Theory_ConstQ2.dat/content"
+  },
+  {
+   "name": "Theory_E_RGXMG.dat",
+   "size": 1156,
+   "md5": "a9fd750f016054a7beeaef39584fff0a",
+   "url": "https://zenodo.org/api/records/10146787/files/Theory_E_RGXMG.dat/content"
+  },
+  {
+   "name": "Theory_Int_RGXMG.dat",
+   "size": 224334,
+   "md5": "addbb6197f635ed7f93a81af609a8938",
+   "url": "https://zenodo.org/api/records/10146787/files/Theory_Int_RGXMG.dat/content"
+  },
+  {
+   "name": "Theory_IntegralOverchi.dat",
+   "size": 11847,
+   "md5": "6ba455f744f26b72d58136445bc1e542",
+   "url": "https://zenodo.org/api/records/10146787/files/Theory_IntegralOverchi.dat/content"
+  },
+  {
+   "name": "Theory_Q_RGXMG.dat",
+   "size": 3502,
+   "md5": "caba6a16a209c7cfa69ad6574d8b89c2",
+   "url": "https://zenodo.org/api/records/10146787/files/Theory_Q_RGXMG.dat/content"
+  },
+  {
+   "name": "allotherbands.dat",
+   "size": 232085,
+   "md5": "2adda0a391c76f98ce1f49fcbae48c0a",
+   "url": "https://zenodo.org/api/records/10146787/files/allotherbands.dat/content"
+  },
+  {
+   "name": "fbands.dat",
+   "size": 58081,
+   "md5": "de7d8e49e71b0decbc5267f4543d33fd",
+   "url": "https://zenodo.org/api/records/10146787/files/fbands.dat/content"
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+{
+ "task_id": "kagome135-correlation-origin",
+ "solver_budget": 20,
+ "reserved_validation_charge": 0,
+ "requests": {"ssmf": {"kind": "ssmf", "model": "TiSb | VSb | CrSb | TiBi | CrBi | CrBi_9.2", "electrons": "<26-36>",
+                       "U_eV": "<0-8>", "J_over_U": "<0-0.3>", "cost": 1}},
+ "catalog": "/app/catalog.json"
+}

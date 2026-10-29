@@ -1,0 +1,264 @@
+{
+ "task_id": "pdh-miscibility-isotope-ace",
+ "catalog_id": "pdh-miscibility-isotope-ace",
+ "start": "released",
+ "source_group": "mrovec_2026_pdh_ace",
+ "title": "Pd-H miscibility gap and H/D isotope effect from a released ACE potential",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Fixed-cell versus zero-stress energetics for the H-H interaction",
+   "wrong_choice": "Compute the mixing energies of random PdH_x at the Pd lattice parameter (fixed volume)",
+   "consequence": "Fixed-volume interactions are weak; the mixing energy is convex: Tc ~ 6 K (no gap) and the plateau pressure off by ~6 decades",
+   "ablation": "fixed_volume_configurational"
+  },
+  {
+   "id": "dp2",
+   "fork": "Coherent versus incoherent gap, and which elastic direction controls coherency",
+   "wrong_choice": "Report the incoherent Tc as coherent, or use an isotropic/<111> modulus",
+   "consequence": "Tc_coh 419 K or 178 K instead of 282 K",
+   "ablation": "no_coherency"
+  },
+  {
+   "id": "dp3",
+   "fork": "Supercell size for dilute quantities (elastic image interaction)",
+   "wrong_choice": "Relax one H in the 4-Pd conventional cell (PdH0.25), at zero pressure or at fixed volume",
+   "consequence": "Solution energy off by -61 / +14 meV, static O-T difference 2 or 80 meV instead of 26 meV",
+   "ablation": "small_cell_dilute"
+  },
+  {
+   "id": "dp4",
+   "fork": "Harmonic versus anharmonic quantum treatment of H in the soft octahedral site",
+   "wrong_choice": "Harmonic ZPE from small-displacement curvature (hbar omega = 36 meV)",
+   "consequence": "ZPE(O,H) 53 instead of 88 meV: solution energy -35 meV, K_H/K_D 3.3 instead of 2.27, plateau 1.8 decades low",
+   "ablation": "harmonic_zpe"
+  },
+  {
+   "id": "dp5",
+   "fork": "Zero-point energy only versus full vibrational free energy at 300 K for the isotope effect",
+   "wrong_choice": "Use ZPE differences only",
+   "consequence": "K_H/K_D 3.16 instead of 2.27 (the soft D mode is thermally excited at 300 K)",
+   "ablation": "zpe_only_no_thermal"
+  },
+  {
+   "id": "dp6",
+   "fork": "Site preference with and without ZPE; which site hosts dilute H",
+   "wrong_choice": "Static site energies (or the T site) for the occupancy",
+   "consequence": "T fraction 0.42 instead of 0.013; T-site solution energy/expansion wrong by >0.1 eV / 46%",
+   "ablation": "static_site_preference"
+  },
+  {
+   "id": "dp7",
+   "fork": "Elastic-only Wagner-Horner mean field versus the full x-dependent energetics (band-filling repulsion)",
+   "wrong_choice": "Tc from the dilute elastic interaction u = B dv^2/v alone",
+   "consequence": "Tc 1836 K instead of 419 K",
+   "ablation": "elastic_only_wagner_horner"
+  },
+  {
+   "id": "dp8",
+   "fork": "Configuration sampling for the random solution",
+   "wrong_choice": "Small ordered 4-Pd cells instead of random occupations in large cells",
+   "consequence": "Tc 634 K, plateau 0.4 decades low",
+   "ablation": "ordered_small_cells"
+  }
+ ],
+ "graded_fields": [
+  "solution_energy_0K_eV (abs 0.012)",
+  "OT_difference_static_eV (abs 0.01)",
+  "OT_difference_with_zpe_eV (abs 0.015)",
+  "lattice_expansion_A3_per_H (rel 0.08)",
+  "tetrahedral_fraction_H_300K (log 2.0)",
+  "sieverts_ratio_H_over_D_300K (rel 0.2)",
+  "log10_plateau_pressure_H_300K_bar (abs 0.4)",
+  "Tc_incoherent_K (rel 0.15)",
+  "Tc_coherent_K (rel 0.2)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 21,
+  "oracle_charge": 23,
+  "budget": 30,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "why": "pure-host elastic constants, H2, dilute O/T relaxations with size checks, two 3D frozen-host grids (H/D Schroedinger solves), ~12 random PdH_x zero-stress relaxations plus fits",
+  "oracle_container_seconds": 912
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image); the ACE potential is evaluated by a pure-numpy port (ace_numpy.py) validated against python-ace 0.4.0rc1"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/20591788",
+  "doi": "10.5281/zenodo.20591788",
+  "files_used": [
+   "Pd-H_ACE_potential_files_and_training_data.zip (potential_files/ace/PdH_PBE_v03a.yaml, df_train.pckl.gzip, df_test.pckl.gzip)"
+  ],
+  "md5": {
+   "Pd-H_ACE_potential_files_and_training_data.zip": "0308b4e0ed87805975d37eaeaacf976a"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "No graded number is archived by the authors: all targets are reference calculations with the released potential through the lab code path (released potential, fresh-style truth). Design adaptations: the ACE H2 molecule is accurate (3 meV vs DFT), so the H2-reference trap was replaced by supplied experimental gas thermochemistry; fixed-volume H-H pair interactions are weakly attractive in this ACE (not repulsive) but the fixed-volume configurational energetics still give no gap; Tc is graded as the mean-field (ideal-entropy) spinodal top of a prompt-defined model because MC/cluster-expansion Tc is not uniquely recoverable; plateau ratio D/H replaced by the dilute Sieverts ratio (equivalent under the stated x-independent vibrations).",
+ "calibration": {
+  "solution_energy_0K_eV": {
+   "reference": -0.13909338939644877,
+   "tolerance": [
+    "abs",
+    0.012
+   ],
+   "robustness": {
+    "grid_coarse_h": -0.14031237088758075,
+    "grid_small_box": -0.1390872947088914,
+    "dilute_108_only": -0.13945916365086797,
+    "dilute_256_fixed_volume": -0.1374877774540395
+   },
+   "ablations": {
+    "small_cell_dilute": -0.19966647311484076,
+    "small_cell_fixed_volume_dilute": -0.12482834709954327,
+    "harmonic_zpe": -0.17456946566272197,
+    "zpe_only_no_thermal": -0.13909338939644877,
+    "tetrahedral_site_as_dilute": -0.01432705031986417
+   }
+  },
+  "OT_difference_static_eV": {
+   "reference": 0.026231268482632686,
+   "tolerance": [
+    "abs",
+    0.01
+   ],
+   "robustness": {
+    "dilute_108_only": 0.02621366616534715
+   },
+   "ablations": {
+    "small_cell_dilute": 0.0024946498641646997,
+    "small_cell_fixed_volume_dilute": 0.08006576393151832
+   }
+  },
+  "OT_difference_with_zpe_eV": {
+   "reference": 0.12514971564828933,
+   "tolerance": [
+    "abs",
+    0.015
+   ],
+   "robustness": {
+    "grid_coarse_h": 0.12350398338143107,
+    "grid_small_box": 0.12684672548804415
+   },
+   "ablations": {
+    "small_cell_dilute": 0.10141309702982135,
+    "small_cell_fixed_volume_dilute": 0.178984211097175,
+    "harmonic_zpe": 0.15676776988311864,
+    "zpe_only_no_thermal": 0.12514971564828933,
+    "static_site_preference": 0.026231268482632686
+   }
+  },
+  "lattice_expansion_A3_per_H": {
+   "reference": 3.0366209520457232,
+   "tolerance": [
+    "rel",
+    0.08
+   ],
+   "robustness": {
+    "dilute_108_only": 3.0326368576384084,
+    "dilute_256_fixed_volume": 3.0441257835386435
+   },
+   "ablations": {
+    "small_cell_dilute": 2.8941201833491093,
+    "tetrahedral_site_as_dilute": 4.4186988463097805
+   }
+  },
+  "tetrahedral_fraction_H_300K": {
+   "reference": 0.01305626379047158,
+   "tolerance": [
+    "log",
+    2.0
+   ],
+   "robustness": {
+    "grid_coarse_h": 0.013721660086956867,
+    "grid_small_box": 0.012159611453733267
+   },
+   "ablations": {
+    "harmonic_zpe": 0.0019568758436819254,
+    "zpe_only_no_thermal": 0.015552487894543728,
+    "static_site_preference": 0.4203044828075446
+   }
+  },
+  "sieverts_ratio_H_over_D_300K": {
+   "reference": 2.2688648576926864,
+   "tolerance": [
+    "rel",
+    0.2
+   ],
+   "robustness": {
+    "grid_coarse_h": 2.210901094593969,
+    "grid_small_box": 2.2665320793843273
+   },
+   "ablations": {
+    "harmonic_zpe": 3.3167265849741576,
+    "zpe_only_no_thermal": 3.1576588958035225
+   }
+  },
+  "log10_plateau_pressure_H_300K_bar": {
+   "reference": -3.1076254547910116,
+   "tolerance": [
+    "abs",
+    0.4
+   ],
+   "robustness": {
+    "grid_coarse_h": -3.167381150076989,
+    "grid_small_box": -3.1072014536026726,
+    "rk3_all": -3.10351881502687,
+    "rk5_all": -3.098220456843066,
+    "rk4_108_only": -3.1201219612877975,
+    "rk4_32_only": -3.088770463232266,
+    "rk4_isotropic_volume": -3.1038272829245925
+   },
+   "ablations": {
+    "fixed_volume_configurational": 2.571408251240523,
+    "harmonic_zpe": -4.890868089727382,
+    "zpe_only_no_thermal": -2.925658548743332,
+    "ordered_small_cells": -3.541777269148879
+   }
+  },
+  "Tc_incoherent_K": {
+   "reference": 418.98275710702165,
+   "tolerance": [
+    "rel",
+    0.15
+   ],
+   "robustness": {
+    "rk3_all": 416.7894803187267,
+    "rk5_all": 425.7388431266087,
+    "rk4_108_only": 426.494451048201,
+    "rk4_32_only": 409.71984881167873,
+    "rk4_isotropic_volume": 418.3885502111501
+   },
+   "ablations": {
+    "fixed_volume_configurational": 5.697722396939193,
+    "elastic_only_wagner_horner": 1836.0987655343822,
+    "ordered_small_cells": 634.2403192297234
+   }
+  },
+  "Tc_coherent_K": {
+   "reference": 281.93554809596895,
+   "tolerance": [
+    "rel",
+    0.2
+   ],
+   "robustness": {
+    "rk3_all": 278.44240280609904,
+    "rk5_all": 279.66866173087016,
+    "rk4_108_only": 295.40643087773117,
+    "rk4_32_only": 263.52158756336314,
+    "rk4_isotropic_volume": 279.57090719963014,
+    "elastic_constants_d0.01": 282.40957275146405
+   },
+   "ablations": {
+    "fixed_volume_configurational": 0.0,
+    "no_coherency": 418.98275710702165,
+    "coherency_111": 177.52650838372284,
+    "elastic_only_wagner_horner": 1513.8209056799633,
+    "ordered_small_cells": 513.5422147215397
+   }
+  }
+ }
+}

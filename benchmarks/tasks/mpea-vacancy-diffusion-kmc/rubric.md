@@ -1,0 +1,12 @@
+# Physical-reasoning rubric
+
+Each item is a checkable statement that the report must make explicitly.
+
+1. Identifies the archived entries whose transition-state energy lies below one of the end states (about 7% of hops, mostly Nb and Ta hops in V/Cr-rich cells) and states how they were treated, with a check that the treatment does not change the conclusions.
+2. Builds barriers as KRA + (E_final − E_initial)/2 (or an equivalent end-state energy model), explains that this enforces detailed balance, and shows that ignoring the end-state energies (equal forward and backward barriers, or a direct fit of forward barriers) misses large site-energy differences (|E_2 − E_1| of several tenths of an eV).
+3. Validates the barrier model on hops not used in fitting, quotes the error (about 0.15–0.2 eV on barriers), and notes that a linear local-environment model misses the pure-element limits, so the rule-of-mixtures benchmark uses the released pure-element barriers rather than the model's extrapolation.
+4. Equilibrates the starting configurations (short-range order) and reports convergence checks of equilibration, cell size and run length (number of trajectories), with the statistical uncertainty of log10 η, and checks that the equilibrated short-range order is that of a solid solution (no phase separation or long-range order at the simulated temperatures).
+5. Computes tracer diffusivities from mean-squared displacements and explains that correlation factors well below the random-walk value, smallest for the fastest species, separate them from hop frequencies.
+6. Concludes that all three alloys are sluggish (η < 1) and attributes it with the variant calculations: removing the barrier distribution (KRA-simple) raises η of B by about an order of magnitude and removing site-energy disorder (thermo-ideal) by a smaller but significant factor, so both contribute and local barriers dominate; percolation of fast species is discussed as a possible but not controlling factor.
+7. Explains why the effective activation energy of the fastest tracer exceeds the rule-of-mixtures barrier (trapping and correlated slow paths) and does not equal a mean barrier.
+8. States the limits: barrier-model error and its effect on η (factors of about 1.5–2), dilute single-vacancy limit, constant prefactor, no vibrational entropy, nearest-neighbour hops only, and that the end-state energies are single points on MACE-relaxed geometries.

@@ -1,0 +1,322 @@
+{
+ "task_id": "sngeo2-coherent-miscibility",
+ "catalog_id": "sngeo2-coherent-miscibility",
+ "start": "released",
+ "source_group": "muller_2026_sngeo2_rutile_alloys",
+ "title": "Rutile Sn1-xGexO2: incoherent vs coherent miscibility",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Units of the released SQS energies: the archive file mixes end-member total energies (eV per 6-atom cell) with formation energies for 0 < x < 1 whose normalisation the README does not state (per rutile primitive cell, 2 cations). Resolved by a discriminating purchase (HSE-setting PBE totals of the same SQS) or by the orderings.",
+   "wrong_choice": "Read the released values as eV per cation; or convert the enthalpy to per cation but leave the strain energies per 6-atom cell",
+   "consequence": "Per-cation reading: mixing enthalpy 229 instead of 114 meV/cation, incoherent Tc 5490 K, coherent Tc 3560 K. Per-cell strain mixed with per-cation enthalpy: no coherent gap above 60 K",
+   "ablation": "sqs_values_read_per_cation",
+   "other_ablations": [
+    "strain_per_cell_mixed_with_per_cation"
+   ],
+   "kind": "archive evidence (units visible only by cross-checking)"
+  },
+  {
+   "id": "dp2",
+   "fork": "Three r2SCAN SQS (x = 0.625 #1, x = 0.75 #0 and #1) did not reach their equilibrium volume: about 2.4 % below the Vegard line, r2SCAN/PBE volume ratio 0.936 instead of 0.960 for the identical PBE decorations, energies about 20 meV/cation too high. At x = 0.75 two of the three SQS are bad, so a median or a single index-0 purchase keeps an outlier.",
+   "wrong_choice": "Fit all r2SCAN SQS as released (the authors' Table 1), or buy index 0 per composition without screening",
+   "consequence": "r2SCAN coherent Tc 904 K (all) or 960 K (index 0) instead of 665 K, maximum moved to x = 0.67",
+   "ablation": "r2scan_unrelaxed_sqs_kept",
+   "other_ablations": [
+    "r2scan_index0_sqs_unscreened"
+   ],
+   "kind": "unconverged data visible only in the released structures"
+  },
+  {
+   "id": "dp3",
+   "fork": "Coherent constraint on planes with two in-plane parameters ((100): |a2| and c; archive '101': |a2 - a3| and c): both must follow the homogeneous alloy",
+   "wrong_choice": "Constrain only the a-type parameter and leave c at each end member's own value (the large c mismatch escapes)",
+   "consequence": "Strain energies 22 and 54 meV/cation on (100)/'101' instead of 150 and 233; habit plane (100); coherent Tc 2300 K",
+   "ablation": "inplane_c_not_constrained",
+   "kind": "cascade (wrong habit plane and coherent gap)"
+  },
+  {
+   "id": "dp4",
+   "fork": "Relaxation perpendicular to the habit plane: take the minimum of each released scan",
+   "wrong_choice": "Use the scan point at the end member's bulk out-of-plane parameter (no Poisson relaxation)",
+   "consequence": "Strain energies 105 / 224 / 247 meV/cation; PBE coherent Tc 614 K and no coherent gap at 700 K",
+   "ablation": "no_out_of_plane_relaxation",
+   "kind": "model definition"
+  },
+  {
+   "id": "dp5",
+   "fork": "Which plane the coherent decomposition uses: buy and compare all three released planes (tetragonal anisotropy) rather than assume one",
+   "wrong_choice": "Use the (100) dataset (or a single assumed plane) for the coherent free energy",
+   "consequence": "Coherent gap essentially removed (Tc about 40 K); habit plane wrong",
+   "ablation": "habit_plane_100",
+   "kind": "discriminating purchases under a budget"
+  },
+  {
+   "id": "dp6",
+   "fork": "Incoherent vs coherent equilibrium as the explanation of the homogeneous films (substrate strain is linear in x and leaves the curvature unchanged)",
+   "wrong_choice": "Report the unconstrained (or substrate-strained) free energy as the coherent one",
+   "consequence": "Coherent Tc 2746 K (PBE) and 700 K boundaries spanning almost the whole composition range",
+   "ablation": "incoherent_model_reported_as_coherent",
+   "kind": "competing explanations"
+  },
+  {
+   "id": "dp7",
+   "fork": "Binodal (common tangent) vs spinodal (curvature) at a given temperature",
+   "wrong_choice": "Swap the two",
+   "consequence": "700 K binodal [0.246, 0.677] instead of [0.128, 0.818]",
+   "ablation": "binodal_spinodal_swapped",
+   "kind": "thermodynamics"
+  },
+  {
+   "id": "dp8",
+   "fork": "Functional consistency of the coherent correction (r2SCAN is stiffer: strain alpha 0.81 vs 0.62 eV per cell)",
+   "wrong_choice": "Subtract r2SCAN strain energies from the PBE enthalpy (and vice versa)",
+   "consequence": "PBE coherent Tc 311 K, r2SCAN 1220 K",
+   "ablation": "functional_mixing",
+   "kind": "functional transfer"
+  },
+  {
+   "id": "dp9",
+   "fork": "Cluster-expansion truncation and validation for a beyond-mean-field incoherent Tc (80 orderings of at most 6 cations; correlations of long clusters alias in small cells)",
+   "wrong_choice": "A short cluster list chosen without cross-validation (8 clusters, 5-fold CV 20 meV/cation, 4x the authors' fit error) fed to Monte Carlo",
+   "consequence": "Incoherent Tc about 1650 K instead of 2250-2550 K for validated CEs (2746 K in mean field): the gap appears to close not far above growth temperatures",
+   "ablation": "overtruncated_cluster_expansion_Tc",
+   "kind": "regime judgement / model validation"
+  }
+ ],
+ "graded_fields": [
+  "mixing_enthalpy_x050_meV_per_cation (PBE) in [100, 124]",
+  "coherency_strain_energy_x050_meV_per_cation for 001/100/101 (PBE) within 5 % each",
+  "habit_plane == '001'",
+  "incoherent_Tc_K in [2000, 3000] (admits ideal-entropy and cluster-expansion Monte Carlo estimates)",
+  "coherent_spinodal_Tc_K: PBE within 12 %, r2SCAN within 20 % (screened SQS)",
+  "coherent_boundaries_700K_PBE: binodal and spinodal compositions each within 0.10"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 37,
+  "oracle_charge": 52,
+  "budget": 58,
+  "catalog_size_units": 1840,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "pilot": "pending (sonnet, terra)",
+  "catalog_note": "23+23 SQS (PBE 1, r2SCAN 2), 530+530 strain scans (PBE 1, r2SCAN 2), 80 r2SCAN orderings (2), 23 HSE-setting PBE runs (1); 80 PBE orderings staged free"
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/1qt4h-tr585",
+  "doi": "10.24435/materialscloud:e2-xp (data); arXiv:2601.12184 (paper)",
+  "files_used": [
+   "data.tar.xz (members data_CE_*.json, data_SQS_*.json, data_{001,100,101}_*.json, Alloy_PBE_Values/*, GeO2_PBE_values/*, SnO2_PBE_values/*)",
+   "README.txt"
+  ],
+  "md5": {
+   "data.tar.xz": "ba7dcda1497afecf1863f2975a73eca0",
+   "README.txt": "c44362bc1f34d2d6b172f9f2a982a24e"
+  },
+  "sha256": {
+   "data.tar.xz": "98aef23f3b7adb9d7c707bd5cefe727d431f813946a4706be562c4b1365eaa26",
+   "README.txt": "4afdd69ec91b4ec76d134291e817f25cf4ad5b2238b19d20b90510d56ef0adbe"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Deviations from the candidate design: (1) The incoherent Tc from cluster expansion + Monte Carlo is not uniquely recoverable: Lasso CEs of equal quality give 2350-2550 K or lower depending on truncation (paper: about 2350 K), only about 10 % below the ideal-entropy estimate (2746 K). It is graded as a window [2000, 3000] K that admits both estimators and rejects the unit and coherent/incoherent mix-ups; mean field vs Monte Carlo and CE truncation are rubric item 4. (2) The Ge solubility at 1000 K was replaced by the 700 K coherent binodal and spinodal (at 1000 K the incoherent solubility is below 1 % for every method and the coherent alloy is fully miscible, so neither discriminates). (3) The disordered mixing enthalpy tolerance is about +-10 % rather than +-5 meV, because SQS-to-SQS scatter and the fit form span 106-118 meV/cation. (4) The r2SCAN coherent Tc is graded after excluding three unrelaxed r2SCAN SQS; the paper's 890 K includes them. (5) The habit-plane label follows the archive; its '101' dataset is a (110)-type plane in the standard rutile setting (rubric item 5). (6) The 80 PBE orderings are staged free (the CE training set) rather than sold, so the budget binds on SQS, strain scans and the normalisation check.",
+ "calibration": {
+  "mixing_enthalpy_x050_meV_per_cation": {
+   "reference": 114.4,
+   "robustness": {
+    "sqs_mean_at_x050": 109.2,
+    "lowest_sqs_per_composition": 113.2,
+    "one_sqs_per_composition": 112.4,
+    "purchase_plans_5_95pct": [
+     113.3,
+     118.0
+    ],
+    "cluster_expansion_random_alloy": 121
+   },
+   "nearest_ablation": {
+    "sqs_values_read_per_cation": 228.7,
+    "r2SCAN_value": 129.2
+   },
+   "tolerance": "[100, 124]"
+  },
+  "coherency_strain_energy_x050_meV_per_cation": {
+   "reference": {
+    "001": 78.0,
+    "100": 149.7,
+    "101": 232.5
+   },
+   "robustness": {
+    "raw_scan_minima": [
+     78.1,
+     149.9,
+     233.2
+    ],
+    "subregular_fit_alpha_over_8": [
+     77.4,
+     150.0,
+     232.6
+    ],
+    "paper_table_2_alpha_over_8": [
+     75.1,
+     147.0,
+     229.1
+    ]
+   },
+   "nearest_ablation": {
+    "no_out_of_plane_relaxation": [
+     104.9,
+     223.6,
+     246.5
+    ],
+    "inplane_c_not_constrained": [
+     78.0,
+     21.8,
+     54.0
+    ],
+    "per_cell": [
+     155.9,
+     299.5,
+     465.1
+    ],
+    "r2SCAN_data": [
+     102.3,
+     169.7,
+     266.0
+    ]
+   },
+   "tolerance": "within 5 % each"
+  },
+  "incoherent_Tc_K": {
+   "reference_ideal_entropy": 2746,
+   "robustness": {
+    "cluster_expansion_monte_carlo": "2350-2550 K for Lasso CEs with 17-24 clusters (CV 7.2-7.6 meV/cation); 2250 K with 12 clusters (CV 11.4); Binder crossings L = 6/8",
+    "one_sqs_per_composition": 2716
+   },
+   "nearest_ablation": {
+    "sqs_values_read_per_cation": 5491,
+    "r2SCAN_ideal_entropy_clean": 3064,
+    "coherent_value": 866,
+    "overtruncated_cluster_expansion": 1650
+   },
+   "tolerance": "[2000, 3000]"
+  },
+  "coherent_spinodal_Tc_K_PBE": {
+   "reference": 866,
+   "robustness": {
+    "lowest_sqs": 834,
+    "raw_scan_minima": 862,
+    "one_sqs_per_composition": 816,
+    "purchase_plans_5_95pct": [
+     836,
+     950
+    ],
+    "paper": 930
+   },
+   "nearest_ablation": {
+    "no_out_of_plane_relaxation": 614,
+    "functional_mixing": 311,
+    "inplane_c_not_constrained": 2299,
+    "incoherent": 2746
+   },
+   "tolerance": "within 12 % ([762, 970])"
+  },
+  "coherent_spinodal_Tc_K_r2SCAN": {
+   "reference": 665,
+   "robustness": {
+    "lowest_sqs": 647,
+    "mean_sqs": 671,
+    "raw_scan_minima": 661,
+    "one_sqs_per_composition": 682,
+    "purchase_plans_5_95pct": [
+     649,
+     788
+    ]
+   },
+   "nearest_ablation": {
+    "r2scan_unrelaxed_sqs_kept": 904,
+    "r2scan_index0_sqs_unscreened": 960,
+    "no_out_of_plane_relaxation": 470
+   },
+   "tolerance": "within 20 % ([532, 798])"
+  },
+  "coherent_boundaries_700K_PBE": {
+   "reference": {
+    "binodal": [
+     0.128,
+     0.818
+    ],
+    "spinodal": [
+     0.246,
+     0.677
+    ]
+   },
+   "robustness": {
+    "lowest_sqs": {
+     "binodal": [
+      0.161,
+      0.807
+     ],
+     "spinodal": [
+      0.279,
+      0.678
+     ]
+    },
+    "one_sqs_per_composition": {
+     "binodal": [
+      0.175,
+      0.786
+     ],
+     "spinodal": [
+      0.288,
+      0.662
+     ]
+    },
+    "purchase_plans_5_95pct": {
+     "binodal_lo": [
+      0.089,
+      0.182
+     ],
+     "binodal_hi": [
+      0.8,
+      0.898
+     ],
+     "spinodal_lo": [
+      0.215,
+      0.322
+     ],
+     "spinodal_hi": [
+      0.658,
+      0.773
+     ]
+    }
+   },
+   "nearest_ablation": {
+    "binodal_spinodal_swapped": {
+     "binodal": [
+      0.246,
+      0.677
+     ],
+     "spinodal": [
+      0.128,
+      0.818
+     ]
+    },
+    "incoherent": {
+     "binodal": [
+      0.001,
+      1.0
+     ],
+     "spinodal": [
+      0.106,
+      0.948
+     ]
+    }
+   },
+   "tolerance": "each composition within 0.10"
+  }
+ }
+}

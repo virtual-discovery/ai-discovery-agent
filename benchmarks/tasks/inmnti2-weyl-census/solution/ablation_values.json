@@ -1,0 +1,131 @@
+{
+ "ablations": {
+  "standard_model_as_magnetic": {
+   "node_energy_meV": 38.87875021748047,
+   "pair_separation_invA": 0.15462903356416213,
+   "kz_offset_plus_invA": 0.0,
+   "orbit_sizes": [
+    24
+   ]
+  },
+  "band_index_from_exclude_bands": {
+   "node_count": {
+    "dftu": 72,
+    "pbe": 24
+   }
+  },
+  "same_band_index_both_models": {
+   "node_count": {
+    "dftu": 24,
+    "pbe": 119
+   },
+   "pbe_node_energy_meV": -361.3157778450381
+  },
+  "wannier_nodes_trusted": {
+   "node_energy_meV": -73.22388618340892,
+   "pair_separation_invA": 0.3961017779814916,
+   "kz_offset_plus_invA": -0.009543558363649755
+  },
+  "grid_validated_nearest_pair": {
+   "node_energy_meV": -91.89025893333103,
+   "pair_separation_invA": 0.38521690159380273
+  },
+  "cubic_single_orbit": {
+   "orbit_sizes": [
+    24
+   ]
+  },
+  "unitary_operations_only": {
+   "orbit_sizes": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ]
+  },
+  "planar_families": {
+   "orbit_sizes": [
+    8,
+    8,
+    8
+   ]
+  },
+  "magnetization_axis_split": {
+   "orbit_sizes": [
+    8,
+    16
+   ]
+  },
+  "chirality_of_upper_band": {
+   "kz_offset_plus_invA": 0.009786262220383729
+  },
+  "cubic_symmetric_node": {
+   "kz_offset_plus_invA": 0.0
+  },
+  "pbe_count_with_avoided_crossings": {
+   "node_count": {
+    "dftu": 24,
+    "pbe": 30
+   }
+  },
+  "pbe_count_coarse_grid": {
+   "node_count": {
+    "dftu": 24,
+    "pbe": 12
+   }
+  },
+  "kubo_folder_as_broadening": {
+   "ahc_S_per_cm": {
+    "xy": 74.406154,
+    "yz": 0.0,
+    "zx": 0.0
+   }
+  },
+  "kubo_mesh_58": {
+   "ahc_S_per_cm": {
+    "xy": 102.94817,
+    "yz": 0.0,
+    "zx": 0.0
+   }
+  },
+  "raw_hall_components": {
+   "ahc_S_per_cm": {
+    "xy": 114.0516,
+    "yz": -0.2028829,
+    "zx": -4.4556103
+   }
+  },
+  "nscf_path_fermi_level": {
+   "pbe_node_energy_meV": -73.821249782518
+  }
+ },
+ "robustness": {
+  "node_energy_y_line": {
+   "node_energy_meV": -97.80829593681986
+  },
+  "node_energy_x_line": {
+   "node_energy_meV": -97.11622872299455
+  },
+  "node_energy_window_extremes": {
+   "node_energy_meV": -98.26648367721636
+  },
+  "separation_from_x_and_z_crossings": {
+   "pair_separation_invA": 0.3690334723053217
+  },
+  "kz_from_x_line_passage": {
+   "kz_offset_plus_invA": -0.00974276114587285
+  },
+  "ahc_mesh_210": {
+   "ahc_S_per_cm": {
+    "xy": 114.38844,
+    "yz": 0.0,
+    "zx": 0.0
+   }
+  },
+  "pbe_single_node_extremes": {
+   "pbe_node_energy_meV": 38.384711625401025
+  }
+ }
+}

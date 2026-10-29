@@ -1,0 +1,437 @@
+{
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/tc_calc_no_isotope/kappa-m151515.hdf5": {
+  "bytes": 2637974,
+  "crc32": "d2dbd158",
+  "sha256": "92998e76b5ce0885922a7bf410d2a237ad2f8e0342db309235213889b662dacc"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/tc_calc_no_isotope/phono3py.yaml": {
+  "bytes": 23837,
+  "crc32": "649aeb24",
+  "sha256": "6e54c2adccf2e0048d93d52286f99034dd53ba881c293c852680eecc782f8181"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/tc_calc_no_isotope/4_cmd_launch_tc.sh": {
+  "bytes": 640,
+  "crc32": "fce482ea",
+  "sha256": "cbbc2d6528cafe05e71c372e753a0ba6bc740b53d6ed0432fddb1bff94c08279"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/tc_calc_no_isotope/tc_15x15x15_CoSb3_test.out": {
+  "bytes": 461112,
+  "crc32": "9e710eb0",
+  "sha256": "baf936f47b9800f31c9e5dffd8adfaceb317f40b8cc67fb66304a93f0cb52e5d"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/tc_calc_with_isotope/kappa-m151515.hdf5": {
+  "bytes": 2637974,
+  "crc32": "d2dbd158",
+  "sha256": "92998e76b5ce0885922a7bf410d2a237ad2f8e0342db309235213889b662dacc"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/tc_calc_with_isotope/phono3py.yaml": {
+  "bytes": 23837,
+  "crc32": "649aeb24",
+  "sha256": "6e54c2adccf2e0048d93d52286f99034dd53ba881c293c852680eecc782f8181"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/tc_calc_with_isotope/1_cmd_launch_tc_workstation.sh": {
+  "bytes": 687,
+  "crc32": "d1398f71",
+  "sha256": "4646d8d240a0b744d96cdbecd323350f7576665ab9c204c4c5baf0c0239438e1"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/tc_calc_with_isotope/tc_CoSb3.out": {
+  "bytes": 496543,
+  "crc32": "e6fabca7",
+  "sha256": "1cae89700f715a4689d111acdfc86ffcd32d17e2ca2eaa50dbfcaf01c8ea6a04"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/v_operator_mean_free_path_isotope/kappa-m151515.hdf5": {
+  "bytes": 260873300,
+  "crc32": "9e6d9507",
+  "sha256": "6ef7b6dcb79da01e7f167c2e125f5446904114c21f7117e021fbbdc52ff27062"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/v_operator_mean_free_path_isotope/phono3py.yaml": {
+  "bytes": 87645,
+  "crc32": "a08004c6",
+  "sha256": "682461f438780cf7ff18792feb3e47c8748aa7bfe0d576078fa39ebcfb861b4e"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/v_operator_mean_free_path_isotope/1_compute_velocity_operator.sh": {
+  "bytes": 655,
+  "crc32": "2e9fb241",
+  "sha256": "92f4f06c22fec95b98507c036f1c524607c433dcc6eb8d3e976f907c7cc394b4"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/v_operator_mean_free_path_isotope/nohup.out": {
+  "bytes": 513543,
+  "crc32": "45ed0cbd",
+  "sha256": "fe5afaa85f35634250cd648797a8c2725bef265ece9662bc29936c4275a7ff43"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/v_operator_mean_free_path_isotope/tc_data.dat": {
+  "bytes": 799,
+  "crc32": "3000e7b7",
+  "sha256": "f7bce8bb6c3d82e5cf83ab5220bfd040f9952b907acb602afff2dd82eadbab55"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/5_phono3py/v_operator_mean_free_path_isotope/2_plot_MFP.py": {
+  "bytes": 20332,
+  "crc32": "4e831c7e",
+  "sha256": "ddf3a7c241d6531bd1e7475e53e7a80ddf9e46c042bc9285a0d1affdbd3b4a19"
+ },
+ "materials_cloud_archive_submission/Co_based/YbCo4Sb12/3_hiphive_FCS/5_phono3py/kappa-m999.hdf5": {
+  "bytes": 71603500,
+  "crc32": "5a41e7a7",
+  "sha256": "30b2054d10db0d363e8bcbfd33687e9fc3b18a6effaef2f543a54908c08fd932"
+ },
+ "materials_cloud_archive_submission/Co_based/YbCo4Sb12/3_hiphive_FCS/5_phono3py/phono3py.yaml": {
+  "bytes": 47191,
+  "crc32": "3aa82446",
+  "sha256": "74774a89e1f4f94bd5b3eb1033b83dabe1e071c5d8e44a89192fe826e6148506"
+ },
+ "materials_cloud_archive_submission/Co_based/YbCo4Sb12/3_hiphive_FCS/5_phono3py/1_cmd_launch_tc_workstation.sh": {
+  "bytes": 671,
+  "crc32": "978d35a4",
+  "sha256": "5425c096ae855a0b49dc8f64379277cd14ba37237beeb00efb1f31837c9f44e1"
+ },
+ "materials_cloud_archive_submission/Co_based/YbCo4Sb12/3_hiphive_FCS/5_phono3py/tc_YbCo4Sb12.out": {
+  "bytes": 1116913,
+  "crc32": "c34d0b54",
+  "sha256": "96a75355a0729d087ba4520cc0de2a94d9fa26cee4f2c2b15ac1c66e73551519"
+ },
+ "materials_cloud_archive_submission/Fe_based/FeSb3/4_hiphive_FCS/5_phono3py/kappa-m999.hdf5": {
+  "bytes": 66902432,
+  "crc32": "8cae04df",
+  "sha256": "e1527b5bd07f15ba1fd568c13376679f1993377d26f33e72d92101a5ec682df2"
+ },
+ "materials_cloud_archive_submission/Fe_based/FeSb3/4_hiphive_FCS/5_phono3py/phono3py.yaml": {
+  "bytes": 44537,
+  "crc32": "47e88201",
+  "sha256": "e89d09a31ae94fb67fbbe8c88cc448920f913d1c57b6fb5e89775480f938ad30"
+ },
+ "materials_cloud_archive_submission/Fe_based/FeSb3/4_hiphive_FCS/5_phono3py/1_cmd_launch_tc_workstation.sh": {
+  "bytes": 671,
+  "crc32": "978d35a4",
+  "sha256": "5425c096ae855a0b49dc8f64379277cd14ba37237beeb00efb1f31837c9f44e1"
+ },
+ "materials_cloud_archive_submission/Fe_based/FeSb3/4_hiphive_FCS/5_phono3py/tc_FeSb3.out": {
+  "bytes": 1856860,
+  "crc32": "ec91981d",
+  "sha256": "820b8690637f4d3aebd4d0c871923cfd9240b52cbb29f1a226a5931e88f50137"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/6_hiphive/5_phono3py/fc2hip_fc3hip/kappa-m999.hdf5": {
+  "bytes": 63625867,
+  "crc32": "f2002603",
+  "sha256": "1d80e69626378bc75672f3055112bfad1e0f2aea85adccce98fb8ae65f9a6184"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/6_hiphive/5_phono3py/fc2hip_fc3hip/phono3py.yaml": {
+  "bytes": 47191,
+  "crc32": "b0224345",
+  "sha256": "cd78d47cca7f691c46a847db29ec7d2b190ae27ea541248f9b8b7114c64e85c7"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/6_hiphive/5_phono3py/fc2hip_fc3hip/1_cmd_launch_tc_workstation.sh": {
+  "bytes": 671,
+  "crc32": "978d35a4",
+  "sha256": "5425c096ae855a0b49dc8f64379277cd14ba37237beeb00efb1f31837c9f44e1"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/6_hiphive/5_phono3py/fc2hip_fc3hip/tc_YbFe4Sb12.out": {
+  "bytes": 1114936,
+  "crc32": "fb658050",
+  "sha256": "224375f46c14824e10a9992de24558e5c8b67b9e3a3c07171209c087244dedef"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/3_FCS_thirdorder/5_phono3py/no_isotope/kappa-m999.hdf5": {
+  "bytes": 745651,
+  "crc32": "ab2fa77b",
+  "sha256": "c66da7108c976e7eca433c35dd5d80588f3560fda1d4e78f8dfeb992d37ce4b9"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/3_FCS_thirdorder/5_phono3py/no_isotope/phono3py.yaml": {
+  "bytes": 25231,
+  "crc32": "3c546ce9",
+  "sha256": "7dd1702f6a8cb651e12ab028098dea3b7a9e511eee905a6df0f0aabb8f0e6061"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/3_FCS_thirdorder/5_phono3py/no_isotope/3_cmd_launch_tc_workstation.sh": {
+  "bytes": 661,
+  "crc32": "74ff7d95",
+  "sha256": "c34190223df609bcb85a8ee901afa2828b4da06d2afce4fdff9aa62d398c24f3"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/3_FCS_thirdorder/5_phono3py/no_isotope/tc_YbFe4Sb12.out": {
+  "bytes": 128722,
+  "crc32": "6f7395bd",
+  "sha256": "30fc29c9aa6714fdf82ced3ee3a6e3dd76b0da9148d44873e0b5f8a91a8e2e3d"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/3_FCS_thirdorder/5_phono3py/isotope/kappa-m999.hdf5": {
+  "bytes": 745651,
+  "crc32": "ab2fa77b",
+  "sha256": "c66da7108c976e7eca433c35dd5d80588f3560fda1d4e78f8dfeb992d37ce4b9"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/3_FCS_thirdorder/5_phono3py/isotope/phono3py.yaml": {
+  "bytes": 25231,
+  "crc32": "3c546ce9",
+  "sha256": "7dd1702f6a8cb651e12ab028098dea3b7a9e511eee905a6df0f0aabb8f0e6061"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/3_FCS_thirdorder/5_phono3py/isotope/3_cmd_launch_tc_workstation.sh": {
+  "bytes": 684,
+  "crc32": "b5830446",
+  "sha256": "aaba0c08d593b82d495f646a6567e2117c8f97355638bcef56e9e9099ea6c658"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/3_FCS_thirdorder/5_phono3py/isotope/tc_YbFe4Sb12.out": {
+  "bytes": 128722,
+  "crc32": "6f7395bd",
+  "sha256": "30fc29c9aa6714fdf82ced3ee3a6e3dd76b0da9148d44873e0b5f8a91a8e2e3d"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/3_FCS_thirdorder/5_phono3py/isotope/tc_YbFe4Sb12_with_isotope.out": {
+  "bytes": 138225,
+  "crc32": "fcb0d4d4",
+  "sha256": "68b24eedf7846b3ac1e0a4e76d7404cb9e4b00f6d23da70ad1a480049c7ed8a3"
+ },
+ "materials_cloud_archive_submission/Ir_based/IrSb3/3_hiphive_FCS/5_phono3py/kappa-m999.hdf5": {
+  "bytes": 57678105,
+  "crc32": "502d57c8",
+  "sha256": "a8dd97748fa48f0e14475a5ea26c69e5cd72f086bfaf659991960ef5a09de77b"
+ },
+ "materials_cloud_archive_submission/Ir_based/IrSb3/3_hiphive_FCS/5_phono3py/phono3py.yaml": {
+  "bytes": 87766,
+  "crc32": "d885aa7b",
+  "sha256": "fc21d4da108050103db2f588e2e70686019c709d7127ce20b4b44a2833452e21"
+ },
+ "materials_cloud_archive_submission/Ir_based/IrSb3/3_hiphive_FCS/5_phono3py/1_cmd_launch_tc_workstation.sh": {
+  "bytes": 671,
+  "crc32": "e2685bc2",
+  "sha256": "5e054f72100508c15d28e56aa13c173875474cccc13581d18a80bc4249b3939c"
+ },
+ "materials_cloud_archive_submission/Ir_based/IrSb3/3_hiphive_FCS/5_phono3py/tc_IrSb3.out": {
+  "bytes": 1852858,
+  "crc32": "ca9aec21",
+  "sha256": "9158e5e9499fece3229ced4898f8f53b7d024f172039a9d6b85465698eb6018f"
+ },
+ "materials_cloud_archive_submission/Ir_based/YbIr4Sb12/3_hiphive_FCS/5_phono3py/kappa-m999.hdf5": {
+  "bytes": 75207170,
+  "crc32": "f7585ca7",
+  "sha256": "0816a8c5b63e5147c34b297dbbb2e522b9bf93c2d220a3a4531b8c7d2df4ca9f"
+ },
+ "materials_cloud_archive_submission/Ir_based/YbIr4Sb12/3_hiphive_FCS/5_phono3py/phono3py.yaml": {
+  "bytes": 47267,
+  "crc32": "31697812",
+  "sha256": "da39c88843159b7a806f05caa6d4db89f29721ceb6343e17c263db1db1e61d1f"
+ },
+ "materials_cloud_archive_submission/Ir_based/YbIr4Sb12/3_hiphive_FCS/5_phono3py/1_cmd_launch_tc_workstation.sh": {
+  "bytes": 671,
+  "crc32": "978d35a4",
+  "sha256": "5425c096ae855a0b49dc8f64379277cd14ba37237beeb00efb1f31837c9f44e1"
+ },
+ "materials_cloud_archive_submission/Ir_based/YbIr4Sb12/3_hiphive_FCS/5_phono3py/tc_YbIr4Sb12.out": {
+  "bytes": 1116921,
+  "crc32": "5646a3a9",
+  "sha256": "a41fdad2dcb73abe2b21fcc6db96d30b3bc57e3ef101055c2187821f2d94abc1"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/7_phonon_PDOS/projected_dos.dat": {
+  "bytes": 68562,
+  "crc32": "f5995490",
+  "sha256": "92982f9733c510f1913af82dfcd398f2725601e5a8be3a0e9dbb876b4608b284"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/7_phonon_PDOS/phonopy.yaml": {
+  "bytes": 66748,
+  "crc32": "8082ccc4",
+  "sha256": "46d37ae6a4b7aa680fbb8f7d9b3c13358a23348c635186c1c2512f40d826a951"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/6_MSD/POSCAR": {
+  "bytes": 1226,
+  "crc32": "a267a218",
+  "sha256": "4602eb61dd1d5951c52258adb75fb8f5ff3f191bcea16f5f8330d69e4ea84a68"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/6_MSD/thermal_displacements_calcs/mesh_50/thermal_displacements.yaml": {
+  "bytes": 1856,
+  "crc32": "c39b9542",
+  "sha256": "b5399cc3f8277b7e093de68abc2c09f19fcfb5c3c17ee54c18db02bfd5e16417"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/6_MSD/thermal_displacements_calcs/mesh_50/1_cmd_MSD.sh": {
+  "bytes": 167,
+  "crc32": "60e3c710",
+  "sha256": "24f0e894ff2f5f4024846e93e96d5b5d66f17565bf9484e9b9c54b9ea0a88cd1"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/7_phonon_PDOS/cmd.sh": {
+  "bytes": 47,
+  "crc32": "2a0e39f9",
+  "sha256": "f63beb200201b109ed2bbc793f04217dd049126e938b572d29d45772f69ee727"
+ },
+ "materials_cloud_archive_submission/Co_based/CoSb3/7_phonon_PDOS/settings.conf": {
+  "bytes": 76,
+  "crc32": "757d6ebf",
+  "sha256": "11ed9e04bfa1afa08e91c4e27b5e53dceee1f5fd92ea2f1c6d85d2c8377485e7"
+ },
+ "materials_cloud_archive_submission/Co_based/YbCo4Sb12/5_phonon_PDOS/projected_dos.dat": {
+  "bytes": 72582,
+  "crc32": "ce7651d1",
+  "sha256": "9251e6ed259c9e8d3842b79b6eddaf1d66aab55b4feba781b64ca2ba44512fc4"
+ },
+ "materials_cloud_archive_submission/Co_based/YbCo4Sb12/5_phonon_PDOS/phonopy.yaml": {
+  "bytes": 25068,
+  "crc32": "47e36043",
+  "sha256": "9986a8d51717dc35c88a1a99eeeb69958450578310821ec702cc88d3ca314b86"
+ },
+ "materials_cloud_archive_submission/Co_based/YbCo4Sb12/4_MSD/POSCAR": {
+  "bytes": 1300,
+  "crc32": "17b341ef",
+  "sha256": "8dfe22b029527c4a49299d796ef2ecf414e5a7c09bf966586860ce06498ff445"
+ },
+ "materials_cloud_archive_submission/Co_based/YbCo4Sb12/4_MSD/thermal_displacements_calcs/mesh_50/thermal_displacements.yaml": {
+  "bytes": 1962,
+  "crc32": "d0740518",
+  "sha256": "6116209e2ecd1c67b4f1f37daf9cffc42f81056d321d43bfa554e8e0f8cabcbe"
+ },
+ "materials_cloud_archive_submission/Co_based/YbCo4Sb12/4_MSD/thermal_displacements_calcs/mesh_50/1_cmd_MSD.sh": {
+  "bytes": 167,
+  "crc32": "384442e1",
+  "sha256": "b46288e50db50e51fb48d0f9e825db8c6e9102d84d9fd12f42a1a1b45b306310"
+ },
+ "materials_cloud_archive_submission/Co_based/YbCo4Sb12/5_phonon_PDOS/cmd.sh": {
+  "bytes": 47,
+  "crc32": "2a0e39f9",
+  "sha256": "f63beb200201b109ed2bbc793f04217dd049126e938b572d29d45772f69ee727"
+ },
+ "materials_cloud_archive_submission/Co_based/YbCo4Sb12/5_phonon_PDOS/settings.conf": {
+  "bytes": 76,
+  "crc32": "00cf63e9",
+  "sha256": "7708ba5ee0c2d15870b52d22671113d7415b7dea2c0afea3d6499d170f2e1db2"
+ },
+ "materials_cloud_archive_submission/Fe_based/FeSb3/6_phonon_PDOS/projected_dos.dat": {
+  "bytes": 68562,
+  "crc32": "19f7e0ab",
+  "sha256": "2c4efd4c46dcffaec042edaec769e0cc324d75f0c4507a73c41afdf4b75ce9a7"
+ },
+ "materials_cloud_archive_submission/Fe_based/FeSb3/6_phonon_PDOS/phonopy.yaml": {
+  "bytes": 23671,
+  "crc32": "cee2321e",
+  "sha256": "c6f8e029227b2a41cd25d4c71c84459014d4b15e32d4270c76dc82e2644a2652"
+ },
+ "materials_cloud_archive_submission/Fe_based/FeSb3/5_MSD/POSCAR": {
+  "bytes": 1231,
+  "crc32": "94367bb2",
+  "sha256": "d65f8f303fd27eadf10d5869de7d3bc5a8dcadf3f11d2c195bacadeeb2d655bb"
+ },
+ "materials_cloud_archive_submission/Fe_based/FeSb3/5_MSD/thermal_displacements_calcs/mesh_50/thermal_displacements.yaml": {
+  "bytes": 1856,
+  "crc32": "8b819e2c",
+  "sha256": "b6b0ed9ac7cf02a1a73eeb3a739e921d6211a682cdf06e01a83251578c83dcc9"
+ },
+ "materials_cloud_archive_submission/Fe_based/FeSb3/5_MSD/thermal_displacements_calcs/mesh_50/1_cmd_MSD.sh": {
+  "bytes": 167,
+  "crc32": "384442e1",
+  "sha256": "b46288e50db50e51fb48d0f9e825db8c6e9102d84d9fd12f42a1a1b45b306310"
+ },
+ "materials_cloud_archive_submission/Fe_based/FeSb3/6_phonon_PDOS/cmd.sh": {
+  "bytes": 47,
+  "crc32": "2a0e39f9",
+  "sha256": "f63beb200201b109ed2bbc793f04217dd049126e938b572d29d45772f69ee727"
+ },
+ "materials_cloud_archive_submission/Fe_based/FeSb3/6_phonon_PDOS/settings.conf": {
+  "bytes": 76,
+  "crc32": "00cf63e9",
+  "sha256": "7708ba5ee0c2d15870b52d22671113d7415b7dea2c0afea3d6499d170f2e1db2"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/7_phonon_PDOS/projected_dos.dat": {
+  "bytes": 72582,
+  "crc32": "4ddefdfa",
+  "sha256": "ab1586a6067aa4665845799f2027f46c18f612e29d02651be1e1d9d43888ef77"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/7_phonon_PDOS/phonopy.yaml": {
+  "bytes": 70820,
+  "crc32": "d5a398d3",
+  "sha256": "3244de6269d218a2039545181dc855614b92eb8c00bc65fec679e017870cf206"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/4_MSD/POSCAR": {
+  "bytes": 1294,
+  "crc32": "7d471ae5",
+  "sha256": "bfc479f10a53f86646fd17c40b7710bf2fbbeeeb7c91039f96cd8608fa5bade5"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/4_MSD/thermal_displacements_calcs/mesh_50/thermal_displacements.yaml": {
+  "bytes": 1962,
+  "crc32": "804d44a1",
+  "sha256": "888116cd6cbddeed437daa4425d6024704ca7f6c3659091a3bb468114bde7174"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/4_MSD/thermal_displacements_calcs/mesh_50/1_cmd_MSD.sh": {
+  "bytes": 167,
+  "crc32": "60e3c710",
+  "sha256": "24f0e894ff2f5f4024846e93e96d5b5d66f17565bf9484e9b9c54b9ea0a88cd1"
+ },
+ "materials_cloud_archive_submission/Ir_based/IrSb3/5_phonon_PDOS/projected_dos.dat": {
+  "bytes": 68562,
+  "crc32": "b107854b",
+  "sha256": "a44e0726188d316649eacfdac58078f73f5d70d5dcd95768fe7e7401449dbdc4"
+ },
+ "materials_cloud_archive_submission/Ir_based/IrSb3/5_phonon_PDOS/phonopy.yaml": {
+  "bytes": 66864,
+  "crc32": "029aa606",
+  "sha256": "6a882fa8d3872b79c7e6656cb91f4c0ef03bde62827a35464e2e7758bfa817b1"
+ },
+ "materials_cloud_archive_submission/Ir_based/IrSb3/4_MSD/POSCAR": {
+  "bytes": 1231,
+  "crc32": "2e8c4def",
+  "sha256": "a74cd3f0038d3ca01140f8b9d676e9220cc868ae817c24c11249e3c0891fc6a8"
+ },
+ "materials_cloud_archive_submission/Ir_based/IrSb3/4_MSD/thermal_displacements_calcs/mesh_50/thermal_displacements.yaml": {
+  "bytes": 1856,
+  "crc32": "38881eec",
+  "sha256": "35409780a04c96786d71aa7c691a354e544129d511e2afcb45da2f2ef00f2d58"
+ },
+ "materials_cloud_archive_submission/Ir_based/IrSb3/4_MSD/thermal_displacements_calcs/mesh_50/1_cmd_MSD.sh": {
+  "bytes": 167,
+  "crc32": "60e3c710",
+  "sha256": "24f0e894ff2f5f4024846e93e96d5b5d66f17565bf9484e9b9c54b9ea0a88cd1"
+ },
+ "materials_cloud_archive_submission/Ir_based/IrSb3/5_phonon_PDOS/cmd.sh": {
+  "bytes": 47,
+  "crc32": "2a0e39f9",
+  "sha256": "f63beb200201b109ed2bbc793f04217dd049126e938b572d29d45772f69ee727"
+ },
+ "materials_cloud_archive_submission/Ir_based/IrSb3/5_phonon_PDOS/settings.conf": {
+  "bytes": 76,
+  "crc32": "757d6ebf",
+  "sha256": "11ed9e04bfa1afa08e91c4e27b5e53dceee1f5fd92ea2f1c6d85d2c8377485e7"
+ },
+ "materials_cloud_archive_submission/Ir_based/YbIr4Sb12/5_phonon_PDOS/projected_dos.dat": {
+  "bytes": 72582,
+  "crc32": "054b68be",
+  "sha256": "514bb74cf2e435e456663898df457fa68a1e80575407e79d82a6eca53a10c0e4"
+ },
+ "materials_cloud_archive_submission/Ir_based/YbIr4Sb12/5_phonon_PDOS/phonopy.yaml": {
+  "bytes": 25108,
+  "crc32": "3215104c",
+  "sha256": "37e7035bb60dc0b556d8e5dfc385c82a34b42f283775776bd15efb1b5d86b40e"
+ },
+ "materials_cloud_archive_submission/Ir_based/YbIr4Sb12/4_MSD/POSCAR": {
+  "bytes": 1300,
+  "crc32": "0e687251",
+  "sha256": "eb2ad630ffb0665cb69f1bcf548d738a25d08c1e408d5dca5855bd6a9b8928f2"
+ },
+ "materials_cloud_archive_submission/Ir_based/YbIr4Sb12/4_MSD/thermal_displacements_calcs/mesh_50/thermal_displacements.yaml": {
+  "bytes": 1962,
+  "crc32": "a569372b",
+  "sha256": "7faace3d319a82f1ce9a859489b95632f8eac1e17a6bb18ea0847f9aa814fbfe"
+ },
+ "materials_cloud_archive_submission/Ir_based/YbIr4Sb12/4_MSD/thermal_displacements_calcs/mesh_50/1_cmd_MSD.sh": {
+  "bytes": 167,
+  "crc32": "384442e1",
+  "sha256": "b46288e50db50e51fb48d0f9e825db8c6e9102d84d9fd12f42a1a1b45b306310"
+ },
+ "materials_cloud_archive_submission/Ir_based/YbIr4Sb12/5_phonon_PDOS/cmd.sh": {
+  "bytes": 47,
+  "crc32": "2a0e39f9",
+  "sha256": "f63beb200201b109ed2bbc793f04217dd049126e938b572d29d45772f69ee727"
+ },
+ "materials_cloud_archive_submission/Ir_based/YbIr4Sb12/5_phonon_PDOS/settings.conf": {
+  "bytes": 76,
+  "crc32": "00cf63e9",
+  "sha256": "7708ba5ee0c2d15870b52d22671113d7415b7dea2c0afea3d6499d170f2e1db2"
+ },
+ "materials_cloud_archive_submission/README.txt": {
+  "bytes": 820,
+  "crc32": "45ba0420",
+  "sha256": "f00b0995207cfe7109b47fa66eb8c59814e5dec42c09386668e9cceb5ba4404b"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/AFM/2_phonons/post_processing_matdyn_crystal/matdyn__crystal.freq": {
+  "bytes": 201069,
+  "crc32": "80146030",
+  "sha256": "9dde6880243397b9aef2b378bd099ab078dac08099555c4c664d515be093bb74"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/NM/2_phonons/post_processing_matdyn_crystal/matdyn__crystal.freq": {
+  "bytes": 199949,
+  "crc32": "b8c73822",
+  "sha256": "5bc73b3a3eb862492184bed8af542f456f27f0990875b5b8a86199949abab356"
+ },
+ "materials_cloud_archive_submission/Fe_based/YbFe4Sb12/AFM/1_vc-relax/vc_relax.in": {
+  "bytes": 2041,
+  "crc32": "9dbe9708",
+  "sha256": "223d34241866114361d048733afa3828a8a4435f7afc8da529665a56b08ba61f"
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 7,
+  "task_mb": 0.55,
+  "hidden_values": 1703,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 53,
+   "budget": 60,
+   "evaluations": 49,
+   "failed_evaluations": 0,
+   "container_seconds": 22
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "nearest_neighbour_model_from_12meV_data_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "short_range_J1_J3_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "short_range_six_shell_model",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "momentum_integration_window_ignored",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "nearest_neighbour_model_forced_through_all_data",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "free_ion_J_5_2_as_effective_spin",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "broad_spectra_read_as_incoherent_continuum",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "ten_free_shells_overfit",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "J1_J3_plus_long_range_term",
+    "passes_grading": true
+   },
+   {
+    "name": "integration_window_read_as_total_width_0p08",
+    "passes_grading": true
+   },
+   {
+    "name": "J1_plus_long_range_term_all_visible_data",
+    "passes_grading": true
+   },
+   {
+    "name": "J1_and_W_from_bandwidth_2p75_meV",
+    "passes_grading": true
+   },
+   {
+    "name": "eta_from_cut_box_widths",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T18:35:43Z"
+}

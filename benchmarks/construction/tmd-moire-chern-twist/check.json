@@ -1,0 +1,146 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 10,
+  "rubric_items": 8,
+  "task_mb": 15.22,
+  "hidden_values": 6,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 24,
+   "budget": 27,
+   "evaluations": 20,
+   "failed_evaluations": 0,
+   "container_seconds": 10
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "spin_down_sector",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "indicator_without_minus_sign",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "kappa_prime_as_conjugate",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "state_index_as_band_index",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "continuum_plot_script_basis",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "continuum_left_handed_basis",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "continuum_layers_swapped",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "literature_local_stacking_set",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "fixed_continuum_transferred_to_dft",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "continuum_assumed_to_track_dft",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "xm_mx_swapped",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "first_star_reconstruction_as_xm",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "full_value_as_first_star",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "fourier_magnitudes_with_large_angle_sign",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "no_sign_flip_assumed",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "xm_nearest_grid_point",
+    "passes_grading": true
+   },
+   {
+    "name": "xm_bilinear_interpolation",
+    "passes_grading": true
+   },
+   {
+    "name": "xm_from_archived_line_cuts",
+    "passes_grading": true
+   },
+   {
+    "name": "first_star_fft_with_duplicated_endpoint",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T13:57:34Z"
+}

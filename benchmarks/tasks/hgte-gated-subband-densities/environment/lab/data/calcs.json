@@ -1,0 +1,562 @@
+{
+ "26nm|main|-0.0010": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": -0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -11.727 meV\nE_F(n=0)           [ef0]:    0.946 meV\nE_F(n)              [ef]:    0.064 meV\nAt density           [n]:   -0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_-0.001"
+ },
+ "26nm|main|-0.0020": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": -0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -11.014 meV\nE_F(n=0)           [ef0]:    1.864 meV\nE_F(n)              [ef]:    0.190 meV\nAt density           [n]:   -0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_-0.002"
+ },
+ "26nm|main|-0.0030": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": -0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -10.358 meV\nE_F(n=0)           [ef0]:    2.713 meV\nE_F(n)              [ef]:    0.318 meV\nAt density           [n]:   -0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_-0.003"
+ },
+ "26nm|main|-0.0040": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": -0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -9.750 meV\nE_F(n=0)           [ef0]:    3.506 meV\nE_F(n)              [ef]:    0.457 meV\nAt density           [n]:   -0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_-0.004"
+ },
+ "26nm|main|+0.0000": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": 0.0,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -12.497 meV\nE_F(n=0)           [ef0]:   -0.012 meV\nE_F(n)              [ef]:   -0.011 meV\nAt density           [n]:        0 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_0"
+ },
+ "26nm|main|+0.0010": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": 0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.293 meV\nE_F(n=0)           [ef0]:   -0.676 meV\nE_F(n)              [ef]:    0.127 meV\nAt density           [n]:    0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_0.001"
+ },
+ "26nm|main|+0.0020": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": 0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.891 meV\nE_F(n=0)           [ef0]:   -1.134 meV\nE_F(n)              [ef]:    7.682 meV\nAt density           [n]:    0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_0.002"
+ },
+ "26nm|main|+0.0030": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": 0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -14.123 meV\nE_F(n=0)           [ef0]:   -1.200 meV\nE_F(n)              [ef]:   16.941 meV\nAt density           [n]:    0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_0.003"
+ },
+ "26nm|main|+0.0040": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": 0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -14.034 meV\nE_F(n=0)           [ef0]:   -0.754 meV\nE_F(n)              [ef]:   25.599 meV\nAt density           [n]:    0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_0.004"
+ },
+ "26nm|main|+0.0050": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": 0.005,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.724 meV\nE_F(n=0)           [ef0]:   -0.109 meV\nE_F(n)              [ef]:   33.630 meV\nAt density           [n]:    0.005 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_0.005"
+ },
+ "26nm|main|+0.0060": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": 0.006,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.356 meV\nE_F(n=0)           [ef0]:    0.505 meV\nE_F(n)              [ef]:   39.499 meV\nAt density           [n]:    0.006 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_0.006"
+ },
+ "26nm|main|+0.0070": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": 0.007,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.070 meV\nE_F(n=0)           [ef0]:    0.941 meV\nE_F(n)              [ef]:   41.810 meV\nAt density           [n]:    0.007 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_0.007"
+ },
+ "26nm|main|+0.0075": {
+  "sample": "26nm",
+  "run": "main",
+  "n_nm2": 0.0075,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -12.902 meV\nE_F(n=0)           [ef0]:    1.165 meV\nE_F(n)              [ef]:   42.945 meV\nAt density           [n]:   0.0075 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04/EP_21000_VBO_-620_eps_20.8/n_0.0075"
+ },
+ "26nm|kphi_105_165|-0.0010": {
+  "sample": "26nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -11.727 meV\nE_F(n=0)           [ef0]:   -0.126 meV\nE_F(n)              [ef]:   -0.534 meV\nAt density           [n]:   -0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.001"
+ },
+ "26nm|kphi_105_165|-0.0020": {
+  "sample": "26nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -11.014 meV\nE_F(n=0)           [ef0]:    0.184 meV\nE_F(n)              [ef]:   -0.607 meV\nAt density           [n]:   -0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.002"
+ },
+ "26nm|kphi_105_165|-0.0030": {
+  "sample": "26nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -10.358 meV\nE_F(n=0)           [ef0]:    0.480 meV\nE_F(n)              [ef]:   -0.646 meV\nAt density           [n]:   -0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.003"
+ },
+ "26nm|kphi_105_165|-0.0040": {
+  "sample": "26nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -9.750 meV\nE_F(n=0)           [ef0]:    0.762 meV\nE_F(n)              [ef]:   -0.483 meV\nAt density           [n]:   -0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.004"
+ },
+ "26nm|kphi_105_165|+0.0000": {
+  "sample": "26nm",
+  "run": "kphi_105_165",
+  "n_nm2": 0.0,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -12.497 meV\nE_F(n=0)           [ef0]:   -0.435 meV\nE_F(n)              [ef]:   -0.436 meV\nAt density           [n]:        0 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_0"
+ },
+ "26nm|kphi_105_165|+0.0010": {
+  "sample": "26nm",
+  "run": "kphi_105_165",
+  "n_nm2": 0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.293 meV\nE_F(n=0)           [ef0]:   -0.724 meV\nE_F(n)              [ef]:   -0.291 meV\nAt density           [n]:    0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_0.001"
+ },
+ "26nm|kphi_105_165|+0.0020": {
+  "sample": "26nm",
+  "run": "kphi_105_165",
+  "n_nm2": 0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.891 meV\nE_F(n=0)           [ef0]:   -0.706 meV\nE_F(n)              [ef]:    7.632 meV\nAt density           [n]:    0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_0.002"
+ },
+ "26nm|kphi_165_285|-0.0010": {
+  "sample": "26nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -11.727 meV\nE_F(n=0)           [ef0]:    1.329 meV\nE_F(n)              [ef]:    0.575 meV\nAt density           [n]:   -0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.001"
+ },
+ "26nm|kphi_165_285|-0.0020": {
+  "sample": "26nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -11.014 meV\nE_F(n=0)           [ef0]:    2.241 meV\nE_F(n)              [ef]:    0.832 meV\nAt density           [n]:   -0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.002"
+ },
+ "26nm|kphi_165_285|-0.0030": {
+  "sample": "26nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -10.358 meV\nE_F(n=0)           [ef0]:    3.082 meV\nE_F(n)              [ef]:    1.076 meV\nAt density           [n]:   -0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.003"
+ },
+ "26nm|kphi_165_285|-0.0040": {
+  "sample": "26nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -9.750 meV\nE_F(n=0)           [ef0]:    3.867 meV\nE_F(n)              [ef]:    1.314 meV\nAt density           [n]:   -0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.004"
+ },
+ "26nm|kphi_165_285|+0.0000": {
+  "sample": "26nm",
+  "run": "kphi_165_285",
+  "n_nm2": 0.0,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -12.497 meV\nE_F(n=0)           [ef0]:    0.350 meV\nE_F(n)              [ef]:    0.350 meV\nAt density           [n]:        0 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_0"
+ },
+ "26nm|kphi_165_285|+0.0010": {
+  "sample": "26nm",
+  "run": "kphi_165_285",
+  "n_nm2": 0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.293 meV\nE_F(n=0)           [ef0]:   -0.640 meV\nE_F(n)              [ef]:    0.157 meV\nAt density           [n]:    0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_0.001"
+ },
+ "26nm|kphi_165_285|+0.0020": {
+  "sample": "26nm",
+  "run": "kphi_165_285",
+  "n_nm2": 0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.891 meV\nE_F(n=0)           [ef0]:   -1.548 meV\nE_F(n)              [ef]:    7.706 meV\nAt density           [n]:    0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe26nm_FFT_04_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_0.002"
+ },
+ "70nm|main|-0.0010": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": -0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.149 meV\nE_F(n=0)           [ef0]:    3.953 meV\nE_F(n)              [ef]:    3.299 meV\nAt density           [n]:   -0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_-0.001"
+ },
+ "70nm|main|-0.0020": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": -0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -7.495 meV\nE_F(n=0)           [ef0]:    4.750 meV\nE_F(n)              [ef]:    3.287 meV\nAt density           [n]:   -0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_-0.002"
+ },
+ "70nm|main|-0.0030": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": -0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.925 meV\nE_F(n=0)           [ef0]:    5.451 meV\nE_F(n)              [ef]:    3.296 meV\nAt density           [n]:   -0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_-0.003"
+ },
+ "70nm|main|-0.0040": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": -0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.422 meV\nE_F(n=0)           [ef0]:    6.101 meV\nE_F(n)              [ef]:    3.334 meV\nAt density           [n]:   -0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_-0.004"
+ },
+ "70nm|main|+0.0000": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": 0.0,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.919 meV\nE_F(n=0)           [ef0]:    3.314 meV\nE_F(n)              [ef]:    3.314 meV\nAt density           [n]:        0 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_0"
+ },
+ "70nm|main|+0.0010": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": 0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -10.143 meV\nE_F(n=0)           [ef0]:    2.506 meV\nE_F(n)              [ef]:    3.216 meV\nAt density           [n]:    0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_0.001"
+ },
+ "70nm|main|+0.0020": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": 0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.832 meV\nE_F(n=0)           [ef0]:    4.008 meV\nE_F(n)              [ef]:    7.113 meV\nAt density           [n]:    0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_0.002"
+ },
+ "70nm|main|+0.0030": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": 0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.820 meV\nE_F(n=0)           [ef0]:    5.829 meV\nE_F(n)              [ef]:   13.356 meV\nAt density           [n]:    0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_0.003"
+ },
+ "70nm|main|+0.0040": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": 0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.628 meV\nE_F(n=0)           [ef0]:    5.759 meV\nE_F(n)              [ef]:   13.874 meV\nAt density           [n]:    0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_0.004"
+ },
+ "70nm|main|+0.0050": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": 0.005,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.291 meV\nE_F(n=0)           [ef0]:    5.985 meV\nE_F(n)              [ef]:   14.911 meV\nAt density           [n]:    0.005 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_0.005"
+ },
+ "70nm|main|+0.0060": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": 0.006,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -5.367 meV\nE_F(n=0)           [ef0]:    6.630 meV\nE_F(n)              [ef]:   16.027 meV\nAt density           [n]:    0.006 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_0.006"
+ },
+ "70nm|main|+0.0070": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": 0.007,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -5.104 meV\nE_F(n=0)           [ef0]:    6.792 meV\nE_F(n)              [ef]:   17.658 meV\nAt density           [n]:    0.007 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_0.007"
+ },
+ "70nm|main|+0.0080": {
+  "sample": "70nm",
+  "run": "main",
+  "n_nm2": 0.008,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -4.173 meV\nE_F(n=0)           [ef0]:    7.348 meV\nE_F(n)              [ef]:   19.263 meV\nAt density           [n]:    0.008 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_0.008"
+ },
+ "70nm|kphi_105_165|-0.0010": {
+  "sample": "70nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.149 meV\nE_F(n=0)           [ef0]:    3.268 meV\nE_F(n)              [ef]:    2.935 meV\nAt density           [n]:   -0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.001"
+ },
+ "70nm|kphi_105_165|-0.0020": {
+  "sample": "70nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -7.495 meV\nE_F(n=0)           [ef0]:    3.394 meV\nE_F(n)              [ef]:    2.868 meV\nAt density           [n]:   -0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.002"
+ },
+ "70nm|kphi_105_165|-0.0030": {
+  "sample": "70nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.925 meV\nE_F(n=0)           [ef0]:    3.508 meV\nE_F(n)              [ef]:    2.795 meV\nAt density           [n]:   -0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.003"
+ },
+ "70nm|kphi_105_165|-0.0040": {
+  "sample": "70nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.422 meV\nE_F(n=0)           [ef0]:    3.607 meV\nE_F(n)              [ef]:    2.760 meV\nAt density           [n]:   -0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.004"
+ },
+ "70nm|kphi_105_165|+0.0000": {
+  "sample": "70nm",
+  "run": "kphi_105_165",
+  "n_nm2": 0.0,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.919 meV\nE_F(n=0)           [ef0]:    3.145 meV\nE_F(n)              [ef]:    3.145 meV\nAt density           [n]:        0 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_0"
+ },
+ "70nm|kphi_105_165|+0.0010": {
+  "sample": "70nm",
+  "run": "kphi_105_165",
+  "n_nm2": 0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -10.143 meV\nE_F(n=0)           [ef0]:    2.925 meV\nE_F(n)              [ef]:    3.410 meV\nAt density           [n]:    0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_0.001"
+ },
+ "70nm|kphi_105_165|+0.0020": {
+  "sample": "70nm",
+  "run": "kphi_105_165",
+  "n_nm2": 0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.832 meV\nE_F(n=0)           [ef0]:    4.938 meV\nE_F(n)              [ef]:    7.026 meV\nAt density           [n]:    0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_0.002"
+ },
+ "70nm|kphi_165_285|-0.0010": {
+  "sample": "70nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.149 meV\nE_F(n=0)           [ef0]:    4.358 meV\nE_F(n)              [ef]:    3.651 meV\nAt density           [n]:   -0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.001"
+ },
+ "70nm|kphi_165_285|-0.0020": {
+  "sample": "70nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -7.495 meV\nE_F(n=0)           [ef0]:    5.141 meV\nE_F(n)              [ef]:    3.817 meV\nAt density           [n]:   -0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.002"
+ },
+ "70nm|kphi_165_285|-0.0030": {
+  "sample": "70nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.925 meV\nE_F(n=0)           [ef0]:    5.834 meV\nE_F(n)              [ef]:    3.960 meV\nAt density           [n]:   -0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.003"
+ },
+ "70nm|kphi_165_285|-0.0040": {
+  "sample": "70nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.422 meV\nE_F(n=0)           [ef0]:    6.482 meV\nE_F(n)              [ef]:    4.104 meV\nAt density           [n]:   -0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.004"
+ },
+ "70nm|kphi_165_285|+0.0000": {
+  "sample": "70nm",
+  "run": "kphi_165_285",
+  "n_nm2": 0.0,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.919 meV\nE_F(n=0)           [ef0]:    3.426 meV\nE_F(n)              [ef]:    3.426 meV\nAt density           [n]:        0 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_0"
+ },
+ "70nm|kphi_165_285|+0.0010": {
+  "sample": "70nm",
+  "run": "kphi_165_285",
+  "n_nm2": 0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -10.143 meV\nE_F(n=0)           [ef0]:    2.164 meV\nE_F(n)              [ef]:    3.008 meV\nAt density           [n]:    0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_0.001"
+ },
+ "70nm|kphi_165_285|+0.0020": {
+  "sample": "70nm",
+  "run": "kphi_165_285",
+  "n_nm2": 0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.832 meV\nE_F(n=0)           [ef0]:    3.091 meV\nE_F(n)              [ef]:    7.155 meV\nAt density           [n]:    0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe70nm_FFT_10_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_0.002"
+ },
+ "107nm|main|-0.0010": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": -0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -16.712 meV\nE_F(n=0)           [ef0]:   -3.856 meV\nE_F(n)              [ef]:   -4.729 meV\nAt density           [n]:   -0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_-0.001"
+ },
+ "107nm|main|-0.0020": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": -0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -7.218 meV\nE_F(n=0)           [ef0]:    5.745 meV\nE_F(n)              [ef]:    4.109 meV\nAt density           [n]:   -0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_-0.002"
+ },
+ "107nm|main|-0.0030": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": -0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.674 meV\nE_F(n=0)           [ef0]:    6.467 meV\nE_F(n)              [ef]:    4.148 meV\nAt density           [n]:   -0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_-0.003"
+ },
+ "107nm|main|-0.0040": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": -0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.226 meV\nE_F(n=0)           [ef0]:    7.082 meV\nE_F(n)              [ef]:    4.159 meV\nAt density           [n]:   -0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_-0.004"
+ },
+ "107nm|main|+0.0000": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": 0.0,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.904 meV\nE_F(n=0)           [ef0]:   -1.217 meV\nE_F(n)              [ef]:   -1.216 meV\nAt density           [n]:        0 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_0"
+ },
+ "107nm|main|+0.0010": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": 0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -11.110 meV\nE_F(n=0)           [ef0]:    1.800 meV\nE_F(n)              [ef]:    2.546 meV\nAt density           [n]:    0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_0.001"
+ },
+ "107nm|main|+0.0020": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": 0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.252 meV\nE_F(n=0)           [ef0]:    5.102 meV\nE_F(n)              [ef]:    9.991 meV\nAt density           [n]:    0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_0.002"
+ },
+ "107nm|main|+0.0030": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": 0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -1.562 meV\nE_F(n=0)           [ef0]:   11.316 meV\nE_F(n)              [ef]:   19.496 meV\nAt density           [n]:    0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_0.003"
+ },
+ "107nm|main|+0.0040": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": 0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:    4.088 meV\nE_F(n=0)           [ef0]:   16.805 meV\nE_F(n)              [ef]:   25.167 meV\nAt density           [n]:    0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_0.004"
+ },
+ "107nm|main|+0.0050": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": 0.005,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:    9.288 meV\nE_F(n=0)           [ef0]:   21.686 meV\nE_F(n)              [ef]:   30.874 meV\nAt density           [n]:    0.005 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_0.005"
+ },
+ "107nm|main|+0.0060": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": 0.006,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   14.356 meV\nE_F(n=0)           [ef0]:   26.612 meV\nE_F(n)              [ef]:   36.613 meV\nAt density           [n]:    0.006 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_0.006"
+ },
+ "107nm|main|+0.0070": {
+  "sample": "107nm",
+  "run": "main",
+  "n_nm2": 0.007,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   19.648 meV\nE_F(n=0)           [ef0]:   31.435 meV\nE_F(n)              [ef]:   41.713 meV\nAt density           [n]:    0.007 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_0.007"
+ },
+ "107nm|kphi_105_165|-0.0010": {
+  "sample": "107nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -16.645 meV\nE_F(n=0)           [ef0]:   -5.111 meV\nE_F(n)              [ef]:   -5.483 meV\nAt density           [n]:   -0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.001"
+ },
+ "107nm|kphi_105_165|-0.0020": {
+  "sample": "107nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -7.218 meV\nE_F(n=0)           [ef0]:    3.897 meV\nE_F(n)              [ef]:    3.197 meV\nAt density           [n]:   -0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.002"
+ },
+ "107nm|kphi_105_165|-0.0030": {
+  "sample": "107nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.674 meV\nE_F(n=0)           [ef0]:    4.060 meV\nE_F(n)              [ef]:    3.217 meV\nAt density           [n]:   -0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.003"
+ },
+ "107nm|kphi_105_165|-0.0040": {
+  "sample": "107nm",
+  "run": "kphi_105_165",
+  "n_nm2": -0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.226 meV\nE_F(n=0)           [ef0]:    4.162 meV\nE_F(n)              [ef]:    3.427 meV\nAt density           [n]:   -0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_-0.004"
+ },
+ "107nm|kphi_105_165|+0.0000": {
+  "sample": "107nm",
+  "run": "kphi_105_165",
+  "n_nm2": 0.0,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.838 meV\nE_F(n=0)           [ef0]:   -1.792 meV\nE_F(n)              [ef]:   -1.792 meV\nAt density           [n]:        0 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_0"
+ },
+ "107nm|kphi_105_165|+0.0010": {
+  "sample": "107nm",
+  "run": "kphi_105_165",
+  "n_nm2": 0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -11.044 meV\nE_F(n=0)           [ef0]:    1.643 meV\nE_F(n)              [ef]:    2.092 meV\nAt density           [n]:    0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_0.001"
+ },
+ "107nm|kphi_105_165|+0.0020": {
+  "sample": "107nm",
+  "run": "kphi_105_165",
+  "n_nm2": 0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.185 meV\nE_F(n=0)           [ef0]:    5.463 meV\nE_F(n)              [ef]:    9.951 meV\nAt density           [n]:    0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_105/n_0.002"
+ },
+ "107nm|kphi_165_285|-0.0010": {
+  "sample": "107nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -16.645 meV\nE_F(n=0)           [ef0]:   -3.406 meV\nE_F(n)              [ef]:   -4.090 meV\nAt density           [n]:   -0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.001"
+ },
+ "107nm|kphi_165_285|-0.0020": {
+  "sample": "107nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -7.218 meV\nE_F(n=0)           [ef0]:    6.185 meV\nE_F(n)              [ef]:    4.890 meV\nAt density           [n]:   -0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.002"
+ },
+ "107nm|kphi_165_285|-0.0030": {
+  "sample": "107nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.003,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.674 meV\nE_F(n=0)           [ef0]:    6.897 meV\nE_F(n)              [ef]:    5.049 meV\nAt density           [n]:   -0.003 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.003"
+ },
+ "107nm|kphi_165_285|-0.0040": {
+  "sample": "107nm",
+  "run": "kphi_165_285",
+  "n_nm2": -0.004,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -6.226 meV\nE_F(n=0)           [ef0]:    7.505 meV\nE_F(n)              [ef]:    5.138 meV\nAt density           [n]:   -0.004 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_-0.004"
+ },
+ "107nm|kphi_165_285|+0.0000": {
+  "sample": "107nm",
+  "run": "kphi_165_285",
+  "n_nm2": 0.0,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -13.838 meV\nE_F(n=0)           [ef0]:   -0.761 meV\nE_F(n)              [ef]:   -0.761 meV\nAt density           [n]:        0 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_0"
+ },
+ "107nm|kphi_165_285|+0.0010": {
+  "sample": "107nm",
+  "run": "kphi_165_285",
+  "n_nm2": 0.001,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:  -11.044 meV\nE_F(n=0)           [ef0]:    1.902 meV\nE_F(n)              [ef]:    2.718 meV\nAt density           [n]:    0.001 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_0.001"
+ },
+ "107nm|kphi_165_285|+0.0020": {
+  "sample": "107nm",
+  "run": "kphi_165_285",
+  "n_nm2": 0.002,
+  "kpout": "Special energy values:\nE_CNP (k=0)         [e0]:   -8.185 meV\nE_F(n=0)           [ef0]:    4.786 meV\nE_F(n)              [ef]:   10.063 meV\nAt density           [n]:    0.002 nm^-2\n",
+  "archive_folder": "FigureS3/calculations/HgTe107nm_FFT_03_phi/EP_21000_VBO_-620_eps_20.8/varphi_165/n_0.002"
+ }
+}

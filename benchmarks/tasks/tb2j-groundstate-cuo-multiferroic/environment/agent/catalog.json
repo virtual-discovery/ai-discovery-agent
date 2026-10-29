@@ -1,0 +1,190 @@
+{
+ "material": "CuO (tenorite), monoclinic C2/c, 4 Cu per conventional cell. Released calculations of Tellez-Mora, He, Bousquet, Wirtz and Romero (2024): SIESTA DFT+U (U = 7.14 eV on Cu 3d), exchange from the magnetic force theorem (Green-function method) with TB2J 0.7.4.5.",
+ "exchange_convention": "Archived TB2J convention: E = -sum_{i != j} J_ij e_i.e_j over ordered pairs (each bond appears twice, as (i,j,R) and (j,i,-R)), e_i unit vectors along the local moments, J > 0 ferromagnetic, meV. R is in lattice vectors of the calculation's own cell; vector = r_j + R.cell - r_i in Angstrom.",
+ "isotropic_only": "Only isotropic exchange is served: the archive README states that only the isotropic exchange constants are valid.",
+ "conventional_cell": {
+  "cell_A": [
+   [
+    4.979,
+    -0.0,
+    -0.168
+   ],
+   [
+    -0.0,
+    3.2,
+    -0.0
+   ],
+   [
+    -1.061,
+    -0.0,
+    5.066
+   ]
+  ],
+  "atoms": [
+   {
+    "name": "Cu1",
+    "position_A": [
+     1.2448,
+     0.8,
+     -0.0419
+    ]
+   },
+   {
+    "name": "Cu2",
+    "position_A": [
+     3.7343,
+     2.4,
+     -0.1258
+    ]
+   },
+   {
+    "name": "Cu3",
+    "position_A": [
+     3.2041,
+     0.8,
+     2.4071
+    ]
+   },
+   {
+    "name": "Cu4",
+    "position_A": [
+     0.7145,
+     2.4,
+     2.4909
+    ]
+   },
+   {
+    "name": "O1",
+    "position_A": [
+     -0.2651,
+     1.1582,
+     1.2665
+    ]
+   },
+   {
+    "name": "O2",
+    "position_A": [
+     2.2244,
+     2.7582,
+     1.1826
+    ]
+   },
+   {
+    "name": "O3",
+    "position_A": [
+     -0.7954,
+     2.0419,
+     3.7993
+    ]
+   },
+   {
+    "name": "O4",
+    "position_A": [
+     1.6942,
+     0.4419,
+     3.7154
+    ]
+   }
+  ],
+  "note": "Cell and Cartesian frame of the FM-reference calculations. Wave vectors in this task are in reciprocal-lattice units of this cell."
+ },
+ "calculations": {
+  "FM/ligand": "FM reference, spin-ligand correction on",
+  "AFM/ligand": "AFM reference, spin-ligand correction on",
+  "FM/no_ligand": "FM reference, spin-ligand correction off",
+  "AFM/no_ligand": "AFM reference, spin-ligand correction off"
+ },
+ "calculation_notes": "Each calculation was done in its own cell and magnetic configuration; the cell, atoms, charges and moments of a calculation are returned with every exchange purchase from it. \"Spin-ligand correction\" is TB2J's correction for the ligand (O) spin polarisation.",
+ "requests": {
+  "exchange": {
+   "example": {
+    "kind": "exchange",
+    "calculation": "FM/ligand",
+    "window": "0-4"
+   },
+   "windows_A": {
+    "0-4": {
+     "distance_range_A": [
+      0,
+      4
+     ],
+     "cost": 1
+    },
+    "4-6": {
+     "distance_range_A": [
+      4,
+      6
+     ],
+     "cost": 1
+    },
+    "6-8": {
+     "distance_range_A": [
+      6,
+      8
+     ],
+     "cost": 1
+    },
+    "8-10": {
+     "distance_range_A": [
+      8,
+      10
+     ],
+     "cost": 1
+    },
+    "10-12": {
+     "distance_range_A": [
+      10,
+      12
+     ],
+     "cost": 1
+    },
+    "12-14": {
+     "distance_range_A": [
+      12,
+      14
+     ],
+     "cost": 1
+    },
+    "14-17": {
+     "distance_range_A": [
+      14,
+      17
+     ],
+     "cost": 2
+    },
+    "17-20": {
+     "distance_range_A": [
+      17,
+      20
+     ],
+     "cost": 2
+    },
+    "20-25": {
+     "distance_range_A": [
+      20,
+      25
+     ],
+     "cost": 3
+    },
+    "25-33": {
+     "distance_range_A": [
+      25,
+      33
+     ],
+     "cost": 3
+    }
+   },
+   "returns": "all isotropic pairs of that calculation with lo <= distance < hi, as rows [i, j, Rx, Ry, Rz, J_iso_meV, dx_A, dy_A, dz_A, distance_A], plus the calculation metadata (TB2J header lines, cell, atoms with charges and moments)."
+  },
+  "author_dispersion": {
+   "example": {
+    "kind": "author_dispersion",
+    "calculation": "AFM/ligand"
+   },
+   "cost": 1,
+   "returns": "the archived file of eigenvalues of the paper's bosonic matrix h(k) (Eq. 9) for that calculation's reference configuration, 300 k-points along the path named in its header line. The k-point coordinates and units are not archived."
+  }
+ },
+ "budget": 24,
+ "catalog_value": 68
+}

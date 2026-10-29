@@ -1,0 +1,116 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 8,
+  "task_mb": 3.59,
+  "hidden_values": 18,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 44,
+   "budget": 50,
+   "evaluations": 18,
+   "failed_evaluations": 0,
+   "container_seconds": 6
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "W4_same_sign_series",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "shear_offdiag_sign_not_flipped",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "W3_swap_from_e1",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "linear_piezomobility_from_1pct",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "W1_precrossing_extrapolation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "best_mu_zz_from_serta",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "best_inplane_diagonal_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "best_inplane_label_as_voigt",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "flagged_runs_replaced_by_scaled_serta",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "W3_linear_extrapolation_of_e2_series",
+    "passes_grading": true
+   },
+   {
+    "name": "W3_anisotropy_ratio_extrapolation",
+    "passes_grading": true
+   },
+   {
+    "name": "W5_linear_extrapolation_of_compress_e6_series",
+    "passes_grading": true
+   },
+   {
+    "name": "W1_lower_bound_saturated_at_2pct",
+    "passes_grading": true
+   },
+   {
+    "name": "W1_upper_bound_linear_1_to_2pct",
+    "passes_grading": true
+   },
+   {
+    "name": "W2_flat_from_expand_1pct",
+    "passes_grading": true
+   },
+   {
+    "name": "best_inplane_from_expand_2pct_e6",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T17:55:12Z"
+}

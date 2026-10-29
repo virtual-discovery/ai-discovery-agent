@@ -1,0 +1,60 @@
+&CONTROL
+  calculation = 'bands'
+  max_seconds = 7200
+  outdir = './out/'
+  prefix = 'InMnTi2'
+  pseudo_dir = './pseudo/'
+  restart_mode = 'from_scratch'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   2.0000000000d-02
+  ecutrho = 600
+  ecutwfc = 150
+  ibrav = 0
+  lspinorb = .true.
+  nat = 4
+  noncolin = .true.
+  nosym = .true.
+  nbnd = 90
+  ntyp = 3
+  occupations = 'smearing'
+  smearing = 'gauss'
+
+  lda_plus_u = .true.
+  lda_plus_u_kind = 0
+  Hubbard_U(2) = 2.4517
+  Hubbard_U(3) = 2.2744
+  starting_magnetization(1) = 1
+  starting_magnetization(2) = -1
+  starting_magnetization(3) = 1E-3
+/
+&ELECTRONS
+  conv_thr =   4.0000000000d-10
+/
+ATOMIC_SPECIES
+In     114.82 In-d_upf_r.oncvpsp.upf
+Mn     54.938 Mn-sp-high_upf_r.oncvpsp.upf
+Ti     47.88 Ti-sp_upf_r.oncvpsp.upf
+ATOMIC_POSITIONS angstrom
+Ti           0.0000000000       0.0000000000       0.0000000000 
+Ti           1.5667960355       1.5667960355       4.7003881065 
+Mn           3.1335920710       0.0000000000       0.0000000000 
+In           1.5667960355       1.5667960355       1.5667960355 
+
+K_POINTS tpiba_b
+  6
+   0.265862  0.590936 -0.012158  460
+   0.590936  0.265862  0.012158    1
+   0.449613  0.265763  0.006876  199
+   0.591035  0.407185  0.006876    1
+   0.524059  0.332739 -0.092984  199
+   0.516589  0.340209  0.106736    1
+
+CELL_PARAMETERS angstrom
+      0.0000000000       3.1335920710       3.1335920710
+      3.1335920710       0.0000000000       3.1335920710
+      3.1335920710       3.1335920710       0.0000000000
+

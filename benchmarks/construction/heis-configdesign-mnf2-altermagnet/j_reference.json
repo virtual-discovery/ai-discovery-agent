@@ -1,0 +1,80 @@
+{
+ "J_meV": [
+  -1.1255647479048658,
+  -2.9826411660054886,
+  -0.027173387277945295,
+  -0.05154160699452325,
+  -0.00023416566624291543,
+  0.03128149157317467,
+  -0.059944534538129805,
+  0.0424541883705309,
+  -0.0005572122350286967,
+  0.0007841436032658777
+ ],
+ "intercept_meV_per_cell": -0.06740873282207412,
+ "n_points": 98,
+ "rmse_meV_per_cell": 0.08281463732879708,
+ "shells": [
+  {
+   "distance_A": 3.3616,
+   "kind": "same",
+   "count": 2,
+   "altermagnetic_split": false
+  },
+  {
+   "distance_A": 3.886,
+   "kind": "inter",
+   "count": 8,
+   "altermagnetic_split": false
+  },
+  {
+   "distance_A": 4.9549,
+   "kind": "same",
+   "count": 4,
+   "altermagnetic_split": false
+  },
+  {
+   "distance_A": 5.9876,
+   "kind": "same",
+   "count": 8,
+   "altermagnetic_split": false
+  },
+  {
+   "distance_A": 6.1401,
+   "kind": "inter",
+   "count": 8,
+   "altermagnetic_split": false
+  },
+  {
+   "distance_A": 6.7231,
+   "kind": "same",
+   "count": 2,
+   "altermagnetic_split": false
+  },
+  {
+   "distance_A": 7.0074,
+   "kind": "same",
+   "count": 4,
+   "altermagnetic_split": true
+  },
+  {
+   "distance_A": 7.7719,
+   "kind": "same",
+   "count": 8,
+   "altermagnetic_split": true
+  },
+  {
+   "distance_A": 8.0127,
+   "kind": "inter",
+   "count": 16,
+   "altermagnetic_split": false
+  },
+  {
+   "distance_A": 8.3518,
+   "kind": "same",
+   "count": 8,
+   "altermagnetic_split": false
+  }
+ ],
+ "mean_field_TN_K": 164.54010386120012
+}

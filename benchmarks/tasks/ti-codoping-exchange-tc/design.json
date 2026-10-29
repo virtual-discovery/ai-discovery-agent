@@ -1,0 +1,304 @@
+{
+ "task_id": "ti-codoping-exchange-tc",
+ "catalog_id": "ti-codoping-exchange-tc",
+ "start": "released",
+ "source_group": "mozumder_2024_ti_codoping",
+ "title": "Co-doped Bi2Te3: dilute impurity exchange and ordering temperatures",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "estimator / competing explanation (mean-field vs percolation-limited order)",
+   "fork": "How to turn the archived impurity exchange into an ordering temperature at 5% + 5% doping",
+   "wrong_choice": "Mean field: the two-sublattice estimate k_B T = (1/3) lambda_max(c_b J0_ab), or the authors' averaged (T_AA + T_BB + T_AB)/3 times the concentration",
+   "consequence": "T_C three- to eightfold too high (two-sublattice MF 60-82 K and authors' rule 22-39 K against 11-20 K for the ordered compositions; 33 K or 16 K for V2Cr2, which does not order above 0.8 K); Nb ranked best",
+   "ablation": "mean_field_two_sublattice"
+  },
+  {
+   "id": "dp2",
+   "kind": "disorder averaging (the scatter is visible only across random placements)",
+   "fork": "How many random dopant placements to average before comparing sizes",
+   "wrong_choice": "One random placement per supercell size (a single disorder realization), as in a clean-crystal finite-size analysis",
+   "consequence": "Sample-to-sample scatter dominates: for single placements the L = 3/4 crossing is missing or off by > 20% in 72% (V5Cr5) and 34% (Cr5Mo5, Cr5Mn5) of cases; the first placements give 14.9 K for V5Cr5 (+39%) and no crossing for Cr5Mn5",
+   "ablation": "single_placement_per_size"
+  },
+  {
+   "id": "dp3",
+   "kind": "competing explanations (cross-species coupling strength vs frustration); discriminating calculation under budget",
+   "fork": "Which co-dopant raises the Curie temperature of Cr most",
+   "wrong_choice": "Rank by the largest cross-coupling / mean-field T_C (Nb: J0(Cr-Nb) = 257 meV, MF 97 K), as the paper's mean-field analysis suggests, without simulating each candidate",
+   "consequence": "Nb chosen; its antiferromagnetic Nb-Nb shells (6.10 and 7.51 A) frustrate the network, so Cr5Nb5 has at most weak, sample-dependent order (all estimates <= ~16 K), while Cr5Mo5 orders at ~20 K (Mo's 6.49 A antiferromagnetic shell has only 3 neighbours)",
+   "ablation": "codopant_by_mean_field"
+  },
+  {
+   "id": "dp4",
+   "kind": "regime judgement (dilution below the percolation of strong couplings)",
+   "fork": "What happens at 2% + 2% V/Cr",
+   "wrong_choice": "Scale T_C with concentration from 5% + 5% (or mean field, 33 K)",
+   "consequence": "A finite T_C of ~4 K is reported; the network of couplings strong enough to order above 2 K does not percolate (scaled m^2 falls with size down to 0.8 K)",
+   "ablation": "linear_in_concentration"
+  },
+  {
+   "id": "dp5",
+   "kind": "evidence discovered in the purchased rows (missing calculations; collapsed run)",
+   "fork": "What to do with the Co-Co dimers, absent from the archive within 7.8 A (the 9.99 A run lost its moment)",
+   "wrong_choice": "Fill the missing Co-Co couplings with zeros (the authors' mean-field sums implicitly do this) and report a number",
+   "consequence": "A fabricated T_C for Cr5Co5; the data do not determine it (null)",
+   "ablation": "zero_filled_coco"
+  },
+  {
+   "id": "dp6",
+   "kind": "convergence under a binding budget (exchange range)",
+   "fork": "Whether the far shells (7-16, 8.8-12.2 A, a separate purchase per pair) are needed",
+   "wrong_choice": "Buy only shells 0-6 (the strong couplings) to save budget",
+   "consequence": "T_C of the frustrated compositions shifts beyond the tolerance (see calibration: near_shells_only)",
+   "ablation": "near_shells_only"
+  },
+  {
+   "id": "dp7",
+   "kind": "archive defect discovered in the rows (mislabelled column); competing explanation (moment collapse)",
+   "fork": "How to read the dimer moments m1/m2",
+   "wrong_choice": "Take m2 ~ 0.01 muB (shells 1-16) as collapse of impurity 2's moment in the dimer and drop that species (Mn, Mo in the Cr-X rows) from the spin model",
+   "consequence": "Cr5X5 reduces to Cr 5% alone (T_C ~3 K); m2 is impurity 2's moment only in the shell-0 cluster, the same species keeps its full moment as impurity 1 in its own rows",
+   "ablation": "dimer_moment_collapse"
+  }
+ ],
+ "graded_fields": [
+  "curie_temperature_K[V5Cr5], [Cr5Mo5], [Cr5Mn5] within 20% of the reference Monte Carlo T_C",
+  "curie_temperature_K[V2Cr2] <= 2 K (no order above 2 K; 0 expected)",
+  "curie_temperature_K[Cr5Co5] must be null",
+  "best_codopant_for_Cr exact (Mo)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 34,
+  "oracle_charge": 54,
+  "budget": 60,
+  "catalog_size": "276 pair windows (210 + 66 units) plus unlimited Monte Carlo",
+  "oracle_container_seconds": 1133,
+  "tool_calls": "50-80",
+  "wall_time_h": "1.5-3 (Monte Carlo jobs of 0.5-3 min each)",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (sonnet, terra)",
+  "harbor_oracle_wall_minutes": 28.6
+ },
+ "runtime_dependencies": [
+  "numpy/scipy (runtime image); the lab compiles its Monte Carlo kernel (mc_dilute.c, ~200 lines of C) with the image's gcc at build time; no extra packages"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/6txnj-70460",
+  "doi": "10.24435/materialscloud:b7-6k",
+  "files_used": [
+   "Jij_table.csv",
+   "Bi2Te3.cif",
+   "Tcs_Bi2Te3.txt (validation only)",
+   "data_analysis_Bi2Te3.ipynb (validation only)"
+  ],
+  "md5": {
+   "Jij_table.csv": "e73c49c9da7b0653f2de3e0e4466eaa4",
+   "Bi2Te3.cif": "f714130613532a4063571c361bc6dc46",
+   "Tcs_Bi2Te3.txt": "1c8a734b01a5b6c2aa18e95a0e2ddc49",
+   "data_analysis_Bi2Te3.ipynb": "690b41fab7da399fd6828b77b36e327a"
+  },
+  "license": "CC BY 4.0",
+  "staged": "all 2077 archived exchange rows (served per pair and shell window), CIF lines; the authors' mean-field Tc matrix and notebook are not staged"
+ },
+ "exceptions": {},
+ "notes": "Hidden values are consequences of the archived Hamiltonian (Monte Carlo with the lab's own code path on larger cells and more disorder samples), not archived numbers; the paper reports only mean-field estimates and leaves Monte Carlo to future work. T_C is graded because the exchange set and the estimator (thermodynamic-limit order of the stated classical model) are fixed; across sizes L = 3-6 the scaled-magnetization crossings agree to within 6-8%.",
+ "calibration": {
+  "curie_temperature_K[V5Cr5]": {
+   "reference_mean_scaled_crossing_L4L5_L5L6": 10.705,
+   "reference_details": {
+    "scaled": {
+     "3/4": 11.35,
+     "4/5": 10.656,
+     "5/6": 10.754
+    },
+    "binder": {
+     "3/4": 9.809,
+     "4/5": null,
+     "5/6": 11.365
+    },
+    "jackknife_err_scaled": {
+     "3/4": 0.89,
+     "4/5": 1.169,
+     "5/6": 1.092
+    }
+   },
+   "robustness": {
+    "scaled_m2_crossing_L3_L4": 11.35,
+    "scaled_m2_crossing_L5_L6": 10.754,
+    "binder_crossing_L3_L4": 9.809,
+    "binder_crossing_L5_L6": 11.365
+   },
+   "ablations": {
+    "mean_field_two_sublattice": 81.798,
+    "authors_averaged_mean_field": 39.225,
+    "single_placement_per_size": 14.889,
+    "near_shells_only": 0.0
+   },
+   "tolerance": "within 20% (8.56-12.85 K)",
+   "reference_oracle": 12.164804414747666
+  },
+  "curie_temperature_K[Cr5Mo5]": {
+   "reference_mean_scaled_crossing_L4L5_L5L6": 19.792,
+   "reference_details": {
+    "scaled": {
+     "3/4": 18.618,
+     "4/5": 20.004,
+     "5/6": 19.579
+    },
+    "binder": {
+     "3/4": 18.275,
+     "4/5": 20.425,
+     "5/6": 17.372
+    },
+    "jackknife_err_scaled": {
+     "3/4": 0.577,
+     "4/5": 0.684,
+     "5/6": 0.814
+    }
+   },
+   "robustness": {
+    "scaled_m2_crossing_L3_L4": 18.618,
+    "scaled_m2_crossing_L5_L6": 19.579,
+    "binder_crossing_L3_L4": 18.275,
+    "binder_crossing_L5_L6": 17.372
+   },
+   "ablations": {
+    "mean_field_two_sublattice": 76.722,
+    "authors_averaged_mean_field": 33.972,
+    "single_placement_per_size": 17.647,
+    "near_shells_only": 0.0,
+    "dimer_moment_collapse": 5.349
+   },
+   "tolerance": "within 20% (15.83-23.75 K)",
+   "reference_oracle": 21.682397975931405
+  },
+  "curie_temperature_K[Cr5Mn5]": {
+   "reference_mean_scaled_crossing_L4L5_L5L6": 10.843,
+   "reference_details": {
+    "scaled": {
+     "3/4": 10.283,
+     "4/5": 10.679,
+     "5/6": 11.007
+    },
+    "binder": {
+     "3/4": 9.891,
+     "4/5": 10.155,
+     "5/6": 11.96
+    },
+    "jackknife_err_scaled": {
+     "3/4": 0.414,
+     "4/5": 0.668,
+     "5/6": 0.435
+    }
+   },
+   "robustness": {
+    "scaled_m2_crossing_L3_L4": 10.283,
+    "scaled_m2_crossing_L5_L6": 11.007,
+    "binder_crossing_L3_L4": 9.891,
+    "binder_crossing_L5_L6": 11.96
+   },
+   "ablations": {
+    "mean_field_two_sublattice": 60.214,
+    "authors_averaged_mean_field": 22.322,
+    "single_placement_per_size": 0.0,
+    "dimer_moment_collapse": 5.349
+   },
+   "tolerance": "within 20% (8.67-13.01 K)",
+   "reference_oracle": 11.545510950345463
+  },
+  "curie_temperature_K[V2Cr2]": {
+   "reference": "no order above 0.8 K (scaled <m^2> falls with size at every T for L = 3/4/5; Binder ratio ~1.6)",
+   "evidence": {
+    "3/4": {
+     "falls_with_size_at_all_T": true,
+     "ratio_at_lowest_T": 0.718871817898149,
+     "lowest_T": 0.8,
+     "binder_L_large_at_lowest_T": 1.6313727902218873
+    },
+    "4/5": {
+     "falls_with_size_at_all_T": true,
+     "ratio_at_lowest_T": 0.653183899180262,
+     "lowest_T": 0.8,
+     "binder_L_large_at_lowest_T": 1.6511679537756745
+    }
+   },
+   "ablations": {
+    "mean_field_two_sublattice": 32.719,
+    "authors_averaged_mean_field": 15.69,
+    "linear_in_concentration": 4.282
+   },
+   "robustness": {
+    "V2Cr2_binder_noise_crossing": 2.036
+   },
+   "tolerance": "<= 3.0 K (0 = no order above 2 K; 1 K allowance for noise-level Binder crossings)",
+   "reference_oracle": 0.0
+  },
+  "curie_temperature_K[Cr5Co5]": {
+   "reference": null,
+   "ablations": {
+    "zero_filled_coco": 0.0,
+    "mean_field_two_sublattice": 50.607
+   },
+   "tolerance": "must be null",
+   "reference_oracle": null
+  },
+  "not_an_ablation_single_cell_susceptibility_peak_L3": {
+   "V5Cr5": 11.369,
+   "Cr5Mo5": 22.283,
+   "Cr5Mn5": 11.824
+  },
+  "ablation_notes": {
+   "near_shells_only": "shells 0-6 only: no order in the probed ranges (scaled <m^2> falls with size at every T, Binder ratio ~1.65 down to 6 K for V5Cr5 and 10 K for Cr5Mo5), recorded as 0",
+   "zero_filled_coco": "missing Co-Co set to 0: no order above 2 K (scaled <m^2> falls with size); any number fails the null check",
+   "dimer_moment_collapse": "Mn/Mo dropped from the spin model: Cr 5% alone, reference T_C (L = 4/5 scaled crossing)",
+   "single_placement_per_size": "first random placement of the L = 3 and L = 4 reference sets only; 0 = no crossing"
+  },
+  "best_codopant_for_Cr": {
+   "reference": "Mo",
+   "monte_carlo_T_C_K": {
+    "V": 10.705,
+    "Nb": 12.013,
+    "Mo": 19.792,
+    "Mn": 10.843
+   },
+   "Nb_note": "Nb value is the largest crossing + jackknife error over two independent reference sets (upper bound); Cr5Nb5 is not graded as a number",
+   "Cr5Nb5_reference_sets": {
+    "Cr5Nb5": {
+     "scaled": {
+      "3/4": null,
+      "4/5": null
+     },
+     "binder": {
+      "3/4": 1.143,
+      "4/5": null
+     }
+    },
+    "Cr5Nb5_slow": {
+     "scaled": {
+      "3/4": 10.554,
+      "4/5": 7.728
+     },
+     "binder": {
+      "3/4": 13.628,
+      "4/5": 3.517
+     }
+    }
+   },
+   "ranking_by_mean_field": [
+    "Nb",
+    "V",
+    "Mo",
+    "Mn"
+   ],
+   "mean_field_K": {
+    "V": 81.798,
+    "Nb": 96.58,
+    "Mo": 76.722,
+    "Mn": 60.214
+   },
+   "tolerance": "exact",
+   "reference_oracle": "Mo"
+  }
+ }
+}

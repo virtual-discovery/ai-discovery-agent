@@ -1,0 +1,35 @@
+! NSCF on the COARSE k-grid for epsilon/sigma/kernel (uniform, Gamma-included, no symmetry reduction: BerkeleyGW needs the full grid).
+! Band count: epsilon/sigma need ~10x the occupied count for a 8-atom cell (round 8: 440 bands for 132 occupied spinor bands); converge in S3.
+&CONTROL
+  calculation = 'nscf'
+  prefix = '<prefix>'
+  outdir = './out'
+  pseudo_dir = '<pseudo_dir_sr>'
+  verbosity = 'high'
+/
+&SYSTEM
+  ibrav = 0
+  nat = <nat>
+  ntyp = <ntyp>
+  ecutwfc = <ecut>
+  ecutrho = <4*ecut>
+  occupations = 'fixed'
+  nbnd = <nbands_gw>
+  nosym = .true.
+  noinv = .true.
+/
+&ELECTRONS
+  conv_thr = 1.0d-10
+  diagonalization = 'david'
+  diago_full_acc = .true.
+  electron_maxstep = 200
+/
+ATOMIC_SPECIES
+<as scf.in>
+CELL_PARAMETERS angstrom
+<as scf.in>
+ATOMIC_POSITIONS crystal
+<as scf.in>
+K_POINTS crystal
+<N>
+<explicit uniform grid k1 x k2 x k3 with weights 1.0; generate with kgrid.x (BerkeleyGW) so WFN and WFNq share the same list>

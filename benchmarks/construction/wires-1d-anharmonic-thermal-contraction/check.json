@@ -1,0 +1,148 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 10,
+  "rubric_items": 7,
+  "task_mb": 6.59,
+  "hidden_values": 7,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 28,
+   "budget": 36,
+   "evaluations": 28,
+   "failed_evaluations": 0,
+   "container_seconds": 6
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "gamma_rotation_mode_counted_as_instability",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "stability_from_auxiliary_frequencies",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "heat_capacity_from_hessian_frequencies",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "stress_read_as_tension_positive",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "ab_initio_average_stress",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "plain_asr_long_wavelength_stiffness",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "finite_strain_secant_stiffness",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "stiffness_from_E_equals_k_eps2",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "supercell_volume_with_cell_stiffness",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "derivative_term_with_plus_sign",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "harmonic_cv_with_sscha_frequencies",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "harmonic_cv_with_dfpt_frequencies",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "first_released_unstable_temperature",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "stiffness_q_0.05",
+    "passes_grading": true
+   },
+   {
+    "name": "stiffness_from_T0_sscha_hessian_global_cubic_stress",
+    "passes_grading": true
+   },
+   {
+    "name": "stress_quadratic_100_500",
+    "passes_grading": true
+   },
+   {
+    "name": "cv_cubic_fits",
+    "passes_grading": true
+   },
+   {
+    "name": "cv_linear_200_500",
+    "passes_grading": true
+   },
+   {
+    "name": "cv_all_converged_cubic",
+    "passes_grading": true
+   },
+   {
+    "name": "instability_600_800_100k",
+    "passes_grading": true
+   },
+   {
+    "name": "instability_quadratic_fit_500_1000",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T13:21:44Z"
+}

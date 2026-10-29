@@ -1,0 +1,81 @@
+{
+ "task_id": "fresh-inp-polar-phonons",
+ "solver_budget": 40,
+ "reserved_validation_charge": 0,
+ "system": "zincblende InP, two-atom primitive cell: In at (0,0,0), P at (1/4,1/4,1/4) (crystal coordinates); PBE; SSSP 1.3 precision ultrasoft pseudopotentials In.pbe-dn-rrkjus_psl.0.2.2.UPF (4d in valence) and P.pbe-n-rrkjus_psl.1.0.0.UPF; fixed occupations; Quantum ESPRESSO 6.7 on 2 cores",
+ "request": {
+  "kind": "scf | dielectric | dfpt",
+  "lattice_A": "cubic lattice parameter in Angstrom",
+  "strain_zz": "optional, default 0",
+  "kmesh": "n of an n x n x n Monkhorst-Pack mesh",
+  "kshift": "0 Gamma-centred, 1 offset by half a step",
+  "ecutwfc_Ry": "optional, 50 (default) or 65; ecutrho = 8 x ecutwfc"
+ },
+ "limits": {
+  "lattice_A": [
+   5.7,
+   6.1
+  ],
+  "strain_zz": [
+   -0.03,
+   0.03
+  ],
+  "ecutwfc_Ry": [
+   50,
+   65
+  ],
+  "max_kmesh_at_ecut65": {
+   "dielectric": 6,
+   "dfpt": 4
+  }
+ },
+ "costs": {
+  "scf": {
+   "cubic": {
+    "4": 1,
+    "6": 1,
+    "8": 1,
+    "10": 2,
+    "12": 2
+   },
+   "strained": {
+    "4": 1,
+    "6": 1,
+    "8": 1,
+    "10": 2,
+    "12": 2
+   }
+  },
+  "dielectric": {
+   "cubic": {
+    "4": 1,
+    "6": 2,
+    "8": 4,
+    "10": 7
+   },
+   "strained": {
+    "4": 3,
+    "6": 5
+   }
+  },
+  "dfpt": {
+   "cubic": {
+    "4": 2,
+    "6": 4
+   },
+   "strained": {
+    "4": 4,
+    "6": 8
+   }
+  }
+ },
+ "cost_notes": "Units per request; a cell is 'strained' when strain_zz != 0. ecutwfc_Ry = 65 doubles the cost and is available for scf, for dielectric up to kmesh 6 and for dfpt up to kmesh 4 (cubic cells only). Failed jobs stay charged.",
+ "result_units": {
+  "total_energy": "Ry and eV per cell",
+  "pressure_and_stress": "GPa (positive = compressive)",
+  "band_energies": "eV",
+  "force_constants_gamma_Ry_per_bohr2": "6x6 real matrix, rows/columns In x,y,z then P x,y,z",
+  "born_charges_raw": "units of e, [field direction][force direction]",
+  "frequencies": "cm^-1"
+ }
+}

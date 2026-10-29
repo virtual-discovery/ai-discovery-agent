@@ -1,0 +1,245 @@
+{
+ "task_id": "fluorite-superionic-finite-size",
+ "catalog_id": "fluorite-superionic-finite-size",
+ "start": "released",
+ "source_group": "grasselli_2022_superionic_finite_size",
+ "title": "Fluorite superionics: transition, activation energies and cell-size effects",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "evidence in metadata",
+   "fork": "Time base of the MSD tables: the lag column counts saved frames, and the frame interval (timestep x dump interval) must be read from each run's input deck",
+   "wrong_choice": "Assume one frame interval (0.04 ps, as in the CaF2/PbF2/AgI decks) for every material",
+   "consequence": "UO2 uses a 2 fs timestep (0.02 ps frames); all UO2 diffusion coefficients come out halved (-0.24 to -0.30 dex)",
+   "ablation": "uniform_frame_time_for_UO2"
+  },
+  {
+   "id": "dp2",
+   "kind": "discriminating calculation under budget / cascade",
+   "fork": "Which supercell to spend the budget on for T_c, activation energies and predictions (cost grows with atom count)",
+   "wrong_choice": "Use (or scan with) the cheap 96-atom cells",
+   "consequence": "c_V peak 140-570 K too high; 96-atom cells show one intermediate (CaF2 1.2/1.1 eV) or inverted (PbF2 0.22/0.42 eV) slope instead of the ordered/superionic change; predictions off by 0.19-0.32 dex",
+   "ablation": "small_cell_transition_temperatures"
+  },
+  {
+   "id": "dp3",
+   "kind": "regime judgement / discriminating calculation",
+   "fork": "Whether the 768-atom cell is converged: it agrees with 1500 atoms above T_c but not in the ordered regime",
+   "wrong_choice": "Check convergence only where it is cheap or high-T and use the 768-atom value for the 4116-atom PbF2 runs",
+   "consequence": "PbF2 at 600 K: 768 atoms give D = 0.0088 vs 0.0170 A^2/ps for 4116 atoms (-0.29 dex)",
+   "ablation": "768_atom_cell_assumed_converged"
+  },
+  {
+   "id": "dp4",
+   "kind": "competing explanation",
+   "fork": "Model for the size dependence: hydrodynamic Yeh-Hummer 1/L correction vs saturation once the collective disorder is captured",
+   "wrong_choice": "Fit D(L) = D_inf - k/L to the 96/324/768-atom cells and extrapolate",
+   "consequence": "At 600 K D(L) is non-monotonic (96 atoms highest) and the extrapolation to 4116 atoms is negative",
+   "ablation": "yeh_hummer_one_over_L_extrapolation"
+  },
+  {
+   "id": "dp5",
+   "kind": "model class",
+   "fork": "One Arrhenius law across the transition vs separate ordered and superionic regimes",
+   "wrong_choice": "Single Arrhenius fit over all diffusive 768-atom temperatures",
+   "consequence": "CaF2 E_a = 1.42 eV for both regimes instead of 1.88 and 0.68 eV",
+   "ablation": "single_arrhenius_across_Tc"
+  },
+  {
+   "id": "dp6",
+   "kind": "regime judgement (transfer of a convergence conclusion)",
+   "fork": "Whether the 324-atom cell, adequate for CaF2/PbF2 T_c (within ~30 K of 768 atoms), is adequate for UO2",
+   "wrong_choice": "Use the cheaper 3x3x3 UO2 cells",
+   "consequence": "UO2 c_V peak at 2940 K instead of 2743 K; UO2 2450 K prediction -0.22 dex",
+   "ablation": "uo2_324_atom_cell_transition"
+  },
+  {
+   "id": "dp7",
+   "kind": "transfer to a different regime",
+   "fork": "Type-I alpha-AgI vs type-II fluorites: whether the fluorite finite-size behaviour transfers",
+   "wrong_choice": "Correct small-cell AgI values by the fluorite large/small-cell ratio (x1.9)",
+   "consequence": "AgI predictions +0.23 to +0.25 dex; AgI D is size-independent from 32 to 864 atoms",
+   "ablation": "fluorite_size_correction_applied_to_AgI"
+  }
+ ],
+ "graded_fields": [
+  "transition_temperature_K (CaF2, PbF2, UO2; 768-atom c_V maximum) within 120 K",
+  "activation_energy_eV CaF2 ordered/superionic within 0.25 eV; PbF2 ordered within 0.15 eV, superionic within 0.10 eV",
+  "diffusion_predictions_A2_per_ps for 7 withheld runs, each within 0.15 dex"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 43,
+  "oracle_charge": 121,
+  "budget": 140,
+  "catalog_total_cost": 503,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (sonnet, terra)"
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image); no extra lab dependencies"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/yzhmw-vje16",
+  "doi": "10.24435/materialscloud:jy-tw",
+  "paper_doi": "10.1063/5.0087382",
+  "license": "CC BY 4.0",
+  "files_used": [
+   "CaF2.zip: CaF2/NVT_L_T/",
+   "PbF2.zip: PbF2/NVT_L_T_6p056/, PbF2/NVT_L_T_6p056_DW/",
+   "UO2.zip: UO2/NVT_L_T/",
+   "alpha-AgI.zip: alpha-AgI/NVT_L_T_5.37ang/"
+  ],
+  "md5": {
+   "CaF2.zip": "7a88bad620f87627aa4acb18266254d1",
+   "PbF2.zip": "7c99d63a2e0e0662a2aa634496405e39",
+   "UO2.zip": "ba43b29a5c7308bcca86b29041c559a6",
+   "alpha-AgI.zip": "6532ccd122eaf453975676e0e8acbbc0"
+  },
+  "member_checksums": "benchmarks/construction/fluorite-superionic-finite-size/members.json (SHA256 of 1207 members)",
+  "not_used": "all *_heat folders and UO2_heat.zip (sibling task superionic-heat-transport-size-onsager)"
+ },
+ "exceptions": {},
+ "notes": "Design adaptations: thermodynamic-limit T_c is not graded (three sizes; 1/L vs 1/N extrapolations differ by >100 K), the graded T_c is that of the 768-atom cell. UO2 activation energies are not graded (ln D is curved; defensible windows give 3.4-5.1 eV ordered and 1.0-2.5 eV superionic). The \"weak finite-size material\" bit is a rubric item; AgI enters the grade through two 864-atom predictions. Block-averaging is served (SEMs), so noise-vs-signal is a rubric item; difficulty comes instead from the UO2 time base (deck metadata), the 768-atom convergence that holds above T_c but not below (PbF2 1500-atom runs), the 324-atom cell that is adequate for CaF2/PbF2 but not UO2, and the sign change of the size effect with temperature.",
+ "calibration": {
+  "Tc_CaF2_K": {
+   "reference": 1495.6,
+   "robustness": {
+    "oracle_fd": 1495.6,
+    "energy_fluctuations": 1403.9
+   },
+   "nearest_ablation": {
+    "96_atom_cell": 1641.5
+   },
+   "tolerance": "+-120"
+  },
+  "Tc_PbF2_K": {
+   "reference": 801.8,
+   "robustness": {
+    "oracle_fd": 801.8,
+    "energy_fluctuations": 725.7
+   },
+   "nearest_ablation": {
+    "96_atom_cell": 943.0
+   },
+   "tolerance": "+-120"
+  },
+  "Tc_UO2_K": {
+   "reference": 2742.9,
+   "robustness": {
+    "oracle_fd": 2742.9,
+    "energy_fluctuations": 2795.9
+   },
+   "nearest_ablation": {
+    "324_atom_cell": 2939.5,
+    "96_atom_cell": 3314.1
+   },
+   "tolerance": "+-120"
+  },
+  "Ea_CaF2_ordered_eV": {
+   "reference": 1.88,
+   "robustness": {
+    "oracle": 1.815,
+    "window_10_80": 1.828,
+    "fluctuation_Tc_windows": 1.851,
+    "all_contiguous_windows_1100_1350": [
+     1.83,
+     2.11
+    ]
+   },
+   "nearest_ablation": {
+    "single_arrhenius": 1.422,
+    "96_atom_cell": 1.232
+   },
+   "tolerance": "+-0.25"
+  },
+  "Ea_CaF2_superionic_eV": {
+   "reference": 0.682,
+   "robustness": {
+    "oracle": 0.679,
+    "window_10_80": 0.696,
+    "fluctuation_Tc_windows": 0.742,
+    "window_start_1500_to_1700": [
+     0.64,
+     0.83
+    ]
+   },
+   "nearest_ablation": {
+    "96_atom_cell": 1.099,
+    "single_arrhenius": 1.422
+   },
+   "tolerance": "+-0.25"
+  },
+  "Ea_PbF2_ordered_eV": {
+   "reference": 0.619,
+   "robustness": {
+    "oracle": 0.62,
+    "window_10_80": 0.613,
+    "fluctuation_Tc_windows": 0.528,
+    "windows_500_750": [
+     0.61,
+     0.68
+    ]
+   },
+   "nearest_ablation": {
+    "96_atom_cell": 0.22
+   },
+   "tolerance": "+-0.15",
+   "note": "single Arrhenius (0.485) passes here; dp5 is caught by CaF2"
+  },
+  "Ea_PbF2_superionic_eV": {
+   "reference": 0.304,
+   "robustness": {
+    "oracle": 0.29,
+    "window_10_80": 0.288,
+    "fluctuation_Tc_windows": 0.33,
+    "windows_950_1250": [
+     0.26,
+     0.34
+    ]
+   },
+   "nearest_ablation": {
+    "96_atom_cell": 0.42,
+    "single_arrhenius": 0.485
+   },
+   "tolerance": "+-0.10"
+  },
+  "D_predictions_log10_error": {
+   "reference": {
+    "CaF2-4x4x4-1250K": 0.01972,
+    "PbF2-7x7x7-600K": 0.01699,
+    "PbF2-7x7x7-800K": 0.1688,
+    "UO2-4x4x4-2450K": 0.01096,
+    "UO2-4x4x4-3150K": 0.3197,
+    "AgI-6x6x6-600K": 0.3315,
+    "AgI-6x6x6-900K": 0.6493
+   },
+   "robustness_max_abs_dex": {
+    "oracle": 0.067,
+    "window_10_80": 0.064,
+    "arrhenius_fit": 0.074,
+    "PbF2_one_over_N": 0.086,
+    "AgI_32_atom_momentum_frame": 0.077
+   },
+   "nearest_ablation_dex": {
+    "uniform_frame_time (UO2)": [
+     -0.237,
+     -0.297
+    ],
+    "96_atom_cell": {
+     "CaF2-1250K": -0.188,
+     "PbF2-800K": -0.193,
+     "UO2-3150K": -0.316
+    },
+    "768_atom_converged (PbF2-600K)": -0.286,
+    "yeh_hummer (PbF2-600K)": "negative D",
+    "324_atom_UO2 (UO2-2450K)": -0.219,
+    "fluorite_correction_AgI": [
+     0.252,
+     0.232
+    ]
+   },
+   "tolerance": "|log10(D/D_ref)| <= 0.15 for each id"
+  }
+ }
+}

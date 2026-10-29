@@ -1,0 +1,17 @@
+{
+ "task_id": "gan-irradiation-defect-levels",
+ "solver_budget": 43,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "calculation": {
+   "kind": "calculation",
+   "id": "<id from calculations>",
+   "cost": 1
+  },
+  "dielectric": {
+   "kind": "dielectric",
+   "cost": 1
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

@@ -1,0 +1,80 @@
+{
+ "evaluations": 6,
+ "charge_used": 26,
+ "budget": 30,
+ "requests": [
+  {
+   "kind": "bands",
+   "model": "soc"
+  },
+  {
+   "kind": "bands",
+   "model": "nosoc"
+  },
+  {
+   "kind": "fermi_surface",
+   "model": "soc",
+   "mesh": 96,
+   "kT_eV": 0.03
+  },
+  {
+   "kind": "fermi_surface",
+   "model": "soc",
+   "mesh": 128,
+   "kT_eV": 0.03
+  },
+  {
+   "kind": "fermi_surface",
+   "model": "nosoc",
+   "mesh": 96,
+   "kT_eV": 0.03
+  },
+  {
+   "kind": "fermi_surface",
+   "model": "nosoc",
+   "mesh": 128,
+   "kT_eV": 0.03
+  }
+ ],
+ "seconds": {
+  "1": 2.22,
+  "2": 0.64,
+  "3": 0.23,
+  "4": 0.22,
+  "5": 0.24,
+  "6": 0.2
+ },
+ "submission": {
+  "orbital_to_spin_ratio": {
+   "VBM-0.10": -11.197339945780044,
+   "CBM+0.10": -0.3389465484741598
+  },
+  "orbital_magnetization_A_per_m": -0.0941403790986002,
+  "soc_to_nosoc_orbital_ratio": 0.7859074471096044,
+  "edelstein_allowed_components": [
+   "xx",
+   "yy"
+  ],
+  "alpha_yy_over_alpha_xx": -1.0,
+  "chirality_indicator": 4.9583744363359026e-17,
+  "nonlinear_hall_allowed_components": [
+   "xyz",
+   "xzy",
+   "yxz",
+   "yzx",
+   "zxy",
+   "zyx"
+  ],
+  "sigma_zxy_over_sigma_xyz": -2.0
+ },
+ "accepted": true,
+ "errors": {
+  "orbital_to_spin_ratio_rel:VBM-0.10": 0.00021,
+  "orbital_to_spin_ratio_rel:CBM+0.10": -1e-06,
+  "orbital_magnetization_rel": 0.000214,
+  "soc_to_nosoc_rel": -0.000106,
+  "alpha_yy_over_alpha_xx": -1.0,
+  "chirality_indicator": 0.0,
+  "sigma_zxy_over_sigma_xyz": -2.0
+ }
+}

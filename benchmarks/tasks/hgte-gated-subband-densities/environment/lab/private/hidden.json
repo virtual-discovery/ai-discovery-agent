@@ -1,0 +1,131 @@
+{
+ "fields": {
+  "top_surface_Vg_p0.20": [
+   "experiment_1e11_cm2",
+   "top_surface_at_+0.20V"
+  ],
+  "bottom_surface_Vg_p0.05": [
+   "experiment_1e11_cm2",
+   "bottom_surface_at_+0.05V"
+  ],
+  "bulk_subband_E1_Vg_p0.30": [
+   "experiment_1e11_cm2",
+   "first_bulk_subband_at_+0.30V"
+  ],
+  "top_surface_Vg_m0.45": [
+   "experiment_1e11_cm2",
+   "top_surface_at_-0.45V"
+  ],
+  "bottom_surface_Vg_m0.45": [
+   "experiment_1e11_cm2",
+   "bottom_surface_at_-0.45V"
+  ],
+  "hole_pocket_Vg_m0.70": [
+   "experiment_1e11_cm2",
+   "hole_pocket_at_-0.70V"
+  ],
+  "hole_onset_Vg": [
+   null,
+   "hole_onset_gate_V"
+  ],
+  "model_bottom_surface_Vg_p0.20": [
+   "model_1e11_cm2",
+   "bottom_surface_at_+0.20V"
+  ],
+  "model_top_surface_Vg_m0.45": [
+   "model_1e11_cm2",
+   "top_surface_at_-0.45V"
+  ],
+  "model_hole_pocket_Vg_m0.60": [
+   "model_1e11_cm2",
+   "hole_pocket_at_-0.60V"
+  ],
+  "majority_pocket_multiplicity": [
+   null,
+   "majority_pocket_multiplicity"
+  ]
+ },
+ "targets": {
+  "top_surface_Vg_p0.20": 2.8069705321462437,
+  "bottom_surface_Vg_p0.05": 0.8269819724688029,
+  "bulk_subband_E1_Vg_p0.30": 1.2240133160487048,
+  "top_surface_Vg_m0.45": 0.44549432023437374,
+  "bottom_surface_Vg_m0.45": 0.6312096324747327,
+  "hole_pocket_Vg_m0.70": 2.491447912441108,
+  "hole_onset_Vg": -0.2140357300138778,
+  "model_bottom_surface_Vg_p0.20": 0.9707968092638265,
+  "model_top_surface_Vg_m0.45": 0.4847714583372181,
+  "model_hole_pocket_Vg_m0.60": 1.6043599121574568
+ },
+ "tolerances": {
+  "top_surface_Vg_p0.20": {
+   "rel": 0.06,
+   "abs": 0.07
+  },
+  "bottom_surface_Vg_p0.05": {
+   "rel": 0.06,
+   "abs": 0.07
+  },
+  "bulk_subband_E1_Vg_p0.30": {
+   "rel": 0.06,
+   "abs": 0.07
+  },
+  "top_surface_Vg_m0.45": {
+   "rel": 0.06,
+   "abs": 0.07
+  },
+  "bottom_surface_Vg_m0.45": {
+   "rel": 0.06,
+   "abs": 0.07
+  },
+  "hole_pocket_Vg_m0.70": {
+   "rel": 0.06,
+   "abs": 0.07
+  },
+  "hole_onset_Vg": {
+   "rel": 0.0,
+   "abs": 0.06
+  },
+  "model_bottom_surface_Vg_p0.20": {
+   "rel": 0.06,
+   "abs": 0.04
+  },
+  "model_top_surface_Vg_m0.45": {
+   "rel": 0.06,
+   "abs": 0.04
+  },
+  "model_hole_pocket_Vg_m0.60": {
+   "rel": 0.06,
+   "abs": 0.04
+  }
+ },
+ "majority_pocket_multiplicity": 2,
+ "reference": {
+  "gate_line_70nm": [
+   9.819685420554599,
+   3.2060499203446144
+  ],
+  "hole_ridge_points": [
+   [
+    -0.75,
+    2.740958978735826
+   ],
+   [
+    -0.7,
+    2.491447912441108
+   ],
+   [
+    -0.6499999999999999,
+    2.1956039905303095
+   ],
+   [
+    -0.5999999999999999,
+    1.9420224290616055
+   ],
+   [
+    -0.5499999999999998,
+    1.741328543760743
+   ]
+  ]
+ }
+}

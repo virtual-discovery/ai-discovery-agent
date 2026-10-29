@@ -1,0 +1,40 @@
+ &control
+calculation="scf"
+		prefix= "CsVSb",
+    restart_mode='from_scratch',
+    pseudo_dir = '/dss/dsshome1/05/di52gaz2/qe/qe-7.1/potentials/',
+    outdir='work'
+		tstress=.true.
+		tprnfor=.true.
+		forc_conv_thr=5D-6
+/
+ &system
+    ibrav= 4,
+		space_group=191
+		A=5.49
+		C=9.23
+		nat=  4, 
+		ntyp= 3, 
+    ecutwfc = 84.0, 
+		occupations = "smearing",
+		smearing='gaussian'
+		degauss= 0.004,  !width
+ /
+ &electrons
+    conv_thr =  1.0D-12,
+    mixing_beta = 0.7,
+		diagonalization='david'
+ /
+ &ions
+ /
+ATOMIC_SPECIES
+Cs  132.9054519   Cs.upf
+V   50.9415  V.upf
+Sb  121.76  Sb.upf 
+ATOMIC_POSITIONS crystal_sg
+Cs 1a 
+V 3g
+Sb 1b
+Sb 4h 0.7446580534
+K_POINTS automatic 
+12 12 8 0 0 0  

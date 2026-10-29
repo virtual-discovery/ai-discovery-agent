@@ -1,0 +1,5 @@
+{
+ "task_id": "raman-polymorph-orientation",
+ "solver_budget": 20,
+ "min_report_chars": 400
+}

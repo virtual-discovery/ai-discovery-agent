@@ -1,0 +1,492 @@
+{
+ "ablations": {
+  "phonon_eigenvectors_as_modes": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -1.24637,
+    "in_pointing": 1.24637
+   },
+   "mode_fractions": {
+    "Eu_1_x": 0.000430523,
+    "Eu_2_x": -0.0168851,
+    "Eu_3_x": 0.763926,
+    "Eu_4_x": 0.252528
+   },
+   "dominant_mode": "Eu_3_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.299647,
+    "Eu_4_x": -0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "hdf5_values_as_THz": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -7.62023,
+    "in_pointing": 7.62023
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000514846,
+    "Eu_2_x": -0.0267322,
+    "Eu_3_x": 0.581988,
+    "Eu_4_x": 0.445259
+   },
+   "dominant_mode": "Eu_3_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.299647,
+    "Eu_4_x": -0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "elk_domain_from_input_field": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": 0.931263,
+    "in_pointing": -0.931263
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000194383,
+    "Eu_2_x": -0.0166563,
+    "Eu_3_x": 0.484988,
+    "Eu_4_x": 0.531862
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": 0.299647,
+    "Eu_4_x": 0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "in_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "axial_second_pair_as_neighbours": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": 0.931263,
+    "in_pointing": -0.931263
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000194383,
+    "Eu_2_x": -0.0166563,
+    "Eu_3_x": 0.484988,
+    "Eu_4_x": 0.531862
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": 0.299647,
+    "Eu_4_x": 0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "out_pointing",
+    "Elk": "in_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "codes_assumed_same_domain_averaged": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": 0.00661741,
+    "in_pointing": -0.00661741
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.0144872,
+    "Eu_2_x": 0.368491,
+    "Eu_3_x": -0.403504,
+    "Eu_4_x": 1.0495
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.0017715,
+    "Eu_4_x": 0.00269488
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "out_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "born_from_mislabeled_0005_pair": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": 3.32032,
+    "in_pointing": -3.32032
+   },
+   "mode_fractions": {
+    "Eu_1_x": 0.00102267,
+    "Eu_2_x": 0.000216799,
+    "Eu_3_x": 0.406835,
+    "Eu_4_x": 0.591926
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.299647,
+    "Eu_4_x": -0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": -11.6199,
+    "xy": -0.6719,
+    "zz": -12.3042
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "born_tensor_transposed": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.841691,
+    "in_pointing": 0.841691
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.00104667,
+    "Eu_2_x": -0.0313273,
+    "Eu_3_x": 0.427544,
+    "Eu_4_x": 0.60483
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.299647,
+    "Eu_4_x": -0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": -0.20925,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "born_species_averaged": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.818279,
+    "in_pointing": 0.818279
+   },
+   "mode_fractions": {
+    "Eu_1_x": 0.00234237,
+    "Eu_2_x": -0.0395885,
+    "Eu_3_x": 0.441719,
+    "Eu_4_x": 0.595527
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.299647,
+    "Eu_4_x": -0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 5e-05,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "born_one_sided_no_asr": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.931263,
+    "in_pointing": 0.931263
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000194383,
+    "Eu_2_x": -0.0166563,
+    "Eu_3_x": 0.484988,
+    "Eu_4_x": 0.531862
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.299647,
+    "Eu_4_x": -0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": 2.9945,
+    "xy": 0.1925,
+    "zz": 2.78
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "elk_eu3_from_003_pair": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.872903,
+    "in_pointing": 0.872903
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000207379,
+    "Eu_2_x": -0.0177698,
+    "Eu_3_x": 0.450556,
+    "Eu_4_x": 0.567421
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.260928,
+    "Eu_4_x": -0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "muffin_tin_moments": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.841246,
+    "in_pointing": 0.841246
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000275998,
+    "Eu_2_x": -0.0164261,
+    "Eu_3_x": 0.487022,
+    "Eu_4_x": 0.52968
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.271818,
+    "Eu_4_x": -0.172904
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "vasp_ion_projected_moments": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.857906,
+    "in_pointing": 0.857906
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000480946,
+    "Eu_2_x": -0.0110182,
+    "Eu_3_x": 0.477434,
+    "Eu_4_x": 0.534065
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.271744,
+    "Eu_4_x": -0.177788
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "hexagonal_cell_volume": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.310421,
+    "in_pointing": 0.310421
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000194383,
+    "Eu_2_x": -0.0166563,
+    "Eu_3_x": 0.484988,
+    "Eu_4_x": 0.531862
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.299647,
+    "Eu_4_x": -0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "annealing_ignores_sign_change": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.931263,
+    "in_pointing": 0.931263
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000194383,
+    "Eu_2_x": -0.0166563,
+    "Eu_3_x": 0.484988,
+    "Eu_4_x": 0.531862
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.299647,
+    "Eu_4_x": -0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "in_pointing"
+  }
+ },
+ "robustness": {
+  "vasp_flipped": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.944498,
+    "in_pointing": 0.944498
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000394661,
+    "Eu_2_x": -0.0112594,
+    "Eu_3_x": 0.472538,
+    "Eu_4_x": 0.539116
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.296104,
+    "Eu_4_x": -0.197584
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "elk_window_010_015_born_005": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.930916,
+    "in_pointing": 0.930916
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.00019345,
+    "Eu_2_x": -0.0166927,
+    "Eu_3_x": 0.485285,
+    "Eu_4_x": 0.531601
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.299765,
+    "Eu_4_x": -0.192028
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00526,
+    "xy": 0.20904,
+    "zz": 3.14612
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "elk_vasp_mean": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.93788,
+    "in_pointing": 0.93788
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000295229,
+    "Eu_2_x": -0.0139388,
+    "Eu_3_x": 0.478719,
+    "Eu_4_x": 0.535515
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.297876,
+    "Eu_4_x": -0.194889
+   },
+   "born_charge_Cr1": {
+    "xx": 3.00525,
+    "xy": 0.20905,
+    "zz": 3.1461
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  },
+  "born_one_sided_002": {
+   "alpha_perp_ps_per_m": {
+    "out_pointing": -0.931263,
+    "in_pointing": 0.931263
+   },
+   "mode_fractions": {
+    "Eu_1_x": -0.000194383,
+    "Eu_2_x": -0.0166563,
+    "Eu_3_x": 0.484988,
+    "Eu_4_x": 0.531862
+   },
+   "dominant_mode": "Eu_4_x",
+   "dM_du_out_pointing_muB_per_A": {
+    "Eu_3_x": -0.299647,
+    "Eu_4_x": -0.192194
+   },
+   "born_charge_Cr1": {
+    "xx": 3.008,
+    "xy": 0.20605,
+    "zz": 3.149
+   },
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "domain_selected_by_parallel_field_annealing": "out_pointing"
+  }
+ }
+}

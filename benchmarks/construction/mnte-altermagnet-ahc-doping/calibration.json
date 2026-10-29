@@ -1,0 +1,340 @@
+{
+ "vbm_eV": 6.1317746175433125,
+ "vbm_k_frac": [
+  -0.019076873597786648,
+  -0.0012501116077801048,
+  -0.41969150993846704
+ ],
+ "vbm_path_eV": 6.117157973308267,
+ "vbm_dft_grid_eV": 6.107004459576,
+ "wt_in_E_FERMI": 6.13012952,
+ "outcar_E_fermi": 6.2098,
+ "wannier_vs_dft_on_grid_eV": {
+  "valence_max_abs": 3.1209716617741634e-05,
+  "conduction_23_24_max_abs": 1.5608148389568806,
+  "dft_cbm": 7.441240367096,
+  "wannier_cbm_on_grid": 7.854386224485833
+ },
+ "targets": {
+  "sigma_xy_S_per_cm": {
+   "2.0e21": -48.25108941220343,
+   "6.0e21": 108.45977458843323
+  },
+  "sigma_xy_sign_changes": 1,
+  "sign_change_hole_density_cm3": 4.170806987916431e+21,
+  "hole_density_0p30_below_vbm_cm3": 1.3129782735907127e+21,
+  "forbidden_components_max_abs_S_per_cm": {
+   "yz": 0.0,
+   "zx": 0.0
+  },
+  "allowed_hall_components": {
+   "neel_y": [
+    "xy"
+   ],
+   "neel_x": []
+  },
+  "electron_doped_sigma_xy_S_per_cm": null
+ },
+ "mu_of_p_eV_below_vbm": {
+  "2.0e21": 0.38891060194633464,
+  "6.0e21": 0.760450779229199
+ },
+ "archive_sigma_at_p": {
+  "2.0e21": -48.25108941220343,
+  "6.0e21": 108.45977458843323
+ },
+ "per_mesh": {
+  "48": {
+   "sigma_xy_at_p": {
+    "2.0e21": -87.72933480689532,
+    "6.0e21": 130.40203867165658
+   },
+   "sign_changes": 10,
+   "crossings_eV_below_vbm": [
+    0.6689,
+    0.6611,
+    0.6313,
+    0.3574,
+    0.3447,
+    0.3288,
+    0.3228,
+    0.3102,
+    0.281,
+    0.2532
+   ],
+   "sign_change_density": 4.755259235978627e+21,
+   "hole_density_0p30": 1.3032858493953426e+21,
+   "max_abs_yz": 27022.266670347653,
+   "max_abs_zx": 15491.725975504505
+  },
+  "72": {
+   "sigma_xy_at_p": {
+    "2.0e21": 14.086468362097724,
+    "6.0e21": 116.87884221855431
+   },
+   "sign_changes": 11,
+   "crossings_eV_below_vbm": [
+    0.6132,
+    0.3968,
+    0.3897,
+    0.3357,
+    0.3324,
+    0.3277,
+    0.3199,
+    0.3048,
+    0.2975,
+    0.2798,
+    0.27
+   ],
+   "sign_change_density": 4.112477827774065e+21,
+   "hole_density_0p30": 1.315927038320298e+21,
+   "max_abs_yz": 8006.593548614402,
+   "max_abs_zx": 4590.171278386927
+  },
+  "100": {
+   "sigma_xy_at_p": {
+    "2.0e21": -171.47149531821378,
+    "6.0e21": 111.01425697019349
+   },
+   "sign_changes": 8,
+   "crossings_eV_below_vbm": [
+    0.6211,
+    0.6198,
+    0.597,
+    0.3138,
+    0.3064,
+    0.2777,
+    0.2702,
+    0.2523
+   ],
+   "sign_change_density": 4.1993938353834746e+21,
+   "hole_density_0p30": 1.3116621608184012e+21,
+   "max_abs_yz": 2007.9149861949095,
+   "max_abs_zx": 1421.0540527865992
+  },
+  "150": {
+   "sigma_xy_at_p": {
+    "2.0e21": -50.50304047396819,
+    "6.0e21": 113.8199441342312
+   },
+   "sign_changes": 3,
+   "crossings_eV_below_vbm": [
+    0.6175,
+    0.305,
+    0.305
+   ],
+   "sign_change_density": 4.160519463003292e+21,
+   "hole_density_0p30": 1.311734194489237e+21,
+   "max_abs_yz": 719.723839354079,
+   "max_abs_zx": 1423.2378358301924
+  },
+  "200": {
+   "sigma_xy_at_p": {
+    "2.0e21": -68.41540715572319,
+    "6.0e21": 114.26123175235385
+   },
+   "sign_changes": 1,
+   "crossings_eV_below_vbm": [
+    0.6134
+   ],
+   "sign_change_density": 4.1135474096727135e+21,
+   "hole_density_0p30": 1.3130039561936542e+21,
+   "max_abs_yz": 298.54148489161946,
+   "max_abs_zx": 296.22391361684186
+  },
+  "300": {
+   "sigma_xy_at_p": {
+    "2.0e21": -51.60102883425541,
+    "6.0e21": 114.36438333930525
+   },
+   "sign_changes": 1,
+   "crossings_eV_below_vbm": [
+    0.6151
+   ],
+   "sign_change_density": 4.132344150092902e+21,
+   "hole_density_0p30": 1.3129491810093719e+21,
+   "max_abs_yz": 718.395120602169,
+   "max_abs_zx": 514.9249942007486
+  },
+  "400": {
+   "sigma_xy_at_p": {
+    "2.0e21": -49.97241443945742,
+    "6.0e21": 114.1027535425126
+   },
+   "sign_changes": 1,
+   "crossings_eV_below_vbm": [
+    0.6156
+   ],
+   "sign_change_density": 4.138219316000628e+21,
+   "hole_density_0p30": 1.3129782735907127e+21,
+   "max_abs_yz": 3572.7203315005213,
+   "max_abs_zx": 17268.095090801256
+  }
+ },
+ "smearing_400": {
+  "0.0": {
+   "sigma_xy_at_p": {
+    "2.0e21": -48.370047551645634,
+    "6.0e21": 114.1131484160751
+   },
+   "sign_changes": 1
+  },
+  "0.0005": {
+   "sigma_xy_at_p": {
+    "2.0e21": -49.766801017842624,
+    "6.0e21": 114.10615541867456
+   },
+   "sign_changes": 1
+  },
+  "0.0086": {
+   "sigma_xy_at_p": {
+    "2.0e21": -53.67840576183006,
+    "6.0e21": 113.74719992127682
+   },
+   "sign_changes": 1
+  },
+  "0.025": {
+   "sigma_xy_at_p": {
+    "2.0e21": -63.74908429637151,
+    "6.0e21": 110.96008181840868
+   },
+   "sign_changes": 1
+  }
+ },
+ "ablations": {
+  "mesh_100": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -171.47149531821378,
+    "6.0e21": 111.01425697019349
+   },
+   "sigma_xy_sign_changes": 8,
+   "sign_change_hole_density_cm3": 4.1993938353834746e+21,
+   "hole_density_0p30_below_vbm_cm3": 1.3116621608184012e+21
+  },
+  "mesh_150": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -50.50304047396819,
+    "6.0e21": 113.8199441342312
+   },
+   "sigma_xy_sign_changes": 3,
+   "sign_change_hole_density_cm3": 4.160519463003292e+21,
+   "hole_density_0p30_below_vbm_cm3": 1.311734194489237e+21
+  },
+  "mesh_200": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -68.41540715572319,
+    "6.0e21": 114.26123175235385
+   },
+   "sigma_xy_sign_changes": 1,
+   "sign_change_hole_density_cm3": 4.1135474096727135e+21,
+   "hole_density_0p30_below_vbm_cm3": 1.3130039561936542e+21
+  },
+  "vbm_from_band_path": 1.4181141682362733e+21,
+  "vbm_from_dft_grid": 1.49202357560914e+21,
+  "vbm_from_outcar_efermi": 7.359874885865215e+20,
+  "spin_degeneracy_twice": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -70.06417902915048,
+    "6.0e21": -77.03715090026473
+   },
+   "sign_change_hole_density_cm3": 8.341613975832862e+21,
+   "hole_density_0p30_below_vbm_cm3": 2.6259565471814255e+21
+  },
+  "raw_forbidden_components": {
+   "yz": 3589.033503152226,
+   "zx": 17346.92443228638
+  },
+  "raw_forbidden_components_deep": {
+   "yz": 3589.033503152226,
+   "zx": 17346.92443228638
+  },
+  "symmetries_dat_literal": {
+   "neel_y": [],
+   "neel_x": []
+  },
+  "inplane_isotropic": {
+   "neel_y": [
+    "xy"
+   ],
+   "neel_x": [
+    "xy"
+   ]
+  },
+  "electron_doped_from_model": -12.59822141403336,
+  "room_temperature_smearing": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -63.74908429637151,
+    "6.0e21": 110.96008181840868
+   },
+   "sigma_xy_sign_changes": 1
+  },
+  "wt_out_100K_smearing": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -53.67840576183006,
+    "6.0e21": 113.74719992127682
+   },
+   "sigma_xy_sign_changes": 1
+  }
+ },
+ "robustness": {
+  "mesh_300": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -51.60102883425541,
+    "6.0e21": 114.36438333930525
+   },
+   "sigma_xy_sign_changes": 1,
+   "sign_change_hole_density_cm3": 4.132344150092902e+21,
+   "hole_density_0p30_below_vbm_cm3": 1.3129491810093719e+21
+  },
+  "mesh_400_model_values": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -49.97241443945742,
+    "6.0e21": 114.1027535425126
+   },
+   "sign_change_hole_density_cm3": 4.138219316000628e+21
+  },
+  "wt_in_efermi_as_vbm": 1.3248130763285211e+21,
+  "step_occupation": {
+   "sigma_xy_S_per_cm": {
+    "2.0e21": -48.370047551645634,
+    "6.0e21": 114.1131484160751
+   },
+   "sigma_xy_sign_changes": 1
+  }
+ },
+ "electron_doping_mu_eV": 7.907434863538086,
+ "staged_files": [
+  "1_vasp/IBZKPT",
+  "1_vasp/INCAR",
+  "1_vasp/KPOINTS",
+  "1_vasp/OSZICAR",
+  "1_vasp/OUTCAR",
+  "1_vasp/PCDAT",
+  "1_vasp/POSCAR",
+  "1_vasp/XDATCAR",
+  "1_vasp/log",
+  "1_vasp/wannier90.win",
+  "1_vasp/wannier90.wout",
+  "2_wannier90/wannier90.eig",
+  "2_wannier90/wannier90.nnkp",
+  "2_wannier90/wannier90.win",
+  "2_wannier90/wannier90.wout",
+  "2_wannier90/wannier90_band.dat",
+  "2_wannier90/wannier90_band.gnu",
+  "2_wannier90/wannier90_band.kpt",
+  "2_wannier90/wannier90_band.labelinfo.dat",
+  "2_wannier90/wannier90_centres.xyz",
+  "3_wannsymm/POSCAR",
+  "3_wannsymm/bands_ori.dat",
+  "3_wannsymm/bands_symmed.dat",
+  "3_wannsymm/symmetries.dat",
+  "3_wannsymm/wannsymm.in",
+  "3_wannsymm/wannsymm.out",
+  "4_wtools/WT.out",
+  "4_wtools/sigma_ahc.gnu",
+  "4_wtools/wt.in",
+  "fig6_script/0_0.450.dat",
+  "fig6_script/90_0.450.dat",
+  "fig6_script/Berrycurvature.gnu"
+ ]
+}

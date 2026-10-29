@@ -1,0 +1,285 @@
+{
+ "task_id": "fresh-inp-polar-phonons",
+ "catalog_id": "fresh-inp-polar-phonons",
+ "start": "fresh",
+ "source_group": "fresh_inp_dfpt",
+ "title": "InP: LO-TO splitting, Born charges and dielectric response under compression (DFPT-PBE)",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "evidence to discover (silent wrong settings)",
+   "fork": "Gamma-centred versus shifted k meshes for the electric-field response of a small-gap semiconductor",
+   "wrong_choice": "Validate the mesh on total energy, pressure or the TO frequency (all converged already on Gamma-centred meshes) and run the dielectric/DFPT response on a Gamma-centred mesh",
+   "consequence": "The Gamma point, where the PBE gap at a0 is 0.43 eV, is overweighted: eps_inf = 46.7 (6x6x6), 26.5 (8x8x8), 15.5 (12x12x12) instead of 11.74, Z*(In) 2.77 after the sum rule (raw In/P 2.69/-2.86, violation 0.17) at 8x8x8; the LO comes out 17.6 cm^-1 too low; LO, Z*, eps_inf, eps_0 and both volume derivatives fail (dln eps/dlnV = 23.6 vs 1.78) while TO and gamma_TO pass. Visible only in the response outputs (eps, Z* sum rule) and in the band edges on the mesh (0.43 eV Gamma-centred vs 1.24 eV shifted).",
+   "ablation": "gamma_centred_k8"
+  },
+  {
+   "id": "dp2",
+   "kind": "evidence to discover (convergence that matters only for some quantities)",
+   "fork": "Is the cheap 4x4x4 shifted mesh converged for eps_inf and Z*?",
+   "wrong_choice": "Use 4x4x4 shifted tensors because the LO frequency (and TO) look converged",
+   "consequence": "eps_inf 12.25 (+0.51) and Z* 2.672 (+0.060, sum rule imposed) are plausible-looking but wrong; their errors cancel in Z*^2/eps_inf so the LO moves by only 0.07 cm^-1; eps_inf, Z* and eps_0 fail. Detecting it needs a k ladder of the response, which costs budget.",
+   "ablation": "k4_shifted_tensors"
+  },
+  {
+   "id": "dp3",
+   "kind": "cascade under a binding budget",
+   "fork": "Mesh used for the extra volumes of the hydrostatic derivatives",
+   "wrong_choice": "Converged tensors at a0, but the second volume on the cheaper 4x4x4 mesh to save budget (one-sided difference)",
+   "consequence": "The 4x4x4 error (+0.5 in eps) does not cancel: dlnZ/dlnV = -0.13 (ref 0.60) and dln eps/dlnV = 0.03 or 3.1 (ref 1.78). Using the same mesh at all volumes is fine (the k error largely cancels).",
+   "ablation": "side_volume_on_cheaper_mesh"
+  },
+  {
+   "id": "dp4",
+   "kind": "reference volume (cascade)",
+   "fork": "Lattice parameter at which the protocol's quantities are evaluated",
+   "wrong_choice": "Experimental a = 5.8687 A instead of the protocol's own a0 = 5.9624 A",
+   "consequence": "TO +18.3 cm^-1, LO +18.5, Z* -0.07, eps_inf -0.79; a0, TO, LO, Z*, eps_inf, eps_0 fail",
+   "ablation": "experimental_lattice"
+  },
+  {
+   "id": "dp5",
+   "kind": "which frequency is the LO",
+   "fork": "Analytic ph.x frequency versus nonanalytic (macroscopic-field) LO; screening by eps_inf versus eps_0",
+   "wrong_choice": "Report the analytic Gamma frequency as LO, or screen the nonanalytic term with eps_0",
+   "consequence": "LO-TO splitting zero, or LO 7.5 cm^-1 too low; LO and eps_0 fail",
+   "ablation": "analytic_frequency_as_LO"
+  },
+  {
+   "id": "dp6",
+   "kind": "evidence to discover in raw outputs (eigenvectors)",
+   "fork": "Direction dependence of the LO in the [001]-strained cell",
+   "wrong_choice": "Isotropic (trace-averaged) Z* and eps_inf with the strained TO modes, or attaching q||z to the doublet and q||x to the singlet, or reusing the cubic LO",
+   "consequence": "LO_x - LO_z = 2.03 (isotropic tensors), -0.16 (swapped pairing) or 0 (cubic) instead of 3.90 cm^-1; the z-polarized singlet is the LOWER TO mode under compression (290.6 vs 292.9 cm^-1) and Z*_zz falls by 3% while Z*_xx is unchanged",
+   "ablation": "strained_scalar_tensors"
+  },
+  {
+   "id": "dp7",
+   "kind": "discriminating calculation / competing explanations",
+   "fork": "What carries the hydrostatic trend of the splitting: Z*, eps_inf or the volume?",
+   "wrong_choice": "Infer the trend from the Born charge alone (Z* falls under compression, so 'the splitting shrinks', explanation b)",
+   "consequence": "With eps_inf held fixed, dS/dlnV = +49 cm^-1 (shrinks under compression); with the computed eps_inf trend (dln eps/dlnV = 1.78 > 2 dlnZ/dlnV - 1 = 0.19) the splitting grows (dS/dlnV ~ -12 cm^-1). Requires converged response at two volumes.",
+   "ablation": "splitting_trend_from_born_charge_only"
+  }
+ ],
+ "graded_fields": [
+  "a0_A within 0.010 A",
+  "omega_TO_cm-1, omega_LO_cm-1 within 2.0 cm^-1",
+  "born_charge_In within 0.020",
+  "eps_inf within 0.20; eps_0 within 0.35",
+  "dlnZ_dlnV within 15%; dln_eps_inf_dlnV within 20%; gruneisen_TO within 10%",
+  "LOTO_splitting_under_compression exact ('grows')",
+  "strained_omega_LO_q_z_cm-1, strained_omega_LO_q_x_cm-1 within 2.0 cm^-1, and their difference within 0.8 cm^-1"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 13,
+  "oracle_charge": 33,
+  "budget": 40,
+  "oracle_compute_minutes_2_cores": "measured 32-33 (gate 1894-1975 s container time; Harbor trial 35 min wall)",
+  "tool_calls": "45-75 (13-20 evaluations plus polling of 1-9 minute jobs and analysis)",
+  "wall_time_h": "1-2",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "Quantum ESPRESSO 6.7 pw.x and ph.x, OpenMPI, numpy (all in the runtime image; no extra layer)",
+  "Two pseudopotential files vendored in environment/lab/ (2.7 MB)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/rcyfm-68h65",
+  "doi": "10.24435/materialscloud:f3-ym",
+  "files_used": [
+   "SSSP_1.3.0_PBE_precision.tar.gz",
+   "SSSP_1.3.0_PBE_precision.json",
+   "LICENSE.txt"
+  ],
+  "md5": {
+   "SSSP_1.3.0_PBE_precision.tar.gz": "fde94756886f32ada7bf597547557eb5",
+   "SSSP_1.3.0_PBE_precision.json": "1692c5c9ce89e1c7c783f8f0eee0cbfa",
+   "LICENSE.txt": "c0f9df05fb4cd4921f4caa25606815ef"
+  },
+  "vendored_sha256": {
+   "In.pbe-dn-rrkjus_psl.0.2.2.UPF": "ac76860606654bf63d2950129329ee50267d50ad92296728a7d42e9355bcfb39",
+   "P.pbe-n-rrkjus_psl.1.0.0.UPF": "2d112dfec2e2d9b75a971574d9116aa92249988177791659bbcd2ba15f23c20c"
+  },
+  "license": "Archive CC BY 4.0; the two PSlibrary UPF files GPL v2 or later (per the archive LICENSE.txt, vendored as SSSP_LICENSE.txt)",
+  "hidden_truth": "Construction calculations through task_lab.run (reference_runs.sh, reference_results.json), stored only in environment/lab/private/"
+ },
+ "exceptions": {},
+ "notes": "The design's ASR decision point was dropped: the raw sum-rule violation at converged shifted meshes is 0.001-0.009 e, so raw and sum-rule Z* differ by <0.005 (inside the method spread). The design's withheld-strain/withheld-lattice hidden runs were replaced by grading the agent's own calculations at specified configurations against reference runs of the same code path. The numerical d ln(w_LO - w_TO)/d ln V is a near-cancellation (defensible estimates -0.14 to -0.37) and is graded only by its sign. The shifted-mesh eps_inf still drifts slowly upward beyond 8x8x8 (11.72, 11.72, 11.76 at 6/8/10; 11.77 at 12 at a = 5.96 A) because the region around Gamma is undersampled; the reference uses the 8/10 mean and the tolerances cover the lab's meshes.",
+ "calibration": {
+  "a0_A": {
+   "reference": 5.9624,
+   "tolerance": "absolute 0.01",
+   "robustness": {
+    "a0_from_zero_pressure": 5.96157,
+    "a0_from_65Ry_eos": 5.96192
+   },
+   "nearest_ablation": {
+    "experimental_lattice": 5.8687
+   },
+   "max_robustness_error": 0.00083
+  },
+  "omega_TO_cm-1": {
+   "reference": 284.53307278361683,
+   "tolerance": "absolute 2.0",
+   "robustness": {
+    "TO_from_k4_dfpt_and_k4_strained": 284.60918
+   },
+   "nearest_ablation": {
+    "experimental_lattice": 302.85209
+   },
+   "max_robustness_error": 0.07611
+  },
+  "omega_LO_cm-1": {
+   "reference": 321.0592660060083,
+   "tolerance": "absolute 2.0",
+   "robustness": {
+    "oracle_like_k8_tensors": 321.13463,
+    "all_from_k6_dfpt": 321.27976,
+    "k10_tensors": 320.98416,
+    "raw_born_charge_no_sum_rule": 321.11851,
+    "TO_from_k4_dfpt_and_k4_strained": 321.12671
+   },
+   "nearest_ablation": {
+    "nonanalytic_term_with_eps0": 313.57977
+   },
+   "max_robustness_error": 0.22049
+  },
+  "born_charge_In": {
+   "reference": 2.6115675,
+   "tolerance": "absolute 0.02",
+   "robustness": {
+    "oracle_like_k8_tensors": 2.61199,
+    "all_from_k6_dfpt": 2.61826,
+    "k10_tensors": 2.61115,
+    "raw_born_charge_no_sum_rule": 2.61138
+   },
+   "nearest_ablation": {
+    "k4_shifted_tensors": 2.67189
+   },
+   "max_robustness_error": 0.0067
+  },
+  "eps_inf": {
+   "reference": 11.737220418,
+   "tolerance": "absolute 0.2",
+   "robustness": {
+    "oracle_like_k8_tensors": 11.71538,
+    "all_from_k6_dfpt": 11.72243,
+    "k10_tensors": 11.75906,
+    "raw_born_charge_no_sum_rule": 11.71538
+   },
+   "nearest_ablation": {
+    "k4_shifted_tensors": 12.25117
+   },
+   "max_robustness_error": 0.02184
+  },
+  "eps_0": {
+   "reference": 14.944113915138884,
+   "tolerance": "absolute 0.35",
+   "robustness": {
+    "oracle_like_k8_tensors": 14.92332,
+    "all_from_k6_dfpt": 14.94579,
+    "k10_tensors": 14.96491,
+    "raw_born_charge_no_sum_rule": 14.92182
+   },
+   "nearest_ablation": {
+    "k4_shifted_tensors": 15.60791
+   },
+   "max_robustness_error": 0.0223
+  },
+  "dlnZ_dlnV": {
+   "reference": 0.5958080252905001,
+   "tolerance": "relative 0.15",
+   "robustness": {
+    "oracle_like_k8_tensors": 0.59635,
+    "all_from_k6_dfpt": 0.60285,
+    "k10_tensors": 0.59526,
+    "half_percent_steps": 0.59601,
+    "one_sided_compression": 0.59348,
+    "raw_born_charge_no_sum_rule": 0.59497
+   },
+   "nearest_ablation": {
+    "side_volume_on_cheaper_mesh": -0.13026
+   },
+   "max_robustness_error": 0.01181
+  },
+  "dln_eps_inf_dlnV": {
+   "reference": 1.777939191462183,
+   "tolerance": "relative 0.2",
+   "robustness": {
+    "oracle_like_k8_tensors": 1.72922,
+    "all_from_k6_dfpt": 1.6234,
+    "k10_tensors": 1.82644,
+    "half_percent_steps": 1.72492,
+    "one_sided_compression": 1.57901,
+    "raw_born_charge_no_sum_rule": 1.72922
+   },
+   "nearest_ablation": {
+    "side_volume_on_cheaper_mesh_expansion": 3.0926
+   },
+   "max_robustness_error": 0.11189
+  },
+  "gruneisen_TO": {
+   "reference": 1.3246846996322592,
+   "tolerance": "relative 0.1",
+   "robustness": {
+    "half_percent_steps": 1.32515,
+    "one_sided_compression": 1.3178
+   },
+   "nearest_ablation": null,
+   "max_robustness_error": 0.00519
+  },
+  "strained_omega_LO_q_z_cm-1": {
+   "reference": 326.292918227253,
+   "tolerance": "absolute 2.0",
+   "robustness": {
+    "TO_from_k4_dfpt_and_k4_strained": 326.14571
+   },
+   "nearest_ablation": {
+    "strained_swapped_TO_pairing": 328.32846
+   },
+   "max_robustness_error": 0.14721
+  },
+  "strained_omega_LO_q_x_cm-1": {
+   "reference": 330.1927325400668,
+   "tolerance": "absolute 2.0",
+   "robustness": {
+    "TO_from_k4_dfpt_and_k4_strained": 330.06039
+   },
+   "nearest_ablation": {
+    "strained_swapped_TO_pairing": 328.16875
+   },
+   "max_robustness_error": 0.13234
+  },
+  "strained_LO_anisotropy": {
+   "reference": 3.8998143128138167,
+   "tolerance": "absolute 0.8",
+   "robustness": {
+    "TO_from_k4_dfpt_and_k4_strained": 3.91468
+   },
+   "nearest_ablation": {
+    "strained_scalar_tensors": 2.02784
+   },
+   "max_robustness_error": 0.01487
+  },
+  "LOTO_splitting_under_compression": {
+   "reference": "grows",
+   "tolerance": "exact",
+   "robustness": {
+    "oracle_like_k8_tensors": "grows",
+    "all_from_k6_dfpt": "grows",
+    "k10_tensors": "grows",
+    "half_percent_steps": "grows",
+    "one_sided_compression": "grows",
+    "a0_from_zero_pressure": "grows",
+    "a0_from_65Ry_eos": "grows",
+    "raw_born_charge_no_sum_rule": "grows",
+    "TO_from_k4_dfpt_and_k4_strained": "grows"
+   },
+   "nearest_ablation": {
+    "splitting_trend_from_born_charge_only": "shrinks"
+   }
+  }
+ }
+}

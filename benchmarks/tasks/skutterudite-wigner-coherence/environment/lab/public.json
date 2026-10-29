@@ -1,0 +1,20 @@
+{
+ "task_id": "skutterudite-wigner-coherence",
+ "solver_budget": 32,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "mode_data": {
+   "cost": 1
+  },
+  "velocity_operator": {
+   "cost": 4
+  },
+  "archived_file": {
+   "cost": 1
+  },
+  "harmonic": {
+   "cost": 1
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

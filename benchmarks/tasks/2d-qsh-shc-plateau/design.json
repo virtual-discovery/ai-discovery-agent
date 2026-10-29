@@ -1,0 +1,336 @@
+{
+ "task_id": "2d-qsh-shc-plateau",
+ "catalog_id": "2d-qsh-shc-plateau",
+ "start": "released",
+ "source_group": "zhou_2025_2d_shc_database",
+ "title": "2D quantum spin Hall insulators: spin Hall plateaus",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Where to put the chemical potential: the scf Fermi level (cold smearing 0.01 Ry) of the small-gap models lies inside the valence band, and the .win fermi_energy is the valence-band maximum",
+   "wrong_choice": "Evaluate the SHC at the Fermi energy printed by aiida.out (or at the .win fermi_energy)",
+   "consequence": "CuLi2As 0.38 instead of 1.0, Ti2I2N2 -0.106 instead of -0.852, Li2Tl2 0.52 instead of 2.786",
+   "ablation": "plateau_at_scf_fermi"
+  },
+  {
+   "id": "dp2",
+   "fork": "Gap of the Wannier model versus the DFT band edges written in aiida.win: they come from the coarse scf grid; for Bi2In2 the Wannier valence-band maximum at a generic k lies above the .win mid-gap",
+   "wrong_choice": "Place mu at the mid-gap of the .win VBM/CBM comments",
+   "consequence": "Bi2In2 0.168 instead of 0.823",
+   "ablation": "plateau_at_dft_mid_gap"
+  },
+  {
+   "id": "dp3",
+   "fork": "k-mesh convergence inside small gaps: the spin Berry curvature of Ti2I2N2 (22 meV gap) and Li2Tl2 (31 meV) is concentrated in hot spots that coarse meshes alias; dense or adaptively refined meshes are needed",
+   "wrong_choice": "Accept a 120 x 120 (or 60 x 60) mesh without refinement or a convergence test",
+   "consequence": "Ti2I2N2 -1.327 (120^2) or -3.843 (60^2) instead of -0.852; Li2Tl2 3.844 at 60^2",
+   "ablation": "mesh_120_unrefined"
+  },
+  {
+   "id": "dp4",
+   "fork": "Velocity-operator convention: Wannier functions at the lattice points (phase convention of the hr.dat) versus at their centres; the lattice convention breaks the crystal symmetry of the Kubo response, visible as a sigma^x_xy forbidden by the mirror of Bi2",
+   "wrong_choice": "Use the lattice convention",
+   "consequence": "Bi2 spin direction theta/phi 38.813/42.425 instead of 31.776/89.755 deg; Hg4O2 plateau -0.863 instead of -0.758",
+   "ablation": "lattice_position_convention"
+  },
+  {
+   "id": "dp5",
+   "fork": "Which calculation the archived spin Hall files describe: Top_materials holds relaxed structures (other lattice constants, Hf2Br2 cell rotated), not the database models; the paper table matches them",
+   "wrong_choice": "Report the archived Top_materials plateaus (or the paper table) for the database models",
+   "consequence": "Bi2 0.525, Hf2Br2 -0.915, Ti2I2N2 -0.947 instead of 0.569, -0.977, -0.852",
+   "ablation": "relaxed_archive_values"
+  },
+  {
+   "id": "dp6",
+   "fork": "Topology versus SHC magnitude: a large non-quantized in-gap SHC does not imply Z2 = 1 (Bi2In2 is trivial with a plateau near 0.8) and a plateau far from 1 does not imply a trivial insulator",
+   "wrong_choice": "Classify by the plateau magnitude (|sigma^z| >= 0.5 means QSHI)",
+   "consequence": "Bi2In2 classified Z2 = 1",
+   "ablation": "z2_from_plateau_magnitude"
+  },
+  {
+   "id": "dp7",
+   "fork": "Resolution of the Wilson-loop flow: near the small direct gaps of Ti2I2N2 and Li2Tl2 the hybrid Wannier centres wind quickly; a coarse sampling misses crossings",
+   "wrong_choice": "Trust a single 51 x 80 Wilson-loop calculation",
+   "consequence": "Z2 = 0 for Ti2I2N2_Pmm2, Li2Tl2_P3m1",
+   "ablation": "z2_from_coarse_wcc"
+  },
+  {
+   "id": "dp8",
+   "fork": "Normalization: the service (like Wannier90) returns (hbar/e) S/cm with the vacuum-padded cell volume; the sheet value needs each material's cell height c and the unit e/2pi",
+   "wrong_choice": "Normalize by the atomic thickness of the layer, or report in units of e/4pi",
+   "consequence": "plateaus off by c/t (factors 3-10) or by 2",
+   "ablation": "atomic_thickness_normalisation"
+  },
+  {
+   "id": "dp9",
+   "fork": "Spin axis of the plateau: low symmetry allows in-plane spin components (Bi2: sigma^y_xy; Hg4O2, P1: sigma^x_xy), so all three components must be computed",
+   "wrong_choice": "Compute only sigma^z_xy and take the spin along z",
+   "consequence": "theta 0 or 180 deg instead of 31.776 (Bi2) and 150.245 (Hg4O2)",
+   "ablation": "sigma_z_only_spin_direction"
+  }
+ ],
+ "graded_fields": [
+  "z2 of 8 materials (exact)",
+  "plateau_sigma_z of 8 materials within max(3% of |ref|, 0.02) (hbar/e)(e^2/h)",
+  "spin_direction theta within 2.5 deg and phi within 5 deg for Bi2_P-3m1 and Hg4O2_P1"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 25,
+  "oracle_charge": 36,
+  "budget": 40,
+  "oracle_job_seconds": 617,
+  "oracle_gate_container_seconds_full_run": 642,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "why": "Eight models x (band edges, Wilson loop, converged spin Hall plateau) with resolution-dependent costs; the Fermi-level traps need the staged outputs read against the Wannier band edges, the position convention needs a symmetry test, and two canted plateaus need all three components.",
+  "oracle_errors": {
+   "plateau:Bi2_P-3m1": 1.3e-05,
+   "plateau:Hf2Br2_P-3m1": 0.000794,
+   "plateau:CuLi2As_P-6m2": -0.000129,
+   "plateau:Ti2I2N2_Pmm2": 0.000276,
+   "plateau:Li2Tl2_P3m1": -0.004017,
+   "plateau:Bi2In2_P4_nmm": -0.008761,
+   "plateau:Hg4O2_P1": 0.000334,
+   "plateau:KSnAs_P3m1": -2e-06,
+   "theta:Bi2_P-3m1": 0.001754,
+   "phi:Bi2_P-3m1": -0.004884,
+   "theta:Hg4O2_P1": 0.000511,
+   "phi:Hg4O2_P1": -0.000495
+  }
+ },
+ "runtime_dependencies": [
+  "numpy and scipy (runtime image); no extra layer"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/rfcdy-wcy32",
+  "doi": "10.24435/materialscloud:yv-h7",
+  "paper_doi": "10.1038/s41699-025-00562-4",
+  "files_used": [
+   "Data.7z",
+   "README.txt",
+   "files_description.md"
+  ],
+  "md5": {
+   "Data.7z": "1d261e780f092b8c7c1f2e051855c798",
+   "README.txt": "aedc173ccb0587b13fad1cbbcd5f58cc",
+   "files_description.md": "10c58cb5ed5d38de19f445f2fca21c19"
+  },
+  "members": "benchmarks/construction/2d-qsh-shc-plateau/members.md5",
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the candidate design (see the construction README): graded values are validated-evaluator values of the archived database Wannier models (the evaluator reproduces the archived aiida_band.dat to <0.1 meV with the Wigner-Seitz image selection, and gives sigma^x_xy = 0.002 / sigma^y_xy = 0.352 for Bi2, where the archived relaxed-structure Wannier90 run gives 0.009 / 0.356). The archive has no hr.dat for the relaxed Top_materials structures and no .spn files; Y2C2I2 (a metal, P1 in the database, in a rotated cell) was replaced by the canted plateaus of Bi2 and Hg4O2. Edge-state counts are a rubric item.",
+ "calibration": {
+  "plateau_sigma_z:Bi2_P-3m1": {
+   "reference": 0.5685,
+   "robustness": {
+    "authors_broadening_5meV": 0.5685,
+    "mesh_240_unrefined_eta_1meV": 0.5685
+   },
+   "nearest_ablations": {
+    "mesh_120_unrefined": 0.569,
+    "mesh_60_unrefined": 0.569,
+    "lattice_position_convention": 0.564
+   },
+   "tolerance": "+-max(3% of |ref|, 0.02) = +-0.02"
+  },
+  "plateau_sigma_z:Hf2Br2_P-3m1": {
+   "reference": -0.9768,
+   "robustness": {
+    "authors_broadening_5meV": -0.9767,
+    "mesh_240_unrefined_eta_1meV": -0.977
+   },
+   "nearest_ablations": {
+    "mesh_120_unrefined": -0.977,
+    "mesh_60_unrefined": -0.977,
+    "lattice_position_convention": -0.978
+   },
+   "tolerance": "+-max(3% of |ref|, 0.02) = +-0.0293"
+  },
+  "plateau_sigma_z:CuLi2As_P-6m2": {
+   "reference": 1.0,
+   "robustness": {
+    "authors_broadening_5meV": 0.9974,
+    "mesh_240_unrefined_eta_1meV": 1.0
+   },
+   "nearest_ablations": {
+    "mesh_120_unrefined": 1.0,
+    "lattice_position_convention": 1.0,
+    "paper_table_values": 1.0
+   },
+   "tolerance": "+-max(3% of |ref|, 0.02) = +-0.03"
+  },
+  "plateau_sigma_z:Ti2I2N2_Pmm2": {
+   "reference": -0.852,
+   "robustness": {
+    "authors_broadening_5meV": -0.8352,
+    "mesh_240_unrefined_eta_1meV": -0.8704
+   },
+   "nearest_ablations": {
+    "lattice_position_convention": -0.855,
+    "relaxed_archive_values": -0.947,
+    "paper_table_values": -1.0
+   },
+   "tolerance": "+-max(3% of |ref|, 0.02) = +-0.0256"
+  },
+  "plateau_sigma_z:Li2Tl2_P3m1": {
+   "reference": 2.7857,
+   "robustness": {
+    "authors_broadening_5meV": 2.7627,
+    "mesh_240_unrefined_eta_1meV": 2.7847
+   },
+   "nearest_ablations": {
+    "mesh_120_unrefined": 2.808,
+    "lattice_position_convention": 2.825,
+    "plateau_at_win_fermi_energy": 2.4
+   },
+   "tolerance": "+-max(3% of |ref|, 0.02) = +-0.0836"
+  },
+  "plateau_sigma_z:Bi2In2_P4_nmm": {
+   "reference": 0.8233,
+   "robustness": {
+    "authors_broadening_5meV": 0.8223,
+    "mesh_240_unrefined_eta_1meV": 0.8234
+   },
+   "nearest_ablations": {
+    "mesh_120_unrefined": 0.823,
+    "mesh_60_unrefined": 0.836,
+    "lattice_position_convention": 0.63
+   },
+   "tolerance": "+-max(3% of |ref|, 0.02) = +-0.0247"
+  },
+  "plateau_sigma_z:Hg4O2_P1": {
+   "reference": -0.7579,
+   "robustness": {
+    "authors_broadening_5meV": -0.7568,
+    "mesh_240_unrefined_eta_1meV": -0.7579
+   },
+   "nearest_ablations": {
+    "mesh_120_unrefined": -0.758,
+    "mesh_60_unrefined": -0.753,
+    "lattice_position_convention": -0.863
+   },
+   "tolerance": "+-max(3% of |ref|, 0.02) = +-0.0227"
+  },
+  "plateau_sigma_z:KSnAs_P3m1": {
+   "reference": -0.0013,
+   "robustness": {
+    "authors_broadening_5meV": -0.0013,
+    "mesh_240_unrefined_eta_1meV": -0.0013
+   },
+   "nearest_ablations": {
+    "mesh_120_unrefined": -0.001,
+    "mesh_60_unrefined": -0.001,
+    "atomic_thickness_normalisation": -0.0
+   },
+   "tolerance": "+-max(3% of |ref|, 0.02) = +-0.02"
+  },
+  "theta_deg:Bi2_P-3m1": {
+   "reference": 31.78,
+   "robustness": {
+    "authors_broadening_5meV": 31.78,
+    "mesh_240_unrefined_eta_1meV": 31.78
+   },
+   "nearest_ablations": {
+    "plateau_at_scf_fermi": 31.78,
+    "mesh_60_unrefined": 31.78,
+    "lattice_position_convention": 38.81,
+    "relaxed_archive_values": 34.11,
+    "sigma_z_only_spin_direction": 0.0
+   },
+   "tolerance": "+-2.5 deg"
+  },
+  "phi_deg:Bi2_P-3m1": {
+   "reference": 89.76,
+   "robustness": {
+    "authors_broadening_5meV": 89.76,
+    "mesh_240_unrefined_eta_1meV": 89.75
+   },
+   "nearest_ablations": {
+    "plateau_at_scf_fermi": 89.76,
+    "mesh_60_unrefined": 89.75,
+    "lattice_position_convention": 42.42,
+    "relaxed_archive_values": 88.51,
+    "sigma_z_only_spin_direction": 0.0
+   },
+   "tolerance": "+-5.0 deg"
+  },
+  "theta_deg:Hg4O2_P1": {
+   "reference": 150.24,
+   "robustness": {
+    "authors_broadening_5meV": 150.25,
+    "mesh_240_unrefined_eta_1meV": 150.24
+   },
+   "nearest_ablations": {
+    "plateau_at_scf_fermi": 176.59,
+    "mesh_60_unrefined": 150.23,
+    "lattice_position_convention": 154.03,
+    "relaxed_archive_values": 150.24,
+    "sigma_z_only_spin_direction": 180.0
+   },
+   "tolerance": "+-2.5 deg"
+  },
+  "phi_deg:Hg4O2_P1": {
+   "reference": -5.79,
+   "robustness": {
+    "authors_broadening_5meV": -5.79,
+    "mesh_240_unrefined_eta_1meV": -5.79
+   },
+   "nearest_ablations": {
+    "plateau_at_scf_fermi": -141.64,
+    "mesh_60_unrefined": -5.68,
+    "lattice_position_convention": 11.08,
+    "relaxed_archive_values": -5.79,
+    "sigma_z_only_spin_direction": 0.0
+   },
+   "tolerance": "+-5.0 deg"
+  },
+  "z2": {
+   "reference": {
+    "Bi2_P-3m1": 1,
+    "Hf2Br2_P-3m1": 1,
+    "CuLi2As_P-6m2": 1,
+    "Ti2I2N2_Pmm2": 1,
+    "Li2Tl2_P3m1": 1,
+    "Bi2In2_P4_nmm": 0,
+    "Hg4O2_P1": 1,
+    "KSnAs_P3m1": 0
+   },
+   "robustness": {
+    "z2_wcc_201x200_axis0": {
+     "Bi2_P-3m1": 1,
+     "Hf2Br2_P-3m1": 1,
+     "CuLi2As_P-6m2": 1,
+     "Ti2I2N2_Pmm2": 1,
+     "Li2Tl2_P3m1": 1,
+     "Bi2In2_P4_nmm": 0,
+     "Hg4O2_P1": 1,
+     "KSnAs_P3m1": 0
+    }
+   },
+   "nearest_ablations": {
+    "z2_from_plateau_magnitude": {
+     "Bi2_P-3m1": 1,
+     "Hf2Br2_P-3m1": 1,
+     "CuLi2As_P-6m2": 1,
+     "Ti2I2N2_Pmm2": 1,
+     "Li2Tl2_P3m1": 1,
+     "Bi2In2_P4_nmm": 1,
+     "Hg4O2_P1": 1,
+     "KSnAs_P3m1": 0
+    },
+    "z2_from_coarse_wcc": {
+     "Bi2_P-3m1": 1,
+     "Hf2Br2_P-3m1": 1,
+     "CuLi2As_P-6m2": 1,
+     "Ti2I2N2_Pmm2": 0,
+     "Li2Tl2_P3m1": 0,
+     "Bi2In2_P4_nmm": 0,
+     "Hg4O2_P1": 1,
+     "KSnAs_P3m1": 0
+    }
+   },
+   "tolerance": "exact"
+  }
+ }
+}

@@ -1,0 +1,14 @@
+&input_pw2bgw
+  prefix = '<prefix>'
+  outdir = './out'
+  real_or_complex = 2
+  wfng_flag = .true.
+  wfng_file = 'WFNq'
+  wfng_kgrid = .true.
+  wfng_nk1 = <k1>
+  wfng_nk2 = <k2>
+  wfng_nk3 = <k3>
+  wfng_dk1 = <k1*0.001>
+  wfng_dk2 = <k2*0.001>
+  wfng_dk3 = 0.0
+/

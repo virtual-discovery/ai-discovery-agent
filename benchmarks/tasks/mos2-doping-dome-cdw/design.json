@@ -1,0 +1,279 @@
+{
+ "task_id": "mos2-doping-dome-cdw",
+ "catalog_id": "mos2-doping-dome-cdw",
+ "start": "released",
+ "source_group": "girottoerhardt_2025_mos2_dome",
+ "title": "Electron-doped MoS2: superconducting dome and the 1x1 to 2x2 CDW transition",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "How to estimate Tc at the withheld dopings, given that lambda_FA jumps from 0.77 (0.14) to 1.41 (0.16)",
+   "wrong_choice": "Interpolate neighbouring Tc linearly, or average neighbouring spectra without rescaling to the tabulated lambda",
+   "consequence": "Tc(0.15) -10.7% / -8.1% low (tolerance 3%)",
+   "ablation": "tc_linear_interpolation_across_lambda_jump",
+   "kind": "regime found in the data; discriminating purchase (moments table)"
+  },
+  {
+   "id": "dp2",
+   "fork": "Which spectra: adiabatic, NA (shifts) or FA (shifts + linewidths)",
+   "wrong_choice": "NA spectra (the paper's Fig. 2d level) or adiabatic spectra",
+   "consequence": "Tc +20 to +45%; SOC maximum +23%",
+   "ablation": "nonadiabatic_shifts_only_NA",
+   "kind": "convention (stated)"
+  },
+  {
+   "id": "dp3",
+   "fork": "Constant vs energy-dependent DOS for the 1x1 H phase",
+   "wrong_choice": "Constant-DOS Eliashberg (cheaper to reason about; ignores the Q-valley edge and the shift of mu at low T)",
+   "consequence": "Tc -8.3% / -6.2%; SOC maximum -6.2%",
+   "ablation": "constant_dos_for_1x1",
+   "kind": "model class"
+  },
+  {
+   "id": "dp4",
+   "fork": "Allen-Dynes / McMillan vs Eliashberg at lambda > 1.5",
+   "wrong_choice": "Allen-Dynes formula from lambda, omega_log, omega_2",
+   "consequence": "Tc(0.17) -3.75%, SOC maximum -3.97%, high-doping CDW +6.3%/+10.7%",
+   "ablation": "allen_dynes_formula",
+   "kind": "model class"
+  },
+  {
+   "id": "dp5",
+   "fork": "Which criterion marks the end of the 1x1 H ground state: PES energy crossing, 1x1 soft-mode instability or CDW lower stability edge",
+   "wrong_choice": "Imaginary Gamma* (M) soft mode of the 1x1 phase (x = 0.2029) or the lower edge of the CDW branch (0.1850)",
+   "consequence": "x_c off by +0.014 / -0.004; cascades into the SOC maximum (+28% / -7.9%)",
+   "ablation": "boundary_at_soft_mode_instability",
+   "kind": "regime judgement; coexistence and hysteresis found in the data; cascade"
+  },
+  {
+   "id": "dp6",
+   "fork": "Doping units: PES labelled by tot_charge of the 2x2 cell; soft-mode and hysteresis tables in 10^14 cm^-2",
+   "wrong_choice": "Report the 2x2-cell charge (or the areal density) as x_c",
+   "consequence": "x_c = 0.756 or 2.15 instead of 0.1890",
+   "ablation": "doping_per_2x2_cell",
+   "kind": "convention found in metadata"
+  },
+  {
+   "id": "dp7",
+   "fork": "Whether the ground-state maximum includes spin-orbit coupling (SOC spectra exist only at 0.18 and 0.19)",
+   "wrong_choice": "Use the scalar-relativistic curve",
+   "consequence": "SOC maximum +28%",
+   "ablation": "soc_omitted",
+   "kind": "data coverage"
+  },
+  {
+   "id": "dp8",
+   "fork": "Dopings of the archive spectra 2x2cdw_dop1-3, which carry no doping; the paper caption quotes n1 = 3.0, n2 = 4.3, n3 = 4.6 x 10^14 cm^-2",
+   "wrong_choice": "Trust the caption, or assign dop1-3 to the first three rows of the authors' table",
+   "consequence": "Tc(0.35) -23% / -31% off",
+   "ablation": "cdw_dopings_from_caption",
+   "kind": "label inconsistency found by a cross-check (Allen-Dynes of the spectra vs the archived table)"
+  },
+  {
+   "id": "dp9",
+   "fork": "What the archived Tc tables are: their header says only \"Tc\"; they are Allen-Dynes values (and their 1x1 A/NA columns do not match the archived A/NA spectra)",
+   "wrong_choice": "Use the archived tables as Eliashberg Tc (interpolating the 1x1 table; reading the CDW table at 1.4/1.6)",
+   "consequence": "Tc(0.15) -12.3%, Tc(0.17) -5.1%; CDW +6.3%/+10.7%",
+   "ablation": "archived_tables_taken_as_eliashberg",
+   "kind": "metadata inconsistency found by a cross-check"
+  }
+ ],
+ "graded_fields": [
+  "tc_1x1_K at x = 0.15 and 0.17 (within 3%)",
+  "critical_doping_e_per_cell (within 0.002)",
+  "tc_1x1_soc_at_critical_doping_K (within 3%)",
+  "tc_cdw_high_K at x = 0.35 and 0.40 (within 4%)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 20,
+  "oracle_charge": 29,
+  "budget": 34,
+  "catalog_cost_retrievals_only": 58,
+  "catalog_cost_note": "retrievals only; every Eliashberg run costs 2 more",
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "oracle_container_seconds": 27
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image); the lab runs eliashberg.py (numpy/scipy only)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/51yyy-ksf72",
+  "doi": "10.24435/materialscloud:z1-aw",
+  "license": "CC BY 4.0",
+  "files_used": [
+   "fig2a-d.tar.gz",
+   "fig2e.tar.gz",
+   "fig3.tar.gz",
+   "fig4.tar.gz",
+   "fig5.tar.gz",
+   "input.tar.gz",
+   "README.md"
+  ],
+  "md5": {
+   "fig2a-d.tar.gz": "4cdb4ac5e83aaa4e3067d6304cb5e97e",
+   "fig2e.tar.gz": "0514e9cf3bd294ef9f49e5d79912aefb",
+   "fig3.tar.gz": "dbf67323c8b26e984707a9ab512f979c",
+   "fig4.tar.gz": "ad524c1f940d23e3280ac430a32fe286",
+   "fig5.tar.gz": "25bf433a60498198d5aec2e36ba287bd",
+   "input.tar.gz": "6f541b537c66c7de1f3f92ef30242a17",
+   "README.md": "3b22839753c99e088435274842d0449d"
+  },
+  "not_used": "fig6.tar.gz (elphmod model III, shared with the excluded Schobert 2024 study), figS11.tar.gz"
+ },
+ "solver_validation": {
+  "n_values": 318,
+  "max_abs_relative_deviation": 0.0021077418104180623,
+  "against": "archived fig2e/tc_*.dat (MM, AD, CE, CA, DE, DA at mu* = 0-0.20)"
+ },
+ "exceptions": {},
+ "notes": "Dome maximum and its doping (design target 3) are not graded: the archived 2x2 CDW Tc in the coexistence window are Allen-Dynes values without spectra, slightly above the 1x1 values, and the paper's headline 34.6 K (1x1 at 0.20, Allen-Dynes) would pass any such check by recall. The graded SOC maximum of the 1x1 ground-state branch replaces it.",
+ "calibration": {
+  "tc_1x1_K (relative, tolerance 3%)": {
+   "reference": {
+    "0.15": 15.991,
+    "0.17": 26.802
+   },
+   "robustness": {
+    "tc_custom_rigid_band": {
+     "0.15": -0.0121,
+     "0.17": -0.0113
+    },
+    "tc_custom_rigid_band_upper_dos": {
+     "0.15": -0.0102,
+     "0.17": -0.0083
+    },
+    "tc_moments_no_shape": {
+     "0.15": -0.0109,
+     "0.17": 0.003
+    },
+    "tc_moments_ratio": {
+     "0.15": -0.0109,
+     "0.17": -0.0001
+    },
+    "tc_lambda_weighted_mix": {
+     "0.15": -0.0132,
+     "0.17": -0.0097
+    }
+   },
+   "gray_zone": {
+    "single_neighbour_shape_lower": {
+     "0.15": -0.0018,
+     "0.17": 0.0286
+    },
+    "single_neighbour_shape_upper": {
+     "0.15": -0.016,
+     "0.17": -0.035
+    }
+   },
+   "gray_zone_note": "one neighbour's spectral shape rescaled to the tabulated lambda ignores the tabulated omega_log; not defensible, not graded as a wrong path",
+   "nearest_ablations": {
+    "tc_allen_dynes": {
+     "0.15": -0.0181,
+     "0.17": -0.0375
+    },
+    "tc_constant_dos": {
+     "0.15": -0.0827,
+     "0.17": -0.0621
+    },
+    "tc_unscaled_average_spectrum": {
+     "0.15": -0.0812,
+     "0.17": 0.0005
+    },
+    "tc_linear_interpolation": {
+     "0.15": -0.107,
+     "0.17": -0.0104
+    },
+    "tc_archived_table": {
+     "0.15": -0.1229,
+     "0.17": -0.0505
+    },
+    "tc_mcmillan": {
+     "0.15": -0.0875,
+     "0.17": -0.1596
+    },
+    "tc_NA_spectra": {
+     "0.15": 0.262,
+     "0.17": 0.2052
+    },
+    "tc_A_spectra": {
+     "0.15": 0.4476,
+     "0.17": 0.2896
+    }
+   },
+   "oracle": {
+    "0.15": -0.01091813354736082,
+    "0.17": -9.651727529946807e-05
+   },
+   "tolerance": "|rel| <= 0.03"
+  },
+  "critical_doping_e_per_cell (absolute, tolerance 0.002)": {
+   "reference": 0.18895,
+   "robustness": {
+    "quadratic": 0.00069,
+    "well_minimum": -1e-05
+   },
+   "nearest_ablations": {
+    "cdw_spinodal": -0.004,
+    "soft_mode": 0.0139,
+    "per_2x2_cell": 0.7558,
+    "areal_density": 2.15
+   },
+   "oracle": 0.0,
+   "tolerance": "|abs| <= 0.002"
+  },
+  "tc_1x1_soc_at_critical_doping_K (relative, tolerance 3%)": {
+   "reference": 27.042,
+   "robustness": {
+    "soc_at_xc_quadratic": 0.0138,
+    "soc_at_xc_well_minimum": -0.0001,
+    "soc_ratio_method": 0.0008
+   },
+   "nearest_ablations": {
+    "soc_allen_dynes": -0.0397,
+    "soc_constant_dos": -0.062,
+    "soc_at_cdw_spinodal": -0.0791,
+    "soc_mcmillan": -0.184,
+    "soc_NA_spectra": 0.2262,
+    "soc_omitted": 0.2762,
+    "soc_at_soft_mode_instability": 0.2783
+   },
+   "oracle": 1.2534811037356874e-05,
+   "tolerance": "|rel| <= 0.03"
+  },
+  "tc_cdw_high_K (relative, tolerance 4%)": {
+   "reference": {
+    "0.35": 12.93,
+    "0.40": 6.333
+   },
+   "robustness": "direct lab output once the labels are assigned (spread < 0.1%)",
+   "nearest_ablations": {
+    "cdw_mcmillan": {
+     "0.35": -0.0169,
+     "0.40": 0.061
+    },
+    "cdw_allen_dynes": {
+     "0.35": 0.0633,
+     "0.40": 0.1068
+    },
+    "cdw_archived_table": {
+     "0.35": 0.0629,
+     "0.40": 0.1069
+    },
+    "cdw_caption_dopings": {
+     "0.35": -0.2335,
+     "0.40": 0.0665
+    },
+    "cdw_table_order": {
+     "0.35": -0.3089,
+     "0.40": -0.4111
+    }
+   },
+   "oracle": {
+    "0.35": 0.0,
+    "0.40": 0.0
+   },
+   "tolerance": "|rel| <= 0.04"
+  }
+ }
+}

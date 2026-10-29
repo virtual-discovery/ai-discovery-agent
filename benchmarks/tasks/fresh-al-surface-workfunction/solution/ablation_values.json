@@ -1,0 +1,380 @@
+{
+ "ablations": {
+  "default_bands_ladder": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8543916302001219,
+    "100": 0.9532388357692684
+   },
+   "work_function_eV": {
+    "111": 4.055035454545454,
+    "100": 4.262329124579124
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7313330578938348,
+     "work_function_eV": 4.055035454545454
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9428046453936076,
+     "work_function_eV": 4.262329124579124
+    }
+   }
+  },
+  "default_bands_slope_fit": {
+   "surface_energy_J_per_m2": {
+    "111": 0.6783263073316838,
+    "100": 0.9270211156644133
+   },
+   "work_function_eV": {
+    "111": 4.055035454545454,
+    "100": 4.262329124579124
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.8703129947679232,
+     "work_function_eV": 4.055035454545454
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9667016012169143,
+     "work_function_eV": 4.262329124579124
+    }
+   }
+  },
+  "primitive_bulk_reference": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8349820201704891,
+    "100": 0.9600115596738195
+   },
+   "work_function_eV": {
+    "111": 4.063239309764309,
+    "100": 4.262900269360269
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.6935141970900531,
+     "work_function_eV": 4.063239309764309
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9348434327951054,
+     "work_function_eV": 4.262900269360269
+    }
+   }
+  },
+  "slope_fit_window_N7_12": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8373938347259043,
+    "100": 0.9321110892816548
+   },
+   "work_function_eV": {
+    "111": 4.063239309764309,
+    "100": 4.262900269360269
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.6916103932688659,
+     "work_function_eV": 4.063239309764309
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9602741836690982,
+     "work_function_eV": 4.262900269360269
+    }
+   }
+  },
+  "slope_fit_window_N8_12": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8023465734260862,
+    "100": 0.9453487607834762
+   },
+   "work_function_eV": {
+    "111": 4.063239309764309,
+    "100": 4.262900269360269
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7128677740089273,
+     "work_function_eV": 4.063239309764309
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9510029689397043,
+     "work_function_eV": 4.262900269360269
+    }
+   }
+  },
+  "total_local_potential_vacuum_level": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8226016065366353,
+    "100": 0.9523125030968727
+   },
+   "work_function_eV": {
+    "111": 3.8178717340067343,
+    "100": 4.012766666666667
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7032868716701917,
+     "work_function_eV": 3.8178717340067343
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9418609771948163,
+     "work_function_eV": 4.012766666666667
+    }
+   }
+  },
+  "thin_slab_ladder_N3_6": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8279861350646411,
+    "100": 0.9539992677472139
+   },
+   "work_function_eV": {
+    "111": 4.0112258333333335,
+    "100": 4.342412777777778
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7080372767476318,
+     "work_function_eV": 4.0112258333333335
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.943579308207859,
+     "work_function_eV": 4.342412777777778
+    }
+   }
+  },
+  "single_7_layer_slab": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8374465673201327,
+    "100": 0.9428595692186398
+   },
+   "work_function_eV": {
+    "111": 4.031765555555555,
+    "100": 4.242477777777777
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7163835758130971,
+     "work_function_eV": 4.031765555555555
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9322311397163502,
+     "work_function_eV": 4.242477777777777
+    }
+   }
+  },
+  "relaxation_from_7_layers": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8226016065366353,
+    "100": 0.9523125030968727
+   },
+   "work_function_eV": {
+    "111": 4.063239309764309,
+    "100": 4.262900269360269
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.5279754083074018,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7032868716701917,
+     "work_function_eV": 4.063239309764309
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9418609771948163,
+     "work_function_eV": 4.262900269360269
+    }
+   }
+  },
+  "k12_ladder_for_sigma_phi": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8486146401761298,
+    "100": 0.9619087330609043
+   },
+   "work_function_eV": {
+    "111": 4.057517323232324,
+    "100": 4.295556313131313
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7262364106015867,
+     "work_function_eV": 4.057517323232324
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9516367924231872,
+     "work_function_eV": 4.295556313131313
+    }
+   }
+  },
+  "area_counted_once": {
+   "surface_energy_J_per_m2": {
+    "111": 1.6452032130732706,
+    "100": 1.9046250061937453
+   },
+   "work_function_eV": {
+    "111": 4.063239309764309,
+    "100": 4.262900269360269
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7032868716701917,
+     "work_function_eV": 4.063239309764309
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9418609771948163,
+     "work_function_eV": 4.262900269360269
+    }
+   }
+  }
+ },
+ "robustness": {
+  "oracle_plan_N7_12": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8226016065366353,
+    "100": 0.9523125030968727
+   },
+   "work_function_eV": {
+    "111": 4.063239309764309,
+    "100": 4.262900269360269
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7032868716701917,
+     "work_function_eV": 4.063239309764309
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9418609771948163,
+     "work_function_eV": 4.262900269360269
+    }
+   }
+  },
+  "window_N8_12": {
+   "surface_energy_J_per_m2": {
+    "111": 0.819632614379936,
+    "100": 0.9542030898725192
+   },
+   "work_function_eV": {
+    "111": 4.06953406060606,
+    "100": 4.266984767676767
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7006675308416108,
+     "work_function_eV": 4.06953406060606
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9437869446905096,
+     "work_function_eV": 4.266984767676767
+    }
+   }
+  },
+  "window_N9_12_kz9_or_12": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8190260918577112,
+    "100": 0.9497200515399846
+   },
+   "work_function_eV": {
+    "111": 4.0631864646464635,
+    "100": 4.2749704040404035
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.700505505178171,
+     "work_function_eV": 4.0631864646464635
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9457478856199941,
+     "work_function_eV": 4.2749704040404035
+    }
+   }
+  },
+  "k24_ladders_for_sigma_phi": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8233451474443273,
+    "100": 0.9521347246871841
+   },
+   "work_function_eV": {
+    "111": 4.059946279461279,
+    "100": 4.2572431515151505
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7032868716701917,
+     "work_function_eV": 4.063239309764309
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9418609771948163,
+     "work_function_eV": 4.262900269360269
+    }
+   }
+  },
+  "wide_vacuum_window_2A": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8226016065366353,
+    "100": 0.9523125030968727
+   },
+   "work_function_eV": {
+    "111": 4.0632319841269835,
+    "100": 4.262899766081872
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9725637139629373,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7032868716701917,
+     "work_function_eV": 4.0632319841269835
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9418609771948163,
+     "work_function_eV": 4.262899766081872
+    }
+   }
+  },
+  "d12_from_N10_only": {
+   "surface_energy_J_per_m2": {
+    "111": 0.8226016065366353,
+    "100": 0.9523125030968727
+   },
+   "work_function_eV": {
+    "111": 4.063239309764309,
+    "100": 4.262900269360269
+   },
+   "work_function_ordering": "phi100>phi111",
+   "relaxation_d12_percent_111": 0.9562721463497237,
+   "thick_slab_predictions": {
+    "111_N18": {
+     "free_energy_offset_eV": 0.7032868716701917,
+     "work_function_eV": 4.063239309764309
+    },
+    "100_N18": {
+     "free_energy_offset_eV": 0.9418609771948163,
+     "work_function_eV": 4.262900269360269
+    }
+   }
+  }
+ }
+}

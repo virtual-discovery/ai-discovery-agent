@@ -1,0 +1,1082 @@
+{
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/bn.in": {
+  "bytes": 666,
+  "sha256": "3fc7de78882f5321fd09440eca0c22e51df744fc120cdfe4f86e60da3bcee680"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/bn.out": {
+  "bytes": 19844,
+  "sha256": "5b2b3f8a90c055203949efc1b64151d4d7757b2ec0aae32c2143f7deed8524d6"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn0": {
+  "bytes": 1551,
+  "sha256": "eb243056793d2a030544f815a1a15fe0ed1d8b1eb82e93153446094c7cd1fc5a"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn1": {
+  "bytes": 4190,
+  "sha256": "6b5c43b60295a883b2160f057ab7b6258a6b16b780e341ee99cf9a716c42464c"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn10": {
+  "bytes": 3974,
+  "sha256": "676d5263674fbf0991d85dff4d968a67bde2a3a76fe4be841db5040b268643f7"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn11": {
+  "bytes": 3974,
+  "sha256": "9921fba8a45c2f2e812a38ea7264946530e9bdd9b23c39be03d56bd117e13471"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn12": {
+  "bytes": 3974,
+  "sha256": "3f575b968ca1d59ed8e457e7278471887af49abad3848f79ef4287c1c0c93320"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn13": {
+  "bytes": 3974,
+  "sha256": "27a73a3c1547ca992173f582389291b8955bb2d95db7130060ed60c72bfde2f3"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn14": {
+  "bytes": 3974,
+  "sha256": "eda8027d81835fb7b069c3ec00f5cfe2c54b0dd7ab8dd6d58bb07dbe94b0c9bd"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn15": {
+  "bytes": 3974,
+  "sha256": "57a8a9c462c0447ba419c359e800e518be09da0415ada0bcb3e22258b3a378ca"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn16": {
+  "bytes": 3974,
+  "sha256": "9a56159df805b2914999c1e6e50366e3da4591ce50db63ef324cb0506d5ab750"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn17": {
+  "bytes": 3974,
+  "sha256": "d909c6f05077f87b8898f0ee7059325e2e57a3bc1f2f90351cfd1399fe15cb71"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn18": {
+  "bytes": 3974,
+  "sha256": "a5fa1cb3de211a0dd7c9bdcc2d1df832240391147bbfd057a7613de302f37213"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn19": {
+  "bytes": 3974,
+  "sha256": "d7c386d7cd0896bd7d0ca01188e6098c9c1fd556d0f899b67fdf3388b17b1270"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn2": {
+  "bytes": 3974,
+  "sha256": "05ee143132fc487fa734ffc8bb515852985aea06f5c5b7bd62f39bc9fdac01c5"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn20": {
+  "bytes": 3974,
+  "sha256": "09125639e3cd253d07389e2d15b0859160bd6db3f4b14ebce72b051c28eda861"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn21": {
+  "bytes": 2905,
+  "sha256": "b6d8e2c30939e59f27c544c5abcd599c12606c16fee1ad21596107973001452a"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn3": {
+  "bytes": 3974,
+  "sha256": "f793a62f05fb9e788ed30c0a569586a17acf38e22b8825f29e8219a63b80219a"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn4": {
+  "bytes": 3974,
+  "sha256": "7ba7be06ab0ca5b4f2e810fd8510b1b38ef747c36796ab397e0ea3c9932972f5"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn5": {
+  "bytes": 3974,
+  "sha256": "c2c96d2c8ffc7bd621c5dba2c77e617b4f0abc4d27468a91149b9bc7dafbbfca"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn6": {
+  "bytes": 3974,
+  "sha256": "607e27e6ae0a0e7f4f251492ebde5d039fbbc292a04a16e465f498d140591ef5"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn7": {
+  "bytes": 3974,
+  "sha256": "9a0b296ead18e52086e74daa759699c9d6605a9066baa8e1ad36fd96c5a06223"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn8": {
+  "bytes": 3974,
+  "sha256": "95328173ee9e26dc09bd184783fb9fdc018f7248c90da77679fb236c46ca3e22"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/dyn9": {
+  "bytes": 3974,
+  "sha256": "406d6812aa9a7bf18d3eeed26a2f99733da941914e9e82b0b30c3320c9481d61"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-01": {
+  "bytes": 4097,
+  "sha256": "81108b5da2a85e7c10a467226112c6e065317ed790f7ec29e7b298ea1ce9bb4a"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-02": {
+  "bytes": 4097,
+  "sha256": "37e488745d11503ca012f5cbee1eefaad7192f2ab4ac1af30ea06d337dd6c2d4"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-03": {
+  "bytes": 4097,
+  "sha256": "b6399cd0d1a5eebc81b9389303a91f2174f29be424bdfcb85e3cfecbed88ced7"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-04": {
+  "bytes": 4097,
+  "sha256": "f1d2fcb9252cc4217a32dbdfaaecaa380d4e5cb12c26e41564d7f1e0efa2ed24"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-05": {
+  "bytes": 4097,
+  "sha256": "6a090e7d1055592b114ad7347750271e650372f338b1b7c8eead4e3c0275b0b9"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-06": {
+  "bytes": 4097,
+  "sha256": "9e942f43ef8e1180c1054995bab6344089b3a4b3e690e78085d4e354ed785633"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-1": {
+  "bytes": 4097,
+  "sha256": "7222f5465dbb338ff6bdf5c6775eb8620d7c531d2d316a7db9a338215abf4dd0"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-2": {
+  "bytes": 4097,
+  "sha256": "005b5e5a703194dad7032d7a3918c25f022a7d3d31b66dd49d21154c22f92f45"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-3": {
+  "bytes": 4097,
+  "sha256": "302d753019291fe49f262d630c10e522baf6c921ae224aace9d6c55b7bff1496"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-4": {
+  "bytes": 4097,
+  "sha256": "f260805ff2f080c47d74b88f3fae5ac4fc5ad25c8ab8afa319c37d96f535a52d"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-5": {
+  "bytes": 4097,
+  "sha256": "9cfedb8cdda4e4d85b77ee181672997c0a8976716c16cec04267995050d8c9f1"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-0-6": {
+  "bytes": 4097,
+  "sha256": "bcd7a2a5f9db96c207f70f39b41de0fbbd4af5f407da82a0b0475a61bd911afa"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-1": {
+  "bytes": 4097,
+  "sha256": "39348c25aee3d965d40774930614fec0a852c757195352aff867dce16041453c"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/longwave/dyn_6-1-5": {
+  "bytes": 4097,
+  "sha256": "bac2c19d8acf1e49d8a7292f0690f403b78aa08c533c4be8bfbbbfc59435d529"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/matdyn.in": {
+  "bytes": 262,
+  "sha256": "17fff9e11f0728f5cd5e3040f113ac87ed3d9a003cc631161366b3307a111ecc"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/matdyn.modes": {
+  "bytes": 3303904,
+  "sha256": "9608a6e012e773b858446d9bfd4041af982d91ef5586fd5c4531a3537f3d2242"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/matdyn.out": {
+  "bytes": 1199236,
+  "sha256": "56d2c9e4a14adae4d97018a551b738a35c4c6424e78f19fdf34c64a37d3fb98f"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/ph.in": {
+  "bytes": 314,
+  "sha256": "f800758a4a588d34b84e2e7ba00d7ad60e6bb81baf97957786ac8be63f8279bc"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/ph.out": {
+  "bytes": 8281071,
+  "sha256": "513f176fa093e0ea40e3ff6dc18e989e9280575e6c8e740c2326385be1a7253c"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/q2r.in": {
+  "bytes": 137,
+  "sha256": "866e5f89dbf84625292abb1b057acd3f6787f39a13fe0604b066c59b2a2dac89"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/1D_code/q2r.out": {
+  "bytes": 98649,
+  "sha256": "45a65db16bf655435698da599fe6372d2e740adca322b1b5baff1db830ed2064"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/bn.in": {
+  "bytes": 628,
+  "sha256": "235d25275f61609d994d2e4cf5450fab04622c894e4b154eb62786efc188a5fd"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/bn.out": {
+  "bytes": 21449,
+  "sha256": "925fb567d49353263e3eee02dadd4c528ca8a7361fefbaecb27647c5f69c7460"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn0": {
+  "bytes": 1551,
+  "sha256": "eb243056793d2a030544f815a1a15fe0ed1d8b1eb82e93153446094c7cd1fc5a"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn1": {
+  "bytes": 4253,
+  "sha256": "20aa5d539c1cfc3d47542da382048014294eb07e8054ee0d42851b0d15049262"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn10": {
+  "bytes": 4097,
+  "sha256": "5f7065029753d895e686343561b5917f516eae7fcffd3b44231751b8e39e0ca8"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn11": {
+  "bytes": 4097,
+  "sha256": "127d4418b3594340b42d2c787b0caa8832c8e1b96d93e2be898e8ac26eb16e5c"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn12": {
+  "bytes": 4097,
+  "sha256": "f4a41206ce36a9ea128a217bc5454be5436cb12539e0a893fb2c37cb1c749459"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn13": {
+  "bytes": 4097,
+  "sha256": "d8c31228d776ab2fe8f0baef3c41b6aa304311cd2ae4cafca2115f610d4b7c27"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn14": {
+  "bytes": 4097,
+  "sha256": "1b142aefb23abba1cd8601ce8443cbf684d1aa12ab571d31b68c71605ccd5b8e"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn15": {
+  "bytes": 4097,
+  "sha256": "0edee078b73164dea13953cb7081d8e1aa88ff660d2dee4aaf0e7e245f983d05"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn16": {
+  "bytes": 4097,
+  "sha256": "9f4228ca9cd605040976f9467986f007e789a6ee09f7854c01ded544e5101796"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn17": {
+  "bytes": 4097,
+  "sha256": "6b8860841cf641cbf6863b8cf0a7e3de8f15bb4252ee46cda885d6d1ca1a1024"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn18": {
+  "bytes": 4097,
+  "sha256": "2cb682fd7927e2c747644d21ffcbe48a630edc83ab05c8fe81786cf45733b07b"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn19": {
+  "bytes": 4097,
+  "sha256": "14ead7855b0e761c672378a20edec4890e5a2da2c414a4566dd1a2e60d533229"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn2": {
+  "bytes": 4097,
+  "sha256": "fec7a63e73c4d3ae2834346f3870a2dc90d1558b527c4a2a75c1e1b70c1d88b2"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn20": {
+  "bytes": 4097,
+  "sha256": "bc344915c0f42e9f379fb531313816ffdef95a36d147851fcc9fba8a8facace4"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn21": {
+  "bytes": 2968,
+  "sha256": "7b6f22061037b8f77aa6a286bb1eecf6cd21fa13b1d055f386a8e8a76c686fc5"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn3": {
+  "bytes": 4097,
+  "sha256": "973fed528529025bc2b0d0f7df1943a25f4a6e7ccb53de18865f2eeb7c6b18e3"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn4": {
+  "bytes": 4097,
+  "sha256": "0dbbe9a8c8949672cc4471362eec1cc7d3f16c711acd9e52f7bb9a2984c16a3d"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn5": {
+  "bytes": 4097,
+  "sha256": "e6e8ebfdb03a9b12af59035ae4eeb767b906e2e2f6cd98e2ce853ef1cbb76b97"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn6": {
+  "bytes": 4097,
+  "sha256": "039efb148b80e8cadf6b900217eb1a890ed4a8aaf26e4335f563d72763aef13f"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn7": {
+  "bytes": 4097,
+  "sha256": "c5e7a1f5bf6205c1f1bdf3e9db3678485ecd086ab570c05cb9c4e0118a734373"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn8": {
+  "bytes": 4097,
+  "sha256": "849818fd7269d27a0174a8568ee1f0fe999326fbb296927881150a9163517b38"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/dyn9": {
+  "bytes": 4097,
+  "sha256": "6c132291f6652982905dfea090fb86492c6931d87eaaa66c70697a2b72937232"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/matdyn.in": {
+  "bytes": 262,
+  "sha256": "2a0a5159d4b95215d9a8c7245b5de5d1619c7d9a4f1c9371da58b4efdd09e1cf"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/matdyn.modes": {
+  "bytes": 3303904,
+  "sha256": "89670fa3bc1b13eb61564e5217bcfb44243e5bc510fc8e88cc88c846da1e40d7"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/matdyn.out": {
+  "bytes": 1135,
+  "sha256": "8e79246f45e526d9b16794a791d5373da1adf72934cbd8263e96c97d71a27392"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/ph.in": {
+  "bytes": 295,
+  "sha256": "b48e2257330fdb34c09828704f714a08dad412e5f2ab88929cb1bb54fd9d6880"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/q2r.in": {
+  "bytes": 64,
+  "sha256": "72d1db4fa12d6c964fcfd47bdc12c5c0e9e1d9676d5ba92c93c6f3f58dc279ea"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/3D_code/q2r.out": {
+  "bytes": 3027,
+  "sha256": "f6ddc0815286719417c5ee0bebdd4897ce04da19e624cb81103bd9fa80159bee"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/pseudo/B_pbe_v1.01.uspp.F.UPF": {
+  "bytes": 306486,
+  "sha256": "7a1249cabd9c3afd7708ab1d8a10faa8f9b432831d9d2ec91ec23859e2ee0c17"
+ },
+ "materialscloud_data_Rivano/BN_atomic_chain/pseudo/N.oncvpsp.upf": {
+  "bytes": 156069,
+  "sha256": "36f1fc9a24ff5c788a536d4c1a53f82adca7b1fd132827fc654c124d69f274ca"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn0": {
+  "bytes": 529,
+  "sha256": "973889abb155ea6adb5dea024ecc79d73d7c24bac9172b7e7c28ae1424eb82d5"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn1": {
+  "bytes": 125337,
+  "sha256": "92eb2e30f62575980ac3888c856f577d1142c933103776664aa50813c0680caa"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn10": {
+  "bytes": 187161,
+  "sha256": "5292a52894232ba39c4e061f1930610b8d4a2c940fcab62308968738c11460b5"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn125": {
+  "bytes": 187161,
+  "sha256": "b8a98bb6b9fe0138911980e8a8726f5b8138635fdc4b4d13e52f62745a1d5a4d"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn2": {
+  "bytes": 187161,
+  "sha256": "82a22358383acf1ffdf5eb7b5ed7bff7202fb3aa9a65e81503fadc209bdb8590"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn25": {
+  "bytes": 187161,
+  "sha256": "5d16128cd008fd89ae1d31075406638eb444e2f64ceca02096e83c100b85b835"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn3": {
+  "bytes": 187161,
+  "sha256": "57f75b5f856400db55a02935800b52fe237f601ae50fcf09606ac58f8893cbf3"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn4": {
+  "bytes": 187161,
+  "sha256": "0a3eb3683ba6b6fea98161d282b06e7c6a8cb8d228dfedb64b67512b76fed0d1"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn5": {
+  "bytes": 187161,
+  "sha256": "d7b990d340fbe81d603df2e34f58b1572911ddd49f4696b13b162103f47f261e"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn6": {
+  "bytes": 187161,
+  "sha256": "822c2a267b84e93312177d8218bdc6d2e3cafa123dff6ac7b6a3843349196668"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn7": {
+  "bytes": 121268,
+  "sha256": "ed9073b9f108722de258aa7e77f5388a2cae2a2bf767beeb47c5f3edf8b1c350"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn75": {
+  "bytes": 187161,
+  "sha256": "e961f2c4a5731806d062aecc1fbf2a32ba81992c888f77da51f89befc93a6cab"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn8": {
+  "bytes": 187161,
+  "sha256": "64e36447ced165d4ed9be4ece0e85dd6c392426cbfe8a426178d189b10a244be"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/dyn9": {
+  "bytes": 187161,
+  "sha256": "54cfa949f56a9de8528436be59dfc0c0b190cbde1752f311475a2a92cc4324ce"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/longwave/dyn0": {
+  "bytes": 529,
+  "sha256": "973889abb155ea6adb5dea024ecc79d73d7c24bac9172b7e7c28ae1424eb82d5"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/longwave/dyn10": {
+  "bytes": 187161,
+  "sha256": "54cfa949f56a9de8528436be59dfc0c0b190cbde1752f311475a2a92cc4324ce"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/longwave/dyn125": {
+  "bytes": 187161,
+  "sha256": "b8a98bb6b9fe0138911980e8a8726f5b8138635fdc4b4d13e52f62745a1d5a4d"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/longwave/dyn15": {
+  "bytes": 187161,
+  "sha256": "5292a52894232ba39c4e061f1930610b8d4a2c940fcab62308968738c11460b5"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/longwave/dyn25": {
+  "bytes": 187161,
+  "sha256": "5d16128cd008fd89ae1d31075406638eb444e2f64ceca02096e83c100b85b835"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/longwave/dyn4": {
+  "bytes": 187161,
+  "sha256": "0a3eb3683ba6b6fea98161d282b06e7c6a8cb8d228dfedb64b67512b76fed0d1"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/longwave/dyn6": {
+  "bytes": 187161,
+  "sha256": "822c2a267b84e93312177d8218bdc6d2e3cafa123dff6ac7b6a3843349196668"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/longwave/dyn75": {
+  "bytes": 187161,
+  "sha256": "e961f2c4a5731806d062aecc1fbf2a32ba81992c888f77da51f89befc93a6cab"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/longwave/dyn_05": {
+  "bytes": 187161,
+  "sha256": "64e36447ced165d4ed9be4ece0e85dd6c392426cbfe8a426178d189b10a244be"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/matdyn.in": {
+  "bytes": 242,
+  "sha256": "680e5553151d5447e018973e79e9af8df106ed087c2fbabbf74ced91344d39db"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/matdyn.modes": {
+  "bytes": 6234427,
+  "sha256": "410ba7d18ed2449f8c01df9a30461fd8190098a5d72d3ebf2dcc0c5cd78fc989"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/matdyn.out": {
+  "bytes": 99755,
+  "sha256": "63f4d328ced50d626c6b7456435aaa447676802e11b27b023946d71d3be424dd"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/ph.in": {
+  "bytes": 342,
+  "sha256": "e43b7a0f82ef226ae62881df6553ad5f87ae56e865c9c5f50eb9a2404347e25d"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/q2r.in": {
+  "bytes": 83,
+  "sha256": "aafb24ca9139345a2f9a4e073d0b1f851d6b6ae82d8c79b28235fedf4f98ca91"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/q2r.out": {
+  "bytes": 15375,
+  "sha256": "ba88498af73c29428878e7f896c9a38cf3db302eafa79fbb0239c78e426c0cd9"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/1D_code/scf.in": {
+  "bytes": 1766,
+  "sha256": "93594cd65f4ca1b1befcfdc5fd00d382edae2b525a19448cd855f3cf8a54b89a"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/dyn0": {
+  "bytes": 529,
+  "sha256": "973889abb155ea6adb5dea024ecc79d73d7c24bac9172b7e7c28ae1424eb82d5"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/dyn1": {
+  "bytes": 129175,
+  "sha256": "c860d0b966cf1978fef0b47c881201efc8639d9eacac2df08a5444decc6501a7"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/dyn10": {
+  "bytes": 187161,
+  "sha256": "ad96ffc53bb228fb628d5caf8ae01ac858b2dc33cddad72fecceed9d023b2a13"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/dyn2": {
+  "bytes": 187161,
+  "sha256": "59ec3319b87011b19b265b2bbbe920819f18722c0b960ce3887ab24f72cd0a85"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/dyn3": {
+  "bytes": 187161,
+  "sha256": "17478d4ac8d39b9a6b3152c9e085c10463d0c531191ffae8f8f53321762aed32"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/dyn4": {
+  "bytes": 187161,
+  "sha256": "ac535fcb21dbc5c2bc7d89d88d535d87ad47872dee1ea13760baa440349e3605"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/dyn5": {
+  "bytes": 187161,
+  "sha256": "9f831b13e3b4775814057a0fa6729011ca04bf7d51b1e549e4459f91b18fb21a"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/dyn6": {
+  "bytes": 187161,
+  "sha256": "7567ddb605d85a263cf5fd6bdc44e1b60d2edef3f56be7a20bfe2b33e9e66b7d"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/dyn7": {
+  "bytes": 121268,
+  "sha256": "0cf5d998a53b8419f4d878c7d3e9b28968a5cef0b19245ec75321af9b368c6c5"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/dyn8": {
+  "bytes": 187161,
+  "sha256": "4424bcb44107961a1cf4dca39ad6e09ac1c0b544231583d89dcbf2bb1baa991f"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/dyn9": {
+  "bytes": 187161,
+  "sha256": "8f17f715020ad88250cf1daf7cde92aac314470ea5ed05440594c645066bb85b"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/longwave/dyn0": {
+  "bytes": 529,
+  "sha256": "973889abb155ea6adb5dea024ecc79d73d7c24bac9172b7e7c28ae1424eb82d5"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/longwave/dyn_05": {
+  "bytes": 187161,
+  "sha256": "4424bcb44107961a1cf4dca39ad6e09ac1c0b544231583d89dcbf2bb1baa991f"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/longwave/dyn_10": {
+  "bytes": 187161,
+  "sha256": "8f17f715020ad88250cf1daf7cde92aac314470ea5ed05440594c645066bb85b"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/longwave/dyn_15": {
+  "bytes": 187161,
+  "sha256": "ad96ffc53bb228fb628d5caf8ae01ac858b2dc33cddad72fecceed9d023b2a13"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/matdyn.in": {
+  "bytes": 222,
+  "sha256": "3c78245bf0093c4107e33bac797a472cb1b2e1c6725ceeb3050ef173264d806d"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/matdyn.modes": {
+  "bytes": 6234427,
+  "sha256": "02aba6c444fdf9eff4963910a59fea2d3f2786e26564f9036228c322f2aedf08"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/matdyn.out": {
+  "bytes": 1884,
+  "sha256": "d98510464d728807eb0ca1e3a7517835d3635287f2b262c8ebb475e63a3965c1"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/ph.in": {
+  "bytes": 342,
+  "sha256": "e43b7a0f82ef226ae62881df6553ad5f87ae56e865c9c5f50eb9a2404347e25d"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/ph.out": {
+  "bytes": 173263,
+  "sha256": "34968e9472cd947fa26c54bdd9c473447a87cd1895becf032dd1b6e8c1aee25f"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/q2r.in": {
+  "bytes": 63,
+  "sha256": "f787e4378868ce0a6a5f0c723479758fee26d7602f37f72d162cbbf6c6c91c2b"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/q2r.out": {
+  "bytes": 4143,
+  "sha256": "615fbf71b808576f73a174d6daa86bdc44db07712e775d0d5693dcd3b2e2574f"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/scf.in": {
+  "bytes": 1741,
+  "sha256": "8be2f866f05742a5a768e2393d29a4215d704f45dba385ec562d3ba531ec748d"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/44/3D_code/scf.out": {
+  "bytes": 38832,
+  "sha256": "54b0fe655ae4eed60bd808d8c4f800ef1b447e1eca2451db7e28c5481593749c"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/dyn0": {
+  "bytes": 529,
+  "sha256": "d3017c354ed4fe395bdbccb780b21716b1b77b0d4f8b4b19e98edebbe30b7d70"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/dyn1": {
+  "bytes": 197623,
+  "sha256": "77721232d8adc89559184b66bdb95f264de57069fd80943beb11244913f4cd9b"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/dyn2": {
+  "bytes": 290819,
+  "sha256": "bbba4fc0a678394ea36c676b4541c342b44be088f297b064ba7f2f4988abdabe"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/dyn3": {
+  "bytes": 290819,
+  "sha256": "3b0cfd43126e2590cf73de432ae8c7f7083574053a22d69c40d4852e15c504e1"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/dyn4": {
+  "bytes": 290819,
+  "sha256": "25bc7ae269b0cbb53d1144dfdb7844cc34086cf925bacdedee25639d4e4ff153"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/dyn5": {
+  "bytes": 290819,
+  "sha256": "3ab639240f4a1bdb1d6ee9b7975118e6a3d2e5a85c75f5e43272ce035ae92b49"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/dyn6": {
+  "bytes": 290819,
+  "sha256": "65636e64af6031750385061055b17b79aa46ea6405088146160bccd2f76ecfff"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/dyn7": {
+  "bytes": 187918,
+  "sha256": "d68751fad5b64be223981aa832857bc5cbc148d524783f72460f441bb88f4432"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/longwave/dyn0": {
+  "bytes": 529,
+  "sha256": "d3017c354ed4fe395bdbccb780b21716b1b77b0d4f8b4b19e98edebbe30b7d70"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/longwave/dyn10": {
+  "bytes": 290729,
+  "sha256": "9447bcabb796a41bc26dff17c49f134661662a1124bcdfd20c11d55424a63dd3"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/longwave/dyn100": {
+  "bytes": 290729,
+  "sha256": "9447bcabb796a41bc26dff17c49f134661662a1124bcdfd20c11d55424a63dd3"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/longwave/dyn125": {
+  "bytes": 290729,
+  "sha256": "c2d36ae7f019eae589d4c0a406de4c14bbaf1982a5beb34199e9c45ca46dabe6"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/longwave/dyn15": {
+  "bytes": 290729,
+  "sha256": "3293d2c01db0f52b89928de9f622ff17d40761961e05e28ff5e17d4830d1a47f"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/longwave/dyn25": {
+  "bytes": 290729,
+  "sha256": "06923522c4671e3f20364c819c8633656007ec619e90ac08f44599d943db13ff"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/longwave/dyn50": {
+  "bytes": 290729,
+  "sha256": "bdd1954ff5edd680e30680cdf66ed815c09903e75b0763a7017d9e2fb2b47d1b"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/longwave/dyn75": {
+  "bytes": 290729,
+  "sha256": "abb9f8244a6199f4eee44fafad3b578b080490eadea8e60ba974b9bc3fc9bd84"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/matdyn.in": {
+  "bytes": 242,
+  "sha256": "680e5553151d5447e018973e79e9af8df106ed087c2fbabbf74ced91344d39db"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/matdyn.modes": {
+  "bytes": 9629239,
+  "sha256": "fdd8b67f8fd71e4b3f21a93e050108ee5b48f79f13afb7aef16c1dc9e08bef90"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/matdyn.out": {
+  "bytes": 92855,
+  "sha256": "8c17ca700e284abdb1a1599885d3e071a91941ac809b99ec62f0a11bf0f0484e"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/ph.in": {
+  "bytes": 342,
+  "sha256": "3f23d18fd5f9a3dc72bf39277c0626589d5c53f3e8fe4942923902919e31efb4"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/q2r.in": {
+  "bytes": 83,
+  "sha256": "aafb24ca9139345a2f9a4e073d0b1f851d6b6ae82d8c79b28235fedf4f98ca91"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/q2r.out": {
+  "bytes": 15133,
+  "sha256": "b1ef1dbae51a5991cbb101d2922bdb28a5e1ff54b0fdb1dc6dabfa978a3b3a3a"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/scf.in": {
+  "bytes": 1895,
+  "sha256": "f5873be92d59be5939cc548e012018ed6680f23974af11d2537f3d83ea37fbc0"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/1D_code/scf.out": {
+  "bytes": 23743,
+  "sha256": "6caaad20f681e247e43dd63fcfb221e8889041d6bd2b1d6d00043ed4896cb069"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/dyn0": {
+  "bytes": 529,
+  "sha256": "d3017c354ed4fe395bdbccb780b21716b1b77b0d4f8b4b19e98edebbe30b7d70"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/dyn1": {
+  "bytes": 197623,
+  "sha256": "f684fb522ff6803f8e831f8aa363e5e4f86d39e6f2f99966708b8bdf9058aad6"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/dyn2": {
+  "bytes": 290818,
+  "sha256": "762422e05b804cf1350d5dd06e9690b3b0150e257cd117de1551a7853f197904"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/dyn3": {
+  "bytes": 290818,
+  "sha256": "e054927b41e4db1758688d3b34987b53f1f85cf8cd11b20fe215f49131a6d538"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/dyn4": {
+  "bytes": 290818,
+  "sha256": "dbbd3f0808aecadd65fe6fa67c1232424845bcb349797bf149301a8e987279e3"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/dyn5": {
+  "bytes": 290818,
+  "sha256": "30da972c14cfe26a3dc363594ace1940274a87dda2013ccc6c67a8648dc1598d"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/dyn6": {
+  "bytes": 290818,
+  "sha256": "59c4548b393076cfaeaa32d1d0bd579854d2dfd729cf9f51eba431e9c6f72c12"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/dyn7": {
+  "bytes": 187917,
+  "sha256": "c88a6931a48f2b134856bf10c00c186e5dd0c3e1bf50614b9bad255ee5b69498"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/matdyn.in": {
+  "bytes": 223,
+  "sha256": "98f5b1e7fbc1d63f1d75872a0f4f59d82621e250725b3606ab569d5e92672716"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/matdyn.modes": {
+  "bytes": 9629239,
+  "sha256": "45ba7fad75d2accd7eac26521bf714f162d70f1550a8c0534ba8cba46bb71811"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/matdyn.out": {
+  "bytes": 31772,
+  "sha256": "248c972d9bdd106798b1ec6b13cc2231fea364df96ca6b2d003410d954d7ba20"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/ph.in": {
+  "bytes": 341,
+  "sha256": "0d7f2a4d58969de06e7d9630c5ec56a1441ad2d14e45ee4ecf9a4482a08b54e3"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/q2r.in": {
+  "bytes": 64,
+  "sha256": "8acba5f864ac55b3c291cf4173fdf925d2c60931a249b347481028a074204003"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/q2r.out": {
+  "bytes": 7995,
+  "sha256": "c971cbd5b05fd8d27c7b75e32ac45f4e60e17d1d6947d001c4ec1ebd34756d55"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/55/3D_code/scf.in": {
+  "bytes": 1872,
+  "sha256": "8b6f70acbb5679b8f1e68d8c21df0d79ec5604bf878be44c3c7ce2ab60e80f7d"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn0": {
+  "bytes": 529,
+  "sha256": "7379f0150f5ce6b39ee8e604aa75df8a713c4ad837473198af3377280d8c6922"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn1": {
+  "bytes": 280626,
+  "sha256": "2a7b2dd09b1b87947dd6ed53144ef6055cdb8ee392dbe8ea88c0c75af72c1e0b"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn10": {
+  "bytes": 417095,
+  "sha256": "05a4f001f7285e62c4aa06f535424c466ae24137cbc5cdfe54684c49ac3b4a6b"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn100": {
+  "bytes": 417081,
+  "sha256": "dc6c12d0d9aaaad639f566c5d195bff084b47203f8d7b267fd5577821256c00e"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn125": {
+  "bytes": 417095,
+  "sha256": "24c528303d55a9dd55c612876dccb50817807798f9d20be9d59ca6881c71dfbd"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn15": {
+  "bytes": 417095,
+  "sha256": "f9bb10ad2605d35481fb2adacd6adfe90917d7dbd2fc018117130528611b3190"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn2": {
+  "bytes": 417095,
+  "sha256": "42ef829fd0d4eb1d57fe6b44653d0e4379ac5ffc7b29fcb286594897ef0e7574"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn25": {
+  "bytes": 417095,
+  "sha256": "378a9e6e889328cbed98588f073edeb60dae570a832a1cbe1a84d57583a8a985"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn3": {
+  "bytes": 417095,
+  "sha256": "1c9b27515babe032f0641f90c1a439739412fa78ce640a61c7791c88a7ef8ff4"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn4": {
+  "bytes": 417095,
+  "sha256": "52ee23fead9f99e1b2c21abf52ea1855080185389fbedb84fd944aac73e5f307"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn5": {
+  "bytes": 417095,
+  "sha256": "688e7d6942b3b6672b4f671f92e91f4e08c8f139cf6215acd6cad3430527e168"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn50": {
+  "bytes": 417081,
+  "sha256": "cce3aee2623fdb711331b0f92cbcb99211de4906ad546be95a6b84b34a524dad"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn6": {
+  "bytes": 417095,
+  "sha256": "d160747c12601dbdaaca6334efdef7646ccab819481f538b5b0947fe3a67e73f"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn7": {
+  "bytes": 268962,
+  "sha256": "fc2a0c71d9c8fffd373ca623696925a02e08a2793c7bd3de491665ff887a279c"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/dyn75": {
+  "bytes": 417095,
+  "sha256": "a47ca5687ee6a26b23bd4ee473d5fcdaf4f341d6e0bd0c9274d437d2e7f3e9be"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/longwave/dyn0": {
+  "bytes": 456,
+  "sha256": "49fd9ad19f66cda0b2b686f963e321285cc25839987220bd1c43030015cc9322"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/longwave/dyn10": {
+  "bytes": 417081,
+  "sha256": "c6327a3dc612cdab66d96b2a6ad6e4296923bb85846f9c00dcdca031d254dadf"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/longwave/dyn100": {
+  "bytes": 417081,
+  "sha256": "dc6c12d0d9aaaad639f566c5d195bff084b47203f8d7b267fd5577821256c00e"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/longwave/dyn125": {
+  "bytes": 417081,
+  "sha256": "7a2f39249c04544edfb4d006974be288ba17db2792015c1ff6d10f31ba5e7a85"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/longwave/dyn15": {
+  "bytes": 417081,
+  "sha256": "f59e9c0518892e35deb3dc1f3064295cb7fa53df5b0bf36389296bc8eeee0473"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/longwave/dyn25": {
+  "bytes": 417081,
+  "sha256": "234a004bb15eb0647ef1e13f3f0002fcb19e618178bb4683beb1f300385b0cb4"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/longwave/dyn50": {
+  "bytes": 417081,
+  "sha256": "cce3aee2623fdb711331b0f92cbcb99211de4906ad546be95a6b84b34a524dad"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/longwave/dyn75": {
+  "bytes": 417081,
+  "sha256": "7a2612c7c27c2f8ba01f7884ac9a0f140afabc5c3fecca6daec65d2c0f98c77a"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/matdyn.in": {
+  "bytes": 242,
+  "sha256": "680e5553151d5447e018973e79e9af8df106ed087c2fbabbf74ced91344d39db"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/matdyn.modes": {
+  "bytes": 13760947,
+  "sha256": "00bd19e7861cb8e9ecc6dccacea6b8ee305c5687dc1bd974adf5b433eca55371"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/matdyn.out": {
+  "bytes": 87335,
+  "sha256": "fd55ba4c594f8bdd1ae61311e29a58f228be6084ee536d1cb11cef9a037228cc"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/ph.in": {
+  "bytes": 342,
+  "sha256": "b093c1ec5112f7db9db2700fd06bdc0ced65c76728efcba7e877500b4b427100"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/q2r.in": {
+  "bytes": 83,
+  "sha256": "aafb24ca9139345a2f9a4e073d0b1f851d6b6ae82d8c79b28235fedf4f98ca91"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/q2r.out": {
+  "bytes": 14891,
+  "sha256": "f086324686ba65a465d2d9ef27e6a83f6a62ff6eb81f44bebef6132ae36521fb"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/1D_code/scf.in": {
+  "bytes": 2320,
+  "sha256": "0a8d046dc0ca409477b28bd0d6638cf55e3f15b88a9b5889323e352040069597"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/dyn0": {
+  "bytes": 529,
+  "sha256": "7379f0150f5ce6b39ee8e604aa75df8a713c4ad837473198af3377280d8c6922"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/dyn1": {
+  "bytes": 280617,
+  "sha256": "2faaf00361bc929b007f8d314f8221bd01ea0879e7a0c37704b97ca7f73f6d02"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/dyn2": {
+  "bytes": 417081,
+  "sha256": "101ba300842c1c58bc5ad73af15bb20072ad31622b2e29b2ba6b7bc898615d89"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/dyn3": {
+  "bytes": 417081,
+  "sha256": "9994fccce6c7b019a6ee97176edbf4bcc18e417a469a9937655659a29d86bd82"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/dyn4": {
+  "bytes": 417081,
+  "sha256": "43e113d49a178cfc35c2bb41bc0f9232d07909a95f4c8cb647b752327b3ef4fc"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/dyn5": {
+  "bytes": 417081,
+  "sha256": "1d7e5517c271d772ff23af6913970e17ae041d7babbf8b8ae9d7f34f94b56a51"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/dyn6": {
+  "bytes": 417081,
+  "sha256": "8f1eddf672e4faf651b1e795a3dece38b9f8dd7fd8090b28349f45d5a737ba27"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/dyn7": {
+  "bytes": 268948,
+  "sha256": "b1206f2a6cd496ee0749c496954e9183b191b2e914031821c5ff0183d885210a"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/matdyn.in": {
+  "bytes": 223,
+  "sha256": "98f5b1e7fbc1d63f1d75872a0f4f59d82621e250725b3606ab569d5e92672716"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/matdyn.modes": {
+  "bytes": 13760947,
+  "sha256": "aa71000c6f76cac0413ea841e639f02cc8a5c76e14a55efc30326dc5447bad80"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/matdyn.out": {
+  "bytes": 30550,
+  "sha256": "0974b80065c6b5aef0c42f184335e39f83d3962cbeef0e8ba9b10193bb98949f"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/ph.in": {
+  "bytes": 342,
+  "sha256": "b093c1ec5112f7db9db2700fd06bdc0ced65c76728efcba7e877500b4b427100"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/q2r.in": {
+  "bytes": 64,
+  "sha256": "8acba5f864ac55b3c291cf4173fdf925d2c60931a249b347481028a074204003"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/q2r.out": {
+  "bytes": 8443,
+  "sha256": "4aab18719e893c289de66708f404686c70c0a66a20284d616ef8a492031b6de9"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/scf.in": {
+  "bytes": 2297,
+  "sha256": "d724da47475469584c5cfa48321294043021d3090391564ac22c91b260327cee"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/66/3D_code/scf.out": {
+  "bytes": 45579,
+  "sha256": "ec1b69e6297ab187f969ebee59066d35c57ce8e49a193b8e2cc2c44ee6e913d2"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/pseudo/B_pbe_v1.01.uspp.F.UPF": {
+  "bytes": 306486,
+  "sha256": "7a1249cabd9c3afd7708ab1d8a10faa8f9b432831d9d2ec91ec23859e2ee0c17"
+ },
+ "materialscloud_data_Rivano/BN_nanotubes/pseudo/N.oncvpsp.upf": {
+  "bytes": 156069,
+  "sha256": "36f1fc9a24ff5c788a536d4c1a53f82adca7b1fd132827fc654c124d69f274ca"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/WZ_phase/dyn1": {
+  "bytes": 10160,
+  "sha256": "99a562098166e918f4347020db43366cf3b30dc5012a78dd40aa1f1a6edbd023"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/WZ_phase/ph.in": {
+  "bytes": 281,
+  "sha256": "c9434cb3ae99a8c24459d1e8c8312aef532570b0ac0537c0b8496e118bb2ce5f"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/WZ_phase/ph.out": {
+  "bytes": 33143,
+  "sha256": "e435658204865cf9ca04d8c16ce05d92518c2ba0d4c87d2ac694dc7810717491"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/WZ_phase/scf.in": {
+  "bytes": 916,
+  "sha256": "4ac5e5d32864e0694b1b25c443a0f21a3194373d6d1dff01b1d47db582d2e998"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/WZ_phase/scf.out": {
+  "bytes": 325724,
+  "sha256": "55c93782d4703dc5149bd0ccc5c6324caf1e47d69f5d8841e22f99fe20ac8cf9"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/ZB_phase/dyn1": {
+  "bytes": 10160,
+  "sha256": "99a562098166e918f4347020db43366cf3b30dc5012a78dd40aa1f1a6edbd023"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/ZB_phase/ph.in": {
+  "bytes": 281,
+  "sha256": "c9434cb3ae99a8c24459d1e8c8312aef532570b0ac0537c0b8496e118bb2ce5f"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/ZB_phase/ph.out": {
+  "bytes": 15043,
+  "sha256": "ebc1e042452387626b6277648040eb1849ac8c6c70b925f958562c59357acdb1"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/ZB_phase/scf.in": {
+  "bytes": 760,
+  "sha256": "f34ced2b5f3974abc1e5fcb99c1f665cde09ee7f42c4b4a2c41728d18bc9268b"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/ZB_phase/scf.out": {
+  "bytes": 149841,
+  "sha256": "4212e858d9dbe2e5868838e9335e2a249d19c5c78342729c67d5f9664420ed9b"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/pseudo/As.pz-bhs.UPF": {
+  "bytes": 90407,
+  "sha256": "7f634425508e24fe704fe0378d77b64d1b3ee00c73ba7fa885bead1f4aae6332"
+ },
+ "materialscloud_data_Rivano/GaAs_bulk/pseudo/Ga.pz-bhs.UPF": {
+  "bytes": 90693,
+  "sha256": "ee4ef5f619145be5f6f0b57e4620d4d36bcb5cbbc7721f478c0dd5d7a4878052"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/dyn0": {
+  "bytes": 456,
+  "sha256": "49fd9ad19f66cda0b2b686f963e321285cc25839987220bd1c43030015cc9322"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/dyn1": {
+  "bytes": 280816,
+  "sha256": "75bd5ac25eecbae3b277f00d9004879feb0ccdab0549e60d9d258f19fbc2d405"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/dyn2": {
+  "bytes": 417285,
+  "sha256": "f92065d8668a447f6a2d15cb186ee65036064bad6b38621ec267ab7d728f9fe1"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/dyn3": {
+  "bytes": 417285,
+  "sha256": "7bb2dc09e41cb326be0e500aa5134a132786a84618a43fd297527aac59c30d77"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/dyn4": {
+  "bytes": 417285,
+  "sha256": "722488f0237957d4f0df36a3b52b3d79ec99de3954b413fee784b93c2803c3cf"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/dyn5": {
+  "bytes": 417285,
+  "sha256": "85f7d847b897b504f067661fea1ac1758b588e7ff9de7c1db938df6787d37e74"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/dyn6": {
+  "bytes": 269152,
+  "sha256": "df9746681d13154e5ce8ed4a201e1b671d2db7b80d947c9077fa910205f07760"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/longwave/dyn10": {
+  "bytes": 417293,
+  "sha256": "2d3c22d2bc67ae8dda8831dc3787ff0331e78a4ce16c4b95b58fdf7f9e29c6bb"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/longwave/dyn100": {
+  "bytes": 417299,
+  "sha256": "cb91d7d2f0f19ff0ca9ac0a949755334c8ee1d65c39be45665df8358494d88ab"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/longwave/dyn125": {
+  "bytes": 417285,
+  "sha256": "7fd4c15f5089e5abc9f84226552a11ab40a53b4a4cbf70e178a170d4fa90d29b"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/longwave/dyn15": {
+  "bytes": 417285,
+  "sha256": "62b8a84a6a4ae7f33b691c073e9601e8c3b5a090881bcbac95c510314037ff33"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/longwave/dyn25": {
+  "bytes": 417285,
+  "sha256": "9b506a5e5d69187434d73d064380510684f3f7ccdc65790c1ec2e2587772a910"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/longwave/dyn50": {
+  "bytes": 417285,
+  "sha256": "3b42f7e6ab4f1add36e5e8fadc63d4dabf4ecd965eaaf2ebb1fac770bef2b199"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/longwave/dyn75": {
+  "bytes": 417285,
+  "sha256": "879851d5b4e285fae5f78bb5885962e0b949a69637d5241700f43f68bf3330af"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/matdyn.in": {
+  "bytes": 242,
+  "sha256": "680e5553151d5447e018973e79e9af8df106ed087c2fbabbf74ced91344d39db"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/matdyn.modes": {
+  "bytes": 13760947,
+  "sha256": "e152ed6fcbe974a9f613b16f581b01643f552191fb2cfe1b35054d26772b85af"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/matdyn.out": {
+  "bytes": 249498,
+  "sha256": "dec8a031badadc83a281991409e6d3ec27a3265fe9b7e9e7abb72199e91b0bb0"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/ph.in": {
+  "bytes": 336,
+  "sha256": "2a739cda84862fac050c557549c24566a8468a771ac5d021b55a7e023fae3a7c"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/q2r.in": {
+  "bytes": 83,
+  "sha256": "aafb24ca9139345a2f9a4e073d0b1f851d6b6ae82d8c79b28235fedf4f98ca91"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/q2r.out": {
+  "bytes": 28792,
+  "sha256": "9638460566f95814c6fced6abfbabafcc93947b5bcc258a0be75e979e5aa7c7e"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/scf.in": {
+  "bytes": 2512,
+  "sha256": "b46f74a19d803398cbc158b2bdc87bab407a03834960ba28ccabb16ba3e10af3"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/1D_code/scf.out": {
+  "bytes": 44222,
+  "sha256": "44fd7a8dfdf0552b93216e17854251e3c3df6db12f43413138d8768dc5b01066"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/dyn1": {
+  "bytes": 280821,
+  "sha256": "f65355885c7f870f4b99ed2616691bfd334bb904cae52359cf3351221aa6df16"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/dyn2": {
+  "bytes": 417285,
+  "sha256": "89a57df992c1f2092036b2796fcb40b91e60156847eb227d9ced4946d2a1ada7"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/dyn3": {
+  "bytes": 417285,
+  "sha256": "9fa39aef3fdd140755f758ff4cb357881d5cc1405836fc87552103d4a4d77d19"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/dyn4": {
+  "bytes": 417285,
+  "sha256": "90aac7ff2585507f513f5970f4ee099b86711fe98c6e403653db980dc119c9c5"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/dyn5": {
+  "bytes": 417285,
+  "sha256": "dda5bc2f64730f6a5d0eced9da31632efef7fe22c29d0b1fca54799c649ac93e"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/dyn6": {
+  "bytes": 269152,
+  "sha256": "b2a000994d8162e0b90a2f75c21e5a528c03d37713b1fc740015733a2bc9af83"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/matdyn.in": {
+  "bytes": 223,
+  "sha256": "98f5b1e7fbc1d63f1d75872a0f4f59d82621e250725b3606ab569d5e92672716"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/matdyn.modes": {
+  "bytes": 13760947,
+  "sha256": "f04c450ec61985669baf51022bf9695a676d58f2e62dfca253f8d2e65edef9d8"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/matdyn.out": {
+  "bytes": 61979,
+  "sha256": "e8205f7f2ee6efb1b17f90b17de8e93a4d685e6fa5ed424884100be5e9a76b3d"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/ph.in": {
+  "bytes": 285,
+  "sha256": "4cc3a1d609e169455fe37c97c61d28670f51f297eebf93191b2b806752117b4d"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/q2r.in": {
+  "bytes": 64,
+  "sha256": "8acba5f864ac55b3c291cf4173fdf925d2c60931a249b347481028a074204003"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/q2r.out": {
+  "bytes": 10840,
+  "sha256": "60f3c06d92e95f2f848cf15f6e0b1865f5385b65be2104f832e8d37bdf60717f"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/scf.in": {
+  "bytes": 2489,
+  "sha256": "65d93613edc6aff0af7a5e0b21b1a5c9375e015295932e562fd2040d47b5a4e7"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/3D_code/scf.out": {
+  "bytes": 44825,
+  "sha256": "3b2c4b2fd8f6b04f9a091454169acba42886cd6889fa2df46862d22ee1d5f2fd"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/pseudo/As.pbe-n-rrkjus_psl.0.2.UPF": {
+  "bytes": 703927,
+  "sha256": "5b31b3d612abd028d3a9ab896bf6de95d455080ad415d21f1011e130342b4434"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/pseudo/Ga.pbe-dn-kjpaw_psl.1.0.0.UPF": {
+  "bytes": 1957674,
+  "sha256": "cf8a2be9b30552dd9bb12304d2aa96978e5d10636ca562b42d5a37dc385acd15"
+ },
+ "materialscloud_data_Rivano/GaAs_nanowire/pseudo/H_ONCV_PBE-1.0.oncvpsp.upf": {
+  "bytes": 64894,
+  "sha256": "fa2639e1b28d04f0c3991c06f9524f360d198f4e1b8f8a7971e4ba3b0bcffea8"
+ },
+ "materialscloud_data_Rivano/README.txt": {
+  "bytes": 2337,
+  "sha256": "8618f667dcc21e9f1cf4a51d1c4e0d9c21485e4ba1e97da09f405fb7bc429fb7"
+ }
+}

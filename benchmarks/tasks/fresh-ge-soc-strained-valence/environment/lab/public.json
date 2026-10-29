@@ -1,0 +1,144 @@
+{
+ "task_id": "fresh-ge-soc-strained-valence",
+ "solver_budget": 36,
+ "reserved_validation_charge": 0,
+ "system": "diamond-structure Ge, two-atom primitive cell of a cubic or tetragonally strained crystal; PBE; SG15 ONCV norm-conserving pseudopotentials (fully relativistic for spin-orbit runs, scalar-relativistic otherwise); Quantum ESPRESSO 6.7 pw.x (and bands.x for symmetry labels) on 2 MPI ranks",
+ "request": {
+  "fields": {
+   "kind": "\"pw\" (the only kind): a self-consistent pw.x run at the given geometry, optionally followed by a non-self-consistent band calculation at agent-chosen k points",
+   "a_par_A": "in-plane lattice parameter a of the conventional cell (x and y cube edges), Angstrom",
+   "c_A": "out-of-plane lattice parameter c of the conventional cell (z cube edge), Angstrom; c = a_par is the cubic crystal",
+   "spin_orbit": "true: noncollinear spinors with spin-orbit coupling, fully relativistic file Ge_ONCV_PBE_FR-1.0.upf; false: scalar-relativistic, spin-degenerate run with the scalar-relativistic file of the same SG15 family, Ge_ONCV_PBE-1.0.upf",
+   "ecutwfc_Ry": "wavefunction cutoff; the charge-density cutoff is 4 x ecutwfc (norm-conserving)",
+   "kmesh": "n of an n x n x n Monkhorst-Pack mesh in the reciprocal vectors of the primitive cell",
+   "kshift": "0: mesh contains Gamma; 1: mesh offset by half a step along each reciprocal vector",
+   "occupations": "\"fixed\" (insulator filling: the lowest 28 spinor bands, or 14 doubly occupied scalar bands, are filled at every k point) or \"smearing\" (Marzari-Vanderbilt cold smearing)",
+   "degauss_Ry": "smearing width; null for fixed occupations",
+   "band_kpoints_inverse_A": "list of 0 to 30 k points [kx, ky, kz], Cartesian, in inverse Angstrom including the factor 2 pi (Gamma = [0, 0, 0]); when non-empty a non-self-consistent band calculation on the converged density returns all band energies at each of them",
+   "symmetry_labels": "true: classify the bands at each band k point by the irreducible representations of its little group (bands.x, double groups when spin_orbit is true); requires a non-empty band_kpoints_inverse_A. false otherwise"
+  },
+  "allowed": {
+   "kind": [
+    "pw"
+   ],
+   "spin_orbit": [
+    true,
+    false
+   ],
+   "ecutwfc_Ry": [
+    40,
+    50,
+    60,
+    80
+   ],
+   "kmesh": [
+    4,
+    6,
+    8,
+    10,
+    12
+   ],
+   "kshift": [
+    0,
+    1
+   ],
+   "occupations": [
+    "fixed",
+    "smearing"
+   ],
+   "degauss_Ry": [
+    0.002,
+    0.005,
+    0.01,
+    0.02
+   ],
+   "symmetry_labels": [
+    true,
+    false
+   ]
+  },
+  "a_par_A_range": [
+   5.4,
+   6.0
+  ],
+  "c_A_range": [
+   5.4,
+   6.2
+  ],
+  "max_abs_c_over_a_minus_1": 0.08,
+  "max_band_kpoints": 30,
+  "max_abs_k_component_inverse_A": 1.2,
+  "fixed": {
+   "mass_amu": 72.63,
+   "dual": 4,
+   "bands_spin_orbit": 36,
+   "bands_scalar": 18,
+   "conv_thr_Ry": 1e-10,
+   "mixing_beta": 0.5,
+   "electron_maxstep": 200,
+   "timeout_s": 1500
+  },
+  "charge": {
+   "rule": "units = max(1, ceil((N_k * scf_factor + [band_run_overhead + N_band * band_factor if band k points are requested]) / seconds_per_unit)), where N_k is the number of symmetry-distinct k points pw.x uses for the SCF mesh of this cell (returned as charged_k_points; a tetragonal cell has about twice as many as the cubic one) and N_band the number of band k points; the factors are approximate seconds per k point on the lab's 2 cores, so one unit is about one minute. Requests above max_units_per_request are refused without charge.",
+   "seconds_per_unit": 60,
+   "scf_factor": {
+    "spin_orbit": {
+     "40": 1.1,
+     "50": 2.3,
+     "60": 4.0,
+     "80": 5.5
+    },
+    "scalar": {
+     "40": 0.4,
+     "50": 0.6,
+     "60": 0.8,
+     "80": 1.2
+    }
+   },
+   "band_run_overhead": 15,
+   "band_factor": {
+    "spin_orbit": {
+     "40": 1.1,
+     "50": 2.3,
+     "60": 4.0,
+     "80": 5.5
+    },
+    "scalar": {
+     "40": 0.4,
+     "50": 0.6,
+     "60": 0.8,
+     "80": 1.2
+    }
+   },
+   "max_units_per_request": 10,
+   "examples": {
+    "cubic k8 60 Ry spin-orbit": 2,
+    "cubic k8 60 Ry spin-orbit + 1 band k point": 3,
+    "tetragonal k8 60 Ry spin-orbit + 1 band k point": 5,
+    "tetragonal k6 50 Ry spin-orbit": 2,
+    "tetragonal k10 60 Ry spin-orbit": 7,
+    "tetragonal k8 60 Ry scalar": 1,
+    "cubic k12 80 Ry spin-orbit": 7
+   }
+  },
+  "pseudopotentials": {
+   "spin_orbit": {
+    "file": "Ge_ONCV_PBE_FR-1.0.upf",
+    "family": "SG15 ONCV norm-conserving, fully relativistic (Scherpelz, Govoni, Hamada, Galli 2016, built with the SG15 1.0 parameters)"
+   },
+   "scalar": {
+    "file": "Ge_ONCV_PBE-1.0.upf",
+    "family": "SG15 ONCV norm-conserving, scalar-relativistic (Schlipf and Gygi 2015)"
+   },
+   "valence": "3d10 4s2 4p2 (Z = 14 per atom; 28 electrons per cell)",
+   "functional": "PBE"
+  }
+ },
+ "result_units": {
+  "total_energy_Ry": "Ry per two-atom cell",
+  "stress_GPa": "pw.x sign convention: the negative of the Cauchy stress, so that pressure_GPa = trace/3 (positive when the cell is compressed); Cartesian axes of the conventional cell",
+  "band_energies_eV": "eV on the absolute pw.x scale of that run (only differences within one run are meaningful); spin_orbit runs list every spinor band (Kramers pairs appear twice), scalar runs every spin-degenerate band once",
+  "mesh_point_nearest_gamma": "all band energies at the point of the SCF mesh closest to Gamma (Gamma itself when kshift = 0)",
+  "symmetry_labels": "bands.x output: for each band k point, the point group of its little group and, for each group of degenerate bands, the band indices (1-based), energy and irreducible-representation name as printed by bands.x"
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "ablations": {
+  "labels_trusted_dw": {
+   "S3": -0.3467849999999988,
+   "Te3": -1.3513030000000001,
+   "As2S3": -0.8677809999999999
+  },
+  "labels_trusted_eb": 0.6334970000000001,
+  "s3_same_energies_dw": 0.44522300000000037,
+  "soc_added_again_gaps": {
+   "Te3": {
+    "with_soc": 4.026093000000001,
+    "without_soc": 4.310493
+   },
+   "Bi2Te3": {
+    "with_soc": 1.5614610000000004,
+    "without_soc": 1.649461
+   }
+  },
+  "increment_transfer_gap": 2.3208699999999998,
+  "increment_transfer_eb": 0.6334970000000002,
+  "g0w0_gap_for_bi2te3": 1.53895,
+  "first_feature_optical_As2S3": 1.86093,
+  "first_feature_dw": {
+   "S3": -0.3467849999999988,
+   "Te3": -0.5452720000000002,
+   "As2S3": -0.5102550000000001
+  },
+  "wire_model_eb": 1.5725256328543618,
+  "wire_model_calibrated_eb": 1.3174434327361824,
+  "released_mean_eb": 1.5835443333333332
+ },
+ "robustness": {
+  "te3_without_soc_fixed_k": 4.630993,
+  "bi2te3_without_soc_fixed_k": 1.767271265700483,
+  "te3_fundamental_gap": 4.274433,
+  "bi2te3_gap_ip_first_peak": 1.66083,
+  "bi2te3_gap_ip_onset": 1.635818,
+  "s3_dw_ip_shift": -0.3351669999999993,
+  "te3_without_soc_k_resolved": 4.590293999999999,
+  "eb_no_w_correction": 0.7553770000000001,
+  "eb_additive_mean_dw": 1.0927493333333331,
+  "eb_mean_ratio": 1.0260774199501173,
+  "eb_ratio_scaled_by_self_consistency": 0.8440369263124028
+ },
+ "near_miss": {
+  "te3_gap_from_first_ip_peak": 4.362181
+ }
+}

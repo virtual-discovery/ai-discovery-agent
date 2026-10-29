@@ -1,0 +1,219 @@
+{
+ "description": "Gated HgTe/Hg0.32Cd0.68Te topological-insulator films on CdTe(001): raw mK magnetotransport of three Hall bars and the authors' released self-consistent 8-band k.p (kdotpy) runs for the same layer thicknesses. Everything listed here can be purchased from the lab; nothing else is available.",
+ "samples": {
+  "26nm": {
+   "HgTe_thickness_nm": 26,
+   "transport_record": "26nm.csv",
+   "pre_resistor_ohm": 1000,
+   "top_barrier_HgCdTe_nm": 50,
+   "HfOx_gate_dielectric_nm": 13.6,
+   "cryostat": "\"18T\", base ~17 mK"
+  },
+  "70nm": {
+   "HgTe_thickness_nm": 70,
+   "transport_record": "70nm.csv",
+   "pre_resistor_ohm": 557,
+   "top_barrier_HgCdTe_nm": 45,
+   "HfOx_gate_dielectric_nm": 15,
+   "cryostat": "\"18T\", base ~17 mK"
+  },
+  "107nm": {
+   "HgTe_thickness_nm": 107,
+   "transport_record": "110nm.csv (nominal 110 nm; modelled as 107 nm)",
+   "pre_resistor_ohm": 10000,
+   "top_barrier_HgCdTe_nm": 44,
+   "HfOx_gate_dielectric_nm": 14.2,
+   "cryostat": "\"18T\", base ~17 mK"
+  }
+ },
+ "device": "Top-gated (HfOx / metal) Hall bars, 600 um x 200 um; the longitudinal contacts are 600 um apart (L/W = 3). Lock-in at 13.7 Hz, 200 uV excitation, in series with the listed pre-resistor; VI is the voltage across the pre-resistor. Field and voltage offsets are corrected in the records.",
+ "transport": {
+  "columns": [
+   "VG (V)",
+   "B (T)",
+   "VI (V)",
+   "Vxx (V)",
+   "Vxy (V)"
+  ],
+  "field_range_T": "record minimum to 2.0",
+  "gate_step_V": 0.002,
+  "block_half_width_V": 0.025,
+  "vg_centers": {
+   "26nm": [
+    -0.6,
+    -0.55,
+    -0.5,
+    -0.45,
+    -0.4,
+    -0.35,
+    -0.3,
+    -0.25,
+    -0.2,
+    -0.15,
+    -0.1,
+    -0.05,
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6
+   ],
+   "70nm": [
+    -0.8,
+    -0.75,
+    -0.7,
+    -0.65,
+    -0.6,
+    -0.55,
+    -0.5,
+    -0.45,
+    -0.4,
+    -0.35,
+    -0.3,
+    -0.25,
+    -0.2,
+    -0.15,
+    -0.1,
+    -0.05,
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5
+   ],
+   "107nm": [
+    -0.7,
+    -0.65,
+    -0.6,
+    -0.55,
+    -0.5,
+    -0.45,
+    -0.4,
+    -0.35,
+    -0.3,
+    -0.25,
+    -0.2,
+    -0.15,
+    -0.1,
+    -0.05,
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6
+   ]
+  }
+ },
+ "hall_scan": "per gate voltage: slope of Vxy/VI versus B for |B| <= 0.2 T (1/T) and Vxx/VI at B ~ 0",
+ "calculations": {
+  "26nm": [
+   -0.004,
+   -0.003,
+   -0.002,
+   -0.001,
+   0.0,
+   0.001,
+   0.002,
+   0.003,
+   0.004,
+   0.005,
+   0.006,
+   0.007,
+   0.0075
+  ],
+  "70nm": [
+   -0.004,
+   -0.003,
+   -0.002,
+   -0.001,
+   0.0,
+   0.001,
+   0.002,
+   0.003,
+   0.004,
+   0.005,
+   0.006,
+   0.007,
+   0.008
+  ],
+  "107nm": [
+   -0.004,
+   -0.003,
+   -0.002,
+   -0.001,
+   0.0,
+   0.001,
+   0.002,
+   0.003,
+   0.004,
+   0.005,
+   0.006,
+   0.007
+  ]
+ },
+ "pocket_calculations": {
+  "n_nm2": {
+   "26nm": [
+    -0.004,
+    -0.003,
+    -0.002,
+    -0.001,
+    0.0,
+    0.001,
+    0.002
+   ],
+   "70nm": [
+    -0.004,
+    -0.003,
+    -0.002,
+    -0.001,
+    0.0,
+    0.001,
+    0.002
+   ],
+   "107nm": [
+    -0.004,
+    -0.003,
+    -0.002,
+    -0.001,
+    0.0,
+    0.001,
+    0.002
+   ]
+  },
+  "kphi_deg": [
+   [
+    105,
+    165
+   ],
+   [
+    165,
+    285
+   ]
+  ]
+ },
+ "calculation_output": "archived .kpout text, potential profile V(z) (meV), and the band-resolved integrated DOS IDOS(b) and IDOS(total) (1/nm^2) on the archived 0.1 meV grid for -60..80 meV",
+ "kdotpy_readme_FigureS3": "This folder contains all calculation results and the processing script to reproduce Figure S3 from the supplementary material.\nThe calculation files are organized in subfolders under `calculations/*`.\n\nAll calculations were performed using versions 1.0.0 and 1.1.x-develop of kdotpy [1].\n\n[1] W. Beugeling, F. Bayer, C. Berger, J. B\u00f6ttcher, L. Bovkun, C. Fuchs, M. Hofer, S. Shamim, M. Siebert, L.-X. Wang, E. M. Hankiewicz, T. Kie\u00dfling, H. Buhmann, and L. W. Molenkamp, kdotpy: k\u00b7p Theory on a Lattice for Simulating Semiconductor Band Structures, SciPost Phys. Codebases, 47 (2025).\n\n# 26nm\n## HgTe26nm_FFT_04\nThis folder contains self-consistently calculated potentials and subband densities. The following command line was used:\n```bash\nkdotpy batch proc 1 @EP [21000] @VBO [-620] @vareps [20.8] @varn [0.0075,0.007,0.006,0.005,0.004,0.003,0.002,0.001,0,-0.001,-0.002,-0.003,-0.004] do kdotpy 2d norb 8 cpus 8 gpus 4 bia noax erange -300 500 split 0.005 msubst CdTe mlayer HgCdTe 68% HgTe HgCdTe 68% llayer 25 26 25 zres 0.2 matparam 'HgTe:P=sqrt(@EP*hbarm0);CdTe:P=sqrt(@EP*hbarm0);HgCdTe:P=sqrt(@EP*hbarm0)' matparam 'CdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303);HgCdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303)' matparam 'HgTe:diel_epsilon=@vareps' matparam 'HgCdTe:diel_epsilon=@vareps*(1-x)+x*10.2' potentialbc \"{'dv1':1.1,'z1':-28,'v2':0,'z2':0}\" selfcon 200 0.1 selfconweight 0.4 carrdens @varn k 0 1 / 0.025 kphi 45 135 / 10 neig 200 targetenergy 0 dos banddos verbose config 'lattice_regularization=false;selfcon_convergent_steps=3;selfcon_acceptable_status=0;selfcon_dynamic_time_step=true;selfcon_potential_average_zero=false;selfcon_use_init_density=true;selfcon_debug=true;selfcon_diff_norm=max;selfcon_energy_points=8000;batch_stderr_extension=kperr;batch_stdout_extension=kpout;diag_solver=jax_eigh;dos_energy_points=8000' outdir calculations/HgTe26nm_FFT_04/EP_@EP_VBO_@VBO_eps_@vareps/n_@varn out EP_@EP_VBO_@VBO_eps_@vareps_n_@varn\n```\n\n## HgTe26nm_FFT_04_phi\nThe calculations in this folder use the previously calculated self-consistent potentials from `HgTe26nm_FFT_04` and calculate the individual densities of the hole pockets of the uppermost bulk valence band. The following command line was used:\n```bash\nkdotpy batch proc 1 @EP [21000] @VBO [-620] @vareps [20.8] @varn [0.002,0.001,0,-0.001,-0.002,-0.003,-0.004] @varphi [$VARY] do kdotpy 2d norb 8 cpus 24 bia noax erange -300 500 split 0.005 msubst CdTe mlayer HgCdTe 68% HgTe HgCdTe 68% llayer 25 26 25 zres 0.2 matparam 'HgTe:P=sqrt(@EP*hbarm0);CdTe:P=sqrt(@EP*hbarm0);HgCdTe:P=sqrt(@EP*hbarm0)' matparam 'CdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303);HgCdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303)' matparam 'HgTe:diel_epsilon=@vareps' matparam 'HgCdTe:diel_epsilon=@vareps*(1-x)+x*10.2' potential /calculations/HgTe26nm_FFT_04/EP_@EP_VBO_@VBO_eps_@vareps/n_@varn/potentialEP_@EP_VBO_@VBO_eps_@vareps_n_@varn.csv carrdens @varn k 0 1 / 0.025 kphi @varphi $((VARY+120)) / 10 neig 200 targetenergy 0 dos banddos verbose config 'lattice_regularization=false;batch_stderr_extension=kperr;batch_stdout_extension=kpout;diag_solver=pardiso_eigsh;dos_energy_points=8000' outdir calculations/HgTe26nm_FFT_04_phi/EP_@EP_VBO_@VBO_eps_@vareps/varphi_@varphi/n_@varn out EP_@EP_VBO_@VBO_eps_@vareps_varphi_@varphi_n_@varn\n```\nwith $VARY in [105,165]. For $VARY=105, the angular range was set to `kphi @varphi $((VARY+60))`.\n\n\n# 70nm\n## HgTe70nm_FFT_10\nThis folder contains self-consistently calculated potentials and subband densities. The following command line was used:\n```bash\nkdotpy batch proc 1 @EP [21000] @VBO [-620] @vareps [20.8] @varn [-0.004,-0.003,-0.002,-0.001,0,0.001,0.002,0.003,0.004,0.005,0.006,0.007,0.008] do kdotpy 2d norb 8 cpus 12 gpus 6 bia noax erange -300 500 split 0.005 msubst CdTe mlayer HgCdTe 68% HgTe HgCdTe 68% llayer 25 70 25 zres 0.5 matparam 'HgTe:P=sqrt(@EP*hbarm0);CdTe:P=sqrt(@EP*hbarm0);HgCdTe:P=sqrt(@EP*hbarm0)' matparam 'CdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303);HgCdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303)' matparam 'HgTe:diel_epsilon=@vareps' matparam 'HgCdTe:diel_epsilon=@vareps*(1-x)+x*10.2' potentialbc \"{'dv1':0.566,'z1':-50,'v2':0,'z2':0}\" selfcon 200 0.1 selfconweight 0.2 carrdens @varn k 0 1 / 0.025 kphi 45 135 / 10 neig 200 targetenergy 0 dos banddos verbose config 'lattice_regularization=false;selfcon_convergent_steps=3;selfcon_acceptable_status=0;selfcon_dynamic_time_step=true;selfcon_potential_average_zero=false;selfcon_debug=true;selfcon_diff_norm=max;selfcon_energy_points=8000;selfcon_use_init_density=true;batch_stderr_extension=kperr;batch_stdout_extension=kpout;diag_solver=jax_eigh;dos_energy_points=8000' outdir calculations/HgTe70nm_FFT_10/EP_@EP_VBO_@VBO_eps_@vareps/n_@varn out EP_@EP_VBO_@VBO_eps_@vareps_n_@varn\n```\nTo speed up convergence, for both extreme ends @varn=[0.008,-0.004], the self-consistent potentials from the [0.007,-0.003] calculations were used as a starting point.\n\nIn oder to ensure correct subband density calculations at larger densities, the calculations for densities @varn=[0.005,0.006,0.007,0.008] were re-run in a debugger with the respective self-consistent potentials from the previous calculation:\n```bash\nkdotpy 2d norb 8 cpus 40 bia noax erange -300 500 split 0.005 msubst CdTe mlayer HgCdTe 68% HgTe HgCdTe 68% llayer 25 70 25 zres 0.5 matparam 'HgTe:P=sqrt(21000*hbarm0);CdTe:P=sqrt(21000*hbarm0);HgCdTe:P=sqrt(21000*hbarm0)' matparam 'CdTe:Evoff=-620*(Eg-Eg0)/(1606+303);HgCdTe:Evoff=-620*(Eg-Eg0)/(1606+303)' matparam HgTe:diel_epsilon=20.8 matparam 'HgCdTe:diel_epsilon=20.8*(1-x)+x*10.2' potential calculations/HgTe70nm_FFT_10/EP_21000_VBO_-620_eps_20.8/n_@varn/potentialEP_21000_VBO_-620_eps_20.8_n_@varn.csv carrdens @varn k 0 1 / 0.025 kphi 45 135 / 10 neig 200 targetenergy 0 dos banddos verbose config 'lattice_regularization=false;diag_solver=pardiso_eigsh;dos_energy_points=8000' outdir calculations/HgTe70nm_FFT_10_debug/EP_21000_VBO_-620_eps_20.8/n_@varn out EP_21000_VBO_-620_eps_20.8_n_@varn\n```\nand the band alignment was manually corrected before the call to `postprocess.banddos_k()` (calculating the subband densities) in `kdotpy-2d.py` using the following code snippet:\n```python\n# run this in debugger after band alignment and before dos calculation\ndef swap_bidx(bidx0, bidx1, bindex_array):\n\tpos0 = np.argmin(np.abs(bindex_array-bidx0))\n\tpos1 = np.argmin(np.abs(bindex_array-bidx1))\n\tb_array = bindex_array.copy()\n\tb_array[[pos0, pos1]] = b_array[[pos1, pos0]]\n\treturn b_array\n\n# for n=0.005\nfor d in data:\n\tk, kphi = d.k.value\n\tif (kphi <= 90):\n\t\tif np.isclose(k,0.125) or np.isclose(k,0.150):\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\telif k>=0.175-0.001:\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\t\td.bindex = swap_bidx(2,4,d.bindex)\n\telif (kphi <=135):\n\t\tif np.isclose(k, 0.125):\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\telif k>=0.150-0.001:\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\t\td.bindex = swap_bidx(2,4,d.bindex)\n\n# for n=0.006\nfor d in data:\n\tk, kphi = d.k.value\n\tif (kphi <= 135):\n\t\tif np.isclose(k,0.125):\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\telif k>=0.150-0.001:\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\t\td.bindex = swap_bidx(2,4,d.bindex)\n\n# for n=0.007\nfor d in data:\n\tk, kphi = d.k.value\n\tif (kphi <= 135):\n\t\tif np.isclose(k,0.100):\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\telif k>=0.125-0.001:\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\t\td.bindex = swap_bidx(2,4,d.bindex)\n\n# for n=0.008\nfor d in data:\n\tk, kphi = d.k.value\n\tif (kphi <= 135):\n\t\tif np.isclose(k,0.100):\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\telif k>=0.125-0.001:\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\t\td.bindex = swap_bidx(2,4,d.bindex)\n```\n\n## HgTe70nm_FFT_10_phi\nThe calculations in this folder use the previously calculated self-consistent potentials from `HgTe70nm_FFT_10` and calculate the individual densities of the hole pockets of the uppermost bulk valence band. The following command line was used:\n```bash\nkdotpy batch proc 1 @EP [21000] @VBO [-620] @vareps [20.8] @varn [0.002,0.001,0,-0.001,-0.002,-0.003,-0.004] @varphi [$VARY] do kdotpy 2d norb 8 cpus 12 bia noax erange -300 500 split 0.005 msubst CdTe mlayer HgCdTe 68% HgTe HgCdTe 68% llayer 25 70 25 zres 0.5 matparam 'HgTe:P=sqrt(@EP*hbarm0);CdTe:P=sqrt(@EP*hbarm0);HgCdTe:P=sqrt(@EP*hbarm0)' matparam 'CdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303);HgCdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303)' matparam 'HgTe:diel_epsilon=@vareps' matparam 'HgCdTe:diel_epsilon=@vareps*(1-x)+x*10.2' potential calculations/HgTe70nm_FFT_10/EP_@EP_VBO_@VBO_eps_@vareps/n_@varn/potentialEP_@EP_VBO_@VBO_eps_@vareps_n_@varn.csv carrdens @varn k 0 1 / 0.025 kphi @varphi $((VARY+120)) / 10 neig 200 targetenergy 0 dos banddos verbose config 'lattice_regularization=false;batch_stderr_extension=kperr;batch_stdout_extension=kpout;diag_solver=pardiso_eigsh;dos_energy_points=8000' outdir calculations/HgTe70nm_FFT_10_phi/EP_@EP_VBO_@VBO_eps_@vareps/varphi_@varphi/n_@varn out EP_@EP_VBO_@VBO_eps_@vareps_varphi_@varphi_n_@varn\n```\nwith $VARY in [105,165]. For $VARY=105, the angular range was set to `kphi @varphi $((VARY+60))`.\n\n\n# 107nm\n## HgTe107nm_FFT_03\nThis folder contains self-consistently calculated potentials and subband densities. The following command line was used:\n```bash\nkdotpy batch proc 1 @EP [21000] @VBO [-620] @vareps [20.8] @varn [-0.004,-0.003,-0.002,-0.001,0,0.001,0.002,0.003,0.004,0.005,0.006,0.007] do kdotpy 2d norb 8 cpus 4 gpus 2 bia noax erange -300 500 split 0.005 msubst CdTe mlayer HgCdTe 68% HgTe HgCdTe 68% llayer 25 107 25 zres 0.5 matparam 'HgTe:P=sqrt(@EP*hbarm0);CdTe:P=sqrt(@EP*hbarm0);HgCdTe:P=sqrt(@EP*hbarm0)' matparam 'CdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303);HgCdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303)' matparam 'HgTe:diel_epsilon=@vareps' matparam 'HgCdTe:diel_epsilon=@vareps*(1-x)+x*10.2' potentialbc \"{'dv1':1.20,'z1':-68.5,'v2':0,'z2':0}\" selfcon 200 0.1 selfconweight 0.1 carrdens @varn k 0 1 / 0.025 kphi 45 135 / 10 neig 200 targetenergy 0 dos banddos verbose config 'lattice_regularization=false;selfcon_convergent_steps=3;selfcon_acceptable_status=0;selfcon_dynamic_time_step=true;selfcon_potential_average_zero=false;selfcon_debug=true;selfcon_diff_norm=max;selfcon_energy_points=8000;selfcon_use_init_density=false;batch_stderr_extension=kperr;batch_stdout_extension=kpout;diag_solver=jax_eigh;dos_energy_points=8000' outdir $calculations/HgTe107nm_FFT_03/EP_@EP_VBO_@VBO_eps_@vareps/n_@varn out EP_@EP_VBO_@VBO_eps_@vareps_n_@varn\n```\nIn oder to ensure correct subband density calculations at larger densities, the calculations for densities @varn=[0.006,0.007] were re-run in a debugger with the respective self-consistent potentials from the previous calculation:\n```bash\nkdotpy 2d norb 8 cpus 48 bia noax erange -300 500 split 0.005 msubst CdTe mlayer HgCdTe 68% HgTe HgCdTe 68% llayer 25 107 25 zres 0.5 matparam 'HgTe:P=sqrt(21000*hbarm0);CdTe:P=sqrt(21000*hbarm0);HgCdTe:P=sqrt(21000*hbarm0)' matparam 'CdTe:Evoff=-620*(Eg-Eg0)/(1606+303);HgCdTe:Evoff=-620*(Eg-Eg0)/(1606+303)' matparam HgTe:diel_epsilon=20.8 matparam 'HgCdTe:diel_epsilon=20.8*(1-x)+x*10.2' potential calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/n_@varn/potentialEP_21000_VBO_-620_eps_20.8_n_@varn.csv carrdens @varn k 0 1 / 0.025 kphi 45 135 / 10 neig 200 targetenergy 0 dos banddos verbose config 'lattice_regularization=false;diag_solver=pardiso_eigsh;dos_energy_points=8000' outdir calculations/HgTe107nm_FFT_03/EP_21000_VBO_-620_eps_20.8/@varn out EP_21000_VBO_-620_eps_20.8_n_@varn\n```\nand the band alignment was manually corrected before the call to `postprocess.banddos_k()` (calculating the subband densities) in `kdotpy-2d.py` using the following code snippet:\n```python\n# run this in debugger after band alignment and before dos calculation\ndef swap_bidx(bidx0, bidx1, bindex_array):\n\tpos0 = np.argmin(np.abs(bindex_array-bidx0))\n\tpos1 = np.argmin(np.abs(bindex_array-bidx1))\n\tb_array = bindex_array.copy()\n\tb_array[[pos0, pos1]] = b_array[[pos1, pos0]]\n\treturn b_array\n\n# for n=0.006\nfor d in data:\n\tk, kphi = d.k.value\n\tif (kphi <= 72):\n\t\tif np.isclose(k,0.125) or np.isclose(k,0.150):\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\telif k>=0.175-0.001:\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\t\td.bindex = swap_bidx(2,4,d.bindex)\n\telif (kphi <= 135):\n\t\tif np.isclose(k, 0.125):\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\telif k>=0.150-0.001:\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\t\td.bindex = swap_bidx(2,4,d.bindex)\n\n# for n=0.007\nfor d in data:\n\tk, kphi = d.k.value\n\tif (kphi <= 81):\n\t\tif k == 0.125:\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\telif k>=0.150:\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\t\td.bindex = swap_bidx(2,4,d.bindex)\n\telif (kphi <= 135):\n\t\tif (k == 0.100) or (k == 0.125):\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\telif k>=0.150:\n\t\t\td.bindex = swap_bidx(2,3,d.bindex)\n\t\t\td.bindex = swap_bidx(2,4,d.bindex)\n```\n\n## HgTe107nm_FFT_03_phi\nThe calculations in this folder use the previously calculated self-consistent potentials from `HgTe107nm_FFT_03` and calculate the individual densities of the hole pockets of the uppermost bulk valence band. The following command line was used:\n```bash\nkdotpy batch proc 1 @EP [21000] @VBO [-620] @vareps [20.8] @varn [0.002,0.001,0,-0.001,-0.002,-0.003,-0.004] @varphi [$VARY] do kdotpy 2d norb 8 cpus 24 bia noax erange -300 600 split 0.005 msubst CdTe mlayer HgCdTe 68% HgTe HgCdTe 68% llayer 25 107 25 zres 0.5 matparam 'HgTe:P=sqrt(@EP*hbarm0);CdTe:P=sqrt(@EP*hbarm0);HgCdTe:P=sqrt(@EP*hbarm0)' matparam 'CdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303);HgCdTe:Evoff=@VBO*(Eg-Eg0)/(1606+303)' matparam 'HgTe:diel_epsilon=@vareps' matparam 'HgCdTe:diel_epsilon=@vareps*(1-x)+x*10.2' \\\npotential calculations/HgTe107nm_FFT_03/EP_@EP_VBO_@VBO_eps_@vareps/n_@varn/potentialEP_@EP_VBO_@VBO_eps_@vareps_n_@varn.csv carrdens @varn k 0 1 / 0.025 kphi @varphi $((VARY+120)) / 10 neig 400 targetenergy 0 dos banddos verbose config 'lattice_regularization=false;batch_stderr_extension=kperr;batch_stdout_extension=kpout;diag_solver=pardiso_eigsh;dos_energy_points=9000' outdir calculations/HgTe107nm_FFT_03/EP_@EP_VBO_@VBO_eps_@vareps/varphi_@varphi/n_@varn out EP_@EP_VBO_@VBO_eps_@vareps_varphi_@varphi_n_@varn\n```\nwith $VARY in [105,165]. For $VARY=105, the angular range was set to `kphi @varphi $((VARY+60))`.\n"
+}

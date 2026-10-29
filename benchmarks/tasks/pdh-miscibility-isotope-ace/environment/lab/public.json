@@ -1,0 +1,24 @@
+{
+ "task_id": "pdh-miscibility-isotope-ace",
+ "solver_budget": 30,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "energy": {
+   "kind": "energy",
+   "cost": 1
+  },
+  "relax": {
+   "kind": "relax",
+   "cost": 1
+  },
+  "scan": {
+   "kind": "scan",
+   "cost": 2
+  },
+  "dft_reference": {
+   "kind": "dft_reference",
+   "cost": 1
+  }
+ },
+ "catalog": "/app/catalog.json"
+}

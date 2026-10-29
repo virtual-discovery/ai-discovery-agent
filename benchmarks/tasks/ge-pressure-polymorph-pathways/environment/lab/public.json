@@ -1,0 +1,10 @@
+{
+ "task_id": "ge-pressure-polymorph-pathways",
+ "solver_budget": 34,
+ "reserved_validation_charge": 0,
+ "requests": {"record": {"kind": "record", "id": "<id from catalog records>", "cost": 1},
+              "dp": {"kind": "dp", "structures": ["<1 to 20 structures>"], "cost": 1}},
+ "structure": {"cell": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]], "positions": [[0.0, 0.0, 0.0]],
+               "mode": "single | relax_ions | relax_cell", "pressure_GPa": "<relax_cell only>"},
+ "catalog": "/app/catalog.json"
+}

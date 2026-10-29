@@ -1,0 +1,224 @@
+{
+ "task_id": "mnte-altermagnet-chiral-magnons",
+ "catalog_id": "mnte-altermagnet-chiral-magnons",
+ "start": "released",
+ "source_group": "liu_2026_mnte_chiral",
+ "title": "MnTe altermagnet: chiral magnon splitting from polarized neutrons",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "model class",
+   "fork": "Shell-averaged (sublattice-symmetric) exchange vs symmetry-split 9.83 A classes",
+   "wrong_choice": "Keep the prior shell-averaged Hamiltonian (J_a = J_b)",
+   "consequence": "Degenerate branches: no IN20 peak separation (0.0045 vs 0.094), no chirality contrast, exchange difference 0",
+   "ablation": "shell_averaged_no_split"
+  },
+  {
+   "id": "dp2",
+   "kind": "confounder (relativistic anisotropy)",
+   "fork": "Which branch splitting is altermagnetic",
+   "wrong_choice": "Maximise |omega_2 - omega_1| over the zone: the 4.05 meV easy-plane anisotropy gap at Gamma wins",
+   "consequence": "Reports Gamma (score 0) instead of (1/3, 0, 1/4)",
+   "ablation": "anisotropy_gap_as_splitting"
+  },
+  {
+   "id": "dp3",
+   "kind": "discovered in raw metadata; cascade",
+   "fork": "IN20 coordinates: the instrument UB uses a = 4.17, b = 4.15, c = 6.87 A",
+   "wrong_choice": "Predict at the nominal (h, 0, 1.25)",
+   "consequence": "Peak mean 1.322 (or 1.329 with h rescaled) vs 1.349; tolerance 0.012",
+   "ablation": "in20_nominal_l"
+  },
+  {
+   "id": "dp4",
+   "kind": "cross-sample transfer",
+   "fork": "Whether the IN20 states share the HYSPEC chirality pattern",
+   "wrong_choice": "Copy the HYSPEC sign pattern to both IN20 states without reading their nuclear-magnetic interference",
+   "consequence": "State A signs wrong (A and B were field-cooled in opposite fields)",
+   "ablation": "ignore_in20_pnd"
+  },
+  {
+   "id": "dp5",
+   "kind": "symmetry / sign convention",
+   "fork": "How the l sign of the instrument frames enters",
+   "wrong_choice": "Flip the chirality because the splitting form factor changes sign between l < 0 (HYSPEC) and l > 0 (IN20), forgetting that the (1 0 1) vs (1 0 -1) interference term also changes sign",
+   "consequence": "All four signs reversed",
+   "ablation": "flip_for_positive_l_only"
+  },
+  {
+   "id": "dp6",
+   "kind": "polarization channels",
+   "fork": "Which PND channel measures the Neel projection relevant to the chiral term at (h 0 l)",
+   "wrong_choice": "Use the z-channel interference (b projection), which has the opposite sign to y in both IN20 states",
+   "consequence": "All four signs reversed",
+   "ablation": "pnd_z_channel"
+  },
+  {
+   "id": "dp7",
+   "kind": "where to compare (nodal structure)",
+   "fork": "Maximal splitting over the zone vs along the measured trajectory",
+   "wrong_choice": "Report the maximum along the measured (h, 0, -1.22) line, (0.375, 0, 0.22)",
+   "consequence": "Score 0.913 < 0.97",
+   "ablation": "max_on_measured_line"
+  },
+  {
+   "id": "dp8",
+   "kind": "convention",
+   "fork": "Exchange normalisation of the prior Hamiltonian (each pair once)",
+   "wrong_choice": "Fit in an ordered-pair convention (H = sum over i != j), halving J_a - J_b relative to the prior",
+   "consequence": "|J_a - J_b| 0.037 meV and IN20 separation 0.038 (-59%)",
+   "ablation": "ordered_pair_convention"
+  },
+  {
+   "id": "dp9",
+   "kind": "domain dilution of the chiral term (found in both dev pilots)",
+   "fork": "How the branch splitting is read from the polarized data",
+   "wrong_choice": "Treat the chiral cut i as the difference of two fully chiral branches (M = -(du/2) dS/du) instead of a 6-15% domain-imbalance-diluted signal, or rank ridge residuals over the whole symmetric slice instead of resolving the two peaks in the cuts",
+   "consequence": "du = 0.0043 instead of 0.032 in cut g; |J_a - J_b| = 0.011 meV and IN20 separation 0.012 (pilots: 0.014-0.015 meV, separation 0.015); fails the exchange and separation checks even with the corrected l",
+   "ablation": "chiral_dipole_full_chirality"
+  }
+ ],
+ "graded_fields": [
+  "split_exchange_difference_meV in [0.055, 0.12]",
+  "in20_peak_qh: mean within 0.012 of the archived-data fit (1.349)",
+  "in20_peak_qh: separation within 35% of the archived-data fit (0.0939)",
+  "in20_chirality: four signs of I_x^{-+} - I_x^{+-} (states A, B; low and high peak)",
+  "max_splitting_q_rlu: |sin(2 pi l) g(h,k)| >= 0.97 of its maximum"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 7,
+  "oracle_charge": 7,
+  "budget": 8,
+  "catalog_units": 15,
+  "oracle_container_seconds": 10,
+  "harbor_oracle_runtime_s": 58,
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "why": "Parsing raw ILL Cryopad files and archive cuts, a two-sublattice LSWT with sublattice-dependent exchange and easy-plane anisotropy, a spin-group bond-class analysis, fixed-orientation TOF kinematics, a lattice correction found only in the instrument headers, and a sign chain from nuclear-magnetic interference to magnon chirality across two crystals and two instrument frames.",
+  "pilot": {
+   "campaign": "dev-mntemag-pilot1",
+   "claude-sonnet-5": {
+    "reward": 0.0,
+    "split_exchange_difference_meV": 0.014,
+    "in20_peak_qh": [
+     1.3095,
+     1.3241
+    ],
+    "chirality": "4/4",
+    "q_max": "pass"
+   },
+   "gpt-5.6-terra": {
+    "reward": 0.0,
+    "split_exchange_difference_meV": 0.015,
+    "in20_peak_qh": [
+     1.309,
+     1.325
+    ],
+    "chirality": "4/4",
+    "q_max": "pass"
+   },
+   "diagnosis": "Both kept the nominal IN20 l = 1.25 (dp3) and underestimated the splitting: Sonnet read the chiral dipole as fully chiral (dp9, reproduced: 0.011 meV, peaks 1.3108/1.3227); Terra matched ridge residuals over the whole symmetric slice. The paper (Fig. 2g) labels the two cut-g peaks at u = 0.842 / 0.875 as Omega_2 / Omega_1, so the reference reading is unambiguous; task left as is apart from the new ablation and tiling."
+  }
+ },
+ "runtime_dependencies": [
+  "numpy and scipy (runtime image); no extra layer"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/20049187",
+  "doi": "10.5281/zenodo.20049187",
+  "paper": "arXiv:2605.14124; Phys. Rev. Lett. 136, 236705 (2026)",
+  "files_used": [
+   "Figures.zip"
+  ],
+  "md5": {
+   "Figures.zip": "fb87bc34319008f92adee9d7dbe3ada8"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "calibration": {
+  "split_exchange_difference_meV": {
+   "reference_oracle": 0.0749,
+   "robustness": {
+    "cut_g_only": 0.0821,
+    "cut_h_only": 0.0677,
+    "published_2024": 0.0902,
+    "implied_by_withheld_IN20_separation": "~0.097"
+   },
+   "nearest_ablation": {
+    "ordered_pair_convention": 0.0375,
+    "no_split": 0.0,
+    "chiral_dipole_full_chirality": 0.0108
+   },
+   "tolerance": "[0.055, 0.12]"
+  },
+  "in20_peak_mean_qh": {
+   "reference_archive_fit": 1.3491,
+   "reference_oracle": 1.3452,
+   "robustness": {
+    "h_scaled": 1.3523,
+    "dj_g_only": 1.3457,
+    "dj_h_only": 1.3447,
+    "dj_published": 1.3462
+   },
+   "nearest_ablation": {
+    "nominal_l_h_scaled": 1.3286,
+    "nominal_l": 1.3216
+   },
+   "tolerance": "|err| <= 0.012"
+  },
+  "in20_peak_separation_qh": {
+   "reference_archive_fit": 0.0939,
+   "reference_oracle": 0.0739,
+   "robustness": {
+    "h_scaled": 0.0743,
+    "dj_g_only": 0.0804,
+    "dj_h_only": 0.0673,
+    "dj_published": 0.0874
+   },
+   "nearest_ablation": {
+    "ordered_pair_convention": 0.0383,
+    "no_split": 0.0045,
+    "chiral_dipole_full_chirality": 0.0119
+   },
+   "tolerance": "within 35% (0.0610-0.1268)"
+  },
+  "in20_chirality": {
+   "reference_archive": {
+    "A": [
+     "+",
+     "-"
+    ],
+    "B": [
+     "-",
+     "+"
+    ]
+   },
+   "significance_sigma": {
+    "A": [
+     10.3,
+     13.7
+    ],
+    "B": [
+     9.0,
+     12.0
+    ]
+   },
+   "nearest_ablation": "ignore_in20_pnd (A wrong); flip_for_positive_l_only / pnd_z_channel (all wrong)",
+   "tolerance": "exact"
+  },
+  "max_splitting_q_score": {
+   "reference": 1.0,
+   "robustness": {
+    "(2/3, 0, 3/4)": 1.0,
+    "oracle (0, 1/3, 1/4)": 1.0
+   },
+   "nearest_ablation": {
+    "measured_line (0.375, 0, 0.22)": 0.913,
+    "Gamma": 0.0
+   },
+   "tolerance": ">= 0.97"
+  }
+ },
+ "notes": "Adapted from the candidate design (see the construction README). The lab serves archived measurements, not an LSWT calculator (the agent can run LSWT locally, so a calculator would not bind the budget). Graded truth for the IN20 peaks and chirality comes from fits to the withheld raw IN20 scans (states A and B); the exchange difference is not archived and is graded in a wide window covering every defensible estimate (HYSPEC cuts g and h give 0.082 and 0.068 meV, the published value is 0.090, the withheld IN20 separation implies ~0.097). The prior Hamiltonian is staged as input; no literature value is needed by the oracle. The published 'J10 + J11 = 0.0931 meV' is inconsistent with the published J10 = 0.0681, J11 = -0.0221; the staged average (0.0230 per bond) is the one that reproduces the authors' dispersion (Fig1c.mat) to 0.012 meV. Domain-imbalance magnitudes are not graded: the archive's own PND and PINS estimates disagree by up to 40% (9.7% vs 6.2% on IN20). Fix round (2026-10-26): slices sold as four tiles per quantity (catalog 11 -> 15 units, budget 8) and ablation dp9 added after the dev pilots."
+}

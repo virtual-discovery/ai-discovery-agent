@@ -1,0 +1,105 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 7,
+  "task_mb": 3.58,
+  "hidden_values": 7,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 28,
+   "budget": 34,
+   "evaluations": 28,
+   "failed_evaluations": 0,
+   "container_seconds": 46
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "rattled_frames_included",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "enthalpy_from_printed_stress",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "linear_dE_over_dV",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "archived_structures_uncorrected",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "surrogate_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "surrogate_for_metastable_phases",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "force_filter_discards_compressed_frames",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "pstress_as_pressure",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "vinet_eos",
+    "passes_grading": true
+   },
+   {
+    "name": "oracle_records_only",
+    "passes_grading": true
+   },
+   {
+    "name": "oracle_records_without_highest_pressure_run",
+    "passes_grading": true
+   },
+   {
+    "name": "correct_all_phases",
+    "passes_grading": true
+   },
+   {
+    "name": "stricter_hydrostatic_filter",
+    "passes_grading": true
+   },
+   {
+    "name": "relaxation_runs_only",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T12:51:46Z"
+}

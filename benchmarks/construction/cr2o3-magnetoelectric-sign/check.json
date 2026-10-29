@@ -1,0 +1,139 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 11,
+  "rubric_items": 8,
+  "task_mb": 0.91,
+  "hidden_values": 11,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 39,
+   "budget": 44,
+   "evaluations": 39,
+   "failed_evaluations": 0,
+   "container_seconds": 5
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "phonon_eigenvectors_as_modes",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "hdf5_values_as_THz",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "elk_domain_from_input_field",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "axial_second_pair_as_neighbours",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "codes_assumed_same_domain_averaged",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "born_from_mislabeled_0005_pair",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "born_tensor_transposed",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "born_species_averaged",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp11",
+    "name": "born_one_sided_no_asr",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "elk_eu3_from_003_pair",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "muffin_tin_moments",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "vasp_ion_projected_moments",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "hexagonal_cell_volume",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "annealing_ignores_sign_change",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "vasp_data_with_domain_flip",
+    "passes_grading": true
+   },
+   {
+    "name": "elk_window_and_born_005",
+    "passes_grading": true
+   },
+   {
+    "name": "elk_vasp_mean",
+    "passes_grading": true
+   },
+   {
+    "name": "born_one_sided_002",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T07:54:58Z"
+}

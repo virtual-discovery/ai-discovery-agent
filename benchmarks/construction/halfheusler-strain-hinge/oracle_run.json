@@ -1,0 +1,457 @@
+{
+ "evaluations": 19,
+ "charge_used": 25,
+ "budget": 30,
+ "requests": [
+  {
+   "kind": "bulk_bands",
+   "model": "LiSbZn_orig"
+  },
+  {
+   "kind": "bulk_bands",
+   "model": "LiBiZn_orig"
+  },
+  {
+   "kind": "band_edges",
+   "model": "LiSbZn_orig",
+   "band": 6,
+   "mesh": 24
+  },
+  {
+   "kind": "bulk_bands",
+   "model": "LiSbZn_orig"
+  },
+  {
+   "kind": "band_edges",
+   "model": "LiSbZn_strained_setup",
+   "band": 6,
+   "mesh": 24
+  },
+  {
+   "kind": "bulk_bands",
+   "model": "LiSbZn_strained_setup"
+  },
+  {
+   "kind": "band_edges",
+   "model": "LiBiZn_orig",
+   "band": 6,
+   "mesh": 24
+  },
+  {
+   "kind": "bulk_bands",
+   "model": "LiBiZn_orig"
+  },
+  {
+   "kind": "fermi_level",
+   "model": "LiBiZn_orig",
+   "electrons_per_cell": 6,
+   "mesh": 64,
+   "offset": 0.5
+  },
+  {
+   "kind": "prism",
+   "model": "LiSbZn_orig",
+   "basis": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ]
+   ],
+   "size": 12,
+   "k_phases": [
+    0.0
+   ],
+   "window_eV": [
+    -0.026684000000000003,
+    0.297191
+   ]
+  },
+  {
+   "kind": "prism",
+   "model": "LiSbZn_orig",
+   "basis": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ]
+   ],
+   "size": 20,
+   "k_phases": [
+    0.0,
+    3.141592653589793
+   ],
+   "window_eV": [
+    -0.026684000000000003,
+    0.297191
+   ]
+  },
+  {
+   "kind": "prism",
+   "model": "LiSbZn_orig",
+   "basis": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ]
+   ],
+   "size": 28,
+   "k_phases": [
+    0.0
+   ],
+   "window_eV": [
+    -0.026684000000000003,
+    0.297191
+   ]
+  },
+  {
+   "kind": "prism",
+   "model": "LiSbZn_strained_setup",
+   "basis": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     1,
+     1,
+     1
+    ],
+    [
+     1,
+     0,
+     1
+    ]
+   ],
+   "size": 28,
+   "k_phases": [
+    0.0
+   ],
+   "window_eV": [
+    -0.268602,
+    -0.036745
+   ]
+  },
+  {
+   "kind": "prism",
+   "model": "LiSbZn_orig",
+   "basis": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ]
+   ],
+   "size": 12,
+   "k_phases": [
+    0.0,
+    0.20943951023931953,
+    0.41887902047863906,
+    0.6283185307179586,
+    0.8377580409572781,
+    1.0471975511965976,
+    1.2566370614359172,
+    1.4660765716752366
+   ],
+   "window_eV": [
+    0.15,
+    0.8
+   ]
+  },
+  {
+   "kind": "prism",
+   "model": "LiSbZn_orig",
+   "basis": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ]
+   ],
+   "size": 12,
+   "k_phases": [
+    1.6755160819145563,
+    1.8849555921538759,
+    2.0943951023931953,
+    2.3038346126325147,
+    2.5132741228718345,
+    2.722713633111154,
+    2.9321531433504733,
+    3.141592653589793
+   ],
+   "window_eV": [
+    0.15,
+    0.8
+   ]
+  },
+  {
+   "kind": "prism",
+   "model": "LiSbZn_orig",
+   "basis": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ]
+   ],
+   "size": 12,
+   "k_phases": [
+    0.8971975511965976,
+    0.9400546940537404,
+    0.9829118369108834,
+    1.025768979768026,
+    1.068626122625169,
+    1.111483265482312,
+    1.1543404083394546,
+    1.1971975511965975
+   ],
+   "window_eV": [
+    0.15,
+    0.8
+   ]
+  },
+  {
+   "kind": "prism",
+   "model": "LiSbZn_orig",
+   "basis": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ]
+   ],
+   "size": 12,
+   "k_phases": [
+    0.0
+   ],
+   "window_eV": [
+    -0.12668400000000002,
+    0.297191
+   ],
+   "potential": [
+    {
+     "region": "cNN",
+     "depth": 2,
+     "V_eV": -0.3,
+     "species": "all"
+    }
+   ]
+  },
+  {
+   "kind": "prism",
+   "model": "LiSbZn_orig",
+   "basis": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ]
+   ],
+   "size": 12,
+   "k_phases": [
+    0.0
+   ],
+   "window_eV": [
+    -0.12668400000000002,
+    0.297191
+   ],
+   "potential": [
+    {
+     "region": "cNN",
+     "depth": 2,
+     "V_eV": -0.38,
+     "species": "all"
+    }
+   ]
+  },
+  {
+   "kind": "prism",
+   "model": "LiSbZn_orig",
+   "basis": [
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     0,
+     1
+    ]
+   ],
+   "size": 12,
+   "k_phases": [
+    0.0
+   ],
+   "window_eV": [
+    -0.12668400000000002,
+    0.297191
+   ],
+   "potential": [
+    {
+     "region": "cNN",
+     "depth": 2,
+     "V_eV": -0.46,
+     "species": "all"
+    }
+   ]
+  }
+ ],
+ "seconds": {
+  "1": 0.0,
+  "2": 0.0,
+  "3": 0.8,
+  "4": 0.0,
+  "5": 1.1,
+  "6": 0.0,
+  "7": 0.6,
+  "8": 0.0,
+  "9": 11.6,
+  "10": 1.4,
+  "11": 11.0,
+  "12": 36.7,
+  "13": 36.9,
+  "14": 10.5,
+  "15": 11.0,
+  "16": 10.7,
+  "17": 2.3,
+  "18": 1.3,
+  "19": 1.6
+ },
+ "submission": {
+  "strain_percent": {
+   "LiSbZn_orig": 0.0,
+   "LiSbZn_strained_setup": -0.0,
+   "LiBiZn_orig": 0.0,
+   "LiBiZn_strained_setup": -0.0
+  },
+  "band_inverted": {
+   "LiSbZn": false,
+   "LiBiZn": true
+  },
+  "fundamental_gap_meV": {
+   "LiSbZn_orig": 343.875,
+   "LiSbZn_strained_setup": 251.857,
+   "LiBiZn_orig": -868.9689999999999
+  },
+  "libizn_fermi_level_meV": -401.90299999999996,
+  "hinge": {
+   "termination": "Zn/Zn",
+   "energy_k0_meV": {
+    "LiSbZn_orig": 227.83653173758867,
+    "LiSbZn_strained_setup": 175.42800000000003
+   },
+   "band_window_meV": [
+    218.32000000000002,
+    773.202
+   ],
+   "zn_s_weight_k0": 0.6809,
+   "removal_potential_eV": -0.37757066748476886
+  }
+ },
+ "accepted": true,
+ "errors": {
+  "strain_percent:LiSbZn_orig": 0.0,
+  "strain_percent:LiSbZn_strained_setup": -0.0,
+  "strain_percent:LiBiZn_orig": 0.0,
+  "strain_percent:LiBiZn_strained_setup": -0.0,
+  "gap:LiSbZn_orig": 0.110394,
+  "gap:LiSbZn_strained_setup": 0.147413,
+  "gap:LiBiZn_orig": 1.61878,
+  "libizn_fermi_level_meV": 0.008189,
+  "hinge_energy_k0:LiSbZn_orig": 0.017503,
+  "hinge_energy_k0:LiSbZn_strained_setup": 0.246539,
+  "hinge_band_bottom_meV": 0.017972,
+  "hinge_band_top_meV": -0.221811,
+  "hinge_zn_s_weight": 0.0,
+  "hinge_removal_potential_eV": 0.002405
+ }
+}

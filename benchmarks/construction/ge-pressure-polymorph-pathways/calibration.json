@@ -1,0 +1,257 @@
+{
+ "reference": {
+  "transition_pressures_GPa": {
+   "CD_to_bSn": 8.785442162692847,
+   "bSn_to_ST12": 7.532892574646674,
+   "bSn_to_BC8": 5.879651905249421
+  },
+  "zero_pressure_energy_differences_meV_per_atom": {
+   "ST12_minus_BC8": 2.8567410211497446,
+   "R8_minus_BC8": 5.681936172979185
+  },
+  "metastable_order_at_0GPa": [
+   "BC8",
+   "ST12",
+   "R8"
+  ]
+ },
+ "tolerances": {
+  "transition_pressures_GPa": {
+   "CD_to_bSn": 0.2,
+   "bSn_to_ST12": 0.35,
+   "bSn_to_BC8": 0.2
+  },
+  "zero_pressure_energy_differences_meV_per_atom": {
+   "ST12_minus_BC8": 1.0,
+   "R8_minus_BC8": 1.0
+  }
+ },
+ "robustness": {
+  "vinet_eos": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.776637357079718,
+    "bSn_to_ST12": 7.515900304134847,
+    "bSn_to_BC8": 5.870012540660856
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 2.890726420726075,
+    "R8_minus_BC8": 5.682093453824422
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  },
+  "oracle_records_only": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.813945945999334,
+    "bSn_to_ST12": 7.586438838241354,
+    "bSn_to_BC8": 5.882898788462715
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 2.8921082359012473,
+    "R8_minus_BC8": 5.70946955987317
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  },
+  "oracle_records_without_highest_pressure_run": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.813363284625098,
+    "bSn_to_ST12": 7.548297372330488,
+    "bSn_to_BC8": 5.882219375103829
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 2.8970599436259903,
+    "R8_minus_BC8": 5.643017637304126
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  },
+  "correct_all_phases": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.779667777677803,
+    "bSn_to_ST12": 7.519035642047295,
+    "bSn_to_BC8": 5.869803715164129
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 2.8567410211497446,
+    "R8_minus_BC8": 5.681936172979185
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  },
+  "stricter_hydrostatic_filter": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.80169111370142,
+    "bSn_to_ST12": 7.572273716341277,
+    "bSn_to_BC8": 5.9025804548291765
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 2.737336168652682,
+    "R8_minus_BC8": 5.681936172979185
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  },
+  "relaxation_runs_only": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.803066668760435,
+    "bSn_to_ST12": 7.572839731070443,
+    "bSn_to_BC8": 5.885566354805046
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 2.8921082359012473,
+    "R8_minus_BC8": 5.70946955987317
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  }
+ },
+ "ablations": {
+  "rattled_frames_included": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 7.57114067211003,
+    "bSn_to_ST12": 7.532892574646674,
+    "bSn_to_BC8": 4.408493676001689
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": -2.0975959650684217,
+    "R8_minus_BC8": 4.144302203376249
+   },
+   "metastable_order_at_0GPa": [
+    "ST12",
+    "BC8",
+    "R8"
+   ]
+  },
+  "enthalpy_from_printed_stress": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.02476595095166,
+    "bSn_to_ST12": 5.510380607146076,
+    "bSn_to_BC8": 4.732656913202589
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 3.8038094343288975,
+    "R8_minus_BC8": 1.675875039887309
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "R8",
+    "ST12"
+   ]
+  },
+  "linear_dE_over_dV": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.00741081861557,
+    "bSn_to_ST12": 6.346833059596132,
+    "bSn_to_BC8": 5.354721235142399
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 2.8567410211497446,
+    "R8_minus_BC8": 5.681936172979185
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  },
+  "archived_structures_uncorrected": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.785442162692847,
+    "bSn_to_ST12": 6.6041516911664715,
+    "bSn_to_BC8": 5.722898109279306
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 2.9649689055979422,
+    "R8_minus_BC8": 5.6437888734874875
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  },
+  "surrogate_only": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.92624450622625,
+    "bSn_to_ST12": 7.798568323505271,
+    "bSn_to_BC8": 6.2448074110195435
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 5.175874999999941,
+    "R8_minus_BC8": 7.7388333333336945
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  },
+  "surrogate_for_metastable_phases": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.785442710378636,
+    "bSn_to_ST12": 7.596951751713577,
+    "bSn_to_BC8": 6.071037154461716
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 5.175874999999941,
+    "R8_minus_BC8": 7.7388333333336945
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  },
+  "force_filter_discards_compressed_frames": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.785442162692847,
+    "bSn_to_ST12": 6.3948229200594895,
+    "bSn_to_BC8": 5.879651905249421
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 3.099081136952009,
+    "R8_minus_BC8": 5.562919019281409
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  },
+  "pstress_as_pressure": {
+   "transition_pressures_GPa": {
+    "CD_to_bSn": 8.539033988861728,
+    "bSn_to_ST12": 7.455091728900827,
+    "bSn_to_BC8": 5.868823810308864
+   },
+   "zero_pressure_energy_differences_meV_per_atom": {
+    "ST12_minus_BC8": 2.8567410211497446,
+    "R8_minus_BC8": 5.681936172979185
+   },
+   "metastable_order_at_0GPa": [
+    "BC8",
+    "ST12",
+    "R8"
+   ]
+  }
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "ablations": {
+  "rotated_axes_setting": {
+   "edelstein_allowed_components": [
+    "xy",
+    "yx"
+   ],
+   "nonlinear_hall_allowed_components": [
+    "xxz",
+    "xzx",
+    "yyz",
+    "yzy",
+    "zxx",
+    "zyy"
+   ]
+  },
+  "chiral_d2_assumption": {
+   "edelstein_allowed_components": [
+    "xx",
+    "yy",
+    "zz"
+   ]
+  },
+  "intra_atomic_orbital_moment": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": 0.26556595703088337,
+    "CBM+0.10": -2.4117303368425214
+   },
+   "orbital_magnetization_A_per_m": 0.0022327074019594054,
+   "soc_to_nosoc_orbital_ratio": 0.5615980450454912
+  },
+  "no_spin_factor_in_nosoc_alpha": {
+   "soc_to_nosoc_orbital_ratio": 1.571981252884116
+  },
+  "no_spin_factor_in_nosoc_holes": {
+   "soc_to_nosoc_orbital_ratio": 0.46409577487812753
+  },
+  "no_spin_factor_anywhere_nosoc": {
+   "soc_to_nosoc_orbital_ratio": 0.9281915497562551
+  },
+  "common_header_energy_axis": {
+   "soc_to_nosoc_orbital_ratio": 1.0663392194674797
+  },
+  "coarse_mesh_32": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": -7.595573507441633,
+    "CBM+0.10": -0.3661727523357774
+   },
+   "orbital_magnetization_A_per_m": -0.09351398509522385,
+   "soc_to_nosoc_orbital_ratio": 0.7867346677058147
+  },
+  "tau_hbar_over_gamma": {
+   "orbital_magnetization_A_per_m": -0.188240468406006
+  },
+  "positive_charge_sign": {
+   "orbital_magnetization_A_per_m": 0.094120234203003
+  },
+  "conduction_ratio_from_valence": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": -11.19498688012404,
+    "CBM+0.10": -11.19498688012404
+   }
+  },
+  "nlh_full_permutation_symmetry": {
+   "sigma_zxy_over_sigma_xyz": 1.0
+  },
+  "chirality_from_chiral_class": {
+   "chirality_indicator": 1.9999999673384885,
+   "alpha_yy_over_alpha_xx": 1.0
+  },
+  "berry_plus_intra_atomic_moment": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": -10.929420923093158,
+    "CBM+0.10": -2.7506773070870816
+   },
+   "orbital_magnetization_A_per_m": -0.0918875268010436,
+   "soc_to_nosoc_orbital_ratio": 0.7938166186431715
+  }
+ },
+ "robustness": {
+  "mesh_96": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": -10.601307048170499,
+    "CBM+0.10": -0.33728323294515394
+   },
+   "orbital_magnetization_A_per_m": -0.0940167081466107,
+   "soc_to_nosoc_orbital_ratio": 0.7851475873808306
+  },
+  "valence_spin_extrapolated_1_over_N": {
+   "orbital_to_spin_ratio": {
+    "VBM-0.10": -13.39942368379047,
+    "CBM+0.10": -0.33894697024456005
+   }
+  },
+  "raw_bcd_ratio_mesh128": {
+   "sigma_zxy_over_sigma_xyz": -2.00000538939352
+  }
+ }
+}

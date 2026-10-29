@@ -1,0 +1,115 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 7,
+  "task_mb": 3.54,
+  "hidden_values": 14,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 121,
+   "budget": 140,
+   "evaluations": 43,
+   "failed_evaluations": 0,
+   "container_seconds": 8
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "uniform_frame_time_for_UO2",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "small_cell_transition_temperatures",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "small_cell_activation_energies",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "small_cell_predictions",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "768_atom_cell_assumed_converged",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "yeh_hummer_one_over_L_extrapolation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "single_arrhenius_across_Tc",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "uo2_324_atom_cell_transition",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "uo2_324_atom_cell_predictions",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "fluorite_size_correction_applied_to_AgI",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "msd_fit_window_10_80_ps",
+    "passes_grading": true
+   },
+   {
+    "name": "Tc_from_energy_fluctuations_with_cascaded_windows",
+    "passes_grading": true
+   },
+   {
+    "name": "PbF2_large_cell_by_one_over_N_extrapolation",
+    "passes_grading": true
+   },
+   {
+    "name": "Arrhenius_fit_instead_of_interpolation",
+    "passes_grading": true
+   },
+   {
+    "name": "AgI_from_32_atom_cell_in_momentum_frame",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T04:07:27Z"
+}

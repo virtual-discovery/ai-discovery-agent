@@ -1,0 +1,222 @@
+{
+ "task_id": "tb2j-reference-selfconsistency-set",
+ "catalog_id": "tb2j-reference-selfconsistency-set",
+ "start": "released",
+ "source_group": "tellezmora_2024_tb2j_groundstate",
+ "title": "Reference-state dependence of MFT exchange across four magnets",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "How far the FeP FM-reference exchange list must extend for k_min",
+   "wrong_choice": "Stop at 11-14 A (the couplings there are already below 0.3 meV)",
+   "consequence": "k_min off by 0.012 r.l.u. at 14 A; at 10-11 A the minimum jumps to a b-axis modulation (0, 0.33, 0.09); long windows cost 2 units each",
+   "ablation": "FeP_exchange_truncated_at_14A",
+   "difficulty_type": "convergence under a binding budget (metallic long-range exchange)"
+  },
+  {
+   "id": "dp2",
+   "fork": "Incommensurate k_min versus the commensurate approximant or a remembered vector",
+   "wrong_choice": "Report the 1x1x5 approximant (0, 0, 0.2) (also the experimental helix) or the paper's rounded (0.00, 0.03, 0.21)",
+   "consequence": "Off by 0.035 and 0.008 r.l.u. (tolerance 0.005)",
+   "ablation": "commensurate_approximant_as_kmin",
+   "difficulty_type": "regime judgement and anti-memorisation"
+  },
+  {
+   "id": "dp3",
+   "fork": "Whether the exchange range that converges k_min also converges the energies",
+   "wrong_choice": "Use the 0-18 A FeP list (k_min already within 0.003) or 8-11 A insulator lists for the stabilization energies",
+   "consequence": "FeP FM-reference energy +15 %; FeCl2 FM-reference -33 %; FePS3 converged -14 %",
+   "ablation": "FeP_energies_from_kmin_converged_range_18A",
+   "difficulty_type": "cascade: a convergence test on one observable silently biases another"
+  },
+  {
+   "id": "dp4",
+   "fork": "Whether the long-distance windows of the AFM supercell lists can be skipped",
+   "wrong_choice": "Skip the 30-40 A window of FeCl2/AFM (the FM list has J = 0.0000 beyond 25 A) or the 23-30 A window of FeP/AFM",
+   "consequence": "The lists were computed with R = 0 along the long axis only, so boundary-crossing bonds are listed at the far image: FeCl2 interlayer bonds at 30.5 A, FeP 2.8-4.2 A bonds at 25-29 A. FeCl2 converged energy -16 %, FeP -5.4 %",
+   "ablation": "FeCl2_supercell_long_windows_skipped",
+   "difficulty_type": "evidence in the raw output (R vectors, coordination counts, implausibly strong long-range couplings)"
+  },
+  {
+   "id": "dp5",
+   "fork": "How to map the FeP spiral supercell exchange onto the four-Fe cell",
+   "wrong_choice": "Fold the pairs at their archived (far-image) vectors",
+   "consequence": "k_min of the converged exchange becomes (0, 1/2, 0) (or 0.207 with sum-over-five averaging) instead of (0.002, 0.027, 0.1885); the archived FeP h(k) is exactly flat along Gamma-Z for the same reason",
+   "ablation": "FeP_spiral_folded_as_listed",
+   "difficulty_type": "aliasing artefact exposed only by a cross-check; cascade into the self-consistency verdict"
+  },
+  {
+   "id": "dp6",
+   "fork": "Whether the archived FePS3 DFT+U FM calculation is a DFT+U calculation",
+   "wrong_choice": "Use the archived DFT+U FM file as the U = 3 eV FM reference",
+   "consequence": "It is the U = 0 FM calculation (identical cell, moments 3.377 muB and all 1196 couplings); using it gives 48.48 meV and a spurious 44 % 'reference effect' in an insulator; the value is not determined (null)",
+   "ablation": "FePS3_DFT+U_FM_duplicate_used",
+   "difficulty_type": "metadata inconsistency discovered in the purchased output"
+  },
+  {
+   "id": "dp7",
+   "fork": "What the FM reference predicts for FeP: right q, but which state and which energy",
+   "wrong_choice": "Take the energy of the FM-reference exchange's own Luttinger-Tisza helix, or assume the converged exchange reproduces the FM-reference k_min",
+   "consequence": "FeP FM-reference energy 29.1 instead of 13.4 meV/Fe (its own helix has a different intra-cell phase arrangement); converged k_min off by 0.030 r.l.u.",
+   "ablation": "FeP_fm_energy_of_its_own_LT_helix",
+   "difficulty_type": "competing explanations: correct propagation vector does not imply a transferable model"
+  },
+  {
+   "id": "dp8",
+   "fork": "Pair-counting convention of the archived exchange",
+   "wrong_choice": "Count each bond once",
+   "consequence": "All stabilization energies halved",
+   "ablation": "bond_counted_once",
+   "difficulty_type": "convention"
+  }
+ ],
+ "graded_fields": [
+  "fm_reference_kmin_FeP_rlu within 0.005 r.l.u. (components reduced modulo 1 and compared in absolute value)",
+  "converged_exchange_kmin_FeP_rlu within 0.012 r.l.u. (same equivalence)",
+  "stabilization_energy_meV_per_ion: nine entries within 4 % each; FePS3_DFT+U.fm_reference must be null"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 45,
+  "oracle_charge": 60,
+  "budget": 68,
+  "catalog_value": 160,
+  "tool_calls": "50-80",
+  "gpt6astra_cost_usd": "3-5",
+  "why": "Ten calculations in windowed purchases; LT k_min with a range test; mapping FM couplings onto four different supercells; detecting two aliased supercell lists and a duplicated file; folding a 20-site spiral list; stability tests including a noncollinear spiral.",
+  "pilot": "pending (coordinator)",
+  "oracle_container_seconds": 39,
+  "harbor_oracle_runtime_s": 74
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image); the lab is a lookup of archived values"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/rbrcp-0tc34",
+  "doi": "10.24435/materialscloud:5m-2t",
+  "paper_doi": "10.1038/s41524-024-01202-z",
+  "files_used": [
+   "NiO.tar.gz",
+   "FeCl2.tar.gz",
+   "FePS3.tar.gz",
+   "FeP.tar.gz (members listed in SOURCE.md)"
+  ],
+  "md5": {
+   "NiO.tar.gz": "02b5fac1c748ee9e612d6d803efaed71",
+   "FeCl2.tar.gz": "653cd5334436fb3b69e43352704083bf",
+   "FePS3.tar.gz": "54ebb117ece8326050225bf6fc141d78",
+   "FeP.tar.gz": "9ca0793b00444416ef5a7ea596c741e0"
+  },
+  "sha256": {
+   "NiO.tar.gz": "994cbf17a204dff1cdfdb9dd2844db2e3c94635ea2c932f49018ee360e8f8a09",
+   "FeCl2.tar.gz": "ab4f4bb5dd88558325a408e384943a8739841a82972024e23f4889a2c118716f",
+   "FePS3.tar.gz": "dca986c02a035c4d213638fb9a72315e09c4ac54fc9dffe1c277b7f9ab2a5cdc",
+   "FeP.tar.gz": "27ca2d78df076f0a6a6d0e876bda44f2ec97528b36cbfcdfd8d394c3287405b4"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Adapted from the design (candidates.json / DETAILS.md section 22). (1) The categorical ground states of NiO, FeCl2 and FePS3 are not graded: they are the experimental structures and are read off the AFM metadata. Reference dependence is graded instead through stabilization energies from both exchange sets, for every material. (2) 'Fractional change of dominant J within 20 %' became the stabilization energies within 4 %: per-bond changes need a bond mapping across differently relaxed cells, and 20 % would not separate FeCl2 or NiO from the wrong paths. (3) 'LSWT magnon energies at hidden q' were dropped. The released FeP spiral is not a stationary point and is aliased along its axis, so magnon energies along c are not uniquely defined, and magnons of the insulators would repeat the sibling CuO task. (4) The FeP helix target is split into the FM-reference k_min and the k_min of the converged exchange (the self-consistency test). (5) Three data problems found during construction drive dp4-dp6: R = 0 supercell lists, the FePS3 DFT+U FM duplicate, and non-stationary FeP moments. The sibling task tb2j-groundstate-cuo-multiferroic uses only CuO.tar.gz from the same record.",
+ "calibration": {
+  "fm_reference_kmin_FeP_rlu": {
+   "reference": [
+    0.0,
+    0.0306,
+    0.2179
+   ],
+   "tolerance_rlu": 0.005,
+   "robustness_distance": {
+    "kmin_FeP_pairs_below_18A": 0.0028,
+    "kmin_FeP_pairs_below_23A": 0.0001
+   },
+   "ablation_distance": {
+    "kmin_FeP_from_pairs_below_14A": 0.0118,
+    "kmin_FeP_from_pairs_below_11A": 0.3556,
+    "kmin_FeP_paper_verbatim": 0.008,
+    "kmin_FeP_commensurate_approximant": 0.0354
+   }
+  },
+  "converged_exchange_kmin_FeP_rlu": {
+   "reference": [
+    0.0021,
+    0.0268,
+    0.1885
+   ],
+   "tolerance_rlu": 0.012,
+   "robustness_distance": {
+    "kmin_conv_FeP_sum5": 0.0056,
+    "kmin_conv_FeP_drop_half_box": 0.0058,
+    "kmin_conv_FeP_bought_below_30A": 0.0007
+   },
+   "ablation_distance": {
+    "kmin_conv_FeP_folded_as_listed": 0.5093,
+    "kmin_conv_FeP_folded_as_listed_sum5": 0.0186,
+    "kmin_conv_FeP_assumed_reference_independent": 0.0297,
+    "kmin_FeP_commensurate_approximant": 0.0293
+   }
+  },
+  "stabilization_energy_meV_per_ion": {
+   "reference": {
+    "NiO": {
+     "fm_reference": 139.1684,
+     "converged_reference": 137.4226
+    },
+    "FeCl2": {
+     "fm_reference": 0.4932,
+     "converged_reference": 0.4785
+    },
+    "FePS3_DFT": {
+     "fm_reference": 48.478,
+     "converged_reference": 53.9606
+    },
+    "FePS3_DFT+U": {
+     "fm_reference": null,
+     "converged_reference": 27.036
+    },
+    "FeP": {
+     "fm_reference": 13.3902,
+     "converged_reference": 101.908
+    }
+   },
+   "tolerance": "relative 4% per entry; FePS3_DFT+U fm_reference must be null",
+   "robustness_relative": {
+    "FeP_relaxed_spiral": {
+     "fm_reference": 0.0195,
+     "converged_reference": 0.0022
+    },
+    "FePS3_DFT_below_14A": {
+     "fm_reference": -0.0243,
+     "converged_reference": -0.0163
+    },
+    "FeCl2_fm_below_11A": -0.0024,
+    "NiO_below_5A": {
+     "fm_reference": -0.0147,
+     "converged_reference": -0.0043
+    }
+   },
+   "ablation_relative": {
+    "FeP_fm_pairs_below_18A": 0.1508,
+    "FeP_fm_own_LT_helix": 1.1717,
+    "FeCl2_fm_below_8A": -0.3301,
+    "FePS3_DFT_fm_below_11A": -0.0376,
+    "FePS3_DFT_conv_below_11A": -0.1384,
+    "FeCl2_conv_long_windows_skipped": -0.1615,
+    "FeP_conv_long_windows_skipped": -0.054,
+    "FePS3_DFT+U_fm_from_duplicate": 48.4774,
+    "bond_counted_once": -0.5
+   }
+  },
+  "reference_ratio_converged_over_fm": {
+   "NiO": 0.9875,
+   "FeCl2": 0.9703,
+   "FePS3_DFT": 1.1131,
+   "FePS3_DFT+U": null,
+   "FeP": 7.6107
+  }
+ },
+ "tightest_margins": {
+  "fm_reference_kmin_FeP": "tolerance 0.005 r.l.u.; paper's rounded vector at 0.0080; defensible 18 A list at 0.0028",
+  "FeP converged energy": "tolerance 4 %; 23-30 A window skipped -5.4 %; defensible relaxed spiral +0.2 %",
+  "FePS3_DFT fm energy": "tolerance 4 %; 0-14 A list -2.4 % (defensible); 0-11 A list -3.8 % (passes; the ablation fails on its other entries)",
+  "converged_exchange_kmin_FeP": "tolerance 0.012 r.l.u.; as-listed sum-over-five 0.0186; defensible variants <= 0.0058"
+ }
+}

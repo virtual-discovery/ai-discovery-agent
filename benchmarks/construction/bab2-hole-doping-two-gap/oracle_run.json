@@ -1,0 +1,189 @@
+{
+ "evaluations": 21,
+ "charge_used": 30,
+ "budget": 34,
+ "requests": [
+  {
+   "kind": "iso_log",
+   "run": "sensitivity/0"
+  },
+  {
+   "kind": "iso_log",
+   "run": "sensitivity/1"
+  },
+  {
+   "kind": "iso_log",
+   "run": "sensitivity/2"
+  },
+  {
+   "kind": "iso_log",
+   "run": "sensitivity/3"
+  },
+  {
+   "kind": "iso_log",
+   "run": "sensitivity/4"
+  },
+  {
+   "kind": "iso_log",
+   "run": "sensitivity/5"
+  },
+  {
+   "kind": "iso_log",
+   "run": "sensitivity/6"
+  },
+  {
+   "kind": "dfpt_phonons",
+   "run": "sensitivity/1"
+  },
+  {
+   "kind": "dfpt_phonons",
+   "run": "sensitivity/2"
+  },
+  {
+   "kind": "dfpt_phonons",
+   "run": "sensitivity/4"
+  },
+  {
+   "kind": "eliashberg_iso",
+   "run": "sensitivity/5",
+   "mu_star": 0.13,
+   "cutoff_meV": 500,
+   "temperatures_K": [
+    15,
+    21,
+    27
+   ]
+  },
+  {
+   "kind": "eliashberg_iso",
+   "run": "sensitivity/5",
+   "mu_star": 0.1,
+   "cutoff_meV": 500,
+   "max_iter": 5000,
+   "conv_thr": 1e-06,
+   "mixing": 0.8,
+   "temperatures_K": [
+    28,
+    31,
+    33,
+    34,
+    35,
+    36,
+    37,
+    39
+   ]
+  },
+  {
+   "kind": "eliashberg_iso",
+   "run": "sensitivity/5",
+   "mu_star": 0.1,
+   "cutoff_meV": 500,
+   "max_iter": 5000,
+   "conv_thr": 1e-06,
+   "mixing": 0.8,
+   "temperatures_K": [
+    35.0,
+    35.25,
+    35.5,
+    35.75,
+    36.0,
+    36.25,
+    36.5,
+    36.75
+   ]
+  },
+  {
+   "kind": "eliashberg_iso",
+   "run": "sensitivity/4",
+   "mu_star": 0.1,
+   "cutoff_meV": 500,
+   "max_iter": 5000,
+   "conv_thr": 1e-06,
+   "mixing": 0.8,
+   "temperatures_K": [
+    26,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35,
+    37
+   ]
+  },
+  {
+   "kind": "eliashberg_iso",
+   "run": "sensitivity/4",
+   "mu_star": 0.1,
+   "cutoff_meV": 500,
+   "max_iter": 5000,
+   "conv_thr": 1e-06,
+   "mixing": 0.8,
+   "temperatures_K": [
+    32.0,
+    32.25,
+    32.5,
+    32.75,
+    33.0,
+    33.25,
+    33.5,
+    33.75
+   ]
+  },
+  {
+   "kind": "aniso_gap",
+   "run": "sensitivity/5",
+   "temperature_K": 25,
+   "axis": "imaginary"
+  },
+  {
+   "kind": "aniso_gap",
+   "run": "sensitivity/5",
+   "temperature_K": 50,
+   "axis": "imaginary"
+  },
+  {
+   "kind": "aniso_gap",
+   "run": "sensitivity/5",
+   "temperature_K": 55,
+   "axis": "imaginary"
+  },
+  {
+   "kind": "aniso_gap",
+   "run": "sensitivity/5",
+   "temperature_K": 60,
+   "axis": "imaginary"
+  },
+  {
+   "kind": "supercell_phonons",
+   "run": "331"
+  },
+  {
+   "kind": "supercell_phonons",
+   "run": "331_cs"
+  }
+ ],
+ "submission": {
+  "critical_hole_doping": 0.0641798620291677,
+  "iso_tc_K": {
+   "0.065": 36.714987439243494,
+   "0.10": 33.485231790550145
+  },
+  "aniso_tc_K": 62.62202295888321,
+  "gap_ratio_25K": 4.9657089590469,
+  "soft_mode_cm1": {
+   "homogeneous_one_ninth": 25.461206973379788,
+   "cs_substituted": -39.53938
+  }
+ },
+ "accepted": true,
+ "errors": {
+  "critical_hole_doping": -1e-05,
+  "iso_tc:0.065": 7e-05,
+  "iso_tc:0.10": 9e-05,
+  "aniso_tc": 0.0,
+  "gap_ratio": 0.0,
+  "soft_mode:homogeneous_one_ninth": -0.13594,
+  "soft_mode:cs_substituted": 0.0
+ }
+}

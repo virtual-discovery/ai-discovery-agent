@@ -1,0 +1,158 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 8,
+  "task_mb": 0.89,
+  "hidden_values": 6,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 29,
+   "budget": 34,
+   "evaluations": 20,
+   "failed_evaluations": 0,
+   "container_seconds": 36
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "tc_linear_interpolation_across_lambda_jump",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "unscaled_average_of_neighbour_spectra",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "nonadiabatic_shifts_only_NA",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "adiabatic_spectra",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "constant_dos_for_1x1",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "allen_dynes_formula",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "mcmillan_formula",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "boundary_at_soft_mode_instability",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "boundary_at_cdw_spinodal",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "doping_per_2x2_cell",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "doping_as_areal_density",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "soc_omitted",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "cdw_dopings_from_caption",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "cdw_labels_in_table_order",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "archived_tables_taken_as_eliashberg",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "custom_spectrum_rigid_band_lower_dos",
+    "passes_grading": true
+   },
+   {
+    "name": "custom_spectrum_rigid_band_upper_dos",
+    "passes_grading": true
+   },
+   {
+    "name": "moments_allen_dynes_without_shape_correction",
+    "passes_grading": true
+   },
+   {
+    "name": "lambda_weighted_mix_of_neighbour_spectra",
+    "passes_grading": true
+   },
+   {
+    "name": "quadratic_pes_crossing",
+    "passes_grading": true
+   },
+   {
+    "name": "cdw_well_minimum_crossing",
+    "passes_grading": true
+   },
+   {
+    "name": "soc_ratio_to_scalar_relativistic_curve",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T20:50:01Z"
+}

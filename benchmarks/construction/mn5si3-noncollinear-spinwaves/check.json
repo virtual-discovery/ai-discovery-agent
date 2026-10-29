@@ -1,0 +1,106 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 6,
+  "rubric_items": 7,
+  "task_mb": 0.48,
+  "hidden_values": 28,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 22,
+   "budget": 25,
+   "evaluations": 16,
+   "failed_evaluations": 0,
+   "container_seconds": 75
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "mn2_only_sites",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "bonds_double_counted",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "free_ion_spin_5_2",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "lowest_branch_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "branch_weights_ignored",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "collinear_ground_state_not_relaxed",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "angle_to_mn1_axis",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "collinear_reference_exchange_table",
+    "passes_grading": true
+   },
+   {
+    "name": "long_range_17A_exchange_table",
+    "passes_grading": true
+   },
+   {
+    "name": "momentum_resolution_0.04",
+    "passes_grading": true
+   },
+   {
+    "name": "momentum_resolution_0.08",
+    "passes_grading": true
+   },
+   {
+    "name": "energy_scale_0.9",
+    "passes_grading": true
+   },
+   {
+    "name": "energy_scale_1.1",
+    "passes_grading": true
+   },
+   {
+    "name": "resolution_from_all_cuts",
+    "passes_grading": true
+   },
+   {
+    "name": "mn1_spin_0.6",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T22:44:04Z"
+}

@@ -1,0 +1,314 @@
+{
+ "task_id": "mpea-vacancy-diffusion-kmc",
+ "catalog_id": "mpea-vacancy-diffusion-kmc",
+ "start": "released",
+ "source_group": "lee_2026_mpea_diffusion_elce",
+ "title": "Vacancy diffusion in refractory multi-principal-element alloys from released hop barriers",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "competing explanation / model class (detailed balance, discovered site-energy disorder)",
+   "fork": "Whether hop barriers carry the end-state energy difference (KRA + dE/2 with an end-state Hamiltonian) or are modelled as direction-independent / directly fitted forward barriers",
+   "wrong_choice": "Use the KRA alone (equal forward and backward barriers: the thermo-ideal model) or fit E_TS - E_initial directly on symmetric pair descriptors, assuming (as the paper reports) that thermodynamics is minor",
+   "consequence": "Archived |E2 - E1| has median 0.43 eV; hidden-barrier RMSE 0.45 eV (direct fit 0.343 eV); log10 eta of A off by 0.796",
+   "ablation": "thermo_ideal_as_real"
+  },
+  {
+   "id": "dp2",
+   "kind": "descriptor range / model class",
+   "fork": "Local-environment barrier model vs composition-averaged (species-mean) barriers",
+   "wrong_choice": "One barrier per hopping element (alloy mean of the purchased KRA), with the end-state Hamiltonian",
+   "consequence": "Hidden-barrier RMSE 0.268 eV; tracer ratio of B 1.331 vs 0.958; log10 eta of A -1.186 vs -1.574",
+   "ablation": "species_mean_barriers"
+  },
+  {
+   "id": "dp3",
+   "kind": "estimator (tracer vs jump frequency; correlation)",
+   "fork": "Tracer diffusivities from mean-squared displacements vs from hop counts",
+   "wrong_choice": "D*_i from the number of hops times the hop length squared (uncorrelated random walk)",
+   "consequence": "log10 tracer ratio of B 1.471 vs 0.958: the fast species (Nb, f ~ 0.11) is far more correlated than the slow ones (f ~ 0.35-0.4)",
+   "ablation": "jump_count_tracers"
+  },
+  {
+   "id": "dp4",
+   "kind": "evidence discovered by validation (model extrapolation vs released data); cascade into eta",
+   "fork": "Source of the pure-element migration barriers in the rule-of-mixtures benchmark",
+   "wrong_choice": "Take E_m from the pure-element limit of a fitted linear local-environment model instead of the released pure-element hops",
+   "consequence": "The linear model misses the pure limits by up to +0.33 eV (Nb 0.70 vs 0.37 eV); log10 eta shifts by +0.359 (A) and +0.517 (C)",
+   "ablation": "rom_from_linear_model_pure_limit"
+  },
+  {
+   "id": "dp5",
+   "kind": "regime judgement (effective vs microscopic activation energy)",
+   "fork": "Activation energy from the temperature dependence of the simulated tracer diffusivity vs from a barrier average",
+   "wrong_choice": "Report the rule-of-mixtures barrier, or the mean barrier of accepted hops, as the activation energy",
+   "consequence": "0.776 or 0.714 eV instead of 1.107 eV: trapping and correlated slow paths add ~0.35 eV",
+   "ablation": "ea_from_rom_barrier"
+  },
+  {
+   "id": "dp6",
+   "kind": "discriminating calculation (mechanism attribution)",
+   "fork": "Whether thermodynamic (site-energy) or kinetic (barrier-distribution) disorder controls sluggishness, tested by the variants",
+   "wrong_choice": "Attribute without running the variants (variants assumed to behave like the real alloy)",
+   "consequence": "Thermo-ideal B is -0.505 and KRA-simple B -0.103 against -1.199 for the real alloy: both matter, the barrier distribution most",
+   "ablation": "untested_attribution"
+  }
+ ],
+ "graded_fields": [
+  "barrier_predictions_eV: RMSE over 100 hidden archived hops <= 0.23 eV",
+  "log10_eta_vacancy A, B, C (2000 K) within +-0.3",
+  "fastest_tracer_B exact",
+  "log10_tracer_ratio_B within +-0.3",
+  "activation_energy_C_eV (fastest tracer of C, 1700-2300 K) within +-0.2 eV",
+  "log10_eta_thermo_ideal_B and log10_eta_kra_simple_B within +-0.3"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 47,
+  "oracle_charge": 54,
+  "budget": 60,
+  "catalog_size": "1,845 purchasable hops (93 units at 20 per unit) plus unlimited kMC runs (1-8 units each)",
+  "oracle_plan": "40 hop purchases (800 hops: 35 pure/dilute + 765 random alloy hops) + 7 kMC runs of 2 units",
+  "oracle_container_seconds": 35,
+  "harbor_oracle_wall_minutes": 1.3,
+  "tool_calls": "50-80",
+  "wall_time_h": "1.5-3",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image); the lab compiles its kMC kernel (kmc.c, ~230 lines of C) with the image gcc at build time; no extra packages"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/bhv3r-a8q53",
+  "doi": "10.24435/materialscloud:5g-95",
+  "files_used": [
+   "all_data.json",
+   "files_description.md"
+  ],
+  "md5": {
+   "all_data.json": "15df9136ed668320057131c8c59cad2a",
+   "files_description.md": "8849580fa4e1bb9f72bca8d1e74e571f"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Diffusion targets are the builders' reconstruction (reference barrier model trained on all 1,799 clean hops, lab kMC engine), not values from the paper; the authors' separate DFT energy cluster expansion is not archived, so the end-state energetics come from the released hop energies and the thermodynamic contribution is larger than in the paper. The SRO-equilibration and finite-size forks of the design are not graded: alloys where they matter (Cr-Nb-Mo-Ta near its miscibility gap) were too sensitive to the purchased subset (log10 eta from -2.0 to -3.4 across 800-hop random subsets); they remain rubric items.",
+ "calibration": {
+  "barrier_rmse_eV (100 hidden hops)": {
+   "reference_full_data_model": 0.165,
+   "robustness": {
+    "all_purchasable_hops": 0.165,
+    "half_of_hops_seed0": 0.19,
+    "half_of_hops_seed1": 0.169,
+    "random_800_hops_seed0": 0.182,
+    "random_800_hops_seed1": 0.182,
+    "random_800_hops_seed2": 0.202,
+    "with_pathological_entries": 0.171,
+    "linear_kra_no_quadratic": 0.177,
+    "two_shell_pair_hamiltonian": 0.183,
+    "four_orbit_kra": 0.168
+   },
+   "nearest_ablations": {
+    "species_mean_barriers": 0.268,
+    "direct_forward_barrier_fit": 0.343,
+    "thermo_ideal_as_real": 0.45
+   },
+   "tolerance": "<= 0.23"
+  },
+  "log10_eta_vacancy:A": {
+   "reference": -1.574,
+   "robustness": {
+    "all_purchasable_hops": -1.547,
+    "half_of_hops_seed0": -1.584,
+    "half_of_hops_seed1": -1.668,
+    "random_800_hops_seed0": -1.573,
+    "random_800_hops_seed1": -1.541,
+    "random_800_hops_seed2": -1.791,
+    "with_pathological_entries": -1.529,
+    "linear_kra_no_quadratic": -1.455,
+    "two_shell_pair_hamiltonian": -1.526,
+    "four_orbit_kra": -1.717
+   },
+   "robustness_max_deviation": 0.217,
+   "nearest_ablations": {
+    "thermo_ideal_as_real": -0.778,
+    "species_mean_barriers": -1.186,
+    "rom_from_linear_model_pure_limit": -1.215
+   },
+   "tolerance": "+-0.3"
+  },
+  "log10_eta_vacancy:B": {
+   "reference": -1.199,
+   "robustness": {
+    "all_purchasable_hops": -1.234,
+    "half_of_hops_seed0": -1.295,
+    "half_of_hops_seed1": -1.017,
+    "random_800_hops_seed0": -1.388,
+    "random_800_hops_seed1": -1.228,
+    "random_800_hops_seed2": -1.298,
+    "with_pathological_entries": -1.203,
+    "linear_kra_no_quadratic": -1.096,
+    "two_shell_pair_hamiltonian": -1.308,
+    "four_orbit_kra": -1.283
+   },
+   "robustness_max_deviation": 0.189,
+   "nearest_ablations": {
+    "thermo_ideal_as_real": -0.511,
+    "species_mean_barriers": -1.165,
+    "rom_from_linear_model_pure_limit": -0.89
+   },
+   "tolerance": "+-0.3"
+  },
+  "log10_eta_vacancy:C": {
+   "reference": -0.531,
+   "robustness": {
+    "all_purchasable_hops": -0.538,
+    "half_of_hops_seed0": -0.495,
+    "half_of_hops_seed1": -0.676,
+    "random_800_hops_seed0": -0.714,
+    "random_800_hops_seed1": -0.608,
+    "random_800_hops_seed2": -0.693,
+    "with_pathological_entries": -0.532,
+    "linear_kra_no_quadratic": -0.707,
+    "two_shell_pair_hamiltonian": -0.513,
+    "four_orbit_kra": -0.583
+   },
+   "robustness_max_deviation": 0.183,
+   "nearest_ablations": {
+    "thermo_ideal_as_real": -0.295,
+    "species_mean_barriers": -0.82,
+    "rom_from_linear_model_pure_limit": -0.014
+   },
+   "tolerance": "+-0.3"
+  },
+  "log10_tracer_ratio_B": {
+   "reference": 0.958,
+   "robustness": {
+    "all_purchasable_hops": 0.946,
+    "half_of_hops_seed0": 0.993,
+    "half_of_hops_seed1": 0.863,
+    "random_800_hops_seed0": 1.13,
+    "random_800_hops_seed1": 1.043,
+    "random_800_hops_seed2": 0.956,
+    "with_pathological_entries": 0.87,
+    "linear_kra_no_quadratic": 1.035,
+    "two_shell_pair_hamiltonian": 1.081,
+    "four_orbit_kra": 0.912
+   },
+   "robustness_max_deviation": 0.172,
+   "nearest_ablations": {
+    "jump_count_tracers": 1.471,
+    "species_mean_barriers": 1.331,
+    "thermo_ideal_as_real": 0.836
+   },
+   "tolerance": "+-0.3"
+  },
+  "activation_energy_C_eV": {
+   "reference": 1.107,
+   "robustness": {
+    "all_purchasable_hops": 1.122,
+    "half_of_hops_seed0": 1.062,
+    "half_of_hops_seed1": 1.16,
+    "random_800_hops_seed0": 1.159,
+    "random_800_hops_seed1": 1.132,
+    "random_800_hops_seed2": 1.215,
+    "with_pathological_entries": 1.114,
+    "linear_kra_no_quadratic": 1.16,
+    "two_shell_pair_hamiltonian": 1.065,
+    "four_orbit_kra": 1.121
+   },
+   "robustness_max_deviation": 0.108,
+   "nearest_ablations": {
+    "ea_from_rom_barrier": 0.776,
+    "ea_from_mean_accepted_barrier": 0.714,
+    "thermo_ideal_as_real": 0.812,
+    "species_mean_barriers": 1.216
+   },
+   "tolerance": "+-0.2 eV"
+  },
+  "log10_eta_thermo_ideal_B": {
+   "reference": -0.505,
+   "robustness": {
+    "all_purchasable_hops": -0.436,
+    "half_of_hops_seed0": -0.41,
+    "half_of_hops_seed1": -0.423,
+    "random_800_hops_seed0": -0.547,
+    "random_800_hops_seed1": -0.383,
+    "random_800_hops_seed2": -0.491,
+    "with_pathological_entries": -0.535,
+    "linear_kra_no_quadratic": -0.311,
+    "two_shell_pair_hamiltonian": -0.462,
+    "four_orbit_kra": -0.509
+   },
+   "robustness_max_deviation": 0.194,
+   "nearest_ablations": {
+    "untested_attribution": -1.197
+   },
+   "tolerance": "+-0.3"
+  },
+  "log10_eta_kra_simple_B": {
+   "reference": -0.103,
+   "robustness": {
+    "all_purchasable_hops": -0.166,
+    "half_of_hops_seed0": -0.349,
+    "half_of_hops_seed1": -0.078,
+    "random_800_hops_seed0": -0.284,
+    "random_800_hops_seed1": -0.123,
+    "random_800_hops_seed2": -0.286,
+    "with_pathological_entries": -0.139,
+    "linear_kra_no_quadratic": -0.128,
+    "two_shell_pair_hamiltonian": -0.252,
+    "four_orbit_kra": -0.115
+   },
+   "robustness_max_deviation": 0.246,
+   "nearest_ablations": {
+    "untested_attribution": -1.197
+   },
+   "tolerance": "+-0.3"
+  },
+  "fastest_tracer_B": {
+   "reference": "Nb",
+   "robustness": {
+    "all_purchasable_hops": "Nb",
+    "half_of_hops_seed0": "Nb",
+    "half_of_hops_seed1": "Nb",
+    "random_800_hops_seed0": "Nb",
+    "random_800_hops_seed1": "Nb",
+    "random_800_hops_seed2": "Nb",
+    "with_pathological_entries": "Nb",
+    "linear_kra_no_quadratic": "Nb",
+    "two_shell_pair_hamiltonian": "Nb",
+    "four_orbit_kra": "Nb"
+   },
+   "tolerance": "exact"
+  },
+  "information_only (not graded)": {
+   "random_configurations_log10_eta": {
+    "A": -1.51,
+    "B": -1.048,
+    "C": -0.539
+   },
+   "small_cell_L4_short_runs_log10_eta": {
+    "A": -1.794,
+    "B": -1.104,
+    "C": -0.668
+   },
+   "pure_limit_of_linear_kra_model_eV": {
+    "V": 0.375,
+    "Cr": 1.07,
+    "Nb": 0.698,
+    "Mo": 1.35,
+    "Ta": 0.791,
+    "W": 1.795
+   },
+   "pure_element_kra_dft_eV": {
+    "V": 0.489,
+    "Cr": 0.927,
+    "Nb": 0.369,
+    "Mo": 1.229,
+    "Ta": 0.697,
+    "W": 1.666
+   }
+  }
+ }
+}

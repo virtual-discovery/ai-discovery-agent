@@ -1,0 +1,263 @@
+{
+ "task_id": "cr2o3-magnetoelectric-sign",
+ "catalog_id": "cr2o3-magnetoelectric-sign",
+ "start": "released",
+ "source_group": "bousquet_2023_cr2o3_me_sign",
+ "title": "Cr2O3: domain-resolved sign of the lattice-mediated magnetoelectric response",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Mode basis and stiffness: force-constant eigenvectors with their eigenvalues (unitless hdf5 values that must be identified as eV/A^2 against the all-H phonopy run) versus the real-mass phonon eigenvectors and frequencies",
+   "wrong_choice": "Use the mass-weighted Eu phonons (band_CrO) as frozen patterns with the frozen force-constant-mode responses, or read the hdf5 values as frequencies",
+   "consequence": "alpha -1.25 ps/m (+34%) with Eu_3 wrongly dominant (fraction 0.76), or alpha off by a factor ~8",
+   "ablation": "phonon_eigenvectors_as_modes"
+  },
+  {
+   "id": "dp2",
+   "fork": "Which domain the Elk runs model: the elk.in fields bfcmt (+z on Cr1) or the converged moments (-z on Cr1)",
+   "wrong_choice": "Take the input field directions as the moment configuration",
+   "consequence": "Elk labelled in-pointing; alpha of the out-pointing domain gets the wrong sign (+0.93 ps/m)",
+   "ablation": "elk_domain_from_input_field"
+  },
+  {
+   "id": "dp3",
+   "fork": "Which Cr pair defines in/out-pointing: the face-sharing 2.62 A pair (Cr1-Cr2) or the next pair along the same trigonal column (Cr2-Cr3, 4.1 A)",
+   "wrong_choice": "Use consecutive Cr2-Cr3 along the axis",
+   "consequence": "Both datasets mislabelled; sign of alpha flipped",
+   "ablation": "axial_second_pair_as_neighbours"
+  },
+  {
+   "id": "dp4",
+   "fork": "Cross-code comparison: VASP (MAGMOM +5 on Cr1, in-pointing) and Elk (out-pointing) give opposite raw slopes",
+   "wrong_choice": "Assume both codes model the same (paper's) domain and combine them",
+   "consequence": "alpha ~ +0.007 ps/m, fractions meaningless",
+   "ablation": "codes_assumed_same_domain_averaged"
+  },
+  {
+   "id": "dp5",
+   "fork": "Born charges from finite displacements: the Disp_-0_005 folders hold POSCARs displaced by -0.005 A but OUTCARs from +0.05 A (Cr1-O4) or +0.005 A (O5, O6) runs; visible in the OUTCAR positions and p[ion]",
+   "wrong_choice": "Central difference over +-0.005 A with the folder POSCAR displacements",
+   "consequence": "Z*_Cr xx = -11.6, alpha = +3.3 ps/m",
+   "ablation": "born_from_mislabeled_0005_pair"
+  },
+  {
+   "id": "dp6",
+   "fork": "Born tensor handling: per-atom tensors with the polarization index first versus transposed or species-averaged tensors",
+   "wrong_choice": "Transpose Z* (displacement index first) or average the tensors over Cr and over O atoms",
+   "consequence": "Z*_xy(Cr1) sign flipped or zero; alpha -9.6% / -12%, fractions shift by 0.06",
+   "ablation": "born_tensor_transposed"
+  },
+  {
+   "id": "dp7",
+   "fork": "Which Elk amplitudes to trust: Eu_3 +0.03 A stopped after 129 loops with 'Convergence targets achieved' at a moment 26% below the linear trend (all other runs used the 500-loop limit)",
+   "wrong_choice": "Use the largest symmetric pair +-0.03 A for Eu_3 to beat noise",
+   "consequence": "dM/du(Eu_3) -13%, alpha -6%",
+   "ablation": "elk_eu3_from_003_pair"
+  },
+  {
+   "id": "dp8",
+   "fork": "Net cell moment (Elk 'total moment', VASP total magnetization) versus sphere-projected moments (Elk muffin-tins, VASP per-ion table sums)",
+   "wrong_choice": "Use the muffin-tin or per-ion sums",
+   "consequence": "dM/du and alpha ~8-10% low",
+   "ablation": "muffin_tin_moments"
+  },
+  {
+   "id": "dp9",
+   "fork": "Volume normalisation in SI: rhombohedral 10-atom cell (93.35 A^3) versus the hexagonal setting cell",
+   "wrong_choice": "Hexagonal cell volume (three times larger)",
+   "consequence": "alpha a factor 3 too small",
+   "ablation": "hexagonal_cell_volume"
+  },
+  {
+   "id": "dp10",
+   "fork": "Which domain parallel E,H annealing selects: alpha_par near T_N has the sign opposite to its 0 K value",
+   "wrong_choice": "Use the 0 K sign of alpha (ignore the sign change of alpha_par)",
+   "consequence": "In-pointing domain predicted",
+   "ablation": "annealing_ignores_sign_change"
+  },
+  {
+   "id": "dp11",
+   "fork": "Reference run for one-sided Born-charge differences: Disp_0_0 carries an electronic dipole offset (-0.0074 e*A along z) absent from all displaced runs",
+   "wrong_choice": "One-sided differences against Disp_0_0 without central differencing or the acoustic sum rule",
+   "consequence": "Every z row shifts by offset/u: Z*_zz(Cr1) = 2.78 at 0.02 A (1.67 at 0.005 A) instead of 3.15; sum rule violated by 3.7 e",
+   "ablation": "born_one_sided_no_asr"
+  }
+ ],
+ "graded_fields": [
+  "alpha_perp_ps_per_m.out_pointing and .in_pointing (relative 5%, sign exact)",
+  "mode_fractions for Eu_1_x..Eu_4_x (absolute 0.025 each)",
+  "dominant_mode (exact)",
+  "dM_du_out_pointing_muB_per_A Eu_3_x and Eu_4_x (relative 5%)",
+  "born_charge_Cr1 xx, zz (absolute 0.08) and xy (absolute 0.05)",
+  "dataset_domain VASP and Elk (exact)",
+  "domain_selected_by_parallel_field_annealing (exact)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 39,
+  "oracle_charge": 39,
+  "budget": 44,
+  "catalog_items": 200,
+  "tool_calls": "45-80",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "why": "Born charges need 11-21 purchases (or symmetry reasoning) and two folder-consistency checks; moment slopes need 2-4 amplitudes for each of 4 modes in at least one code, plus the other code to cross-check; domain identification needs reading positions and converged moments; units of the force-constant eigenvalues must be established from a phonopy run.",
+  "pilot": "pending (coordinator)",
+  "oracle_container_seconds": 5,
+  "harbor_oracle_runtime_s": 47
+ },
+ "runtime_dependencies": [
+  "numpy (runtime image)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/xd06z-0pp29",
+  "doi": "10.24435/materialscloud:ek-fp",
+  "files_used": [
+   "DFT_calculations.tar.gz",
+   "README.txt",
+   "files_description.md"
+  ],
+  "md5": {
+   "DFT_calculations.tar.gz": "dd3a0fa4aa1e7b990d9fad58f5f02ca8",
+   "README.txt": "9c6dfac9cdfd791755a6bd86dc4d28af",
+   "files_description.md": "cde11635fe27af49edafa52a5bc677e9"
+  },
+  "sha256": {
+   "DFT_calculations.tar.gz": "31e7515eef7f3594aa46b23fd270ef66283ca72168322d6212fe4ed36f0513bb"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Deviations from the catalog design: (1) the cell-rotation decision point was dropped: only the structural relaxation uses the rotated cell (by 150 deg about z); all Born, phonon, VASP and Elk moment runs share one frame, and alpha_perp and the Cr Born tensor are invariant under rotations about z, so no graded value depends on it (it stays visible in the structure purchase). (2) QE outputs are not archived, so cross-code checks use VASP vs Elk only; QE inputs are purchasable. (3) Orbital moments are printed to 3 decimals only and are not used. (4) The tensor-component-in-lab-frame target was replaced by the Cr1 Born-charge components (index convention and sign) and the moment derivatives; dataset domains were added as graded categorical fields (they cannot be recalled: the paper reports VASP for the out-pointing domain, while the archived VASP runs model the in-pointing one). Both archive inconsistencies (Disp_-0_005 OUTCARs, Elk Eu_3 +0.03 run) are kept as found.",
+ "calibration": {
+  "alpha_perp_out_pointing_ps_m": {
+   "reference": -0.9313,
+   "robustness": {
+    "vasp_domain_flipped": -0.9445,
+    "elk_window_0.010-0.015_born_0.05": -0.9309,
+    "elk_vasp_mean": -0.9379,
+    "born_one_sided_0.02": -0.9313
+   },
+   "nearest_ablation": {
+    "elk_eu3_003_pair": -0.8729,
+    "vasp_ion_projected": -0.8579,
+    "born_transposed": -0.8417,
+    "muffin_tin": -0.8412,
+    "born_species_averaged": -0.8183,
+    "phonon_modes": -1.2464,
+    "elk_input_field_domain": 0.9313,
+    "codes_averaged": 0.0066,
+    "hex_volume": -0.3104,
+    "born_mislabeled_0005": 3.3203
+   },
+   "tolerance": "relative 5% (defensible spread <= 1.5%; nearest wrong path -6.3%)"
+  },
+  "alpha_perp_in_pointing_ps_m": {
+   "reference": 0.9313,
+   "tolerance": "relative 5%"
+  },
+  "mode_fraction_Eu_3_x": {
+   "reference": 0.485,
+   "robustness": {
+    "vasp_domain_flipped": 0.473,
+    "elk_vasp_mean": 0.479
+   },
+   "nearest_ablation": {
+    "elk_eu3_003_pair": 0.451,
+    "born_species_averaged": 0.442,
+    "born_transposed": 0.428,
+    "phonon_modes": 0.764
+   },
+   "tolerance": "absolute 0.025"
+  },
+  "mode_fraction_Eu_4_x": {
+   "reference": 0.532,
+   "robustness": {
+    "vasp_domain_flipped": 0.539
+   },
+   "nearest_ablation": {
+    "elk_eu3_003_pair": 0.567,
+    "born_species_averaged": 0.596,
+    "phonon_modes": 0.253
+   },
+   "tolerance": "absolute 0.025"
+  },
+  "mode_fractions_Eu_1_x_Eu_2_x": {
+   "reference": [
+    -0.0002,
+    -0.0167
+   ],
+   "robustness": {
+    "vasp_domain_flipped": [
+     -0.0004,
+     -0.0113
+    ]
+   },
+   "tolerance": "absolute 0.025"
+  },
+  "dM_du_Eu_3_x_muB_per_A": {
+   "reference": -0.2996,
+   "robustness": {
+    "vasp_domain_flipped": -0.2961,
+    "elk_window_0.010-0.015": -0.2998
+   },
+   "nearest_ablation": {
+    "muffin_tin": -0.2718,
+    "vasp_ion_projected": -0.2717,
+    "elk_eu3_003_pair": -0.2609,
+    "input_field_domain": 0.2996
+   },
+   "tolerance": "relative 5%"
+  },
+  "dM_du_Eu_4_x_muB_per_A": {
+   "reference": -0.1922,
+   "robustness": {
+    "vasp_domain_flipped": -0.1976
+   },
+   "nearest_ablation": {
+    "vasp_ion_projected": -0.1778,
+    "muffin_tin": -0.1729
+   },
+   "tolerance": "relative 5%"
+  },
+  "born_Cr1_xx": {
+   "reference": 3.005,
+   "robustness": {
+    "one_sided_0.02": 3.008,
+    "pair_0.05": 3.005
+   },
+   "nearest_ablation": {
+    "mislabeled_0005": -11.62
+   },
+   "tolerance": "absolute 0.08"
+  },
+  "born_Cr1_xy": {
+   "reference": 0.209,
+   "robustness": {
+    "one_sided_0.02": 0.206
+   },
+   "nearest_ablation": {
+    "species_averaged": 0.0,
+    "transposed": -0.209
+   },
+   "tolerance": "absolute 0.05"
+  },
+  "born_Cr1_zz": {
+   "reference": 3.146,
+   "robustness": {
+    "one_sided_0.02": 3.149
+   },
+   "nearest_ablation": {
+    "mislabeled_0005": -12.3,
+    "one_sided_no_asr": 2.78
+   },
+   "tolerance": "absolute 0.08"
+  },
+  "categorical": {
+   "dataset_domain": {
+    "VASP": "in_pointing",
+    "Elk": "out_pointing"
+   },
+   "dominant_mode": "Eu_4_x",
+   "annealed_domain": "out_pointing"
+  }
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "prediction_targets_W_mK": {
+  "UO2-4x4x4-1700K": 1.671715,
+  "UO2-4x4x4-3400K": 1.21119,
+  "CaF2-4x4x4-1600K": 1.3859400000000002,
+  "PbF2-4x4x4-1200K": 0.68878
+ },
+ "run_targets_W_mK": {
+  "UO2-NVE-4x4x4-3500K": 1.196,
+  "CaF2-NVE-4x4x4-1700K": 1.37893,
+  "PbF2-NVT-4x4x4-1300K": 0.62564
+ },
+ "thermostat_biases_kappa": false,
+ "thresholds": {
+  "prediction_rel": 0.12,
+  "run_rel": 0.12
+ },
+ "reference": {
+  "withheld_runs": {
+   "CaF2-NVE-4x4x4-1600K": 1.39724,
+   "CaF2-NVT-4x4x4-1600K": 1.37464,
+   "PbF2-NVT-4x4x4-1200K": 0.68878,
+   "UO2-NVE-4x4x4-1700K": 1.7356,
+   "UO2-NVE-4x4x4-3400K": 1.26458,
+   "UO2-NVT-4x4x4-1700K": 1.60783,
+   "UO2-NVT-4x4x4-3400K": 1.1578
+  },
+  "nvt_over_nve_pairs": {
+   "n": 116,
+   "mean": 0.9979710937803137,
+   "std": 0.06405598139786217
+  }
+ }
+}

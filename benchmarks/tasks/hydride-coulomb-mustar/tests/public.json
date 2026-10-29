@@ -1,0 +1,5 @@
+{
+ "task_id": "hydride-coulomb-mustar",
+ "solver_budget": 38,
+ "min_report_chars": 400
+}

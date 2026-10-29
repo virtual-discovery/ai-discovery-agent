@@ -1,0 +1,80 @@
+{
+ "targets": {
+  "transition_temperature_K": {
+   "PBE0": 737.5,
+   "r2SCAN": 787.5
+  },
+  "sigma_S_per_m": {
+   "PBEsol/gamma/625": 145.372,
+   "PBE0/gamma/750": 232.335,
+   "r2SCAN/gamma/800": 242.153
+  },
+  "haven_ratio_PBE0_gamma_750K": 0.5304538704887339,
+  "activation_energy_eV": {
+   "below_transition": 1.6104300189440748,
+   "superionic_to_1000K": 0.18392466635682472
+  },
+  "li_s_cross_fraction": 0.05014755080831306,
+  "log10_hop_to_flip_rate_ratio_PBE0_800K": 2.680551065867085,
+  "paddle_wheel_supported": false
+ },
+ "withheld_tracer_values_S_per_m": {
+  "PBEsol/gamma/625": 74.7833,
+  "PBE0/gamma/750": 123.243,
+  "r2SCAN/gamma/800": 132.5
+ },
+ "thresholds": {
+  "transition_K": 30.0,
+  "sigma_log10": 0.15,
+  "haven_ratio": 0.12,
+  "ea_below_eV": 0.35,
+  "ea_above_eV": 0.06,
+  "log10_rate_ratio": 1.0,
+  "li_s_fraction": 0.1
+ },
+ "reference_details": {
+  "transitions": {
+   "PBEsol": {
+    "lo": 600,
+    "hi": 625,
+    "Tc": 612.5,
+    "melting_onset": 850,
+    "melting_peak": 825.0,
+    "cp_peak": 7.65057,
+    "cp_peak_err": 1.48616
+   },
+   "r2SCAN": {
+    "lo": 775,
+    "hi": 800,
+    "Tc": 787.5,
+    "melting_onset": 950,
+    "melting_peak": 925.0,
+    "cp_peak": 10.6805,
+    "cp_peak_err": 0.740955
+   },
+   "PBE0": {
+    "lo": 725,
+    "hi": 750,
+    "Tc": 737.5,
+    "melting_onset": 900,
+    "melting_peak": 875.0,
+    "cp_peak": 7.03574,
+    "cp_peak_err": 0.803765
+   }
+  },
+  "ea_below_window_K": [
+   600.0,
+   725.0
+  ],
+  "ea_above_window_K": [
+   750.0,
+   1000.0
+  ],
+  "D_Li_800K_A2_per_ps": 0.32688427269888026,
+  "hop_rate_800K_per_ps": 0.313808901790925,
+  "D_omega_800K": 0.000247849,
+  "flip_rate_800K_per_ps": 0.0006548083263771928,
+  "ideal_gamma_volume_A3": 14758.8,
+  "barycentric_recoil_prediction": 0.2727271131027153
+ }
+}

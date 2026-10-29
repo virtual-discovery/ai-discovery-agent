@@ -1,0 +1,11 @@
+# Physical-reasoning rubric
+
+Each item is a checkable statement that the report must make explicitly.
+
+1. Explains the trilinear coupling P ∝ ψ_z·φ and its consequence: a 180° wall reverses exactly one of ψ_z or φ; reversing both (or a pure parent translation) gives an antiphase boundary with P unchanged. States how the reversed domain was generated and how the reversal of the intended order parameter and of P was verified in the relaxed structure.
+2. Normalizes wall energies per wall area with two walls per periodic cell, uses the bulk energy of the same potential, and shows that the neutral-wall energies are converged with the wall separation.
+3. Identifies the polar axis of the bulk cell from the structure and uses it to orient neutral (normal ⟂ P) and charged (normal ∥ P) walls; notes that walls at 45° to P (the parent (100) planes) are partially charged.
+4. Explains that charged (head-to-head/tail-to-tail) walls have no converged energy in this model: the unscreened bound charge produces a field whose energy grows linearly with the domain width; obtains the slope from domains long enough to be in the linear regime; notes that the short-range NEP misses this electrostatics (and gives qualitatively wrong charged-wall energetics), and that free-carrier or defect screening absent here would change the picture.
+5. Compares wall positions for the layer wall and finds that a ψ wall placed in the CaO rock-salt layer is nearly free (an order of magnitude below the in-plane walls) while a placement inside the perovskite bilayer is a costlier metastable state; rationalizes this by the weak coupling of rotations across the rock-salt layer, and contrasts it with the φ layer wall, which stays expensive.
+6. Characterizes the profiles: ψ walls are Ising-like (ψ passes through zero), φ walls rotational (the tilt rotates through an orthogonal tilt pattern); notes that the polarization (e.g. from Born-charge dipoles) reverses through zero in both, so it does not distinguish the two.
+7. Ranks the walls (layer ψ < neutral ψ < neutral φ; charged walls depend on domain width) and states the model limitations: machine-learned potential (training errors of a few meV/atom; trained on DFT), zero temperature, no carriers, and the walls considered are not an exhaustive search.

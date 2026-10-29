@@ -1,0 +1,165 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 10,
+  "rubric_items": 7,
+  "task_mb": 9.77,
+  "hidden_values": 10,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 38,
+   "budget": 48,
+   "evaluations": 10,
+   "failed_evaluations": 0,
+   "container_seconds": 2868
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "scalar_relativistic_band_energies",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "spin_orbit_shift_of_K_valence_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "clamped_sulfur_height",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "analytic_stress_zero_35Ry",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "analytic_stress_zero_45Ry",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "experimental_lattice_as_strain_reference",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "raw_eigenvalues_without_vacuum_alignment",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "uniaxial_strain_instead_of_stress",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "q_valleys_on_one_gamma_k_line",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "uniaxial_zero_of_uncorrected_analytic_stress",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "uniaxial_clamped_ions",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "band_edges_from_9x9_mesh_points",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "a0_energy_minimum_55Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "a0_energy_minimum_70Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "a0_stress_zero_70Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "a0_energy_minimum_three_points_45Ry",
+    "passes_grading": true
+   },
+   {
+    "name": "stress_70Ry_a0_with_consistent_strains",
+    "passes_grading": true
+   },
+   {
+    "name": "quadratic_interpolation_of_crossings",
+    "passes_grading": true
+   },
+   {
+    "name": "one_percent_soc_ladder",
+    "passes_grading": true
+   },
+   {
+    "name": "scalar_ladder_plus_soc_shifts_of_all_edges",
+    "passes_grading": true
+   },
+   {
+    "name": "deformation_potentials_half_percent",
+    "passes_grading": true
+   },
+   {
+    "name": "deformation_potentials_scalar_relativistic",
+    "passes_grading": true
+   },
+   {
+    "name": "uniaxial_quadratic_fit_of_corrected_stress",
+    "passes_grading": true
+   },
+   {
+    "name": "uniaxial_offset_corrected_stress",
+    "passes_grading": true
+   },
+   {
+    "name": "uniaxial_coarse_sampling",
+    "passes_grading": true
+   },
+   {
+    "name": "uniaxial_grid_point_edges",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T08:23:58Z"
+}

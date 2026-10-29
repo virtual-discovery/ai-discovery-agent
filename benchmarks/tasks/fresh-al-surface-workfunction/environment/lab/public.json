@@ -1,0 +1,35 @@
+{
+ "task_id": "fresh-al-surface-workfunction",
+ "solver_budget": 58,
+ "reserved_validation_charge": 0,
+ "requests": {
+  "slab": {"kind": "slab", "face": "111 | 100", "layers": "integer", "kpoints": "12 | 18 | 24", "vacuum_A": "8-20 (default 15)",
+           "smearing_Ry": "0.01 | 0.02 | 0.04 (default 0.02)", "nbnd": "optional integer (default: pw.x default)",
+           "relax": "none | outer_two_both_sides (default none)"},
+  "bulk": {"kind": "bulk", "cell": "primitive | oriented", "kpoints": "primitive: 8-40; oriented: 12 | 18 | 24",
+           "face": "oriented only: 111 | 100", "kz": "oriented only: 8-40", "smearing_Ry": "0.01 | 0.02 | 0.04 (default 0.02)"}
+ },
+ "limits": {
+  "faces": ["111", "100"],
+  "min_layers": 3,
+  "max_layers_by_kpoints": {"12": 14, "18": 12, "24": 10},
+  "vacuum_A": [8.0, 20.0],
+  "smearing_Ry": [0.01, 0.02, 0.04],
+  "nbnd_range": "from 1.5*layers + 1 to 4*layers + 8",
+  "relax": ["none", "outer_two_both_sides"],
+  "relax_kpoints": [18],
+  "relax_layers": [5, 10],
+  "bulk_kpoints": [8, 40]
+ },
+ "costs": {
+  "rule": "slab: ceil(layers * f / 4) units with f = 0.5 (kpoints 12), 1 (18), 1.6 (24), minimum 1; a relaxation costs 3 times the SCF charge; bulk: 1 unit",
+  "slab_kpoint_factor": {"12": 0.5, "18": 1.0, "24": 1.6},
+  "relax_factor": 3,
+  "bulk": 1,
+  "examples": {"slab 111 layers 7 kpoints 18": 2, "slab layers 12 kpoints 18": 3, "slab layers 14 kpoints 12": 2,
+               "slab layers 10 kpoints 24": 4, "relax layers 9 kpoints 18": 9, "bulk": 1}
+ },
+ "fixed_settings": {"functional": "PBE", "pseudopotential": "Al.pbe-n-kjpaw_psl.1.0.0.UPF (SSSP 1.3 precision)",
+                    "ecutwfc_Ry": 30, "ecutrho_Ry": 240, "lattice_constant_A": 4.04, "smearing": "Marzari-Vanderbilt",
+                    "mpi_ranks": 2}
+}

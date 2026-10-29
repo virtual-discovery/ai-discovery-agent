@@ -1,0 +1,221 @@
+{
+ "task_id": "kagome135-correlation-origin",
+ "catalog_id": "kagome135-correlation-origin",
+ "start": "released",
+ "source_group": "crispino_2025_kagome135_correlations",
+ "title": "135 kagome metals: origin of correlations from Wannier models and slave spins",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Pristine electron count of each model: from the archive (charge-neutral DFT, Cs 6s donated) or nominal valence",
+   "wrong_choice": "Nominal / paper counts 27, 30, 33 (Cs electron ignored)",
+   "consequence": "Counts wrong; CsCr3Sb5 Zbar 0.337 and Zmin 0.135 instead of 0.268, 0.070; CsCr3Bi5 Zbar 0.728; Hund ratio 2.50 instead of 3.14",
+   "ablation": "nominal_electron_counts"
+  },
+  {
+   "id": "dp2",
+   "fork": "Which archive folder is CsCr3Bi5 at the CsCr3Sb5 lattice (from the .wout lattice vectors)",
+   "wrong_choice": "Take CrBi_9.2 as the CsCr3Sb5-lattice model (name read as c = 9.2 A)",
+   "consequence": "Bi-lattice Zbar values exchanged (0.678 vs 0.395); sigma 1.180 instead of 1.331 eV",
+   "ablation": "swapped_CsCr3Bi5_models"
+  },
+  {
+   "id": "dp3",
+   "fork": "Order of the d Wannier functions: archive projection list (mr = 5,3,1,2,4) or Wannier90 default",
+   "wrong_choice": "Assume the default order dz2, dxz, dyz, dx2-y2, dxy",
+   "consequence": "Most renormalized orbital reported as dx2-y2",
+   "ablation": "w90_default_orbital_order"
+  },
+  {
+   "id": "dp4",
+   "fork": "Local frame of the label: the archive projection frame (x radial) or the paper frame (B3g = dyz)",
+   "wrong_choice": "Recall the paper: B3g = dyz",
+   "consequence": "Most renormalized orbital reported as dyz instead of dxz",
+   "ablation": "recalled_paper_frame_label"
+  },
+  {
+   "id": "dp5",
+   "fork": "Separating filling from Hamiltonian: both counterfactual orders vs a single path or a cross-compound regression",
+   "wrong_choice": "One-at-a-time path or regression of ln Z on filling and bandwidth across compounds",
+   "consequence": "Filling share 0.05 / 0.87 (one-sided) or 0.85 (regression) instead of 0.46",
+   "ablation": "cross_compound_regression"
+  },
+  {
+   "id": "dp6",
+   "fork": "Kinetic-energy scale: full PDOS second moment (includes d-p hybridization) vs windowed PDOS, d-d block or orbital average",
+   "wrong_choice": "Second moment of the PDOS within the plotted +-4 eV window",
+   "consequence": "sigma 1.116 instead of 1.331 eV (CsCr3Bi5)",
+   "ablation": "sigma_windowed_pdos"
+  },
+  {
+   "id": "dp7",
+   "fork": "Hund versus Mott: the J dependence at fixed U, at the right filling",
+   "wrong_choice": "Read the J dependence at the nominal count (cascade from dp1)",
+   "consequence": "Hund ratio 2.50 instead of 3.14",
+   "ablation": "hund_ratio_nominal_count"
+  }
+ ],
+ "graded_fields": [
+  "electron_counts (exact)",
+  "CsCr3Sb5_U6.Z_mean, Z_min (+-0.025)",
+  "most_renormalized_orbital (exact)",
+  "filling_share (+-0.08)",
+  "hund_ratio (+-10%)",
+  "CsCr3Bi5_U4p5 Sb- and TiBi-lattice Z_mean (+-0.025)",
+  "sigma_eV for CsCr3Bi5 (Sb lattice) and CsTi3Sb5 (+-3%)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 13,
+  "budget": 20,
+  "oracle_lab_minutes": 19,
+  "tool_calls": "40-70",
+  "gpt6astra_cost_usd": "2-4",
+  "why": "Archive forensics (electron counts, lattices, projection codes), local tight-binding analysis, counterfactual SSMF design under a 20-unit budget; evaluations take 0.5-9 min each."
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image); kag_ssmf.py evaluator vendored in the lab"
+ ],
+ "data_provenance": {
+  "archive_url": "https://zenodo.org/records/17951035",
+  "doi": "10.5281/zenodo.17951035",
+  "files_used": [
+   "CsTiSb.zip",
+   "CsVSb.zip",
+   "CsCrSb.zip",
+   "CsTiBi.zip",
+   "CsCrBi.zip",
+   "CsCrBi_9.2.zip",
+   "DFT.zip"
+  ],
+  "md5": {
+   "CsTiSb.zip": "3022b11da82d2a3dd91b57d2fe10d75b",
+   "CsCrSb.zip": "ba28567cb06c56faaf9188c06ce5a1ca",
+   "CsCrBi.zip": "95d1e17aaeb1c4b9392c096e27afd76f",
+   "DFT.zip": "f8b8de95fa310d206ef01bdd27577501",
+   "CsVSb.zip": "35a8b537aaf029def98e427f23785bed",
+   "CsCrBi_9.2.zip": "9c4a37b89801300f30eb2bd5d86167d3",
+   "CsTiBi.zip": "1d92f3a6309e431f6debbbf1ed61df8f"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Released start with a computing lab: targets come from our numpy SSMF evaluator (kag_ssmf.py) run on the authors' archived Wannier Hamiltonians, validated against the paper (see construction README). U_c of CsCr3Bi5 is not graded: the end of the metallic branch is path dependent within ~0.3 eV and costs up to 9 min per probe.",
+ "calibration": {
+  "electron_counts": {
+   "reference": {
+    "TiSb": 28,
+    "VSb": 31,
+    "CrSb": 34,
+    "TiBi": 28,
+    "CrBi": 34,
+    "CrBi_9.2": 34
+   },
+   "nearest_ablation": {
+    "TiSb": 27,
+    "VSb": 30,
+    "CrSb": 33,
+    "TiBi": 27,
+    "CrBi": 33,
+    "CrBi_9.2": 33
+   },
+   "tolerance": "exact integers (+-0.5)"
+  },
+  "CsCr3Sb5_Z_mean": {
+   "reference": 0.26769837448316014,
+   "robustness": {
+    "mesh_12x12x8": 0.26783972917387466
+   },
+   "nearest_ablation": {
+    "nominal_count": 0.33730224300533806
+   },
+   "tolerance": "+-0.025"
+  },
+  "CsCr3Sb5_Z_min": {
+   "reference": 0.07045956009262065,
+   "robustness": {
+    "mesh_12x12x8": 0.07037272775267608
+   },
+   "nearest_ablation": {
+    "nominal_count": 0.13460393292705633
+   },
+   "tolerance": "+-0.025"
+  },
+  "most_renormalized_orbital": {
+   "reference": "dxz",
+   "nearest_ablation": {
+    "w90_default_order": "dx2-y2",
+    "paper_frame": "dyz"
+   },
+   "tolerance": "exact"
+  },
+  "filling_share": {
+   "reference": 0.464048486241204,
+   "robustness": {
+    "mesh_12x12x8": 0.4646074833453014,
+    "nominal_counts (not an ablation: insensitive)": 0.46283385627890555
+   },
+   "nearest_ablation": {
+    "regression": 0.8463413738692089,
+    "one_sided_Cr": 0.8737112497407619,
+    "one_sided_Ti": 0.0543857227416461
+   },
+   "tolerance": "+-0.08"
+  },
+  "hund_ratio": {
+   "reference": 3.140163343165496,
+   "robustness": {
+    "mesh_12x12x8": 3.1385504169433522
+   },
+   "nearest_ablation": {
+    "nominal_count": 2.4987178724551797
+   },
+   "tolerance": "+-10%"
+  },
+  "CsCr3Bi5_Sb_lattice_Z_mean_U4.5": {
+   "reference": 0.6776799666196324,
+   "robustness": {
+    "mesh_12x12x8": 0.6775907017304352
+   },
+   "nearest_ablation": {
+    "nominal_count": 0.7275601012181154,
+    "swapped": 0.3951318670568714
+   },
+   "tolerance": "+-0.025"
+  },
+  "CsCr3Bi5_TiBi_lattice_Z_mean_U4.5": {
+   "reference": 0.3951318670568714,
+   "robustness": {
+    "mesh_12x12x8": 0.39525268863952195
+   },
+   "nearest_ablation": {
+    "nominal_count": 0.5384678436160086,
+    "swapped": 0.6776799666196324
+   },
+   "tolerance": "+-0.025"
+  },
+  "sigma_CsCr3Bi5_eV": {
+   "reference": 1.3308845051806977,
+   "robustness": {
+    "coarse_mesh_pdos": 1.330877668226341
+   },
+   "nearest_ablation": {
+    "swapped_model": 1.1802702030004968,
+    "windowed": 1.1156156744729402,
+    "d_only": 0.5507052576452967,
+    "orbital_mean": 1.697769367903583
+   },
+   "tolerance": "+-3%"
+  },
+  "sigma_CsTi3Sb5_eV": {
+   "reference": 1.714877593599356,
+   "robustness": {
+    "coarse_mesh_pdos": 1.7148287507769255
+   },
+   "nearest_ablation": {
+    "windowed": 1.6006546818220182,
+    "d_only": 0.8444961538201949
+   },
+   "tolerance": "+-3%"
+  }
+ }
+}

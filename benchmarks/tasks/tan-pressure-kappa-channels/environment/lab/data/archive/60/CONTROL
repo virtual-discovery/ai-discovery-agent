@@ -1,0 +1,24 @@
+&allocations
+        nelements=2,
+        natoms=2,
+        ngrid(:)=16 16 16
+&end
+&crystal
+        lfactor=0.2787352260,
+        lattvec(:,1)=1.000000000  0.000000000  0.000000000,
+        lattvec(:,2)=-0.500000000  0.866024914  0.000000000,
+        lattvec(:,3)=0.000000000  0.000000000  0.991057852,
+        elements="Ta" "N"
+        types=1 2,
+        positions(:,1)=0.0000000000000000  0.0000000000000000  0.0000000000000000,
+        positions(:,2)=0.6666669999999968  0.3333330000000032  0.5000000000000000,
+        scell(:)=5 5 5
+&end
+&parameters
+        T=300
+        scalebroad=0.1
+&end
+&flags
+        isotopes=.true.
+        four_phonon=.TRUE.
+&end

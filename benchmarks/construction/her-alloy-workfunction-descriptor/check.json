@@ -1,0 +1,126 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 8,
+  "task_mb": 2.1,
+  "hidden_values": 1207,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 54,
+   "budget": 60,
+   "evaluations": 49,
+   "failed_evaluations": 0,
+   "container_seconds": 9
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "coverage_total_slope",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "coverage_first_last",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "literature_centre",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "mean_energy_descriptor",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "no_transport_cap",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "no_library_calibration",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "prefactor_only_calibration",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "wf_only_coefficient",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "wf_with_dilute_binding",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "pooled_without_library_offsets",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "linear_combination_descriptor",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "combined_model_predictions",
+    "passes_grading": true
+   },
+   {
+    "name": "centre_fixed_from_dft_coverage",
+    "passes_grading": true
+   },
+   {
+    "name": "alternative_calibration_spots",
+    "passes_grading": true
+   },
+   {
+    "name": "coverage_shift_window_fit",
+    "passes_grading": true
+   },
+   {
+    "name": "coverage_shift_through_dilute_point",
+    "passes_grading": true
+   },
+   {
+    "name": "oracle_subset_reference",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T03:06:32Z"
+}

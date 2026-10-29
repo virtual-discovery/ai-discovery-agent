@@ -1,0 +1,186 @@
+{
+ "evaluations": 19,
+ "charge_used": 39,
+ "budget": 45,
+ "requests": [
+  {
+   "kind": "dft_bands",
+   "chain": "Te3",
+   "soc": true
+  },
+  {
+   "kind": "dft_bands",
+   "chain": "Te3",
+   "soc": false
+  },
+  {
+   "kind": "dft_bands",
+   "chain": "Bi2Te3",
+   "soc": true
+  },
+  {
+   "kind": "dft_bands",
+   "chain": "Bi2Te3",
+   "soc": false
+  },
+  {
+   "kind": "qp",
+   "chain": "Te3",
+   "level": "scGW",
+   "k_indices": [
+    20,
+    21,
+    22
+   ]
+  },
+  {
+   "kind": "qp",
+   "chain": "Te3",
+   "level": "G0W0",
+   "k_indices": [
+    21
+   ]
+  },
+  {
+   "kind": "qp",
+   "chain": "S3",
+   "level": "G0W0",
+   "k_indices": [
+    22,
+    23
+   ]
+  },
+  {
+   "kind": "qp",
+   "chain": "S3",
+   "level": "scGW",
+   "k_indices": [
+    22,
+    23
+   ]
+  },
+  {
+   "kind": "qp",
+   "chain": "As2S3",
+   "level": "G0W0",
+   "k_indices": [
+    1
+   ]
+  },
+  {
+   "kind": "qp",
+   "chain": "As2S3",
+   "level": "scGW",
+   "k_indices": [
+    1
+   ]
+  },
+  {
+   "kind": "qp",
+   "chain": "Bi2Te3",
+   "level": "G0W0",
+   "k_indices": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "kind": "bse_spectrum",
+   "chain": "S3",
+   "run": "BSE_G0W0"
+  },
+  {
+   "kind": "bse_spectrum",
+   "chain": "S3",
+   "run": "BSE_scGW"
+  },
+  {
+   "kind": "bse_spectrum",
+   "chain": "Te3",
+   "run": "BSE_G0W0"
+  },
+  {
+   "kind": "bse_spectrum",
+   "chain": "Te3",
+   "run": "BSE_scGW"
+  },
+  {
+   "kind": "bse_spectrum",
+   "chain": "As2S3",
+   "run": "BSE_G0W0"
+  },
+  {
+   "kind": "bse_spectrum",
+   "chain": "As2S3",
+   "run": "BSE_scGW"
+  },
+  {
+   "kind": "bse_spectrum",
+   "chain": "Bi2Te3",
+   "run": "BSE_G0W0"
+  },
+  {
+   "kind": "wire_screening",
+   "chain": "Bi2Te3"
+  }
+ ],
+ "submission": {
+  "scgw_direct_gap_eV": {
+   "Te3": {
+    "with_soc": 4.310493,
+    "without_soc": 4.594892999999999
+   },
+   "Bi2Te3": {
+    "with_soc": 1.66083,
+    "without_soc": 1.7488299999999997
+   }
+  },
+  "scgw_optical_gap_eV": {
+   "S3": 4.06703,
+   "Te3": 2.17109,
+   "As2S3": 2.70635
+  },
+  "screening_update_shift_eV": {
+   "S3": -0.3467879999999992,
+   "Te3": -0.5452699999999999,
+   "As2S3": -0.12006000000000006
+  },
+  "bi2te3_binding_energy_eV": 0.8440366041821915,
+  "evidence_ids": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ]
+ },
+ "accepted": true,
+ "errors": {
+  "gap:Te3:with_soc": 0.0,
+  "gap:Te3:without_soc": 0.0,
+  "gap:Bi2Te3:with_soc": 0.0114,
+  "gap:Bi2Te3:without_soc": 0.0114,
+  "optical_gap:S3": -0.0,
+  "optical_gap:Te3": 0.0,
+  "optical_gap:As2S3": -0.0,
+  "screening_shift:S3": -0.0,
+  "screening_shift:Te3": 0.0,
+  "screening_shift:As2S3": 0.0,
+  "bi2te3_binding_energy": -0.01
+ }
+}

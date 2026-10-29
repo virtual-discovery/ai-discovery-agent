@@ -1,0 +1,134 @@
+{
+ "material": "Cu2WSe4, space group I-42m (No. 121), conventional cell Cu4W2Se8; OpenMX GGA (PBE), fully relativistic with spin-orbit coupling or scalar-relativistic without",
+ "source": "Zenodo record 20131063 (DOI 10.5281/zenodo.20131063, CC BY 4.0), CWS_PRM.zip, data for K. Nakazawa, T. Yamaguchi, A. Yamakage, Phys. Rev. Materials 10, 064603 (2026)",
+ "staged_files": {
+  "root": "/app/archive",
+  "files": [
+   "Cu2WSe4_soc.HWR.header",
+   "Cu2WSe4_wosoc.HWR.header",
+   "Fig1a.cif",
+   "Fig1b_soc.d.gz",
+   "Fig1b_wosoc.d.gz",
+   "Fig1c_Cu1.d",
+   "Fig1c_Cu2.d",
+   "Fig1c_Cu3.d",
+   "Fig1c_Cu4.d",
+   "Fig1c_Se1.d",
+   "Fig1c_Se2.d",
+   "Fig1c_Se3.d",
+   "Fig1c_Se4.d",
+   "Fig1c_Se5.d",
+   "Fig1c_Se6.d",
+   "Fig1c_Se7.d",
+   "Fig1c_Se8.d",
+   "Fig1c_W1.d",
+   "Fig1c_W2.d"
+  ],
+  "note": "archive files unchanged (the two Fig1b band files gzip-compressed); *.HWR.header are the first 9 lines of each Wannier Hamiltonian file; the archive gives no column descriptions. Not staged: the Hamiltonians (evaluated by the service) and the response data Fig2-Fig4 (withheld)."
+ },
+ "wannier_models": {
+  "soc": {
+   "file": "Cu2WSe4_soc.HWR",
+   "num_wann": 108,
+   "basis": "Cu d (4 atoms), W d (2 atoms), Se p (8 atoms), atom order of Fig1a.cif, OpenMX real harmonics d = (z2, x2-y2, xy, xz, yz), p = (x, y, z); functions 1-54 spin up, 55-108 spin down (quantised along z)"
+  },
+  "nosoc": {
+   "file": "Cu2WSe4_wosoc.HWR",
+   "num_wann": 54,
+   "basis": "the same 54 orbitals, without spin"
+  }
+ },
+ "requests": {
+  "bands": {
+   "format": {
+    "kind": "bands",
+    "model": "soc | nosoc",
+    "k_frac or k_cart_invA": "[[x, y, z], ...] (<= 1000)"
+   },
+   "cost": 1
+  },
+  "band_properties": {
+   "format": {
+    "kind": "band_properties",
+    "model": "soc | nosoc",
+    "k_frac or k_cart_invA": "[[x, y, z], ...] (<= 200)"
+   },
+   "cost": 1
+  },
+  "fermi_surface": {
+   "format": {
+    "kind": "fermi_surface",
+    "model": "soc | nosoc",
+    "mesh": "N, one of 16, 24, 32, 48, 64, 96, 128 (N x N x N/2 mesh)",
+    "mu_eV": "[...] (1-400, -1.9 to 1.9 eV)",
+    "kT_eV": "0.005-0.05"
+   },
+   "cost": {
+    "soc": {
+     "16": 1,
+     "24": 1,
+     "32": 1,
+     "48": 2,
+     "64": 3,
+     "96": 6,
+     "128": 10
+    },
+    "nosoc": {
+     "16": 1,
+     "24": 1,
+     "32": 1,
+     "48": 1,
+     "64": 2,
+     "96": 3,
+     "128": 5
+    }
+   }
+  }
+ },
+ "budget": 30,
+ "request_size_limit": "a request body may not exceed 65536 bytes",
+ "conventions": {
+  "cell_A": [
+   [
+    5.56010564,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    5.56010564,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    11.21352958
+   ]
+  ],
+  "volume_A3": 346.6637408710138,
+  "reciprocal_basis_B_invA": [
+   [
+    1.13004783,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    1.13004783,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.56032182
+   ]
+  ],
+  "k_frac": "coordinates in the reciprocal basis of the conventional cell (k_cart = k_frac @ B)",
+  "energies": "eV relative to the Fermi level in the header of the model used (Hartree in the header)",
+  "velocity": "dE/dk in eV Angstrom (divide by hbar for the group velocity)",
+  "berry_curvature": "Omega = curl_k i<u|grad_k u>, Angstrom^2",
+  "moments": "mu_B; spin -mu_B <sigma>; Berry-phase orbital (|e|/2hbar) Im <grad u| x (H - E)|grad u>; intra-atomic orbital -mu_B <L> (L about the own atom of each d or p function)",
+  "tight_binding": "H(k) with Wannier centres at the atomic positions; band pairs within 5 meV treated as degenerate (their mutual terms omitted)",
+  "fermi_surface": "tensors_per_cell[q][i][j] = (1/N_k) sum_nk (-df/dE) X_ij, X = m_i dE/dk_j (mu_B Angstrom) or (dE/dk_i) Omega_j (Angstrom^3); sums over the bands of the model per cell of the model; electrons_per_cell counts one state per band and k-point"
+ }
+}

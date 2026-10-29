@@ -1,0 +1,7 @@
+{
+ "task_id": "superionic-heat-transport-size-onsager",
+ "solver_budget": 48,
+ "reserved_validation_charge": 0,
+ "requests": {"md_run": {"kind": "md_run", "run": "<run id from runs_available>", "cost": "1 (2x2x2), 2 (3x3x3), 4 (4x4x4)"}},
+ "catalog": "/app/catalog.json"
+}

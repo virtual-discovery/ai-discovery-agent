@@ -1,0 +1,20 @@
+{
+ "targets": {
+  "k_eV": 106.40799751517748,
+  "alpha_1e6_per_K": -5.06796008298221,
+  "cv_cuc2": 0.6798326886304844,
+  "cv_tase3": 0.9793784138756854,
+  "T_inst_K": 665.8157569478251
+ },
+ "thresholds": {
+  "k_rel": 0.1,
+  "alpha_rel": 0.15,
+  "cv_cuc2_rel": 0.035,
+  "cv_tase3_rel": 0.015,
+  "T_inst_abs_K": 75.0
+ },
+ "notes": {
+  "T_inst_100k_crossing": 681.6143144960262,
+  "T_inst_10k_crossing": 650.0171993996239
+ }
+}

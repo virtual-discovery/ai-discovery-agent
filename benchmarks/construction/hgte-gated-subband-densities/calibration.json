@@ -1,0 +1,195 @@
+{
+ "top_surface_Vg_p0.20": {
+  "reference": 2.807,
+  "tolerance": 0.1684,
+  "robustness": {
+   "single_spectrum": 2.8191,
+   "bmax1p0_padded": 2.8046,
+   "rho_xx_hann": 2.8069,
+   "block_average": 2.8033,
+   "bmax0p6_padded": 2.8116,
+   "bmax1p5_bmin0p2_padded": 2.8142
+  },
+  "ablations": {
+   "steep_ridge_as_bulk_harmonic_as_top": 1.4202,
+   "steep_ridge_as_bulk_sum_as_top": 1.72
+  }
+ },
+ "bottom_surface_Vg_p0.05": {
+  "reference": 0.827,
+  "tolerance": 0.07,
+  "robustness": {
+   "single_spectrum": 0.8349,
+   "bmax1p0_padded": 0.8334,
+   "rho_xx_hann": 0.8252,
+   "block_average": 0.8248,
+   "bmax0p6_padded": 0.8243,
+   "bmax1p5_bmin0p2_padded": 0.8278
+  },
+  "ablations": {}
+ },
+ "bulk_subband_E1_Vg_p0.30": {
+  "reference": 1.224,
+  "tolerance": 0.0734,
+  "robustness": {
+   "single_spectrum": 1.1955,
+   "bmax1p0_padded": 1.2267,
+   "rho_xx_hann": 1.2302,
+   "block_average": 1.2256,
+   "bmax0p6_padded": 1.2145,
+   "bmax1p5_bmin0p2_padded": 1.2319
+  },
+  "ablations": {
+   "steep_ridge_as_bulk_harmonic_as_top": 3.2478,
+   "steep_ridge_as_bulk_sum_as_top": 3.2478,
+   "bulk_spin_degenerate": 2.448
+  }
+ },
+ "top_surface_Vg_m0.45": {
+  "reference": 0.4455,
+  "tolerance": 0.07,
+  "robustness": {
+   "single_spectrum": 0.4416,
+   "bmax1p0_padded": 0.4438,
+   "rho_xx_hann": 0.433,
+   "block_average": 0.4462,
+   "bmax0p6_padded": 0.445,
+   "bmax1p5_bmin0p2_padded": 0.4523
+  },
+  "ablations": {
+   "top_is_larger_density": 0.6312
+  }
+ },
+ "bottom_surface_Vg_m0.45": {
+  "reference": 0.6312,
+  "tolerance": 0.07,
+  "robustness": {
+   "single_spectrum": 0.5996,
+   "bmax1p0_padded": 0.6279,
+   "rho_xx_hann": 0.6369,
+   "block_average": 0.6397,
+   "bmax0p6_padded": 0.5739,
+   "bmax1p5_bmin0p2_padded": 0.6427
+  },
+  "ablations": {
+   "top_is_larger_density": 0.4455
+  }
+ },
+ "hole_pocket_Vg_m0.70": {
+  "reference": 2.4914,
+  "tolerance": 0.1495,
+  "robustness": {
+   "single_spectrum": 2.4107,
+   "bmax1p0_padded": 2.5109,
+   "rho_xx_hann": 2.4661,
+   "block_average": 2.4908,
+   "bmax0p6_padded": 2.4647,
+   "bmax1p5_bmin0p2_padded": 2.4867
+  },
+  "ablations": {
+   "bulk_spin_degenerate": 4.9829,
+   "hole_strongest_peak": 1.1721,
+   "hole_peak_nearest_model": 2.1468
+  }
+ },
+ "hole_onset_Vg": {
+  "reference": -0.214,
+  "tolerance": 0.06,
+  "robustness": {
+   "single_spectrum": -0.1939,
+   "bmax1p0_padded": -0.2081,
+   "rho_xx_hann": -0.2205,
+   "block_average": -0.2171,
+   "bmax0p6_padded": -0.2716,
+   "bmax1p5_bmin0p2_padded": -0.1865,
+   "model_pocket_onset": -0.2106
+  },
+  "ablations": {
+   "holes_appear_at_neutrality": -0.3265,
+   "holes_appear_at_hall_sign_change": -0.35
+  }
+ },
+ "model_bottom_surface_Vg_p0.20": {
+  "reference": 0.9708,
+  "tolerance": 0.0582,
+  "robustness": {
+   "hall_fit_window_0p06_0p28": 0.9709,
+   "quadratic_interpolation": 0.9698
+  },
+  "ablations": {
+   "rigid_band_from_neutral_run": 1.5921
+  }
+ },
+ "model_top_surface_Vg_m0.45": {
+  "reference": 0.4848,
+  "tolerance": 0.04,
+  "robustness": {
+   "hall_fit_window_0p06_0p28": 0.4858,
+   "quadratic_interpolation": 0.4833
+  },
+  "ablations": {
+   "top_is_larger_density": 0.6754
+  }
+ },
+ "model_hole_pocket_Vg_m0.60": {
+  "reference": 1.6044,
+  "tolerance": 0.0963,
+  "robustness": {
+   "hall_fit_window_0p06_0p28": 1.5954,
+   "quadratic_interpolation": 1.6009
+  },
+  "ablations": {
+   "wedge_own_fermi_level": 1.2551,
+   "band_minus1_split_in_two": 1.858,
+   "band_minus1_split_in_four": 0.929,
+   "wedge_not_normalised": 4.8131
+  }
+ },
+ "majority_pocket_multiplicity": {
+  "reference": 2,
+  "tolerance": "exact",
+  "ablations": {
+   "four_equivalent_pockets": 4,
+   "single_hole_pocket": 1
+  }
+ },
+ "_notes": {
+  "gate_line_70nm": [
+   9.819685420554599,
+   3.2060499203446144
+  ],
+  "gate_line_B0p1_not_the_convention": [
+   10.308439350624868,
+   3.089550476425422
+  ],
+  "gate_line_window_0p06_0p28": [
+   9.797731699943549,
+   3.2139978528924114
+  ],
+  "rigid_band_energy_meV": 23.5,
+  "model_hole_pocket_Vg_m0.70": 2.0412851705974986,
+  "hole_ridge_points": [
+   [
+    -0.75,
+    2.740958978735826
+   ],
+   [
+    -0.7,
+    2.491447912441108
+   ],
+   [
+    -0.6499999999999999,
+    2.1956039905303095
+   ],
+   [
+    -0.5999999999999999,
+    1.9420224290616055
+   ],
+   [
+    -0.5499999999999998,
+    1.741328543760743
+   ]
+  ],
+  "model_top_band1_m045": 0.6754313263247171
+ }
+}

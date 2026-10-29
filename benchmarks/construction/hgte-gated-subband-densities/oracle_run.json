@@ -1,0 +1,143 @@
+{
+ "evaluations": 22,
+ "charge_used": 22,
+ "budget": 25,
+ "requests": [
+  {
+   "kind": "hall_scan",
+   "sample": "70nm"
+  },
+  {
+   "kind": "calculation",
+   "sample": "70nm",
+   "n_nm2": 0.003
+  },
+  {
+   "kind": "calculation",
+   "sample": "70nm",
+   "n_nm2": 0.004
+  },
+  {
+   "kind": "calculation",
+   "sample": "70nm",
+   "n_nm2": 0.005
+  },
+  {
+   "kind": "calculation",
+   "sample": "70nm",
+   "n_nm2": 0.006
+  },
+  {
+   "kind": "calculation",
+   "sample": "70nm",
+   "n_nm2": 0.007
+  },
+  {
+   "kind": "calculation",
+   "sample": "70nm",
+   "n_nm2": -0.001
+  },
+  {
+   "kind": "calculation",
+   "sample": "70nm",
+   "n_nm2": -0.002
+  },
+  {
+   "kind": "calculation",
+   "sample": "70nm",
+   "n_nm2": -0.003
+  },
+  {
+   "kind": "calculation",
+   "sample": "70nm",
+   "n_nm2": -0.004
+  },
+  {
+   "kind": "pocket_calculation",
+   "sample": "70nm",
+   "n_nm2": -0.002,
+   "kphi_deg": [
+    165,
+    285
+   ]
+  },
+  {
+   "kind": "pocket_calculation",
+   "sample": "70nm",
+   "n_nm2": -0.003,
+   "kphi_deg": [
+    165,
+    285
+   ]
+  },
+  {
+   "kind": "pocket_calculation",
+   "sample": "70nm",
+   "n_nm2": -0.003,
+   "kphi_deg": [
+    105,
+    165
+   ]
+  },
+  {
+   "kind": "transport",
+   "sample": "70nm",
+   "vg_center": 0.3
+  },
+  {
+   "kind": "transport",
+   "sample": "70nm",
+   "vg_center": 0.2
+  },
+  {
+   "kind": "transport",
+   "sample": "70nm",
+   "vg_center": 0.05
+  },
+  {
+   "kind": "transport",
+   "sample": "70nm",
+   "vg_center": -0.45
+  },
+  {
+   "kind": "transport",
+   "sample": "70nm",
+   "vg_center": -0.55
+  },
+  {
+   "kind": "transport",
+   "sample": "70nm",
+   "vg_center": -0.6
+  },
+  {
+   "kind": "transport",
+   "sample": "70nm",
+   "vg_center": -0.65
+  },
+  {
+   "kind": "transport",
+   "sample": "70nm",
+   "vg_center": -0.7
+  },
+  {
+   "kind": "transport",
+   "sample": "70nm",
+   "vg_center": -0.75
+  }
+ ],
+ "lab_job_seconds": 3.87,
+ "container_seconds": 22,
+ "accepted": true,
+ "errors": {
+  "top_surface_Vg_p0.20": -0.002371254833084979,
+  "bottom_surface_Vg_p0.05": 0.006380681588321724,
+  "bulk_subband_E1_Vg_p0.30": 0.002639362470608031,
+  "top_surface_Vg_m0.45": -0.0016677705537159193,
+  "bottom_surface_Vg_m0.45": -0.00335642636011535,
+  "hole_pocket_Vg_m0.70": 0.019418448073698524,
+  "hole_onset_Vg": 0.005961050976187654,
+  "model_bottom_surface_Vg_p0.20": 3.524818348310532e-08,
+  "model_top_surface_Vg_m0.45": -3.432218698140588e-08,
+  "model_hole_pocket_Vg_m0.60": 6.965721910390243e-08
+ }
+}

@@ -1,0 +1,12 @@
+# Physical-reasoning rubric
+
+Each item is a checkable statement that the report must make explicitly.
+
+1. Judges the NEB runs from their logs. The first-stage (Al,B)N run is converged but collective, and it is not the minimum-energy path. The refined_NEB run stopped without convergence (killed job, image errors up to ~0.55 eV/Å against path_thr = 0.05 eV/Å). The 75-image refined_NEB2 run is converged and lowest. No run used a climbing image, so the barrier is the highest image of a dense path.
+2. Normalizes the energies per formula unit: the 32-atom supercells hold 16 f.u.
+3. States that pw.x gives P only modulo the quantum eR/Ω of the supercell (≈0.472 C/m² for AlN and ≈0.481 C/m² for (Al,B)N). Explains how the branch was fixed between purchased images: dense enough sampling, or a Born-charge or displacement estimate over short segments. Notes that an estimate or unwrapping over too long a segment picks the wrong branch.
+4. States the reference structure. For AlN, the centrosymmetric layered-hexagonal saddle image has P = 0. For (Al,B)N, the reference lies midway between the inverted end states (Ps = −ΔP/2), and the half-switched intermediate is not a valid reference. Notes that raw end-state values (~0.1 C/m²), or a zinc-blende reference as in much of the nitride literature, differ from the layered-hexagonal Ps by more than 1 C/m².
+5. Identifies the mapping between Berry-phase folders and NEB images (0-based folders, NN_image = NEB image NN+1 of refined_NEB2), with a check such as matching scf energies.
+6. Describes the (Al,B)N mechanism from image-resolved structures. Columns of cations invert in sequence. A metastable half-switched state has 8 of 16 cations inverted. At the saddle the B-containing column passes through the planar site. The B column is not the first to invert.
+7. Separates mechanism from homogeneous effects. The collective (Al,B)N barrier is only ~12% below AlN, which bounds the effect of composition and the ~1% lattice contraction. The non-collective path lowers the barrier by ~60%. The archive contains no non-collective AlN path and no AlN at the (Al,B)N lattice, so neither B's specific role nor a pure strain effect is isolated.
+8. Discusses the coercive field. A homogeneous estimate (barrier/(Ps·Ω)) gives tens of MV/cm, far above measured fields, because real switching is nucleation- and domain-wall-limited. Only the trend (a lower barrier in (Al,B)N) is supported, not the magnitude.

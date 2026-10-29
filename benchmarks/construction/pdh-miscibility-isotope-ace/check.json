@@ -1,0 +1,142 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 9,
+  "task_mb": 0.69,
+  "hidden_values": 9,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 23,
+   "budget": 30,
+   "evaluations": 21,
+   "failed_evaluations": 0,
+   "container_seconds": 4
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "fixed_volume_configurational",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "no_coherency",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "coherency_111",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "small_cell_dilute",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "small_cell_fixed_volume_dilute",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "harmonic_zpe",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "zpe_only_no_thermal",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "static_site_preference",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "tetrahedral_site_as_dilute",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "elastic_only_wagner_horner",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "ordered_small_cells",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "grid_coarse_h",
+    "passes_grading": true
+   },
+   {
+    "name": "grid_small_box",
+    "passes_grading": true
+   },
+   {
+    "name": "rk3_all",
+    "passes_grading": true
+   },
+   {
+    "name": "rk5_all",
+    "passes_grading": true
+   },
+   {
+    "name": "rk4_108_only",
+    "passes_grading": true
+   },
+   {
+    "name": "rk4_32_only",
+    "passes_grading": true
+   },
+   {
+    "name": "rk4_isotropic_volume",
+    "passes_grading": true
+   },
+   {
+    "name": "dilute_108_only",
+    "passes_grading": true
+   },
+   {
+    "name": "dilute_256_fixed_volume",
+    "passes_grading": true
+   },
+   {
+    "name": "elastic_constants_d0.01",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-27T04:30:52Z"
+}

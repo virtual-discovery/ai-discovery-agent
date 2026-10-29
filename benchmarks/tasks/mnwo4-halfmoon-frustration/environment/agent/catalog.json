@@ -1,0 +1,648 @@
+{
+ "material": "MnWO4 (wolframite, P2/c); two Mn2+ per cell forming zigzag chains along c",
+ "model_source": "Atomistic spin-dynamics model of Natsch, Tosic, Soh and Spaldin (Materials Cloud, record p8297-g9n39; arXiv:2503.23704), simulated with UppASD 6.0.1. All purchasable data are the authors' archived outputs of that model; its exchange constants and anisotropy are not given.",
+ "structure": {
+  "cell_vectors_A": [
+   [
+    4.8236999512,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    5.7551999092,
+    0.0
+   ],
+   [
+    -0.0946104705,
+    0.0,
+    5.001005342
+   ]
+  ],
+  "sites_fractional": {
+   "1": [
+    0.5,
+    0.6849,
+    0.25
+   ],
+   "2": [
+    0.5,
+    0.3151,
+    0.75
+   ]
+  },
+  "moment_muB": 5.0,
+  "g_factor": 2.0,
+  "easy_axis_cartesian": [
+   0.81915,
+   0.0,
+   0.57358
+  ]
+ },
+ "hamiltonian": "H = - sum_{i != j} J_ij e_i . e_j + D sum_i (e_i . n)^2, unit vectors e, every ordered pair counted (each bond twice), J and D in meV, n = easy_axis_cartesian.",
+ "exchange_paths": [
+  {
+   "label": "J1",
+   "distance_A": 3.284,
+   "bonds": [
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      0,
+      0,
+      -1
+     ]
+    }
+   ]
+  },
+  {
+   "label": "J2",
+   "distance_A": 4.406,
+   "bonds": [
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      0,
+      1,
+      -1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      0,
+      -1,
+      0
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      0,
+      -1,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "label": "J3",
+   "distance_A": 4.824,
+   "bonds": [
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      -1,
+      0,
+      0
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      -1,
+      0,
+      0
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      1,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "label": "J4",
+   "distance_A": 5.002,
+   "bonds": [
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      0,
+      0,
+      -1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      0,
+      0,
+      -1
+     ]
+    }
+   ]
+  },
+  {
+   "label": "J5",
+   "distance_A": 5.755,
+   "bonds": [
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      0,
+      -1,
+      0
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      0,
+      -1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "label": "J6",
+   "distance_A": 5.796,
+   "bonds": [
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      -1,
+      0,
+      0
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      -1,
+      0,
+      -1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      1,
+      0,
+      1
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      1,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "label": "J7",
+   "distance_A": 5.874,
+   "bonds": [
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      -1,
+      0,
+      1
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      -1,
+      0,
+      0
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      1,
+      0,
+      -1
+     ]
+    }
+   ]
+  },
+  {
+   "label": "J8",
+   "distance_A": 6.498,
+   "bonds": [
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      -1,
+      1,
+      -1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      1,
+      -1,
+      1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      -1,
+      -1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "label": "J9",
+   "distance_A": 6.568,
+   "bonds": [
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      -1,
+      1,
+      0
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 2,
+     "cell_offset": [
+      1,
+      1,
+      -1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      -1,
+      -1,
+      1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 1,
+     "cell_offset": [
+      1,
+      -1,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "label": "J10",
+   "distance_A": 6.883,
+   "bonds": [
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      -1,
+      0,
+      -1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      -1,
+      0,
+      -1
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      1,
+      0,
+      1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      1,
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "label": "J11",
+   "distance_A": 7.014,
+   "bonds": [
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      -1,
+      0,
+      1
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      1,
+      0,
+      -1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      -1,
+      0,
+      1
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      1,
+      0,
+      -1
+     ]
+    }
+   ]
+  },
+  {
+   "label": "J12",
+   "distance_A": 7.509,
+   "bonds": [
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      -1,
+      1,
+      0
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      1,
+      -1,
+      0
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "from_site": 1,
+     "to_site": 1,
+     "cell_offset": [
+      -1,
+      -1,
+      0
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      -1,
+      1,
+      0
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      1,
+      -1,
+      0
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "from_site": 2,
+     "to_site": 2,
+     "cell_offset": [
+      -1,
+      -1,
+      0
+     ]
+    }
+   ]
+  }
+ ],
+ "exchange_path_note": "bond from site i in cell R to site j in cell R + cell_offset; vector = (cell_offset + r_j - r_i) . cell; every ordered pair is listed; labels follow increasing Mn-Mn distance.",
+ "af1_state": {
+  "description": "collinear up-up-down-down state along n with k = (-1/4, 1/2, 1/2); spin of site s in cell (n1, n2, n3) = sigma * n",
+  "sigma": "site 1: [+1, +1, -1, -1][n1 mod 4] * (-1)^(n2 + n3); site 2: [+1, -1, -1, +1][n1 mod 4] * (-1)^(n2 + n3)"
+ },
+ "simulations": {
+  "dynamics": "stochastic Landau-Lifshitz-Gilbert spin dynamics, damping 0.05, time step 1 fs, classical spins of 5 muB",
+  "spectra": "1.5 K, 48x48x48 periodic supercell initialised in AF1 (30 000 initial steps); dynamical structure factor S_aa(q, E) along the path below, components in the Cartesian frame of cell_vectors_A, arbitrary units",
+  "maps": "36x24x36 periodic supercell cooled in spin-dynamics steps from 60 K (2 K steps to 40 K, then 1 K steps), 30 000 initial + 40 000 measurement steps per temperature; static structure factor S_aa(q) in the plane q = (-l/2, k, l), arbitrary units",
+  "reduced_model_maps": "20 K, same supercell and protocol, for reduced Hamiltonians (see reduced_models)",
+  "zone_slices": "11 K, full commensurate q grid of a 36x24x36 or a 48x24x24 periodic supercell, static S_aa(q)"
+ },
+ "spectrum_path": {
+  "points": 101,
+  "q_of_index": "index 0-50: q = (0.5 - 0.005 i, 0.5, 1 - 0.01 i); index 51-100: q = (0.25, 0.5 + 0.01 (i - 50), 0.5)"
+ },
+ "reduced_models": {
+  "5b": "all 12 exchange paths, D = 0",
+  "5c": "J2, J5, J8, J12 removed (D kept)",
+  "5d": "J2, J5, J8, J12 and J9 removed (D kept)  [withheld: predict]",
+  "5e": "J2, J5, J8, J12 and J3, J7, J10, J11 removed (D kept)  [withheld: predict]"
+ },
+ "requests": {
+  "spectrum": {
+   "request": {
+    "kind": "spectrum",
+    "index": "<0-100>"
+   },
+   "cost": 1,
+   "returns": "q, energy grid and archived Sxx, Syy, Szz (E < 5 meV)"
+  },
+  "map": {
+   "request": {
+    "kind": "map",
+    "temperature_K": "<20 | 30 | 60>"
+   },
+   "cost": 4,
+   "returns": "archived Sxx, Syy, Szz on the k >= 0 half of the plane grid (187 x 321)"
+  },
+  "reduced_model_map": {
+   "request": {
+    "kind": "reduced_model_map",
+    "model": "<5b | 5c>"
+   },
+   "cost": 4,
+   "returns": "archived 20 K Sxx, Syy, Szz on the reduced-model grid (161 x 161)"
+  },
+  "zone_slice": {
+   "request": {
+    "kind": "zone_slice",
+    "supercell": "<36x24x36 | 48x24x24>",
+    "k_index": "<0-23>"
+   },
+   "cost": 1,
+   "returns": "archived 11 K Sxx, Syy, Szz at k = (k_index - 11)/24 on the full (h, l) grid"
+  }
+ },
+ "budget": 33,
+ "to_predict": {
+  "map_14K": "14 K map of the full model in the plane q = (-l/2, k, l): 27 x 29 values; row r, column c is the average of the archived |S| over the 7 x 11 grid points centred at k = 7 r dk, l = 11 (c - 14) dl of the map grid (dk = 4.66/372, dl = 0.0111), i.e. k from 0 to 2.2795 and l from -1.7094 to 1.7094",
+  "reduced_models": "20 K maps of reduced models 5d and 5e: 32 x 32 values each; row r, column c is the average of the archived |S| over the 5 x 5 grid points k_i, l_j with i = 5r .. 5r+4, j = 5c .. 5c+4 of the reduced-model grid"
+ },
+ "structure_factor_definition": "|S| = sqrt(Sxx^2 + Syy^2 + Szz^2) of the archived UppASD components (as in the purchasable maps)"
+}

@@ -1,0 +1,109 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 7,
+  "rubric_items": 7,
+  "task_mb": 14.6,
+  "hidden_values": 9,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 27,
+   "budget": 32,
+   "evaluations": 18,
+   "failed_evaluations": 0,
+   "container_seconds": 23
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "archived_isotope_rates_as_is",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "isotope_scattering_omitted",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "lifetime_convention_from_tc_data",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "degenerate_pairs_counted_as_coherences",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "gaussian_band_overlap",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "half_width_lorentzian",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "corrupted_qpoint_discarded",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "pdos_axis_taken_as_THz",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "isotope_dropped_for_filled_compound_only",
+    "passes_grading": true
+   },
+   {
+    "name": "isotope_repaired_with_band_median",
+    "passes_grading": true
+   },
+   {
+    "name": "diagonal_populations",
+    "passes_grading": true
+   },
+   {
+    "name": "degeneracy_threshold_0p1_cm1",
+    "passes_grading": true
+   },
+   {
+    "name": "T_half_from_separate_interpolation",
+    "passes_grading": true
+   },
+   {
+    "name": "rattler_from_yb_msd_einstein",
+    "passes_grading": true
+   },
+   {
+    "name": "rattler_from_lowest_gamma_optical_mode",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T21:10:27Z"
+}

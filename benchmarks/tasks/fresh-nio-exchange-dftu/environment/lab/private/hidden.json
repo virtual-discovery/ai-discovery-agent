@@ -1,0 +1,30 @@
+{
+ "reference": {
+  "J1_meV": {
+   "4.0": -2.1858141251141205,
+   "8.0": -0.7919023610884324
+  },
+  "J2_meV": {
+   "4.0": 30.516143911634572,
+   "8.0": 14.749914907656299
+  },
+  "neel_temperature_mean_field_K": {
+   "4.0": 1416.5005801134384,
+   "8.0": 684.6626193604116
+  },
+  "pbe_fm_minus_afm2_meV_per_Ni": 264.0493599753827,
+  "fm_gap_closing_U_eV": 2.0872901678657074
+ },
+ "tolerances": {
+  "relative": {
+   "J1_meV": 0.03,
+   "J2_meV": 0.02,
+   "neel_temperature_mean_field_K": 0.02,
+   "pbe_fm_minus_afm2_meV_per_Ni": 0.02
+  },
+  "absolute": {
+   "fm_gap_closing_U_eV": 0.1
+  }
+ },
+ "provenance": "derived from reference_runs.jsonl (task_lab.run, QE 6.7, 2 MPI ranks) by make_task.py"
+}

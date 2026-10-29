@@ -1,0 +1,22 @@
+schema_version = "1.3"
+artifacts = [{source = "/app/submission.json", destination = "submission.json"}, {source = "/app/report.md", destination = "report.md"}, {source = "/lab-results", destination = "lab-results", service = "lab"}]
+[task]
+name = "ai-theorist/gwbse-1d-chain-excitons"
+description = "Exfoliable 1D chains: GW-BSE excitons, self-consistency and SOC"
+authors = [{name = "AI Theorist benchmark team"}]
+[metadata]
+table = 1
+start = "released"
+source_study = "grillo_2026_1d_gwbse"
+catalog_id = "gwbse-1d-chain-excitons"
+split = "evaluation"
+[agent]
+timeout_sec = 10800
+user = "agent"
+[verifier]
+timeout_sec = 300
+environment_mode = "separate"
+[environment]
+cpus = 2
+memory_mb = 4096
+storage_mb = 16384

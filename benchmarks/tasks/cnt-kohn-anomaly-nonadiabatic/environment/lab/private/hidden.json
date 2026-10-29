@@ -1,0 +1,25 @@
+{
+ "reference": {
+  "omega_nonadiabatic_meV": {
+   "100": 125.18194123861939,
+   "300": 123.49048135850212
+  },
+  "linewidth_meV": {
+   "100": 12.86638077409033,
+   "300": 10.852777439716615
+  },
+  "omega_adiabatic_100K_meV": 106.27224201207322,
+  "rbm_instability_temperature_K": 527.4028794662233,
+  "threshold_coupling_meV": {
+   "1": 60.327622,
+   "20": 151.169662
+  }
+ },
+ "thresholds": {
+  "omega_nonadiabatic_abs_meV": 1.2,
+  "linewidth_rel": 0.06,
+  "omega_adiabatic_abs_meV": 1.5,
+  "instability_temperature_rel": 0.08,
+  "threshold_coupling_rel": 0.06
+ }
+}

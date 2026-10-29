@@ -1,0 +1,128 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 8,
+  "task_mb": 5.93,
+  "hidden_values": 12,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 36,
+   "budget": 40,
+   "evaluations": 25,
+   "failed_evaluations": 0,
+   "container_seconds": 2
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "plateau_at_scf_fermi",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "plateau_at_win_fermi_energy",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "plateau_at_dft_mid_gap",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "mesh_120_unrefined",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "mesh_60_unrefined",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "lattice_position_convention",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "relaxed_archive_values",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "paper_table_values",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "z2_from_plateau_magnitude",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "z2_from_coarse_wcc",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "atomic_thickness_normalisation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "e_over_4pi_units",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "sigma_z_only_spin_direction",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "authors_broadening_5meV",
+    "passes_grading": true
+   },
+   {
+    "name": "mesh_240_unrefined_eta_1meV",
+    "passes_grading": true
+   },
+   {
+    "name": "z2_wcc_201x200_axis0",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-25T21:57:53Z"
+}

@@ -1,0 +1,40 @@
+{
+ "reference": {
+  "YbIr4Sb12": {
+   "kappa_P_W_mK": {
+    "300": 0.9166855959069551,
+    "700": 0.3968356853119267
+   },
+   "kappa_C_W_mK": {
+    "100": 0.11011948376024745,
+    "300": 0.17837017341362008,
+    "700": 0.20942750483210357
+   },
+   "T_half_K": 667.1457419420041,
+   "rattler_frequency_THz": 0.967738634422954
+  },
+  "IrSb3": {
+   "kappa_P_50K_W_mK": 131.8925011346513,
+   "kappa_TOT_300K_W_mK": 11.76036033327707
+  }
+ },
+ "thresholds": {
+  "kappa_P_rel": 0.05,
+  "kappa_C_rel": 0.06,
+  "T_half_K": 25.0,
+  "irsb3_kappa_P_50K_rel": 0.04,
+  "irsb3_kappa_TOT_300K_rel": 0.05,
+  "rattler_rel": 0.2
+ },
+ "rattler_estimates": {
+  "archived_axis_peak": 6.7455503698,
+  "axis_ratio": 6.9704258255869425,
+  "pdos_peak": 0.967738634422954,
+  "einstein_from_msd_300K": 0.9781351453782411,
+  "lowest_gamma_optical": 0.8293668531743218
+ },
+ "notes": {
+  "isotope_repair": "archived gamma_isotope > 1 THz (all at the q-point nearest Gamma, index [1]) set to zero",
+  "archived_kappa_P_YbIr4Sb12_300K": 0.8158953006893533
+ }
+}

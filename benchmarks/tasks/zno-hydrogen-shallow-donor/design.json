@@ -1,0 +1,323 @@
+{
+ "task_id": "zno-hydrogen-shallow-donor",
+ "catalog_id": "zno-hydrogen-shallow-donor",
+ "start": "released",
+ "source_group": "aicher_2025_zno_hydrogen",
+ "title": "ZnO: which hydrogen centre is the shallow EPR donor",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which Hamiltonian: the PBE relaxations or the hybrid single points (INCAR shows AEXX = 0.37, gap 3.25 eV vs 0.72 eV in PBE)",
+   "wrong_choice": "Use the PBE runs (cheaper to reason about, complete relaxation data)",
+   "consequence": "Gap 0.72 eV, Delta mu_O -2.87 eV, V_O^+ becomes stable (2+/+ 0.585, +/0 0.687 eV) and invites the V_O^+ assignment; every level, E_F and concentration fails",
+   "ablation": "pbe_pipeline",
+   "other_ablations": [
+    "pbe_pipeline_keep_oh_assignment"
+   ],
+   "kind": "level of theory; evidence in run headers"
+  },
+  {
+   "id": "dp2",
+   "fork": "Which archived phase bounds mu_H at the Zn-rich limit: H2, H2O or Zn(OH)2 (4 formula units per cell); only buying Zn(OH)2 reveals it",
+   "wrong_choice": "H-rich = H2 molecule (Delta mu_H = 0)",
+   "consequence": "Delta mu_H off by 0.078 eV; E_F +0.042 eV and log10[OH_O^+] +0.18 (tolerances 0.025 and 0.12)",
+   "ablation": "hydrogen_reservoir_H2",
+   "kind": "discriminating purchase under budget; reservoir"
+  },
+  {
+   "id": "dp3",
+   "fork": "Neutral OH_O/H_O cells: odd electron count but total moment -0.25 / 0; the extra electron fills conduction-band states at several k-points up to ~1 eV above the CBM (perturbed host state)",
+   "wrong_choice": "Take the neutral-cell energies at face value, as the authors did (their notebook puts OH_O(+/0) at 3.78 eV, above the 3.25 eV gap)",
+   "consequence": "OH_O(+/0) and H_O(+/0) 0.5-0.6 eV above the CBM, OH_O^0 never stable, log10[OH_O^0] low by 3.3 dex; the paramagnetic donor seems to vanish",
+   "ablation": "no_band_filling",
+   "other_ablations": [
+    "no_band_filling_so_OH_O0_unstable_assign_V_O"
+   ],
+   "kind": "raw-output evidence (moments, occupations); finite-size treatment of a shallow state"
+  },
+  {
+   "id": "dp4",
+   "fork": "k-point weights of the band-filling sum: the reduced 2x2x2 mesh has weights 1/8, 3/8, 1/8, 3/8 (OUTCAR header)",
+   "wrong_choice": "Weight the k-points equally",
+   "consequence": "OH_O(+/0) at 2.84 eV (window 3.00-3.30), log10[OH_O^0] +1.47",
+   "ablation": "band_filling_equal_k_weights",
+   "kind": "header metadata"
+  },
+  {
+   "id": "dp5",
+   "fork": "V_O ladder: levels between consecutive stable states (negative U) or between every adjacent charge pair",
+   "wrong_choice": "Report (2+/+) and (+/0) and conclude V_O^+ is stable in between",
+   "consequence": "V_O level 2.691 instead of 2.596 (tol 0.05); V_O^+ wrongly stable",
+   "ablation": "V_O_adjacent_levels",
+   "kind": "thermodynamic bookkeeping that feeds the EPR argument"
+  },
+  {
+   "id": "dp6",
+   "fork": "Which state can give an equilibrium EPR signal: odd-electron, thermodynamically stable and populated at E_F",
+   "wrong_choice": "Assign g = 1.96 to V_O^+ (the textbook paramagnetic vacancy), to the majority-charge OH_O^+ (closed shell, moment 0) or to H_O^0",
+   "consequence": "Categorical epr_centre fails",
+   "ablation": "epr_V_O_plus",
+   "other_ablations": [
+    "epr_ionized_OH_O_plus",
+    "epr_H_O_neutral"
+   ],
+   "kind": "competing explanations"
+  },
+  {
+   "id": "dp7",
+   "fork": "Hydrogen site of OH_O from the relaxed geometry: H 0.98 A from O along c, with the c-axis Zn pushed to 2.10 A beyond H (O-Zn 3.08 A)",
+   "wrong_choice": "Read the O-H bond as antibonding (H outside the Zn-O bond)",
+   "consequence": "oh_o_site check fails",
+   "ablation": "site_antibonding_parallel",
+   "kind": "structure analysis"
+  }
+ ],
+ "graded_fields": [
+  "band_gap_eV (+-0.03)",
+  "delta_mu_eV O and H (+-0.03)",
+  "transition_levels: OH_O and H_O one (+1/0) level in [3.00, 3.30], V_O one (2+/0) level +-0.05, no other levels inside the gap interior",
+  "V_O_plus_ever_stable (false)",
+  "epr_centre (OH_O, 0)",
+  "oh_o_site (BC_parallel)",
+  "fermi_level_eV at 1000 K (+-0.025)",
+  "log10_concentration_cm3: V_O +-0.15, OH_O^+ +-0.12, OH_O^0 +-0.7 dex"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 31,
+  "oracle_charge": 31,
+  "budget": 35,
+  "catalog_size_units": 97,
+  "catalog_note": "50 runs (25 PBE relaxations, 25 hybrid single points) + 47 eigenvalue sets (3 PBE runs only have their logs processed)",
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "pilot": "pending (coordinator)",
+  "why": "Buying the host, six reference phases and 18 hybrid defect cells (25 units) leaves 10 units for eigenvalue sets; the agent must discover from the magnetizations which cells hold band-filled electrons, buy those eigenvalues, implement Ewald/alignment/band filling, a charge-neutrality solver with Fermi-Dirac carriers, and the site geometry."
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/c91vp-p9h03",
+  "doi": "10.24435/materialscloud:f8-mc",
+  "files_used": [
+   "ZnO_ubiquitous.tar.gz"
+  ],
+  "md5": {
+   "ZnO_ubiquitous.tar.gz": "d21e5cfb405c798dcd23ad41c9678614"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Truth = released total energies, eigenvalues and core potentials processed with the conventions stated in instruction.md (the authors' chemical-potential limits, LZ correction and 5 A alignment) plus a band-filling correction for the delocalized neutral states that the authors omitted. The authors' own self-consistent Fermi level (3.85 eV, above their 3.25 eV gap) and OH_O concentration come from py-sc-fermi on the 4-k-point supercell DOS with uncorrected neutral states; they are not used as targets. Design deviations: no T,p-dependent gas chemical potentials, no quench/anneal model and no complex-dissociation entropy (the archive holds only 0 K energies, and the authors also used 0 K chemical potentials); no BC/AB competition or O-H zero-point energy (one H configuration per defect, no phonons archived) - the site is graded as a geometry classification instead.",
+ "calibration": {
+  "band_gap_eV": {
+   "reference": 3.2485,
+   "robustness": {
+    "bulk_zno_8x8x5": 3.2466
+   },
+   "nearest_ablation": {
+    "pbe_pipeline": 0.7156
+   },
+   "tolerance": "+-0.03"
+  },
+  "delta_mu_O_eV": {
+   "reference": -3.2671,
+   "robustness": {
+    "toten_energies": -3.2671
+   },
+   "nearest_ablation": {
+    "pbe_pipeline": -2.8735
+   },
+   "tolerance": "+-0.03"
+  },
+  "delta_mu_H_eV": {
+   "reference": -0.0776,
+   "robustness": {
+    "toten_energies": -0.0776
+   },
+   "nearest_ablation": {
+    "hydrogen_reservoir_H2": 0.0,
+    "pbe_pipeline": -0.1573
+   },
+   "tolerance": "+-0.03"
+  },
+  "OH_O(+/0)_eV": {
+   "reference": [
+    3.131
+   ],
+   "robustness": {
+    "band_filling_unaligned_cbm": [
+     3.07
+    ],
+    "shallow_donors_at_cbm": [
+     3.248
+    ],
+    "toten_energies": [
+     3.131
+    ],
+    "bulk_zno_gap": [
+     3.131
+    ],
+    "boltzmann_carriers": [
+     3.131
+    ],
+    "alignment_radius_4A": [
+     3.139
+    ]
+   },
+   "nearest_ablation": {
+    "band_filling_equal_k_weights": [
+     2.84
+    ],
+    "no_band_filling": "3.782 (above the CBM, no level in the gap)",
+    "pbe_pipeline": [
+     0.569
+    ]
+   },
+   "tolerance": "one (+1/0) level in [3.00, 3.30]"
+  },
+  "H_O(+/0)_eV": {
+   "reference": [
+    3.213
+   ],
+   "robustness": {
+    "band_filling_unaligned_cbm": [
+     3.181
+    ],
+    "shallow_donors_at_cbm": [
+     3.248
+    ],
+    "toten_energies": [
+     3.213
+    ],
+    "bulk_zno_gap": [
+     3.213
+    ],
+    "boltzmann_carriers": [
+     3.213
+    ],
+    "alignment_radius_4A": [
+     3.212
+    ]
+   },
+   "nearest_ablation": {
+    "no_band_filling": "3.847 (above the CBM)",
+    "pbe_pipeline": "no level in the PBE gap"
+   },
+   "tolerance": "one (+1/0) level in [3.00, 3.30]; levels below 0 ignored"
+  },
+  "V_O(2+/0)_eV": {
+   "reference": [
+    2.596
+   ],
+   "robustness": {
+    "band_filling_unaligned_cbm": [
+     2.596
+    ],
+    "shallow_donors_at_cbm": [
+     2.596
+    ],
+    "toten_energies": [
+     2.596
+    ],
+    "bulk_zno_gap": [
+     2.596
+    ],
+    "boltzmann_carriers": [
+     2.596
+    ],
+    "alignment_radius_4A": [
+     2.603
+    ]
+   },
+   "nearest_ablation": {
+    "adjacent_levels": [
+     2.691,
+     2.501
+    ],
+    "pbe_pipeline": [
+     0.585,
+     0.687
+    ],
+    "alignment_radius_6A (not a robustness case: 5 A is the stated convention)": 2.536
+   },
+   "tolerance": "+-0.05"
+  },
+  "fermi_level_eV": {
+   "reference": 3.1818,
+   "robustness": {
+    "band_filling_unaligned_cbm": 3.1818,
+    "shallow_donors_at_cbm": 3.1818,
+    "toten_energies": 3.1818,
+    "bulk_zno_gap": 3.1809,
+    "boltzmann_carriers": 3.1757,
+    "alignment_radius_4A": 3.1952
+   },
+   "nearest_ablation": {
+    "hydrogen_reservoir_H2": 3.2237,
+    "full_Madelung_instead_of_2/3 (convention)": 3.1459,
+    "pbe_pipeline": 1.016
+   },
+   "tolerance": "+-0.025"
+  },
+  "log10_V_O": {
+   "reference": 15.9513,
+   "robustness": {
+    "band_filling_unaligned_cbm": 15.9513,
+    "shallow_donors_at_cbm": 15.9513,
+    "toten_energies": 15.9512,
+    "bulk_zno_gap": 15.9513,
+    "boltzmann_carriers": 15.9513,
+    "alignment_radius_4A": 15.9513
+   },
+   "nearest_ablation": {
+    "pbe_pipeline": 18.5014,
+    "hydrogen_reservoir_H2": 15.9512,
+    "no_band_filling": 15.9513,
+    "band_filling_equal_k_weights": 15.9513
+   },
+   "tolerance": "+-0.15 dex"
+  },
+  "log10_OH_O^+": {
+   "reference": 18.8433,
+   "robustness": {
+    "band_filling_unaligned_cbm": 18.8433,
+    "shallow_donors_at_cbm": 18.8433,
+    "toten_energies": 18.8433,
+    "bulk_zno_gap": 18.8477,
+    "boltzmann_carriers": 18.8739,
+    "alignment_radius_4A": 18.9047
+   },
+   "nearest_ablation": {
+    "pbe_pipeline": 19.9563,
+    "hydrogen_reservoir_H2": 19.0232,
+    "no_band_filling": 18.8433,
+    "band_filling_equal_k_weights": 18.8433
+   },
+   "tolerance": "+-0.12 dex"
+  },
+  "log10_OH_O^0": {
+   "reference": 19.0977,
+   "robustness": {
+    "band_filling_unaligned_cbm": 19.4091,
+    "shallow_donors_at_cbm": 18.5072,
+    "toten_energies": 19.1,
+    "bulk_zno_gap": 19.0977,
+    "boltzmann_carriers": 19.0977,
+    "alignment_radius_4A": 19.1864
+   },
+   "nearest_ablation": {
+    "pbe_pipeline": 22.2073,
+    "hydrogen_reservoir_H2": 19.4886,
+    "no_band_filling": 15.8187,
+    "band_filling_equal_k_weights": 20.5685
+   },
+   "tolerance": "+-0.7 dex"
+  },
+  "categorical": {
+   "epr_centre": "OH_O, charge 0",
+   "oh_o_site": "BC_parallel",
+   "V_O_plus_ever_stable": false
+  }
+ }
+}

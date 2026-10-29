@@ -1,0 +1,168 @@
+{
+ "kappa_xx_80GPa_300K_W_mK": {
+  "reference": 1878.42,
+  "tolerance": {
+   "type": "rel",
+   "value": 0.1
+  },
+  "oracle_route": 1757.63,
+  "oracle_error": -0.0643,
+  "robustness_errors": {
+   "geometric_interpolation": 0.0552,
+   "quadratic_80GPa_T_ratio_100GPa": -0.0386,
+   "T_ratio_from_20GPa_only": -0.0643
+  },
+  "ablation_errors": {
+   "abl_RTA": -0.459,
+   "abl_no_4ph": 1.9837,
+   "abl_no_phel": 0.306,
+   "abl_phel_times_2pi": -0.1866,
+   "abl_phel_row_order": -0.2214,
+   "abl_scalebroad_1": -0.1695,
+   "abl_kappa_level_interpolation": -0.0109,
+   "abl_4ph_not_rescaled_to_600K": -0.0643,
+   "abl_4ph_classical_T2_scaling": -0.0643,
+   "abl_trace_average": -0.0606
+  }
+ },
+ "kappa_zz_80GPa_300K_W_mK": {
+  "reference": 1536.82,
+  "tolerance": {
+   "type": "rel",
+   "value": 0.1
+  },
+  "oracle_route": 1471.98,
+  "oracle_error": -0.0422,
+  "robustness_errors": {
+   "geometric_interpolation": 0.0369,
+   "quadratic_80GPa_T_ratio_100GPa": -0.0183,
+   "T_ratio_from_20GPa_only": -0.0422
+  },
+  "ablation_errors": {
+   "abl_RTA": -0.4198,
+   "abl_no_4ph": 3.6035,
+   "abl_no_phel": 0.3122,
+   "abl_phel_times_2pi": -0.2082,
+   "abl_phel_row_order": -0.1828,
+   "abl_scalebroad_1": -0.1604,
+   "abl_kappa_level_interpolation": -0.0004,
+   "abl_4ph_not_rescaled_to_600K": -0.0422,
+   "abl_4ph_classical_T2_scaling": -0.0422,
+   "abl_trace_average": 0.1482
+  }
+ },
+ "kappa_xx_40GPa_300K_W_mK": {
+  "reference": 1835.3,
+  "tolerance": {
+   "type": "rel",
+   "value": 0.05
+  },
+  "oracle_route": 1809.36,
+  "oracle_error": -0.0141,
+  "robustness_errors": {
+   "geometric_interpolation": -0.0062,
+   "quadratic_80GPa_T_ratio_100GPa": -0.0141,
+   "T_ratio_from_20GPa_only": -0.0141
+  },
+  "ablation_errors": {
+   "abl_RTA": -0.4766,
+   "abl_no_4ph": 3.3468,
+   "abl_no_phel": -0.0141,
+   "abl_phel_times_2pi": -0.0611,
+   "abl_phel_row_order": -0.1889,
+   "abl_scalebroad_1": -0.1451,
+   "abl_kappa_level_interpolation": -0.0701,
+   "abl_4ph_not_rescaled_to_600K": -0.0141,
+   "abl_4ph_classical_T2_scaling": -0.0141,
+   "abl_trace_average": -0.0826
+  }
+ },
+ "kappa_xx_60GPa_600K_W_mK": {
+  "reference": 629.725,
+  "tolerance": {
+   "type": "rel",
+   "value": 0.04
+  },
+  "oracle_route": 633.428,
+  "oracle_error": 0.0059,
+  "robustness_errors": {
+   "geometric_interpolation": 0.0062,
+   "quadratic_80GPa_T_ratio_100GPa": -0.0098,
+   "T_ratio_from_20GPa_only": 0.0223
+  },
+  "ablation_errors": {
+   "abl_RTA": -0.349,
+   "abl_no_4ph": 3.4729,
+   "abl_no_phel": 0.0059,
+   "abl_phel_times_2pi": -0.0502,
+   "abl_phel_row_order": -0.1568,
+   "abl_scalebroad_1": -0.0717,
+   "abl_kappa_level_interpolation": 0.5115,
+   "abl_4ph_not_rescaled_to_600K": 0.8802,
+   "abl_4ph_classical_T2_scaling": 0.2123,
+   "abl_trace_average": -0.0672
+  }
+ },
+ "phel_resistivity_fraction_80GPa_300K": {
+  "reference": 0.234928,
+  "tolerance": {
+   "type": "abs",
+   "value": 0.06
+  },
+  "oracle_route": 0.2836,
+  "oracle_error": 0.0486,
+  "robustness_errors": {
+   "geometric_interpolation": -0.0367,
+   "quadratic_80GPa_T_ratio_100GPa": 0.0347,
+   "T_ratio_from_20GPa_only": 0.0486
+  },
+  "ablation_errors": {
+   "abl_RTA": -0.0218,
+   "abl_no_4ph": 0.7655,
+   "abl_no_phel": -0.2349,
+   "abl_phel_times_2pi": 0.1422,
+   "abl_phel_row_order": 0.1689,
+   "abl_scalebroad_1": 0.0358,
+   "abl_kappa_level_interpolation": 0.0114,
+   "abl_4ph_not_rescaled_to_600K": 0.0486,
+   "abl_4ph_classical_T2_scaling": 0.0486,
+   "abl_trace_average": 0.0
+  }
+ },
+ "mc_seed_spread_kappa_xx_80GPa": [
+  1879.34,
+  1877.67
+ ],
+ "released_full_physics_diag_W_mK": {
+  "full_0": [
+   1080.53,
+   1080.79,
+   879.386
+  ],
+  "full_20": [
+   1509.48,
+   1509.35,
+   1195.34
+  ],
+  "full_60": [
+   1903.69,
+   1903.5,
+   1522.46
+  ],
+  "full_100": [
+   1812.21,
+   1811.9,
+   1549.91
+  ],
+  "3ph_sb1_60": [
+   3206.24,
+   3211.08,
+   2937.37
+  ],
+  "3ph_sb1_80": [
+   3222.57,
+   3224.07,
+   2947.67
+  ]
+ }
+}

@@ -1,0 +1,182 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 8,
+  "task_mb": 2.09,
+  "hidden_values": 14,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 41,
+   "budget": 46,
+   "evaluations": 28,
+   "failed_evaluations": 0,
+   "container_seconds": 92
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "al_reference_finest_mesh70",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "al_reference_mesh60",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "separable_multiplicative",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "separable_additive",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "anharmonic_correction_from_expanded_lattice",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "lambda_like_inverse_square_moment",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "nb_cancellation_as_in_pb_al",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "nb_surrogate_calibrated_on_pb",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "nb_surrogate_uncalibrated",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "nb_constant_anharmonic_fraction",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "te_linear_extrapolation",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "te_phonon_softening_only",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "serta_instead_of_ibte",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "linear_fit_including_10K",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "surrogate_calibration_including_10K",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "longitudinal_projected_q2_surrogate",
+    "passes_grading": true
+   },
+   {
+    "name": "calibration_on_110_210_310K",
+    "passes_grading": true
+   },
+   {
+    "name": "uncalibrated_q2_surrogate_for_pb",
+    "passes_grading": true
+   },
+   {
+    "name": "te_610_ratio_quadratic_extrapolation",
+    "passes_grading": true
+   },
+   {
+    "name": "te_610_cubic_fit",
+    "passes_grading": true
+   },
+   {
+    "name": "te_610_quadratic_fit",
+    "passes_grading": true
+   },
+   {
+    "name": "te_610_constant_residual",
+    "passes_grading": true
+   },
+   {
+    "name": "te_610_uniform_weight_with_residual",
+    "passes_grading": true
+   },
+   {
+    "name": "nb_ratio_to_harmonic_from_1000K",
+    "passes_grading": true
+   },
+   {
+    "name": "nb_proportional_to_T",
+    "passes_grading": true
+   },
+   {
+    "name": "te_anh_510_ratio_to_harmonic_extrapolated",
+    "passes_grading": true
+   },
+   {
+    "name": "te_anh_510_linear_fit_110_310K",
+    "passes_grading": true
+   },
+   {
+    "name": "al_linear_interpolation",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-20T01:18:24Z"
+}

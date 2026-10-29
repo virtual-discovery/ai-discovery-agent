@@ -1,0 +1,135 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 10,
+  "rubric_items": 8,
+  "task_mb": 12.98,
+  "hidden_values": 4,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 26,
+   "budget": 30,
+   "evaluations": 6,
+   "failed_evaluations": 0,
+   "container_seconds": 10
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "rotated_axes_setting",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp1",
+    "name": "chiral_d2_assumption",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "intra_atomic_orbital_moment",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "berry_plus_intra_atomic_moment",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "no_spin_factor_in_nosoc_alpha",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "no_spin_factor_in_nosoc_holes",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "no_spin_factor_anywhere_nosoc",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "common_header_energy_axis",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "coarse_mesh_32",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "tau_hbar_over_gamma",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "positive_charge_sign",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "conduction_ratio_from_valence",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "nlh_full_permutation_symmetry",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "chirality_from_chiral_class",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "mesh_96",
+    "passes_grading": true
+   },
+   {
+    "name": "valence_spin_extrapolated_1_over_N",
+    "passes_grading": true
+   },
+   {
+    "name": "raw_bcd_ratio_mesh128",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T07:36:48Z"
+}

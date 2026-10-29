@@ -1,0 +1,111 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 9,
+  "rubric_items": 7,
+  "task_mb": 0.2,
+  "hidden_values": 13,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 50,
+   "budget": 60,
+   "evaluations": 40,
+   "failed_evaluations": 0,
+   "container_seconds": 4
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "nernst_einstein_as_conductivity",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "green_kubo_noise_floor_in_low_T_fit",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "largest_heat_capacity_peak_as_transition",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "pbesol_transition_for_all_references",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "experimental_alpha_transition_for_all_references",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "interpolate_across_the_jump",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "alpha_started_runs_as_superionic_reference",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "barycentric_li_s_term_as_coupling",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "librations_taken_for_reorientations",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "single_arrhenius_through_the_transition",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "tracer_branch_over_haven_ratio",
+    "passes_grading": true
+   },
+   {
+    "name": "superionic_fit_to_1000K_haven_to_1100K_window_to_875K",
+    "passes_grading": true
+   },
+   {
+    "name": "upper_bracket_domega_as_rate_zero_coupling",
+    "passes_grading": true
+   },
+   {
+    "name": "lower_bracket_msd_route",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-19T04:02:27Z"
+}

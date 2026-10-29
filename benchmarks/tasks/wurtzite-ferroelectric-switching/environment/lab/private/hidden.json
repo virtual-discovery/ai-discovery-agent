@@ -1,0 +1,35 @@
+{
+ "reference": {
+  "barrier_meV_per_fu": {
+   "AlN": 522.9779499999836,
+   "AlBN": 199.8449249999794
+  },
+  "AlBN_collective_barrier_meV_per_fu": 459.638024999947,
+  "spontaneous_polarization_C_m2": {
+   "AlN": -1.3196515500000001,
+   "AlBN": -1.36231675
+  },
+  "AlBN_saddle_polarization_change_C_m2": 0.9939366,
+  "AlBN_intermediate": {
+   "energy_meV_per_fu": 100.93596249998882,
+   "inverted_cations": 8
+  },
+  "AlBN_switching_mode": "non-collective"
+ },
+ "thresholds": {
+  "barrier_rel_tol": 0.08,
+  "polarization_abs_tol_C_m2": 0.015,
+  "saddle_dP_abs_tol_C_m2": 0.025,
+  "intermediate_energy_rel_tol": 0.1
+ },
+ "notes": {
+  "saddle_image_0based": 28,
+  "intermediate_image_0based": 40,
+  "AlBN_local_minima_0based": [
+   16,
+   40,
+   49,
+   58
+  ]
+ }
+}

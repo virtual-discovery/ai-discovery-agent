@@ -1,0 +1,48 @@
+{
+ "ablations": {
+  "barrier_AlBN_first_stage": 459.638024999947,
+  "collective_from_AlN": 522.9779499999836,
+  "per_atom": {
+   "AlN": 261.4889749999918,
+   "AlBN": 99.9224624999897,
+   "collective": 229.8190124999735,
+   "intermediate": 50.46798124999441
+  },
+  "per_supercell": {
+   "AlN": 8367.647199999737,
+   "AlBN": 3197.5187999996706,
+   "collective": 7354.208399999152,
+   "intermediate": 1614.975399999821
+  },
+  "raw_berry": {
+   "AlN": 0.09729080000000001,
+   "AlBN": -0.15880624999999998,
+   "saddle": -0.450276
+  },
+  "sparse_tracking": {
+   "AlN_stride2_half_path": -0.8473016,
+   "AlBN_stride6": -0.39950835
+  },
+  "bec_full_path": {
+   "AlN": -1.08350345,
+   "AlBN": -1.12161465
+  },
+  "half_switched_reference_AlBN": -1.3891027999999999,
+  "off_by_one_saddle": {
+   "plus": 1.0400547999999998,
+   "minus": 0.9507955
+  },
+  "first_subbarrier": {
+   "barrier": 153.26109374996122,
+   "saddle_dP": 0.49924770000000007,
+   "first_minimum_energy": 134.6996249999961
+  },
+  "collective_saddle_dP": 1.36231675
+ },
+ "robustness": {
+  "barrier_AlN_first_stage_run": 523.0564999999956,
+  "saddle_dP_parabolic_position": 0.9918731215948098,
+  "Ps_AlN_midpoint_reference": -1.3195978000000002,
+  "barrier_AlBN_vs_relaxed_endpoint": 199.86543750002284
+ }
+}

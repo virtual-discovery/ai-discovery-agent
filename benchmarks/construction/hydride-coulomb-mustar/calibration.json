@@ -1,0 +1,337 @@
+{
+ "reference": {
+  "tc_full_W_K": {
+   "Mg2IrH6_15GPa": 88.45,
+   "Mg2IrH6_25GPa": 91.65,
+   "H3S_180GPa": 256.5,
+   "H3S_190GPa": 244.5
+  },
+  "mu_star_cdos_1eV_Mg2IrH6_20GPa": 0.5875012857243657,
+  "N_EF_H3S_180GPa_per_fu_per_spin": 0.2704499999999974
+ },
+ "tolerance": {
+  "tc_rel": 0.035,
+  "mu_star_abs": 0.025,
+  "nef_rel": 0.03
+ },
+ "solver_checks": {
+  "Mg2IrH6/0": {
+   "lab_vdos_W": 84.03,
+   "archived": 83.05,
+   "rel": 0.011800120409392045
+  },
+  "Mg2IrH6/5": {
+   "lab_vdos_W": 85.83,
+   "archived": 84.45,
+   "rel": 0.01634103019538191
+  },
+  "Mg2IrH6/10": {
+   "lab_vdos_W": 89.29,
+   "archived": 88.05,
+   "rel": 0.014082907438955239
+  },
+  "Mg2IrH6/15": {
+   "lab_vdos_W": 88.53,
+   "archived": 88.45,
+   "rel": 0.0009044657998868999
+  },
+  "Mg2IrH6/20": {
+   "lab_vdos_W": 89.34,
+   "archived": 89.45,
+   "rel": -0.001229737283398591
+  },
+  "Mg2IrH6/25": {
+   "lab_vdos_W": 91.47,
+   "archived": 91.65,
+   "rel": -0.001963993453355184
+  },
+  "Mg2IrH6/30": {
+   "lab_vdos_W": 92.61,
+   "archived": 92.25,
+   "rel": 0.0039024390243902474
+  },
+  "H3S/140": {
+   "lab_vdos_W": 194.28,
+   "archived": 193.5,
+   "rel": 0.004031007751938098
+  },
+  "H3S/160": {
+   "lab_vdos_W": 229.23,
+   "archived": 228.5,
+   "rel": 0.0031947483588621317
+  },
+  "H3S/190": {
+   "lab_vdos_W": 245.11,
+   "archived": 244.5,
+   "rel": 0.0024948875255623726
+  },
+  "H3S/200": {
+   "lab_vdos_W": 234.32,
+   "archived": 232.5,
+   "rel": 0.007827956989247209
+  },
+  "H3S/210": {
+   "lab_vdos_W": 226.18,
+   "archived": 225.5,
+   "rel": 0.003015521064301474
+  },
+  "H3S/220": {
+   "lab_vdos_W": 223.03,
+   "archived": 221.5,
+   "rel": 0.006907449209932359
+  },
+  "H3S/230": {
+   "lab_vdos_W": 219.72,
+   "archived": 219.5,
+   "rel": 0.0010022779043279417
+  },
+  "H3S/240": {
+   "lab_vdos_W": 215.18,
+   "archived": 214.5,
+   "rel": 0.003170163170163276
+  },
+  "Mg2IrH6/20/vdos_muStar0.1": {
+   "mu_star_in_Info": 0.1,
+   "lab": 142.37,
+   "archived": 142.5,
+   "rel": -0.0009122807017543089
+  },
+  "Mg2IrH6/20/vdos_mustar_0.16": {
+   "mu_star_in_Info": 0.16,
+   "lab": 131.42,
+   "archived": 131.5,
+   "rel": -0.0006083650190115142
+  },
+  "Mg2IrH6/20/vdos_muStar0.1_1": {
+   "mu_star_in_Info": 0.2,
+   "lab": 125.02,
+   "archived": 124.5,
+   "rel": 0.004176706827309307
+  },
+  "Mg2IrH6/20/cdos_mustar_0.16": {
+   "mu_star_in_Info": 0.16,
+   "lab": 168.04,
+   "archived": 168.5,
+   "rel": -0.0027299703264095365
+  },
+  "H3S/200/vdos_muStar0.1": {
+   "mu_star_in_Info": 0.1,
+   "lab": 276.8,
+   "archived": 275.5,
+   "rel": 0.00471869328493657
+  },
+  "H3S/220/vdos_muStar0.2": {
+   "mu_star_in_Info": 0.2,
+   "lab": 240.8,
+   "archived": 239.5,
+   "rel": 0.00542797494780789
+  },
+  "H3S/220/vdos_muStar0.2_1": {
+   "mu_star_in_Info": 0.1,
+   "lab": 270.53,
+   "archived": 269.5,
+   "rel": 0.0038218923933208693
+  },
+  "H3S/180 with W of 170 GPa": {
+   "lab": 257.67,
+   "archived": 256.5,
+   "rel": 0.004561403508771988
+  },
+  "H3S/180 with W of 190 GPa": {
+   "lab": 257.27,
+   "archived": 256.5,
+   "rel": 0.0030019493177386725
+  }
+ },
+ "oracle_route_tc": {
+  "Mg2IrH6_15GPa": 88.9,
+  "Mg2IrH6_25GPa": 91.23,
+  "H3S_180GPa": 256.76,
+  "H3S_190GPa": 245.04
+ },
+ "oracle_route_rel": {
+  "Mg2IrH6_15GPa": 0.0051,
+  "Mg2IrH6_25GPa": -0.0046,
+  "H3S_180GPa": 0.001,
+  "H3S_190GPa": 0.0022
+ },
+ "robustness": {
+  "tc_bare_mu_route": {
+   "Mg2IrH6_15GPa": 88.2,
+   "Mg2IrH6_25GPa": 90.46,
+   "H3S_180GPa": 252.92,
+   "H3S_190GPa": 241.0
+  },
+  "tc_nearest_W00": {
+   "Mg2IrH6_15GPa": 89.31,
+   "Mg2IrH6_25GPa": 91.45,
+   "H3S_180GPa": 256.66,
+   "H3S_190GPa": 245.15
+  },
+  "mu_star_vs_lab_TcW": 0.5885387161548616,
+  "nef_nearest_grid": 0.26925
+ },
+ "robustness_rel": {
+  "tc_bare_mu_route": {
+   "Mg2IrH6_15GPa": -0.0028,
+   "Mg2IrH6_25GPa": -0.013,
+   "H3S_180GPa": -0.014,
+   "H3S_190GPa": -0.0143
+  },
+  "tc_nearest_W00": {
+   "Mg2IrH6_15GPa": 0.0097,
+   "Mg2IrH6_25GPa": -0.0022,
+   "H3S_180GPa": 0.0006,
+   "H3S_190GPa": 0.0027
+  }
+ },
+ "ablations": {
+  "tc_interpolated_in_pressure": {
+   "Mg2IrH6_15GPa": 88.75,
+   "Mg2IrH6_25GPa": 90.85,
+   "H3S_180GPa": 230.5,
+   "H3S_190GPa": 231.5
+  },
+  "tc_conventional_mustar_0.16": {
+   "Mg2IrH6_15GPa": 130.32,
+   "Mg2IrH6_25GPa": 133.64,
+   "H3S_180GPa": 275.43,
+   "H3S_190GPa": 266.72
+  },
+  "tc_constant_mu_from_0GPa": {
+   "Mg2IrH6_15GPa": 85.01,
+   "Mg2IrH6_25GPa": 85.33,
+   "H3S_180GPa": 256.76,
+   "H3S_190GPa": 245.04
+  },
+  "tc_smeared_NF_mu_sigma0.3": {
+   "Mg2IrH6_15GPa": 107.74,
+   "Mg2IrH6_25GPa": 110.07,
+   "H3S_180GPa": 256.76,
+   "H3S_190GPa": 245.04
+  },
+  "tc_mu_rescaled_sigma0.01": {
+   "Mg2IrH6_15GPa": 79.93,
+   "Mg2IrH6_25GPa": 77.9,
+   "H3S_180GPa": 256.76,
+   "H3S_190GPa": 245.04
+  },
+  "tc_constant_dos_solver": {
+   "Mg2IrH6_15GPa": 127.98,
+   "Mg2IrH6_25GPa": 128.86,
+   "H3S_180GPa": 272.41,
+   "H3S_190GPa": 264.86
+  },
+  "tc_allen_dynes_archived_mucAD": {
+   "Mg2IrH6_15GPa": 117.12135268960829,
+   "Mg2IrH6_25GPa": 119.46796354023297,
+   "H3S_180GPa": 263.3679381778652,
+   "H3S_190GPa": 259.99768434955814
+  },
+  "mu_star_bare_mu": 0.5485978632844427,
+  "mu_star_morel_anderson": 0.22788580604407532,
+  "mu_star_vdos_7eV": 0.5367175526777808,
+  "nef_per_cell": 0.5408999999999948,
+  "nef_spin_summed_per_fu": 0.5408999999999948
+ },
+ "ablations_rel": {
+  "tc_interpolated_in_pressure": {
+   "Mg2IrH6_15GPa": 0.0034,
+   "Mg2IrH6_25GPa": -0.0087,
+   "H3S_180GPa": -0.1014,
+   "H3S_190GPa": -0.0532
+  },
+  "tc_conventional_mustar_0.16": {
+   "Mg2IrH6_15GPa": 0.4734,
+   "Mg2IrH6_25GPa": 0.4582,
+   "H3S_180GPa": 0.0738,
+   "H3S_190GPa": 0.0909
+  },
+  "tc_constant_mu_from_0GPa": {
+   "Mg2IrH6_15GPa": -0.0389,
+   "Mg2IrH6_25GPa": -0.069,
+   "H3S_180GPa": 0.001,
+   "H3S_190GPa": 0.0022
+  },
+  "tc_smeared_NF_mu_sigma0.3": {
+   "Mg2IrH6_15GPa": 0.2181,
+   "Mg2IrH6_25GPa": 0.201,
+   "H3S_180GPa": 0.001,
+   "H3S_190GPa": 0.0022
+  },
+  "tc_mu_rescaled_sigma0.01": {
+   "Mg2IrH6_15GPa": -0.0963,
+   "Mg2IrH6_25GPa": -0.15,
+   "H3S_180GPa": 0.001,
+   "H3S_190GPa": 0.0022
+  },
+  "tc_constant_dos_solver": {
+   "Mg2IrH6_15GPa": 0.4469,
+   "Mg2IrH6_25GPa": 0.406,
+   "H3S_180GPa": 0.062,
+   "H3S_190GPa": 0.0833
+  },
+  "tc_allen_dynes_archived_mucAD": {
+   "Mg2IrH6_15GPa": 0.3242,
+   "Mg2IrH6_25GPa": 0.3035,
+   "H3S_180GPa": 0.0268,
+   "H3S_190GPa": 0.0634
+  }
+ },
+ "W00_mu": {
+  "Mg2IrH6/0": [
+   0.3645183668899552,
+   0.6211210712621382
+  ],
+  "Mg2IrH6/10": [
+   0.36509311920965354,
+   0.5738168554618129
+  ],
+  "Mg2IrH6/20": [
+   0.37281540148450093,
+   0.5485978632844427
+  ],
+  "Mg2IrH6/30": [
+   0.37716665341920214,
+   0.5241673565893361
+  ],
+  "H3S/160": [
+   0.49221581247573143,
+   0.25440174267808136
+  ],
+  "H3S/170": [
+   0.496285259900983,
+   0.25866387746039243
+  ],
+  "H3S/200": [
+   0.49292842603452514,
+   0.2952641271946801
+  ]
+ },
+ "kappa": {
+  "Mg2IrH6": 0.9810473142532526,
+  "H3S": 0.919212836781827
+ },
+ "N_EF_states_per_eV_per_spin_per_cell": {
+  "Mg2IrH6/0": 1.7039499999999974,
+  "Mg2IrH6/5": 1.609299999999993,
+  "Mg2IrH6/10": 1.5717000000000014,
+  "Mg2IrH6/15": 1.517100000000001,
+  "Mg2IrH6/20": 1.4714999999999991,
+  "Mg2IrH6/25": 1.4283000000000012,
+  "Mg2IrH6/30": 1.3897499999999998,
+  "H3S/140": 0.5087499999999999,
+  "H3S/160": 0.5168499999999991,
+  "H3S/170": 0.5212000000000002,
+  "H3S/180": 0.5408999999999948,
+  "H3S/190": 0.5705999999999987,
+  "H3S/200": 0.5989999999999991,
+  "H3S/210": 0.60545,
+  "H3S/220": 0.6041000000000002,
+  "H3S/230": 0.601,
+  "H3S/240": 0.6025,
+  "CaH6/160": 0.17484,
+  "LaH10/250": 0.4410099999999993,
+  "YSbH6/50": 0.8856999999999994
+ }
+}

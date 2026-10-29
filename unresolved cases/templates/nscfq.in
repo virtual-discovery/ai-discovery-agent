@@ -1,0 +1,35 @@
+! Shifted NSCF (WFNq) for the q->0 limit of epsilon: same grid shifted by dq = (0.001, 0.001, 0) in crystal units (round-8 convention),
+! bands = occupied + a few. For the velocity operator a DIFFERENT shifted file is needed (shift along the polarization direction,
+! nbnd well above the BSE window, diago_full_acc) - see SHARED_RUNBOOK.md §4 trap list.
+&CONTROL
+  calculation = 'nscf'
+  prefix = '<prefix>'
+  outdir = './out'
+  pseudo_dir = '<pseudo_dir_sr>'
+  verbosity = 'high'
+/
+&SYSTEM
+  ibrav = 0
+  nat = <nat>
+  ntyp = <ntyp>
+  ecutwfc = <ecut>
+  ecutrho = <4*ecut>
+  occupations = 'fixed'
+  nbnd = <nocc + 8>
+  nosym = .true.
+  noinv = .true.
+/
+&ELECTRONS
+  conv_thr = 1.0d-10
+  diagonalization = 'david'
+  diago_full_acc = .true.
+/
+ATOMIC_SPECIES
+<as scf.in>
+CELL_PARAMETERS angstrom
+<as scf.in>
+ATOMIC_POSITIONS crystal
+<as scf.in>
+K_POINTS crystal
+<N>
+<the same grid, each k shifted by dq>

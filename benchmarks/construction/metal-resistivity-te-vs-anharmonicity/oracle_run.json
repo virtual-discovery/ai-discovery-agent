@@ -1,0 +1,153 @@
+{
+ "evaluations": 28,
+ "charge_used": 41,
+ "budget": 46,
+ "requests": [
+  {
+   "kind": "transport",
+   "run": "Al/4-epw/2-with_TE/481K"
+  },
+  {
+   "kind": "transport",
+   "run": "Al/4-epw/1-DFPT/ibte.out-mesh50"
+  },
+  {
+   "kind": "transport",
+   "run": "Pb/4-epw/1-DFPT/epw"
+  },
+  {
+   "kind": "transport",
+   "run": "Pb/4-epw/2-with_TE/210K"
+  },
+  {
+   "kind": "transport",
+   "run": "Pb/4-epw/2-with_TE/310K"
+  },
+  {
+   "kind": "transport",
+   "run": "Pb/4-epw/2-with_TE/410K"
+  },
+  {
+   "kind": "transport",
+   "run": "Pb/4-epw/2-with_TE/510K"
+  },
+  {
+   "kind": "transport",
+   "run": "Pb/4-epw/4-TE_and_anharm/210K"
+  },
+  {
+   "kind": "transport",
+   "run": "Pb/4-epw/4-TE_and_anharm/310K"
+  },
+  {
+   "kind": "transport",
+   "run": "Nb/4-epw/2-with_TE/1000K"
+  },
+  {
+   "kind": "transport",
+   "run": "Nb/4-epw/2-with_TE/2000K"
+  },
+  {
+   "kind": "transport",
+   "run": "Nb/4-epw/3-TE_and_anharm/1000K"
+  },
+  {
+   "kind": "transport",
+   "run": "Nb/4-epw/1-DFPT/ibte.out-mesh50"
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Pb:DFPT:a(0K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Pb:DFPT:a(210K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Pb:DFPT:a(310K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Pb:DFPT:a(410K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Pb:DFPT:a(510K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Pb:DFPT:a(610K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Pb:TDEP210K:a(210K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Pb:TDEP310K:a(310K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Pb:TDEP510K:a(510K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Pb:TDEP410K:a(0K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Pb:TDEP610K:a(0K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Nb:DFPT:a(1000K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Nb:TDEP1000K:a(1000K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Nb:DFPT:a(2000K)",
+   "grid": 16
+  },
+  {
+   "kind": "phonons",
+   "ifc": "Nb:TDEP2000K:a(2000K)",
+   "grid": 16
+  }
+ ],
+ "submission": {
+  "al_te_change_percent_481K": 8.944573405547306,
+  "pb_te_resistivity_610K_uohm_cm": 83.88831691723882,
+  "pb_anharmonic_change_percent_0K_lattice": {
+   "410": -25.484193303935132,
+   "610": -29.591948650587717
+  },
+  "pb_te_anharm_resistivity_510K_uohm_cm": 37.3374972480718,
+  "nb_te_anharm_resistivity_2000K_uohm_cm": 94.09099415150048
+ },
+ "accepted": true,
+ "errors": {
+  "al_te_change_481K_pp": 0.0,
+  "pb_te_610K_rel": -0.01818,
+  "pb_te_anharm_510K_rel": 0.01672,
+  "nb_te_anharm_2000K_rel": 0.02536,
+  "pb_anharmonic_410K_pp": -0.29583,
+  "pb_anharmonic_610K_pp": -0.13217
+ }
+}

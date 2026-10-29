@@ -1,0 +1,67 @@
+{
+ "reference": {
+  "band_gap_eV": 3.2485,
+  "delta_mu_eV": {
+   "O": -3.2671095,
+   "H": -0.0775644574999994
+  },
+  "transition_levels": {
+   "OH_O": [
+    {
+     "from": 1,
+     "to": 0,
+     "level_eV": 3.1313420248113575
+    }
+   ],
+   "H_O": [
+    {
+     "from": 1,
+     "to": 0,
+     "level_eV": 3.212964821317491
+    }
+   ],
+   "V_O": [
+    {
+     "from": 2,
+     "to": 0,
+     "level_eV": 2.5961793655425867
+    }
+   ]
+  },
+  "V_O_plus_ever_stable": false,
+  "fermi_level_eV": 3.181818853098327,
+  "log10_concentration_cm3": {
+   "V_O": 15.951275120463684,
+   "OH_O^+": 18.843268854537428,
+   "OH_O^0": 19.097660872607307
+  }
+ },
+ "thresholds": {
+  "band_gap_tol_eV": 0.03,
+  "delta_mu_tol_eV": 0.03,
+  "V_O_level_tol_eV": 0.05,
+  "shallow_level_window_eV": [
+   3.0,
+   3.3
+  ],
+  "fermi_level_tol_eV": 0.025,
+  "log10_tol": {
+   "V_O": 0.15,
+   "OH_O^+": 0.12,
+   "OH_O^0": 0.7
+  },
+  "ignore_levels_outside_eV": [
+   0.0,
+   3.55
+  ],
+  "interior_margin_eV": 0.3
+ },
+ "categorical": {
+  "epr_centre": {
+   "defect": "OH_O",
+   "charge": 0
+  },
+  "oh_o_site": "BC_parallel",
+  "V_O_plus_ever_stable": false
+ }
+}

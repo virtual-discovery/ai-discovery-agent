@@ -1,0 +1,343 @@
+{
+ "task_id": "polar-phonons-1d-loto-collapse",
+ "catalog_id": "polar-phonons-1d-loto-collapse",
+ "start": "released",
+ "source_group": "rivano_2023_1d_polar_phonons",
+ "title": "1D polar phonons: collapse of the LO-TO splitting in BN nanotubes",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "competing explanations / boundary conditions",
+   "fork": "Which boundary conditions describe an isolated tube: the 3D-periodic runs (3D_code) or the 1D-cutoff runs (1D_code); and whether the ph.x Gamma frequency is the 3D q->0 LO",
+   "wrong_choice": "Use the 3D-periodic dispersion (finite LO-TO splitting at Gamma, bulk-like) for the isolated tubes; or report the analytic Gamma frequency as the 3D q->0 limit",
+   "consequence": "LO +95/+93 cm^-1 at 0.01|GZ| and +46/+40 at 0.05 (BN55/BN66); 3D q->0 value low by 100 cm^-1",
+   "ablation": "three_d_boundary_condition_dispersion"
+  },
+  {
+   "id": "dp2",
+   "kind": "model class (dimensional fingerprint)",
+   "fork": "Asymptotic form of the dielectric shift: constant (3D), linear in q (2D) or q^2 ln(1/qt) (1D)",
+   "wrong_choice": "2D-like linear collapse omega^2 = omega_G^2 + B q, B from the purchasable explicit 0.15|GZ| run of the hidden tube",
+   "consequence": "LO +3.6/+3.4 at 0.01 and -12/-16 at 0.05, -18/-21 at 0.075 cm^-1",
+   "ablation": "linear_2d_collapse"
+  },
+  {
+   "id": "dp3",
+   "kind": "evidence to discover (defective archived reference)",
+   "fork": "Standard Fourier interpolation of the 1D force constants versus subtracting and re-adding the 1D long-range term; the archived BN(4,4) 1D_code interpolated dispersion is itself a plain interpolation (no long-range term), 33 cm^-1 below its own explicit 1D runs at 0.05|GZ|, visible only by cross-checking",
+   "wrong_choice": "Trust matdyn-like plain interpolation (or validate against the archived BN(4,4) interpolated dispersion)",
+   "consequence": "LO -5.6/-6.0 at 0.01, -40/-44 at 0.05, -46/-50 at 0.075 cm^-1",
+   "ablation": "standard_fourier_interpolation"
+  },
+  {
+   "id": "dp4",
+   "kind": "model parameter / physical definition",
+   "fork": "Radius and dielectric constant of the cylinder model: the extent of the electronic polarization (about 1.4-1.9 times the atomic-shell radius, or the authors' d/4) with eps1d = A(eps_zz - 1)/(pi t^2), versus the atomic-shell radius or the vacuum-diluted cell eps_zz used as the material constant",
+   "wrong_choice": "Atomic-shell radius (6.6 and 7.9 bohr) with the polarizability per length conserved; or eps1d = eps_zz of the cell (1.46) at the calibrated radius",
+   "consequence": "Shell radius: LO +6.6/+7.8 at 0.05 and +8.8/+10.2 at 0.075 cm^-1. Cell eps: +5.9/+5.3 for BN66 at 0.1/0.125 (thin margin; passes for BN55)",
+   "ablation": "atomic_shell_radius"
+  },
+  {
+   "id": "dp5",
+   "kind": "regime judgement (kernel)",
+   "fork": "Full Bessel-function cylinder kernel versus its small-qt asymptotic form (the paper's q^2 ln q expansion) as the long-range term of the interpolation",
+   "wrong_choice": "Use the asymptotic form everywhere; it grows without bound at the grid q-points, so the subtracted long-range part is wrong",
+   "consequence": "LO +9.9/+18.8 at 0.075 and +11.3/+18.6 at 0.125 cm^-1",
+   "ablation": "asymptotic_kernel_in_interpolation"
+  },
+  {
+   "id": "dp6",
+   "kind": "discriminating data under budget / regime of validity",
+   "fork": "Whether the Gamma run alone (analytic model with a constant short-range part, the paper's Eq. 2) suffices, or the 1D grid of each hidden tube must be bought to capture the mechanical dispersion",
+   "wrong_choice": "Gamma-only model D_Gamma + 1D long-range term at all q",
+   "consequence": "Fine below 0.05|GZ|, but +4.2/+5.9 at 0.075, +11.5 (BN66) at 0.1 and +14/+17 at 0.125 cm^-1",
+   "ablation": "gamma_only_long_range_model"
+  },
+  {
+   "id": "dp7",
+   "kind": "conventions and units",
+   "fork": "q conversions (archived 2pi/alat with alat the lateral cell; |GZ| = pi/L) and the Rydberg e^2 = 2 of the long-range prefactor",
+   "wrong_choice": "Take q/|GZ| as a fraction of 2pi/L; or use e^2 = 1 with Rydberg force constants",
+   "consequence": "+12/+13 at 0.01 and +54 at 0.05 (zone convention); -3.0 at 0.01 and -21/-22 at 0.05 cm^-1 (e^2)",
+   "ablation": "q_fraction_of_2pi_over_L"
+  },
+  {
+   "id": "dp8",
+   "kind": "which quantities set the artefact",
+   "fork": "The 3D-periodic q->0 shift is set by the vacuum-diluted eps_zz of the supercell and the supercell volume, not by the cylinder model, the perpendicular component or no screening",
+   "wrong_choice": "Cylinder dielectric constant eps1d = A(eps_zz - 1)/(pi t^2) in the 3D term (or with the tube volume; or eps_xx; or eps = 1)",
+   "consequence": "3D q->0 LO 1383.1 (cylinder eps), 1615.9 (cylinder eps and volume), 1445.1 (eps_xx), 1464.7 (unscreened) vs 1420.4 cm^-1",
+   "ablation": "cylinder_dielectric_for_3d_artefact"
+  },
+  {
+   "id": "dp9",
+   "kind": "transfer across systems",
+   "fork": "Whether the polar shift curve is a property of the BN tube family or depends on each tube's mode charge per length and radius",
+   "wrong_choice": "Add the released BN(4,4) explicit shift curve to the hidden tube's Gamma LO",
+   "consequence": "LO -6.9/-11.5 at 0.05 and -7.8/-12.7 at 0.075 cm^-1 (scaling by the mode charge per length is worse: +7.5/+17 at 0.05)",
+   "ablation": "family_transfer_from_44"
+  }
+ ],
+ "graded_fields": [
+  "BN55_LO_1D_cm-1 at q/|GZ| = 0.01, 0.025, 0.05, 0.075, 0.125 (tolerances 2.0, 3.0, 4.5, 4.5, 4.5 cm^-1)",
+  "BN66_LO_1D_cm-1 at q/|GZ| = 0.01, 0.025, 0.05, 0.075, 0.1, 0.125 (2.0, 3.0, 4.5, 4.5, 4.5, 4.5 cm^-1)",
+  "BN55_LO_3D_q0_cm-1 within 3.0 cm^-1"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 27,
+  "oracle_charge": 27,
+  "budget": 30,
+  "catalog_units": {
+   "dfpt": 129,
+   "interpolated": 12,
+   "archived_file": 29
+  },
+  "oracle_container_seconds": 8,
+  "tool_calls": "45-75",
+  "wall_time_h": "1-2",
+  "gpt6astra_cost_usd": "2.5-4.5",
+  "why": "Parsing raw QE dynamical-matrix files of 16-24-atom tubes, building a 1D long-range-corrected axial interpolation, choosing and validating the cylinder radius on a released tube, budgeted purchases across 12 folders, and the 3D artefact.",
+  "harbor_oracle": {
+   "campaign": "build-polar-phonons-1d-loto-collapse",
+   "reward": 1.0,
+   "solver_charge": 27,
+   "total_runtime_s": 50
+  },
+  "pilot": "pending (coordinator)"
+ },
+ "runtime_dependencies": [
+  "numpy and scipy of the runtime image (lab only decompresses and serves archived files)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/08gsg-gpd20",
+  "doi": "10.24435/materialscloud:46-wj",
+  "files_used": [
+   "materialscloud_data_Rivano.zip",
+   "files_description.md"
+  ],
+  "md5": {
+   "materialscloud_data_Rivano.zip": "f3ee3048a131eb831eecee865d51e705",
+   "files_description.md": "0c399e8707d568e68028464c7cb683b0"
+  },
+  "member_sha256": "benchmarks/construction/polar-phonons-1d-loto-collapse/members.json",
+  "license": "CC BY 4.0",
+  "hidden_truth": "Archived explicit 1D DFPT runs of BN(5,5) and BN(6,6) below 0.15|GZ| (longwave folders) and the q->0 point of the archived BN(5,5) 3D-periodic matdyn.modes; stored only in environment/lab/private/"
+ },
+ "exceptions": {},
+ "notes": "Truth = the authors' explicit DFPT runs. The authors' own 1D-corrected interpolation (reproduced by the construction code to <0.15 cm^-1 for BN(5,5) and BN(6,6)) differs from them by up to 2.2 cm^-1, which sets the scale of the defensible-method spread. A fitted effective radius is not graded: the fit is shallow (t from 9 to 12.5 bohr for BN(5,5) passes all checks) and model dependent.",
+ "calibration": {
+  "BN55_LO_1D_cm-1[0.01]": {
+   "reference_archived_dfpt": 1325.92,
+   "oracle": 1325.54,
+   "oracle_error": -0.38,
+   "robustness": {
+    "authors_radius_d_over_4": 1325.42,
+    "no_ewald_damping": 1325.55,
+    "ewald_alpha_2": 1325.5,
+    "radius_1p5_atomic": 1325.61
+   },
+   "max_robustness_error": 0.5,
+   "nearest_ablations": {
+    "asymptotic_kernel_in_interpolation": 1325.62,
+    "atomic_shell_radius": 1326.23,
+    "gamma_only_long_range_model": 1325.58
+   },
+   "tolerance": "+-2.0 cm^-1"
+  },
+  "BN55_LO_1D_cm-1[0.025]": {
+   "reference_archived_dfpt": 1345.469,
+   "oracle": 1344.52,
+   "oracle_error": -0.95,
+   "robustness": {
+    "authors_radius_d_over_4": 1343.96,
+    "no_ewald_damping": 1344.28,
+    "ewald_alpha_2": 1344.31,
+    "radius_1p5_atomic": 1344.82
+   },
+   "max_robustness_error": 1.51,
+   "nearest_ablations": {
+    "asymptotic_kernel_in_interpolation": 1345.48,
+    "gamma_only_long_range_model": 1344.84,
+    "linear_2d_collapse": 1344.6
+   },
+   "tolerance": "+-3.0 cm^-1"
+  },
+  "BN55_LO_1D_cm-1[0.05]": {
+   "reference_archived_dfpt": 1381.592,
+   "oracle": 1380.63,
+   "oracle_error": -0.96,
+   "robustness": {
+    "authors_radius_d_over_4": 1379.36,
+    "no_ewald_damping": 1379.51,
+    "ewald_alpha_2": 1380.06,
+    "radius_1p5_atomic": 1381.3
+   },
+   "max_robustness_error": 2.23,
+   "nearest_ablations": {
+    "cell_dielectric_as_cylinder_dielectric": 1380.94,
+    "gamma_only_long_range_model": 1382.29,
+    "asymptotic_kernel_in_interpolation": 1385.75
+   },
+   "tolerance": "+-4.5 cm^-1"
+  },
+  "BN55_LO_1D_cm-1[0.075]": {
+   "reference_archived_dfpt": 1411.716,
+   "oracle": 1411.63,
+   "oracle_error": -0.09,
+   "robustness": {
+    "authors_radius_d_over_4": 1410.15,
+    "no_ewald_damping": 1409.66,
+    "ewald_alpha_2": 1410.83,
+    "radius_1p5_atomic": 1412.41
+   },
+   "max_robustness_error": 2.06,
+   "nearest_ablations": {
+    "cell_dielectric_as_cylinder_dielectric": 1413.61,
+    "gamma_only_long_range_model": 1415.96,
+    "family_transfer_from_44": 1403.96
+   },
+   "tolerance": "+-4.5 cm^-1"
+  },
+  "BN55_LO_1D_cm-1[0.125]": {
+   "reference_archived_dfpt": 1451.338,
+   "oracle": 1452.38,
+   "oracle_error": 1.04,
+   "robustness": {
+    "authors_radius_d_over_4": 1451.56,
+    "no_ewald_damping": 1450.31,
+    "ewald_alpha_2": 1451.81,
+    "radius_1p5_atomic": 1452.82
+   },
+   "max_robustness_error": 1.48,
+   "nearest_ablations": {
+    "cell_dielectric_as_cylinder_dielectric": 1455.2,
+    "three_d_boundary_condition_dispersion": 1456.64,
+    "atomic_shell_radius": 1457.37
+   },
+   "tolerance": "+-4.5 cm^-1"
+  },
+  "BN66_LO_1D_cm-1[0.01]": {
+   "reference_archived_dfpt": 1332.828,
+   "oracle": 1332.87,
+   "oracle_error": 0.04,
+   "robustness": {
+    "authors_radius_d_over_4": 1332.85,
+    "no_ewald_damping": 1332.81,
+    "ewald_alpha_2": 1332.82,
+    "radius_1p5_atomic": 1332.94
+   },
+   "max_robustness_error": 0.11,
+   "nearest_ablations": {
+    "cell_dielectric_as_cylinder_dielectric": 1332.77,
+    "gamma_only_long_range_model": 1332.91,
+    "asymptotic_kernel_in_interpolation": 1333.22
+   },
+   "tolerance": "+-2.0 cm^-1"
+  },
+  "BN66_LO_1D_cm-1[0.025]": {
+   "reference_archived_dfpt": 1354.594,
+   "oracle": 1353.84,
+   "oracle_error": -0.75,
+   "robustness": {
+    "authors_radius_d_over_4": 1353.75,
+    "no_ewald_damping": 1353.53,
+    "ewald_alpha_2": 1353.57,
+    "radius_1p5_atomic": 1354.18
+   },
+   "max_robustness_error": 1.06,
+   "nearest_ablations": {
+    "gamma_only_long_range_model": 1354.19,
+    "cell_dielectric_as_cylinder_dielectric": 1353.77,
+    "asymptotic_kernel_in_interpolation": 1356.5
+   },
+   "tolerance": "+-3.0 cm^-1"
+  },
+  "BN66_LO_1D_cm-1[0.05]": {
+   "reference_archived_dfpt": 1392.691,
+   "oracle": 1392.21,
+   "oracle_error": -0.48,
+   "robustness": {
+    "authors_radius_d_over_4": 1392.02,
+    "no_ewald_damping": 1391.46,
+    "ewald_alpha_2": 1391.47,
+    "radius_1p5_atomic": 1392.93
+   },
+   "max_robustness_error": 1.23,
+   "nearest_ablations": {
+    "cell_dielectric_as_cylinder_dielectric": 1393.56,
+    "gamma_only_long_range_model": 1394.12,
+    "atomic_shell_radius": 1400.51
+   },
+   "tolerance": "+-4.5 cm^-1"
+  },
+  "BN66_LO_1D_cm-1[0.075]": {
+   "reference_archived_dfpt": 1423.065,
+   "oracle": 1423.85,
+   "oracle_error": 0.78,
+   "robustness": {
+    "authors_radius_d_over_4": 1423.63,
+    "no_ewald_damping": 1422.98,
+    "ewald_alpha_2": 1422.83,
+    "radius_1p5_atomic": 1424.65
+   },
+   "max_robustness_error": 1.59,
+   "nearest_ablations": {
+    "cell_dielectric_as_cylinder_dielectric": 1427.11,
+    "gamma_only_long_range_model": 1428.92,
+    "atomic_shell_radius": 1433.3
+   },
+   "tolerance": "+-4.5 cm^-1"
+  },
+  "BN66_LO_1D_cm-1[0.1]": {
+   "reference_archived_dfpt": 1445.296,
+   "oracle": 1447.06,
+   "oracle_error": 1.76,
+   "robustness": {
+    "authors_radius_d_over_4": 1446.89,
+    "no_ewald_damping": 1446.41,
+    "ewald_alpha_2": 1446.06,
+    "radius_1p5_atomic": 1447.74
+   },
+   "max_robustness_error": 2.44,
+   "nearest_ablations": {
+    "cell_dielectric_as_cylinder_dielectric": 1451.22,
+    "three_d_boundary_condition_dispersion": 1452.28,
+    "atomic_shell_radius": 1455.01
+   },
+   "tolerance": "+-4.5 cm^-1"
+  },
+  "BN66_LO_1D_cm-1[0.125]": {
+   "reference_archived_dfpt": 1461.522,
+   "oracle": 1463.27,
+   "oracle_error": 1.75,
+   "robustness": {
+    "authors_radius_d_over_4": 1463.16,
+    "no_ewald_damping": 1462.96,
+    "ewald_alpha_2": 1462.54,
+    "radius_1p5_atomic": 1463.7
+   },
+   "max_robustness_error": 2.18,
+   "nearest_ablations": {
+    "three_d_boundary_condition_dispersion": 1463.83,
+    "cell_dielectric_as_cylinder_dielectric": 1466.77,
+    "atomic_shell_radius": 1468.36
+   },
+   "tolerance": "+-4.5 cm^-1"
+  },
+  "BN55_LO_3D_q0_cm-1": {
+   "reference_archived_3d_matdyn_q0": 1420.415,
+   "oracle_3D_code_gamma_plus_nonanalytic": 1420.444,
+   "robustness": {
+    "1D_code_gamma_plus_nonanalytic": 1420.034
+   },
+   "nearest_ablations": {
+    "abl_cylinder_dielectric": 1383.071,
+    "abl_cylinder_dielectric_and_volume": 1615.853,
+    "abl_perpendicular_dielectric": 1445.116,
+    "abl_unscreened": 1464.737,
+    "abl_analytic_gamma_frequency": 1319.972
+   },
+   "tolerance": "+-3.0 cm^-1"
+  }
+ }
+}

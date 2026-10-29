@@ -1,0 +1,257 @@
+{
+ "task_id": "ge-pressure-polymorph-pathways",
+ "catalog_id": "ge-pressure-polymorph-pathways",
+ "start": "released",
+ "source_group": "fantasia_2024_ge_nnp_pressure",
+ "title": "Ge under pressure: diamond, beta-Sn and the metastable decompression phases",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Which archived frames are equilibrium energies",
+   "wrong_choice": "Use every purchased frame, including rattled training configurations (forces 1-3 eV/A, shear stress)",
+   "consequence": "CD/bSn pressure 7.6 GPa, bSn/BC8 4.4 GPa, wrong metastable order",
+   "ablation": "rattled_frames_included"
+  },
+  {
+   "id": "dp2",
+   "fork": "Where the pressure comes from",
+   "wrong_choice": "Use the printed stress of every frame, H = E + P_printed V; intermediate relaxation steps scatter by up to ~4 GPa",
+   "consequence": "All pressures 0.8-2 GPa low; R8-BC8 difference and order wrong",
+   "ablation": "enthalpy_from_printed_stress"
+  },
+  {
+   "id": "dp3",
+   "fork": "Enthalpy crossing vs comparing equation-of-state minima",
+   "wrong_choice": "P = dE0/dV0 between E(V) minima",
+   "consequence": "Pressures 0.5-1.2 GPa low",
+   "ablation": "linear_dE_over_dV"
+  },
+  {
+   "id": "dp4",
+   "fork": "Whether the archived compressed metastable structures are relaxed",
+   "wrong_choice": "Take ISIF = 6 / scaled ST12, BC8, R8 frames as they are (internal coordinates frozen at 0 GPa values, residual forces up to 0.5 eV/A)",
+   "consequence": "bSn/ST12 crossing 6.6 instead of 7.5 GPa",
+   "ablation": "archived_structures_uncorrected"
+  },
+  {
+   "id": "dp5",
+   "fork": "Surrogate vs DFT where few-meV differences decide",
+   "wrong_choice": "Use the DeePMD potential for the enthalpies (all phases or the metastable ones)",
+   "consequence": "E(ST12)-E(BC8) 5.2 instead of 2.9 meV/atom; bSn/BC8 6.1-6.2 GPa",
+   "ablation": "surrogate_only"
+  },
+  {
+   "id": "dp6",
+   "fork": "How to handle frames with residual forces",
+   "wrong_choice": "Discard every frame with force > 0.05 eV/A, leaving only near-zero-pressure metastable data and extrapolating",
+   "consequence": "bSn/ST12 crossing 6.4 GPa; bSn/BC8 no crossing in range",
+   "ablation": "force_filter_discards_compressed_frames"
+  },
+  {
+   "id": "dp7",
+   "fork": "Whether relaxations reached their PSTRESS target",
+   "wrong_choice": "Treat PSTRESS as the pressure of the final step (H = E + PSTRESS V); the CD 10 GPa run stopped at ~5.6 GPa",
+   "consequence": "CD/bSn pressure 8.54 instead of 8.79 GPa",
+   "ablation": "pstress_as_pressure"
+  }
+ ],
+ "graded_fields": [
+  "transition_pressures_GPa.CD_to_bSn (+-0.2 GPa)",
+  "transition_pressures_GPa.bSn_to_ST12 (+-0.35 GPa)",
+  "transition_pressures_GPa.bSn_to_BC8 (+-0.2 GPa)",
+  "zero_pressure_energy_differences_meV_per_atom.ST12_minus_BC8 (+-1.0)",
+  "zero_pressure_energy_differences_meV_per_atom.R8_minus_BC8 (+-1.0)",
+  "metastable_order_at_0GPa (exact)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 28,
+  "budget": 34,
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "3-5",
+  "catalog_records": 922
+ },
+ "runtime_dependencies": [
+  "numpy, scipy (runtime image); numpy DeePMD evaluator vendored in environment/lab (no extra layer)"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/238ad-1bg44",
+  "doi": "10.24435/materialscloud:r2-qc",
+  "files_used": [
+   "allfiles.zip"
+  ],
+  "md5": {
+   "allfiles.zip": "d5faa3ad7e44d8b797ff59d1d7ea66c8"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "notes": "Kinetic barriers are not graded: the Transitions folder of the archive has no path labels and mixes grids, rattled images and several paths, so no barrier is uniquely recoverable. Kinetics is a rubric point. Truth for the metastable phases = archived DFT + released-potential internal-relaxation correction (released evaluator, lab code path).",
+ "calibration": {
+  "P_CD_to_bSn (GPa)": {
+   "reference": 8.785,
+   "robustness": {
+    "vinet_eos": 8.777,
+    "oracle_records_only": 8.814,
+    "oracle_records_without_highest_pressure_run": 8.813,
+    "correct_all_phases": 8.78,
+    "stricter_hydrostatic_filter": 8.802,
+    "relaxation_runs_only": 8.803
+   },
+   "ablations": {
+    "rattled_frames_included": 7.571,
+    "enthalpy_from_printed_stress": 8.025,
+    "linear_dE_over_dV": 8.007,
+    "archived_structures_uncorrected": 8.785,
+    "surrogate_only": 8.926,
+    "surrogate_for_metastable_phases": 8.785,
+    "force_filter_discards_compressed_frames": 8.785,
+    "pstress_as_pressure": 8.539
+   },
+   "tolerance": "+-0.2"
+  },
+  "P_bSn_to_ST12 (GPa)": {
+   "reference": 7.533,
+   "robustness": {
+    "vinet_eos": 7.516,
+    "oracle_records_only": 7.586,
+    "oracle_records_without_highest_pressure_run": 7.548,
+    "correct_all_phases": 7.519,
+    "stricter_hydrostatic_filter": 7.572,
+    "relaxation_runs_only": 7.573
+   },
+   "ablations": {
+    "rattled_frames_included": 7.533,
+    "enthalpy_from_printed_stress": 5.51,
+    "linear_dE_over_dV": 6.347,
+    "archived_structures_uncorrected": 6.604,
+    "surrogate_only": 7.799,
+    "surrogate_for_metastable_phases": 7.597,
+    "force_filter_discards_compressed_frames": 6.395,
+    "pstress_as_pressure": 7.455
+   },
+   "tolerance": "+-0.35"
+  },
+  "P_bSn_to_BC8 (GPa)": {
+   "reference": 5.88,
+   "robustness": {
+    "vinet_eos": 5.87,
+    "oracle_records_only": 5.883,
+    "oracle_records_without_highest_pressure_run": 5.882,
+    "correct_all_phases": 5.87,
+    "stricter_hydrostatic_filter": 5.903,
+    "relaxation_runs_only": 5.886
+   },
+   "ablations": {
+    "rattled_frames_included": 4.408,
+    "enthalpy_from_printed_stress": 4.733,
+    "linear_dE_over_dV": 5.355,
+    "archived_structures_uncorrected": 5.723,
+    "surrogate_only": 6.245,
+    "surrogate_for_metastable_phases": 6.071,
+    "force_filter_discards_compressed_frames": 5.88,
+    "pstress_as_pressure": 5.869
+   },
+   "tolerance": "+-0.2"
+  },
+  "dE_ST12_minus_BC8 (meV/atom)": {
+   "reference": 2.857,
+   "robustness": {
+    "vinet_eos": 2.891,
+    "oracle_records_only": 2.892,
+    "oracle_records_without_highest_pressure_run": 2.897,
+    "correct_all_phases": 2.857,
+    "stricter_hydrostatic_filter": 2.737,
+    "relaxation_runs_only": 2.892
+   },
+   "ablations": {
+    "rattled_frames_included": -2.098,
+    "enthalpy_from_printed_stress": 3.804,
+    "linear_dE_over_dV": 2.857,
+    "archived_structures_uncorrected": 2.965,
+    "surrogate_only": 5.176,
+    "surrogate_for_metastable_phases": 5.176,
+    "force_filter_discards_compressed_frames": 3.099,
+    "pstress_as_pressure": 2.857
+   },
+   "tolerance": "+-1"
+  },
+  "dE_R8_minus_BC8 (meV/atom)": {
+   "reference": 5.682,
+   "robustness": {
+    "vinet_eos": 5.682,
+    "oracle_records_only": 5.709,
+    "oracle_records_without_highest_pressure_run": 5.643,
+    "correct_all_phases": 5.682,
+    "stricter_hydrostatic_filter": 5.682,
+    "relaxation_runs_only": 5.709
+   },
+   "ablations": {
+    "rattled_frames_included": 4.144,
+    "enthalpy_from_printed_stress": 1.676,
+    "linear_dE_over_dV": 5.682,
+    "archived_structures_uncorrected": 5.644,
+    "surrogate_only": 7.739,
+    "surrogate_for_metastable_phases": 7.739,
+    "force_filter_discards_compressed_frames": 5.563,
+    "pstress_as_pressure": 5.682
+   },
+   "tolerance": "+-1"
+  },
+  "metastable_order_at_0GPa": {
+   "reference": [
+    "BC8",
+    "ST12",
+    "R8"
+   ],
+   "tolerance": "exact",
+   "ablations": {
+    "rattled_frames_included": [
+     "ST12",
+     "BC8",
+     "R8"
+    ],
+    "enthalpy_from_printed_stress": [
+     "BC8",
+     "R8",
+     "ST12"
+    ],
+    "linear_dE_over_dV": [
+     "BC8",
+     "ST12",
+     "R8"
+    ],
+    "archived_structures_uncorrected": [
+     "BC8",
+     "ST12",
+     "R8"
+    ],
+    "surrogate_only": [
+     "BC8",
+     "ST12",
+     "R8"
+    ],
+    "surrogate_for_metastable_phases": [
+     "BC8",
+     "ST12",
+     "R8"
+    ],
+    "force_filter_discards_compressed_frames": [
+     "BC8",
+     "ST12",
+     "R8"
+    ],
+    "pstress_as_pressure": [
+     "BC8",
+     "ST12",
+     "R8"
+    ]
+   }
+  },
+  "harmonic_correction_variant (not in ROBUSTNESS, construction scratch)": {
+   "P_bSn_to_ST12": 7.35,
+   "P_bSn_to_BC8": 5.85,
+   "dE_ST12_minus_BC8": 3.2,
+   "note": "correction from DFT forces with the potential Hessian, E = -F K^-1 F / 2; shows the correction is method-robust within the ST12 tolerance"
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "task_id": "sngeo2-coherent-miscibility",
+ "solver_budget": 58,
+ "reserved_validation_charge": 0,
+ "requests": {"sqs": {"kind": "sqs", "functional": "PBE | r2SCAN", "x_Ge": "<x from sqs_available>", "index": "<0-2>", "cost": "PBE 1, r2SCAN 2"},
+              "strain_scan": {"kind": "strain_scan", "functional": "PBE | r2SCAN", "id": "<plane>-<member>-<i>[-<j>]", "cost": "PBE 1, r2SCAN 2"},
+              "ordering_r2SCAN": {"kind": "ordering_r2SCAN", "id": "<id from orderings_r2SCAN_available>", "cost": 2},
+              "hse_setting_run": {"kind": "hse_setting_run", "name": "<name from hse_setting_runs_available>", "cost": 1}},
+ "catalog": "/app/catalog.json"
+}

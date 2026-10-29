@@ -1,0 +1,113 @@
+{
+ "evaluations": 15,
+ "charge_used": 28,
+ "budget": 32,
+ "requests": [
+  {
+   "kind": "bands"
+  },
+  {
+   "kind": "bands"
+  },
+  {
+   "kind": "bands"
+  },
+  {
+   "kind": "bands"
+  },
+  {
+   "kind": "bands"
+  },
+  {
+   "kind": "bands"
+  },
+  {
+   "kind": "bands",
+   "spin": true
+  },
+  {
+   "kind": "electron_count",
+   "mesh": 400,
+   "kT_eV": 0.001
+  },
+  {
+   "kind": "ahc",
+   "mesh": 400,
+   "kT_eV": 0.001
+  },
+  {
+   "kind": "ahc",
+   "mesh": 300,
+   "kT_eV": 0.001
+  },
+  {
+   "kind": "ahc",
+   "mesh": 200,
+   "kT_eV": 0.001
+  },
+  {
+   "kind": "ahc",
+   "mesh": 48,
+   "kT_eV": 0.001,
+   "neel": "+y"
+  },
+  {
+   "kind": "ahc",
+   "mesh": 48,
+   "kT_eV": 0.001,
+   "neel": "-y"
+  },
+  {
+   "kind": "berry_curvature"
+  },
+  {
+   "kind": "berry_curvature"
+  }
+ ],
+ "seconds": {
+  "1": 0.18,
+  "2": 0.16,
+  "3": 0.31,
+  "4": 0.34,
+  "5": 0.23,
+  "6": 0.29,
+  "7": 0.19,
+  "8": 0.55,
+  "9": 1.06,
+  "10": 1.06,
+  "11": 1.02,
+  "12": 0.21,
+  "13": 0.2,
+  "14": 0.64,
+  "15": 0.59
+ },
+ "submission": {
+  "sigma_xy_S_per_cm": {
+   "2.0e21": -49.9724,
+   "6.0e21": 114.1019
+  },
+  "sigma_xy_sign_changes": 1,
+  "sign_change_hole_density_cm3": 4.1382339744285506e+21,
+  "hole_density_0p30_below_vbm_cm3": 1.312989532498146e+21,
+  "forbidden_components_max_abs_S_per_cm": {
+   "yz": 0.0,
+   "zx": 0.0
+  },
+  "allowed_hall_components": {
+   "neel_y": [
+    "xy"
+   ],
+   "neel_x": []
+  },
+  "electron_doped_sigma_xy_S_per_cm": null
+ },
+ "accepted": true,
+ "errors": {
+  "sigma_xy_rel:2.0e21": 0.035674,
+  "sigma_xy_rel:6.0e21": 0.05202,
+  "sign_change_density_rel": -0.00781,
+  "hole_density_rel": 9e-06,
+  "forbidden_yz_S_cm": 0.0,
+  "forbidden_zx_S_cm": 0.0
+ }
+}

@@ -1,0 +1,5 @@
+{
+ "task_id": "gan-hole-piezomobility",
+ "solver_budget": 50,
+ "min_report_chars": 400
+}

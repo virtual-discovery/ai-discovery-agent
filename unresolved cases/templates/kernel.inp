@@ -1,0 +1,7 @@
+number_val_bands <nv ; 4-8 for these band insulators; ladder x1.5 as gate G7/G5>
+number_cond_bands <nc>
+screened_coulomb_cutoff <same as epsilon>
+use_wfn_hdf5
+screening_semiconductor
+# slabs: cell_slab_truncation
+# Run with the FULL (unreduced) coarse grid WFN (nosym NSCF). bsemat size ~ (nk*nv*nc)^2 * 16 B: 48 k x 8 x 8 -> 0.15 GB; 144 k x 8 x 8 -> 1.4 GB.

@@ -1,0 +1,146 @@
+{
+ "ablations": {
+  "ferromagnetic_start_only": {
+   "uniform_magnetic_energy_gain_meV_per_atom": {
+    "1.75": 0.028776040955563076,
+    "2.0": 0.03680339989841741
+   },
+   "critical_dimerization": {
+    "1.75": 0.0,
+    "2.0": 0.0
+   },
+   "uniform_chain_band_gap_eV": {
+    "1.25": 0.0
+   },
+   "dimerization_energy_meV_per_atom": {
+    "1.25": 646.9713345559448,
+    "1.75": 1647.3133740173616
+   }
+  },
+  "one_atom_cell_spin_polarized": {
+   "uniform_chain_band_gap_eV": {
+    "1.25": 0.0
+   },
+   "uniform_magnetic_energy_gain_meV_per_atom": {
+    "1.75": 0.028639984026085585,
+    "2.0": 0.03680339989841741
+   }
+  },
+  "large_smearing_mv002": {
+   "uniform_chain_band_gap_eV": {
+    "1.25": 0.00079
+   }
+  },
+  "fermi_dirac_0005": {
+   "uniform_chain_band_gap_eV": {
+    "1.25": 0.00214
+   }
+  },
+  "coarse_k_sdw_gap": {
+   "uniform_chain_band_gap_eV": {
+    "1.25": 0.288
+   }
+  },
+  "coarse_boundary_grid": {
+   "critical_dimerization": {
+    "1.75": 0.15000000000000002,
+    "2.0": 0.25
+   }
+  },
+  "linear_moment_extrapolation": {
+   "critical_dimerization": {
+    "1.75": 0.18006825938566556,
+    "2.0": 0.21342097217976155
+   }
+  },
+  "nonmagnetic_uniform_reference": {
+   "dimerization_energy_meV_per_atom": {
+    "1.25": 646.9909267540406,
+    "1.75": 1647.3421500583172
+   }
+  },
+  "afm_wins_at_large_spacing": {
+   "ground_state": {
+    "1.0": "dimerized_nonmagnetic",
+    "2.0": "uniform_antiferromagnetic"
+   }
+  },
+  "grid_minimum_dimerization": {
+   "delta_eq": {
+    "1.25": 0.4,
+    "1.75": 0.6
+   },
+   "dimerization_energy_meV_per_atom": {
+    "1.25": 645.9821867334012,
+    "1.75": 1588.2763693167271
+   }
+  },
+  "energies_per_cell": {
+   "dimerization_energy_meV_per_atom": {
+    "1.25": 1292.0705257381596,
+    "1.75": 3223.3775427436776
+   },
+   "uniform_magnetic_energy_gain_meV_per_atom": {
+    "1.75": 70.87994677968527,
+    "2.0": 256.43207662324494
+   }
+  }
+ },
+ "robustness": {
+  "standard_settings_magnetic_gain": {
+   "uniform_magnetic_energy_gain_meV_per_atom": {
+    "1.75": 35.65337868647839,
+    "2.0": 128.26882840094186
+   }
+  },
+  "boundary_bisection_midpoint": {
+   "critical_dimerization": {
+    "1.75": 0.1175,
+    "2.0": 0.2025
+   }
+  },
+  "boundary_converged_settings": {
+   "critical_dimerization": {
+    "1.75": 0.11443168812548175,
+    "2.0": 0.20114395566599846
+   }
+  },
+  "gap_k96_mv0002": {
+   "uniform_chain_band_gap_eV": {
+    "1.25": 0.2294
+   }
+  },
+  "gap_gaussian_k96": {
+   "uniform_chain_band_gap_eV": {
+    "1.25": 0.22647
+   }
+  },
+  "gap_4atom_cell_k96": {
+   "uniform_chain_band_gap_eV": {
+    "1.25": 0.21428
+   }
+  },
+  "energy_parabola_minimum": {
+   "delta_eq": {
+    "1.25": 0.4020185252640912,
+    "1.75": 0.5715483429413779
+   },
+   "dimerization_energy_meV_per_atom": {
+    "1.25": 646.0354520661749,
+    "1.75": 1611.6895042361302
+   }
+  },
+  "cutoff_60_Ry": {
+   "dimerization_energy_meV_per_atom": {
+    "1.25": 646.0352628690798,
+    "1.75": 1610.3699060660365
+   }
+  },
+  "converged_uniform_reference": {
+   "dimerization_energy_meV_per_atom": {
+    "1.25": 645.5333488497763,
+    "1.75": 1611.6885672864428
+   }
+  }
+ }
+}

@@ -1,0 +1,4282 @@
+{
+ "eos_a5.88_k6s1": {
+  "kind": "scf",
+  "lattice_A": 5.88,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.94,
+    2.94
+   ],
+   [
+    2.94,
+    0.0,
+    2.94
+   ],
+   [
+    2.94,
+    2.94,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 50.824368,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92056781,
+  "total_energy_eV": -2162.2244765548185,
+  "pressure_GPa": 2.707,
+  "stress_GPa": [
+   [
+    2.707,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    2.707,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    2.707
+   ]
+  ],
+  "highest_occupied_eV": 6.6694,
+  "lowest_unoccupied_eV": 8.0899,
+  "band_gap_on_mesh_eV": 1.4204999999999997,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 25.4,
+  "wall_seconds": 25.4,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "eos_a5.92_k6s1": {
+  "kind": "scf",
+  "lattice_A": 5.92,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.96,
+    2.96
+   ],
+   [
+    2.96,
+    0.0,
+    2.96
+   ],
+   [
+    2.96,
+    2.96,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 51.86867199999999,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92153567,
+  "total_energy_eV": -2162.2376449609646,
+  "pressure_GPa": 1.311,
+  "stress_GPa": [
+   [
+    1.311,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    1.311,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    1.311
+   ]
+  ],
+  "highest_occupied_eV": 6.422,
+  "lowest_unoccupied_eV": 7.7535,
+  "band_gap_on_mesh_eV": 1.3315000000000001,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 21.9,
+  "wall_seconds": 21.9,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "eos_a5.96_k6s1": {
+  "kind": "scf",
+  "lattice_A": 5.96,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.98,
+    2.98
+   ],
+   [
+    2.98,
+    0.0,
+    2.98
+   ],
+   [
+    2.98,
+    2.98,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.927184000000004,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92187181,
+  "total_energy_eV": -2162.242218378651,
+  "pressure_GPa": 0.047,
+  "stress_GPa": [
+   [
+    0.047,
+    -0.0,
+    -0.0
+   ],
+   [
+    -0.0,
+    0.047,
+    0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    0.047
+   ]
+  ],
+  "highest_occupied_eV": 6.182,
+  "lowest_unoccupied_eV": 7.4272,
+  "band_gap_on_mesh_eV": 1.2452,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 46.5,
+  "wall_seconds": 46.5,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "eos_a6.00_k6s1": {
+  "kind": "scf",
+  "lattice_A": 6.0,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    3.0,
+    3.0
+   ],
+   [
+    3.0,
+    0.0,
+    3.0
+   ],
+   [
+    3.0,
+    3.0,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 54.00000000000001,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92162057,
+  "total_energy_eV": -2162.2388000843107,
+  "pressure_GPa": -1.0939999999999999,
+  "stress_GPa": [
+   [
+    -1.0939999999999999,
+    -0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -1.0939999999999999,
+    0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    -1.0939999999999999
+   ]
+  ],
+  "highest_occupied_eV": 5.949,
+  "lowest_unoccupied_eV": 7.1109,
+  "band_gap_on_mesh_eV": 1.1619000000000002,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 27.0,
+  "wall_seconds": 27.0,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "eos_a6.04_k6s1": {
+  "kind": "scf",
+  "lattice_A": 6.04,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    3.02,
+    3.02
+   ],
+   [
+    3.02,
+    0.0,
+    3.02
+   ],
+   [
+    3.02,
+    3.02,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 55.08721599999999,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92082469,
+  "total_energy_eV": -2162.227971585268,
+  "pressure_GPa": -2.122,
+  "stress_GPa": [
+   [
+    -2.122,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -2.122,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -2.122
+   ]
+  ],
+  "highest_occupied_eV": 5.7227,
+  "lowest_unoccupied_eV": 6.8047,
+  "band_gap_on_mesh_eV": 1.0820000000000007,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 27.6,
+  "wall_seconds": 27.6,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "eos_a5.88_k6s1_e65": {
+  "kind": "scf",
+  "lattice_A": 5.88,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.94,
+    2.94
+   ],
+   [
+    2.94,
+    0.0,
+    2.94
+   ],
+   [
+    2.94,
+    2.94,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 50.824368,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 65,
+  "ecutrho_Ry": 520,
+  "total_energy_Ry": -158.9210865,
+  "total_energy_eV": -2162.2315336917845,
+  "pressure_GPa": 2.648,
+  "stress_GPa": [
+   [
+    2.648,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    2.648,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    2.648
+   ]
+  ],
+  "highest_occupied_eV": 6.6687,
+  "lowest_unoccupied_eV": 8.0897,
+  "band_gap_on_mesh_eV": 1.4210000000000003,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 44.2,
+  "wall_seconds": 44.2,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "eos_a5.92_k6s1_e65": {
+  "kind": "scf",
+  "lattice_A": 5.92,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.96,
+    2.96
+   ],
+   [
+    2.96,
+    0.0,
+    2.96
+   ],
+   [
+    2.96,
+    2.96,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 51.86867199999999,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 65,
+  "ecutrho_Ry": 520,
+  "total_energy_Ry": -158.92204726,
+  "total_energy_eV": -2162.2446054975094,
+  "pressure_GPa": 1.253,
+  "stress_GPa": [
+   [
+    1.253,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    1.253,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    1.253
+   ]
+  ],
+  "highest_occupied_eV": 6.4213,
+  "lowest_unoccupied_eV": 7.7533,
+  "band_gap_on_mesh_eV": 1.3320000000000007,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 37.9,
+  "wall_seconds": 38.0,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "eos_a5.96_k6s1_e65": {
+  "kind": "scf",
+  "lattice_A": 5.96,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.98,
+    2.98
+   ],
+   [
+    2.98,
+    0.0,
+    2.98
+   ],
+   [
+    2.98,
+    2.98,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.927184000000004,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 65,
+  "ecutrho_Ry": 520,
+  "total_energy_Ry": -158.92237702,
+  "total_energy_eV": -2162.249092110874,
+  "pressure_GPa": -0.01,
+  "stress_GPa": [
+   [
+    -0.01,
+    -0.0,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.01,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    -0.01
+   ]
+  ],
+  "highest_occupied_eV": 6.1813,
+  "lowest_unoccupied_eV": 7.4269,
+  "band_gap_on_mesh_eV": 1.2455999999999996,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 37.9,
+  "wall_seconds": 37.9,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "eos_a6.00_k6s1_e65": {
+  "kind": "scf",
+  "lattice_A": 6.0,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    3.0,
+    3.0
+   ],
+   [
+    3.0,
+    0.0,
+    3.0
+   ],
+   [
+    3.0,
+    3.0,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 54.00000000000001,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 65,
+  "ecutrho_Ry": 520,
+  "total_energy_Ry": -158.92211786,
+  "total_energy_eV": -2162.2455660594437,
+  "pressure_GPa": -1.15,
+  "stress_GPa": [
+   [
+    -1.15,
+    -0.0,
+    -0.0
+   ],
+   [
+    -0.0,
+    -1.15,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    -1.15
+   ]
+  ],
+  "highest_occupied_eV": 5.9483,
+  "lowest_unoccupied_eV": 7.1106,
+  "band_gap_on_mesh_eV": 1.1623,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 36.6,
+  "wall_seconds": 36.6,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "eos_a6.04_k6s1_e65": {
+  "kind": "scf",
+  "lattice_A": 6.04,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    3.02,
+    3.02
+   ],
+   [
+    3.02,
+    0.0,
+    3.02
+   ],
+   [
+    3.02,
+    3.02,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 55.08721599999999,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 65,
+  "ecutrho_Ry": 520,
+  "total_energy_Ry": -158.92131489,
+  "total_energy_eV": -2162.2346410960367,
+  "pressure_GPa": -2.177,
+  "stress_GPa": [
+   [
+    -2.177,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -2.177,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -2.177
+   ]
+  ],
+  "highest_occupied_eV": 5.7221,
+  "lowest_unoccupied_eV": 6.8044,
+  "band_gap_on_mesh_eV": 1.0823,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 38.1,
+  "wall_seconds": 38.1,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_a0_dfpt_k6s1": {
+  "kind": "dfpt",
+  "lattice_A": 5.9624,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9812,
+    2.9812
+   ],
+   [
+    2.9812,
+    0.0,
+    2.9812
+   ],
+   [
+    2.9812,
+    2.9812,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.991148630655985,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.9218729,
+  "total_energy_eV": -2162.2422332088568,
+  "pressure_GPa": -0.024,
+  "stress_GPa": [
+   [
+    -0.024,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.024,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -0.024
+   ]
+  ],
+  "highest_occupied_eV": 6.1678,
+  "lowest_unoccupied_eV": 7.4079,
+  "band_gap_on_mesh_eV": 1.2401,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 40.1,
+  "force_constants_gamma_Ry_per_bohr2": [
+   [
+    0.14980162,
+    -0.0,
+    -0.0,
+    -0.14947133,
+    0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    0.14980162,
+    0.0,
+    0.0,
+    -0.14947133,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.14980162,
+    0.0,
+    0.0,
+    -0.14947133
+   ],
+   [
+    -0.14947133,
+    0.0,
+    0.0,
+    0.14951062,
+    -0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.14947133,
+    0.0,
+    0.0,
+    0.14951062,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -0.14947133,
+    0.0,
+    -0.0,
+    0.14951062
+   ]
+  ],
+  "atomic_masses_amu": {
+   "In": 114.818,
+   "P": 30.973762
+  },
+  "gamma_frequencies_analytic_raw_cm-1": [
+   5.787283,
+   5.787283,
+   5.787283,
+   284.570453,
+   284.570453,
+   284.570453
+  ],
+  "dielectric_tensor_eps_inf": [
+   [
+    11.722428058958,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    11.722428058958,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    11.722428058958
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.613739851973,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     2.613739851973,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     2.613739851973
+    ]
+   ],
+   "P": [
+    [
+     -2.622787003555,
+     -0.0,
+     -0.0
+    ],
+    [
+     0.0,
+     -2.622787003555,
+     0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     -2.622787003555
+    ]
+   ]
+  },
+  "ph_seconds": 315.1,
+  "wall_seconds": 355.2,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_a0_diel_k8s1": {
+  "kind": "dielectric",
+  "lattice_A": 5.9624,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9812,
+    2.9812
+   ],
+   [
+    2.9812,
+    0.0,
+    2.9812
+   ],
+   [
+    2.9812,
+    2.9812,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.991148630655985,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "8x8x8 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92187682,
+  "total_energy_eV": -2162.2422865431736,
+  "pressure_GPa": -0.024,
+  "stress_GPa": [
+   [
+    -0.024,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.024,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    -0.024
+   ]
+  ],
+  "highest_occupied_eV": 6.2019,
+  "lowest_unoccupied_eV": 7.218,
+  "band_gap_on_mesh_eV": 1.0161,
+  "irreducible_k_points": 60,
+  "symmetry_operations": 24,
+  "pw_seconds": 35.0,
+  "dielectric_tensor_eps_inf": [
+   [
+    11.71538387,
+    -0.0,
+    0.0
+   ],
+   [
+    0.0,
+    11.71538387,
+    -0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    11.71538387
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.61138,
+     -0.0,
+     0.0
+    ],
+    [
+     -0.0,
+     2.61138,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     2.61138
+    ]
+   ],
+   "P": [
+    [
+     -2.6126,
+     0.0,
+     -0.0
+    ],
+    [
+     0.0,
+     -2.6126,
+     0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     -2.6126
+    ]
+   ]
+  },
+  "ph_seconds": 194.8,
+  "wall_seconds": 229.9,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_a0_diel_k6s1": {
+  "kind": "dielectric",
+  "lattice_A": 5.9624,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9812,
+    2.9812
+   ],
+   [
+    2.9812,
+    0.0,
+    2.9812
+   ],
+   [
+    2.9812,
+    2.9812,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.991148630655985,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.9218729,
+  "total_energy_eV": -2162.2422332088568,
+  "pressure_GPa": -0.024,
+  "stress_GPa": [
+   [
+    -0.024,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.024,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -0.024
+   ]
+  ],
+  "highest_occupied_eV": 6.1678,
+  "lowest_unoccupied_eV": 7.4079,
+  "band_gap_on_mesh_eV": 1.2401,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 20.7,
+  "dielectric_tensor_eps_inf": [
+   [
+    11.722428059,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    11.722428059,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    11.722428059
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.61374,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     2.61374,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     2.61374
+    ]
+   ],
+   "P": [
+    [
+     -2.62279,
+     -0.0,
+     -0.0
+    ],
+    [
+     0.0,
+     -2.62279,
+     0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     -2.62279
+    ]
+   ]
+  },
+  "ph_seconds": 98.0,
+  "wall_seconds": 118.8,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_a0_diel_k4s1": {
+  "kind": "dielectric",
+  "lattice_A": 5.9624,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9812,
+    2.9812
+   ],
+   [
+    2.9812,
+    0.0,
+    2.9812
+   ],
+   [
+    2.9812,
+    2.9812,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.991148630655985,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "4x4x4 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92176174,
+  "total_energy_eV": -2162.2407208000086,
+  "pressure_GPa": -0.028000000000000004,
+  "stress_GPa": [
+   [
+    -0.028000000000000004,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.028000000000000004,
+    0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    -0.028000000000000004
+   ]
+  ],
+  "highest_occupied_eV": 6.0794,
+  "lowest_unoccupied_eV": 7.7043,
+  "band_gap_on_mesh_eV": 1.6249,
+  "irreducible_k_points": 10,
+  "symmetry_operations": 24,
+  "pw_seconds": 14.5,
+  "dielectric_tensor_eps_inf": [
+   [
+    12.251167893,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    12.251167893,
+    0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    12.251167893
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.6299,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     2.6299,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     2.6299
+    ]
+   ],
+   "P": [
+    [
+     -2.71387,
+     0.0,
+     -0.0
+    ],
+    [
+     0.0,
+     -2.71387,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -2.71387
+    ]
+   ]
+  },
+  "ph_seconds": 47.0,
+  "wall_seconds": 61.6,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_a0_diel_k10s1": {
+  "kind": "dielectric",
+  "lattice_A": 5.9624,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9812,
+    2.9812
+   ],
+   [
+    2.9812,
+    0.0,
+    2.9812
+   ],
+   [
+    2.9812,
+    2.9812,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.991148630655985,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "10x10x10 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92187657,
+  "total_energy_eV": -2162.2422831417502,
+  "pressure_GPa": -0.024,
+  "stress_GPa": [
+   [
+    -0.024,
+    -0.0,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.024,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -0.024
+   ]
+  ],
+  "highest_occupied_eV": 6.2183,
+  "lowest_unoccupied_eV": 7.0946,
+  "band_gap_on_mesh_eV": 0.8763,
+  "irreducible_k_points": 110,
+  "symmetry_operations": 24,
+  "pw_seconds": 61.7,
+  "dielectric_tensor_eps_inf": [
+   [
+    11.759056966,
+    -0.0,
+    -0.0
+   ],
+   [
+    -0.0,
+    11.759056966,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    11.759056966
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.61105,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     2.61105,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     2.61105
+    ]
+   ],
+   "P": [
+    [
+     -2.61124,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     -2.61124,
+     -0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -2.61124
+    ]
+   ]
+  },
+  "ph_seconds": 357.5,
+  "wall_seconds": 419.2,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_a0_diel_k8s0": {
+  "kind": "dielectric",
+  "lattice_A": 5.9624,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9812,
+    2.9812
+   ],
+   [
+    2.9812,
+    0.0,
+    2.9812
+   ],
+   [
+    2.9812,
+    2.9812,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.991148630655985,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "8x8x8 shift 0 0 0",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92169769,
+  "total_energy_eV": -2162.239849355364,
+  "pressure_GPa": -0.041999999999999996,
+  "stress_GPa": [
+   [
+    -0.041999999999999996,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.041999999999999996,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -0.041999999999999996
+   ]
+  ],
+  "highest_occupied_eV": 6.2502,
+  "lowest_unoccupied_eV": 6.684,
+  "band_gap_on_mesh_eV": 0.4338,
+  "irreducible_k_points": 29,
+  "symmetry_operations": 24,
+  "pw_seconds": 22.0,
+  "dielectric_tensor_eps_inf": [
+   [
+    26.469660886,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    26.469660886,
+    -0.0
+   ],
+   [
+    0.0,
+    0.0,
+    26.469660886
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.69194,
+     0.0,
+     -0.0
+    ],
+    [
+     0.0,
+     2.69194,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     2.69194
+    ]
+   ],
+   "P": [
+    [
+     -2.85687,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.85687,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -2.85687
+    ]
+   ]
+  },
+  "ph_seconds": 107.3,
+  "wall_seconds": 129.3,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_a0_dfpt_k4s1": {
+  "kind": "dfpt",
+  "lattice_A": 5.9624,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9812,
+    2.9812
+   ],
+   [
+    2.9812,
+    0.0,
+    2.9812
+   ],
+   [
+    2.9812,
+    2.9812,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.991148630655985,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "4x4x4 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92176174,
+  "total_energy_eV": -2162.2407208000086,
+  "pressure_GPa": -0.028000000000000004,
+  "stress_GPa": [
+   [
+    -0.028000000000000004,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.028000000000000004,
+    0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    -0.028000000000000004
+   ]
+  ],
+  "highest_occupied_eV": 6.0794,
+  "lowest_unoccupied_eV": 7.7043,
+  "band_gap_on_mesh_eV": 1.6249,
+  "irreducible_k_points": 10,
+  "symmetry_operations": 24,
+  "pw_seconds": 15.3,
+  "force_constants_gamma_Ry_per_bohr2": [
+   [
+    0.14984167,
+    0.0,
+    -0.0,
+    -0.1495513,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.14984167,
+    -0.0,
+    0.0,
+    -0.1495513,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    0.14984167,
+    0.0,
+    0.0,
+    -0.1495513
+   ],
+   [
+    -0.1495513,
+    0.0,
+    0.0,
+    0.14959042,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.1495513,
+    0.0,
+    0.0,
+    0.14959042,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -0.1495513,
+    -0.0,
+    0.0,
+    0.14959042
+   ]
+  ],
+  "atomic_masses_amu": {
+   "In": 114.818,
+   "P": 30.973762
+  },
+  "gamma_frequencies_analytic_raw_cm-1": [
+   5.464276,
+   5.464276,
+   5.464276,
+   284.644733,
+   284.644733,
+   284.644733
+  ],
+  "dielectric_tensor_eps_inf": [
+   [
+    12.25116789303,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    12.25116789303,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    12.25116789303
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.629898599174,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     2.629898599174,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     2.629898599174
+    ]
+   ],
+   "P": [
+    [
+     -2.713873063882,
+     0.0,
+     -0.0
+    ],
+    [
+     0.0,
+     -2.713873063882,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -2.713873063882
+    ]
+   ]
+  },
+  "ph_seconds": 114.5,
+  "wall_seconds": 129.8,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_a0_dfpt_k8s0": {
+  "kind": "dfpt",
+  "lattice_A": 5.9624,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9812,
+    2.9812
+   ],
+   [
+    2.9812,
+    0.0,
+    2.9812
+   ],
+   [
+    2.9812,
+    2.9812,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.991148630655985,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "8x8x8 shift 0 0 0",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92169769,
+  "total_energy_eV": -2162.239849355364,
+  "pressure_GPa": -0.041999999999999996,
+  "stress_GPa": [
+   [
+    -0.041999999999999996,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.041999999999999996,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -0.041999999999999996
+   ]
+  ],
+  "highest_occupied_eV": 6.2502,
+  "lowest_unoccupied_eV": 6.684,
+  "band_gap_on_mesh_eV": 0.4338,
+  "irreducible_k_points": 29,
+  "symmetry_operations": 24,
+  "pw_seconds": 22.5,
+  "force_constants_gamma_Ry_per_bohr2": [
+   [
+    0.14981625,
+    0.0,
+    0.0,
+    -0.14953897,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.14981625,
+    0.0,
+    -0.0,
+    -0.14953897,
+    -0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.14981625,
+    0.0,
+    -0.0,
+    -0.14953897
+   ],
+   [
+    -0.14953897,
+    0.0,
+    -0.0,
+    0.1495742,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.14953897,
+    -0.0,
+    0.0,
+    0.1495742,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    -0.14953897,
+    0.0,
+    0.0,
+    0.1495742
+   ]
+  ],
+  "atomic_masses_amu": {
+   "In": 114.818,
+   "P": 30.973762
+  },
+  "gamma_frequencies_analytic_raw_cm-1": [
+   5.321719,
+   5.321719,
+   5.321719,
+   284.630148,
+   284.630148,
+   284.630148
+  ],
+  "dielectric_tensor_eps_inf": [
+   [
+    26.469660886387,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    26.469660886387,
+    0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    26.469660886387
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.69194253676,
+     0.0,
+     -0.0
+    ],
+    [
+     0.0,
+     2.69194253676,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     2.69194253676
+    ]
+   ],
+   "P": [
+    [
+     -2.856866240597,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.856866240597,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -2.856866240597
+    ]
+   ]
+  },
+  "ph_seconds": 252.9,
+  "wall_seconds": 275.3,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_am_dfpt_k6s1": {
+  "kind": "dfpt",
+  "lattice_A": 5.9028,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9514,
+    2.9514
+   ],
+   [
+    2.9514,
+    0.0,
+    2.9514
+   ],
+   [
+    2.9514,
+    2.9514,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 51.41788569748801,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92119952,
+  "total_energy_eV": -2162.233071407221,
+  "pressure_GPa": 1.895,
+  "stress_GPa": [
+   [
+    1.895,
+    -0.0,
+    -0.0
+   ],
+   [
+    -0.0,
+    1.895,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    1.895
+   ]
+  ],
+  "highest_occupied_eV": 6.5275,
+  "lowest_unoccupied_eV": 7.8969,
+  "band_gap_on_mesh_eV": 1.3694,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 23.4,
+  "force_constants_gamma_Ry_per_bohr2": [
+   [
+    0.16206681,
+    0.0,
+    0.0,
+    -0.16182875,
+    -0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.16206681,
+    -0.0,
+    -0.0,
+    -0.16182875,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    0.16206681,
+    -0.0,
+    -0.0,
+    -0.16182875
+   ],
+   [
+    -0.16182875,
+    -0.0,
+    -0.0,
+    0.16186382,
+    0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.16182875,
+    -0.0,
+    0.0,
+    0.16186382,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    -0.16182875,
+    0.0,
+    0.0,
+    0.16186382
+   ]
+  ],
+  "atomic_masses_amu": {
+   "In": 114.818,
+   "P": 30.973762
+  },
+  "gamma_frequencies_analytic_raw_cm-1": [
+   4.975149,
+   4.975149,
+   4.975149,
+   296.091025,
+   296.091025,
+   296.091025
+  ],
+  "dielectric_tensor_eps_inf": [
+   [
+    11.204199067407,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    11.204199067407,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    11.204199067407
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.567274581008,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     2.567274581008,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     2.567274581008
+    ]
+   ],
+   "P": [
+    [
+     -2.575422650031,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.575422650031,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -2.575422650031
+    ]
+   ]
+  },
+  "ph_seconds": 243.2,
+  "wall_seconds": 266.6,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_am_diel_k8s1": {
+  "kind": "dielectric",
+  "lattice_A": 5.9028,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9514,
+    2.9514
+   ],
+   [
+    2.9514,
+    0.0,
+    2.9514
+   ],
+   [
+    2.9514,
+    2.9514,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 51.41788569748801,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "8x8x8 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92120302,
+  "total_energy_eV": -2162.2331190271475,
+  "pressure_GPa": 1.895,
+  "stress_GPa": [
+   [
+    1.895,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    1.895,
+    -0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    1.895
+   ]
+  ],
+  "highest_occupied_eV": 6.5634,
+  "lowest_unoccupied_eV": 7.7091,
+  "band_gap_on_mesh_eV": 1.1457,
+  "irreducible_k_points": 60,
+  "symmetry_operations": 24,
+  "pw_seconds": 39.1,
+  "dielectric_tensor_eps_inf": [
+   [
+    11.170912917,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    11.170912917,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    11.170912917
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.56516,
+     -0.0,
+     0.0
+    ],
+    [
+     -0.0,
+     2.56516,
+     -0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     2.56516
+    ]
+   ],
+   "P": [
+    [
+     -2.56621,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.56621,
+     -0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -2.56621
+    ]
+   ]
+  },
+  "ph_seconds": 194.1,
+  "wall_seconds": 233.2,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_am_diel_k4s1": {
+  "kind": "dielectric",
+  "lattice_A": 5.9028,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9514,
+    2.9514
+   ],
+   [
+    2.9514,
+    0.0,
+    2.9514
+   ],
+   [
+    2.9514,
+    2.9514,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 51.41788569748801,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "4x4x4 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92109034,
+  "total_energy_eV": -2162.2315859376463,
+  "pressure_GPa": 1.8920000000000001,
+  "stress_GPa": [
+   [
+    1.8920000000000001,
+    -0.0,
+    -0.0
+   ],
+   [
+    -0.0,
+    1.8920000000000001,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    1.8920000000000001
+   ]
+  ],
+  "highest_occupied_eV": 6.4344,
+  "lowest_unoccupied_eV": 8.1524,
+  "band_gap_on_mesh_eV": 1.718,
+  "irreducible_k_points": 10,
+  "symmetry_operations": 24,
+  "pw_seconds": 14.8,
+  "dielectric_tensor_eps_inf": [
+   [
+    11.725561211,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    11.725561211,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    11.725561211
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.58154,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     2.58154,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     2.58154
+    ]
+   ],
+   "P": [
+    [
+     -2.66214,
+     -0.0,
+     0.0
+    ],
+    [
+     -0.0,
+     -2.66214,
+     -0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -2.66214
+    ]
+   ]
+  },
+  "ph_seconds": 48.4,
+  "wall_seconds": 63.3,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_am_diel_k8s0": {
+  "kind": "dielectric",
+  "lattice_A": 5.9028,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9514,
+    2.9514
+   ],
+   [
+    2.9514,
+    0.0,
+    2.9514
+   ],
+   [
+    2.9514,
+    2.9514,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 51.41788569748801,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "8x8x8 shift 0 0 0",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.9210351,
+  "total_energy_eV": -2162.230834359158,
+  "pressure_GPa": 1.8800000000000001,
+  "stress_GPa": [
+   [
+    1.8800000000000001,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    1.8800000000000001,
+    -0.0
+   ],
+   [
+    0.0,
+    0.0,
+    1.8800000000000001
+   ]
+  ],
+  "highest_occupied_eV": 6.6141,
+  "lowest_unoccupied_eV": 7.2138,
+  "band_gap_on_mesh_eV": 0.5997,
+  "irreducible_k_points": 29,
+  "symmetry_operations": 24,
+  "pw_seconds": 24.1,
+  "dielectric_tensor_eps_inf": [
+   [
+    17.107521556,
+    -0.0,
+    -0.0
+   ],
+   [
+    -0.0,
+    17.107521556,
+    0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    17.107521556
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.60766,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     2.60766,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     2.60766
+    ]
+   ],
+   "P": [
+    [
+     -2.74094,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.74094,
+     -0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -2.74094
+    ]
+   ]
+  },
+  "ph_seconds": 104.8,
+  "wall_seconds": 128.9,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_am_diel_k10s1": {
+  "kind": "dielectric",
+  "lattice_A": 5.9028,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9514,
+    2.9514
+   ],
+   [
+    2.9514,
+    0.0,
+    2.9514
+   ],
+   [
+    2.9514,
+    2.9514,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 51.41788569748801,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "10x10x10 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92120298,
+  "total_energy_eV": -2162.2331184829195,
+  "pressure_GPa": 1.895,
+  "stress_GPa": [
+   [
+    1.895,
+    -0.0,
+    -0.0
+   ],
+   [
+    -0.0,
+    1.895,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    1.895
+   ]
+  ],
+  "highest_occupied_eV": 6.5807,
+  "lowest_unoccupied_eV": 7.5878,
+  "band_gap_on_mesh_eV": 1.0071,
+  "irreducible_k_points": 110,
+  "symmetry_operations": 24,
+  "pw_seconds": 64.7,
+  "dielectric_tensor_eps_inf": [
+   [
+    11.188872463,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    11.188872463,
+    -0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    11.188872463
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.56483,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     2.56483,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     2.56483
+    ]
+   ],
+   "P": [
+    [
+     -2.56507,
+     0.0,
+     -0.0
+    ],
+    [
+     0.0,
+     -2.56507,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -2.56507
+    ]
+   ]
+  },
+  "ph_seconds": 316.2,
+  "wall_seconds": 380.9,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_ap_dfpt_k6s1": {
+  "kind": "dfpt",
+  "lattice_A": 6.022,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    3.011,
+    3.011
+   ],
+   [
+    3.011,
+    0.0,
+    3.011
+   ],
+   [
+    3.011,
+    3.011,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 54.596180662000016,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92124773,
+  "total_energy_eV": -2162.233727337687,
+  "pressure_GPa": -1.673,
+  "stress_GPa": [
+   [
+    -1.673,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    -1.673,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    -1.673
+   ]
+  ],
+  "highest_occupied_eV": 5.8237,
+  "lowest_unoccupied_eV": 6.9412,
+  "band_gap_on_mesh_eV": 1.1175,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 28.5,
+  "force_constants_gamma_Ry_per_bohr2": [
+   [
+    0.13836749,
+    -0.0,
+    -0.0,
+    -0.13805266,
+    0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    0.13836749,
+    0.0,
+    0.0,
+    -0.13805266,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.13836749,
+    -0.0,
+    0.0,
+    -0.13805266
+   ],
+   [
+    -0.13805266,
+    0.0,
+    -0.0,
+    0.13809917,
+    -0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.13805266,
+    -0.0,
+    -0.0,
+    0.13809917,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    -0.13805266,
+    -0.0,
+    0.0,
+    0.13809917
+   ]
+  ],
+  "atomic_masses_amu": {
+   "In": 114.818,
+   "P": 30.973762
+  },
+  "gamma_frequencies_analytic_raw_cm-1": [
+   5.72244,
+   5.72244,
+   5.72244,
+   273.491545,
+   273.491545,
+   273.491545
+  ],
+  "dielectric_tensor_eps_inf": [
+   [
+    12.350009687706,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    12.350009687706,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    12.350009687706
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.660936047226,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     2.660936047226,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     2.660936047226
+    ]
+   ],
+   "P": [
+    [
+     -2.671110490558,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.671110490558,
+     -0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -2.671110490558
+    ]
+   ]
+  },
+  "ph_seconds": 333.5,
+  "wall_seconds": 362.0,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_ap_diel_k8s1": {
+  "kind": "dielectric",
+  "lattice_A": 6.022,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    3.011,
+    3.011
+   ],
+   [
+    3.011,
+    0.0,
+    3.011
+   ],
+   [
+    3.011,
+    3.011,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 54.596180662000016,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "8x8x8 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92125211,
+  "total_energy_eV": -2162.233786930623,
+  "pressure_GPa": -1.672,
+  "stress_GPa": [
+   [
+    -1.672,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -1.672,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    -1.672
+   ]
+  ],
+  "highest_occupied_eV": 5.856,
+  "lowest_unoccupied_eV": 6.7509,
+  "band_gap_on_mesh_eV": 0.8949,
+  "irreducible_k_points": 60,
+  "symmetry_operations": 24,
+  "pw_seconds": 82.3,
+  "dielectric_tensor_eps_inf": [
+   [
+    12.391716911,
+    -0.0,
+    -0.0
+   ],
+   [
+    -0.0,
+    12.391716911,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    12.391716911
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.65835,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     2.65835,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     2.65835
+    ]
+   ],
+   "P": [
+    [
+     -2.65988,
+     0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     -2.65988,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -2.65988
+    ]
+   ]
+  },
+  "ph_seconds": 285.5,
+  "wall_seconds": 367.8,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_ap_diel_k4s1": {
+  "kind": "dielectric",
+  "lattice_A": 6.022,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    3.011,
+    3.011
+   ],
+   [
+    3.011,
+    0.0,
+    3.011
+   ],
+   [
+    3.011,
+    3.011,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 54.596180662000016,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "4x4x4 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92113385,
+  "total_energy_eV": -2162.232177921354,
+  "pressure_GPa": -1.6780000000000002,
+  "stress_GPa": [
+   [
+    -1.6780000000000002,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    -1.6780000000000002,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    -1.6780000000000002
+   ]
+  ],
+  "highest_occupied_eV": 5.7397,
+  "lowest_unoccupied_eV": 7.2405,
+  "band_gap_on_mesh_eV": 1.5008,
+  "irreducible_k_points": 10,
+  "symmetry_operations": 24,
+  "pw_seconds": 16.1,
+  "dielectric_tensor_eps_inf": [
+   [
+    12.871883683,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    12.871883683,
+    0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    12.871883683
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.6792,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     2.6792,
+     0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     2.6792
+    ]
+   ],
+   "P": [
+    [
+     -2.767,
+     -0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.767,
+     0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     -2.767
+    ]
+   ]
+  },
+  "ph_seconds": 59.7,
+  "wall_seconds": 75.8,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_ap_diel_k8s0": {
+  "kind": "dielectric",
+  "lattice_A": 6.022,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    3.011,
+    3.011
+   ],
+   [
+    3.011,
+    0.0,
+    3.011
+   ],
+   [
+    3.011,
+    3.011,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 54.596180662000016,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "8x8x8 shift 0 0 0",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92105878,
+  "total_energy_eV": -2162.2311565419714,
+  "pressure_GPa": -1.6940000000000002,
+  "stress_GPa": [
+   [
+    -1.6940000000000002,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    -1.6940000000000002,
+    0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    -1.6940000000000002
+   ]
+  ],
+  "highest_occupied_eV": 5.902,
+  "lowest_unoccupied_eV": 6.1722,
+  "band_gap_on_mesh_eV": 0.2702,
+  "irreducible_k_points": 29,
+  "symmetry_operations": 24,
+  "pw_seconds": 28.0,
+  "dielectric_tensor_eps_inf": [
+   [
+    70.414422357,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    70.414422357,
+    -0.0
+   ],
+   [
+    0.0,
+    0.0,
+    70.414422357
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.86941,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     2.86941,
+     -0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     2.86941
+    ]
+   ],
+   "P": [
+    [
+     -3.1022,
+     -0.0,
+     0.0
+    ],
+    [
+     -0.0,
+     -3.1022,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -3.1022
+    ]
+   ]
+  },
+  "ph_seconds": 130.5,
+  "wall_seconds": 158.6,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_ap_diel_k10s1": {
+  "kind": "dielectric",
+  "lattice_A": 6.022,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    3.011,
+    3.011
+   ],
+   [
+    3.011,
+    0.0,
+    3.011
+   ],
+   [
+    3.011,
+    3.011,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 54.596180662000016,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "10x10x10 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92125203,
+  "total_energy_eV": -2162.2337858421674,
+  "pressure_GPa": -1.672,
+  "stress_GPa": [
+   [
+    -1.672,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    -1.672,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    -1.672
+   ]
+  ],
+  "highest_occupied_eV": 5.8716,
+  "lowest_unoccupied_eV": 6.6265,
+  "band_gap_on_mesh_eV": 0.7549,
+  "irreducible_k_points": 110,
+  "symmetry_operations": 24,
+  "pw_seconds": 75.1,
+  "dielectric_tensor_eps_inf": [
+   [
+    12.484221652,
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    12.484221652,
+    -0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    12.484221652
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.65807,
+     -0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     2.65807,
+     -0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     2.65807
+    ]
+   ],
+   "P": [
+    [
+     -2.65829,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.65829,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -2.65829
+    ]
+   ]
+  },
+  "ph_seconds": 436.6,
+  "wall_seconds": 511.8,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_amh_dfpt_k6s1": {
+  "kind": "dfpt",
+  "lattice_A": 5.9326,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9663,
+    2.9663
+   ],
+   [
+    2.9663,
+    0.0,
+    2.9663
+   ],
+   [
+    2.9663,
+    2.9663,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.200565874493996,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92170749,
+  "total_energy_eV": -2162.239982691157,
+  "pressure_GPa": 0.899,
+  "stress_GPa": [
+   [
+    0.899,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.899,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.899
+   ]
+  ],
+  "highest_occupied_eV": 6.3456,
+  "lowest_unoccupied_eV": 7.6496,
+  "band_gap_on_mesh_eV": 1.304,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 24.2,
+  "force_constants_gamma_Ry_per_bohr2": [
+   [
+    0.15580097,
+    0.0,
+    0.0,
+    -0.15553069,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    0.15580097,
+    0.0,
+    0.0,
+    -0.15553069,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.15580097,
+    0.0,
+    -0.0,
+    -0.15553069
+   ],
+   [
+    -0.15553069,
+    0.0,
+    0.0,
+    0.1555694,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -0.15553069,
+    0.0,
+    0.0,
+    0.1555694,
+    -0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -0.15553069,
+    -0.0,
+    -0.0,
+    0.1555694
+   ]
+  ],
+  "atomic_masses_amu": {
+   "In": 114.818,
+   "P": 30.973762
+  },
+  "gamma_frequencies_analytic_raw_cm-1": [
+   5.291776,
+   5.291776,
+   5.291776,
+   290.276851,
+   290.276851,
+   290.276851
+  ],
+  "dielectric_tensor_eps_inf": [
+   [
+    11.450832871458,
+    -0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    11.450832871458,
+    -0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    11.450832871458
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.590428402934,
+     -0.0,
+     0.0
+    ],
+    [
+     -0.0,
+     2.590428402934,
+     -0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     2.590428402934
+    ]
+   ],
+   "P": [
+    [
+     -2.599000934623,
+     -0.0,
+     0.0
+    ],
+    [
+     -0.0,
+     -2.599000934623,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -2.599000934623
+    ]
+   ]
+  },
+  "ph_seconds": 220.2,
+  "wall_seconds": 244.4,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_amh_diel_k8s1": {
+  "kind": "dielectric",
+  "lattice_A": 5.9326,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9663,
+    2.9663
+   ],
+   [
+    2.9663,
+    0.0,
+    2.9663
+   ],
+   [
+    2.9663,
+    2.9663,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 52.200565874493996,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "8x8x8 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92171159,
+  "total_energy_eV": -2162.2400384744988,
+  "pressure_GPa": 0.9,
+  "stress_GPa": [
+   [
+    0.9,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.9,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.9
+   ]
+  ],
+  "highest_occupied_eV": 6.3806,
+  "lowest_unoccupied_eV": 7.4606,
+  "band_gap_on_mesh_eV": 1.08,
+  "irreducible_k_points": 60,
+  "symmetry_operations": 24,
+  "pw_seconds": 36.1,
+  "dielectric_tensor_eps_inf": [
+   [
+    11.42850704,
+    -0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    11.42850704,
+    0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    11.42850704
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.58819,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     2.58819,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     2.58819
+    ]
+   ],
+   "P": [
+    [
+     -2.58931,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.58931,
+     0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -2.58931
+    ]
+   ]
+  },
+  "ph_seconds": 183.1,
+  "wall_seconds": 219.2,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_aph_dfpt_k6s1": {
+  "kind": "dfpt",
+  "lattice_A": 5.9922,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9961,
+    2.9961
+   ],
+   [
+    2.9961,
+    0.0,
+    2.9961
+   ],
+   [
+    2.9961,
+    2.9961,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 53.78967366136203,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92171353,
+  "total_energy_eV": -2162.2400648695434,
+  "pressure_GPa": -0.8800000000000001,
+  "stress_GPa": [
+   [
+    -0.8800000000000001,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -0.8800000000000001,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    -0.8800000000000001
+   ]
+  ],
+  "highest_occupied_eV": 5.9938,
+  "lowest_unoccupied_eV": 7.1718,
+  "band_gap_on_mesh_eV": 1.178,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 24.3,
+  "force_constants_gamma_Ry_per_bohr2": [
+   [
+    0.14395184,
+    0.0,
+    0.0,
+    -0.14364794,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    0.14395184,
+    -0.0,
+    0.0,
+    -0.14364794,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    0.14395184,
+    -0.0,
+    0.0,
+    -0.14364794
+   ],
+   [
+    -0.14364794,
+    -0.0,
+    -0.0,
+    0.14369199,
+    0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.14364794,
+    0.0,
+    0.0,
+    0.14369199,
+    -0.0
+   ],
+   [
+    -0.0,
+    0.0,
+    -0.14364794,
+    0.0,
+    -0.0,
+    0.14369199
+   ]
+  ],
+  "atomic_masses_amu": {
+   "In": 114.818,
+   "P": 30.973762
+  },
+  "gamma_frequencies_analytic_raw_cm-1": [
+   5.615279,
+   5.615279,
+   5.615279,
+   278.975159,
+   278.975159,
+   278.975159
+  ],
+  "dielectric_tensor_eps_inf": [
+   [
+    12.021264546253,
+    0.0,
+    -0.0
+   ],
+   [
+    -0.0,
+    12.021264546253,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    12.021264546253
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.637231023992,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     2.637231023992,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     2.637231023992
+    ]
+   ],
+   "P": [
+    [
+     -2.646808540156,
+     -0.0,
+     0.0
+    ],
+    [
+     -0.0,
+     -2.646808540156,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -2.646808540156
+    ]
+   ]
+  },
+  "ph_seconds": 284.3,
+  "wall_seconds": 308.6,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_aph_diel_k8s1": {
+  "kind": "dielectric",
+  "lattice_A": 5.9922,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9961,
+    2.9961
+   ],
+   [
+    2.9961,
+    0.0,
+    2.9961
+   ],
+   [
+    2.9961,
+    2.9961,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 53.78967366136203,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "8x8x8 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92171785,
+  "total_energy_eV": -2162.240123646138,
+  "pressure_GPa": -0.8800000000000001,
+  "stress_GPa": [
+   [
+    -0.8800000000000001,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -0.8800000000000001,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -0.8800000000000001
+   ]
+  ],
+  "highest_occupied_eV": 6.0271,
+  "lowest_unoccupied_eV": 6.9815,
+  "band_gap_on_mesh_eV": 0.9544,
+  "irreducible_k_points": 60,
+  "symmetry_operations": 24,
+  "pw_seconds": 44.8,
+  "dielectric_tensor_eps_inf": [
+   [
+    12.035229143,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    12.035229143,
+    -0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    12.035229143
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.63476,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     2.63476,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     2.63476
+    ]
+   ],
+   "P": [
+    [
+     -2.63611,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.63611,
+     -0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -2.63611
+    ]
+   ]
+  },
+  "ph_seconds": 241.0,
+  "wall_seconds": 285.8,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_strain_dfpt_k6s1": {
+  "kind": "dfpt",
+  "lattice_A": 5.9624,
+  "strain_zz": -0.02,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9812,
+    2.921576
+   ],
+   [
+    2.9812,
+    0.0,
+    2.921576
+   ],
+   [
+    2.9812,
+    2.9812,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 51.93132565804286,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92144499,
+  "total_energy_eV": -2162.236411196712,
+  "pressure_GPa": 1.223,
+  "stress_GPa": [
+   [
+    0.96,
+    0.0,
+    -0.0
+   ],
+   [
+    0.0,
+    0.96,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    1.7489999999999999
+   ]
+  ],
+  "highest_occupied_eV": 6.441,
+  "lowest_unoccupied_eV": 7.7328,
+  "band_gap_on_mesh_eV": 1.2918,
+  "irreducible_k_points": 63,
+  "symmetry_operations": 8,
+  "pw_seconds": 39.6,
+  "force_constants_gamma_Ry_per_bohr2": [
+   [
+    0.15860517,
+    -0.0,
+    0.0,
+    -0.15833277,
+    0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    0.15860517,
+    0.0,
+    0.0,
+    -0.15833277,
+    0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    0.15581765,
+    -0.0,
+    0.0,
+    -0.15587261
+   ],
+   [
+    -0.15833277,
+    -0.0,
+    0.0,
+    0.15837986,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -0.15833277,
+    -0.0,
+    0.0,
+    0.15837986,
+    -0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    -0.15587261,
+    -0.0,
+    0.0,
+    0.15586465
+   ]
+  ],
+  "atomic_masses_amu": {
+   "In": 114.818,
+   "P": 30.973762
+  },
+  "gamma_frequencies_analytic_raw_cm-1": [
+   -2.387913,
+   5.380981,
+   5.380981,
+   290.555012,
+   292.884321,
+   292.884321
+  ],
+  "dielectric_tensor_eps_inf": [
+   [
+    11.419427959261,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    11.419427959261,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    11.309082537446
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.611106275187,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     2.611106275187,
+     0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     2.529208922018
+    ]
+   ],
+   "P": [
+    [
+     -2.619783758324,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.619783758324,
+     -0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -2.537161864828
+    ]
+   ]
+  },
+  "ph_seconds": 478.9,
+  "wall_seconds": 518.5,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_strain_dfpt_k4s1": {
+  "kind": "dfpt",
+  "lattice_A": 5.9624,
+  "strain_zz": -0.02,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.9812,
+    2.921576
+   ],
+   [
+    2.9812,
+    0.0,
+    2.921576
+   ],
+   [
+    2.9812,
+    2.9812,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 51.93132565804286,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "4x4x4 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92133525,
+  "total_energy_eV": -2162.234918107949,
+  "pressure_GPa": 1.22,
+  "stress_GPa": [
+   [
+    0.9570000000000001,
+    -0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.9570000000000001,
+    0.0
+   ],
+   [
+    0.0,
+    -0.0,
+    1.7469999999999999
+   ]
+  ],
+  "highest_occupied_eV": 6.3523,
+  "lowest_unoccupied_eV": 8.0012,
+  "band_gap_on_mesh_eV": 1.6489,
+  "irreducible_k_points": 20,
+  "symmetry_operations": 8,
+  "pw_seconds": 17.7,
+  "force_constants_gamma_Ry_per_bohr2": [
+   [
+    0.15869689,
+    0.0,
+    -0.0,
+    -0.1584007,
+    -0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.15869689,
+    -0.0,
+    -0.0,
+    -0.1584007,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.15593602,
+    0.0,
+    0.0,
+    -0.15596554
+   ],
+   [
+    -0.1584007,
+    -0.0,
+    -0.0,
+    0.15844617,
+    -0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -0.1584007,
+    0.0,
+    -0.0,
+    0.15844617,
+    0.0
+   ],
+   [
+    -0.0,
+    -0.0,
+    -0.15596554,
+    0.0,
+    0.0,
+    0.15595709
+   ]
+  ],
+  "atomic_masses_amu": {
+   "In": 114.818,
+   "P": 30.973762
+  },
+  "gamma_frequencies_analytic_raw_cm-1": [
+   -1.854822,
+   5.564435,
+   5.564435,
+   290.642403,
+   292.947189,
+   292.947189
+  ],
+  "dielectric_tensor_eps_inf": [
+   [
+    11.934025590031,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    11.934025590031,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    11.86120362196
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.626110991335,
+     -0.0,
+     -0.0
+    ],
+    [
+     0.0,
+     2.626110991335,
+     0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     2.543862450123
+    ]
+   ],
+   "P": [
+    [
+     -2.70705375007,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.70705375007,
+     -0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -2.627449235199
+    ]
+   ]
+  },
+  "ph_seconds": 169.9,
+  "wall_seconds": 187.6,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ },
+ "ref_aexp_dfpt_k6s1": {
+  "kind": "dfpt",
+  "lattice_A": 5.8687,
+  "strain_zz": 0.0,
+  "cell_vectors_A": [
+   [
+    0.0,
+    2.93435,
+    2.93435
+   ],
+   [
+    2.93435,
+    0.0,
+    2.93435
+   ],
+   [
+    2.93435,
+    2.93435,
+    0.0
+   ]
+  ],
+  "cell_volume_A3": 50.531912712175725,
+  "atoms_crystal": {
+   "In": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "P": [
+    0.25,
+    0.25,
+    0.25
+   ]
+  },
+  "kmesh": "6x6x6 shift 1 1 1",
+  "ecutwfc_Ry": 50,
+  "ecutrho_Ry": 400,
+  "total_energy_Ry": -158.92017284,
+  "total_energy_eV": -2162.2191027142057,
+  "pressure_GPa": 3.127,
+  "stress_GPa": [
+   [
+    3.127,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    3.127,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    3.127
+   ]
+  ],
+  "highest_occupied_eV": 6.7407,
+  "lowest_unoccupied_eV": 8.1868,
+  "band_gap_on_mesh_eV": 1.4461,
+  "irreducible_k_points": 28,
+  "symmetry_operations": 24,
+  "pw_seconds": 22.5,
+  "force_constants_gamma_Ry_per_bohr2": [
+   [
+    0.16956105,
+    0.0,
+    0.0,
+    -0.16933765,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.16956105,
+    0.0,
+    0.0,
+    -0.16933765,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.16956105,
+    0.0,
+    0.0,
+    -0.16933765
+   ],
+   [
+    -0.16933765,
+    0.0,
+    0.0,
+    0.16937024,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -0.16933765,
+    0.0,
+    0.0,
+    0.16937024,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    -0.16933765,
+    0.0,
+    0.0,
+    0.16937024
+   ]
+  ],
+  "atomic_masses_amu": {
+   "In": 114.818,
+   "P": 30.973762
+  },
+  "gamma_frequencies_analytic_raw_cm-1": [
+   4.816481,
+   4.816481,
+   4.816481,
+   302.879174,
+   302.879174,
+   302.879174
+  ],
+  "dielectric_tensor_eps_inf": [
+   [
+    10.949905417573,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    10.949905417573,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    10.949905417573
+   ]
+  ],
+  "born_charges_raw": {
+   "In": [
+    [
+     2.540963383756,
+     0.0,
+     -0.0
+    ],
+    [
+     -0.0,
+     2.540963383756,
+     0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     2.540963383756
+    ]
+   ],
+   "P": [
+    [
+     -2.54867914093,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     -2.54867914093,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -2.54867914093
+    ]
+   ]
+  },
+  "ph_seconds": 213.6,
+  "wall_seconds": 236.2,
+  "source": "new Quantum ESPRESSO 6.7 calculation (PBE, SSSP 1.3 precision pseudopotentials)"
+ }
+}

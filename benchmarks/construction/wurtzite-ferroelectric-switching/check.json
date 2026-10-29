@@ -1,0 +1,132 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 10,
+  "rubric_items": 8,
+  "task_mb": 1.23,
+  "hidden_values": 8,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 21,
+   "budget": 28,
+   "evaluations": 17,
+   "failed_evaluations": 0,
+   "container_seconds": 2
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "AlBN_first_stage_NEB_as_MEP",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "collective_barrier_from_AlN",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "per_atom_normalization",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "per_supercell_energy",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "raw_berry_phase_values",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "sparse_branch_tracking",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "born_charge_end_to_end_branch",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "half_switched_state_as_reference",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "berry_folder_off_by_one",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "berry_folder_off_by_one_other_way",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "first_subbarrier_as_saddle",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp9",
+    "name": "first_minimum_as_intermediate",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp10",
+    "name": "collective_mechanism",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "AlN_barrier_from_first_stage_run",
+    "passes_grading": true
+   },
+   {
+    "name": "saddle_located_by_parabola",
+    "passes_grading": true
+   },
+   {
+    "name": "AlN_Ps_midpoint_reference",
+    "passes_grading": true
+   },
+   {
+    "name": "AlBN_barrier_vs_relaxed_endpoint",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-26T02:57:36Z"
+}

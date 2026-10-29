@@ -1,0 +1,101 @@
+WannSymm version 1.2.2-alpha
+seedname      = wannier90
+restart state = False. (Read wannier90_hr.dat and symmetrize it)
+DFT_code_type = 1
+flag_soc                    = True
+flag_symm_from_file         = False
+flag_consider_global_trsymm = False
+flag_expandrvec             = True
+flag_calculate_chaeig       = False
+flag_chaeig_in_kpath        = False
+num of k-point              = 0 (for cha and eig calculation)
+flag_bands_symmetrized      = True
+flag_bands_original         = True
+num of kpt per kpath        = 101
+num of k-path               = 6 (for bands calculation)
+num of atomtypes            = 2
+name_of_atoms               = Mn    Te    
+number_of_atoms_each        = 2     2     
+number of symmetries        = 8
+The symmetry operations (in real space, using lattice vectors as basis) are in this file: symmetries.dat
+
+lattice:
+  4.14000  0.00000  0.00000
+ -2.07000  3.58535  0.00000
+  0.00000  0.00000  6.71000
+
+atoms' coordinates (Direct):
+  0.00000  0.00000  0.00000
+  0.00000  0.00000  0.50000
+  0.33333  0.66667  0.25000
+  0.66667  0.33333  0.75000
+
+magnetization:
+# of ion      x         y         z  
+-----------------------------------------
+    1      0.00000   4.00000   0.00000
+    2      0.00000  -4.00000   0.00000
+    3      0.00000   0.00000   0.00000
+    4      0.00000   0.00000   0.00000
+
+symm_magnetic_tolerance = 1.000000E-03
+magnetic order type: anti-ferromagnetic
+
+Orbital definition:
+# No.    Orbitals' position(Direct)   l mr ms  r         z-axis               x-axis             y-axis
+    1    0.00000   0.00000   0.00000  2  1  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+    2    0.00000   0.00000   0.00000  2  2  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+    3    0.00000   0.00000   0.00000  2  3  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+    4    0.00000   0.00000   0.00000  2  4  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+    5    0.00000   0.00000   0.00000  2  5  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+    6    0.00000   0.00000   0.50000  2  1  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+    7    0.00000   0.00000   0.50000  2  2  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+    8    0.00000   0.00000   0.50000  2  3  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+    9    0.00000   0.00000   0.50000  2  4  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   10    0.00000   0.00000   0.50000  2  5  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   11    0.33333   0.66667   0.25000  1  1  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   12    0.33333   0.66667   0.25000  1  2  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   13    0.33333   0.66667   0.25000  1  3  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   14    0.66667   0.33333   0.75000  1  1  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   15    0.66667   0.33333   0.75000  1  2  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   16    0.66667   0.33333   0.75000  1  3  0  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   17    0.00000   0.00000   0.00000  2  1  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   18    0.00000   0.00000   0.00000  2  2  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   19    0.00000   0.00000   0.00000  2  3  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   20    0.00000   0.00000   0.00000  2  4  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   21    0.00000   0.00000   0.00000  2  5  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   22    0.00000   0.00000   0.50000  2  1  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   23    0.00000   0.00000   0.50000  2  2  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   24    0.00000   0.00000   0.50000  2  3  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   25    0.00000   0.00000   0.50000  2  4  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   26    0.00000   0.00000   0.50000  2  5  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   27    0.33333   0.66667   0.25000  1  1  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   28    0.33333   0.66667   0.25000  1  2  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   29    0.33333   0.66667   0.25000  1  3  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   30    0.66667   0.33333   0.75000  1  1  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   31    0.66667   0.33333   0.75000  1  2  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+   32    0.66667   0.33333   0.75000  1  3  1  1  0.000  0.000  1.000  1.000  0.000  0.000  0.000  1.000  0.000
+
+Symmetries' info:
+symm   1: Identity
+symm   2: Inversion
+symm   3: 180.0 deg rot around ( 0.0000, 0.0000, 1.0000) with trans ( 0.0000  0.0000  0.5000)
+symm   4: 180.0 deg rot around ( 0.0000, 0.0000, 1.0000) with trans ( 0.0000  0.0000  0.5000) with inv (Mirror)
+symm   5: 180.0 deg rot around ( 0.0000, 1.0000, 0.0000) with trans ( 0.0000  0.0000  0.5000) with TRS
+symm   6: 180.0 deg rot around ( 0.0000, 1.0000, 0.0000) with trans ( 0.0000  0.0000  0.5000) with inv (Mirror) with TRS
+symm   7: 180.0 deg rot around ( 1.0000, 0.0000, 0.0000) with trans ( 0.0000  0.0000  0.0000) with TRS
+symm   8: 180.0 deg rot around ( 1.0000, 0.0000, 0.0000) with trans ( 0.0000  0.0000  0.0000) with inv (Mirror) with TRS
+
+finished reading input files, real time elasped 0 s
+
+Done: symmetry No.    1, real time elasped 3 s, cpu time (thread  1) 3.28 s
+Done: symmetry No.    2, real time elasped 7 s, cpu time (thread  1) 6.71 s
+Done: symmetry No.    3, real time elasped 10 s, cpu time (thread  1) 10.17 s
+Done: symmetry No.    4, real time elasped 13 s, cpu time (thread  1) 13.36 s
+Done: symmetry No.    5, real time elasped 17 s, cpu time (thread  1) 16.90 s
+Done: symmetry No.    6, real time elasped 21 s, cpu time (thread  1) 20.67 s
+Done: symmetry No.    7, real time elasped 25 s, cpu time (thread  1) 24.42 s
+Done: symmetry No.    8, real time elasped 28 s, cpu time (thread  1) 27.88 s
+Done: Average the rotated Hamiltonians. real time elasped 28 s, cpu time (thread  1) 27.94 s
+
+All Done.  Real time elasped 29 s, cpu time (thread  1) 29.23

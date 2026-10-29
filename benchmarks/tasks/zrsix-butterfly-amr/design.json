@@ -1,0 +1,194 @@
+{
+ "task_id": "zrsix-butterfly-amr",
+ "catalog_id": "zrsix-butterfly-amr",
+ "start": "released",
+ "source_group": "zhang_2025_zrsix_magnetoresistance",
+ "title": "ZrSiX: butterfly magnetoresistance from Fermi-surface geometry",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "fork": "Chemical potential: electron counting (12 of 24 spinless bands filled) vs the E_FERMI of the archived WannierTools inputs",
+   "wrong_choice": "Use E_FERMI = 8.9117 (ZrSiSe) and 8.8965 eV (ZrSiTe)",
+   "consequence": "mu off by 10.5 and 35.6 meV; compensation broken (n_e/n_h 0.68, 1.90); MR(B||b) saturates (exponent 0.26 vs 1.60), butterfly peak moves to 46.8 deg, sample ratio 1.65 vs 2.25",
+   "ablation": "input_e_fermi"
+  },
+  {
+   "id": "dp2",
+   "fork": "ZrSiS input.dat is a copy of the ZrSiSe file (Se atoms, ZrSiSe cell, same E_FERMI)",
+   "wrong_choice": "Take the ZrSiS chemical potential from its input.dat",
+   "consequence": "mu(ZrSiS) 0.78 eV below the neutral point (a pure hole metal)",
+   "ablation": "zrsis_copied_input"
+  },
+  {
+   "id": "dp3",
+   "fork": "Electron count and spin counting of the spinless 24-orbital model (24 valence electrons; NumOccupied = 13 in the ZrSiTe input)",
+   "wrong_choice": "13 filled bands for ZrSiTe, or carrier density without the spin factor 2",
+   "consequence": "mu(ZrSiTe) 0.97 eV too high; densities low by a factor 2",
+   "ablation": "thirteen_filled_bands"
+  },
+  {
+   "id": "dp4",
+   "fork": "k-mesh convergence of the Chambers integral (40/80/160 meshes)",
+   "wrong_choice": "Coarse mesh (40 or 80)",
+   "consequence": "40 mesh fakes saturation for B||b (exponent 0.27), puts the peak at 35.6 deg and MR(b)/MR(c) = 0.93; 80 mesh gives MR(b)/MR(c) = 2.15 (-18%)",
+   "ablation": "mesh_80"
+  },
+  {
+   "id": "dp5",
+   "fork": "Origin of the angular pattern: Chambers on the real Fermi surface vs a closed-orbit effective-mass (two-band Drude) model",
+   "wrong_choice": "Anisotropic-mass two-band model",
+   "consequence": "Monotonic angular dependence with the maximum at an end point (90 deg) instead of 54.8 deg",
+   "ablation": "closed_orbit_mass_model"
+  },
+  {
+   "id": "dp6",
+   "fork": "Kohler scaling: compare samples at their own B*tau (5 and 2 T ps), not at equal B*tau",
+   "wrong_choice": "Compare both at B*tau = 5 T ps (or swap)",
+   "consequence": "Ratio 0.47 (or 0.14) instead of 2.25",
+   "ablation": "samples_at_equal_btau"
+  }
+ ],
+ "graded_fields": [
+  "neutral_mu_eV for ZrSiS, ZrSiSe, ZrSiTe (+-3 meV)",
+  "carrier_density_cm3 for ZrSiSe, ZrSiTe (+-6%)",
+  "butterfly_peak_angle_deg (+-3 deg)",
+  "mr_b_over_c (+-15%)",
+  "mr_exponent_b (+-0.3)",
+  "zrsite_mr_c_over_b (+-25%)",
+  "mr_ratio_se_over_te (+-20%)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 22,
+  "oracle_charge": 44,
+  "budget": 50,
+  "tool_calls": "45-75",
+  "gpt6astra_cost_usd": "3-4.5",
+  "why": "Neutral points by counting (6 cheap calls), then dense-mesh transport at 3 units each: the agent cannot buy the full 160-mesh angle scan (24 directions = 72 units) plus the ZrSiTe and convergence checks, so it must choose which directions and meshes to buy."
+ },
+ "runtime_dependencies": [
+  "numpy, scipy-free numpy evaluators (runtime image); lab data 11 MB of npz lookups, no extra image layer"
+ ],
+ "data_provenance": {
+  "archive_url": "https://archive.materialscloud.org/records/tyan3-q3j67",
+  "doi": "10.24435/materialscloud:3q-r9",
+  "paper_doi": "10.1103/914y-4gp9",
+  "files_used": [
+   "ZrSiX data.zip",
+   "README.txt"
+  ],
+  "md5": {
+   "ZrSiX data.zip": "cbc8f3896f69ebf7c1cf68ad9f1a1dc8",
+   "README.txt": "199687afb593272f9f73fc873188a519"
+  },
+  "license": "CC BY 4.0"
+ },
+ "exceptions": {},
+ "calibration": {
+  "neutral_mu_eV": {
+   "reference_160": {
+    "ZrSiS": 9.6928,
+    "ZrSiSe": 8.9222,
+    "ZrSiTe": 8.86099
+   },
+   "robustness_120": {
+    "ZrSiS": 9.69262,
+    "ZrSiSe": 8.92213,
+    "ZrSiTe": 8.86172
+   },
+   "nearest_ablation": {
+    "input_E_FERMI_Se": "-10.5 meV",
+    "input_E_FERMI_Te": "+35.6 meV",
+    "ZrSiS_copied_input": "-781 meV",
+    "13_filled_Te": "+968 meV"
+   },
+   "tolerance": "+-3 meV"
+  },
+  "carrier_density_cm3": {
+   "reference_160": {
+    "ZrSiSe": 1.5094e+20,
+    "ZrSiTe": 4.007e+20
+   },
+   "robustness_120": {
+    "ZrSiSe": 1.513e+20,
+    "ZrSiTe": 3.9945e+20
+   },
+   "mesh_80": {
+    "ZrSiSe": "+5.0%",
+    "ZrSiTe": "+0.6%"
+   },
+   "nearest_ablation": {
+    "one_spin": "-50%"
+   },
+   "tolerance": "+-6%"
+  },
+  "butterfly_peak_angle_deg": {
+   "reference_160": 54.82,
+   "robustness": {
+    "cubic_peak": 54.7,
+    "mesh120_mu": 54.78,
+    "mesh_240_check": 56.13
+   },
+   "nearest_ablation": {
+    "mesh_80": 51.6,
+    "input_E_FERMI": 46.8,
+    "mesh_40": 35.6,
+    "closed_orbit_model": 90
+   },
+   "tolerance": "+-3 deg"
+  },
+  "mr_b_over_c": {
+   "reference_160": 2.607,
+   "robustness": {
+    "mesh120_mu": 2.605,
+    "mesh_240_check": 2.845
+   },
+   "nearest_ablation": {
+    "mesh_80": 2.147,
+    "input_E_FERMI": 1.937,
+    "mesh_40": 0.931
+   },
+   "tolerance": "+-15%"
+  },
+  "mr_exponent_b": {
+   "reference_160": 1.61,
+   "robustness": {
+    "mesh120_mu": 1.602,
+    "mesh_240_check": 1.529,
+    "mesh_80": 1.415
+   },
+   "nearest_ablation": {
+    "input_E_FERMI": 0.264,
+    "mesh_40": 0.267
+   },
+   "tolerance": "+-0.3"
+  },
+  "zrsite_mr_c_over_b": {
+   "reference_160": 12.83,
+   "robustness": {
+    "mesh120_mu": 12.4,
+    "mesh_240_check": 11.67,
+    "input_E_FERMI": 12.74
+   },
+   "nearest_ablation": {
+    "mesh_40": 9.72,
+    "mesh_80": 10.13
+   },
+   "tolerance": "+-25% (guards against mesh 40; mesh 80 is caught by mr_b_over_c)"
+  },
+  "mr_ratio_se_over_te": {
+   "reference_160": 2.202,
+   "robustness": {
+    "mesh120_mu": 2.248,
+    "mesh_240_check": 2.134
+   },
+   "nearest_ablation": {
+    "input_E_FERMI": 1.65,
+    "mesh_80": 2.719,
+    "equal_Btau": 0.469,
+    "swapped": 0.142
+   },
+   "tolerance": "+-20%"
+  }
+ },
+ "notes": "Graded values come from the lab evaluator on the archived Hamiltonians (no archived MR curves exist in the record). The 160 mesh was checked against a 240 x 240 x 120 run for the graded ZrSiSe/ZrSiTe directions; all 240 values lie inside the windows. Hall-resistivity sign changes are not graded: for the compensated crystals rho_yx is not converged even at 160/240. ZrSiTe band 14 and the unsymmetrized-model asymmetry change the graded values by <2% and are rubric items only."
+}

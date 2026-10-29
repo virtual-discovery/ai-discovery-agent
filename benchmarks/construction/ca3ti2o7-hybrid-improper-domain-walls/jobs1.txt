@@ -1,0 +1,23 @@
+psi100_n8	{"frame": "tet", "n": 8, "op": "IT", "offset": 0.015625, "tag": "psi100_n8"}
+phi100_n8	{"frame": "tet", "n": 8, "op": "I", "offset": 0.015625, "tag": "phi100_n8"}
+psi100_n16	{"frame": "tet", "n": 16, "op": "IT", "offset": 0.0078125, "tag": "psi100_n16"}
+phi100_n16	{"frame": "tet", "n": 16, "op": "I", "offset": 0.0078125, "tag": "phi100_n16"}
+psi100_n24	{"frame": "tet", "n": 24, "op": "IT", "offset": 0.005208333333333333, "tag": "psi100_n24"}
+phi100_n24	{"frame": "tet", "n": 24, "op": "I", "offset": 0.005208333333333333, "tag": "phi100_n24"}
+psi100_off2	{"frame": "tet", "n": 12, "op": "IT", "offset": 0.052083333333333336, "tag": "psi100_off2"}
+phi100_off2	{"frame": "tet", "n": 12, "op": "I", "offset": 0.052083333333333336, "tag": "phi100_off2"}
+psi100_n12_norm	{"frame": "tet", "n": 12, "op": "IT", "offset": 0.010416666666666666, "relax_axis": 0, "tag": "psi100_n12_norm"}
+phi100_n12_norm	{"frame": "tet", "n": 12, "op": "I", "offset": 0.010416666666666666, "relax_axis": 0, "tag": "phi100_n12_norm"}
+apb100_n12	{"frame": "tet", "n": 12, "op": "T", "offset": 0.010416666666666666, "tag": "apb100_n12"}
+psi110neu_n8	{"frame": "orth_b", "n": 8, "op": "IT", "offset": 0.0078125, "tag": "psi110neu_n8"}
+psi110chg_n8	{"frame": "orth_a", "n": 8, "op": "IT", "offset": 0.0078125, "tag": "psi110chg_n8"}
+phi110neu_n8	{"frame": "orth_b", "n": 8, "op": "I", "offset": 0.0078125, "tag": "phi110neu_n8"}
+phi110chg_n8	{"frame": "orth_a", "n": 8, "op": "I", "offset": 0.0078125, "tag": "phi110chg_n8"}
+psi110neu_n12	{"frame": "orth_b", "n": 12, "op": "IT", "offset": 0.005208333333333333, "tag": "psi110neu_n12"}
+psi110chg_n12	{"frame": "orth_a", "n": 12, "op": "IT", "offset": 0.005208333333333333, "tag": "psi110chg_n12"}
+phi110neu_n12	{"frame": "orth_b", "n": 12, "op": "I", "offset": 0.005208333333333333, "tag": "phi110neu_n12"}
+phi110chg_n12	{"frame": "orth_a", "n": 12, "op": "I", "offset": 0.005208333333333333, "tag": "phi110chg_n12"}
+psi001_rs	{"frame": "orth_c", "n": 4, "op": "IT", "offset": 0.0625, "axis": 2, "tag": "psi001_rs"}
+psi001_bl	{"frame": "orth_c", "n": 4, "op": "IT", "offset": 0.0025, "axis": 2, "tag": "psi001_bl"}
+phi001_rs	{"frame": "orth_c", "n": 4, "op": "I", "offset": 0.0625, "axis": 2, "tag": "phi001_rs"}
+phi001_bl	{"frame": "orth_c", "n": 4, "op": "I", "offset": 0.0025, "axis": 2, "tag": "phi001_bl"}

@@ -1,0 +1,168 @@
+{
+ "passed": true,
+ "summary": {
+  "passed": true,
+  "issues": [],
+  "decision_points": 8,
+  "rubric_items": 8,
+  "task_mb": 0.44,
+  "hidden_values": 36,
+  "oracle": {
+   "oracle_success": true,
+   "charge_used": 79,
+   "budget": 90,
+   "evaluations": 18,
+   "failed_evaluations": 0,
+   "container_seconds": 4052
+  },
+  "ablations": [
+   {
+    "decision_point": "dp1",
+    "name": "total_energy_converged_mesh",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "small_smearing_coarse_mesh",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp2",
+    "name": "small_smearing_k24",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp3",
+    "name": "largest_smearing_k_converged",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "one_sided_plus_strain",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp4",
+    "name": "one_sided_minus_strain",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp5",
+    "name": "experimental_lattice",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "energy_curvature_under_pressure",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp6",
+    "name": "lagrangian_coefficients_under_pressure",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "tensor_shear_convention",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp7",
+    "name": "trigonal_single_component",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "compressed_reuses_a0_moduli",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   },
+   {
+    "decision_point": "dp8",
+    "name": "compressed_scaled_with_bulk_modulus",
+    "passes_grading": false,
+    "changed": true,
+    "grade_exception": null
+   }
+  ],
+  "rounding_4sig_passes": true,
+  "robustness": [
+   {
+    "name": "oracle_like_k48_both_smearings",
+    "passes_grading": true
+   },
+   {
+    "name": "k56_smearing_0.01",
+    "passes_grading": true
+   },
+   {
+    "name": "k56_smearing_0.005",
+    "passes_grading": true
+   },
+   {
+    "name": "k64_smearing_0.01",
+    "passes_grading": true
+   },
+   {
+    "name": "smearing_0.005_k48",
+    "passes_grading": true
+   },
+   {
+    "name": "energy_route_volume_conserving",
+    "passes_grading": true
+   },
+   {
+    "name": "half_percent_strains",
+    "passes_grading": true
+   },
+   {
+    "name": "two_percent_strains",
+    "passes_grading": true
+   },
+   {
+    "name": "three_percent_tetragonal_strains",
+    "passes_grading": true
+   },
+   {
+    "name": "a0_from_zero_pressure",
+    "passes_grading": true
+   },
+   {
+    "name": "cutoff_60Ry_correction",
+    "passes_grading": true
+   },
+   {
+    "name": "uniaxial_strain_stress_route",
+    "passes_grading": true
+   },
+   {
+    "name": "cprime_from_c11_energy_minus_b",
+    "passes_grading": true
+   }
+  ]
+ },
+ "checked_utc": "2026-10-25T17:59:37Z"
+}

@@ -1,0 +1,12 @@
+# Physical-reasoning rubric
+
+Each item is a checkable statement that the report must make explicitly.
+
+1. Ties the rise of Tc in the 1×1 H phase to the growth of λ from filling of the Q valleys (a step in the DOS near the Fermi level) and softening of the M-point acoustic (A1) mode towards the Kohn anomaly, with numbers for λ or Tc versus doping.
+2. Identifies the divergent adiabatic λ (about 3.6–4.8 at 0.18–0.19) as the precursor of the lattice instability, and quantifies the nonadiabatic reduction (NA shifts, FA shifts plus linewidths) of λ or Tc.
+3. Recognizes that λ jumps between 0.14 and 0.16, so the withheld Tc at 0.15 cannot be interpolated from neighbouring Tc values. Uses doping-specific information (the tabulated λ, ω_log, or a rescaled spectrum with a rigid-band DOS) and checks the estimate by a second route.
+4. Explains why the energy-dependent DOS matters (the low-temperature chemical potential lies near the Q-valley edge), quantifies the difference from the constant-DOS limit, and states that Allen–Dynes and McMillan formulas underestimate Tc at λ > 1.5.
+5. Determines x_c from the energy difference of the 2×2 CDW and 1×1 H structures along the PES, converting 2×2-cell charges and areal densities to electrons per 1×1 cell. Distinguishes this thermodynamic boundary from the dynamical instability of the 1×1 soft mode (≈0.203) and from the lower edge of the CDW branch (≈0.185), and describes the coexistence and hysteresis window.
+6. Includes spin–orbit coupling for the ground-state maximum, quantifies its effect (about 25–30 % lower Tc), and states that applying the scalar-relativistic boundary to the SOC curve is an assumption.
+7. Notices that the high-doping CDW spectra carry no doping in the archive. Shows by matching Allen–Dynes Tc of the spectra to the authors' table that they belong to 1.4, 1.5 and 1.6 electrons per 2×2 cell (0.35–0.40 per 1×1 cell), so the caption's n1 = 3.0 × 10¹⁴ cm⁻² is inconsistent. Also notes that the archived Tc tables are Allen–Dynes values.
+8. Describes the dome across the 1×1 H, coexistence/2×2 CDW, 1T′ and high-doping CDW phases, and compares it with the experimental dome, which peaks lower (≈11 K) and at lower density. Does not tune μ* to experiment, and names what these data cannot support: the 800 K electronic temperature, gating geometry, anharmonicity, anisotropy, polaronic and larger CDW supercells, and substrates.

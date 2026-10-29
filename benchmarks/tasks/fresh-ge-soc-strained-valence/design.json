@@ -1,0 +1,281 @@
+{
+ "task_id": "fresh-ge-soc-strained-valence",
+ "catalog_id": "fresh-ge-soc-strained-valence",
+ "start": "fresh",
+ "source_group": "bonacci_2026_ge_strain_valence",
+ "title": "Ge with spin-orbit coupling: strain-split valence bands and the inverted s state (PBE)",
+ "decision_points": [
+  {
+   "id": "dp1",
+   "kind": "discovered evidence (band identification by character)",
+   "fork": "Which Gamma level is the s-like antibonding state, and which levels form Gamma8+/Gamma7+",
+   "wrong_choice": "Ordinary-semiconductor reading: the first level above the fourfold valence top is the s-like conduction state; or band counting (the top 4 of the 28 occupied spinor bands are Gamma8+, the next pair the split-off)",
+   "consequence": "In PBE the odd-parity Gamma7- lies 0.57 eV below Gamma8+ (and 0.28 eV below the split-off level): s level read as +2.30 eV (the p-like Gamma6- antibonding state) instead of -0.566; band counting gives Delta0 = 0.566 eV (Gamma8+ minus the s level) instead of 0.285",
+   "ablation": "first_level_above_gamma8_as_s"
+  },
+  {
+   "id": "dp2",
+   "kind": "approximation choice (spin-orbit on vs off)",
+   "fork": "Whether scalar-relativistic runs can stand in for the spin-orbit protocol",
+   "wrong_choice": "Use the cheaper scalar-relativistic runs (one fifth of the cost) for the levels",
+   "consequence": "s level relative to the p triplet -0.476 instead of -0.566 eV (the Gamma8+ level sits Delta0/3 above the triplet); the tetragonal splitting of the triplet at -1 % is 0.127 eV instead of the HH-LH 0.072 eV (scalar: singlet-doublet, ~3|Q| instead of 2|Q|). Scalar runs remain valid for the structural relaxation (c/a within 0.0005)",
+   "ablation": "spin_orbit_off_splitting"
+  },
+  {
+   "id": "dp3",
+   "kind": "convention (strain reference)",
+   "fork": "Lattice parameter the strain is measured from",
+   "wrong_choice": "-1 % relative to the experimental 5.658 A (as in the paired HSE study)",
+   "consequence": "That cell is -2.9 % in this protocol (PBE a0 = 5.7685 A): HH-LH 0.140 instead of 0.072 eV, SO-HH -0.549 instead of -0.345, c/a 1.051; the crossing strain comes out -0.03 % instead of -1.95 %",
+   "ablation": "strain_from_experimental_lattice_parameter"
+  },
+  {
+   "id": "dp4",
+   "kind": "physics of the strained state (Poisson relaxation)",
+   "fork": "Out-of-plane lattice parameter of the biaxially compressed crystal",
+   "wrong_choice": "Keep c = a0 (no relaxation) or compress the cell cubically",
+   "consequence": "c fixed: HH-LH 0.046 eV (-36 %), c/a 1.0101 instead of 1.0172; cubic: no splitting at all. The relaxed ratio -eps_perp/eps_par = 2C12/C11 is about 0.70 in this protocol",
+   "ablation": "c_fixed_at_a0"
+  },
+  {
+   "id": "dp5",
+   "kind": "model validity (linear Bir-Pikus vs coupled LH/SO)",
+   "fork": "How to extract b",
+   "wrong_choice": "Linear formula E(HH)-E(LH) = b(exx+eyy-2ezz) applied at -1 % (or at a single one-sided small strain)",
+   "consequence": "The light hole is pushed by the split-off level (6x6 Bir-Pikus; strain splitting not << Delta0): b = -2.12 eV at -1 % and -2.32 at -0.5 % instead of the small-strain -2.48 (symmetric +-0.5 % or a 6x6 fit recover it within 0.08)",
+   "ablation": "linear_bir_pikus_at_minus1pct"
+  },
+  {
+   "id": "dp6",
+   "kind": "discovered evidence (k mesh vs Gamma)",
+   "fork": "Where the Gamma levels are read",
+   "wrong_choice": "Use the usual offset Monkhorst-Pack mesh and read the levels at the mesh point nearest Gamma",
+   "consequence": "A shifted 8^3 mesh has no Gamma point; at its nearest point (0.12 1/A) the inverted s band has dispersed by ~0.9 eV: Delta0 0.195 and s level -1.90 eV",
+   "ablation": "shifted_mesh_nearest_point"
+  },
+  {
+   "id": "dp7",
+   "kind": "convention trap (symmetry-label names)",
+   "fork": "Which strain-split level is the heavy hole",
+   "wrong_choice": "Map the bands.x labels by the Koster convention (m_j = +-3/2 -> Gamma7+), i.e. call the G_7+ level the heavy hole",
+   "consequence": "bands.x names the heavy hole G_6+ and the LH and split-off levels both G_7+: the naive mapping swaps HH and LH, giving HH-LH = -0.072 eV, SO-HH -0.273 and b = +2.48 eV (sign flipped). The convention-free rule is that LH and SO share a label",
+   "ablation": "koster_label_for_heavy_hole"
+  },
+  {
+   "id": "dp8",
+   "kind": "regime judgement (nonlinear level tracking)",
+   "fork": "How to locate the s/split-off crossing",
+   "wrong_choice": "Extrapolate linearly from the levels at a0 and -1 %",
+   "consequence": "The split-off level bends down under strain (LH-SO repulsion), so the s - SO gap closes faster than linearly: linear extrapolation gives -2.14 % instead of -1.95 %; the crossing must be bracketed by calculations near -2 % with levels identified by parity",
+   "ablation": "crossing_linear_extrapolation_from_0_and_-1pct"
+  },
+  {
+   "id": "dp9",
+   "kind": "convergence that matters only for some quantities",
+   "fork": "Cutoff for the pressure",
+   "wrong_choice": "40 Ry, at which Gamma levels are already converged to 2 meV",
+   "consequence": "The stress is not converged: a0 = 5.738 A instead of 5.7685 (60 Ry: 5.7677)",
+   "ablation": "pressures_at_40_Ry"
+  }
+ ],
+ "graded_fields": [
+  "a0_A (+-0.005 A)",
+  "delta0_at_a0_eV (+-0.005)",
+  "s_level_at_a0_eV (+-0.035)",
+  "c_over_a_at_minus1pct (+-0.0008)",
+  "hh_minus_lh_at_minus1pct_eV (+-0.005)",
+  "so_minus_hh_at_minus1pct_eV (+-0.008)",
+  "b_shear_deformation_potential_eV (+-0.12)",
+  "s_so_crossing_strain_percent (+-0.1)"
+ ],
+ "length_estimate": {
+  "oracle_lab_evaluations": 9,
+  "oracle_charge": 29,
+  "budget": 36,
+  "oracle_compute_minutes": 20,
+  "tool_calls": "40-70 (12-20 evaluations: pressures at 2-3 lattice parameters and a cutoff check, labelled Gamma levels at a0, stress scans for the out-of-plane relaxation, labelled strained runs at 3-5 strains, convergence checks; each 1-7 minute job followed by 1-4 polls)",
+  "agent_wall_time_h": "1.5-2.5",
+  "gpt6astra_cost_usd": "3-5",
+  "pilot": "pending (sonnet, terra)"
+ },
+ "runtime_dependencies": [
+  "Quantum ESPRESSO 6.7 pw.x and bands.x and OpenMPI from the runtime image (lab only)",
+  "numpy 1.21.5 from the runtime image (lab charge counter)"
+ ],
+ "data_provenance": {
+  "pseudopotentials": {
+   "Ge_ONCV_PBE_FR-1.0.upf": {
+    "url": "http://www.quantum-simulation.org/potentials/sg15_oncv/upf/Ge_ONCV_PBE_FR-1.0.upf",
+    "md5": "046fb2884f640e00dddb7bc679dd92bf",
+    "sha256": "ee520682a4103e45bff9360d87b9fb8f15a2045eb206da5ef412372984fd53af",
+    "license": "CC BY-SA 4.0"
+   },
+   "Ge_ONCV_PBE-1.0.upf": {
+    "url": "http://www.quantum-simulation.org/potentials/sg15_oncv/upf/Ge_ONCV_PBE-1.0.upf",
+    "md5": "39f69ca9d3fedd83738352a2cbce5cbd",
+    "sha256": "1023970eba91ac075d8a5d85a4817afe98f98affcde8a0dd378a4365105548d7",
+    "license": "CC BY-SA 4.0"
+   }
+  },
+  "paired_study": "Bonacci, Schueler, Colonna, Marzari, arXiv:2603.18753 (2026); Materials Cloud vz6hg-tvd13, DOI 10.24435/materialscloud:yg-hd, CC BY 4.0 (question-level pairing only; no file used)",
+  "reference_calculations": "benchmarks/construction/fresh-ge-soc-strained-valence/reference_runs.jsonl (task_lab.run, QE 6.7, 2 MPI ranks)"
+ },
+ "exceptions": {},
+ "calibration": {
+  "a0_A": {
+   "reference": 5.768513213357251,
+   "tolerance": "+-0.005",
+   "robustness": {
+    "a0_spin_orbit_60Ry_k8": 5.767712895377129,
+    "a0_scalar_relativistic_80Ry": 5.7676049697917335
+   },
+   "ablations": {
+    "pressures_at_40_Ry": 5.737881773399014,
+    "experimental_lattice_parameter": 5.658
+   },
+   "max_robust_error": 0.0009082435655178855,
+   "nearest_ablation_error": 0.030631439958237472
+  },
+  "delta0_at_a0_eV": {
+   "reference": 0.28476000000000035,
+   "tolerance": "+-0.005",
+   "robustness": {
+    "levels_k8_60Ry": 0.2847400000000011,
+    "levels_k6_50Ry_mv001": 0.28470000000000084,
+    "levels_fixed_occupations_by_degeneracy": 0.2847399999999993
+   },
+   "ablations": {
+    "band_count_identification": 0.5655699999999992,
+    "shifted_mesh_nearest_point": 0.1947499999999991
+   },
+   "max_robust_error": 5.9999999999504894e-05,
+   "nearest_ablation_error": 0.09001000000000126
+  },
+  "s_level_at_a0_eV": {
+   "reference": -0.5655699999999992,
+   "tolerance": "+-0.035",
+   "robustness": {
+    "levels_k8_60Ry": -0.5651899999999994,
+    "levels_k6_50Ry_mv001": -0.5642300000000002,
+    "levels_fixed_occupations_by_degeneracy": -0.5651099999999989
+   },
+   "ablations": {
+    "first_level_above_gamma8_as_s": 2.2986900000000006,
+    "shifted_mesh_nearest_point": -1.8980499999999996,
+    "spin_orbit_off_s_level": -0.47614999999999874
+   },
+   "max_robust_error": 0.0013399999999990087,
+   "nearest_ablation_error": 0.0894200000000005
+  },
+  "c_over_a_at_minus1pct": {
+   "reference": 1.017203997025785,
+   "tolerance": "+-0.0008",
+   "robustness": {
+    "relaxation_and_levels_60Ry_k8": 1.016931143496029,
+    "relaxation_and_levels_80Ry_k8": 1.017611121707719,
+    "scalar_relativistic_relaxation_60Ry_k8": 1.0167645202020203
+   },
+   "ablations": {
+    "c_fixed_at_a0": 1.0101010101010102,
+    "cubic_compression": 1.0,
+    "strain_from_experimental_lattice_parameter": 1.0505555654801184
+   },
+   "max_robust_error": 0.00043947682376455077,
+   "nearest_ablation_error": 0.007102986924774735
+  },
+  "hh_minus_lh_at_minus1pct_eV": {
+   "reference": 0.07221419847328292,
+   "tolerance": "+-0.005",
+   "robustness": {
+    "relaxation_and_levels_60Ry_k8": 0.0712859541984745,
+    "relaxation_and_levels_80Ry_k8": 0.07349412213740436,
+    "scalar_relativistic_relaxation_60Ry_k8": 0.07074984375000071
+   },
+   "ablations": {
+    "c_fixed_at_a0": 0.046149999999999025,
+    "cubic_compression": 0.0,
+    "spin_orbit_off_splitting": 0.12720937499999962,
+    "koster_label_for_heavy_hole": -0.07221419847328292,
+    "strain_from_experimental_lattice_parameter": 0.13987198620203678
+   },
+   "max_robust_error": 0.001464354723282213,
+   "nearest_ablation_error": 0.026064198473283895
+  },
+  "so_minus_hh_at_minus1pct_eV": {
+   "reference": -0.3449757251908405,
+   "tolerance": "+-0.008",
+   "robustness": {
+    "relaxation_and_levels_60Ry_k8": -0.3438117557251914,
+    "relaxation_and_levels_80Ry_k8": -0.3466319847328254,
+    "scalar_relativistic_relaxation_60Ry_k8": -0.34311343749999956
+   },
+   "ablations": {
+    "c_fixed_at_a0": -0.3182899999999993,
+    "cubic_compression": -0.2894099999999984,
+    "koster_label_for_heavy_hole": -0.2727615267175576,
+    "strain_from_experimental_lattice_parameter": -0.5488557606305235
+   },
+   "max_robust_error": 0.001862287690840958,
+   "nearest_ablation_error": 0.026685725190841225
+  },
+  "b_shear_deformation_potential_eV": {
+   "reference": -2.4756314296562403,
+   "tolerance": "+-0.12",
+   "robustness": {
+    "b_6x6_bir_pikus_from_minus1pct": -2.5537990552303262,
+    "b_6x6_bir_pikus_from_pm0.5pct": -2.47929368913732,
+    "b_quadratic_fit_three_strains": -2.4595567489117043
+   },
+   "ablations": {
+    "c_fixed_at_a0": -2.3074999999999513,
+    "koster_label_for_heavy_hole": 2.4756314296562403,
+    "linear_bir_pikus_at_minus1pct": -2.119961852823255,
+    "linear_formula_at_minus0.5pct": -2.3206821766562733
+   },
+   "max_robust_error": 0.07816762557408596,
+   "nearest_ablation_error": 0.15494925299996698
+  },
+  "s_so_crossing_strain_percent": {
+   "reference": -1.9459756204941423,
+   "tolerance": "+-0.1",
+   "robustness": {
+    "crossing_linear_between_bracketing_strains": -1.9419188222710173,
+    "crossing_quadratic_0_to_-2pct": -1.9463041228714677
+   },
+   "ablations": {
+    "crossing_linear_extrapolation_from_0_and_-1pct": -2.138417293154308,
+    "strain_from_experimental_lattice_parameter": -0.03099334867806558
+   },
+   "max_robust_error": 0.004056798223124991,
+   "nearest_ablation_error": 0.19244167266016565
+  },
+  "informational": {
+   "D_minus_eperp_over_epar": {
+    "-0.01": 0.6761832061068702,
+    "-0.005": 0.6361290322580645,
+    "0.005": 0.7904918032786886,
+    "-0.02": 0.6917090909090909,
+    "-0.025": 0.6930835734870318,
+    "-0.03": 0.6952886836027714
+   },
+   "s_minus_so_track_eV": {
+    "0.0": -0.2804499999999983,
+    "-0.01": -0.1493016030534342,
+    "-0.02": 0.009206327272726966,
+    "-0.025": 0.0978971181556183,
+    "-0.03": 0.19051639722863634
+   },
+   "b_one_sided_split": {
+    "0.005": [
+     -0.04686114754098547,
+     0.017904918032786887
+    ],
+    "-0.005": [
+     0.037969354838711666,
+     -0.016361290322580643
+    ]
+   }
+  }
+ },
+ "notes": "Deviations from the candidate design: (1) projwfc-style spinor projections are impossible because the SG15 files carry no atomic pseudo-wavefunctions (has_wfc=F); the lab offers bands.x double-group symmetry labels instead (parity separates the s state; the LH/SO shared label identifies the heavy hole). (2) The hidden validation SCFs at a withheld strain were replaced by a graded s/split-off crossing strain and the split-off position at -1 %, which test the same nonlinear (6x6) physics from agent-bought runs. (3) Scalar-relativistic runs use the scalar SG15 file because QE 6.7 does not j-average the fully relativistic file with lspinorb off. (4) The Poisson-relaxed c/a is graded as c/a at -1 % (+-0.0008: the semimetal's stress carries k/cutoff noise of ~0.05 GPa). (5) Effective masses are not graded: near Gamma the inverted protocol makes the light band electron-like (rubric point instead)."
+}

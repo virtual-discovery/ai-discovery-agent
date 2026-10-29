@@ -1,0 +1,621 @@
+{
+ "material": "half-Heusler LiSbZn and LiBiZn (space group 216, Zn on the 4c site), FPLO 18.57 fully relativistic DFT, projective Wannier functions (Zn-4s and pnictogen-p spinors, 8 per cell); Li carries no Wannier function",
+ "source": "Zenodo record 16927281 (CC BY 4.0), file strained_hH_zenodo.zip; see /app/archive/README.txt",
+ "models": {
+  "LiSbZn_orig": {
+   "archive_file": "wannier/+hamdata_lisbzn_eq_orig_setup.txt",
+   "header": "archive/wannier/+hamdata_lisbzn_eq_orig_setup.txt.header.txt",
+   "compound": "LiSbZn",
+   "lattice_vectors_bohr": [
+    [
+     0.0,
+     5.9998804469,
+     5.9998804469
+    ],
+    [
+     5.9998804469,
+     0.0,
+     5.9998804469
+    ],
+    [
+     5.9998804469,
+     5.9998804469,
+     0.0
+    ]
+   ],
+   "lattice_vectors_A": [
+    [
+     0.0,
+     3.175,
+     3.175
+    ],
+    [
+     3.175,
+     0.0,
+     3.175
+    ],
+    [
+     3.175,
+     3.175,
+     0.0
+    ]
+   ],
+   "wannier_functions": [
+    "Zn2 4s+0up",
+    "Zn2 4s+0dn",
+    "Sb3 5p-1up",
+    "Sb3 5p-1dn",
+    "Sb3 5p+0up",
+    "Sb3 5p+0dn",
+    "Sb3 5p+1up",
+    "Sb3 5p+1dn"
+   ],
+   "wannier_centres_bohr": [
+    [
+     2.9999402234,
+     2.9999402234,
+     2.9999402234
+    ],
+    [
+     2.9999402234,
+     2.9999402234,
+     2.9999402234
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "wannier_centres_A": [
+    [
+     1.5875,
+     1.5875,
+     1.5875
+    ],
+    [
+     1.5875,
+     1.5875,
+     1.5875
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "hopping_vectors": 719
+  },
+  "LiSbZn_strained_setup": {
+   "archive_file": "wannier/+hamdata_lisbzn_eq_strained_setup.txt",
+   "header": "archive/wannier/+hamdata_lisbzn_eq_strained_setup.txt.header.txt",
+   "compound": "LiSbZn",
+   "lattice_vectors_bohr": [
+    [
+     -4.2425578403,
+     4.2425578403,
+     5.9998828369
+    ],
+    [
+     4.2425578403,
+     -4.2425578403,
+     5.9998828369
+    ],
+    [
+     4.2425578403,
+     4.2425578403,
+     -5.9998828369
+    ]
+   ],
+   "lattice_vectors_A": [
+    [
+     -2.24506493,
+     2.24506493,
+     3.17500127
+    ],
+    [
+     2.24506493,
+     -2.24506493,
+     3.17500127
+    ],
+    [
+     2.24506493,
+     2.24506493,
+     -3.17500127
+    ]
+   ],
+   "wannier_functions": [
+    "Zn2 4s+0up",
+    "Zn2 4s+0dn",
+    "Sb3 5p-1up",
+    "Sb3 5p-1dn",
+    "Sb3 5p+0up",
+    "Sb3 5p+0dn",
+    "Sb3 5p+1up",
+    "Sb3 5p+1dn"
+   ],
+   "wannier_centres_bohr": [
+    [
+     -4.2425578403,
+     0.0,
+     2.9999414185
+    ],
+    [
+     -4.2425578403,
+     0.0,
+     2.9999414185
+    ],
+    [
+     0.0,
+     0.0,
+     -5.9998828369
+    ],
+    [
+     0.0,
+     0.0,
+     -5.9998828369
+    ],
+    [
+     0.0,
+     0.0,
+     -5.9998828369
+    ],
+    [
+     0.0,
+     0.0,
+     -5.9998828369
+    ],
+    [
+     0.0,
+     0.0,
+     -5.9998828369
+    ],
+    [
+     0.0,
+     0.0,
+     -5.9998828369
+    ]
+   ],
+   "wannier_centres_A": [
+    [
+     -2.24506493,
+     0.0,
+     1.58750063
+    ],
+    [
+     -2.24506493,
+     0.0,
+     1.58750063
+    ],
+    [
+     0.0,
+     0.0,
+     -3.17500127
+    ],
+    [
+     0.0,
+     0.0,
+     -3.17500127
+    ],
+    [
+     0.0,
+     0.0,
+     -3.17500127
+    ],
+    [
+     0.0,
+     0.0,
+     -3.17500127
+    ],
+    [
+     0.0,
+     0.0,
+     -3.17500127
+    ],
+    [
+     0.0,
+     0.0,
+     -3.17500127
+    ]
+   ],
+   "hopping_vectors": 835
+  },
+  "LiBiZn_orig": {
+   "archive_file": "wannier/+hamdata_libizn_eq_orig_setup.txt",
+   "header": "archive/wannier/+hamdata_libizn_eq_orig_setup.txt.header.txt",
+   "compound": "LiBiZn",
+   "lattice_vectors_bohr": [
+    [
+     0.0,
+     6.2212618624,
+     6.2212618624
+    ],
+    [
+     6.2212618624,
+     0.0,
+     6.2212618624
+    ],
+    [
+     6.2212618624,
+     6.2212618624,
+     0.0
+    ]
+   ],
+   "lattice_vectors_A": [
+    [
+     0.0,
+     3.29215,
+     3.29215
+    ],
+    [
+     3.29215,
+     0.0,
+     3.29215
+    ],
+    [
+     3.29215,
+     3.29215,
+     0.0
+    ]
+   ],
+   "wannier_functions": [
+    "Zn2 4s+0up",
+    "Zn2 4s+0dn",
+    "Bi3 6p-1up",
+    "Bi3 6p-1dn",
+    "Bi3 6p+0up",
+    "Bi3 6p+0dn",
+    "Bi3 6p+1up",
+    "Bi3 6p+1dn"
+   ],
+   "wannier_centres_bohr": [
+    [
+     3.1106309312,
+     3.1106309312,
+     3.1106309312
+    ],
+    [
+     3.1106309312,
+     3.1106309312,
+     3.1106309312
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "wannier_centres_A": [
+    [
+     1.646075,
+     1.646075,
+     1.646075
+    ],
+    [
+     1.646075,
+     1.646075,
+     1.646075
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ]
+   ],
+   "hopping_vectors": 653
+  },
+  "LiBiZn_strained_setup": {
+   "archive_file": "wannier/+hamdata_libizn_eq_strained_setup.txt",
+   "header": "archive/wannier/+hamdata_libizn_eq_strained_setup.txt.header.txt",
+   "compound": "LiBiZn",
+   "lattice_vectors_bohr": [
+    [
+     -4.3990965,
+     4.3990965,
+     6.2212619
+    ],
+    [
+     4.3990965,
+     -4.3990965,
+     6.2212619
+    ],
+    [
+     4.3990965,
+     4.3990965,
+     -6.2212619
+    ]
+   ],
+   "lattice_vectors_A": [
+    [
+     -2.32790162,
+     2.32790162,
+     3.29215002
+    ],
+    [
+     2.32790162,
+     -2.32790162,
+     3.29215002
+    ],
+    [
+     2.32790162,
+     2.32790162,
+     -3.29215002
+    ]
+   ],
+   "wannier_functions": [
+    "Zn2 4s+0up",
+    "Zn2 4s+0dn",
+    "Bi3 6p-1up",
+    "Bi3 6p-1dn",
+    "Bi3 6p+0up",
+    "Bi3 6p+0dn",
+    "Bi3 6p+1up",
+    "Bi3 6p+1dn"
+   ],
+   "wannier_centres_bohr": [
+    [
+     -4.3990965,
+     0.0,
+     3.11063095
+    ],
+    [
+     -4.3990965,
+     0.0,
+     3.11063095
+    ],
+    [
+     0.0,
+     0.0,
+     -6.2212619
+    ],
+    [
+     0.0,
+     0.0,
+     -6.2212619
+    ],
+    [
+     0.0,
+     0.0,
+     -6.2212619
+    ],
+    [
+     0.0,
+     0.0,
+     -6.2212619
+    ],
+    [
+     0.0,
+     0.0,
+     -6.2212619
+    ],
+    [
+     0.0,
+     0.0,
+     -6.2212619
+    ]
+   ],
+   "wannier_centres_A": [
+    [
+     -2.32790162,
+     0.0,
+     1.64607501
+    ],
+    [
+     -2.32790162,
+     0.0,
+     1.64607501
+    ],
+    [
+     0.0,
+     0.0,
+     -3.29215002
+    ],
+    [
+     0.0,
+     0.0,
+     -3.29215002
+    ],
+    [
+     0.0,
+     0.0,
+     -3.29215002
+    ],
+    [
+     0.0,
+     0.0,
+     -3.29215002
+    ],
+    [
+     0.0,
+     0.0,
+     -3.29215002
+    ],
+    [
+     0.0,
+     0.0,
+     -3.29215002
+    ]
+   ],
+   "hopping_vectors": 757
+  }
+ },
+ "budget": 30,
+ "requests": {
+  "bulk_bands": {
+   "cost": 1,
+   "format": {
+    "kind": "bulk_bands",
+    "model": "<model>",
+    "k_frac or k_cart_invA": "[[x, y, z], ...] (<= 300)"
+   },
+   "returns": "band energies (eV) and the Zn-4s weight of each band at each k"
+  },
+  "band_edges": {
+   "cost": "1 (mesh <= 24) or 2 (mesh 25-48)",
+   "format": {
+    "kind": "band_edges",
+    "model": "<model>",
+    "band": "n (1-7)",
+    "mesh": "m (4-48)"
+   },
+   "returns": "the 6 highest values of band n, the 6 lowest of band n+1 and the smallest direct gap E_{n+1}-E_n on the Gamma-centred m^3 grid of k_frac (no refinement)"
+  },
+  "fermi_level": {
+   "cost": "1 (mesh <= 32) or 2 (mesh 33-64)",
+   "format": {
+    "kind": "fermi_level",
+    "model": "<model>",
+    "electrons_per_cell": "x (0-8)",
+    "mesh": "m (4-64)",
+    "offset": "0 (Gamma-centred, default) or 0.5"
+   },
+   "returns": "the energy that holds x electrons per cell on the m^3 grid (each band holds one electron per cell) and the filling of each band"
+  },
+  "slab": {
+   "cost": 1,
+   "format": {
+    "kind": "slab",
+    "model": "<model>",
+    "basis": "[[p1], [p2], [n]] integer rows, det +-1",
+    "layers": "L (2-40)",
+    "k_phases": "[[phi1, phi2], ...] (<= 30)",
+    "window_eV": "[emin, emax] (<= 1.2 eV wide)",
+    "region_depth": "1-4 (default 2)"
+   },
+   "returns": "slab states in the window with their weight near the low and high end of row 3 and their Zn-4s weight"
+  },
+  "prism": {
+   "cost": "1 (size <= 12), 2 (13-20), 3 (21-28)",
+   "format": {
+    "kind": "prism",
+    "model": "<model>",
+    "basis": "[[axis], [side1], [side2]] integer rows, det +-1",
+    "size": "N (4-28)",
+    "k_phases": "[k, ...] (<= 8 for N <= 12, <= 4 for N 13-20, <= 2 for N 21-28)",
+    "window_eV": "[emin, emax] (<= 1.0 eV wide)",
+    "region_depth": "1-4 (default 2)",
+    "potential": "[{\"region\": \"c00\"|\"c0N\"|\"cN0\"|\"cNN\"|\"f1lo\"|\"f1hi\"|\"f2lo\"|\"f2hi\", \"depth\": 1-6, \"V_eV\": -1.5..1.5, \"species\": \"all\"|\"Zn\"|\"X\"}, ...] (optional, <= 4)"
+   },
+   "returns": "prism states in the window (at most 150 per k) with their weight in each corner, facet and bulk region and their Zn-4s weight"
+  }
+ },
+ "conventions": {
+  "energies": "eV on the energy scale of the archived file; its zero is the zero of the FPLO calculation that produced it",
+  "bands": "numbered from 1 (lowest) among the 8 Wannier bands; with spin-orbit coupling and no inversion centre each band is non-degenerate at a generic k and holds one electron per cell",
+  "k_bulk": "k_cart_invA: Cartesian, 1/Angstrom with 2 pi, in the Cartesian frame of that model's file; k_frac: coordinates in the reciprocal basis of that model's lattice vectors (k_cart = k_frac @ B, B = 2 pi inv(A)^T, rows of A = lattice vectors)",
+  "bulk_hamiltonian": "H_ij(k) = sum_R H_ij(R) exp(i k.(R + w_j - w_i)), with H_ij(R) the archived matrix element between orbital i in the home cell and orbital j displaced by the archived hopping vector T = R + w_j - w_i",
+  "supercell_basis": "slabs and prisms take an integer, unimodular basis matrix whose rows are the new cell vectors in units of that model's own lattice vectors",
+  "site_selection": "a slab (prism) contains every Zn and pnictogen (X) site whose reduced coordinates along the finite basis row(s), measured from an X site, lie in [0, L) ([0, N)); cell t holds the X site at reduced coordinates t and the Zn site at t + zn_site_reduced (reported in each result's geometry block)",
+  "prism_regions": "cells (t1, t2) along sides 1 and 2, t = 0..N-1; corner cAB = cells within region_depth of the low (0) or high (N) end of both sides, e.g. c0N: t1 < depth and t2 >= N - depth; facet f1lo = t1 < depth (corners excluded), f1hi, f2lo, f2hi likewise; bulk = the rest.  In a potential entry the facet regions include the corners and depth may differ from region_depth",
+  "k_prism": "k_phases are Bloch phases (radians) per period of the periodic row(s) of the basis",
+  "onsite_potential": "V_eV is added to the onsite energy of the selected orbitals (all, the two Zn-4s or the six X-p) of every cell in the region"
+ },
+ "archive_staged": [
+  "archive/README.txt",
+  "archive/code/strained_hH.py",
+  "archive/wannier/+hamdata_lisbzn_eq_orig_setup.txt.header.txt",
+  "archive/wannier/+hamdata_lisbzn_eq_strained_setup.txt.header.txt",
+  "archive/wannier/+hamdata_libizn_eq_orig_setup.txt.header.txt",
+  "archive/wannier/+hamdata_libizn_eq_strained_setup.txt.header.txt"
+ ]
+}
